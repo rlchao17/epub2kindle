@@ -10,7 +10,7 @@
     <dc:rights>2001-2025, Python Software Foundation</dc:rights>
     <dc:identifier id="unknown">unknown</dc:identifier>
     <dc:date>2025-01-25T13:04:22Z</dc:date>
-    <meta property="dcterms:modified">2025-02-01T23:43:34Z</meta>
+    <meta property="dcterms:modified">2025-02-01T23:54:19Z</meta>
     <meta property="ibooks:version">3.13</meta>
     <meta property="ibooks:specified-fonts">true</meta>
     <meta property="ibooks:binding">true</meta>
@@ -1067,7 +1067,4 @@
     <itemref idref="epub-443" linear="no"/>
     <itemref idref="epub-454" linear="no"/>
   </spine>
-  <guide>
-    <reference type="toc" title="Table of Contents" href="contents.xhtml"/>
-  </guide>
 </package>
