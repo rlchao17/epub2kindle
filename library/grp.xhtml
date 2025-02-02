@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="grp — The group database" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://docs.python.org/3/library/grp.xhtml" />
+<meta property="og:site_name" content="Python documentation" />
+<meta property="og:description" content="This module provides access to the Unix group database. It is available on all Unix versions. Availability: Unix, not WASI, not Android, not iOS. Group database entries are reported as a tuple-like..." />
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
+<meta property="og:image:alt" content="Python documentation" />
+<meta name="description" content="This module provides access to the Unix group database. It is available on all Unix versions. Availability: Unix, not WASI, not Android, not iOS. Group database entries are reported as a tuple-like..." />
+<meta property="og:image:width" content="200" />
+<meta property="og:image:height" content="200" />
+<meta name="theme-color" content="#3776ab" />
+
+    <title>grp — The group database</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    
+    <link rel="canonical" href="https://docs.python.org/3/library/grp.html" />
+    
+      
+    
+
+    
+    <style>
+      @media only screen {
+        table.full-width-table {
+            width: 100%;
+        }
+      }
+    </style>
+ 
+
+  </head><body>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <section id="module-grp">
+<span id="grp-the-group-database"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">grp</span></code> — The group database</h1>
+<hr class="docutils" />
+<p>This module provides access to the Unix group database. It is available on all
+Unix versions.</p>
+<div class="availability docutils container">
+<p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI, not Android, not iOS.</p>
+</div>
+<p>Group database entries are reported as a tuple-like object, whose attributes
+correspond to the members of the <code class="docutils literal notranslate"><span class="pre">group</span></code> structure (Attribute field below, see
+<code class="docutils literal notranslate"><span class="pre">&lt;grp.h&gt;</span></code>):</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Index</p></th>
+<th class="head"><p>Attribute</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>gr_name</p></td>
+<td><p>the name of the group</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>gr_passwd</p></td>
+<td><p>the (encrypted) group password;
+often empty</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>gr_gid</p></td>
+<td><p>the numerical group ID</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>gr_mem</p></td>
+<td><p>all the group member’s  user
+names</p></td>
+</tr>
+</tbody>
+</table>
+<p>The gid is an integer, name and password are strings, and the member list is a
+list of strings. (Note that most users are not explicitly listed as members of
+the group they are in according to the password database.  Check both databases
+to get complete membership information.  Also note that a <code class="docutils literal notranslate"><span class="pre">gr_name</span></code> that
+starts with a <code class="docutils literal notranslate"><span class="pre">+</span></code> or <code class="docutils literal notranslate"><span class="pre">-</span></code> is likely to be a YP/NIS reference and may not be
+accessible via <a class="reference internal" href="#grp.getgrnam" title="grp.getgrnam"><code class="xref py py-func docutils literal notranslate"><span class="pre">getgrnam()</span></code></a> or <a class="reference internal" href="#grp.getgrgid" title="grp.getgrgid"><code class="xref py py-func docutils literal notranslate"><span class="pre">getgrgid()</span></code></a>.)</p>
+<p>It defines the following items:</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="grp.getgrgid">
+<span class="sig-prename descclassname"><span class="pre">grp.</span></span><span class="sig-name descname"><span class="pre">getgrgid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Return the group database entry for the given numeric group ID. <a class="reference internal" href="exceptions.xhtml#KeyError" title="KeyError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyError</span></code></a>
+is raised if the entry asked for cannot be found.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 3.10: </span><a class="reference internal" href="exceptions.xhtml#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> is raised for non-integer arguments like floats or strings.</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="grp.getgrnam">
+<span class="sig-prename descclassname"><span class="pre">grp.</span></span><span class="sig-name descname"><span class="pre">getgrnam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Return the group database entry for the given group name. <a class="reference internal" href="exceptions.xhtml#KeyError" title="KeyError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyError</span></code></a> is
+raised if the entry asked for cannot be found.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="grp.getgrall">
+<span class="sig-prename descclassname"><span class="pre">grp.</span></span><span class="sig-name descname"><span class="pre">getgrall</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Return a list of all available group entries, in arbitrary order.</p>
+</dd></dl>
+
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt>Module <a class="reference internal" href="pwd.xhtml#module-pwd" title="pwd: The password database (getpwnam() and friends). (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pwd</span></code></a></dt><dd><p>An interface to the user database, similar to this.</p>
+</dd>
+</dl>
+</div>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

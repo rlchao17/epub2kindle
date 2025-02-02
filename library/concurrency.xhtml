@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Concurrent Execution" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://docs.python.org/3/library/concurrency.xhtml" />
+<meta property="og:site_name" content="Python documentation" />
+<meta property="og:description" content="The modules described in this chapter provide support for concurrent execution of code. The appropriate choice of tool will depend on the task to be executed (CPU bound vs IO bound) and preferred s..." />
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
+<meta property="og:image:alt" content="Python documentation" />
+<meta name="description" content="The modules described in this chapter provide support for concurrent execution of code. The appropriate choice of tool will depend on the task to be executed (CPU bound vs IO bound) and preferred s..." />
+<meta property="og:image:width" content="200" />
+<meta property="og:image:height" content="200" />
+<meta name="theme-color" content="#3776ab" />
+
+    <title>Concurrent Execution</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    
+    <link rel="canonical" href="https://docs.python.org/3/library/concurrency.html" />
+    
+      
+    
+
+    
+    <style>
+      @media only screen {
+        table.full-width-table {
+            width: 100%;
+        }
+      }
+    </style>
+ 
+
+  </head><body>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <section id="concurrent-execution">
+<span id="concurrency"></span><h1>Concurrent Execution</h1>
+<p>The modules described in this chapter provide support for concurrent
+execution of code. The appropriate choice of tool will depend on the
+task to be executed (CPU bound vs IO bound) and preferred style of
+development (event driven cooperative multitasking vs preemptive
+multitasking). Here’s an overview:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="threading.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">threading</span></code> — Thread-based parallelism</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="threading.xhtml#thread-local-data">Thread-Local Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="threading.xhtml#thread-objects">Thread Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="threading.xhtml#lock-objects">Lock Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="threading.xhtml#rlock-objects">RLock Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="threading.xhtml#condition-objects">Condition Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="threading.xhtml#semaphore-objects">Semaphore Objects</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="threading.xhtml#semaphore-example"><code class="xref py py-class docutils literal notranslate"><span class="pre">Semaphore</span></code> Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="threading.xhtml#event-objects">Event Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="threading.xhtml#timer-objects">Timer Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="threading.xhtml#barrier-objects">Barrier Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="threading.xhtml#using-locks-conditions-and-semaphores-in-the-with-statement">Using locks, conditions, and semaphores in the <code class="xref std std-keyword docutils literal notranslate"><span class="pre">with</span></code> statement</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="multiprocessing.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">multiprocessing</span></code> — Process-based parallelism</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="multiprocessing.xhtml#introduction">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.xhtml#the-process-class">The <code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code> class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.xhtml#contexts-and-start-methods">Contexts and start methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.xhtml#exchanging-objects-between-processes">Exchanging objects between processes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.xhtml#synchronization-between-processes">Synchronization between processes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.xhtml#sharing-state-between-processes">Sharing state between processes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.xhtml#using-a-pool-of-workers">Using a pool of workers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="multiprocessing.xhtml#reference">Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.xhtml#process-and-exceptions"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code> and exceptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.xhtml#pipes-and-queues">Pipes and Queues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.xhtml#miscellaneous">Miscellaneous</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.xhtml#connection-objects">Connection Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.xhtml#synchronization-primitives">Synchronization primitives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.xhtml#shared-ctypes-objects">Shared <code class="xref py py-mod docutils literal notranslate"><span class="pre">ctypes</span></code> Objects</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="multiprocessing.xhtml#module-multiprocessing.sharedctypes">The <code class="xref py py-mod docutils literal notranslate"><span class="pre">multiprocessing.sharedctypes</span></code> module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.xhtml#managers">Managers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="multiprocessing.xhtml#customized-managers">Customized managers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="multiprocessing.xhtml#using-a-remote-manager">Using a remote manager</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.xhtml#proxy-objects">Proxy Objects</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="multiprocessing.xhtml#cleanup">Cleanup</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.xhtml#module-multiprocessing.pool">Process Pools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.xhtml#module-multiprocessing.connection">Listeners and Clients</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="multiprocessing.xhtml#address-formats">Address Formats</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.xhtml#authentication-keys">Authentication keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.xhtml#logging">Logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.xhtml#module-multiprocessing.dummy">The <code class="xref py py-mod docutils literal notranslate"><span class="pre">multiprocessing.dummy</span></code> module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="multiprocessing.xhtml#programming-guidelines">Programming guidelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.xhtml#all-start-methods">All start methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multiprocessing.xhtml#the-spawn-and-forkserver-start-methods">The <em>spawn</em> and <em>forkserver</em> start methods</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="multiprocessing.xhtml#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="multiprocessing.shared_memory.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">multiprocessing.shared_memory</span></code> — Shared memory for direct access across processes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="concurrent.xhtml">The <code class="xref py py-mod docutils literal notranslate"><span class="pre">concurrent</span></code> package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="concurrent.futures.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">concurrent.futures</span></code> — Launching parallel tasks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="concurrent.futures.xhtml#executor-objects">Executor Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concurrent.futures.xhtml#threadpoolexecutor">ThreadPoolExecutor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="concurrent.futures.xhtml#threadpoolexecutor-example">ThreadPoolExecutor Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="concurrent.futures.xhtml#processpoolexecutor">ProcessPoolExecutor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="concurrent.futures.xhtml#processpoolexecutor-example">ProcessPoolExecutor Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="concurrent.futures.xhtml#future-objects">Future Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concurrent.futures.xhtml#module-functions">Module Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concurrent.futures.xhtml#exception-classes">Exception classes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="subprocess.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">subprocess</span></code> — Subprocess management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="subprocess.xhtml#using-the-subprocess-module">Using the <code class="xref py py-mod docutils literal notranslate"><span class="pre">subprocess</span></code> Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="subprocess.xhtml#frequently-used-arguments">Frequently Used Arguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subprocess.xhtml#popen-constructor">Popen Constructor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subprocess.xhtml#exceptions">Exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="subprocess.xhtml#security-considerations">Security Considerations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subprocess.xhtml#popen-objects">Popen Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subprocess.xhtml#windows-popen-helpers">Windows Popen Helpers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="subprocess.xhtml#windows-constants">Windows Constants</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="subprocess.xhtml#older-high-level-api">Older high-level API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subprocess.xhtml#replacing-older-functions-with-the-subprocess-module">Replacing Older Functions with the <code class="xref py py-mod docutils literal notranslate"><span class="pre">subprocess</span></code> Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="subprocess.xhtml#replacing-bin-sh-shell-command-substitution">Replacing <strong class="program">/bin/sh</strong> shell command substitution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subprocess.xhtml#replacing-shell-pipeline">Replacing shell pipeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subprocess.xhtml#replacing-os-system">Replacing <code class="xref py py-func docutils literal notranslate"><span class="pre">os.system()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="subprocess.xhtml#replacing-the-os-spawn-family">Replacing the <code class="xref py py-func docutils literal notranslate"><span class="pre">os.spawn</span></code> family</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subprocess.xhtml#replacing-os-popen-os-popen2-os-popen3">Replacing <code class="xref py py-func docutils literal notranslate"><span class="pre">os.popen()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">os.popen2()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">os.popen3()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="subprocess.xhtml#replacing-functions-from-the-popen2-module">Replacing functions from the <code class="xref py py-mod docutils literal notranslate"><span class="pre">popen2</span></code> module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="subprocess.xhtml#legacy-shell-invocation-functions">Legacy Shell Invocation Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subprocess.xhtml#notes">Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="subprocess.xhtml#converting-an-argument-sequence-to-a-string-on-windows">Converting an argument sequence to a string on Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subprocess.xhtml#disabling-use-of-vfork-or-posix-spawn">Disabling use of <code class="docutils literal notranslate"><span class="pre">vfork()</span></code> or <code class="docutils literal notranslate"><span class="pre">posix_spawn()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sched.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sched</span></code> — Event scheduler</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sched.xhtml#scheduler-objects">Scheduler Objects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="queue.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">queue</span></code> — A synchronized queue class</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="queue.xhtml#queue-objects">Queue Objects</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="queue.xhtml#terminating-queues">Terminating queues</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="queue.xhtml#simplequeue-objects">SimpleQueue Objects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contextvars.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">contextvars</span></code> — Context Variables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contextvars.xhtml#context-variables">Context Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contextvars.xhtml#manual-context-management">Manual Context Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contextvars.xhtml#asyncio-support">asyncio support</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>The following are support modules for some of the above services:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="_thread.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">_thread</span></code> — Low-level threading API</a></li>
+</ul>
+</div>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

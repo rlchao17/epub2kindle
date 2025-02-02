@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="File and Directory Access" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://docs.python.org/3/library/filesys.xhtml" />
+<meta property="og:site_name" content="Python documentation" />
+<meta property="og:description" content="The modules described in this chapter deal with disk files and directories. For example, there are modules for reading the properties of files, manipulating paths in a portable way, and creating te..." />
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
+<meta property="og:image:alt" content="Python documentation" />
+<meta name="description" content="The modules described in this chapter deal with disk files and directories. For example, there are modules for reading the properties of files, manipulating paths in a portable way, and creating te..." />
+<meta property="og:image:width" content="200" />
+<meta property="og:image:height" content="200" />
+<meta name="theme-color" content="#3776ab" />
+
+    <title>File and Directory Access</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    
+    <link rel="canonical" href="https://docs.python.org/3/library/filesys.html" />
+    
+      
+    
+
+    
+    <style>
+      @media only screen {
+        table.full-width-table {
+            width: 100%;
+        }
+      }
+    </style>
+ 
+
+  </head><body>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <section id="file-and-directory-access">
+<span id="filesys"></span><h1>File and Directory Access</h1>
+<p>The modules described in this chapter deal with disk files and directories.  For
+example, there are modules for reading the properties of files, manipulating
+paths in a portable way, and creating temporary files.  The full list of modules
+in this chapter is:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pathlib.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pathlib</span></code> — Object-oriented filesystem paths</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pathlib.xhtml#basic-use">Basic use</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pathlib.xhtml#exceptions">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pathlib.xhtml#pure-paths">Pure paths</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pathlib.xhtml#general-properties">General properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pathlib.xhtml#operators">Operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pathlib.xhtml#accessing-individual-parts">Accessing individual parts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pathlib.xhtml#methods-and-properties">Methods and properties</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pathlib.xhtml#concrete-paths">Concrete paths</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pathlib.xhtml#parsing-and-generating-uris">Parsing and generating URIs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pathlib.xhtml#expanding-and-resolving-paths">Expanding and resolving paths</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pathlib.xhtml#querying-file-type-and-status">Querying file type and status</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pathlib.xhtml#reading-and-writing-files">Reading and writing files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pathlib.xhtml#reading-directories">Reading directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pathlib.xhtml#creating-files-and-directories">Creating files and directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pathlib.xhtml#renaming-and-deleting">Renaming and deleting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pathlib.xhtml#permissions-and-ownership">Permissions and ownership</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pathlib.xhtml#pattern-language">Pattern language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pathlib.xhtml#comparison-to-the-glob-module">Comparison to the <code class="xref py py-mod docutils literal notranslate"><span class="pre">glob</span></code> module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pathlib.xhtml#comparison-to-the-os-and-os-path-modules">Comparison to the <code class="xref py py-mod docutils literal notranslate"><span class="pre">os</span></code> and <code class="xref py py-mod docutils literal notranslate"><span class="pre">os.path</span></code> modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pathlib.xhtml#corresponding-tools">Corresponding tools</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="os.path.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">os.path</span></code> — Common pathname manipulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stat.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">stat</span></code> — Interpreting <code class="xref py py-func docutils literal notranslate"><span class="pre">stat()</span></code> results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filecmp.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">filecmp</span></code> — File and Directory Comparisons</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="filecmp.xhtml#the-dircmp-class">The <code class="xref py py-class docutils literal notranslate"><span class="pre">dircmp</span></code> class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tempfile.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tempfile</span></code> — Generate temporary files and directories</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tempfile.xhtml#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tempfile.xhtml#deprecated-functions-and-variables">Deprecated functions and variables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="glob.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">glob</span></code> — Unix style pathname pattern expansion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="glob.xhtml#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fnmatch.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fnmatch</span></code> — Unix filename pattern matching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linecache.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">linecache</span></code> — Random access to text lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shutil.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">shutil</span></code> — High-level file operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="shutil.xhtml#directory-and-files-operations">Directory and files operations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="shutil.xhtml#platform-dependent-efficient-copy-operations">Platform-dependent efficient copy operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shutil.xhtml#copytree-example">copytree example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shutil.xhtml#rmtree-example">rmtree example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="shutil.xhtml#archiving-operations">Archiving operations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="shutil.xhtml#archiving-example">Archiving example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shutil.xhtml#archiving-example-with-base-dir">Archiving example with <em>base_dir</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="shutil.xhtml#querying-the-size-of-the-output-terminal">Querying the size of the output terminal</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt>Module <a class="reference internal" href="os.xhtml#module-os" title="os: Miscellaneous operating system interfaces."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os</span></code></a></dt><dd><p>Operating system interfaces, including functions to work with files at a
+lower level than Python <a class="reference internal" href="../glossary.xhtml#term-file-object"><span class="xref std std-term">file objects</span></a>.</p>
+</dd>
+<dt>Module <a class="reference internal" href="io.xhtml#module-io" title="io: Core tools for working with streams."><code class="xref py py-mod docutils literal notranslate"><span class="pre">io</span></code></a></dt><dd><p>Python’s built-in I/O library, including both abstract classes and
+some concrete classes such as file I/O.</p>
+</dd>
+<dt>Built-in function <a class="reference internal" href="functions.xhtml#open" title="open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a></dt><dd><p>The standard way to open files for reading and writing with Python.</p>
+</dd>
+</dl>
+</div>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

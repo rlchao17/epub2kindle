@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="html — HyperText Markup Language support" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://docs.python.org/3/library/html.xhtml" />
+<meta property="og:site_name" content="Python documentation" />
+<meta property="og:description" content="Source code: Lib/html/__init__.py[https://github.com/python/cpython/tree/3.13/Lib/html/__init__.py] This module defines utilities to manipulate HTML. Submodules in the html package are: html.parser..." />
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
+<meta property="og:image:alt" content="Python documentation" />
+<meta name="description" content="Source code: Lib/html/__init__.py[https://github.com/python/cpython/tree/3.13/Lib/html/__init__.py] This module defines utilities to manipulate HTML. Submodules in the html package are: html.parser..." />
+<meta property="og:image:width" content="200" />
+<meta property="og:image:height" content="200" />
+<meta name="theme-color" content="#3776ab" />
+
+    <title>html — HyperText Markup Language support</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    
+    <link rel="canonical" href="https://docs.python.org/3/library/html.html" />
+    
+      
+    
+
+    
+    <style>
+      @media only screen {
+        table.full-width-table {
+            width: 100%;
+        }
+      }
+    </style>
+ 
+
+  </head><body>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <section id="module-html">
+<span id="html-hypertext-markup-language-support"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">html</span></code> — HyperText Markup Language support</h1>
+<p><strong>Source code:</strong> <a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.13/Lib/html/__init__.py">Lib/html/__init__.py</a><span class="link-target"> [https://github.com/python/cpython/tree/3.13/Lib/html/__init__.py]</span></p>
+<hr class="docutils" />
+<p>This module defines utilities to manipulate HTML.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="html.escape">
+<span class="sig-prename descclassname"><span class="pre">html.</span></span><span class="sig-name descname"><span class="pre">escape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quote</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Convert the characters <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> in string <em>s</em> to HTML-safe
+sequences.  Use this if you need to display text that might contain such
+characters in HTML.  If the optional flag <em>quote</em> is true, the characters
+(<code class="docutils literal notranslate"><span class="pre">&quot;</span></code>) and (<code class="docutils literal notranslate"><span class="pre">'</span></code>) are also translated; this helps for inclusion in an HTML
+attribute value delimited by quotes, as in <code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">href=&quot;...&quot;&gt;</span></code>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 3.2.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="html.unescape">
+<span class="sig-prename descclassname"><span class="pre">html.</span></span><span class="sig-name descname"><span class="pre">unescape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Convert all named and numeric character references (e.g. <code class="docutils literal notranslate"><span class="pre">&amp;gt;</span></code>,
+<code class="docutils literal notranslate"><span class="pre">&amp;#62;</span></code>, <code class="docutils literal notranslate"><span class="pre">&amp;#x3e;</span></code>) in the string <em>s</em> to the corresponding Unicode
+characters.  This function uses the rules defined by the HTML 5 standard
+for both valid and invalid character references, and the <a class="reference internal" href="html.entities.xhtml#html.entities.html5" title="html.entities.html5"><code class="xref py py-data docutils literal notranslate"><span class="pre">list</span> <span class="pre">of</span>
+<span class="pre">HTML</span> <span class="pre">5</span> <span class="pre">named</span> <span class="pre">character</span> <span class="pre">references</span></code></a>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 3.4.</span></p>
+</div>
+</dd></dl>
+
+<hr class="docutils" />
+<p>Submodules in the <code class="docutils literal notranslate"><span class="pre">html</span></code> package are:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="html.parser.xhtml#module-html.parser" title="html.parser: A simple parser that can handle HTML and XHTML."><code class="xref py py-mod docutils literal notranslate"><span class="pre">html.parser</span></code></a> – HTML/XHTML parser with lenient parsing mode</p></li>
+<li><p><a class="reference internal" href="html.entities.xhtml#module-html.entities" title="html.entities: Definitions of HTML general entities."><code class="xref py py-mod docutils literal notranslate"><span class="pre">html.entities</span></code></a> – HTML entity definitions</p></li>
+</ul>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

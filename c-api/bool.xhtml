@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Boolean Objects" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://docs.python.org/3/c-api/bool.xhtml" />
+<meta property="og:site_name" content="Python documentation" />
+<meta property="og:description" content="Booleans in Python are implemented as a subclass of integers. There are only two booleans, Py_False and Py_True. As such, the normal creation and deletion functions don’t apply to booleans. The fol..." />
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
+<meta property="og:image:alt" content="Python documentation" />
+<meta name="description" content="Booleans in Python are implemented as a subclass of integers. There are only two booleans, Py_False and Py_True. As such, the normal creation and deletion functions don’t apply to booleans. The fol..." />
+<meta property="og:image:width" content="200" />
+<meta property="og:image:height" content="200" />
+<meta name="theme-color" content="#3776ab" />
+
+    <title>Boolean Objects</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    
+    <link rel="canonical" href="https://docs.python.org/3/c-api/bool.html" />
+    
+      
+    
+
+    
+    <style>
+      @media only screen {
+        table.full-width-table {
+            width: 100%;
+        }
+      }
+    </style>
+ 
+
+  </head><body>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <section id="boolean-objects">
+<span id="boolobjects"></span><h1>Boolean Objects</h1>
+<p>Booleans in Python are implemented as a subclass of integers.  There are only
+two booleans, <a class="reference internal" href="#c.Py_False" title="Py_False"><code class="xref c c-data docutils literal notranslate"><span class="pre">Py_False</span></code></a> and <a class="reference internal" href="#c.Py_True" title="Py_True"><code class="xref c c-data docutils literal notranslate"><span class="pre">Py_True</span></code></a>.  As such, the normal
+creation and deletion functions don’t apply to booleans.  The following macros
+are available, however.</p>
+<dl class="c var">
+<dt class="sig sig-object c" id="c.PyBool_Type">
+<a class="reference internal" href="type.xhtml#c.PyTypeObject" title="PyTypeObject"><span class="n"><span class="pre">PyTypeObject</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyBool_Type</span></span></span><br /></dt>
+<dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.xhtml#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>This instance of <a class="reference internal" href="type.xhtml#c.PyTypeObject" title="PyTypeObject"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyTypeObject</span></code></a> represents the Python boolean type; it
+is the same object as <a class="reference internal" href="../library/functions.xhtml#bool" title="bool"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> in the Python layer.</p>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.PyBool_Check">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyBool_Check</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Return true if <em>o</em> is of type <a class="reference internal" href="#c.PyBool_Type" title="PyBool_Type"><code class="xref c c-data docutils literal notranslate"><span class="pre">PyBool_Type</span></code></a>.  This function always
+succeeds.</p>
+</dd></dl>
+
+<dl class="c var">
+<dt class="sig sig-object c" id="c.Py_False">
+<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">Py_False</span></span></span><br /></dt>
+<dd><p>The Python <code class="docutils literal notranslate"><span class="pre">False</span></code> object.  This object has no methods and is
+<a class="reference internal" href="../glossary.xhtml#term-immortal"><span class="xref std std-term">immortal</span></a>.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 3.12: </span><a class="reference internal" href="#c.Py_False" title="Py_False"><code class="xref c c-data docutils literal notranslate"><span class="pre">Py_False</span></code></a> is <a class="reference internal" href="../glossary.xhtml#term-immortal"><span class="xref std std-term">immortal</span></a>.</p>
+</div>
+</dd></dl>
+
+<dl class="c var">
+<dt class="sig sig-object c" id="c.Py_True">
+<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">Py_True</span></span></span><br /></dt>
+<dd><p>The Python <code class="docutils literal notranslate"><span class="pre">True</span></code> object.  This object has no methods and is
+<a class="reference internal" href="../glossary.xhtml#term-immortal"><span class="xref std std-term">immortal</span></a>.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 3.12: </span><a class="reference internal" href="#c.Py_True" title="Py_True"><code class="xref c c-data docutils literal notranslate"><span class="pre">Py_True</span></code></a> is <a class="reference internal" href="../glossary.xhtml#term-immortal"><span class="xref std std-term">immortal</span></a>.</p>
+</div>
+</dd></dl>
+
+<dl class="c macro">
+<dt class="sig sig-object c" id="c.Py_RETURN_FALSE">
+<span class="sig-name descname"><span class="n"><span class="pre">Py_RETURN_FALSE</span></span></span><br /></dt>
+<dd><p>Return <a class="reference internal" href="#c.Py_False" title="Py_False"><code class="xref c c-data docutils literal notranslate"><span class="pre">Py_False</span></code></a> from a function.</p>
+</dd></dl>
+
+<dl class="c macro">
+<dt class="sig sig-object c" id="c.Py_RETURN_TRUE">
+<span class="sig-name descname"><span class="n"><span class="pre">Py_RETURN_TRUE</span></span></span><br /></dt>
+<dd><p>Return <a class="reference internal" href="#c.Py_True" title="Py_True"><code class="xref c c-data docutils literal notranslate"><span class="pre">Py_True</span></code></a> from a function.</p>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.PyBool_FromLong">
+<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyBool_FromLong</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n"><span class="pre">v</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><em class="refcount return_new_ref">Return value: New reference.</em><em class="stableabi"> Part of the <a class="reference internal" href="stable.xhtml#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Return <a class="reference internal" href="#c.Py_True" title="Py_True"><code class="xref c c-data docutils literal notranslate"><span class="pre">Py_True</span></code></a> or <a class="reference internal" href="#c.Py_False" title="Py_False"><code class="xref c c-data docutils literal notranslate"><span class="pre">Py_False</span></code></a>, depending on the truth value of <em>v</em>.</p>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

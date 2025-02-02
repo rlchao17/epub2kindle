@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="msvcrt — Useful routines from the MS VC++ runtime" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://docs.python.org/3/library/msvcrt.xhtml" />
+<meta property="og:site_name" content="Python documentation" />
+<meta property="og:description" content="These functions provide access to some useful capabilities on Windows platforms. Some higher-level modules use these functions to build the Windows implementations of their services. For example, t..." />
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
+<meta property="og:image:alt" content="Python documentation" />
+<meta name="description" content="These functions provide access to some useful capabilities on Windows platforms. Some higher-level modules use these functions to build the Windows implementations of their services. For example, t..." />
+<meta property="og:image:width" content="200" />
+<meta property="og:image:height" content="200" />
+<meta name="theme-color" content="#3776ab" />
+
+    <title>msvcrt — Useful routines from the MS VC++ runtime</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    
+    <link rel="canonical" href="https://docs.python.org/3/library/msvcrt.html" />
+    
+      
+    
+
+    
+    <style>
+      @media only screen {
+        table.full-width-table {
+            width: 100%;
+        }
+      }
+    </style>
+ 
+
+  </head><body>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <section id="module-msvcrt">
+<span id="msvcrt-useful-routines-from-the-ms-vc-runtime"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">msvcrt</span></code> — Useful routines from the MS VC++ runtime</h1>
+<hr class="docutils" />
+<p>These functions provide access to some useful capabilities on Windows platforms.
+Some higher-level modules use these functions to build the Windows
+implementations of their services. For example, the <a class="reference internal" href="getpass.xhtml#module-getpass" title="getpass: Portable reading of passwords and retrieval of the userid."><code class="xref py py-mod docutils literal notranslate"><span class="pre">getpass</span></code></a> module uses
+this in the implementation of the <a class="reference internal" href="getpass.xhtml#module-getpass" title="getpass: Portable reading of passwords and retrieval of the userid."><code class="xref py py-func docutils literal notranslate"><span class="pre">getpass()</span></code></a> function.</p>
+<p>Further documentation on these functions can be found in the Platform API
+documentation.</p>
+<p>The module implements both the normal and wide char variants of the console I/O
+api. The normal API deals only with ASCII characters and is of limited use
+for internationalized applications. The wide char API should be used where
+ever possible.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 3.3: </span>Operations in this module now raise <a class="reference internal" href="exceptions.xhtml#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> where <a class="reference internal" href="exceptions.xhtml#IOError" title="IOError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">IOError</span></code></a>
+was raised.</p>
+</div>
+<section id="file-operations">
+<span id="msvcrt-files"></span><h2>File Operations</h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="msvcrt.locking">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">locking</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbytes</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Lock part of a file based on file descriptor <em>fd</em> from the C runtime. Raises
+<a class="reference internal" href="exceptions.xhtml#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> on failure. The locked region of the file extends from the
+current file position for <em>nbytes</em> bytes, and may continue beyond the end of the
+file. <em>mode</em> must be one of the <code class="xref py py-const docutils literal notranslate"><span class="pre">LK_*</span></code> constants listed below. Multiple
+regions in a file may be locked at the same time, but may not overlap. Adjacent
+regions are not merged; they must be unlocked individually.</p>
+<p class="audit-hook">Raises an <a class="reference internal" href="sys.xhtml#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">msvcrt.locking</span></code> with arguments <code class="docutils literal notranslate"><span class="pre">fd</span></code>, <code class="docutils literal notranslate"><span class="pre">mode</span></code>, <code class="docutils literal notranslate"><span class="pre">nbytes</span></code>.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="msvcrt.LK_LOCK">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">LK_LOCK</span></span></dt>
+<dt class="sig sig-object py" id="msvcrt.LK_RLCK">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">LK_RLCK</span></span></dt>
+<dd><p>Locks the specified bytes. If the bytes cannot be locked, the program
+immediately tries again after 1 second. If, after 10 attempts, the bytes cannot
+be locked, <a class="reference internal" href="exceptions.xhtml#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> is raised.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="msvcrt.LK_NBLCK">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">LK_NBLCK</span></span></dt>
+<dt class="sig sig-object py" id="msvcrt.LK_NBRLCK">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">LK_NBRLCK</span></span></dt>
+<dd><p>Locks the specified bytes. If the bytes cannot be locked, <a class="reference internal" href="exceptions.xhtml#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> is
+raised.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="msvcrt.LK_UNLCK">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">LK_UNLCK</span></span></dt>
+<dd><p>Unlocks the specified bytes, which must have been previously locked.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="msvcrt.setmode">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">setmode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the line-end translation mode for the file descriptor <em>fd</em>. To set it to
+text mode, <em>flags</em> should be <a class="reference internal" href="os.xhtml#os.O_TEXT" title="os.O_TEXT"><code class="xref py py-const docutils literal notranslate"><span class="pre">os.O_TEXT</span></code></a>; for binary, it should be
+<a class="reference internal" href="os.xhtml#os.O_BINARY" title="os.O_BINARY"><code class="xref py py-const docutils literal notranslate"><span class="pre">os.O_BINARY</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="msvcrt.open_osfhandle">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">open_osfhandle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">handle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Create a C runtime file descriptor from the file handle <em>handle</em>. The <em>flags</em>
+parameter should be a bitwise OR of <a class="reference internal" href="os.xhtml#os.O_APPEND" title="os.O_APPEND"><code class="xref py py-const docutils literal notranslate"><span class="pre">os.O_APPEND</span></code></a>,
+<a class="reference internal" href="os.xhtml#os.O_RDONLY" title="os.O_RDONLY"><code class="xref py py-const docutils literal notranslate"><span class="pre">os.O_RDONLY</span></code></a>, <a class="reference internal" href="os.xhtml#os.O_TEXT" title="os.O_TEXT"><code class="xref py py-const docutils literal notranslate"><span class="pre">os.O_TEXT</span></code></a> and <a class="reference internal" href="os.xhtml#os.O_NOINHERIT" title="os.O_NOINHERIT"><code class="xref py py-const docutils literal notranslate"><span class="pre">os.O_NOINHERIT</span></code></a>.
+The returned file descriptor may be used as a parameter
+to <a class="reference internal" href="os.xhtml#os.fdopen" title="os.fdopen"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.fdopen()</span></code></a> to create a file object.</p>
+<p>The file descriptor is inheritable by default. Pass <a class="reference internal" href="os.xhtml#os.O_NOINHERIT" title="os.O_NOINHERIT"><code class="xref py py-const docutils literal notranslate"><span class="pre">os.O_NOINHERIT</span></code></a>
+flag to make it non inheritable.</p>
+<p class="audit-hook">Raises an <a class="reference internal" href="sys.xhtml#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">msvcrt.open_osfhandle</span></code> with arguments <code class="docutils literal notranslate"><span class="pre">handle</span></code>, <code class="docutils literal notranslate"><span class="pre">flags</span></code>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="msvcrt.get_osfhandle">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">get_osfhandle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fd</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Return the file handle for the file descriptor <em>fd</em>. Raises <a class="reference internal" href="exceptions.xhtml#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> if
+<em>fd</em> is not recognized.</p>
+<p class="audit-hook">Raises an <a class="reference internal" href="sys.xhtml#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">msvcrt.get_osfhandle</span></code> with argument <code class="docutils literal notranslate"><span class="pre">fd</span></code>.</p>
+</dd></dl>
+
+</section>
+<section id="console-i-o">
+<span id="msvcrt-console"></span><h2>Console I/O</h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="msvcrt.kbhit">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">kbhit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns a nonzero value if a keypress is waiting to be read. Otherwise,
+return 0.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="msvcrt.getch">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">getch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Read a keypress and return the resulting character as a byte string.
+Nothing is echoed to the console. This call will block if a keypress
+is not already available, but will not wait for <kbd class="kbd docutils literal notranslate">Enter</kbd> to be
+pressed. If the pressed key was a special function key, this will
+return <code class="docutils literal notranslate"><span class="pre">'\000'</span></code> or <code class="docutils literal notranslate"><span class="pre">'\xe0'</span></code>; the next call will return the keycode.
+The <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Control</kbd>-<kbd class="kbd docutils literal notranslate">C</kbd></kbd> keypress cannot be read with this function.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="msvcrt.getwch">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">getwch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Wide char variant of <a class="reference internal" href="#msvcrt.getch" title="msvcrt.getch"><code class="xref py py-func docutils literal notranslate"><span class="pre">getch()</span></code></a>, returning a Unicode value.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="msvcrt.getche">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">getche</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Similar to <a class="reference internal" href="#msvcrt.getch" title="msvcrt.getch"><code class="xref py py-func docutils literal notranslate"><span class="pre">getch()</span></code></a>, but the keypress will be echoed if it represents a
+printable character.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="msvcrt.getwche">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">getwche</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Wide char variant of <a class="reference internal" href="#msvcrt.getche" title="msvcrt.getche"><code class="xref py py-func docutils literal notranslate"><span class="pre">getche()</span></code></a>, returning a Unicode value.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="msvcrt.putch">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">putch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">char</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Print the byte string <em>char</em> to the console without buffering.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="msvcrt.putwch">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">putwch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unicode_char</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Wide char variant of <a class="reference internal" href="#msvcrt.putch" title="msvcrt.putch"><code class="xref py py-func docutils literal notranslate"><span class="pre">putch()</span></code></a>, accepting a Unicode value.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="msvcrt.ungetch">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">ungetch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">char</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Cause the byte string <em>char</em> to be “pushed back” into the console buffer;
+it will be the next character read by <a class="reference internal" href="#msvcrt.getch" title="msvcrt.getch"><code class="xref py py-func docutils literal notranslate"><span class="pre">getch()</span></code></a> or <a class="reference internal" href="#msvcrt.getche" title="msvcrt.getche"><code class="xref py py-func docutils literal notranslate"><span class="pre">getche()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="msvcrt.ungetwch">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">ungetwch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unicode_char</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Wide char variant of <a class="reference internal" href="#msvcrt.ungetch" title="msvcrt.ungetch"><code class="xref py py-func docutils literal notranslate"><span class="pre">ungetch()</span></code></a>, accepting a Unicode value.</p>
+</dd></dl>
+
+</section>
+<section id="other-functions">
+<span id="msvcrt-other"></span><h2>Other Functions</h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="msvcrt.heapmin">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">heapmin</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Force the <code class="xref c c-func docutils literal notranslate"><span class="pre">malloc()</span></code> heap to clean itself up and return unused blocks to
+the operating system. On failure, this raises <a class="reference internal" href="exceptions.xhtml#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="msvcrt.set_error_mode">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">set_error_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Changes the location where the C runtime writes an error message for an error
+that might end the program. <em>mode</em> must be one of the <code class="xref py py-const docutils literal notranslate"><span class="pre">OUT_*</span></code>
+constants listed below  or <a class="reference internal" href="#msvcrt.REPORT_ERRMODE" title="msvcrt.REPORT_ERRMODE"><code class="xref py py-const docutils literal notranslate"><span class="pre">REPORT_ERRMODE</span></code></a>. Returns the old setting
+or -1 if an error occurs. Only available in
+<a class="reference internal" href="../using/configure.xhtml#debug-build"><span class="std std-ref">debug build of Python</span></a>.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="msvcrt.OUT_TO_DEFAULT">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">OUT_TO_DEFAULT</span></span></dt>
+<dd><p>Error sink is determined by the app’s type. Only available in
+<a class="reference internal" href="../using/configure.xhtml#debug-build"><span class="std std-ref">debug build of Python</span></a>.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="msvcrt.OUT_TO_STDERR">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">OUT_TO_STDERR</span></span></dt>
+<dd><p>Error sink is a standard error. Only available in
+<a class="reference internal" href="../using/configure.xhtml#debug-build"><span class="std std-ref">debug build of Python</span></a>.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="msvcrt.OUT_TO_MSGBOX">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">OUT_TO_MSGBOX</span></span></dt>
+<dd><p>Error sink is a message box. Only available in
+<a class="reference internal" href="../using/configure.xhtml#debug-build"><span class="std std-ref">debug build of Python</span></a>.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="msvcrt.REPORT_ERRMODE">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">REPORT_ERRMODE</span></span></dt>
+<dd><p>Report the current error mode value. Only available in
+<a class="reference internal" href="../using/configure.xhtml#debug-build"><span class="std std-ref">debug build of Python</span></a>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="msvcrt.CrtSetReportMode">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">CrtSetReportMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Specifies the destination or destinations for a specific report type
+generated by <code class="xref c c-func docutils literal notranslate"><span class="pre">_CrtDbgReport()</span></code> in the MS VC++ runtime. <em>type</em> must be
+one of the <code class="xref py py-const docutils literal notranslate"><span class="pre">CRT_*</span></code> constants listed below. <em>mode</em> must be one of the
+<code class="xref py py-const docutils literal notranslate"><span class="pre">CRTDBG_*</span></code> constants listed below. Only available in
+<a class="reference internal" href="../using/configure.xhtml#debug-build"><span class="std std-ref">debug build of Python</span></a>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="msvcrt.CrtSetReportFile">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">CrtSetReportFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>After you use <a class="reference internal" href="#msvcrt.CrtSetReportMode" title="msvcrt.CrtSetReportMode"><code class="xref py py-func docutils literal notranslate"><span class="pre">CrtSetReportMode()</span></code></a> to specify <a class="reference internal" href="#msvcrt.CRTDBG_MODE_FILE" title="msvcrt.CRTDBG_MODE_FILE"><code class="xref py py-const docutils literal notranslate"><span class="pre">CRTDBG_MODE_FILE</span></code></a>,
+you can specify the file handle to receive the message text. <em>type</em> must be
+one of the <code class="xref py py-const docutils literal notranslate"><span class="pre">CRT_*</span></code> constants listed below. <em>file</em> should be the file
+handle your want specified. Only available in
+<a class="reference internal" href="../using/configure.xhtml#debug-build"><span class="std std-ref">debug build of Python</span></a>.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="msvcrt.CRT_WARN">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">CRT_WARN</span></span></dt>
+<dd><p>Warnings, messages, and information that doesn’t need immediate attention.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="msvcrt.CRT_ERROR">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">CRT_ERROR</span></span></dt>
+<dd><p>Errors, unrecoverable problems, and issues that require immediate attention.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="msvcrt.CRT_ASSERT">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">CRT_ASSERT</span></span></dt>
+<dd><p>Assertion failures.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="msvcrt.CRTDBG_MODE_DEBUG">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">CRTDBG_MODE_DEBUG</span></span></dt>
+<dd><p>Writes the message to the debugger’s output window.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="msvcrt.CRTDBG_MODE_FILE">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">CRTDBG_MODE_FILE</span></span></dt>
+<dd><p>Writes the message to a user-supplied file handle. <a class="reference internal" href="#msvcrt.CrtSetReportFile" title="msvcrt.CrtSetReportFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">CrtSetReportFile()</span></code></a>
+should be called to define the specific file or stream to use as
+the destination.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="msvcrt.CRTDBG_MODE_WNDW">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">CRTDBG_MODE_WNDW</span></span></dt>
+<dd><p>Creates a message box to display the message along with the <code class="docutils literal notranslate"><span class="pre">Abort</span></code>,
+<code class="docutils literal notranslate"><span class="pre">Retry</span></code>, and <code class="docutils literal notranslate"><span class="pre">Ignore</span></code> buttons.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="msvcrt.CRTDBG_REPORT_MODE">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">CRTDBG_REPORT_MODE</span></span></dt>
+<dd><p>Returns current <em>mode</em> for the specified <em>type</em>.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="msvcrt.CRT_ASSEMBLY_VERSION">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">CRT_ASSEMBLY_VERSION</span></span></dt>
+<dd><p>The CRT Assembly version, from the <code class="file docutils literal notranslate"><span class="pre">crtassem.h</span></code> header file.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="msvcrt.VC_ASSEMBLY_PUBLICKEYTOKEN">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">VC_ASSEMBLY_PUBLICKEYTOKEN</span></span></dt>
+<dd><p>The VC Assembly public key token, from the <code class="file docutils literal notranslate"><span class="pre">crtassem.h</span></code> header file.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="msvcrt.LIBRARIES_ASSEMBLY_NAME_PREFIX">
+<span class="sig-prename descclassname"><span class="pre">msvcrt.</span></span><span class="sig-name descname"><span class="pre">LIBRARIES_ASSEMBLY_NAME_PREFIX</span></span></dt>
+<dd><p>The Libraries Assembly name prefix, from the <code class="file docutils literal notranslate"><span class="pre">crtassem.h</span></code> header file.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

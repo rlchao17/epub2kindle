@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Python Language Services" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://docs.python.org/3/library/language.xhtml" />
+<meta property="og:site_name" content="Python documentation" />
+<meta property="og:description" content="Python provides a number of modules to assist in working with the Python language. These modules support tokenizing, parsing, syntax analysis, bytecode disassembly, and various other facilities. Th..." />
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
+<meta property="og:image:alt" content="Python documentation" />
+<meta name="description" content="Python provides a number of modules to assist in working with the Python language. These modules support tokenizing, parsing, syntax analysis, bytecode disassembly, and various other facilities. Th..." />
+<meta property="og:image:width" content="200" />
+<meta property="og:image:height" content="200" />
+<meta name="theme-color" content="#3776ab" />
+
+    <title>Python Language Services</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    
+    <link rel="canonical" href="https://docs.python.org/3/library/language.html" />
+    
+      
+    
+
+    
+    <style>
+      @media only screen {
+        table.full-width-table {
+            width: 100%;
+        }
+      }
+    </style>
+ 
+
+  </head><body>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <section id="python-language-services">
+<span id="language"></span><h1>Python Language Services</h1>
+<p>Python provides a number of modules to assist in working with the Python
+language.  These modules support tokenizing, parsing, syntax analysis, bytecode
+disassembly, and various other facilities.</p>
+<p>These modules include:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ast.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ast</span></code> — Abstract Syntax Trees</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ast.xhtml#abstract-grammar">Abstract Grammar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ast.xhtml#node-classes">Node classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ast.xhtml#root-nodes">Root nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ast.xhtml#literals">Literals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ast.xhtml#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ast.xhtml#expressions">Expressions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ast.xhtml#subscripting">Subscripting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ast.xhtml#comprehensions">Comprehensions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ast.xhtml#statements">Statements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ast.xhtml#imports">Imports</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ast.xhtml#control-flow">Control flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ast.xhtml#pattern-matching">Pattern matching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ast.xhtml#type-parameters">Type parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ast.xhtml#function-and-class-definitions">Function and class definitions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ast.xhtml#async-and-await">Async and await</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ast.xhtml#ast-helpers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ast</span></code> Helpers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ast.xhtml#compiler-flags">Compiler Flags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ast.xhtml#command-line-usage">Command-Line Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="symtable.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">symtable</span></code> — Access to the compiler’s symbol tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="symtable.xhtml#generating-symbol-tables">Generating Symbol Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="symtable.xhtml#examining-symbol-tables">Examining Symbol Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="symtable.xhtml#command-line-usage">Command-Line Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="token.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">token</span></code> — Constants used with Python parse trees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="keyword.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">keyword</span></code> — Testing for Python keywords</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tokenize.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tokenize</span></code> — Tokenizer for Python source</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tokenize.xhtml#tokenizing-input">Tokenizing Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tokenize.xhtml#command-line-usage">Command-Line Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tokenize.xhtml#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tabnanny.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tabnanny</span></code> — Detection of ambiguous indentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyclbr.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pyclbr</span></code> — Python module browser support</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pyclbr.xhtml#function-objects">Function Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyclbr.xhtml#class-objects">Class Objects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="py_compile.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">py_compile</span></code> — Compile Python source files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="py_compile.xhtml#command-line-interface">Command-Line Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="compileall.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">compileall</span></code> — Byte-compile Python libraries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="compileall.xhtml#command-line-use">Command-line use</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compileall.xhtml#public-functions">Public functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dis.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">dis</span></code> — Disassembler for Python bytecode</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dis.xhtml#command-line-interface">Command-line interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dis.xhtml#bytecode-analysis">Bytecode analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dis.xhtml#analysis-functions">Analysis functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dis.xhtml#python-bytecode-instructions">Python Bytecode Instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dis.xhtml#opcode-collections">Opcode collections</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pickletools.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickletools</span></code> — Tools for pickle developers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pickletools.xhtml#command-line-usage">Command line usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pickletools.xhtml#command-line-options">Command line options</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pickletools.xhtml#programmatic-interface">Programmatic Interface</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

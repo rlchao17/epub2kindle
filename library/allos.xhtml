@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Generic Operating System Services" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://docs.python.org/3/library/allos.xhtml" />
+<meta property="og:site_name" content="Python documentation" />
+<meta property="og:description" content="The modules described in this chapter provide interfaces to operating system features that are available on (almost) all operating systems, such as files and a clock. The interfaces are generally m..." />
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
+<meta property="og:image:alt" content="Python documentation" />
+<meta name="description" content="The modules described in this chapter provide interfaces to operating system features that are available on (almost) all operating systems, such as files and a clock. The interfaces are generally m..." />
+<meta property="og:image:width" content="200" />
+<meta property="og:image:height" content="200" />
+<meta name="theme-color" content="#3776ab" />
+
+    <title>Generic Operating System Services</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    
+    <link rel="canonical" href="https://docs.python.org/3/library/allos.html" />
+    
+      
+    
+
+    
+    <style>
+      @media only screen {
+        table.full-width-table {
+            width: 100%;
+        }
+      }
+    </style>
+ 
+
+  </head><body>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <section id="generic-operating-system-services">
+<span id="allos"></span><h1>Generic Operating System Services</h1>
+<p>The modules described in this chapter provide interfaces to operating system
+features that are available on (almost) all operating systems, such as files and
+a clock.  The interfaces are generally modeled after the Unix or C interfaces,
+but they are available on most other systems as well.  Here’s an overview:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="os.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">os</span></code> — Miscellaneous operating system interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="os.xhtml#file-names-command-line-arguments-and-environment-variables">File Names, Command Line Arguments, and Environment Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os.xhtml#python-utf-8-mode">Python UTF-8 Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os.xhtml#process-parameters">Process Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os.xhtml#file-object-creation">File Object Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os.xhtml#file-descriptor-operations">File Descriptor Operations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="os.xhtml#querying-the-size-of-a-terminal">Querying the size of a terminal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="os.xhtml#inheritance-of-file-descriptors">Inheritance of File Descriptors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="os.xhtml#files-and-directories">Files and Directories</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="os.xhtml#timer-file-descriptors">Timer File Descriptors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="os.xhtml#linux-extended-attributes">Linux extended attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="os.xhtml#process-management">Process Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os.xhtml#interface-to-the-scheduler">Interface to the scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os.xhtml#miscellaneous-system-information">Miscellaneous System Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os.xhtml#random-numbers">Random numbers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="io.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">io</span></code> — Core tools for working with streams</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="io.xhtml#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="io.xhtml#text-i-o">Text I/O</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io.xhtml#binary-i-o">Binary I/O</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io.xhtml#raw-i-o">Raw I/O</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="io.xhtml#text-encoding">Text Encoding</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="io.xhtml#opt-in-encodingwarning">Opt-in EncodingWarning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="io.xhtml#high-level-module-interface">High-level Module Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io.xhtml#class-hierarchy">Class hierarchy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="io.xhtml#i-o-base-classes">I/O Base Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io.xhtml#raw-file-i-o">Raw File I/O</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io.xhtml#buffered-streams">Buffered Streams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io.xhtml#id1">Text I/O</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="io.xhtml#performance">Performance</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="io.xhtml#id2">Binary I/O</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io.xhtml#id3">Text I/O</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io.xhtml#multi-threading">Multi-threading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io.xhtml#reentrancy">Reentrancy</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="time.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code> — Time access and conversions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="time.xhtml#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="time.xhtml#clock-id-constants">Clock ID Constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="time.xhtml#timezone-constants">Timezone Constants</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="logging.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging</span></code> — Logging facility for Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="logging.xhtml#logger-objects">Logger Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.xhtml#logging-levels">Logging Levels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.xhtml#handler-objects">Handler Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.xhtml#formatter-objects">Formatter Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.xhtml#filter-objects">Filter Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.xhtml#logrecord-objects">LogRecord Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.xhtml#logrecord-attributes">LogRecord attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.xhtml#loggeradapter-objects">LoggerAdapter Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.xhtml#thread-safety">Thread Safety</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.xhtml#module-level-functions">Module-Level Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.xhtml#module-level-attributes">Module-Level Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.xhtml#integration-with-the-warnings-module">Integration with the warnings module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="logging.config.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.config</span></code> — Logging configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="logging.config.xhtml#configuration-functions">Configuration functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.config.xhtml#security-considerations">Security considerations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.config.xhtml#configuration-dictionary-schema">Configuration dictionary schema</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="logging.config.xhtml#dictionary-schema-details">Dictionary Schema Details</a></li>
+<li class="toctree-l3"><a class="reference internal" href="logging.config.xhtml#incremental-configuration">Incremental Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="logging.config.xhtml#object-connections">Object connections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="logging.config.xhtml#user-defined-objects">User-defined objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="logging.config.xhtml#handler-configuration-order">Handler configuration order</a></li>
+<li class="toctree-l3"><a class="reference internal" href="logging.config.xhtml#access-to-external-objects">Access to external objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="logging.config.xhtml#access-to-internal-objects">Access to internal objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="logging.config.xhtml#import-resolution-and-custom-importers">Import resolution and custom importers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="logging.config.xhtml#configuring-queuehandler-and-queuelistener">Configuring QueueHandler and QueueListener</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="logging.config.xhtml#configuration-file-format">Configuration file format</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="logging.handlers.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.handlers</span></code> — Logging handlers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="logging.handlers.xhtml#streamhandler">StreamHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.handlers.xhtml#filehandler">FileHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.handlers.xhtml#nullhandler">NullHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.handlers.xhtml#watchedfilehandler">WatchedFileHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.handlers.xhtml#baserotatinghandler">BaseRotatingHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.handlers.xhtml#rotatingfilehandler">RotatingFileHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.handlers.xhtml#timedrotatingfilehandler">TimedRotatingFileHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.handlers.xhtml#sockethandler">SocketHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.handlers.xhtml#datagramhandler">DatagramHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.handlers.xhtml#sysloghandler">SysLogHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.handlers.xhtml#nteventloghandler">NTEventLogHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.handlers.xhtml#smtphandler">SMTPHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.handlers.xhtml#memoryhandler">MemoryHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.handlers.xhtml#httphandler">HTTPHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.handlers.xhtml#queuehandler">QueueHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.handlers.xhtml#queuelistener">QueueListener</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="platform.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">platform</span></code> —  Access to underlying platform’s identifying data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="platform.xhtml#cross-platform">Cross Platform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platform.xhtml#java-platform">Java Platform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platform.xhtml#windows-platform">Windows Platform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platform.xhtml#macos-platform">macOS Platform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platform.xhtml#ios-platform">iOS Platform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platform.xhtml#unix-platforms">Unix Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platform.xhtml#linux-platforms">Linux Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platform.xhtml#android-platform">Android Platform</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="errno.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">errno</span></code> — Standard errno system symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ctypes.xhtml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ctypes</span></code> — A foreign function library for Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ctypes.xhtml#ctypes-tutorial">ctypes tutorial</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ctypes.xhtml#loading-dynamic-link-libraries">Loading dynamic link libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes.xhtml#accessing-functions-from-loaded-dlls">Accessing functions from loaded dlls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes.xhtml#calling-functions">Calling functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes.xhtml#fundamental-data-types">Fundamental data types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes.xhtml#calling-functions-continued">Calling functions, continued</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes.xhtml#calling-variadic-functions">Calling variadic functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes.xhtml#calling-functions-with-your-own-custom-data-types">Calling functions with your own custom data types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes.xhtml#specifying-the-required-argument-types-function-prototypes">Specifying the required argument types (function prototypes)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes.xhtml#return-types">Return types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes.xhtml#passing-pointers-or-passing-parameters-by-reference">Passing pointers (or: passing parameters by reference)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes.xhtml#structures-and-unions">Structures and unions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes.xhtml#structure-union-alignment-and-byte-order">Structure/union alignment and byte order</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes.xhtml#bit-fields-in-structures-and-unions">Bit fields in structures and unions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes.xhtml#arrays">Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes.xhtml#pointers">Pointers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes.xhtml#type-conversions">Type conversions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes.xhtml#incomplete-types">Incomplete Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes.xhtml#callback-functions">Callback functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes.xhtml#accessing-values-exported-from-dlls">Accessing values exported from dlls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes.xhtml#surprises">Surprises</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes.xhtml#variable-sized-data-types">Variable-sized data types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ctypes.xhtml#ctypes-reference">ctypes reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ctypes.xhtml#finding-shared-libraries">Finding shared libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes.xhtml#loading-shared-libraries">Loading shared libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes.xhtml#foreign-functions">Foreign functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes.xhtml#function-prototypes">Function prototypes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes.xhtml#utility-functions">Utility functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes.xhtml#data-types">Data types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes.xhtml#ctypes-fundamental-data-types-2">Fundamental data types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes.xhtml#structured-data-types">Structured data types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes.xhtml#arrays-and-pointers">Arrays and pointers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

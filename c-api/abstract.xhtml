@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Abstract Objects Layer" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://docs.python.org/3/c-api/abstract.xhtml" />
+<meta property="og:site_name" content="Python documentation" />
+<meta property="og:description" content="The functions in this chapter interact with Python objects regardless of their type, or with wide classes of object types (e.g. all numerical types, or all sequence types). When used on object type..." />
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
+<meta property="og:image:alt" content="Python documentation" />
+<meta name="description" content="The functions in this chapter interact with Python objects regardless of their type, or with wide classes of object types (e.g. all numerical types, or all sequence types). When used on object type..." />
+<meta property="og:image:width" content="200" />
+<meta property="og:image:height" content="200" />
+<meta name="theme-color" content="#3776ab" />
+
+    <title>Abstract Objects Layer</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    
+    <link rel="canonical" href="https://docs.python.org/3/c-api/abstract.html" />
+    
+      
+    
+
+    
+    <style>
+      @media only screen {
+        table.full-width-table {
+            width: 100%;
+        }
+      }
+    </style>
+ 
+
+  </head><body>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <section id="abstract-objects-layer">
+<span id="abstract"></span><h1>Abstract Objects Layer</h1>
+<p>The functions in this chapter interact with Python objects regardless of their
+type, or with wide classes of object types (e.g. all numerical types, or all
+sequence types).  When used on object types for which they do not apply, they
+will raise a Python exception.</p>
+<p>It is not possible to use these functions on objects that are not properly
+initialized, such as a list object that has been created by <a class="reference internal" href="list.xhtml#c.PyList_New" title="PyList_New"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyList_New()</span></code></a>,
+but whose items have not been set to some non-<code class="docutils literal notranslate"><span class="pre">NULL</span></code> value yet.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="object.xhtml">Object Protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="call.xhtml">Call Protocol</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="call.xhtml#the-tp-call-protocol">The <em>tp_call</em> Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="call.xhtml#the-vectorcall-protocol">The Vectorcall Protocol</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="call.xhtml#recursion-control">Recursion Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="call.xhtml#vectorcall-support-api">Vectorcall Support API</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="call.xhtml#object-calling-api">Object Calling API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="call.xhtml#call-support-api">Call Support API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="number.xhtml">Number Protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sequence.xhtml">Sequence Protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapping.xhtml">Mapping Protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iter.xhtml">Iterator Protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="buffer.xhtml">Buffer Protocol</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="buffer.xhtml#buffer-structure">Buffer structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buffer.xhtml#buffer-request-types">Buffer request types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="buffer.xhtml#request-independent-fields">request-independent fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="buffer.xhtml#readonly-format">readonly, format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="buffer.xhtml#shape-strides-suboffsets">shape, strides, suboffsets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="buffer.xhtml#contiguity-requests">contiguity requests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="buffer.xhtml#compound-requests">compound requests</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="buffer.xhtml#complex-arrays">Complex arrays</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="buffer.xhtml#numpy-style-shape-and-strides">NumPy-style: shape and strides</a></li>
+<li class="toctree-l3"><a class="reference internal" href="buffer.xhtml#pil-style-shape-strides-and-suboffsets">PIL-style: shape, strides and suboffsets</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="buffer.xhtml#buffer-related-functions">Buffer-related functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

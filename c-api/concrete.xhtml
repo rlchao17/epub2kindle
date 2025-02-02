@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Concrete Objects Layer" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://docs.python.org/3/c-api/concrete.xhtml" />
+<meta property="og:site_name" content="Python documentation" />
+<meta property="og:description" content="The functions in this chapter are specific to certain Python object types. Passing them an object of the wrong type is not a good idea; if you receive an object from a Python program and you are no..." />
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
+<meta property="og:image:alt" content="Python documentation" />
+<meta name="description" content="The functions in this chapter are specific to certain Python object types. Passing them an object of the wrong type is not a good idea; if you receive an object from a Python program and you are no..." />
+<meta property="og:image:width" content="200" />
+<meta property="og:image:height" content="200" />
+<meta name="theme-color" content="#3776ab" />
+
+    <title>Concrete Objects Layer</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    
+    <link rel="canonical" href="https://docs.python.org/3/c-api/concrete.html" />
+    
+      
+    
+
+    
+    <style>
+      @media only screen {
+        table.full-width-table {
+            width: 100%;
+        }
+      }
+    </style>
+ 
+
+  </head><body>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <section id="concrete-objects-layer">
+<span id="concrete"></span><h1>Concrete Objects Layer</h1>
+<p>The functions in this chapter are specific to certain Python object types.
+Passing them an object of the wrong type is not a good idea; if you receive an
+object from a Python program and you are not sure that it has the right type,
+you must perform a type check first; for example, to check that an object is a
+dictionary, use <a class="reference internal" href="dict.xhtml#c.PyDict_Check" title="PyDict_Check"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyDict_Check()</span></code></a>.  The chapter is structured like the
+“family tree” of Python object types.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>While the functions described in this chapter carefully check the type of the
+objects which are passed in, many of them do not check for <code class="docutils literal notranslate"><span class="pre">NULL</span></code> being passed
+instead of a valid object.  Allowing <code class="docutils literal notranslate"><span class="pre">NULL</span></code> to be passed in can cause memory
+access violations and immediate termination of the interpreter.</p>
+</div>
+<section id="fundamental-objects">
+<span id="fundamental"></span><h2>Fundamental Objects</h2>
+<p>This section describes Python type objects and the singleton object <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="type.xhtml">Type Objects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="type.xhtml#creating-heap-allocated-types">Creating Heap-Allocated Types</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="none.xhtml">The <code class="docutils literal notranslate"><span class="pre">None</span></code> Object</a></li>
+</ul>
+</div>
+</section>
+<section id="numeric-objects">
+<span id="numericobjects"></span><h2>Numeric Objects</h2>
+<div class="toctree-wrapper compound" id="index-0">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="long.xhtml">Integer Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bool.xhtml">Boolean Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="float.xhtml">Floating-Point Objects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="float.xhtml#pack-and-unpack-functions">Pack and Unpack functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="float.xhtml#pack-functions">Pack functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="float.xhtml#unpack-functions">Unpack functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="complex.xhtml">Complex Number Objects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="complex.xhtml#complex-numbers-as-c-structures">Complex Numbers as C Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="complex.xhtml#complex-numbers-as-python-objects">Complex Numbers as Python Objects</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="sequence-objects">
+<span id="sequenceobjects"></span><h2>Sequence Objects</h2>
+<p id="index-1">Generic operations on sequence objects were discussed in the previous chapter;
+this section deals with the specific kinds of sequence objects that are
+intrinsic to the Python language.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="bytes.xhtml">Bytes Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bytearray.xhtml">Byte Array Objects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bytearray.xhtml#type-check-macros">Type check macros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bytearray.xhtml#direct-api-functions">Direct API functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bytearray.xhtml#macros">Macros</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="unicode.xhtml">Unicode Objects and Codecs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="unicode.xhtml#unicode-objects">Unicode Objects</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="unicode.xhtml#unicode-type">Unicode Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode.xhtml#unicode-character-properties">Unicode Character Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode.xhtml#creating-and-accessing-unicode-strings">Creating and accessing Unicode strings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode.xhtml#locale-encoding">Locale Encoding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode.xhtml#file-system-encoding">File System Encoding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode.xhtml#wchar-t-support">wchar_t Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.xhtml#built-in-codecs">Built-in Codecs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="unicode.xhtml#generic-codecs">Generic Codecs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode.xhtml#utf-8-codecs">UTF-8 Codecs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode.xhtml#utf-32-codecs">UTF-32 Codecs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode.xhtml#utf-16-codecs">UTF-16 Codecs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode.xhtml#utf-7-codecs">UTF-7 Codecs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode.xhtml#unicode-escape-codecs">Unicode-Escape Codecs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode.xhtml#raw-unicode-escape-codecs">Raw-Unicode-Escape Codecs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode.xhtml#latin-1-codecs">Latin-1 Codecs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode.xhtml#ascii-codecs">ASCII Codecs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode.xhtml#character-map-codecs">Character Map Codecs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode.xhtml#mbcs-codecs-for-windows">MBCS codecs for Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode.xhtml#methods-slots">Methods &amp; Slots</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.xhtml#methods-and-slot-functions">Methods and Slot Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tuple.xhtml">Tuple Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tuple.xhtml#struct-sequence-objects">Struct Sequence Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="list.xhtml">List Objects</a></li>
+</ul>
+</div>
+</section>
+<section id="container-objects">
+<span id="mapobjects"></span><h2>Container Objects</h2>
+<div class="toctree-wrapper compound" id="index-2">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dict.xhtml">Dictionary Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="set.xhtml">Set Objects</a></li>
+</ul>
+</div>
+</section>
+<section id="function-objects">
+<span id="otherobjects"></span><h2>Function Objects</h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function.xhtml">Function Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="method.xhtml">Instance Method Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="method.xhtml#method-objects">Method Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cell.xhtml">Cell Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.xhtml">Code Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.xhtml#extra-information">Extra information</a></li>
+</ul>
+</div>
+</section>
+<section id="other-objects">
+<h2>Other Objects</h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file.xhtml">File Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module.xhtml">Module Objects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="module.xhtml#initializing-c-modules">Initializing C modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="module.xhtml#single-phase-initialization">Single-phase initialization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module.xhtml#multi-phase-initialization">Multi-phase initialization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module.xhtml#low-level-module-creation-functions">Low-level module creation functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module.xhtml#support-functions">Support functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="module.xhtml#module-lookup">Module lookup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="iterator.xhtml">Iterator Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="descriptor.xhtml">Descriptor Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slice.xhtml">Slice Objects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="slice.xhtml#ellipsis-object">Ellipsis Object</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="memoryview.xhtml">MemoryView objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="weakref.xhtml">Weak Reference Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="capsule.xhtml">Capsules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="frame.xhtml">Frame Objects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="frame.xhtml#frame-locals-proxies">Frame Locals Proxies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="frame.xhtml#internal-frames">Internal Frames</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gen.xhtml">Generator Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coro.xhtml">Coroutine Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contextvars.xhtml">Context Variables Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datetime.xhtml">DateTime Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="typehints.xhtml">Objects for Type Hinting</a></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

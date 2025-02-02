@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="6. Using Python on Android" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://docs.python.org/3/using/android.xhtml" />
+<meta property="og:site_name" content="Python documentation" />
+<meta property="og:description" content="Python on Android is unlike Python on desktop platforms. On a desktop platform, Python is generally installed as a system resource that can be used by any user of that computer. Users then interact..." />
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
+<meta property="og:image:alt" content="Python documentation" />
+<meta name="description" content="Python on Android is unlike Python on desktop platforms. On a desktop platform, Python is generally installed as a system resource that can be used by any user of that computer. Users then interact..." />
+<meta property="og:image:width" content="200" />
+<meta property="og:image:height" content="200" />
+<meta name="theme-color" content="#3776ab" />
+
+    <title>6. Using Python on Android</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    
+    <link rel="canonical" href="https://docs.python.org/3/using/android.html" />
+    
+      
+    
+
+    
+    <style>
+      @media only screen {
+        table.full-width-table {
+            width: 100%;
+        }
+      }
+    </style>
+ 
+
+  </head><body>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <section id="using-python-on-android">
+<span id="using-android"></span><h1><span class="section-number">6. </span>Using Python on Android</h1>
+<p>Python on Android is unlike Python on desktop platforms. On a desktop platform,
+Python is generally installed as a system resource that can be used by any user
+of that computer. Users then interact with Python by running a <strong class="program">python</strong>
+executable and entering commands at an interactive prompt, or by running a
+Python script.</p>
+<p>On Android, there is no concept of installing as a system resource. The only unit
+of software distribution is an “app”. There is also no console where you could
+run a <strong class="program">python</strong> executable, or interact with a Python REPL.</p>
+<p>As a result, the only way you can use Python on Android is in embedded mode – that
+is, by writing a native Android application, embedding a Python interpreter
+using <code class="docutils literal notranslate"><span class="pre">libpython</span></code>, and invoking Python code using the <a class="reference internal" href="../extending/embedding.xhtml#embedding"><span class="std std-ref">Python embedding
+API</span></a>. The full Python interpreter, the standard library, and all
+your Python code is then packaged into your app for its own private use.</p>
+<p>The Python standard library has some notable omissions and restrictions on
+Android. See the <a class="reference internal" href="../library/intro.xhtml#mobile-availability"><span class="std std-ref">API availability guide</span></a> for
+details.</p>
+<section id="adding-python-to-an-android-app">
+<h2><span class="section-number">6.1. </span>Adding Python to an Android app</h2>
+<p>These instructions are only needed if you’re planning to compile Python for
+Android yourself. Most users should <em>not</em> need to do this. Instead, use one of
+the following tools, which will provide a much easier experience:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://briefcase.readthedocs.io">Briefcase</a><span class="link-target"> [https://briefcase.readthedocs.io]</span>, from the BeeWare project</p></li>
+<li><p><a class="reference external" href="https://buildozer.readthedocs.io">Buildozer</a><span class="link-target"> [https://buildozer.readthedocs.io]</span>, from the Kivy project</p></li>
+<li><p><a class="reference external" href="https://chaquo.com/chaquopy">Chaquopy</a><span class="link-target"> [https://chaquo.com/chaquopy]</span></p></li>
+<li><p><a class="reference external" href="https://www.riverbankcomputing.com/static/Docs/pyqtdeploy/">pyqtdeploy</a><span class="link-target"> [https://www.riverbankcomputing.com/static/Docs/pyqtdeploy/]</span></p></li>
+<li><p><a class="reference external" href="https://termux.dev/en/">Termux</a><span class="link-target"> [https://termux.dev/en/]</span></p></li>
+</ul>
+<p>If you’re sure you want to do all of this manually, read on. You can use the
+<a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.13/Android/testbed">testbed app</a><span class="link-target"> [https://github.com/python/cpython/tree/3.13/Android/testbed]</span> as a guide; each step below contains a
+link to the relevant file.</p>
+<ul class="simple">
+<li><p>Build Python by following the instructions in <a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.13/Android/README.md">Android/README.md</a><span class="link-target"> [https://github.com/python/cpython/tree/3.13/Android/README.md]</span>.</p></li>
+<li><p>Add code to your <a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.13/Android/testbed/app/build.gradle.kts">build.gradle</a><span class="link-target"> [https://github.com/python/cpython/tree/3.13/Android/testbed/app/build.gradle.kts]</span>
+file to copy the following items into your project. All except your own Python
+code can be copied from <code class="docutils literal notranslate"><span class="pre">cross-build/HOST/prefix/lib</span></code>:</p>
+<ul>
+<li><p>In your JNI libraries:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">libpython*.*.so</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lib*_python.so</span></code> (external libraries such as OpenSSL)</p></li>
+</ul>
+</li>
+<li><p>In your assets:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">python*.*</span></code> (the Python standard library)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">python*.*/site-packages</span></code> (your own Python code)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Add code to your app to <a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.13/Android/testbed/app/src/main/java/org/python/testbed/MainActivity.kt">extract the assets to the filesystem</a><span class="link-target"> [https://github.com/python/cpython/tree/3.13/Android/testbed/app/src/main/java/org/python/testbed/MainActivity.kt]</span>.</p></li>
+<li><p>Add code to your app to <a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.13/Android/testbed/app/src/main/c/main_activity.c">start Python in embedded mode</a><span class="link-target"> [https://github.com/python/cpython/tree/3.13/Android/testbed/app/src/main/c/main_activity.c]</span>. This will need to be C code
+called via JNI.</p></li>
+</ul>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

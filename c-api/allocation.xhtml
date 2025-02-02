@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Allocating Objects on the Heap" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://docs.python.org/3/c-api/allocation.xhtml" />
+<meta property="og:site_name" content="Python documentation" />
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
+<meta property="og:image:alt" content="Python documentation" />
+<meta property="og:image:width" content="200" />
+<meta property="og:image:height" content="200" />
+<meta name="theme-color" content="#3776ab" />
+
+    <title>Allocating Objects on the Heap</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    
+    <link rel="canonical" href="https://docs.python.org/3/c-api/allocation.html" />
+    
+      
+    
+
+    
+    <style>
+      @media only screen {
+        table.full-width-table {
+            width: 100%;
+        }
+      }
+    </style>
+ 
+
+  </head><body>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <section id="allocating-objects-on-the-heap">
+<span id="allocating-objects"></span><h1>Allocating Objects on the Heap</h1>
+<dl class="c function">
+<dt class="sig sig-object c" id="c._PyObject_New">
+<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_PyObject_New</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="type.xhtml#c.PyTypeObject" title="PyTypeObject"><span class="n"><span class="pre">PyTypeObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">type</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><em class="refcount return_new_ref">Return value: New reference.</em></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c._PyObject_NewVar">
+<a class="reference internal" href="structures.xhtml#c.PyVarObject" title="PyVarObject"><span class="n"><span class="pre">PyVarObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_PyObject_NewVar</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="type.xhtml#c.PyTypeObject" title="PyTypeObject"><span class="n"><span class="pre">PyTypeObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">type</span></span>, <a class="reference internal" href="intro.xhtml#c.Py_ssize_t" title="Py_ssize_t"><span class="n"><span class="pre">Py_ssize_t</span></span></a><span class="w"> </span><span class="n"><span class="pre">size</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><em class="refcount return_new_ref">Return value: New reference.</em></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.PyObject_Init">
+<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyObject_Init</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">op</span></span>, <a class="reference internal" href="type.xhtml#c.PyTypeObject" title="PyTypeObject"><span class="n"><span class="pre">PyTypeObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">type</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><em class="refcount return_borrowed_ref">Return value: Borrowed reference.</em><em class="stableabi"> Part of the <a class="reference internal" href="stable.xhtml#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Initialize a newly allocated object <em>op</em> with its type and initial
+reference.  Returns the initialized object.  Other fields of the object are
+not affected.</p>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.PyObject_InitVar">
+<a class="reference internal" href="structures.xhtml#c.PyVarObject" title="PyVarObject"><span class="n"><span class="pre">PyVarObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyObject_InitVar</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.xhtml#c.PyVarObject" title="PyVarObject"><span class="n"><span class="pre">PyVarObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">op</span></span>, <a class="reference internal" href="type.xhtml#c.PyTypeObject" title="PyTypeObject"><span class="n"><span class="pre">PyTypeObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">type</span></span>, <a class="reference internal" href="intro.xhtml#c.Py_ssize_t" title="Py_ssize_t"><span class="n"><span class="pre">Py_ssize_t</span></span></a><span class="w"> </span><span class="n"><span class="pre">size</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><em class="refcount return_borrowed_ref">Return value: Borrowed reference.</em><em class="stableabi"> Part of the <a class="reference internal" href="stable.xhtml#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>This does everything <a class="reference internal" href="#c.PyObject_Init" title="PyObject_Init"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_Init()</span></code></a> does, and also initializes the
+length information for a variable-size object.</p>
+</dd></dl>
+
+<dl class="c macro">
+<dt class="sig sig-object c" id="c.PyObject_New">
+<span class="sig-name descname"><span class="n"><span class="pre">PyObject_New</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TYPE</span></span>, <span class="n"><span class="pre">typeobj</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Allocate a new Python object using the C structure type <em>TYPE</em>
+and the Python type object <em>typeobj</em> (<code class="docutils literal notranslate"><span class="pre">PyTypeObject*</span></code>).
+Fields not defined by the Python object header are not initialized.
+The caller will own the only reference to the object
+(i.e. its reference count will be one).
+The size of the memory allocation is determined from the
+<a class="reference internal" href="typeobj.xhtml#c.PyTypeObject.tp_basicsize" title="PyTypeObject.tp_basicsize"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_basicsize</span></code></a> field of the type object.</p>
+</dd></dl>
+
+<dl class="c macro">
+<dt class="sig sig-object c" id="c.PyObject_NewVar">
+<span class="sig-name descname"><span class="n"><span class="pre">PyObject_NewVar</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TYPE</span></span>, <span class="n"><span class="pre">typeobj</span></span>, <span class="n"><span class="pre">size</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Allocate a new Python object using the C structure type <em>TYPE</em> and the
+Python type object <em>typeobj</em> (<code class="docutils literal notranslate"><span class="pre">PyTypeObject*</span></code>).
+Fields not defined by the Python object header
+are not initialized.  The allocated memory allows for the <em>TYPE</em> structure
+plus <em>size</em> (<code class="docutils literal notranslate"><span class="pre">Py_ssize_t</span></code>) fields of the size
+given by the <a class="reference internal" href="typeobj.xhtml#c.PyTypeObject.tp_itemsize" title="PyTypeObject.tp_itemsize"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_itemsize</span></code></a> field of
+<em>typeobj</em>.  This is useful for implementing objects like tuples, which are
+able to determine their size at construction time.  Embedding the array of
+fields into the same allocation decreases the number of allocations,
+improving the memory management efficiency.</p>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.PyObject_Del">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyObject_Del</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">op</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Releases memory allocated to an object using <a class="reference internal" href="#c.PyObject_New" title="PyObject_New"><code class="xref c c-macro docutils literal notranslate"><span class="pre">PyObject_New</span></code></a> or
+<a class="reference internal" href="#c.PyObject_NewVar" title="PyObject_NewVar"><code class="xref c c-macro docutils literal notranslate"><span class="pre">PyObject_NewVar</span></code></a>.  This is normally called from the
+<a class="reference internal" href="typeobj.xhtml#c.PyTypeObject.tp_dealloc" title="PyTypeObject.tp_dealloc"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_dealloc</span></code></a> handler specified in the object’s type.  The fields of
+the object should not be accessed after this call as the memory is no
+longer a valid Python object.</p>
+</dd></dl>
+
+<dl class="c var">
+<dt class="sig sig-object c" id="c._Py_NoneStruct">
+<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_Py_NoneStruct</span></span></span><br /></dt>
+<dd><p>Object which is visible in Python as <code class="docutils literal notranslate"><span class="pre">None</span></code>.  This should only be accessed
+using the <a class="reference internal" href="none.xhtml#c.Py_None" title="Py_None"><code class="xref c c-macro docutils literal notranslate"><span class="pre">Py_None</span></code></a> macro, which evaluates to a pointer to this
+object.</p>
+</dd></dl>
+
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="module.xhtml#c.PyModule_Create" title="PyModule_Create"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyModule_Create()</span></code></a></dt><dd><p>To allocate and create extension modules.</p>
+</dd>
+</dl>
+</div>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

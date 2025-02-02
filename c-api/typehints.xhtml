@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Objects for Type Hinting" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://docs.python.org/3/c-api/typehints.xhtml" />
+<meta property="og:site_name" content="Python documentation" />
+<meta property="og:description" content="Various built-in types for type hinting are provided. Currently, two types exist – GenericAlias and Union. Only GenericAlias is exposed to C." />
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
+<meta property="og:image:alt" content="Python documentation" />
+<meta name="description" content="Various built-in types for type hinting are provided. Currently, two types exist – GenericAlias and Union. Only GenericAlias is exposed to C." />
+<meta property="og:image:width" content="200" />
+<meta property="og:image:height" content="200" />
+<meta name="theme-color" content="#3776ab" />
+
+    <title>Objects for Type Hinting</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    
+    <link rel="canonical" href="https://docs.python.org/3/c-api/typehints.html" />
+    
+      
+    
+
+    
+    <style>
+      @media only screen {
+        table.full-width-table {
+            width: 100%;
+        }
+      }
+    </style>
+ 
+
+  </head><body>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <section id="objects-for-type-hinting">
+<span id="typehintobjects"></span><h1>Objects for Type Hinting</h1>
+<p>Various built-in types for type hinting are provided.  Currently,
+two types exist – <a class="reference internal" href="../library/stdtypes.xhtml#types-genericalias"><span class="std std-ref">GenericAlias</span></a> and
+<a class="reference internal" href="../library/stdtypes.xhtml#types-union"><span class="std std-ref">Union</span></a>.  Only <code class="docutils literal notranslate"><span class="pre">GenericAlias</span></code> is exposed to C.</p>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.Py_GenericAlias">
+<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">Py_GenericAlias</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">origin</span></span>, <a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.xhtml#stable"><span class="std std-ref">Stable ABI</span></a> since version 3.9.</em><p>Create a <a class="reference internal" href="../library/stdtypes.xhtml#types-genericalias"><span class="std std-ref">GenericAlias</span></a> object.
+Equivalent to calling the Python class
+<a class="reference internal" href="../library/types.xhtml#types.GenericAlias" title="types.GenericAlias"><code class="xref py py-class docutils literal notranslate"><span class="pre">types.GenericAlias</span></code></a>.  The <em>origin</em> and <em>args</em> arguments set the
+<code class="docutils literal notranslate"><span class="pre">GenericAlias</span></code>‘s <code class="docutils literal notranslate"><span class="pre">__origin__</span></code> and <code class="docutils literal notranslate"><span class="pre">__args__</span></code> attributes respectively.
+<em>origin</em> should be a <span class="c-expr sig sig-inline c"><a class="reference internal" href="type.xhtml#c.PyTypeObject" title="PyTypeObject"><span class="n">PyTypeObject</span></a><span class="p">*</span></span>, and <em>args</em> can be a
+<span class="c-expr sig sig-inline c"><a class="reference internal" href="tuple.xhtml#c.PyTupleObject" title="PyTupleObject"><span class="n">PyTupleObject</span></a><span class="p">*</span></span> or any <code class="docutils literal notranslate"><span class="pre">PyObject*</span></code>.  If <em>args</em> passed is
+not a tuple, a 1-tuple is automatically constructed and <code class="docutils literal notranslate"><span class="pre">__args__</span></code> is set
+to <code class="docutils literal notranslate"><span class="pre">(args,)</span></code>.
+Minimal checking is done for the arguments, so the function will succeed even
+if <em>origin</em> is not a type.
+The <code class="docutils literal notranslate"><span class="pre">GenericAlias</span></code>‘s <code class="docutils literal notranslate"><span class="pre">__parameters__</span></code> attribute is constructed lazily
+from <code class="docutils literal notranslate"><span class="pre">__args__</span></code>.  On failure, an exception is raised and <code class="docutils literal notranslate"><span class="pre">NULL</span></code> is
+returned.</p>
+<p>Here’s an example of how to make an extension type generic:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="p">...</span>
+<span class="k">static</span><span class="w"> </span><span class="n">PyMethodDef</span><span class="w"> </span><span class="n">my_obj_methods</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Other methods.</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="w">    </span><span class="p">{</span><span class="s">&quot;__class_getitem__&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Py_GenericAlias</span><span class="p">,</span><span class="w"> </span><span class="n">METH_O</span><span class="o">|</span><span class="n">METH_CLASS</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;See PEP 585&quot;</span><span class="p">}</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>The data model method <a class="reference internal" href="../reference/datamodel.xhtml#object.__class_getitem__" title="object.__class_getitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__class_getitem__()</span></code></a>.</p>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 3.9.</span></p>
+</div>
+</dd></dl>
+
+<dl class="c var">
+<dt class="sig sig-object c" id="c.Py_GenericAliasType">
+<a class="reference internal" href="type.xhtml#c.PyTypeObject" title="PyTypeObject"><span class="n"><span class="pre">PyTypeObject</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Py_GenericAliasType</span></span></span><br /></dt>
+<dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.xhtml#stable"><span class="std std-ref">Stable ABI</span></a> since version 3.9.</em><p>The C type of the object returned by <a class="reference internal" href="#c.Py_GenericAlias" title="Py_GenericAlias"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_GenericAlias()</span></code></a>. Equivalent to
+<a class="reference internal" href="../library/types.xhtml#types.GenericAlias" title="types.GenericAlias"><code class="xref py py-class docutils literal notranslate"><span class="pre">types.GenericAlias</span></code></a> in Python.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 3.9.</span></p>
+</div>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>
