@@ -164,7 +164,8 @@
     <item id="epub-139" href="howto/ipaddress.xhtml" media-type="application/xhtml+xml" />
     <item id="epub-140" href="howto/isolating-extensions.xhtml" media-type="application/xhtml+xml" />
     <item id="epub-141" href="howto/logging-cookbook.xhtml" media-type="application/xhtml+xml" />
-    <item id="epub-142" href="howto/logging.xhtml" media-type="application/xhtml+xml" />
+    <!-- <item id="epub-142" href="howto/logging.xhtml" media-type="application/xhtml+xml" /> -->
+    <item id="epub-142" href="howto/logging.xhtml" media-type="application/xhtml+xml" properties="scripted svg"/>
     <item id="epub-143" href="howto/mro.xhtml" media-type="application/xhtml+xml" />
     <item id="epub-144" href="howto/perf_profiling.xhtml" media-type="application/xhtml+xml" />
     <item id="epub-145" href="howto/pyporting.xhtml" media-type="application/xhtml+xml" />
