@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="platform —  Access to underlying platform’s identifying data" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/library/platform.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="Source code: Lib/platform.py[https://github.com/python/cpython/tree/3.13/Lib/platform.py] Cross Platform: Java Platform: Windows Platform: macOS Platform: iOS Platform: Unix Platforms: Linux Platfo..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="Source code: Lib/platform.py[https://github.com/python/cpython/tree/3.13/Lib/platform.py] Cross Platform: Java Platform: Windows Platform: macOS Platform: iOS Platform: Unix Platforms: Linux Platfo..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="platform —  Access to underlying platform’s identifying data"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/library/platform.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="Source code: Lib/platform.py[https://github.com/python/cpython/tree/3.13/Lib/platform.py] Cross Platform: Java Platform: Windows Platform: macOS Platform: iOS Platform: Unix Platforms: Linux Platfo..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="Source code: Lib/platform.py[https://github.com/python/cpython/tree/3.13/Lib/platform.py] Cross Platform: Java Platform: Windows Platform: macOS Platform: iOS Platform: Unix Platforms: Linux Platfo..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>platform — Access to underlying platform’s identifying data</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/library/platform.html" />
+    <link rel="canonical" href="https://docs.python.org/3/library/platform.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -45,14 +46,14 @@
   <section id="module-platform">
 <span id="platform-access-to-underlying-platform-s-identifying-data"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">platform</span></code> —  Access to underlying platform’s identifying data</h1>
 <p><strong>Source code:</strong> <a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.13/Lib/platform.py">Lib/platform.py</a><span class="link-target"> [https://github.com/python/cpython/tree/3.13/Lib/platform.py]</span></p>
-<hr class="docutils" />
+<hr class="docutils"/>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Specific platforms listed alphabetically, with Linux included in the Unix
 section.</p>
 </div>
 <section id="cross-platform">
-<h2>Cross Platform</h2>
+<h2 class="sigil_not_in_toc">Cross Platform</h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="platform.architecture">
 <span class="sig-prename descclassname"><span class="pre">platform.</span></span><span class="sig-name descname"><span class="pre">architecture</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">executable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">sys.executable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linkage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span></dt>
@@ -76,24 +77,28 @@ universal files containing multiple architectures.</p>
 <p>To get at the “64-bitness” of the current interpreter, it is more
 reliable to query the <a class="reference internal" href="sys.xhtml#sys.maxsize" title="sys.maxsize"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.maxsize</span></code></a> attribute:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">is_64bits</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">maxsize</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="o">**</span><span class="mi">32</span>
-</pre></div>
+</pre>
 </div>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="platform.machine">
 <span class="sig-prename descclassname"><span class="pre">platform.</span></span><span class="sig-name descname"><span class="pre">machine</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Returns the machine type, e.g. <code class="docutils literal notranslate"><span class="pre">'AMD64'</span></code>. An empty string is returned if the
 value cannot be determined.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="platform.node">
 <span class="sig-prename descclassname"><span class="pre">platform.</span></span><span class="sig-name descname"><span class="pre">node</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Returns the computer’s network name (may not be fully qualified!). An empty
 string is returned if the value cannot be determined.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="platform.platform">
@@ -113,7 +118,8 @@ information needed to identify the platform.</p>
 non-empty release string, to get the macOS version rather than the darwin
 version.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="platform.processor">
@@ -122,39 +128,45 @@ version.</p>
 <p>An empty string is returned if the value cannot be determined. Note that many
 platforms do not provide this information or simply return the same value as for
 <a class="reference internal" href="#platform.machine" title="platform.machine"><code class="xref py py-func docutils literal notranslate"><span class="pre">machine()</span></code></a>.  NetBSD does this.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="platform.python_build">
 <span class="sig-prename descclassname"><span class="pre">platform.</span></span><span class="sig-name descname"><span class="pre">python_build</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Returns a tuple <code class="docutils literal notranslate"><span class="pre">(buildno,</span> <span class="pre">builddate)</span></code> stating the Python build number and
 date as strings.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="platform.python_compiler">
 <span class="sig-prename descclassname"><span class="pre">platform.</span></span><span class="sig-name descname"><span class="pre">python_compiler</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Returns a string identifying the compiler used for compiling Python.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="platform.python_branch">
 <span class="sig-prename descclassname"><span class="pre">platform.</span></span><span class="sig-name descname"><span class="pre">python_branch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Returns a string identifying the Python implementation SCM branch.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="platform.python_implementation">
 <span class="sig-prename descclassname"><span class="pre">platform.</span></span><span class="sig-name descname"><span class="pre">python_implementation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Returns a string identifying the Python implementation. Possible return values
 are: ‘CPython’, ‘IronPython’, ‘Jython’, ‘PyPy’.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="platform.python_revision">
 <span class="sig-prename descclassname"><span class="pre">platform.</span></span><span class="sig-name descname"><span class="pre">python_revision</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Returns a string identifying the Python implementation SCM revision.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="platform.python_version">
@@ -162,7 +174,8 @@ are: ‘CPython’, ‘IronPython’, ‘Jython’, ‘PyPy’.</p>
 <dd><p>Returns the Python version as string <code class="docutils literal notranslate"><span class="pre">'major.minor.patchlevel'</span></code>.</p>
 <p>Note that unlike the Python <code class="docutils literal notranslate"><span class="pre">sys.version</span></code>, the returned value will always
 include the patchlevel (it defaults to 0).</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="platform.python_version_tuple">
@@ -170,14 +183,16 @@ include the patchlevel (it defaults to 0).</p>
 <dd><p>Returns the Python version as tuple <code class="docutils literal notranslate"><span class="pre">(major,</span> <span class="pre">minor,</span> <span class="pre">patchlevel)</span></code> of strings.</p>
 <p>Note that unlike the Python <code class="docutils literal notranslate"><span class="pre">sys.version</span></code>, the returned value will always
 include the patchlevel (it defaults to <code class="docutils literal notranslate"><span class="pre">'0'</span></code>).</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="platform.release">
 <span class="sig-prename descclassname"><span class="pre">platform.</span></span><span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Returns the system’s release, e.g. <code class="docutils literal notranslate"><span class="pre">'2.2.0'</span></code> or <code class="docutils literal notranslate"><span class="pre">'NT'</span></code>. An empty string is
 returned if the value cannot be determined.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="platform.system">
@@ -187,7 +202,8 @@ returned if the value cannot be determined.</p>
 <p>On iOS and Android, this returns the user-facing OS name (i.e, <code class="docutils literal notranslate"><span class="pre">'iOS</span></code>,
 <code class="docutils literal notranslate"><span class="pre">'iPadOS'</span></code> or <code class="docutils literal notranslate"><span class="pre">'Android'</span></code>). To obtain the kernel name (<code class="docutils literal notranslate"><span class="pre">'Darwin'</span></code> or
 <code class="docutils literal notranslate"><span class="pre">'Linux'</span></code>), use <a class="reference internal" href="os.xhtml#os.uname" title="os.uname"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.uname()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="platform.system_alias">
@@ -195,7 +211,8 @@ returned if the value cannot be determined.</p>
 <dd><p>Returns <code class="docutils literal notranslate"><span class="pre">(system,</span> <span class="pre">release,</span> <span class="pre">version)</span></code> aliased to common marketing names used
 for some systems.  It also does some reordering of the information in some cases
 where it would otherwise cause confusion.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="platform.version">
@@ -204,7 +221,8 @@ where it would otherwise cause confusion.</p>
 returned if the value cannot be determined.</p>
 <p>On iOS and Android, this is the user-facing OS version. To obtain the
 Darwin or Linux kernel version, use <a class="reference internal" href="os.xhtml#os.uname" title="os.uname"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.uname()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="platform.uname">
@@ -223,11 +241,12 @@ containing six attributes: <a class="reference internal" href="#platform.system"
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.9: </span><a class="reference internal" href="#platform.processor" title="platform.processor"><code class="xref py py-attr docutils literal notranslate"><span class="pre">processor</span></code></a> is resolved late instead of immediately.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="java-platform">
-<h2>Java Platform</h2>
+<h2 class="sigil_not_in_toc">Java Platform</h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="platform.java_ver">
 <span class="sig-prename descclassname"><span class="pre">platform.</span></span><span class="sig-name descname"><span class="pre">java_ver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">release</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vendor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vminfo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">('',</span> <span class="pre">'',</span> <span class="pre">'')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">osinfo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">('',</span> <span class="pre">'',</span> <span class="pre">'')</span></span></em><span class="sig-paren">)</span></dt>
@@ -240,11 +259,12 @@ the defaults given as parameters (which all default to <code class="docutils lit
 <p><span class="versionmodified deprecated">Deprecated since version 3.13, will be removed in version 3.15: </span>It was largely untested, had a confusing API,
 and was only useful for Jython support.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="windows-platform">
-<h2>Windows Platform</h2>
+<h2 class="sigil_not_in_toc">Windows Platform</h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="platform.win32_ver">
 <span class="sig-prename descclassname"><span class="pre">platform.</span></span><span class="sig-name descname"><span class="pre">win32_ver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">release</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">csd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ptype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span></dt>
@@ -258,7 +278,8 @@ and <code class="docutils literal notranslate"><span class="pre">'Multiprocessor
 to the OS version being free of debugging code. It could also state <code class="docutils literal notranslate"><span class="pre">'Checked'</span></code>
 which means the OS version uses debugging code, i.e. code that checks arguments,
 ranges, etc.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="platform.win32_edition">
@@ -269,7 +290,8 @@ value cannot be determined.  Possible values include but are not limited to
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.8.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="platform.win32_is_iot">
@@ -279,11 +301,12 @@ is recognized as an IoT edition.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.8.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="macos-platform">
-<h2>macOS Platform</h2>
+<h2 class="sigil_not_in_toc">macOS Platform</h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="platform.mac_ver">
 <span class="sig-prename descclassname"><span class="pre">platform.</span></span><span class="sig-name descname"><span class="pre">mac_ver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">release</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">versioninfo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">('',</span> <span class="pre">'',</span> <span class="pre">'')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">machine</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span></dt>
@@ -292,11 +315,12 @@ is recognized as an IoT edition.</p>
 <span class="pre">non_release_version)</span></code>.</p>
 <p>Entries which cannot be determined are set to <code class="docutils literal notranslate"><span class="pre">''</span></code>.  All tuple entries are
 strings.</p>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="ios-platform">
-<h2>iOS Platform</h2>
+<h2 class="sigil_not_in_toc">iOS Platform</h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="platform.ios_ver">
 <span class="sig-prename descclassname"><span class="pre">platform.</span></span><span class="sig-name descname"><span class="pre">ios_ver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">release</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_simulator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span></dt>
@@ -312,11 +336,12 @@ simulator or a physical device.</p></li>
 </ul>
 <p>Entries which cannot be determined are set to the defaults given as
 parameters.</p>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="unix-platforms">
-<h2>Unix Platforms</h2>
+<h2 class="sigil_not_in_toc">Unix Platforms</h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="platform.libc_ver">
 <span class="sig-prename descclassname"><span class="pre">platform.</span></span><span class="sig-name descname"><span class="pre">libc_ver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">executable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">sys.executable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunksize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16384</span></span></em><span class="sig-paren">)</span></dt>
@@ -327,11 +352,12 @@ to the Python interpreter) is linked.  Returns a tuple of strings <code class="d
 add symbols to the executable is probably only usable for executables compiled
 using <strong class="program">gcc</strong>.</p>
 <p>The file is read and scanned in chunks of <em>chunksize</em> bytes.</p>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="linux-platforms">
-<h2>Linux Platforms</h2>
+<h2 class="sigil_not_in_toc">Linux Platforms</h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="platform.freedesktop_os_release">
 <span class="sig-prename descclassname"><span class="pre">platform.</span></span><span class="sig-name descname"><span class="pre">freedesktop_os_release</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
@@ -342,7 +368,7 @@ Android and Android-based distributions.</p>
 <p>Raises <a class="reference internal" href="exceptions.xhtml#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> or subclass when neither <code class="docutils literal notranslate"><span class="pre">/etc/os-release</span></code> nor
 <code class="docutils literal notranslate"><span class="pre">/usr/lib/os-release</span></code> can be read.</p>
 <p>On success, the function returns a dictionary where keys and values are
-strings. Values have their special characters like <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">$</span></code>
+strings. Values have their special characters like <code class="docutils literal notranslate"><span class="pre">"</span></code> and <code class="docutils literal notranslate"><span class="pre">$</span></code>
 unquoted. The fields <code class="docutils literal notranslate"><span class="pre">NAME</span></code>, <code class="docutils literal notranslate"><span class="pre">ID</span></code>, and <code class="docutils literal notranslate"><span class="pre">PRETTY_NAME</span></code> are always
 defined according to the standard. All other fields are optional. Vendors
 may include additional fields.</p>
@@ -353,21 +379,23 @@ Linux distributions.</p>
 <p>Example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_like_distro</span><span class="p">():</span>
     <span class="n">info</span> <span class="o">=</span> <span class="n">platform</span><span class="o">.</span><span class="n">freedesktop_os_release</span><span class="p">()</span>
-    <span class="n">ids</span> <span class="o">=</span> <span class="p">[</span><span class="n">info</span><span class="p">[</span><span class="s2">&quot;ID&quot;</span><span class="p">]]</span>
-    <span class="k">if</span> <span class="s2">&quot;ID_LIKE&quot;</span> <span class="ow">in</span> <span class="n">info</span><span class="p">:</span>
+    <span class="n">ids</span> <span class="o">=</span> <span class="p">[</span><span class="n">info</span><span class="p">[</span><span class="s2">"ID"</span><span class="p">]]</span>
+    <span class="k">if</span> <span class="s2">"ID_LIKE"</span> <span class="ow">in</span> <span class="n">info</span><span class="p">:</span>
         <span class="c1"># ids are space separated and ordered by precedence</span>
-        <span class="n">ids</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">info</span><span class="p">[</span><span class="s2">&quot;ID_LIKE&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+        <span class="n">ids</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">info</span><span class="p">[</span><span class="s2">"ID_LIKE"</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
     <span class="k">return</span> <span class="n">ids</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.10.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="android-platform">
-<h2>Android Platform</h2>
+<h2 class="sigil_not_in_toc">Android Platform</h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="platform.android_ver">
 <span class="sig-prename descclassname"><span class="pre">platform.</span></span><span class="sig-name descname"><span class="pre">android_ver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">release</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">manufacturer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_emulator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span></dt>
@@ -375,7 +403,7 @@ Linux distributions.</p>
 with the following attributes. Values which cannot be determined are set to
 the defaults given as parameters.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">release</span></code> - Android version, as a string (e.g. <code class="docutils literal notranslate"><span class="pre">&quot;14&quot;</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">release</span></code> - Android version, as a string (e.g. <code class="docutils literal notranslate"><span class="pre">"14"</span></code>).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">api_level</span></code> - API level of the running device, as an integer (e.g. <code class="docutils literal notranslate"><span class="pre">34</span></code>
 for Android 14). To get the API level which Python was built against, see
 <a class="reference internal" href="sys.xhtml#sys.getandroidapilevel" title="sys.getandroidapilevel"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys.getandroidapilevel()</span></code></a>.</p></li>
@@ -391,7 +419,8 @@ a physical device.</p></li>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.13.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 </section>
@@ -402,5 +431,5 @@ a physical device.</p></li>
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

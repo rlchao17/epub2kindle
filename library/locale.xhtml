@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="locale — Internationalization services" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/library/locale.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="Source code: Lib/locale.py[https://github.com/python/cpython/tree/3.13/Lib/locale.py] The locale module opens access to the POSIX locale database and functionality. The POSIX locale mechanism allow..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="Source code: Lib/locale.py[https://github.com/python/cpython/tree/3.13/Lib/locale.py] The locale module opens access to the POSIX locale database and functionality. The POSIX locale mechanism allow..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="locale — Internationalization services"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/library/locale.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="Source code: Lib/locale.py[https://github.com/python/cpython/tree/3.13/Lib/locale.py] The locale module opens access to the POSIX locale database and functionality. The POSIX locale mechanism allow..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="Source code: Lib/locale.py[https://github.com/python/cpython/tree/3.13/Lib/locale.py] The locale module opens access to the POSIX locale database and functionality. The POSIX locale mechanism allow..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>locale — Internationalization services</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/library/locale.html" />
+    <link rel="canonical" href="https://docs.python.org/3/library/locale.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -45,7 +46,7 @@
   <section id="module-locale">
 <span id="locale-internationalization-services"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">locale</span></code> — Internationalization services</h1>
 <p><strong>Source code:</strong> <a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.13/Lib/locale.py">Lib/locale.py</a><span class="link-target"> [https://github.com/python/cpython/tree/3.13/Lib/locale.py]</span></p>
-<hr class="docutils" />
+<hr class="docutils"/>
 <p>The <a class="reference internal" href="#module-locale" title="locale: Internationalization services."><code class="xref py py-mod docutils literal notranslate"><span class="pre">locale</span></code></a> module opens access to the POSIX locale database and
 functionality. The POSIX locale mechanism allows programmers to deal with
 certain cultural issues in an application, without requiring the programmer to
@@ -58,7 +59,8 @@ which in turn uses an ANSI C locale implementation if available.</p>
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">Error</span></span></dt>
 <dd><p>Exception raised when the locale passed to <a class="reference internal" href="#locale.setlocale" title="locale.setlocale"><code class="xref py py-func docutils literal notranslate"><span class="pre">setlocale()</span></code></a> is not
 recognized.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="locale.setlocale">
@@ -75,13 +77,15 @@ returned.</p>
 <p><a class="reference internal" href="#locale.setlocale" title="locale.setlocale"><code class="xref py py-func docutils literal notranslate"><span class="pre">setlocale()</span></code></a> is not thread-safe on most systems. Applications typically
 start with a call of</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">locale</span>
-<span class="n">locale</span><span class="o">.</span><span class="n">setlocale</span><span class="p">(</span><span class="n">locale</span><span class="o">.</span><span class="n">LC_ALL</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
-</pre></div>
+<span class="n">locale</span><span class="o">.</span><span class="n">setlocale</span><span class="p">(</span><span class="n">locale</span><span class="o">.</span><span class="n">LC_ALL</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>
+</pre>
+</div>
 </div>
 <p>This sets the locale for all categories to the user’s default setting (typically
 specified in the <span class="target" id="index-1"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">LANG</span></code> environment variable).  If the locale is not
 changed thereafter, using multithreading should not cause problems.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="locale.localeconv">
@@ -90,18 +94,25 @@ changed thereafter, using multithreading should not cause problems.</p>
 has the following strings as keys:</p>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Category</p></th>
-<th class="head"><p>Key</p></th>
-<th class="head"><p>Meaning</p></th>
+<tr class="row-odd"><th class="head"><p>Category</p>
+</th>
+<th class="head"><p>Key</p>
+</th>
+<th class="head"><p>Meaning</p>
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="#locale.LC_NUMERIC" title="locale.LC_NUMERIC"><code class="xref py py-const docutils literal notranslate"><span class="pre">LC_NUMERIC</span></code></a></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">'decimal_point'</span></code></p></td>
-<td><p>Decimal point character.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#locale.LC_NUMERIC" title="locale.LC_NUMERIC"><code class="xref py py-const docutils literal notranslate"><span class="pre">LC_NUMERIC</span></code></a></p>
+</td>
+<td><p><code class="docutils literal notranslate"><span class="pre">'decimal_point'</span></code></p>
+</td>
+<td><p>Decimal point character.</p>
+</td>
 </tr>
 <tr class="row-odd"><td></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">'grouping'</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">'grouping'</span></code></p>
+</td>
 <td><p>Sequence of numbers specifying
 which relative positions the
 <code class="docutils literal notranslate"><span class="pre">'thousands_sep'</span></code> is
@@ -111,76 +122,104 @@ terminated with
 grouping is performed. If the
 sequence terminates with a
 <code class="docutils literal notranslate"><span class="pre">0</span></code>,  the last group size is
-repeatedly used.</p></td>
+repeatedly used.</p>
+</td>
 </tr>
 <tr class="row-even"><td></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">'thousands_sep'</span></code></p></td>
-<td><p>Character used between groups.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">'thousands_sep'</span></code></p>
+</td>
+<td><p>Character used between groups.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#locale.LC_MONETARY" title="locale.LC_MONETARY"><code class="xref py py-const docutils literal notranslate"><span class="pre">LC_MONETARY</span></code></a></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">'int_curr_symbol'</span></code></p></td>
-<td><p>International currency symbol.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#locale.LC_MONETARY" title="locale.LC_MONETARY"><code class="xref py py-const docutils literal notranslate"><span class="pre">LC_MONETARY</span></code></a></p>
+</td>
+<td><p><code class="docutils literal notranslate"><span class="pre">'int_curr_symbol'</span></code></p>
+</td>
+<td><p>International currency symbol.</p>
+</td>
 </tr>
 <tr class="row-even"><td></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">'currency_symbol'</span></code></p></td>
-<td><p>Local currency symbol.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">'currency_symbol'</span></code></p>
+</td>
+<td><p>Local currency symbol.</p>
+</td>
 </tr>
 <tr class="row-odd"><td></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">'p_cs_precedes/n_cs_precedes'</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">'p_cs_precedes/n_cs_precedes'</span></code></p>
+</td>
 <td><p>Whether the currency symbol
 precedes the value (for
 positive resp. negative
-values).</p></td>
+values).</p>
+</td>
 </tr>
 <tr class="row-even"><td></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">'p_sep_by_space/n_sep_by_space'</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">'p_sep_by_space/n_sep_by_space'</span></code></p>
+</td>
 <td><p>Whether the currency symbol is
 separated from the value  by a
 space (for positive resp.
-negative values).</p></td>
+negative values).</p>
+</td>
 </tr>
 <tr class="row-odd"><td></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">'mon_decimal_point'</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">'mon_decimal_point'</span></code></p>
+</td>
 <td><p>Decimal point used for
-monetary values.</p></td>
+monetary values.</p>
+</td>
 </tr>
 <tr class="row-even"><td></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">'frac_digits'</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">'frac_digits'</span></code></p>
+</td>
 <td><p>Number of fractional digits
 used in local formatting of
-monetary values.</p></td>
+monetary values.</p>
+</td>
 </tr>
 <tr class="row-odd"><td></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">'int_frac_digits'</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">'int_frac_digits'</span></code></p>
+</td>
 <td><p>Number of fractional digits
 used in international
-formatting of monetary values.</p></td>
+formatting of monetary values.</p>
+</td>
 </tr>
 <tr class="row-even"><td></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">'mon_thousands_sep'</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">'mon_thousands_sep'</span></code></p>
+</td>
 <td><p>Group separator used for
-monetary values.</p></td>
+monetary values.</p>
+</td>
 </tr>
 <tr class="row-odd"><td></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">'mon_grouping'</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">'mon_grouping'</span></code></p>
+</td>
 <td><p>Equivalent to <code class="docutils literal notranslate"><span class="pre">'grouping'</span></code>,
-used for monetary values.</p></td>
+used for monetary values.</p>
+</td>
 </tr>
 <tr class="row-even"><td></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">'positive_sign'</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">'positive_sign'</span></code></p>
+</td>
 <td><p>Symbol used to annotate a
-positive monetary value.</p></td>
+positive monetary value.</p>
+</td>
 </tr>
 <tr class="row-odd"><td></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">'negative_sign'</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">'negative_sign'</span></code></p>
+</td>
 <td><p>Symbol used to annotate a
-negative monetary value.</p></td>
+negative monetary value.</p>
+</td>
 </tr>
 <tr class="row-even"><td></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">'p_sign_posn/n_sign_posn'</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">'p_sign_posn/n_sign_posn'</span></code></p>
+</td>
 <td><p>The position of the sign (for
 positive resp. negative
-values), see below.</p></td>
+values), see below.</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -189,33 +228,47 @@ value specified in this locale.</p>
 <p>The possible values for <code class="docutils literal notranslate"><span class="pre">'p_sign_posn'</span></code> and <code class="docutils literal notranslate"><span class="pre">'n_sign_posn'</span></code> are given below.</p>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Value</p></th>
-<th class="head"><p>Explanation</p></th>
+<tr class="row-odd"><th class="head"><p>Value</p>
+</th>
+<th class="head"><p>Explanation</p>
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p>
+</td>
 <td><p>Currency and value are surrounded by
-parentheses.</p></td>
+parentheses.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p>
+</td>
 <td><p>The sign should precede the value and
-currency symbol.</p></td>
+currency symbol.</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">2</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">2</span></code></p>
+</td>
 <td><p>The sign should follow the value and
-currency symbol.</p></td>
+currency symbol.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">3</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">3</span></code></p>
+</td>
 <td><p>The sign should immediately precede the
-value.</p></td>
+value.</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">4</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">4</span></code></p>
+</td>
 <td><p>The sign should immediately follow the
-value.</p></td>
+value.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">CHAR_MAX</span></code></p></td>
-<td><p>Nothing is specified in this locale.</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">CHAR_MAX</span></code></p>
+</td>
+<td><p>Nothing is specified in this locale.</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -226,7 +279,8 @@ monetary strings are non-ASCII. This temporary change affects other threads.</p>
 <p><span class="versionmodified changed">Changed in version 3.7: </span>The function now temporarily sets the <code class="docutils literal notranslate"><span class="pre">LC_CTYPE</span></code> locale to the
 <code class="docutils literal notranslate"><span class="pre">LC_NUMERIC</span></code> locale in some cases.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="locale.nl_langinfo">
@@ -243,35 +297,40 @@ library.</p>
 <span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">CODESET</span></span></dt>
 <dd><p>Get a string with the name of the character encoding used in the
 selected locale.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="locale.D_T_FMT">
 <span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">D_T_FMT</span></span></dt>
 <dd><p>Get a string that can be used as a format string for <a class="reference internal" href="time.xhtml#time.strftime" title="time.strftime"><code class="xref py py-func docutils literal notranslate"><span class="pre">time.strftime()</span></code></a> to
 represent date and time in a locale-specific way.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="locale.D_FMT">
 <span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">D_FMT</span></span></dt>
 <dd><p>Get a string that can be used as a format string for <a class="reference internal" href="time.xhtml#time.strftime" title="time.strftime"><code class="xref py py-func docutils literal notranslate"><span class="pre">time.strftime()</span></code></a> to
 represent a date in a locale-specific way.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="locale.T_FMT">
 <span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">T_FMT</span></span></dt>
 <dd><p>Get a string that can be used as a format string for <a class="reference internal" href="time.xhtml#time.strftime" title="time.strftime"><code class="xref py py-func docutils literal notranslate"><span class="pre">time.strftime()</span></code></a> to
 represent a time in a locale-specific way.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="locale.T_FMT_AMPM">
 <span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">T_FMT_AMPM</span></span></dt>
 <dd><p>Get a format string for <a class="reference internal" href="time.xhtml#time.strftime" title="time.strftime"><code class="xref py py-func docutils literal notranslate"><span class="pre">time.strftime()</span></code></a> to represent time in the am/pm
 format.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="locale.DAY_1">
@@ -295,7 +354,8 @@ format.</p>
 international convention (ISO 8601) that Monday is the first day of the
 week.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="locale.ABDAY_1">
@@ -313,7 +373,8 @@ week.</p>
 <dt class="sig sig-object py" id="locale.ABDAY_7">
 <span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">ABDAY_7</span></span></dt>
 <dd><p>Get the abbreviated name of the n-th day of the week.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="locale.MON_1">
@@ -341,7 +402,8 @@ week.</p>
 <dt class="sig sig-object py" id="locale.MON_12">
 <span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">MON_12</span></span></dt>
 <dd><p>Get the name of the n-th month.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="locale.ABMON_1">
@@ -369,26 +431,30 @@ week.</p>
 <dt class="sig sig-object py" id="locale.ABMON_12">
 <span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">ABMON_12</span></span></dt>
 <dd><p>Get the abbreviated name of the n-th month.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="locale.RADIXCHAR">
 <span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">RADIXCHAR</span></span></dt>
 <dd><p>Get the radix character (decimal dot, decimal comma, etc.).</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="locale.THOUSEP">
 <span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">THOUSEP</span></span></dt>
 <dd><p>Get the separator character for thousands (groups of three digits).</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="locale.YESEXPR">
 <span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">YESEXPR</span></span></dt>
 <dd><p>Get a regular expression that can be used with the regex function to
 recognize a positive response to a yes/no question.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="locale.NOEXPR">
@@ -402,7 +468,8 @@ recognize a negative response to a yes/no question.</p>
 <code class="docutils literal notranslate"><span class="pre">regex</span></code> function from the C library, which might
 differ from the syntax used in <a class="reference internal" href="re.xhtml#module-re" title="re: Regular expression operations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">re</span></code></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="locale.CRNCYSTR">
@@ -410,7 +477,8 @@ differ from the syntax used in <a class="reference internal" href="re.xhtml#modu
 <dd><p>Get the currency symbol, preceded by “-” if the symbol should appear before
 the value, “+” if the symbol should appear after the value, or “.” if the
 symbol should replace the radix character.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="locale.ERA">
@@ -426,28 +494,32 @@ the <code class="docutils literal notranslate"><span class="pre">E</span></code>
 function to use this information.
 The format of the returned string is specified in <em>The Open Group Base
 Specifications Issue 8</em>, paragraph <a class="reference external" href="https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap07.html#tag_07_03_05_02">7.3.5.2 LC_TIME C-Language Access</a><span class="link-target"> [https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap07.html#tag_07_03_05_02]</span>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="locale.ERA_D_T_FMT">
 <span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">ERA_D_T_FMT</span></span></dt>
 <dd><p>Get a format string for <a class="reference internal" href="time.xhtml#time.strftime" title="time.strftime"><code class="xref py py-func docutils literal notranslate"><span class="pre">time.strftime()</span></code></a> to represent date and time in a
 locale-specific era-based way.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="locale.ERA_D_FMT">
 <span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">ERA_D_FMT</span></span></dt>
 <dd><p>Get a format string for <a class="reference internal" href="time.xhtml#time.strftime" title="time.strftime"><code class="xref py py-func docutils literal notranslate"><span class="pre">time.strftime()</span></code></a> to represent a date in a
 locale-specific era-based way.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="locale.ERA_T_FMT">
 <span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">ERA_T_FMT</span></span></dt>
 <dd><p>Get a format string for <a class="reference internal" href="time.xhtml#time.strftime" title="time.strftime"><code class="xref py py-func docutils literal notranslate"><span class="pre">time.strftime()</span></code></a> to represent a time in a
 locale-specific era-based way.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="locale.ALT_DIGITS">
@@ -455,9 +527,11 @@ locale-specific era-based way.</p>
 <dd><p>Get a string consisting of up to 100 semicolon-separated symbols used
 to represent the values 0 to 99 in a locale-specific way.
 In most locales this is an empty string.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="locale.getdefaultlocale">
@@ -481,7 +555,8 @@ determined.</p>
 <div class="deprecated-removed">
 <p><span class="versionmodified deprecated">Deprecated since version 3.11, will be removed in version 3.15.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="locale.getlocale">
@@ -492,7 +567,8 @@ except <a class="reference internal" href="#locale.LC_ALL" title="locale.LC_ALL"
 <p>Except for the code <code class="docutils literal notranslate"><span class="pre">'C'</span></code>, the language code corresponds to <span class="target" id="index-5"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc1766.html"><strong>RFC 1766</strong></a><span class="link-target"> [https://datatracker.ietf.org/doc/html/rfc1766.html]</span>.
 <em>language code</em> and <em>encoding</em> may be <code class="docutils literal notranslate"><span class="pre">None</span></code> if their values cannot be
 determined.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="locale.getpreferredencoding">
@@ -510,19 +586,20 @@ argument are ignored.</p>
 <p>The <a class="reference internal" href="../c-api/init_config.xhtml#c-preinit"><span class="std std-ref">Python preinitialization</span></a> configures the LC_CTYPE
 locale. See also the <a class="reference internal" href="../glossary.xhtml#term-filesystem-encoding-and-error-handler"><span class="xref std std-term">filesystem encoding and error handler</span></a>.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">Changed in version 3.7: </span>The function now always returns <code class="docutils literal notranslate"><span class="pre">&quot;utf-8&quot;</span></code> on Android or if the
+<p><span class="versionmodified changed">Changed in version 3.7: </span>The function now always returns <code class="docutils literal notranslate"><span class="pre">"utf-8"</span></code> on Android or if the
 <a class="reference internal" href="os.xhtml#utf8-mode"><span class="std std-ref">Python UTF-8 Mode</span></a> is enabled.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="locale.getencoding">
 <span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">getencoding</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Get the current <a class="reference internal" href="../glossary.xhtml#term-locale-encoding"><span class="xref std std-term">locale encoding</span></a>:</p>
 <ul class="simple">
-<li><p>On Android and VxWorks, return <code class="docutils literal notranslate"><span class="pre">&quot;utf-8&quot;</span></code>.</p></li>
+<li><p>On Android and VxWorks, return <code class="docutils literal notranslate"><span class="pre">"utf-8"</span></code>.</p></li>
 <li><p>On Unix, return the encoding of the current <a class="reference internal" href="#locale.LC_CTYPE" title="locale.LC_CTYPE"><code class="xref py py-data docutils literal notranslate"><span class="pre">LC_CTYPE</span></code></a> locale.
-Return <code class="docutils literal notranslate"><span class="pre">&quot;utf-8&quot;</span></code> if <code class="docutils literal notranslate"><span class="pre">nl_langinfo(CODESET)</span></code> returns an empty string:
+Return <code class="docutils literal notranslate"><span class="pre">"utf-8"</span></code> if <code class="docutils literal notranslate"><span class="pre">nl_langinfo(CODESET)</span></code> returns an empty string:
 for example, if the current LC_CTYPE locale is not supported.</p></li>
 <li><p>On Windows, return the ANSI code page.</p></li>
 </ul>
@@ -534,7 +611,8 @@ function ignores the <a class="reference internal" href="os.xhtml#utf8-mode"><sp
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.11.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="locale.normalize">
@@ -544,7 +622,8 @@ code is formatted for use with <a class="reference internal" href="#locale.setlo
 original name is returned unchanged.</p>
 <p>If the given encoding is not known, the function defaults to the default
 encoding for the locale code just like <a class="reference internal" href="#locale.setlocale" title="locale.setlocale"><code class="xref py py-func docutils literal notranslate"><span class="pre">setlocale()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="locale.strcoll">
@@ -553,7 +632,8 @@ encoding for the locale code just like <a class="reference internal" href="#loca
 any other compare function, returns a negative, or a positive value, or <code class="docutils literal notranslate"><span class="pre">0</span></code>,
 depending on whether <em>string1</em> collates before or after <em>string2</em> or is equal to
 it.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="locale.strxfrm">
@@ -563,7 +643,8 @@ comparisons.  For example, <code class="docutils literal notranslate"><span clas
 equivalent to <code class="docutils literal notranslate"><span class="pre">strcoll(s1,</span> <span class="pre">s2)</span> <span class="pre">&lt;</span> <span class="pre">0</span></code>.  This function can be used
 when the same string is compared repeatedly, e.g. when collating a
 sequence of strings.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="locale.format_string">
@@ -579,7 +660,8 @@ locale settings into account.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.7: </span>The <em>monetary</em> keyword parameter was added.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="locale.currency">
@@ -594,14 +676,16 @@ international currency symbol is used.</p>
 <p>This function will not work with the ‘C’ locale, so you have to set a
 locale via <a class="reference internal" href="#locale.setlocale" title="locale.setlocale"><code class="xref py py-func docutils literal notranslate"><span class="pre">setlocale()</span></code></a> first.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="locale.str">
 <span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Formats a floating-point number using the same format as the built-in function
 <code class="docutils literal notranslate"><span class="pre">str(float)</span></code>, but takes the decimal point into account.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="locale.delocalize">
@@ -611,7 +695,8 @@ locale via <a class="reference internal" href="#locale.setlocale" title="locale.
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.5.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="locale.localize">
@@ -621,20 +706,23 @@ locale via <a class="reference internal" href="#locale.setlocale" title="locale.
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.10.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="locale.atof">
 <span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">atof</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">float</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Converts a string to a number, following the <a class="reference internal" href="#locale.LC_NUMERIC" title="locale.LC_NUMERIC"><code class="xref py py-const docutils literal notranslate"><span class="pre">LC_NUMERIC</span></code></a> settings,
 by calling <em>func</em> on the result of calling <a class="reference internal" href="#locale.delocalize" title="locale.delocalize"><code class="xref py py-func docutils literal notranslate"><span class="pre">delocalize()</span></code></a> on <em>string</em>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="locale.atoi">
 <span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">atoi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Converts a string to an integer, following the <a class="reference internal" href="#locale.LC_NUMERIC" title="locale.LC_NUMERIC"><code class="xref py py-const docutils literal notranslate"><span class="pre">LC_NUMERIC</span></code></a> conventions.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="locale.LC_CTYPE">
@@ -648,28 +736,32 @@ SSH connections.</p>
 <p>Python doesn’t internally use locale-dependent character transformation functions
 from <code class="docutils literal notranslate"><span class="pre">ctype.h</span></code>. Instead, an internal <code class="docutils literal notranslate"><span class="pre">pyctype.h</span></code> provides locale-independent
 equivalents like <code class="xref c c-macro docutils literal notranslate"><span class="pre">Py_TOLOWER</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="locale.LC_COLLATE">
 <span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">LC_COLLATE</span></span></dt>
 <dd><p>Locale category for sorting strings.  The functions <a class="reference internal" href="#locale.strcoll" title="locale.strcoll"><code class="xref py py-func docutils literal notranslate"><span class="pre">strcoll()</span></code></a> and
 <a class="reference internal" href="#locale.strxfrm" title="locale.strxfrm"><code class="xref py py-func docutils literal notranslate"><span class="pre">strxfrm()</span></code></a> of the <a class="reference internal" href="#module-locale" title="locale: Internationalization services."><code class="xref py py-mod docutils literal notranslate"><span class="pre">locale</span></code></a> module are affected.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="locale.LC_TIME">
 <span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">LC_TIME</span></span></dt>
 <dd><p>Locale category for the formatting of time.  The function <a class="reference internal" href="time.xhtml#time.strftime" title="time.strftime"><code class="xref py py-func docutils literal notranslate"><span class="pre">time.strftime()</span></code></a>
 follows these conventions.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="locale.LC_MONETARY">
 <span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">LC_MONETARY</span></span></dt>
 <dd><p>Locale category for formatting of monetary values.  The available options are
 available from the <a class="reference internal" href="#locale.localeconv" title="locale.localeconv"><code class="xref py py-func docutils literal notranslate"><span class="pre">localeconv()</span></code></a> function.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="locale.LC_MESSAGES">
@@ -680,7 +772,8 @@ system, like those returned by <a class="reference internal" href="os.xhtml#os.s
 category.</p>
 <p>This value may not be available on operating systems not conforming to the
 POSIX standard, most notably Windows.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="locale.LC_NUMERIC">
@@ -689,7 +782,8 @@ POSIX standard, most notably Windows.</p>
 <a class="reference internal" href="#locale.atoi" title="locale.atoi"><code class="xref py py-func docutils literal notranslate"><span class="pre">atoi()</span></code></a>, <a class="reference internal" href="#locale.atof" title="locale.atof"><code class="xref py py-func docutils literal notranslate"><span class="pre">atof()</span></code></a> and <a class="reference internal" href="#locale.str" title="locale.str"><code class="xref py py-func docutils literal notranslate"><span class="pre">str()</span></code></a> of the <a class="reference internal" href="#module-locale" title="locale: Internationalization services."><code class="xref py py-mod docutils literal notranslate"><span class="pre">locale</span></code></a> module are
 affected by that category.  All other numeric formatting operations are not
 affected.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="locale.LC_ALL">
@@ -699,28 +793,31 @@ changed, setting the locale for all categories is attempted. If that fails for
 any category, no category is changed at all.  When the locale is retrieved using
 this flag, a string indicating the setting for all categories is returned. This
 string can be later used to restore the settings.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="locale.CHAR_MAX">
 <span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">CHAR_MAX</span></span></dt>
 <dd><p>This is a symbolic constant used for different values returned by
 <a class="reference internal" href="#locale.localeconv" title="locale.localeconv"><code class="xref py py-func docutils literal notranslate"><span class="pre">localeconv()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p>Example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">locale</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">loc</span> <span class="o">=</span> <span class="n">locale</span><span class="o">.</span><span class="n">getlocale</span><span class="p">()</span>  <span class="c1"># get current locale</span>
 <span class="go"># use German locale; name might vary with platform</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">locale</span><span class="o">.</span><span class="n">setlocale</span><span class="p">(</span><span class="n">locale</span><span class="o">.</span><span class="n">LC_ALL</span><span class="p">,</span> <span class="s1">&#39;de_DE&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">locale</span><span class="o">.</span><span class="n">strcoll</span><span class="p">(</span><span class="s1">&#39;f</span><span class="se">\xe4</span><span class="s1">n&#39;</span><span class="p">,</span> <span class="s1">&#39;foo&#39;</span><span class="p">)</span>  <span class="c1"># compare a string containing an umlaut</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">locale</span><span class="o">.</span><span class="n">setlocale</span><span class="p">(</span><span class="n">locale</span><span class="o">.</span><span class="n">LC_ALL</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>   <span class="c1"># use user&#39;s preferred locale</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">locale</span><span class="o">.</span><span class="n">setlocale</span><span class="p">(</span><span class="n">locale</span><span class="o">.</span><span class="n">LC_ALL</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)</span>  <span class="c1"># use default (C) locale</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">locale</span><span class="o">.</span><span class="n">setlocale</span><span class="p">(</span><span class="n">locale</span><span class="o">.</span><span class="n">LC_ALL</span><span class="p">,</span> <span class="s1">'de_DE'</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">locale</span><span class="o">.</span><span class="n">strcoll</span><span class="p">(</span><span class="s1">'f</span><span class="se">\xe4</span><span class="s1">n'</span><span class="p">,</span> <span class="s1">'foo'</span><span class="p">)</span>  <span class="c1"># compare a string containing an umlaut</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">locale</span><span class="o">.</span><span class="n">setlocale</span><span class="p">(</span><span class="n">locale</span><span class="o">.</span><span class="n">LC_ALL</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>   <span class="c1"># use user's preferred locale</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">locale</span><span class="o">.</span><span class="n">setlocale</span><span class="p">(</span><span class="n">locale</span><span class="o">.</span><span class="n">LC_ALL</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">)</span>  <span class="c1"># use default (C) locale</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">locale</span><span class="o">.</span><span class="n">setlocale</span><span class="p">(</span><span class="n">locale</span><span class="o">.</span><span class="n">LC_ALL</span><span class="p">,</span> <span class="n">loc</span><span class="p">)</span>  <span class="c1"># restore saved locale</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <section id="background-details-hints-tips-and-caveats">
-<h2>Background, details, hints, tips and caveats</h2>
+<h2 class="sigil_not_in_toc">Background, details, hints, tips and caveats</h2>
 <p>The C standard defines the locale as a program-wide property that may be
 relatively expensive to change.  On top of that, some implementations are broken
 in such a way that frequent locale changes may cause core dumps.  This makes the
@@ -752,7 +849,7 @@ whose high bit is set (i.e., non-ASCII bytes) are never converted or considered
 part of a character class such as letter or whitespace.</p>
 </section>
 <section id="for-extension-writers-and-programs-that-embed-python">
-<span id="embedding-locale"></span><h2>For extension writers and programs that embed Python</h2>
+<span id="embedding-locale"></span><h2 class="sigil_not_in_toc">For extension writers and programs that embed Python</h2>
 <p>Extension modules should never call <a class="reference internal" href="#locale.setlocale" title="locale.setlocale"><code class="xref py py-func docutils literal notranslate"><span class="pre">setlocale()</span></code></a>, except to find out what
 the current locale is.  But since the return value can only be used portably to
 restore it, that is not very useful (except perhaps to find out whether or not
@@ -765,36 +862,42 @@ and make sure that the <code class="xref py py-mod docutils literal notranslate"
 library.</p>
 </section>
 <section id="access-to-message-catalogs">
-<span id="locale-gettext"></span><h2>Access to message catalogs</h2>
+<span id="locale-gettext"></span><h2 class="sigil_not_in_toc">Access to message catalogs</h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="locale.gettext">
 <span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">gettext</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span></dt>
-<dd></dd></dl>
+<dd></dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="locale.dgettext">
 <span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">dgettext</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span></dt>
-<dd></dd></dl>
+<dd></dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="locale.dcgettext">
 <span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">dcgettext</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em><span class="sig-paren">)</span></dt>
-<dd></dd></dl>
+<dd></dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="locale.textdomain">
 <span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">textdomain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span></em><span class="sig-paren">)</span></dt>
-<dd></dd></dl>
+<dd></dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="locale.bindtextdomain">
 <span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">bindtextdomain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir</span></span></em><span class="sig-paren">)</span></dt>
-<dd></dd></dl>
+<dd></dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="locale.bind_textdomain_codeset">
 <span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">bind_textdomain_codeset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">codeset</span></span></em><span class="sig-paren">)</span></dt>
-<dd></dd></dl>
+<dd></dd>
+</dl>
 
 <p>The locale module exposes the C library’s gettext interface on systems that
 provide this interface.  It consists of the functions <a class="reference internal" href="gettext.xhtml#module-gettext" title="gettext: Multilingual internationalization services."><code class="xref py py-func docutils literal notranslate"><span class="pre">gettext()</span></code></a>,
@@ -817,5 +920,5 @@ their message catalogs.</p>
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

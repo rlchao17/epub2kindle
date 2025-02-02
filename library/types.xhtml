@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="types — Dynamic type creation and names for built-in types" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/library/types.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="Source code: Lib/types.py[https://github.com/python/cpython/tree/3.13/Lib/types.py] This module defines utility functions to assist in dynamic creation of new types. It also defines names for some ..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="Source code: Lib/types.py[https://github.com/python/cpython/tree/3.13/Lib/types.py] This module defines utility functions to assist in dynamic creation of new types. It also defines names for some ..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="types — Dynamic type creation and names for built-in types"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/library/types.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="Source code: Lib/types.py[https://github.com/python/cpython/tree/3.13/Lib/types.py] This module defines utility functions to assist in dynamic creation of new types. It also defines names for some ..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="Source code: Lib/types.py[https://github.com/python/cpython/tree/3.13/Lib/types.py] This module defines utility functions to assist in dynamic creation of new types. It also defines names for some ..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>types — Dynamic type creation and names for built-in types</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/library/types.html" />
+    <link rel="canonical" href="https://docs.python.org/3/library/types.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -45,7 +46,7 @@
   <section id="module-types">
 <span id="types-dynamic-type-creation-and-names-for-built-in-types"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">types</span></code> — Dynamic type creation and names for built-in types</h1>
 <p><strong>Source code:</strong> <a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.13/Lib/types.py">Lib/types.py</a><span class="link-target"> [https://github.com/python/cpython/tree/3.13/Lib/types.py]</span></p>
-<hr class="docutils" />
+<hr class="docutils"/>
 <p>This module defines utility functions to assist in dynamic creation of
 new types.</p>
 <p>It also defines names for some object types that are used by the standard
@@ -54,7 +55,7 @@ Python interpreter, but not exposed as builtins like <a class="reference interna
 <p>Finally, it provides some additional type-related utility classes and functions
 that are not fundamental enough to be builtins.</p>
 <section id="dynamic-type-creation">
-<h2>Dynamic Type Creation</h2>
+<h2 class="sigil_not_in_toc">Dynamic Type Creation</h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="types.new_class">
 <span class="sig-prename descclassname"><span class="pre">types.</span></span><span class="sig-name descname"><span class="pre">new_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bases</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exec_body</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
@@ -70,7 +71,8 @@ in <code class="docutils literal notranslate"><span class="pre">lambda</span> <s
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="types.prepare_class">
@@ -92,14 +94,17 @@ argument is passed in, this will be an empty dict.</p>
 tuple has changed.  Now an insertion-order-preserving mapping is
 used when the metaclass does not have a <code class="docutils literal notranslate"><span class="pre">__prepare__</span></code> method.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt><a class="reference internal" href="../reference/datamodel.xhtml#metaclasses"><span class="std std-ref">Metaclasses</span></a></dt><dd><p>Full details of the class creation process supported by these functions</p>
+<dt><a class="reference internal" href="../reference/datamodel.xhtml#metaclasses"><span class="std std-ref">Metaclasses</span></a></dt>
+<dd><p>Full details of the class creation process supported by these functions</p>
 </dd>
-<dt><span class="target" id="index-0"></span><a class="pep reference external" href="https://peps.python.org/pep-3115/"><strong>PEP 3115</strong></a><span class="link-target"> [https://peps.python.org/pep-3115/]</span> - Metaclasses in Python 3000</dt><dd><p>Introduced the <code class="docutils literal notranslate"><span class="pre">__prepare__</span></code> namespace hook</p>
+<dt><span class="target" id="index-0"></span><a class="pep reference external" href="https://peps.python.org/pep-3115/"><strong>PEP 3115</strong></a><span class="link-target"> [https://peps.python.org/pep-3115/]</span> - Metaclasses in Python 3000</dt>
+<dd><p>Introduced the <code class="docutils literal notranslate"><span class="pre">__prepare__</span></code> namespace hook</p>
 </dd>
 </dl>
 </div>
@@ -116,7 +121,8 @@ the return tuple unchanged.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="types.get_original_bases">
@@ -132,12 +138,12 @@ For classes without the <code class="docutils literal notranslate"><span class="
 <p>Examples:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">Generic</span><span class="p">,</span> <span class="n">NamedTuple</span><span class="p">,</span> <span class="n">TypedDict</span>
 
-<span class="n">T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;T&quot;</span><span class="p">)</span>
+<span class="n">T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">"T"</span><span class="p">)</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">Foo</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">]):</span> <span class="o">...</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">Bar</span><span class="p">(</span><span class="n">Foo</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">float</span><span class="p">):</span> <span class="o">...</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">Baz</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]):</span> <span class="o">...</span>
-<span class="n">Eggs</span> <span class="o">=</span> <span class="n">NamedTuple</span><span class="p">(</span><span class="s2">&quot;Eggs&quot;</span><span class="p">,</span> <span class="p">[(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="nb">int</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">)])</span>
-<span class="n">Spam</span> <span class="o">=</span> <span class="n">TypedDict</span><span class="p">(</span><span class="s2">&quot;Spam&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">})</span>
+<span class="n">Eggs</span> <span class="o">=</span> <span class="n">NamedTuple</span><span class="p">(</span><span class="s2">"Eggs"</span><span class="p">,</span> <span class="p">[(</span><span class="s2">"a"</span><span class="p">,</span> <span class="nb">int</span><span class="p">),</span> <span class="p">(</span><span class="s2">"b"</span><span class="p">,</span> <span class="nb">str</span><span class="p">)])</span>
+<span class="n">Spam</span> <span class="o">=</span> <span class="n">TypedDict</span><span class="p">(</span><span class="s2">"Spam"</span><span class="p">,</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">:</span> <span class="nb">str</span><span class="p">})</span>
 
 <span class="k">assert</span> <span class="n">Bar</span><span class="o">.</span><span class="vm">__bases__</span> <span class="o">==</span> <span class="p">(</span><span class="n">Foo</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
 <span class="k">assert</span> <span class="n">get_original_bases</span><span class="p">(</span><span class="n">Bar</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="n">Foo</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">float</span><span class="p">)</span>
@@ -153,12 +159,14 @@ For classes without the <code class="docutils literal notranslate"><span class="
 
 <span class="k">assert</span> <span class="nb">int</span><span class="o">.</span><span class="vm">__bases__</span> <span class="o">==</span> <span class="p">(</span><span class="nb">object</span><span class="p">,)</span>
 <span class="k">assert</span> <span class="n">get_original_bases</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="nb">object</span><span class="p">,)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.12.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -166,7 +174,7 @@ For classes without the <code class="docutils literal notranslate"><span class="
 </div>
 </section>
 <section id="standard-interpreter-types">
-<h2>Standard Interpreter Types</h2>
+<h2 class="sigil_not_in_toc">Standard Interpreter Types</h2>
 <p>This module provides names for many of the types that are required to
 implement a Python interpreter. It deliberately avoids including some of
 the types that arise only incidentally during processing such as the
@@ -182,7 +190,8 @@ the types that arise only incidentally during processing such as the
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.10.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="types.FunctionType">
@@ -194,14 +203,16 @@ the types that arise only incidentally during processing such as the
 <p class="audit-hook">Raises an <a class="reference internal" href="sys.xhtml#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">function.__new__</span></code> with argument <code class="docutils literal notranslate"><span class="pre">code</span></code>.</p>
 <p>The audit event only occurs for direct instantiation of function objects,
 and is not raised for normal compilation.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="types.GeneratorType">
 <span class="sig-prename descclassname"><span class="pre">types.</span></span><span class="sig-name descname"><span class="pre">GeneratorType</span></span></dt>
 <dd><p>The type of <a class="reference internal" href="../glossary.xhtml#term-generator"><span class="xref std std-term">generator</span></a>-iterator objects, created by
 generator functions.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="types.CoroutineType">
@@ -211,7 +222,8 @@ generator functions.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.5.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="types.AsyncGeneratorType">
@@ -221,7 +233,8 @@ asynchronous generator functions.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.6.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="types.CodeType">
@@ -231,7 +244,8 @@ asynchronous generator functions.</p>
 <p>Note that the audited arguments may not match the names or positions
 required by the initializer.  The audit event only occurs for direct
 instantiation of code objects, and is not raised for normal compilation.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="types.CellType">
@@ -241,13 +255,15 @@ a function’s <a class="reference internal" href="../glossary.xhtml#term-closur
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.8.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="types.MethodType">
 <span class="sig-prename descclassname"><span class="pre">types.</span></span><span class="sig-name descname"><span class="pre">MethodType</span></span></dt>
 <dd><p>The type of methods of user-defined class instances.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="types.BuiltinFunctionType">
@@ -257,7 +273,8 @@ a function’s <a class="reference internal" href="../glossary.xhtml#term-closur
 <dd><p>The type of built-in functions like <a class="reference internal" href="functions.xhtml#len" title="len"><code class="xref py py-func docutils literal notranslate"><span class="pre">len()</span></code></a> or <a class="reference internal" href="sys.xhtml#sys.exit" title="sys.exit"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys.exit()</span></code></a>, and
 methods of built-in classes.  (Here, the term “built-in” means “written in
 C”.)</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="types.WrapperDescriptorType">
@@ -267,7 +284,8 @@ C”.)</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="types.MethodWrapperType">
@@ -277,7 +295,8 @@ For example it is the type of <code class="code docutils literal notranslate"><s
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="types.NotImplementedType">
@@ -286,7 +305,8 @@ For example it is the type of <code class="code docutils literal notranslate"><s
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.10.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="types.MethodDescriptorType">
@@ -295,7 +315,8 @@ For example it is the type of <code class="code docutils literal notranslate"><s
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="types.ClassMethodDescriptorType">
@@ -305,7 +326,8 @@ For example it is the type of <code class="code docutils literal notranslate"><s
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="types.ModuleType">
@@ -315,10 +337,12 @@ module to be created and optionally its <a class="reference internal" href="../g
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt><a class="reference internal" href="../reference/datamodel.xhtml#module-objects"><span class="std std-ref">Documentation on module objects</span></a></dt><dd><p>Provides details on the special attributes that can be found on
+<dt><a class="reference internal" href="../reference/datamodel.xhtml#module-objects"><span class="std std-ref">Documentation on module objects</span></a></dt>
+<dd><p>Provides details on the special attributes that can be found on
 instances of <code class="xref py py-class docutils literal notranslate"><span class="pre">ModuleType</span></code>.</p>
 </dd>
-<dt><a class="reference internal" href="importlib.xhtml#importlib.util.module_from_spec" title="importlib.util.module_from_spec"><code class="xref py py-func docutils literal notranslate"><span class="pre">importlib.util.module_from_spec()</span></code></a></dt><dd><p>Modules created using the <code class="xref py py-class docutils literal notranslate"><span class="pre">ModuleType</span></code> constructor are
+<dt><a class="reference internal" href="importlib.xhtml#importlib.util.module_from_spec" title="importlib.util.module_from_spec"><code class="xref py py-func docutils literal notranslate"><span class="pre">importlib.util.module_from_spec()</span></code></a></dt>
+<dd><p>Modules created using the <code class="xref py py-class docutils literal notranslate"><span class="pre">ModuleType</span></code> constructor are
 created with many of their special attributes unset or set to default
 values. <code class="xref py py-func docutils literal notranslate"><span class="pre">module_from_spec()</span></code> provides a more robust way of
 creating <code class="xref py py-class docutils literal notranslate"><span class="pre">ModuleType</span></code> instances which ensures the various
@@ -326,7 +350,8 @@ attributes are set appropriately.</p>
 </dd>
 </dl>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="types.EllipsisType">
@@ -335,7 +360,8 @@ attributes are set appropriately.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.10.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="types.GenericAlias">
@@ -351,7 +377,8 @@ length 1) of types which parameterize <code class="docutils literal notranslate"
 <span class="go">True</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">==</span> <span class="n">GenericAlias</span><span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">))</span>
 <span class="go">True</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.9.</span></p>
@@ -362,13 +389,16 @@ length 1) of types which parameterize <code class="docutils literal notranslate"
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt><a class="reference internal" href="stdtypes.xhtml#types-genericalias"><span class="std std-ref">Generic Alias Types</span></a></dt><dd><p>In-depth documentation on instances of <code class="xref py py-class docutils literal notranslate"><span class="pre">types.GenericAlias</span></code></p>
+<dt><a class="reference internal" href="stdtypes.xhtml#types-genericalias"><span class="std std-ref">Generic Alias Types</span></a></dt>
+<dd><p>In-depth documentation on instances of <code class="xref py py-class docutils literal notranslate"><span class="pre">types.GenericAlias</span></code></p>
 </dd>
-<dt><span class="target" id="index-5"></span><a class="pep reference external" href="https://peps.python.org/pep-0585/"><strong>PEP 585</strong></a><span class="link-target"> [https://peps.python.org/pep-0585/]</span> - Type Hinting Generics In Standard Collections</dt><dd><p>Introducing the <code class="xref py py-class docutils literal notranslate"><span class="pre">types.GenericAlias</span></code> class</p>
+<dt><span class="target" id="index-5"></span><a class="pep reference external" href="https://peps.python.org/pep-0585/"><strong>PEP 585</strong></a><span class="link-target"> [https://peps.python.org/pep-0585/]</span> - Type Hinting Generics In Standard Collections</dt>
+<dd><p>Introducing the <code class="xref py py-class docutils literal notranslate"><span class="pre">types.GenericAlias</span></code> class</p>
 </dd>
 </dl>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="types.UnionType">
@@ -377,7 +407,8 @@ length 1) of types which parameterize <code class="docutils literal notranslate"
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.10.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="types.TracebackType">
@@ -386,14 +417,16 @@ length 1) of types which parameterize <code class="docutils literal notranslate"
 <p>See <a class="reference internal" href="../reference/datamodel.xhtml#traceback-objects"><span class="std std-ref">the language reference</span></a> for details of the
 available attributes and operations, and guidance on creating tracebacks
 dynamically.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="types.FrameType">
 <span class="sig-prename descclassname"><span class="pre">types.</span></span><span class="sig-name descname"><span class="pre">FrameType</span></span></dt>
 <dd><p>The type of <a class="reference internal" href="../reference/datamodel.xhtml#frame-objects"><span class="std std-ref">frame objects</span></a> such as found in
 <a class="reference internal" href="../reference/datamodel.xhtml#traceback.tb_frame" title="traceback.tb_frame"><code class="xref py py-attr docutils literal notranslate"><span class="pre">tb.tb_frame</span></code></a> if <code class="docutils literal notranslate"><span class="pre">tb</span></code> is a traceback object.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="types.GetSetDescriptorType">
@@ -403,7 +436,8 @@ as <a class="reference internal" href="../reference/datamodel.xhtml#frame.f_loca
 This type is used as
 descriptor for object attributes; it has the same purpose as the
 <a class="reference internal" href="functions.xhtml#property" title="property"><code class="xref py py-class docutils literal notranslate"><span class="pre">property</span></code></a> type, but for classes defined in extension modules.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="types.MemberDescriptorType">
@@ -419,7 +453,8 @@ on the class. This allows the slot to appear in the class’s <a class="referenc
 <p><strong>CPython implementation detail:</strong> In other implementations of Python, this type may be identical to
 <code class="docutils literal notranslate"><span class="pre">GetSetDescriptorType</span></code>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="types.MappingProxyType">
@@ -439,33 +474,38 @@ simply delegates to the underlying mapping.</p>
 <span class="sig-name descname"><span class="pre">key</span> <span class="pre">in</span> <span class="pre">proxy</span></span></dt>
 <dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the underlying mapping has a key <em>key</em>, else
 <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="describe">
 <dt class="sig sig-object">
 <span class="sig-name descname"><span class="pre">proxy[key]</span></span></dt>
 <dd><p>Return the item of the underlying mapping with key <em>key</em>.  Raises a
 <a class="reference internal" href="exceptions.xhtml#KeyError" title="KeyError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyError</span></code></a> if <em>key</em> is not in the underlying mapping.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="describe">
 <dt class="sig sig-object">
 <span class="sig-name descname"><span class="pre">iter(proxy)</span></span></dt>
 <dd><p>Return an iterator over the keys of the underlying mapping.  This is a
 shortcut for <code class="docutils literal notranslate"><span class="pre">iter(proxy.keys())</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="describe">
 <dt class="sig sig-object">
 <span class="sig-name descname"><span class="pre">len(proxy)</span></span></dt>
 <dd><p>Return the number of items in the underlying mapping.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="types.MappingProxyType.copy">
 <span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Return a shallow copy of the underlying mapping.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="types.MappingProxyType.get">
@@ -473,26 +513,30 @@ shortcut for <code class="docutils literal notranslate"><span class="pre">iter(p
 <dd><p>Return the value for <em>key</em> if <em>key</em> is in the underlying mapping, else
 <em>default</em>.  If <em>default</em> is not given, it defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>, so that
 this method never raises a <a class="reference internal" href="exceptions.xhtml#KeyError" title="KeyError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyError</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="types.MappingProxyType.items">
 <span class="sig-name descname"><span class="pre">items</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Return a new view of the underlying mapping’s items (<code class="docutils literal notranslate"><span class="pre">(key,</span> <span class="pre">value)</span></code>
 pairs).</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="types.MappingProxyType.keys">
 <span class="sig-name descname"><span class="pre">keys</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Return a new view of the underlying mapping’s keys.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="types.MappingProxyType.values">
 <span class="sig-name descname"><span class="pre">values</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Return a new view of the underlying mapping’s values.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="describe">
 <dt class="sig sig-object">
@@ -501,7 +545,8 @@ pairs).</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.9.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="describe">
 <dt class="sig sig-object">
@@ -510,9 +555,11 @@ pairs).</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.12.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="types.CapsuleType">
@@ -521,11 +568,12 @@ pairs).</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.13.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="additional-utility-classes-and-functions">
-<h2>Additional Utility Classes and Functions</h2>
+<h2 class="sigil_not_in_toc">Additional Utility Classes and Functions</h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="types.SimpleNamespace">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">types.</span></span><span class="sig-name descname"><span class="pre">SimpleNamespace</span></span></dt>
@@ -550,14 +598,15 @@ All such keys must be strings.</p>
         <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">items</span> <span class="o">=</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">=</span><span class="si">{</span><span class="n">v</span><span class="si">!r}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
-        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">(</span><span class="si">{}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">items</span><span class="p">))</span>
+        <span class="n">items</span> <span class="o">=</span> <span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">=</span><span class="si">{</span><span class="n">v</span><span class="si">!r}</span><span class="s2">"</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+        <span class="k">return</span> <span class="s2">"</span><span class="si">{}</span><span class="s2">(</span><span class="si">{}</span><span class="s2">)"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="s2">", "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">items</span><span class="p">))</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">SimpleNamespace</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">SimpleNamespace</span><span class="p">):</span>
            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
         <span class="k">return</span> <span class="bp">NotImplemented</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">SimpleNamespace</span></code> may be useful as a replacement for <code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">NS:</span> <span class="pre">pass</span></code>.
 However, for a structured record type use <a class="reference internal" href="collections.xhtml#collections.namedtuple" title="collections.namedtuple"><code class="xref py py-func docutils literal notranslate"><span class="pre">namedtuple()</span></code></a>
@@ -573,7 +622,8 @@ instead.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.13: </span>Added support for an optional positional argument.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="types.DynamicClassAttribute">
@@ -588,11 +638,12 @@ attributes on the class with the same name (see <a class="reference internal" hr
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.4.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="coroutine-utility-functions">
-<h2>Coroutine Utility Functions</h2>
+<h2 class="sigil_not_in_toc">Coroutine Utility Functions</h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="types.coroutine">
 <span class="sig-prename descclassname"><span class="pre">types.</span></span><span class="sig-name descname"><span class="pre">coroutine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gen_func</span></span></em><span class="sig-paren">)</span></dt>
@@ -610,7 +661,8 @@ of objects will be returned as is.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.5.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 </section>
@@ -621,5 +673,5 @@ of objects will be returned as is.</p>
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="codecs — Codec registry and base classes" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/library/codecs.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="Source code: Lib/codecs.py[https://github.com/python/cpython/tree/3.13/Lib/codecs.py] This module defines base classes for standard Python codecs (encoders and decoders) and provides access to the ..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="Source code: Lib/codecs.py[https://github.com/python/cpython/tree/3.13/Lib/codecs.py] This module defines base classes for standard Python codecs (encoders and decoders) and provides access to the ..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="codecs — Codec registry and base classes"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/library/codecs.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="Source code: Lib/codecs.py[https://github.com/python/cpython/tree/3.13/Lib/codecs.py] This module defines base classes for standard Python codecs (encoders and decoders) and provides access to the ..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="Source code: Lib/codecs.py[https://github.com/python/cpython/tree/3.13/Lib/codecs.py] This module defines base classes for standard Python codecs (encoders and decoders) and provides access to the ..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>codecs — Codec registry and base classes</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/library/codecs.html" />
+    <link rel="canonical" href="https://docs.python.org/3/library/codecs.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -45,7 +46,7 @@
   <section id="module-codecs">
 <span id="codecs-codec-registry-and-base-classes"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">codecs</span></code> — Codec registry and base classes</h1>
 <p><strong>Source code:</strong> <a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.13/Lib/codecs.py">Lib/codecs.py</a><span class="link-target"> [https://github.com/python/cpython/tree/3.13/Lib/codecs.py]</span></p>
-<hr class="docutils" id="index-0" />
+<hr class="docutils" id="index-0"/>
 <p>This module defines base classes for standard Python codecs (encoders and
 decoders) and provides access to the internal Python codec registry, which
 manages the codec and error handling lookup process. Most standard codecs
@@ -66,7 +67,8 @@ default error handler is <code class="docutils literal notranslate"><span class=
 <a class="reference internal" href="exceptions.xhtml#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> (or a more codec specific subclass, such as
 <a class="reference internal" href="exceptions.xhtml#UnicodeEncodeError" title="UnicodeEncodeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">UnicodeEncodeError</span></code></a>). Refer to <a class="reference internal" href="#codec-base-classes"><span class="std std-ref">Codec Base Classes</span></a> for more
 information on codec error handling.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="codecs.decode">
@@ -77,7 +79,8 @@ default error handler is <code class="docutils literal notranslate"><span class=
 <a class="reference internal" href="exceptions.xhtml#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> (or a more codec specific subclass, such as
 <a class="reference internal" href="exceptions.xhtml#UnicodeDecodeError" title="UnicodeDecodeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">UnicodeDecodeError</span></code></a>). Refer to <a class="reference internal" href="#codec-base-classes"><span class="std std-ref">Codec Base Classes</span></a> for more
 information on codec error handling.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p>The full details for each codec can also be looked up directly:</p>
 <dl class="py function">
@@ -89,7 +92,8 @@ information on codec error handling.</p>
 registered search functions is scanned. If no <a class="reference internal" href="#codecs.CodecInfo" title="codecs.CodecInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">CodecInfo</span></code></a> object is
 found, a <a class="reference internal" href="exceptions.xhtml#LookupError" title="LookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">LookupError</span></code></a> is raised. Otherwise, the <a class="reference internal" href="#codecs.CodecInfo" title="codecs.CodecInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">CodecInfo</span></code></a> object
 is stored in the cache and returned to the caller.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="codecs.CodecInfo">
@@ -100,7 +104,8 @@ arguments are stored in attributes of the same name:</p>
 <dt class="sig sig-object py" id="codecs.CodecInfo.name">
 <span class="sig-name descname"><span class="pre">name</span></span></dt>
 <dd><p>The name of the encoding.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="codecs.CodecInfo.encode">
@@ -112,7 +117,8 @@ functions or methods which have the same interface as
 the <a class="reference internal" href="#codecs.Codec.encode" title="codecs.Codec.encode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">encode()</span></code></a> and <a class="reference internal" href="#codecs.Codec.decode" title="codecs.Codec.decode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">decode()</span></code></a> methods of Codec
 instances (see <a class="reference internal" href="#codec-objects"><span class="std std-ref">Codec Interface</span></a>).
 The functions or methods are expected to work in a stateless mode.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="codecs.CodecInfo.incrementalencoder">
@@ -123,7 +129,8 @@ The functions or methods are expected to work in a stateless mode.</p>
 These have to provide the interface defined by the base classes
 <a class="reference internal" href="#codecs.IncrementalEncoder" title="codecs.IncrementalEncoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">IncrementalEncoder</span></code></a> and <a class="reference internal" href="#codecs.IncrementalDecoder" title="codecs.IncrementalDecoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">IncrementalDecoder</span></code></a>,
 respectively. Incremental codecs can maintain state.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="codecs.CodecInfo.streamwriter">
@@ -134,9 +141,11 @@ respectively. Incremental codecs can maintain state.</p>
 provide the interface defined by the base classes
 <a class="reference internal" href="#codecs.StreamWriter" title="codecs.StreamWriter"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamWriter</span></code></a> and <a class="reference internal" href="#codecs.StreamReader" title="codecs.StreamReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamReader</span></code></a>, respectively.
 Stream codecs can maintain state.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 <p>To simplify access to the various codec components, the module provides
 these additional functions which use <a class="reference internal" href="#codecs.lookup" title="codecs.lookup"><code class="xref py py-func docutils literal notranslate"><span class="pre">lookup()</span></code></a> for the codec lookup:</p>
@@ -145,14 +154,16 @@ these additional functions which use <a class="reference internal" href="#codecs
 <span class="sig-prename descclassname"><span class="pre">codecs.</span></span><span class="sig-name descname"><span class="pre">getencoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoding</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Look up the codec for the given encoding and return its encoder function.</p>
 <p>Raises a <a class="reference internal" href="exceptions.xhtml#LookupError" title="LookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">LookupError</span></code></a> in case the encoding cannot be found.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="codecs.getdecoder">
 <span class="sig-prename descclassname"><span class="pre">codecs.</span></span><span class="sig-name descname"><span class="pre">getdecoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoding</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Look up the codec for the given encoding and return its decoder function.</p>
 <p>Raises a <a class="reference internal" href="exceptions.xhtml#LookupError" title="LookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">LookupError</span></code></a> in case the encoding cannot be found.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="codecs.getincrementalencoder">
@@ -161,7 +172,8 @@ these additional functions which use <a class="reference internal" href="#codecs
 class or factory function.</p>
 <p>Raises a <a class="reference internal" href="exceptions.xhtml#LookupError" title="LookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">LookupError</span></code></a> in case the encoding cannot be found or the codec
 doesn’t support an incremental encoder.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="codecs.getincrementaldecoder">
@@ -170,7 +182,8 @@ doesn’t support an incremental encoder.</p>
 class or factory function.</p>
 <p>Raises a <a class="reference internal" href="exceptions.xhtml#LookupError" title="LookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">LookupError</span></code></a> in case the encoding cannot be found or the codec
 doesn’t support an incremental decoder.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="codecs.getreader">
@@ -178,7 +191,8 @@ doesn’t support an incremental decoder.</p>
 <dd><p>Look up the codec for the given encoding and return its <a class="reference internal" href="#codecs.StreamReader" title="codecs.StreamReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamReader</span></code></a>
 class or factory function.</p>
 <p>Raises a <a class="reference internal" href="exceptions.xhtml#LookupError" title="LookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">LookupError</span></code></a> in case the encoding cannot be found.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="codecs.getwriter">
@@ -186,7 +200,8 @@ class or factory function.</p>
 <dd><p>Look up the codec for the given encoding and return its <a class="reference internal" href="#codecs.StreamWriter" title="codecs.StreamWriter"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamWriter</span></code></a>
 class or factory function.</p>
 <p>Raises a <a class="reference internal" href="exceptions.xhtml#LookupError" title="LookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">LookupError</span></code></a> in case the encoding cannot be found.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p>Custom codecs are made available by registering a suitable codec search
 function:</p>
@@ -201,7 +216,8 @@ In case a search function cannot find a given encoding, it should return
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.9: </span>Hyphens and spaces are converted to underscore.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="codecs.unregister">
@@ -211,7 +227,8 @@ If the search function is not registered, do nothing.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.10.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <p>While the builtin <a class="reference internal" href="functions.xhtml#open" title="open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> and the associated <a class="reference internal" href="io.xhtml#module-io" title="io: Core tools for working with streams."><code class="xref py py-mod docutils literal notranslate"><span class="pre">io</span></code></a> module are the
 recommended approach for working with encoded text files, this module
@@ -241,7 +258,8 @@ It defaults to -1 which means that the default buffer size will be used.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.11: </span>The <code class="docutils literal notranslate"><span class="pre">'U'</span></code> mode has been removed.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="codecs.EncodedFile">
@@ -258,7 +276,8 @@ using <em>data_encoding</em>.</p>
 <p><em>errors</em> may be given to define the error handling. It defaults to
 <code class="docutils literal notranslate"><span class="pre">'strict'</span></code>, which causes <a class="reference internal" href="exceptions.xhtml#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> to be raised in case an encoding
 error occurs.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="codecs.iterencode">
@@ -270,7 +289,8 @@ other keyword argument) is passed through to the incremental encoder.</p>
 <p>This function requires that the codec accept text <a class="reference internal" href="stdtypes.xhtml#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> objects
 to encode. Therefore it does not support bytes-to-bytes encoders such as
 <code class="docutils literal notranslate"><span class="pre">base64_codec</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="codecs.iterdecode">
@@ -283,7 +303,8 @@ other keyword argument) is passed through to the incremental decoder.</p>
 to decode. Therefore it does not support text-to-text encoders such as
 <code class="docutils literal notranslate"><span class="pre">rot_13</span></code>, although <code class="docutils literal notranslate"><span class="pre">rot_13</span></code> may be used equivalently with
 <a class="reference internal" href="#codecs.iterencode" title="codecs.iterencode"><code class="xref py py-func docutils literal notranslate"><span class="pre">iterencode()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p>The module also provides the following constants which are useful for reading
 and writing to platform dependent files:</p>
@@ -317,10 +338,11 @@ native byte order, <a class="reference internal" href="#codecs.BOM" title="codec
 <a class="reference internal" href="#codecs.BOM_LE" title="codecs.BOM_LE"><code class="xref py py-const docutils literal notranslate"><span class="pre">BOM_LE</span></code></a> for <a class="reference internal" href="#codecs.BOM_UTF16_LE" title="codecs.BOM_UTF16_LE"><code class="xref py py-const docutils literal notranslate"><span class="pre">BOM_UTF16_LE</span></code></a> and <a class="reference internal" href="#codecs.BOM_BE" title="codecs.BOM_BE"><code class="xref py py-const docutils literal notranslate"><span class="pre">BOM_BE</span></code></a> for
 <a class="reference internal" href="#codecs.BOM_UTF16_BE" title="codecs.BOM_UTF16_BE"><code class="xref py py-const docutils literal notranslate"><span class="pre">BOM_UTF16_BE</span></code></a>. The others represent the BOM in UTF-8 and UTF-32
 encodings.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <section id="codec-base-classes">
-<span id="id1"></span><h2>Codec Base Classes</h2>
+<span id="id1"></span><h2 class="sigil_not_in_toc">Codec Base Classes</h2>
 <p>The <a class="reference internal" href="#module-codecs" title="codecs: Encode and decode data and streams."><code class="xref py py-mod docutils literal notranslate"><span class="pre">codecs</span></code></a> module defines a set of base classes which define the
 interfaces for working with codec objects, and can also be used as the basis
 for custom codec implementations.</p>
@@ -330,42 +352,52 @@ stream reader and writers typically reuse the stateless encoder/decoder to
 implement the file protocols. Codec authors also need to define how the
 codec will handle encoding and decoding errors.</p>
 <section id="error-handlers">
-<span id="surrogateescape"></span><span id="id2"></span><h3>Error Handlers</h3>
+<span id="surrogateescape"></span><span id="id2"></span><h3 class="sigil_not_in_toc">Error Handlers</h3>
 <p>To simplify and standardize error handling, codecs may implement different
 error handling schemes by accepting the <em>errors</em> string argument:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;German ß, ♬&#39;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;ascii&#39;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;backslashreplace&#39;</span><span class="p">)</span>
-<span class="go">b&#39;German \\xdf, \\u266c&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;German ß, ♬&#39;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;ascii&#39;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;xmlcharrefreplace&#39;</span><span class="p">)</span>
-<span class="go">b&#39;German &amp;#223;, &amp;#9836;&#39;</span>
-</pre></div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">'German ß, ♬'</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s1">'ascii'</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'backslashreplace'</span><span class="p">)</span>
+<span class="go">b'German \\xdf, \\u266c'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">'German ß, ♬'</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s1">'ascii'</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'xmlcharrefreplace'</span><span class="p">)</span>
+<span class="go">b'German &amp;#223;, &amp;#9836;'</span>
+</pre>
+</div>
 </div>
 <p id="index-1">The following error handlers can be used with all Python
 <a class="reference internal" href="#standard-encodings"><span class="std std-ref">Standard Encodings</span></a> codecs:</p>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Value</p></th>
-<th class="head"><p>Meaning</p></th>
+<tr class="row-odd"><th class="head"><p>Value</p>
+</th>
+<th class="head"><p>Meaning</p>
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'strict'</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'strict'</span></code></p>
+</td>
 <td><p>Raise <a class="reference internal" href="exceptions.xhtml#UnicodeError" title="UnicodeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">UnicodeError</span></code></a> (or a subclass),
 this is the default. Implemented in
-<a class="reference internal" href="#codecs.strict_errors" title="codecs.strict_errors"><code class="xref py py-func docutils literal notranslate"><span class="pre">strict_errors()</span></code></a>.</p></td>
+<a class="reference internal" href="#codecs.strict_errors" title="codecs.strict_errors"><code class="xref py py-func docutils literal notranslate"><span class="pre">strict_errors()</span></code></a>.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'ignore'</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'ignore'</span></code></p>
+</td>
 <td><p>Ignore the malformed data and continue without
 further notice. Implemented in
-<a class="reference internal" href="#codecs.ignore_errors" title="codecs.ignore_errors"><code class="xref py py-func docutils literal notranslate"><span class="pre">ignore_errors()</span></code></a>.</p></td>
+<a class="reference internal" href="#codecs.ignore_errors" title="codecs.ignore_errors"><code class="xref py py-func docutils literal notranslate"><span class="pre">ignore_errors()</span></code></a>.</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'replace'</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'replace'</span></code></p>
+</td>
 <td><p>Replace with a replacement marker. On
 encoding, use <code class="docutils literal notranslate"><span class="pre">?</span></code> (ASCII character). On
 decoding, use <code class="docutils literal notranslate"><span class="pre">�</span></code> (U+FFFD, the official
 REPLACEMENT CHARACTER). Implemented in
-<a class="reference internal" href="#codecs.replace_errors" title="codecs.replace_errors"><code class="xref py py-func docutils literal notranslate"><span class="pre">replace_errors()</span></code></a>.</p></td>
+<a class="reference internal" href="#codecs.replace_errors" title="codecs.replace_errors"><code class="xref py py-func docutils literal notranslate"><span class="pre">replace_errors()</span></code></a>.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'backslashreplace'</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'backslashreplace'</span></code></p>
+</td>
 <td><p>Replace with backslashed escape sequences.
 On encoding, use hexadecimal form of Unicode
 code point with formats <code class="samp docutils literal notranslate"><span class="pre">\x</span><em><span class="pre">hh</span></em></code>
@@ -373,16 +405,19 @@ code point with formats <code class="samp docutils literal notranslate"><span cl
 On decoding, use hexadecimal form of byte
 value with format <code class="samp docutils literal notranslate"><span class="pre">\x</span><em><span class="pre">hh</span></em></code>.
 Implemented in
-<a class="reference internal" href="#codecs.backslashreplace_errors" title="codecs.backslashreplace_errors"><code class="xref py py-func docutils literal notranslate"><span class="pre">backslashreplace_errors()</span></code></a>.</p></td>
+<a class="reference internal" href="#codecs.backslashreplace_errors" title="codecs.backslashreplace_errors"><code class="xref py py-func docutils literal notranslate"><span class="pre">backslashreplace_errors()</span></code></a>.</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'surrogateescape'</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'surrogateescape'</span></code></p>
+</td>
 <td><p>On decoding, replace byte with individual
 surrogate code ranging from <code class="docutils literal notranslate"><span class="pre">U+DC80</span></code> to
 <code class="docutils literal notranslate"><span class="pre">U+DCFF</span></code>. This code will then be turned
 back into the same byte when the
 <code class="docutils literal notranslate"><span class="pre">'surrogateescape'</span></code> error handler is used
 when encoding the data. (See <span class="target" id="index-2"></span><a class="pep reference external" href="https://peps.python.org/pep-0383/"><strong>PEP 383</strong></a><span class="link-target"> [https://peps.python.org/pep-0383/]</span> for
-more.)</p></td>
+more.)</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -390,44 +425,56 @@ more.)</p></td>
 <a class="reference internal" href="../glossary.xhtml#term-text-encoding"><span class="xref std std-term">text encodings</span></a>):</p>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Value</p></th>
-<th class="head"><p>Meaning</p></th>
+<tr class="row-odd"><th class="head"><p>Value</p>
+</th>
+<th class="head"><p>Meaning</p>
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'xmlcharrefreplace'</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'xmlcharrefreplace'</span></code></p>
+</td>
 <td><p>Replace with XML/HTML numeric character
 reference, which is a decimal form of Unicode
 code point with format <code class="samp docutils literal notranslate"><span class="pre">&amp;#</span><em><span class="pre">num</span></em><span class="pre">;</span></code>.
 Implemented in
-<a class="reference internal" href="#codecs.xmlcharrefreplace_errors" title="codecs.xmlcharrefreplace_errors"><code class="xref py py-func docutils literal notranslate"><span class="pre">xmlcharrefreplace_errors()</span></code></a>.</p></td>
+<a class="reference internal" href="#codecs.xmlcharrefreplace_errors" title="codecs.xmlcharrefreplace_errors"><code class="xref py py-func docutils literal notranslate"><span class="pre">xmlcharrefreplace_errors()</span></code></a>.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'namereplace'</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'namereplace'</span></code></p>
+</td>
 <td><p>Replace with <code class="docutils literal notranslate"><span class="pre">\N{...}</span></code> escape sequences,
 what appears in the braces is the Name
 property from Unicode Character Database.
-Implemented in <a class="reference internal" href="#codecs.namereplace_errors" title="codecs.namereplace_errors"><code class="xref py py-func docutils literal notranslate"><span class="pre">namereplace_errors()</span></code></a>.</p></td>
+Implemented in <a class="reference internal" href="#codecs.namereplace_errors" title="codecs.namereplace_errors"><code class="xref py py-func docutils literal notranslate"><span class="pre">namereplace_errors()</span></code></a>.</p>
+</td>
 </tr>
 </tbody>
 </table>
 <p id="index-4">In addition, the following error handler is specific to the given codecs:</p>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Value</p></th>
-<th class="head"><p>Codecs</p></th>
-<th class="head"><p>Meaning</p></th>
+<tr class="row-odd"><th class="head"><p>Value</p>
+</th>
+<th class="head"><p>Codecs</p>
+</th>
+<th class="head"><p>Meaning</p>
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'surrogatepass'</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'surrogatepass'</span></code></p>
+</td>
 <td><p>utf-8, utf-16, utf-32,
 utf-16-be, utf-16-le,
-utf-32-be, utf-32-le</p></td>
+utf-32-be, utf-32-le</p>
+</td>
 <td><p>Allow encoding and decoding surrogate code
 point (<code class="docutils literal notranslate"><span class="pre">U+D800</span></code> - <code class="docutils literal notranslate"><span class="pre">U+DFFF</span></code>) as normal
 code point. Otherwise these codecs treat
 the presence of surrogate code point in
-<a class="reference internal" href="stdtypes.xhtml#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> as an error.</p></td>
+<a class="reference internal" href="stdtypes.xhtml#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> as an error.</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -467,7 +514,8 @@ bound an <a class="reference internal" href="exceptions.xhtml#IndexError" title=
 <p>Decoding and translating works similarly, except <a class="reference internal" href="exceptions.xhtml#UnicodeDecodeError" title="UnicodeDecodeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">UnicodeDecodeError</span></code></a> or
 <a class="reference internal" href="exceptions.xhtml#UnicodeTranslateError" title="UnicodeTranslateError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">UnicodeTranslateError</span></code></a> will be passed to the handler and that the
 replacement from the error handler will be put into the output directly.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p>Previously registered error handlers (including the standard error handlers)
 can be looked up by name:</p>
@@ -476,7 +524,8 @@ can be looked up by name:</p>
 <span class="sig-prename descclassname"><span class="pre">codecs.</span></span><span class="sig-name descname"><span class="pre">lookup_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Return the error handler previously registered under the name <em>name</em>.</p>
 <p>Raises a <a class="reference internal" href="exceptions.xhtml#LookupError" title="LookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">LookupError</span></code></a> in case the handler cannot be found.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p>The following standard error handlers are also made available as module level
 functions:</p>
@@ -485,7 +534,8 @@ functions:</p>
 <span class="sig-prename descclassname"><span class="pre">codecs.</span></span><span class="sig-name descname"><span class="pre">strict_errors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exception</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Implements the <code class="docutils literal notranslate"><span class="pre">'strict'</span></code> error handling.</p>
 <p>Each encoding or decoding error raises a <a class="reference internal" href="exceptions.xhtml#UnicodeError" title="UnicodeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">UnicodeError</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="codecs.ignore_errors">
@@ -493,7 +543,8 @@ functions:</p>
 <dd><p>Implements the <code class="docutils literal notranslate"><span class="pre">'ignore'</span></code> error handling.</p>
 <p>Malformed data is ignored; encoding or decoding is continued without
 further notice.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="codecs.replace_errors">
@@ -501,7 +552,8 @@ further notice.</p>
 <dd><p>Implements the <code class="docutils literal notranslate"><span class="pre">'replace'</span></code> error handling.</p>
 <p>Substitutes <code class="docutils literal notranslate"><span class="pre">?</span></code> (ASCII character) for encoding errors or <code class="docutils literal notranslate"><span class="pre">�</span></code> (U+FFFD,
 the official REPLACEMENT CHARACTER) for decoding errors.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="codecs.backslashreplace_errors">
@@ -515,7 +567,8 @@ byte value with format <code class="samp docutils literal notranslate"><span cla
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.5: </span>Works with decoding and translating.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="codecs.xmlcharrefreplace_errors">
@@ -525,7 +578,8 @@ byte value with format <code class="samp docutils literal notranslate"><span cla
 <p>The unencodable character is replaced by an appropriate XML/HTML numeric
 character reference, which is a decimal form of Unicode code point with
 format <code class="samp docutils literal notranslate"><span class="pre">&amp;#</span><em><span class="pre">num</span></em><span class="pre">;</span></code> .</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="codecs.namereplace_errors">
@@ -539,11 +593,12 @@ will be converted to byte sequence <code class="docutils literal notranslate"><s
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.5.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="stateless-encoding-and-decoding">
-<span id="codec-objects"></span><h3>Stateless Encoding and Decoding</h3>
+<span id="codec-objects"></span><h3 class="sigil_not_in_toc">Stateless Encoding and Decoding</h3>
 <p>The base <a class="reference internal" href="#codecs.Codec" title="codecs.Codec"><code class="xref py py-class docutils literal notranslate"><span class="pre">Codec</span></code></a> class defines these methods which also define the
 function interfaces of the stateless encoder and decoder:</p>
 <dl class="py class">
@@ -563,7 +618,8 @@ It defaults to <code class="docutils literal notranslate"><span class="pre">'str
 encoding efficient.</p>
 <p>The encoder must be able to handle zero length input and return an empty object
 of the output object type in this situation.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="codecs.Codec.decode">
@@ -582,13 +638,15 @@ It defaults to <code class="docutils literal notranslate"><span class="pre">'str
 decoding efficient.</p>
 <p>The decoder must be able to handle zero length input and return an empty object
 of the output object type in this situation.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="incremental-encoding-and-decoding">
-<h3>Incremental Encoding and Decoding</h3>
+<h3 class="sigil_not_in_toc">Incremental Encoding and Decoding</h3>
 <p>The <a class="reference internal" href="#codecs.IncrementalEncoder" title="codecs.IncrementalEncoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">IncrementalEncoder</span></code></a> and <a class="reference internal" href="#codecs.IncrementalDecoder" title="codecs.IncrementalDecoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">IncrementalDecoder</span></code></a> classes provide
 the basic interface for incremental encoding and decoding. Encoding/decoding the
 input isn’t done with one call to the stateless encoder/decoder function, but
@@ -601,7 +659,7 @@ the encoding/decoding process during method calls.</p>
 the same as if all the single inputs were joined into one, and this input was
 encoded/decoded with the stateless encoder/decoder.</p>
 <section id="incrementalencoder-objects">
-<span id="incremental-encoder-objects"></span><h4>IncrementalEncoder Objects</h4>
+<span id="incremental-encoder-objects"></span><h4 class="sigil_not_in_toc">IncrementalEncoder Objects</h4>
 <p>The <a class="reference internal" href="#codecs.IncrementalEncoder" title="codecs.IncrementalEncoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">IncrementalEncoder</span></code></a> class is used for encoding an input in multiple
 steps. It defines the following methods which every incremental encoder must
 define in order to be compatible with the Python codec registry.</p>
@@ -625,7 +683,8 @@ object.</p>
 <dd><p>Encodes <em>object</em> (taking the current state of the encoder into account)
 and returns the resulting encoded object. If this is the last call to
 <a class="reference internal" href="#codecs.encode" title="codecs.encode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">encode()</span></code></a> <em>final</em> must be true (the default is false).</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="codecs.IncrementalEncoder.reset">
@@ -633,7 +692,8 @@ and returns the resulting encoded object. If this is the last call to
 <dd><p>Reset the encoder to the initial state. The output is discarded: call
 <code class="docutils literal notranslate"><span class="pre">.encode(object,</span> <span class="pre">final=True)</span></code>, passing an empty byte or text string
 if necessary, to reset the encoder and to get the output.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="codecs.IncrementalEncoder.getstate">
@@ -643,20 +703,23 @@ implementation should make sure that <code class="docutils literal notranslate">
 state. (States that are more complicated than integers can be converted
 into an integer by marshaling/pickling the state and encoding the bytes
 of the resulting string into an integer.)</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="codecs.IncrementalEncoder.setstate">
 <span class="sig-name descname"><span class="pre">setstate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Set the state of the encoder to <em>state</em>. <em>state</em> must be an encoder state
 returned by <a class="reference internal" href="#codecs.IncrementalEncoder.getstate" title="codecs.IncrementalEncoder.getstate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getstate()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="incrementaldecoder-objects">
-<span id="incremental-decoder-objects"></span><h4>IncrementalDecoder Objects</h4>
+<span id="incremental-decoder-objects"></span><h4 class="sigil_not_in_toc">IncrementalDecoder Objects</h4>
 <p>The <a class="reference internal" href="#codecs.IncrementalDecoder" title="codecs.IncrementalDecoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">IncrementalDecoder</span></code></a> class is used for decoding an input in multiple
 steps. It defines the following methods which every incremental decoder must
 define in order to be compatible with the Python codec registry.</p>
@@ -684,13 +747,15 @@ true the decoder must decode the input completely and must flush all
 buffers. If this isn’t possible (e.g. because of incomplete byte sequences
 at the end of the input) it must initiate error handling just like in the
 stateless case (which might raise an exception).</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="codecs.IncrementalDecoder.reset">
 <span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Reset the decoder to the initial state.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="codecs.IncrementalDecoder.getstate">
@@ -706,26 +771,29 @@ buffered input to the decoder returns it to the previous state without
 producing any output. (Additional state info that is more complicated than
 integers can be converted into an integer by marshaling/pickling the info
 and encoding the bytes of the resulting string into an integer.)</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="codecs.IncrementalDecoder.setstate">
 <span class="sig-name descname"><span class="pre">setstate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Set the state of the decoder to <em>state</em>. <em>state</em> must be a decoder state
 returned by <a class="reference internal" href="#codecs.IncrementalDecoder.getstate" title="codecs.IncrementalDecoder.getstate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getstate()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 </section>
 <section id="stream-encoding-and-decoding">
-<h3>Stream Encoding and Decoding</h3>
+<h3 class="sigil_not_in_toc">Stream Encoding and Decoding</h3>
 <p>The <a class="reference internal" href="#codecs.StreamWriter" title="codecs.StreamWriter"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamWriter</span></code></a> and <a class="reference internal" href="#codecs.StreamReader" title="codecs.StreamReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamReader</span></code></a> classes provide generic
 working interfaces which can be used to implement new encoding submodules very
 easily. See <code class="xref py py-mod docutils literal notranslate"><span class="pre">encodings.utf_8</span></code> for an example of how this is done.</p>
 <section id="streamwriter-objects">
-<span id="stream-writer-objects"></span><h4>StreamWriter Objects</h4>
+<span id="stream-writer-objects"></span><h4 class="sigil_not_in_toc">StreamWriter Objects</h4>
 <p>The <a class="reference internal" href="#codecs.StreamWriter" title="codecs.StreamWriter"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamWriter</span></code></a> class is a subclass of <a class="reference internal" href="#codecs.Codec" title="codecs.Codec"><code class="xref py py-class docutils literal notranslate"><span class="pre">Codec</span></code></a> and defines the
 following methods which every stream writer must define in order to be
 compatible with the Python codec registry.</p>
@@ -748,7 +816,8 @@ handling strategies during the lifetime of the <a class="reference internal" hre
 <dt class="sig sig-object py" id="codecs.StreamWriter.write">
 <span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Writes the object’s contents encoded to the stream.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="codecs.StreamWriter.writelines">
@@ -757,7 +826,8 @@ handling strategies during the lifetime of the <a class="reference internal" hre
 the <a class="reference internal" href="#codecs.StreamWriter.write" title="codecs.StreamWriter.write"><code class="xref py py-meth docutils literal notranslate"><span class="pre">write()</span></code></a> method). Infinite or
 very large iterables are not supported. The standard bytes-to-bytes codecs
 do not support this method.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="codecs.StreamWriter.reset">
@@ -766,15 +836,17 @@ do not support this method.</p>
 <p>Calling this method should ensure that the data on the output is put into
 a clean state that allows appending of new fresh data without having to
 rescan the whole stream to recover state.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 <p>In addition to the above methods, the <a class="reference internal" href="#codecs.StreamWriter" title="codecs.StreamWriter"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamWriter</span></code></a> must also inherit
 all other methods and attributes from the underlying stream.</p>
 </section>
 <section id="streamreader-objects">
-<span id="stream-reader-objects"></span><h4>StreamReader Objects</h4>
+<span id="stream-reader-objects"></span><h4 class="sigil_not_in_toc">StreamReader Objects</h4>
 <p>The <a class="reference internal" href="#codecs.StreamReader" title="codecs.StreamReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamReader</span></code></a> class is a subclass of <a class="reference internal" href="#codecs.Codec" title="codecs.Codec"><code class="xref py py-class docutils literal notranslate"><span class="pre">Codec</span></code></a> and defines the
 following methods which every stream reader must define in order to be
 compatible with the Python codec registry.</p>
@@ -816,7 +888,8 @@ line, if there are decoding errors on later lines.</p>
 as much data as is allowed within the definition of the encoding and the
 given size, e.g.  if optional encoding endings or state markers are
 available on the stream, these should be read too.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="codecs.StreamReader.readline">
@@ -826,7 +899,8 @@ available on the stream, these should be read too.</p>
 <a class="reference internal" href="#codecs.StreamReader.read" title="codecs.StreamReader.read"><code class="xref py py-meth docutils literal notranslate"><span class="pre">read()</span></code></a> method.</p>
 <p>If <em>keepends</em> is false line-endings will be stripped from the lines
 returned.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="codecs.StreamReader.readlines">
@@ -837,7 +911,8 @@ lines.</p>
 are included in the list entries if <em>keepends</em> is true.</p>
 <p><em>sizehint</em>, if given, is passed as the <em>size</em> argument to the stream’s
 <a class="reference internal" href="#codecs.StreamReader.read" title="codecs.StreamReader.read"><code class="xref py py-meth docutils literal notranslate"><span class="pre">read()</span></code></a> method.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="codecs.StreamReader.reset">
@@ -845,15 +920,17 @@ are included in the list entries if <em>keepends</em> is true.</p>
 <dd><p>Resets the codec buffers used for keeping internal state.</p>
 <p>Note that no stream repositioning should take place. This method is
 primarily intended to be able to recover from decoding errors.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 <p>In addition to the above methods, the <a class="reference internal" href="#codecs.StreamReader" title="codecs.StreamReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamReader</span></code></a> must also inherit
 all other methods and attributes from the underlying stream.</p>
 </section>
 <section id="streamreaderwriter-objects">
-<span id="stream-reader-writer"></span><h4>StreamReaderWriter Objects</h4>
+<span id="stream-reader-writer"></span><h4 class="sigil_not_in_toc">StreamReaderWriter Objects</h4>
 <p>The <a class="reference internal" href="#codecs.StreamReaderWriter" title="codecs.StreamReaderWriter"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamReaderWriter</span></code></a> is a convenience class that allows wrapping
 streams which work in both read and write modes.</p>
 <p>The design is such that one can use the factory functions returned by the
@@ -865,14 +942,15 @@ streams which work in both read and write modes.</p>
 object. <em>Reader</em> and <em>Writer</em> must be factory functions or classes providing the
 <a class="reference internal" href="#codecs.StreamReader" title="codecs.StreamReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamReader</span></code></a> and <a class="reference internal" href="#codecs.StreamWriter" title="codecs.StreamWriter"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamWriter</span></code></a> interface resp. Error handling
 is done in the same way as defined for the stream readers and writers.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p><a class="reference internal" href="#codecs.StreamReaderWriter" title="codecs.StreamReaderWriter"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamReaderWriter</span></code></a> instances define the combined interfaces of
 <a class="reference internal" href="#codecs.StreamReader" title="codecs.StreamReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamReader</span></code></a> and <a class="reference internal" href="#codecs.StreamWriter" title="codecs.StreamWriter"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamWriter</span></code></a> classes. They inherit all other
 methods and attributes from the underlying stream.</p>
 </section>
 <section id="streamrecoder-objects">
-<span id="stream-recoder-objects"></span><h4>StreamRecoder Objects</h4>
+<span id="stream-recoder-objects"></span><h4 class="sigil_not_in_toc">StreamRecoder Objects</h4>
 <p>The <a class="reference internal" href="#codecs.StreamRecoder" title="codecs.StreamRecoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamRecoder</span></code></a> translates data from one encoding to another,
 which is sometimes useful when dealing with different encoding environments.</p>
 <p>The design is such that one can use the factory functions returned by the
@@ -894,7 +972,8 @@ adhere to the <a class="reference internal" href="#codecs.Codec" title="codecs.C
 <a class="reference internal" href="#codecs.StreamReader" title="codecs.StreamReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamReader</span></code></a> and <a class="reference internal" href="#codecs.StreamWriter" title="codecs.StreamWriter"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamWriter</span></code></a> interface respectively.</p>
 <p>Error handling is done in the same way as defined for the stream readers and
 writers.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p><a class="reference internal" href="#codecs.StreamRecoder" title="codecs.StreamRecoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamRecoder</span></code></a> instances define the combined interfaces of
 <a class="reference internal" href="#codecs.StreamReader" title="codecs.StreamReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamReader</span></code></a> and <a class="reference internal" href="#codecs.StreamWriter" title="codecs.StreamWriter"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamWriter</span></code></a> classes. They inherit all other
@@ -903,7 +982,7 @@ methods and attributes from the underlying stream.</p>
 </section>
 </section>
 <section id="encodings-and-unicode">
-<span id="encodings-overview"></span><h2>Encodings and Unicode</h2>
+<span id="encodings-overview"></span><h2 class="sigil_not_in_toc">Encodings and Unicode</h2>
 <p>Strings are stored internally as sequences of code points in
 range <code class="docutils literal notranslate"><span class="pre">U+0000</span></code>–<code class="docutils literal notranslate"><span class="pre">U+10FFFF</span></code>. (See <span class="target" id="index-5"></span><a class="pep reference external" href="https://peps.python.org/pep-0393/"><strong>PEP 393</strong></a><span class="link-target"> [https://peps.python.org/pep-0393/]</span> for
 more details about the implementation.)
@@ -960,22 +1039,32 @@ encoded like this (with x being payload bits, which when concatenated give the
 Unicode character):</p>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Range</p></th>
-<th class="head"><p>Encoding</p></th>
+<tr class="row-odd"><th class="head"><p>Range</p>
+</th>
+<th class="head"><p>Encoding</p>
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">U-00000000</span></code> … <code class="docutils literal notranslate"><span class="pre">U-0000007F</span></code></p></td>
-<td><p>0xxxxxxx</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">U-00000000</span></code> … <code class="docutils literal notranslate"><span class="pre">U-0000007F</span></code></p>
+</td>
+<td><p>0xxxxxxx</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">U-00000080</span></code> … <code class="docutils literal notranslate"><span class="pre">U-000007FF</span></code></p></td>
-<td><p>110xxxxx 10xxxxxx</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">U-00000080</span></code> … <code class="docutils literal notranslate"><span class="pre">U-000007FF</span></code></p>
+</td>
+<td><p>110xxxxx 10xxxxxx</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">U-00000800</span></code> … <code class="docutils literal notranslate"><span class="pre">U-0000FFFF</span></code></p></td>
-<td><p>1110xxxx 10xxxxxx 10xxxxxx</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">U-00000800</span></code> … <code class="docutils literal notranslate"><span class="pre">U-0000FFFF</span></code></p>
+</td>
+<td><p>1110xxxx 10xxxxxx 10xxxxxx</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">U-00010000</span></code> … <code class="docutils literal notranslate"><span class="pre">U-0010FFFF</span></code></p></td>
-<td><p>11110xxx 10xxxxxx 10xxxxxx 10xxxxxx</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">U-00010000</span></code> … <code class="docutils literal notranslate"><span class="pre">U-0010FFFF</span></code></p>
+</td>
+<td><p>11110xxx 10xxxxxx 10xxxxxx 10xxxxxx</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -989,7 +1078,7 @@ decode any random byte sequence. However that’s not possible with UTF-8, as
 UTF-8 byte sequences have a structure that doesn’t allow arbitrary byte
 sequences. To increase the reliability with which a UTF-8 encoding can be
 detected, Microsoft invented a variant of UTF-8 (that Python calls
-<code class="docutils literal notranslate"><span class="pre">&quot;utf-8-sig&quot;</span></code>) for its Notepad program: Before any of the Unicode characters
+<code class="docutils literal notranslate"><span class="pre">"utf-8-sig"</span></code>) for its Notepad program: Before any of the Unicode characters
 is written to the file, a UTF-8 encoded BOM (which looks like this as a byte
 sequence: <code class="docutils literal notranslate"><span class="pre">0xef</span></code>, <code class="docutils literal notranslate"><span class="pre">0xbb</span></code>, <code class="docutils literal notranslate"><span class="pre">0xbf</span></code>) is written. As it’s rather improbable
 that any charmap encoded file starts with these byte values (which would e.g.
@@ -1000,7 +1089,8 @@ map to</p>
 <div class="line">RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK</div>
 <div class="line">INVERTED QUESTION MARK</div>
 </div>
-</div></blockquote>
+</div>
+</blockquote>
 <p>in iso-8859-1), this increases the probability that a <code class="docutils literal notranslate"><span class="pre">utf-8-sig</span></code> encoding can be
 correctly guessed from the byte sequence. So here the BOM is not used to be able
 to determine the byte order used for generating the byte sequence, but as a
@@ -1011,7 +1101,7 @@ three bytes in the file. In UTF-8, the use of the BOM is discouraged and
 should generally be avoided.</p>
 </section>
 <section id="standard-encodings">
-<span id="id3"></span><h2>Standard Encodings</h2>
+<span id="id3"></span><h2 class="sigil_not_in_toc">Standard Encodings</h2>
 <p>Python comes with a number of codecs built-in, either implemented as C functions
 or with dictionaries as mapping tables. The following table lists the codecs by
 name, together with a few common aliases, and the languages for which the
@@ -1044,336 +1134,556 @@ but replaces control characters with additional graphic characters</p></li>
 </ul>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Codec</p></th>
-<th class="head"><p>Aliases</p></th>
-<th class="head"><p>Languages</p></th>
+<tr class="row-odd"><th class="head"><p>Codec</p>
+</th>
+<th class="head"><p>Aliases</p>
+</th>
+<th class="head"><p>Languages</p>
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>ascii</p></td>
-<td><p>646, us-ascii</p></td>
-<td><p>English</p></td>
+<tr class="row-even"><td><p>ascii</p>
+</td>
+<td><p>646, us-ascii</p>
+</td>
+<td><p>English</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>big5</p></td>
-<td><p>big5-tw, csbig5</p></td>
-<td><p>Traditional Chinese</p></td>
+<tr class="row-odd"><td><p>big5</p>
+</td>
+<td><p>big5-tw, csbig5</p>
+</td>
+<td><p>Traditional Chinese</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>big5hkscs</p></td>
-<td><p>big5-hkscs, hkscs</p></td>
-<td><p>Traditional Chinese</p></td>
+<tr class="row-even"><td><p>big5hkscs</p>
+</td>
+<td><p>big5-hkscs, hkscs</p>
+</td>
+<td><p>Traditional Chinese</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>cp037</p></td>
-<td><p>IBM037, IBM039</p></td>
-<td><p>English</p></td>
+<tr class="row-odd"><td><p>cp037</p>
+</td>
+<td><p>IBM037, IBM039</p>
+</td>
+<td><p>English</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>cp273</p></td>
-<td><p>273, IBM273, csIBM273</p></td>
+<tr class="row-even"><td><p>cp273</p>
+</td>
+<td><p>273, IBM273, csIBM273</p>
+</td>
 <td><p>German</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.4.</span></p>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>cp424</p></td>
-<td><p>EBCDIC-CP-HE, IBM424</p></td>
-<td><p>Hebrew</p></td>
+<tr class="row-odd"><td><p>cp424</p>
+</td>
+<td><p>EBCDIC-CP-HE, IBM424</p>
+</td>
+<td><p>Hebrew</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>cp437</p></td>
-<td><p>437, IBM437</p></td>
-<td><p>English</p></td>
+<tr class="row-even"><td><p>cp437</p>
+</td>
+<td><p>437, IBM437</p>
+</td>
+<td><p>English</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>cp500</p></td>
+<tr class="row-odd"><td><p>cp500</p>
+</td>
 <td><p>EBCDIC-CP-BE, EBCDIC-CP-CH,
-IBM500</p></td>
-<td><p>Western Europe</p></td>
+IBM500</p>
+</td>
+<td><p>Western Europe</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>cp720</p></td>
+<tr class="row-even"><td><p>cp720</p>
+</td>
 <td></td>
-<td><p>Arabic</p></td>
+<td><p>Arabic</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>cp737</p></td>
+<tr class="row-odd"><td><p>cp737</p>
+</td>
 <td></td>
-<td><p>Greek</p></td>
+<td><p>Greek</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>cp775</p></td>
-<td><p>IBM775</p></td>
-<td><p>Baltic languages</p></td>
+<tr class="row-even"><td><p>cp775</p>
+</td>
+<td><p>IBM775</p>
+</td>
+<td><p>Baltic languages</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>cp850</p></td>
-<td><p>850, IBM850</p></td>
-<td><p>Western Europe</p></td>
+<tr class="row-odd"><td><p>cp850</p>
+</td>
+<td><p>850, IBM850</p>
+</td>
+<td><p>Western Europe</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>cp852</p></td>
-<td><p>852, IBM852</p></td>
-<td><p>Central and Eastern Europe</p></td>
+<tr class="row-even"><td><p>cp852</p>
+</td>
+<td><p>852, IBM852</p>
+</td>
+<td><p>Central and Eastern Europe</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>cp855</p></td>
-<td><p>855, IBM855</p></td>
+<tr class="row-odd"><td><p>cp855</p>
+</td>
+<td><p>855, IBM855</p>
+</td>
 <td><p>Bulgarian, Byelorussian,
-Macedonian, Russian, Serbian</p></td>
+Macedonian, Russian, Serbian</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>cp856</p></td>
+<tr class="row-even"><td><p>cp856</p>
+</td>
 <td></td>
-<td><p>Hebrew</p></td>
+<td><p>Hebrew</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>cp857</p></td>
-<td><p>857, IBM857</p></td>
-<td><p>Turkish</p></td>
+<tr class="row-odd"><td><p>cp857</p>
+</td>
+<td><p>857, IBM857</p>
+</td>
+<td><p>Turkish</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>cp858</p></td>
-<td><p>858, IBM858</p></td>
-<td><p>Western Europe</p></td>
+<tr class="row-even"><td><p>cp858</p>
+</td>
+<td><p>858, IBM858</p>
+</td>
+<td><p>Western Europe</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>cp860</p></td>
-<td><p>860, IBM860</p></td>
-<td><p>Portuguese</p></td>
+<tr class="row-odd"><td><p>cp860</p>
+</td>
+<td><p>860, IBM860</p>
+</td>
+<td><p>Portuguese</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>cp861</p></td>
-<td><p>861, CP-IS, IBM861</p></td>
-<td><p>Icelandic</p></td>
+<tr class="row-even"><td><p>cp861</p>
+</td>
+<td><p>861, CP-IS, IBM861</p>
+</td>
+<td><p>Icelandic</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>cp862</p></td>
-<td><p>862, IBM862</p></td>
-<td><p>Hebrew</p></td>
+<tr class="row-odd"><td><p>cp862</p>
+</td>
+<td><p>862, IBM862</p>
+</td>
+<td><p>Hebrew</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>cp863</p></td>
-<td><p>863, IBM863</p></td>
-<td><p>Canadian</p></td>
+<tr class="row-even"><td><p>cp863</p>
+</td>
+<td><p>863, IBM863</p>
+</td>
+<td><p>Canadian</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>cp864</p></td>
-<td><p>IBM864</p></td>
-<td><p>Arabic</p></td>
+<tr class="row-odd"><td><p>cp864</p>
+</td>
+<td><p>IBM864</p>
+</td>
+<td><p>Arabic</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>cp865</p></td>
-<td><p>865, IBM865</p></td>
-<td><p>Danish, Norwegian</p></td>
+<tr class="row-even"><td><p>cp865</p>
+</td>
+<td><p>865, IBM865</p>
+</td>
+<td><p>Danish, Norwegian</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>cp866</p></td>
-<td><p>866, IBM866</p></td>
-<td><p>Russian</p></td>
+<tr class="row-odd"><td><p>cp866</p>
+</td>
+<td><p>866, IBM866</p>
+</td>
+<td><p>Russian</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>cp869</p></td>
-<td><p>869, CP-GR, IBM869</p></td>
-<td><p>Greek</p></td>
+<tr class="row-even"><td><p>cp869</p>
+</td>
+<td><p>869, CP-GR, IBM869</p>
+</td>
+<td><p>Greek</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>cp874</p></td>
+<tr class="row-odd"><td><p>cp874</p>
+</td>
 <td></td>
-<td><p>Thai</p></td>
+<td><p>Thai</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>cp875</p></td>
+<tr class="row-even"><td><p>cp875</p>
+</td>
 <td></td>
-<td><p>Greek</p></td>
+<td><p>Greek</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>cp932</p></td>
+<tr class="row-odd"><td><p>cp932</p>
+</td>
 <td><p>932, ms932, mskanji, ms-kanji,
-windows-31j</p></td>
-<td><p>Japanese</p></td>
+windows-31j</p>
+</td>
+<td><p>Japanese</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>cp949</p></td>
-<td><p>949, ms949, uhc</p></td>
-<td><p>Korean</p></td>
+<tr class="row-even"><td><p>cp949</p>
+</td>
+<td><p>949, ms949, uhc</p>
+</td>
+<td><p>Korean</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>cp950</p></td>
-<td><p>950, ms950</p></td>
-<td><p>Traditional Chinese</p></td>
+<tr class="row-odd"><td><p>cp950</p>
+</td>
+<td><p>950, ms950</p>
+</td>
+<td><p>Traditional Chinese</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>cp1006</p></td>
+<tr class="row-even"><td><p>cp1006</p>
+</td>
 <td></td>
-<td><p>Urdu</p></td>
+<td><p>Urdu</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>cp1026</p></td>
-<td><p>ibm1026</p></td>
-<td><p>Turkish</p></td>
+<tr class="row-odd"><td><p>cp1026</p>
+</td>
+<td><p>ibm1026</p>
+</td>
+<td><p>Turkish</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>cp1125</p></td>
-<td><p>1125, ibm1125, cp866u, ruscii</p></td>
+<tr class="row-even"><td><p>cp1125</p>
+</td>
+<td><p>1125, ibm1125, cp866u, ruscii</p>
+</td>
 <td><p>Ukrainian</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.4.</span></p>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>cp1140</p></td>
-<td><p>ibm1140</p></td>
-<td><p>Western Europe</p></td>
+<tr class="row-odd"><td><p>cp1140</p>
+</td>
+<td><p>ibm1140</p>
+</td>
+<td><p>Western Europe</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>cp1250</p></td>
-<td><p>windows-1250</p></td>
-<td><p>Central and Eastern Europe</p></td>
+<tr class="row-even"><td><p>cp1250</p>
+</td>
+<td><p>windows-1250</p>
+</td>
+<td><p>Central and Eastern Europe</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>cp1251</p></td>
-<td><p>windows-1251</p></td>
+<tr class="row-odd"><td><p>cp1251</p>
+</td>
+<td><p>windows-1251</p>
+</td>
 <td><p>Bulgarian, Byelorussian,
-Macedonian, Russian, Serbian</p></td>
+Macedonian, Russian, Serbian</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>cp1252</p></td>
-<td><p>windows-1252</p></td>
-<td><p>Western Europe</p></td>
+<tr class="row-even"><td><p>cp1252</p>
+</td>
+<td><p>windows-1252</p>
+</td>
+<td><p>Western Europe</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>cp1253</p></td>
-<td><p>windows-1253</p></td>
-<td><p>Greek</p></td>
+<tr class="row-odd"><td><p>cp1253</p>
+</td>
+<td><p>windows-1253</p>
+</td>
+<td><p>Greek</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>cp1254</p></td>
-<td><p>windows-1254</p></td>
-<td><p>Turkish</p></td>
+<tr class="row-even"><td><p>cp1254</p>
+</td>
+<td><p>windows-1254</p>
+</td>
+<td><p>Turkish</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>cp1255</p></td>
-<td><p>windows-1255</p></td>
-<td><p>Hebrew</p></td>
+<tr class="row-odd"><td><p>cp1255</p>
+</td>
+<td><p>windows-1255</p>
+</td>
+<td><p>Hebrew</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>cp1256</p></td>
-<td><p>windows-1256</p></td>
-<td><p>Arabic</p></td>
+<tr class="row-even"><td><p>cp1256</p>
+</td>
+<td><p>windows-1256</p>
+</td>
+<td><p>Arabic</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>cp1257</p></td>
-<td><p>windows-1257</p></td>
-<td><p>Baltic languages</p></td>
+<tr class="row-odd"><td><p>cp1257</p>
+</td>
+<td><p>windows-1257</p>
+</td>
+<td><p>Baltic languages</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>cp1258</p></td>
-<td><p>windows-1258</p></td>
-<td><p>Vietnamese</p></td>
+<tr class="row-even"><td><p>cp1258</p>
+</td>
+<td><p>windows-1258</p>
+</td>
+<td><p>Vietnamese</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>euc_jp</p></td>
-<td><p>eucjp, ujis, u-jis</p></td>
-<td><p>Japanese</p></td>
+<tr class="row-odd"><td><p>euc_jp</p>
+</td>
+<td><p>eucjp, ujis, u-jis</p>
+</td>
+<td><p>Japanese</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>euc_jis_2004</p></td>
-<td><p>jisx0213, eucjis2004</p></td>
-<td><p>Japanese</p></td>
+<tr class="row-even"><td><p>euc_jis_2004</p>
+</td>
+<td><p>jisx0213, eucjis2004</p>
+</td>
+<td><p>Japanese</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>euc_jisx0213</p></td>
-<td><p>eucjisx0213</p></td>
-<td><p>Japanese</p></td>
+<tr class="row-odd"><td><p>euc_jisx0213</p>
+</td>
+<td><p>eucjisx0213</p>
+</td>
+<td><p>Japanese</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>euc_kr</p></td>
+<tr class="row-even"><td><p>euc_kr</p>
+</td>
 <td><p>euckr, korean, ksc5601,
 ks_c-5601, ks_c-5601-1987,
-ksx1001, ks_x-1001</p></td>
-<td><p>Korean</p></td>
+ksx1001, ks_x-1001</p>
+</td>
+<td><p>Korean</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>gb2312</p></td>
+<tr class="row-odd"><td><p>gb2312</p>
+</td>
 <td><p>chinese, csiso58gb231280,
 euc-cn, euccn, eucgb2312-cn,
 gb2312-1980, gb2312-80,
-iso-ir-58</p></td>
-<td><p>Simplified Chinese</p></td>
+iso-ir-58</p>
+</td>
+<td><p>Simplified Chinese</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>gbk</p></td>
-<td><p>936, cp936, ms936</p></td>
-<td><p>Unified Chinese</p></td>
+<tr class="row-even"><td><p>gbk</p>
+</td>
+<td><p>936, cp936, ms936</p>
+</td>
+<td><p>Unified Chinese</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>gb18030</p></td>
-<td><p>gb18030-2000</p></td>
-<td><p>Unified Chinese</p></td>
+<tr class="row-odd"><td><p>gb18030</p>
+</td>
+<td><p>gb18030-2000</p>
+</td>
+<td><p>Unified Chinese</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>hz</p></td>
-<td><p>hzgb, hz-gb, hz-gb-2312</p></td>
-<td><p>Simplified Chinese</p></td>
+<tr class="row-even"><td><p>hz</p>
+</td>
+<td><p>hzgb, hz-gb, hz-gb-2312</p>
+</td>
+<td><p>Simplified Chinese</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>iso2022_jp</p></td>
+<tr class="row-odd"><td><p>iso2022_jp</p>
+</td>
 <td><p>csiso2022jp, iso2022jp,
-iso-2022-jp</p></td>
-<td><p>Japanese</p></td>
+iso-2022-jp</p>
+</td>
+<td><p>Japanese</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>iso2022_jp_1</p></td>
-<td><p>iso2022jp-1, iso-2022-jp-1</p></td>
-<td><p>Japanese</p></td>
+<tr class="row-even"><td><p>iso2022_jp_1</p>
+</td>
+<td><p>iso2022jp-1, iso-2022-jp-1</p>
+</td>
+<td><p>Japanese</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>iso2022_jp_2</p></td>
-<td><p>iso2022jp-2, iso-2022-jp-2</p></td>
+<tr class="row-odd"><td><p>iso2022_jp_2</p>
+</td>
+<td><p>iso2022jp-2, iso-2022-jp-2</p>
+</td>
 <td><p>Japanese, Korean, Simplified
-Chinese, Western Europe, Greek</p></td>
+Chinese, Western Europe, Greek</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>iso2022_jp_2004</p></td>
+<tr class="row-even"><td><p>iso2022_jp_2004</p>
+</td>
 <td><p>iso2022jp-2004,
-iso-2022-jp-2004</p></td>
-<td><p>Japanese</p></td>
+iso-2022-jp-2004</p>
+</td>
+<td><p>Japanese</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>iso2022_jp_3</p></td>
-<td><p>iso2022jp-3, iso-2022-jp-3</p></td>
-<td><p>Japanese</p></td>
+<tr class="row-odd"><td><p>iso2022_jp_3</p>
+</td>
+<td><p>iso2022jp-3, iso-2022-jp-3</p>
+</td>
+<td><p>Japanese</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>iso2022_jp_ext</p></td>
-<td><p>iso2022jp-ext, iso-2022-jp-ext</p></td>
-<td><p>Japanese</p></td>
+<tr class="row-even"><td><p>iso2022_jp_ext</p>
+</td>
+<td><p>iso2022jp-ext, iso-2022-jp-ext</p>
+</td>
+<td><p>Japanese</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>iso2022_kr</p></td>
+<tr class="row-odd"><td><p>iso2022_kr</p>
+</td>
 <td><p>csiso2022kr, iso2022kr,
-iso-2022-kr</p></td>
-<td><p>Korean</p></td>
+iso-2022-kr</p>
+</td>
+<td><p>Korean</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>latin_1</p></td>
+<tr class="row-even"><td><p>latin_1</p>
+</td>
 <td><p>iso-8859-1, iso8859-1, 8859,
-cp819, latin, latin1, L1</p></td>
-<td><p>Western Europe</p></td>
+cp819, latin, latin1, L1</p>
+</td>
+<td><p>Western Europe</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>iso8859_2</p></td>
-<td><p>iso-8859-2, latin2, L2</p></td>
-<td><p>Central and Eastern Europe</p></td>
+<tr class="row-odd"><td><p>iso8859_2</p>
+</td>
+<td><p>iso-8859-2, latin2, L2</p>
+</td>
+<td><p>Central and Eastern Europe</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>iso8859_3</p></td>
-<td><p>iso-8859-3, latin3, L3</p></td>
-<td><p>Esperanto, Maltese</p></td>
+<tr class="row-even"><td><p>iso8859_3</p>
+</td>
+<td><p>iso-8859-3, latin3, L3</p>
+</td>
+<td><p>Esperanto, Maltese</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>iso8859_4</p></td>
-<td><p>iso-8859-4, latin4, L4</p></td>
-<td><p>Baltic languages</p></td>
+<tr class="row-odd"><td><p>iso8859_4</p>
+</td>
+<td><p>iso-8859-4, latin4, L4</p>
+</td>
+<td><p>Baltic languages</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>iso8859_5</p></td>
-<td><p>iso-8859-5, cyrillic</p></td>
+<tr class="row-even"><td><p>iso8859_5</p>
+</td>
+<td><p>iso-8859-5, cyrillic</p>
+</td>
 <td><p>Bulgarian, Byelorussian,
-Macedonian, Russian, Serbian</p></td>
+Macedonian, Russian, Serbian</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>iso8859_6</p></td>
-<td><p>iso-8859-6, arabic</p></td>
-<td><p>Arabic</p></td>
+<tr class="row-odd"><td><p>iso8859_6</p>
+</td>
+<td><p>iso-8859-6, arabic</p>
+</td>
+<td><p>Arabic</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>iso8859_7</p></td>
-<td><p>iso-8859-7, greek, greek8</p></td>
-<td><p>Greek</p></td>
+<tr class="row-even"><td><p>iso8859_7</p>
+</td>
+<td><p>iso-8859-7, greek, greek8</p>
+</td>
+<td><p>Greek</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>iso8859_8</p></td>
-<td><p>iso-8859-8, hebrew</p></td>
-<td><p>Hebrew</p></td>
+<tr class="row-odd"><td><p>iso8859_8</p>
+</td>
+<td><p>iso-8859-8, hebrew</p>
+</td>
+<td><p>Hebrew</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>iso8859_9</p></td>
-<td><p>iso-8859-9, latin5, L5</p></td>
-<td><p>Turkish</p></td>
+<tr class="row-even"><td><p>iso8859_9</p>
+</td>
+<td><p>iso-8859-9, latin5, L5</p>
+</td>
+<td><p>Turkish</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>iso8859_10</p></td>
-<td><p>iso-8859-10, latin6, L6</p></td>
-<td><p>Nordic languages</p></td>
+<tr class="row-odd"><td><p>iso8859_10</p>
+</td>
+<td><p>iso-8859-10, latin6, L6</p>
+</td>
+<td><p>Nordic languages</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>iso8859_11</p></td>
-<td><p>iso-8859-11, thai</p></td>
-<td><p>Thai languages</p></td>
+<tr class="row-even"><td><p>iso8859_11</p>
+</td>
+<td><p>iso-8859-11, thai</p>
+</td>
+<td><p>Thai languages</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>iso8859_13</p></td>
-<td><p>iso-8859-13, latin7, L7</p></td>
-<td><p>Baltic languages</p></td>
+<tr class="row-odd"><td><p>iso8859_13</p>
+</td>
+<td><p>iso-8859-13, latin7, L7</p>
+</td>
+<td><p>Baltic languages</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>iso8859_14</p></td>
-<td><p>iso-8859-14, latin8, L8</p></td>
-<td><p>Celtic languages</p></td>
+<tr class="row-even"><td><p>iso8859_14</p>
+</td>
+<td><p>iso-8859-14, latin8, L8</p>
+</td>
+<td><p>Celtic languages</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>iso8859_15</p></td>
-<td><p>iso-8859-15, latin9, L9</p></td>
-<td><p>Western Europe</p></td>
+<tr class="row-odd"><td><p>iso8859_15</p>
+</td>
+<td><p>iso-8859-15, latin9, L9</p>
+</td>
+<td><p>Western Europe</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>iso8859_16</p></td>
-<td><p>iso-8859-16, latin10, L10</p></td>
-<td><p>South-Eastern Europe</p></td>
+<tr class="row-even"><td><p>iso8859_16</p>
+</td>
+<td><p>iso-8859-16, latin10, L10</p>
+</td>
+<td><p>South-Eastern Europe</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>johab</p></td>
-<td><p>cp1361, ms1361</p></td>
-<td><p>Korean</p></td>
+<tr class="row-odd"><td><p>johab</p>
+</td>
+<td><p>cp1361, ms1361</p>
+</td>
+<td><p>Korean</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>koi8_r</p></td>
+<tr class="row-even"><td><p>koi8_r</p>
+</td>
 <td></td>
-<td><p>Russian</p></td>
+<td><p>Russian</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>koi8_t</p></td>
+<tr class="row-odd"><td><p>koi8_t</p>
+</td>
 <td></td>
 <td><p>Tajik</p>
 <div class="versionadded">
@@ -1381,99 +1691,159 @@ Macedonian, Russian, Serbian</p></td>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>koi8_u</p></td>
+<tr class="row-even"><td><p>koi8_u</p>
+</td>
 <td></td>
-<td><p>Ukrainian</p></td>
+<td><p>Ukrainian</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>kz1048</p></td>
-<td><p>kz_1048, strk1048_2002, rk1048</p></td>
+<tr class="row-odd"><td><p>kz1048</p>
+</td>
+<td><p>kz_1048, strk1048_2002, rk1048</p>
+</td>
 <td><p>Kazakh</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.5.</span></p>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>mac_cyrillic</p></td>
-<td><p>maccyrillic</p></td>
+<tr class="row-even"><td><p>mac_cyrillic</p>
+</td>
+<td><p>maccyrillic</p>
+</td>
 <td><p>Bulgarian, Byelorussian,
-Macedonian, Russian, Serbian</p></td>
+Macedonian, Russian, Serbian</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>mac_greek</p></td>
-<td><p>macgreek</p></td>
-<td><p>Greek</p></td>
+<tr class="row-odd"><td><p>mac_greek</p>
+</td>
+<td><p>macgreek</p>
+</td>
+<td><p>Greek</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>mac_iceland</p></td>
-<td><p>maciceland</p></td>
-<td><p>Icelandic</p></td>
+<tr class="row-even"><td><p>mac_iceland</p>
+</td>
+<td><p>maciceland</p>
+</td>
+<td><p>Icelandic</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>mac_latin2</p></td>
+<tr class="row-odd"><td><p>mac_latin2</p>
+</td>
 <td><p>maclatin2, maccentraleurope,
-mac_centeuro</p></td>
-<td><p>Central and Eastern Europe</p></td>
+mac_centeuro</p>
+</td>
+<td><p>Central and Eastern Europe</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>mac_roman</p></td>
-<td><p>macroman, macintosh</p></td>
-<td><p>Western Europe</p></td>
+<tr class="row-even"><td><p>mac_roman</p>
+</td>
+<td><p>macroman, macintosh</p>
+</td>
+<td><p>Western Europe</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>mac_turkish</p></td>
-<td><p>macturkish</p></td>
-<td><p>Turkish</p></td>
+<tr class="row-odd"><td><p>mac_turkish</p>
+</td>
+<td><p>macturkish</p>
+</td>
+<td><p>Turkish</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>ptcp154</p></td>
+<tr class="row-even"><td><p>ptcp154</p>
+</td>
 <td><p>csptcp154, pt154, cp154,
-cyrillic-asian</p></td>
-<td><p>Kazakh</p></td>
+cyrillic-asian</p>
+</td>
+<td><p>Kazakh</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>shift_jis</p></td>
+<tr class="row-odd"><td><p>shift_jis</p>
+</td>
 <td><p>csshiftjis, shiftjis, sjis,
-s_jis</p></td>
-<td><p>Japanese</p></td>
+s_jis</p>
+</td>
+<td><p>Japanese</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>shift_jis_2004</p></td>
+<tr class="row-even"><td><p>shift_jis_2004</p>
+</td>
 <td><p>shiftjis2004, sjis_2004,
-sjis2004</p></td>
-<td><p>Japanese</p></td>
+sjis2004</p>
+</td>
+<td><p>Japanese</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>shift_jisx0213</p></td>
+<tr class="row-odd"><td><p>shift_jisx0213</p>
+</td>
 <td><p>shiftjisx0213, sjisx0213,
-s_jisx0213</p></td>
-<td><p>Japanese</p></td>
+s_jisx0213</p>
+</td>
+<td><p>Japanese</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>utf_32</p></td>
-<td><p>U32, utf32</p></td>
-<td><p>all languages</p></td>
+<tr class="row-even"><td><p>utf_32</p>
+</td>
+<td><p>U32, utf32</p>
+</td>
+<td><p>all languages</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>utf_32_be</p></td>
-<td><p>UTF-32BE</p></td>
-<td><p>all languages</p></td>
+<tr class="row-odd"><td><p>utf_32_be</p>
+</td>
+<td><p>UTF-32BE</p>
+</td>
+<td><p>all languages</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>utf_32_le</p></td>
-<td><p>UTF-32LE</p></td>
-<td><p>all languages</p></td>
+<tr class="row-even"><td><p>utf_32_le</p>
+</td>
+<td><p>UTF-32LE</p>
+</td>
+<td><p>all languages</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>utf_16</p></td>
-<td><p>U16, utf16</p></td>
-<td><p>all languages</p></td>
+<tr class="row-odd"><td><p>utf_16</p>
+</td>
+<td><p>U16, utf16</p>
+</td>
+<td><p>all languages</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>utf_16_be</p></td>
-<td><p>UTF-16BE</p></td>
-<td><p>all languages</p></td>
+<tr class="row-even"><td><p>utf_16_be</p>
+</td>
+<td><p>UTF-16BE</p>
+</td>
+<td><p>all languages</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>utf_16_le</p></td>
-<td><p>UTF-16LE</p></td>
-<td><p>all languages</p></td>
+<tr class="row-odd"><td><p>utf_16_le</p>
+</td>
+<td><p>UTF-16LE</p>
+</td>
+<td><p>all languages</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>utf_7</p></td>
-<td><p>U7, unicode-1-1-utf-7</p></td>
-<td><p>all languages</p></td>
+<tr class="row-even"><td><p>utf_7</p>
+</td>
+<td><p>U7, unicode-1-1-utf-7</p>
+</td>
+<td><p>all languages</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>utf_8</p></td>
-<td><p>U8, UTF, utf8, cp65001</p></td>
-<td><p>all languages</p></td>
+<tr class="row-odd"><td><p>utf_8</p>
+</td>
+<td><p>U8, UTF, utf8, cp65001</p>
+</td>
+<td><p>all languages</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>utf_8_sig</p></td>
+<tr class="row-even"><td><p>utf_8_sig</p>
+</td>
 <td></td>
-<td><p>all languages</p></td>
+<td><p>all languages</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -1488,7 +1858,7 @@ byte sequences that correspond to surrogate code points.</p>
 </div>
 </section>
 <section id="python-specific-encodings">
-<h2>Python Specific Encodings</h2>
+<h2 class="sigil_not_in_toc">Python Specific Encodings</h2>
 <p>A number of predefined codecs are specific to Python, so their codec names have
 no meaning outside Python. These are listed in the tables below based on the
 expected input and output types (note that while text encodings are the most
@@ -1496,34 +1866,43 @@ common use case for codecs, the underlying codec infrastructure supports
 arbitrary data transforms rather than just text encodings). For asymmetric
 codecs, the stated meaning describes the encoding direction.</p>
 <section id="text-encodings">
-<h3>Text Encodings</h3>
+<h3 class="sigil_not_in_toc">Text Encodings</h3>
 <p>The following codecs provide <a class="reference internal" href="stdtypes.xhtml#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> to <a class="reference internal" href="stdtypes.xhtml#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> encoding and
 <a class="reference internal" href="../glossary.xhtml#term-bytes-like-object"><span class="xref std std-term">bytes-like object</span></a> to <a class="reference internal" href="stdtypes.xhtml#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> decoding, similar to the Unicode text
 encodings.</p>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Codec</p></th>
-<th class="head"><p>Aliases</p></th>
-<th class="head"><p>Meaning</p></th>
+<tr class="row-odd"><th class="head"><p>Codec</p>
+</th>
+<th class="head"><p>Aliases</p>
+</th>
+<th class="head"><p>Meaning</p>
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>idna</p></td>
+<tr class="row-even"><td><p>idna</p>
+</td>
 <td></td>
 <td><p>Implement <span class="target" id="index-6"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc3490.html"><strong>RFC 3490</strong></a><span class="link-target"> [https://datatracker.ietf.org/doc/html/rfc3490.html]</span>,
 see also
 <a class="reference internal" href="#module-encodings.idna" title="encodings.idna: Internationalized Domain Names implementation"><code class="xref py py-mod docutils literal notranslate"><span class="pre">encodings.idna</span></code></a>.
 Only <code class="docutils literal notranslate"><span class="pre">errors='strict'</span></code>
-is supported.</p></td>
+is supported.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>mbcs</p></td>
+<tr class="row-odd"><td><p>mbcs</p>
+</td>
 <td><p>ansi,
-dbcs</p></td>
+dbcs</p>
+</td>
 <td><p>Windows only: Encode the
 operand according to the
-ANSI codepage (CP_ACP).</p></td>
+ANSI codepage (CP_ACP).</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>oem</p></td>
+<tr class="row-even"><td><p>oem</p>
+</td>
 <td></td>
 <td><p>Windows only: Encode the
 operand according to the
@@ -1533,17 +1912,22 @@ OEM codepage (CP_OEMCP).</p>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>palmos</p></td>
+<tr class="row-odd"><td><p>palmos</p>
+</td>
 <td></td>
-<td><p>Encoding of PalmOS 3.5.</p></td>
+<td><p>Encoding of PalmOS 3.5.</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>punycode</p></td>
+<tr class="row-even"><td><p>punycode</p>
+</td>
 <td></td>
 <td><p>Implement <span class="target" id="index-7"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc3492.html"><strong>RFC 3492</strong></a><span class="link-target"> [https://datatracker.ietf.org/doc/html/rfc3492.html]</span>.
 Stateful codecs are not
-supported.</p></td>
+supported.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>raw_unicode_escape</p></td>
+<tr class="row-odd"><td><p>raw_unicode_escape</p>
+</td>
 <td></td>
 <td><p>Latin-1 encoding with
 <code class="samp docutils literal notranslate"><span class="pre">\u</span><em><span class="pre">XXXX</span></em></code> and
@@ -1553,16 +1937,20 @@ Existing
 backslashes are not
 escaped in any way.
 It is used in the Python
-pickle protocol.</p></td>
+pickle protocol.</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>undefined</p></td>
+<tr class="row-even"><td><p>undefined</p>
+</td>
 <td></td>
 <td><p>Raise an exception for
 all conversions, even
 empty strings. The error
-handler is ignored.</p></td>
+handler is ignored.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>unicode_escape</p></td>
+<tr class="row-odd"><td><p>unicode_escape</p>
+</td>
 <td></td>
 <td><p>Encoding suitable as the
 contents of a Unicode
@@ -1573,7 +1961,8 @@ not escaped. Decode
 from Latin-1 source code.
 Beware that Python source
 code actually uses UTF-8
-by default.</p></td>
+by default.</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -1582,21 +1971,27 @@ by default.</p></td>
 </div>
 </section>
 <section id="binary-transforms">
-<span id="id4"></span><h3>Binary Transforms</h3>
+<span id="id4"></span><h3 class="sigil_not_in_toc">Binary Transforms</h3>
 <p>The following codecs provide binary transforms: <a class="reference internal" href="../glossary.xhtml#term-bytes-like-object"><span class="xref std std-term">bytes-like object</span></a>
 to <a class="reference internal" href="stdtypes.xhtml#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> mappings. They are not supported by <a class="reference internal" href="stdtypes.xhtml#bytes.decode" title="bytes.decode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">bytes.decode()</span></code></a>
 (which only produces <a class="reference internal" href="stdtypes.xhtml#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> output).</p>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Codec</p></th>
-<th class="head"><p>Aliases</p></th>
-<th class="head"><p>Meaning</p></th>
-<th class="head"><p>Encoder / decoder</p></th>
+<tr class="row-odd"><th class="head"><p>Codec</p>
+</th>
+<th class="head"><p>Aliases</p>
+</th>
+<th class="head"><p>Meaning</p>
+</th>
+<th class="head"><p>Encoder / decoder</p>
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>base64_codec <a class="footnote-reference brackets" href="#b64" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></td>
-<td><p>base64, base_64</p></td>
+<tr class="row-even"><td><p>base64_codec <a class="footnote-reference brackets" href="#b64" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+</td>
+<td><p>base64, base_64</p>
+</td>
 <td><p>Convert the operand to
 multiline MIME base64 (the
 result always includes a
@@ -1609,46 +2004,66 @@ decoding</p>
 </div>
 </td>
 <td><p><a class="reference internal" href="base64.xhtml#base64.encodebytes" title="base64.encodebytes"><code class="xref py py-meth docutils literal notranslate"><span class="pre">base64.encodebytes()</span></code></a> /
-<a class="reference internal" href="base64.xhtml#base64.decodebytes" title="base64.decodebytes"><code class="xref py py-meth docutils literal notranslate"><span class="pre">base64.decodebytes()</span></code></a></p></td>
+<a class="reference internal" href="base64.xhtml#base64.decodebytes" title="base64.decodebytes"><code class="xref py py-meth docutils literal notranslate"><span class="pre">base64.decodebytes()</span></code></a></p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>bz2_codec</p></td>
-<td><p>bz2</p></td>
+<tr class="row-odd"><td><p>bz2_codec</p>
+</td>
+<td><p>bz2</p>
+</td>
 <td><p>Compress the operand using
-bz2.</p></td>
+bz2.</p>
+</td>
 <td><p><a class="reference internal" href="bz2.xhtml#bz2.compress" title="bz2.compress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">bz2.compress()</span></code></a> /
-<a class="reference internal" href="bz2.xhtml#bz2.decompress" title="bz2.decompress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">bz2.decompress()</span></code></a></p></td>
+<a class="reference internal" href="bz2.xhtml#bz2.decompress" title="bz2.decompress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">bz2.decompress()</span></code></a></p>
+</td>
 </tr>
-<tr class="row-even"><td><p>hex_codec</p></td>
-<td><p>hex</p></td>
+<tr class="row-even"><td><p>hex_codec</p>
+</td>
+<td><p>hex</p>
+</td>
 <td><p>Convert the operand to
 hexadecimal
 representation, with two
-digits per byte.</p></td>
+digits per byte.</p>
+</td>
 <td><p><a class="reference internal" href="binascii.xhtml#binascii.b2a_hex" title="binascii.b2a_hex"><code class="xref py py-meth docutils literal notranslate"><span class="pre">binascii.b2a_hex()</span></code></a> /
-<a class="reference internal" href="binascii.xhtml#binascii.a2b_hex" title="binascii.a2b_hex"><code class="xref py py-meth docutils literal notranslate"><span class="pre">binascii.a2b_hex()</span></code></a></p></td>
+<a class="reference internal" href="binascii.xhtml#binascii.a2b_hex" title="binascii.a2b_hex"><code class="xref py py-meth docutils literal notranslate"><span class="pre">binascii.a2b_hex()</span></code></a></p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>quopri_codec</p></td>
+<tr class="row-odd"><td><p>quopri_codec</p>
+</td>
 <td><p>quopri,
 quotedprintable,
-quoted_printable</p></td>
+quoted_printable</p>
+</td>
 <td><p>Convert the operand to MIME
-quoted printable.</p></td>
+quoted printable.</p>
+</td>
 <td><p><a class="reference internal" href="quopri.xhtml#quopri.encode" title="quopri.encode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">quopri.encode()</span></code></a> with
 <code class="docutils literal notranslate"><span class="pre">quotetabs=True</span></code> /
-<a class="reference internal" href="quopri.xhtml#quopri.decode" title="quopri.decode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">quopri.decode()</span></code></a></p></td>
+<a class="reference internal" href="quopri.xhtml#quopri.decode" title="quopri.decode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">quopri.decode()</span></code></a></p>
+</td>
 </tr>
-<tr class="row-even"><td><p>uu_codec</p></td>
-<td><p>uu</p></td>
+<tr class="row-even"><td><p>uu_codec</p>
+</td>
+<td><p>uu</p>
+</td>
 <td><p>Convert the operand using
-uuencode.</p></td>
+uuencode.</p>
+</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>zlib_codec</p></td>
-<td><p>zip, zlib</p></td>
+<tr class="row-odd"><td><p>zlib_codec</p>
+</td>
+<td><p>zip, zlib</p>
+</td>
 <td><p>Compress the operand using
-gzip.</p></td>
+gzip.</p>
+</td>
 <td><p><a class="reference internal" href="zlib.xhtml#zlib.compress" title="zlib.compress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">zlib.compress()</span></code></a> /
-<a class="reference internal" href="zlib.xhtml#zlib.decompress" title="zlib.decompress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">zlib.decompress()</span></code></a></p></td>
+<a class="reference internal" href="zlib.xhtml#zlib.decompress" title="zlib.decompress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">zlib.decompress()</span></code></a></p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -1668,23 +2083,29 @@ decoding</p>
 </div>
 </section>
 <section id="text-transforms">
-<span id="id6"></span><h3>Text Transforms</h3>
+<span id="id6"></span><h3 class="sigil_not_in_toc">Text Transforms</h3>
 <p>The following codec provides a text transform: a <a class="reference internal" href="stdtypes.xhtml#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> to <a class="reference internal" href="stdtypes.xhtml#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>
 mapping. It is not supported by <a class="reference internal" href="stdtypes.xhtml#str.encode" title="str.encode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.encode()</span></code></a> (which only produces
 <a class="reference internal" href="stdtypes.xhtml#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> output).</p>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Codec</p></th>
-<th class="head"><p>Aliases</p></th>
-<th class="head"><p>Meaning</p></th>
+<tr class="row-odd"><th class="head"><p>Codec</p>
+</th>
+<th class="head"><p>Aliases</p>
+</th>
+<th class="head"><p>Meaning</p>
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>rot_13</p></td>
-<td><p>rot13</p></td>
+<tr class="row-even"><td><p>rot_13</p>
+</td>
+<td><p>rot13</p>
+</td>
 <td><p>Return the Caesar-cypher
 encryption of the
-operand.</p></td>
+operand.</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -1697,7 +2118,7 @@ operand.</p></td>
 </section>
 </section>
 <section id="module-encodings.idna">
-<span id="encodings-idna-internationalized-domain-names-in-applications"></span><h2><a class="reference internal" href="#module-encodings.idna" title="encodings.idna: Internationalized Domain Names implementation"><code class="xref py py-mod docutils literal notranslate"><span class="pre">encodings.idna</span></code></a> — Internationalized Domain Names in Applications</h2>
+<span id="encodings-idna-internationalized-domain-names-in-applications"></span><h2 class="sigil_not_in_toc"><a class="reference internal" href="#module-encodings.idna" title="encodings.idna: Internationalized Domain Names implementation"><code class="xref py py-mod docutils literal notranslate"><span class="pre">encodings.idna</span></code></a> — Internationalized Domain Names in Applications</h2>
 <p>This module implements <span class="target" id="index-8"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc3490.html"><strong>RFC 3490</strong></a><span class="link-target"> [https://datatracker.ietf.org/doc/html/rfc3490.html]</span> (Internationalized Domain Names in
 Applications) and <span class="target" id="index-9"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc3492.html"><strong>RFC 3492</strong></a><span class="link-target"> [https://datatracker.ietf.org/doc/html/rfc3492.html]</span> (Nameprep: A Stringprep Profile for
 Internationalized Domain Names (IDN)). It builds upon the <code class="docutils literal notranslate"><span class="pre">punycode</span></code> encoding
@@ -1738,24 +2159,27 @@ functions can be used directly if desired.</p>
 <span class="sig-prename descclassname"><span class="pre">encodings.idna.</span></span><span class="sig-name descname"><span class="pre">nameprep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Return the nameprepped version of <em>label</em>. The implementation currently assumes
 query strings, so <code class="docutils literal notranslate"><span class="pre">AllowUnassigned</span></code> is true.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="encodings.idna.ToASCII">
 <span class="sig-prename descclassname"><span class="pre">encodings.idna.</span></span><span class="sig-name descname"><span class="pre">ToASCII</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Convert a label to ASCII, as specified in <span class="target" id="index-13"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc3490.html"><strong>RFC 3490</strong></a><span class="link-target"> [https://datatracker.ietf.org/doc/html/rfc3490.html]</span>. <code class="docutils literal notranslate"><span class="pre">UseSTD3ASCIIRules</span></code> is
 assumed to be false.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="encodings.idna.ToUnicode">
 <span class="sig-prename descclassname"><span class="pre">encodings.idna.</span></span><span class="sig-name descname"><span class="pre">ToUnicode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Convert a label to Unicode, as specified in <span class="target" id="index-14"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc3490.html"><strong>RFC 3490</strong></a><span class="link-target"> [https://datatracker.ietf.org/doc/html/rfc3490.html]</span>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="module-encodings.mbcs">
-<span id="encodings-mbcs-windows-ansi-codepage"></span><h2><a class="reference internal" href="#module-encodings.mbcs" title="encodings.mbcs: Windows ANSI codepage"><code class="xref py py-mod docutils literal notranslate"><span class="pre">encodings.mbcs</span></code></a> — Windows ANSI codepage</h2>
+<span id="encodings-mbcs-windows-ansi-codepage"></span><h2 class="sigil_not_in_toc"><a class="reference internal" href="#module-encodings.mbcs" title="encodings.mbcs: Windows ANSI codepage"><code class="xref py py-mod docutils literal notranslate"><span class="pre">encodings.mbcs</span></code></a> — Windows ANSI codepage</h2>
 <p>This module implements the ANSI codepage (CP_ACP).</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Windows.</p>
@@ -1769,7 +2193,7 @@ to encode, and <code class="docutils literal notranslate"><span class="pre">'ign
 </div>
 </section>
 <section id="module-encodings.utf_8_sig">
-<span id="encodings-utf-8-sig-utf-8-codec-with-bom-signature"></span><h2><a class="reference internal" href="#module-encodings.utf_8_sig" title="encodings.utf_8_sig: UTF-8 codec with BOM signature"><code class="xref py py-mod docutils literal notranslate"><span class="pre">encodings.utf_8_sig</span></code></a> — UTF-8 codec with BOM signature</h2>
+<span id="encodings-utf-8-sig-utf-8-codec-with-bom-signature"></span><h2 class="sigil_not_in_toc"><a class="reference internal" href="#module-encodings.utf_8_sig" title="encodings.utf_8_sig: UTF-8 codec with BOM signature"><code class="xref py py-mod docutils literal notranslate"><span class="pre">encodings.utf_8_sig</span></code></a> — UTF-8 codec with BOM signature</h2>
 <p>This module implements a variant of the UTF-8 codec. On encoding, a UTF-8 encoded
 BOM will be prepended to the UTF-8 encoded bytes. For the stateful encoder this
 is only done once (on the first write to the byte stream). On decoding, an
@@ -1783,5 +2207,5 @@ optional UTF-8 encoded BOM at the start of the data will be skipped.</p>
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

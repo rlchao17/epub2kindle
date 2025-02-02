@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="Extending and Embedding the Python Interpreter" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/extending/index.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="This document describes how to write modules in C or C++ to extend the Python interpreter with new modules. Those modules can not only define new functions but also new object types and their metho..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="This document describes how to write modules in C or C++ to extend the Python interpreter with new modules. Those modules can not only define new functions but also new object types and their metho..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="Extending and Embedding the Python Interpreter"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/extending/index.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="This document describes how to write modules in C or C++ to extend the Python interpreter with new modules. Those modules can not only define new functions but also new object types and their metho..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="This document describes how to write modules in C or C++ to extend the Python interpreter with new modules. Those modules can not only define new functions but also new object types and their metho..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>Extending and Embedding the Python Interpreter</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/extending/index.html" />
+    <link rel="canonical" href="https://docs.python.org/3/extending/index.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -59,7 +60,7 @@ Python) that give the language its wide application range.</p>
 <p>For a detailed description of the whole Python/C API, see the separate
 <a class="reference internal" href="../c-api/index.xhtml#c-api-index"><span class="std std-ref">Python/C API Reference Manual</span></a>.</p>
 <section id="recommended-third-party-tools">
-<h2>Recommended third party tools</h2>
+<h2 class="sigil_not_in_toc">Recommended third party tools</h2>
 <p>This guide only covers the basic tools for creating extensions provided
 as part of this version of CPython. Third party tools like
 <a class="reference external" href="https://cython.org/">Cython</a><span class="link-target"> [https://cython.org/]</span>, <a class="reference external" href="https://cffi.readthedocs.io">cffi</a><span class="link-target"> [https://cffi.readthedocs.io]</span>,
@@ -69,7 +70,8 @@ extensions for Python.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt><a class="reference external" href="https://packaging.python.org/guides/packaging-binary-extensions/">Python Packaging User Guide: Binary Extensions</a><span class="link-target"> [https://packaging.python.org/guides/packaging-binary-extensions/]</span></dt><dd><p>The Python Packaging User Guide not only covers several available
+<dt><a class="reference external" href="https://packaging.python.org/guides/packaging-binary-extensions/">Python Packaging User Guide: Binary Extensions</a><span class="link-target"> [https://packaging.python.org/guides/packaging-binary-extensions/]</span></dt>
+<dd><p>The Python Packaging User Guide not only covers several available
 tools that simplify the creation of binary extensions, but also
 discusses the various reasons why creating an extension module may be
 desirable in the first place.</p>
@@ -78,7 +80,7 @@ desirable in the first place.</p>
 </div>
 </section>
 <section id="creating-extensions-without-third-party-tools">
-<h2>Creating extensions without third party tools</h2>
+<h2 class="sigil_not_in_toc">Creating extensions without third party tools</h2>
 <p>This section of the guide covers creating C and C++ extensions without
 assistance from third party tools. It is intended primarily for creators
 of those tools, rather than being a recommended way to create your own
@@ -132,7 +134,7 @@ C extensions.</p>
 </div>
 </section>
 <section id="embedding-the-cpython-runtime-in-a-larger-application">
-<h2>Embedding the CPython runtime in a larger application</h2>
+<h2 class="sigil_not_in_toc">Embedding the CPython runtime in a larger application</h2>
 <p>Sometimes, rather than creating an extension that runs inside the Python
 interpreter as the main application, it is desirable to instead embed
 the CPython runtime inside a larger application. This section covers
@@ -159,5 +161,5 @@ some of the details involved in doing that successfully.</p>
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

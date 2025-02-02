@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="enum — Support for enumerations" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/library/enum.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="Source code: Lib/enum.py[https://github.com/python/cpython/tree/3.13/Lib/enum.py] Important: This page contains the API reference information. For tutorial information and discussion of more advanc..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="Source code: Lib/enum.py[https://github.com/python/cpython/tree/3.13/Lib/enum.py] Important: This page contains the API reference information. For tutorial information and discussion of more advanc..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="enum — Support for enumerations"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/library/enum.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="Source code: Lib/enum.py[https://github.com/python/cpython/tree/3.13/Lib/enum.py] Important: This page contains the API reference information. For tutorial information and discussion of more advanc..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="Source code: Lib/enum.py[https://github.com/python/cpython/tree/3.13/Lib/enum.py] Important: This page contains the API reference information. For tutorial information and discussion of more advanc..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>enum — Support for enumerations</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/library/enum.html" />
+    <link rel="canonical" href="https://docs.python.org/3/library/enum.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -58,7 +59,7 @@ information and discussion of more advanced topics, see</p>
 <li><p><a class="reference internal" href="../howto/enum.xhtml#enum-cookbook"><span class="std std-ref">Enum Cookbook</span></a></p></li>
 </ul>
 </aside>
-<hr class="docutils" />
+<hr class="docutils"/>
 <p>An enumeration:</p>
 <ul class="simple">
 <li><p>is a set of symbolic names (members) bound to unique values</p></li>
@@ -78,8 +79,9 @@ using function-call syntax:</p>
 <span class="gp">... </span>    <span class="n">BLUE</span> <span class="o">=</span> <span class="mi">3</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># functional syntax</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span> <span class="o">=</span> <span class="n">Enum</span><span class="p">(</span><span class="s1">&#39;Color&#39;</span><span class="p">,</span> <span class="p">[(</span><span class="s1">&#39;RED&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;GREEN&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;BLUE&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)])</span>
-</pre></div>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span> <span class="o">=</span> <span class="n">Enum</span><span class="p">(</span><span class="s1">'Color'</span><span class="p">,</span> <span class="p">[(</span><span class="s1">'RED'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">'GREEN'</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">'BLUE'</span><span class="p">,</span> <span class="mi">3</span><span class="p">)])</span>
+</pre>
+</div>
 </div>
 <p>Even though we can use <a class="reference internal" href="../reference/compound_stmts.xhtml#class"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">class</span></code></a> syntax to create Enums, Enums
 are not normal Python classes.  See
@@ -96,100 +98,119 @@ are not normal Python classes.  See
 <code class="docutils literal notranslate"><span class="pre">3</span></code>, etc.)</p></li>
 </ul>
 </div>
-<hr class="docutils" />
+<hr class="docutils"/>
 <section id="module-contents">
-<h2>Module Contents</h2>
+<h2 class="sigil_not_in_toc">Module Contents</h2>
 <blockquote>
 <div><p><a class="reference internal" href="#enum.EnumType" title="enum.EnumType"><code class="xref py py-class docutils literal notranslate"><span class="pre">EnumType</span></code></a></p>
 <blockquote>
 <div><p>The <code class="docutils literal notranslate"><span class="pre">type</span></code> for Enum and its subclasses.</p>
-</div></blockquote>
+</div>
+</blockquote>
 <p><a class="reference internal" href="#enum.Enum" title="enum.Enum"><code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></a></p>
 <blockquote>
 <div><p>Base class for creating enumerated constants.</p>
-</div></blockquote>
+</div>
+</blockquote>
 <p><a class="reference internal" href="#enum.IntEnum" title="enum.IntEnum"><code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></a></p>
 <blockquote>
 <div><p>Base class for creating enumerated constants that are also
 subclasses of <a class="reference internal" href="functions.xhtml#int" title="int"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>. (<a class="reference internal" href="#notes">Notes</a>)</p>
-</div></blockquote>
+</div>
+</blockquote>
 <p><a class="reference internal" href="#enum.StrEnum" title="enum.StrEnum"><code class="xref py py-class docutils literal notranslate"><span class="pre">StrEnum</span></code></a></p>
 <blockquote>
 <div><p>Base class for creating enumerated constants that are also
 subclasses of <a class="reference internal" href="stdtypes.xhtml#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>. (<a class="reference internal" href="#notes">Notes</a>)</p>
-</div></blockquote>
+</div>
+</blockquote>
 <p><a class="reference internal" href="#enum.Flag" title="enum.Flag"><code class="xref py py-class docutils literal notranslate"><span class="pre">Flag</span></code></a></p>
 <blockquote>
 <div><p>Base class for creating enumerated constants that can be combined using
 the bitwise operations without losing their <a class="reference internal" href="#enum.Flag" title="enum.Flag"><code class="xref py py-class docutils literal notranslate"><span class="pre">Flag</span></code></a> membership.</p>
-</div></blockquote>
+</div>
+</blockquote>
 <p><a class="reference internal" href="#enum.IntFlag" title="enum.IntFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">IntFlag</span></code></a></p>
 <blockquote>
 <div><p>Base class for creating enumerated constants that can be combined using
 the bitwise operators without losing their <a class="reference internal" href="#enum.IntFlag" title="enum.IntFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">IntFlag</span></code></a> membership.
 <a class="reference internal" href="#enum.IntFlag" title="enum.IntFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">IntFlag</span></code></a> members are also subclasses of <a class="reference internal" href="functions.xhtml#int" title="int"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>. (<a class="reference internal" href="#notes">Notes</a>)</p>
-</div></blockquote>
+</div>
+</blockquote>
 <p><a class="reference internal" href="#enum.ReprEnum" title="enum.ReprEnum"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReprEnum</span></code></a></p>
 <blockquote>
 <div><p>Used by <a class="reference internal" href="#enum.IntEnum" title="enum.IntEnum"><code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></a>, <a class="reference internal" href="#enum.StrEnum" title="enum.StrEnum"><code class="xref py py-class docutils literal notranslate"><span class="pre">StrEnum</span></code></a>, and <a class="reference internal" href="#enum.IntFlag" title="enum.IntFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">IntFlag</span></code></a>
 to keep the <a class="reference internal" href="stdtypes.xhtml#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str()</span></code></a> of the mixed-in type.</p>
-</div></blockquote>
+</div>
+</blockquote>
 <p><a class="reference internal" href="#enum.EnumCheck" title="enum.EnumCheck"><code class="xref py py-class docutils literal notranslate"><span class="pre">EnumCheck</span></code></a></p>
 <blockquote>
 <div><p>An enumeration with the values <code class="docutils literal notranslate"><span class="pre">CONTINUOUS</span></code>, <code class="docutils literal notranslate"><span class="pre">NAMED_FLAGS</span></code>, and
 <code class="docutils literal notranslate"><span class="pre">UNIQUE</span></code>, for use with <a class="reference internal" href="#enum.verify" title="enum.verify"><code class="xref py py-func docutils literal notranslate"><span class="pre">verify()</span></code></a> to ensure various constraints
 are met by a given enumeration.</p>
-</div></blockquote>
+</div>
+</blockquote>
 <p><a class="reference internal" href="#enum.FlagBoundary" title="enum.FlagBoundary"><code class="xref py py-class docutils literal notranslate"><span class="pre">FlagBoundary</span></code></a></p>
 <blockquote>
 <div><p>An enumeration with the values <code class="docutils literal notranslate"><span class="pre">STRICT</span></code>, <code class="docutils literal notranslate"><span class="pre">CONFORM</span></code>, <code class="docutils literal notranslate"><span class="pre">EJECT</span></code>, and
 <code class="docutils literal notranslate"><span class="pre">KEEP</span></code> which allows for more fine-grained control over how invalid values
 are dealt with in an enumeration.</p>
-</div></blockquote>
+</div>
+</blockquote>
 <p><a class="reference internal" href="#enum.EnumDict" title="enum.EnumDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">EnumDict</span></code></a></p>
 <blockquote>
 <div><p>A subclass of <a class="reference internal" href="stdtypes.xhtml#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> for use when subclassing <a class="reference internal" href="#enum.EnumType" title="enum.EnumType"><code class="xref py py-class docutils literal notranslate"><span class="pre">EnumType</span></code></a>.</p>
-</div></blockquote>
+</div>
+</blockquote>
 <p><a class="reference internal" href="#enum.auto" title="enum.auto"><code class="xref py py-class docutils literal notranslate"><span class="pre">auto</span></code></a></p>
 <blockquote>
 <div><p>Instances are replaced with an appropriate value for Enum members.
 <a class="reference internal" href="#enum.StrEnum" title="enum.StrEnum"><code class="xref py py-class docutils literal notranslate"><span class="pre">StrEnum</span></code></a> defaults to the lower-cased version of the member name,
 while other Enums default to 1 and increase from there.</p>
-</div></blockquote>
+</div>
+</blockquote>
 <p><a class="reference internal" href="#enum.property" title="enum.property"><code class="xref py py-func docutils literal notranslate"><span class="pre">property()</span></code></a></p>
 <blockquote>
 <div><p>Allows <a class="reference internal" href="#enum.Enum" title="enum.Enum"><code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></a> members to have attributes without conflicting with
 member names.  The <code class="docutils literal notranslate"><span class="pre">value</span></code> and <code class="docutils literal notranslate"><span class="pre">name</span></code> attributes are implemented this
 way.</p>
-</div></blockquote>
+</div>
+</blockquote>
 <p><a class="reference internal" href="#enum.unique" title="enum.unique"><code class="xref py py-func docutils literal notranslate"><span class="pre">unique()</span></code></a></p>
 <blockquote>
 <div><p>Enum class decorator that ensures only one name is bound to any one value.</p>
-</div></blockquote>
+</div>
+</blockquote>
 <p><a class="reference internal" href="#enum.verify" title="enum.verify"><code class="xref py py-func docutils literal notranslate"><span class="pre">verify()</span></code></a></p>
 <blockquote>
 <div><p>Enum class decorator that checks user-selectable constraints on an
 enumeration.</p>
-</div></blockquote>
+</div>
+</blockquote>
 <p><a class="reference internal" href="#enum.member" title="enum.member"><code class="xref py py-func docutils literal notranslate"><span class="pre">member()</span></code></a></p>
 <blockquote>
 <div><p>Make <code class="docutils literal notranslate"><span class="pre">obj</span></code> a member.  Can be used as a decorator.</p>
-</div></blockquote>
+</div>
+</blockquote>
 <p><a class="reference internal" href="#enum.nonmember" title="enum.nonmember"><code class="xref py py-func docutils literal notranslate"><span class="pre">nonmember()</span></code></a></p>
 <blockquote>
 <div><p>Do not make <code class="docutils literal notranslate"><span class="pre">obj</span></code> a member.  Can be used as a decorator.</p>
-</div></blockquote>
+</div>
+</blockquote>
 <p><a class="reference internal" href="#enum.global_enum" title="enum.global_enum"><code class="xref py py-func docutils literal notranslate"><span class="pre">global_enum()</span></code></a></p>
 <blockquote>
 <div><p>Modify the <a class="reference internal" href="stdtypes.xhtml#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str()</span></code></a> and <a class="reference internal" href="functions.xhtml#repr" title="repr"><code class="xref py py-func docutils literal notranslate"><span class="pre">repr()</span></code></a> of an enum
 to show its members as belonging to the module instead of its class,
 and export the enum members to the global namespace.</p>
-</div></blockquote>
+</div>
+</blockquote>
 <p><a class="reference internal" href="#enum.show_flag_values" title="enum.show_flag_values"><code class="xref py py-func docutils literal notranslate"><span class="pre">show_flag_values()</span></code></a></p>
 <blockquote>
 <div><p>Return a list of all power-of-two integers contained in a flag.</p>
-</div></blockquote>
-</div></blockquote>
+</div>
+</blockquote>
+</div>
+</blockquote>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.6: </span><code class="docutils literal notranslate"><span class="pre">Flag</span></code>, <code class="docutils literal notranslate"><span class="pre">IntFlag</span></code>, <code class="docutils literal notranslate"><span class="pre">auto</span></code></p>
 </div>
@@ -200,9 +221,9 @@ and export the enum members to the global namespace.</p>
 <p><span class="versionmodified added">Added in version 3.13: </span><code class="docutils literal notranslate"><span class="pre">EnumDict</span></code></p>
 </div>
 </section>
-<hr class="docutils" />
+<hr class="docutils"/>
 <section id="data-types">
-<h2>Data Types</h2>
+<h2 class="sigil_not_in_toc">Data Types</h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="enum.EnumType">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enum.</span></span><span class="sig-name descname"><span class="pre">EnumType</span></span></dt>
@@ -228,7 +249,8 @@ duplicates, providing iteration over the enum class, etc.</p>
 <dd class="field-even"><p>The value to lookup.</p>
 </dd>
 </dl>
-</div></blockquote>
+</div>
+</blockquote>
 </li>
 <li><p>to use the <code class="docutils literal notranslate"><span class="pre">cls</span></code> enum to create a new enum (only if the existing enum
 does not have any members):</p>
@@ -259,10 +281,12 @@ does not have any members):</p>
 <dd class="field-even"><p>How to handle out-of-range values from bit operations (<a class="reference internal" href="#enum.Flag" title="enum.Flag"><code class="xref py py-class docutils literal notranslate"><span class="pre">Flag</span></code></a> only).</p>
 </dd>
 </dl>
-</div></blockquote>
+</div>
+</blockquote>
 </li>
 </ul>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="enum.EnumType.__contains__">
@@ -273,9 +297,11 @@ does not have any members):</p>
 <span class="go">True</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span><span class="o">.</span><span class="n">value</span> <span class="ow">in</span> <span class="n">Color</span>
 <span class="go">True</span>
-</pre></div>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.12: </span>Before Python 3.12, a <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> is raised if a
@@ -287,20 +313,24 @@ non-Enum-member is used in a containment check.</p>
 <dd><p>Returns <code class="docutils literal notranslate"><span class="pre">['__class__',</span> <span class="pre">'__doc__',</span> <span class="pre">'__members__',</span> <span class="pre">'__module__']</span></code> and the
 names of the members in <em>cls</em>:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">dir</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
-<span class="go">[&#39;BLUE&#39;, &#39;GREEN&#39;, &#39;RED&#39;, &#39;__class__&#39;, &#39;__contains__&#39;, &#39;__doc__&#39;, &#39;__getitem__&#39;, &#39;__init_subclass__&#39;, &#39;__iter__&#39;, &#39;__len__&#39;, &#39;__members__&#39;, &#39;__module__&#39;, &#39;__name__&#39;, &#39;__qualname__&#39;]</span>
-</pre></div>
+<span class="go">['BLUE', 'GREEN', 'RED', '__class__', '__contains__', '__doc__', '__getitem__', '__init_subclass__', '__iter__', '__len__', '__members__', '__module__', '__name__', '__qualname__']</span>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="enum.EnumType.__getitem__">
 <span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Returns the Enum member in <em>cls</em> matching <em>name</em>, or raises a <a class="reference internal" href="exceptions.xhtml#KeyError" title="KeyError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyError</span></code></a>:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">[</span><span class="s1">&#39;BLUE&#39;</span><span class="p">]</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">[</span><span class="s1">'BLUE'</span><span class="p">]</span>
 <span class="go">&lt;Color.BLUE: 3&gt;</span>
-</pre></div>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="enum.EnumType.__iter__">
@@ -308,9 +338,11 @@ names of the members in <em>cls</em>:</p>
 <dd><p>Returns each member in <em>cls</em> in definition order:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
 <span class="go">[&lt;Color.RED: 1&gt;, &lt;Color.GREEN: 2&gt;, &lt;Color.BLUE: 3&gt;]</span>
-</pre></div>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="enum.EnumType.__len__">
@@ -318,15 +350,18 @@ names of the members in <em>cls</em>:</p>
 <dd><p>Returns the number of member in <em>cls</em>:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
 <span class="go">3</span>
-</pre></div>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="enum.EnumType.__members__">
 <span class="sig-name descname"><span class="pre">__members__</span></span></dt>
 <dd><p>Returns a mapping of every enum name to its member, including aliases</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="enum.EnumType.__reversed__">
@@ -334,28 +369,33 @@ names of the members in <em>cls</em>:</p>
 <dd><p>Returns each member in <em>cls</em> in reverse definition order:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="n">Color</span><span class="p">))</span>
 <span class="go">[&lt;Color.BLUE: 3&gt;, &lt;Color.GREEN: 2&gt;, &lt;Color.RED: 1&gt;]</span>
-</pre></div>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="enum.EnumType._add_alias_">
 <span class="sig-name descname"><span class="pre">_add_alias_</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Adds a new name as an alias to an existing member.  Raises a
 <a class="reference internal" href="exceptions.xhtml#NameError" title="NameError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">NameError</span></code></a> if the name is already assigned to a different member.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="enum.EnumType._add_value_alias_">
 <span class="sig-name descname"><span class="pre">_add_value_alias_</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Adds a new value as an alias to an existing member.  Raises a
 <a class="reference internal" href="exceptions.xhtml#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> if the value is already linked with a different member.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.11: </span>Before 3.11 <code class="docutils literal notranslate"><span class="pre">EnumType</span></code> was called <code class="docutils literal notranslate"><span class="pre">EnumMeta</span></code>, which is still available as an alias.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="enum.Enum">
@@ -366,10 +406,12 @@ names of the members in <em>cls</em>:</p>
 <span class="sig-name descname"><span class="pre">name</span></span></dt>
 <dd><p>The name used to define the <code class="docutils literal notranslate"><span class="pre">Enum</span></code> member:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="o">.</span><span class="n">BLUE</span><span class="o">.</span><span class="n">name</span>
-<span class="go">&#39;BLUE&#39;</span>
-</pre></div>
+<span class="go">'BLUE'</span>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="enum.Enum.value">
@@ -377,7 +419,8 @@ names of the members in <em>cls</em>:</p>
 <dd><p>The value given to the <code class="docutils literal notranslate"><span class="pre">Enum</span></code> member:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span><span class="o">.</span><span class="n">value</span>
 <span class="go">1</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Value of the member, can be set in <a class="reference internal" href="#enum.Enum.__new__" title="enum.Enum.__new__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__new__()</span></code></a>.</p>
 <div class="admonition note">
@@ -392,26 +435,30 @@ a mutable <a class="reference internal" href="dataclasses.xhtml#dataclasses.data
 quadratic performance impact during creation relative to the
 total number of mutable/unhashable values in the enum.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="enum.Enum._name_">
 <span class="sig-name descname"><span class="pre">_name_</span></span></dt>
 <dd><p>Name of the member.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="enum.Enum._value_">
 <span class="sig-name descname"><span class="pre">_value_</span></span></dt>
 <dd><p>Value of the member, can be set in <a class="reference internal" href="#enum.Enum.__new__" title="enum.Enum.__new__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__new__()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="enum.Enum._order_">
 <span class="sig-name descname"><span class="pre">_order_</span></span></dt>
 <dd><p>No longer used, kept for backward compatibility.
 (class attribute, removed during class creation).</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="enum.Enum._ignore_">
@@ -421,7 +468,8 @@ enumeration once creation is complete.</p>
 <p><code class="docutils literal notranslate"><span class="pre">_ignore_</span></code> is a list of names that will not become members, and whose
 names will also be removed from the completed enumeration.  See
 <a class="reference internal" href="../howto/enum.xhtml#enum-time-period"><span class="std std-ref">TimePeriod</span></a> for an example.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="enum.Enum.__dir__">
@@ -439,13 +487,15 @@ any public methods defined on <em>self.__class__</em>:</p>
 <span class="gp">... </span>    <span class="n">SUNDAY</span> <span class="o">=</span> <span class="mi">7</span>
 <span class="gp">... </span>    <span class="nd">@classmethod</span>
 <span class="gp">... </span>    <span class="k">def</span><span class="w"> </span><span class="nf">today</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
-<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;today is </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">cls</span><span class="p">(</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span><span class="o">.</span><span class="n">isoweekday</span><span class="p">())</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s1">'today is </span><span class="si">%s</span><span class="s1">'</span> <span class="o">%</span> <span class="bp">cls</span><span class="p">(</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span><span class="o">.</span><span class="n">isoweekday</span><span class="p">())</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 <span class="gp">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">dir</span><span class="p">(</span><span class="n">Weekday</span><span class="o">.</span><span class="n">SATURDAY</span><span class="p">)</span>
-<span class="go">[&#39;__class__&#39;, &#39;__doc__&#39;, &#39;__eq__&#39;, &#39;__hash__&#39;, &#39;__module__&#39;, &#39;name&#39;, &#39;today&#39;, &#39;value&#39;]</span>
-</pre></div>
+<span class="go">['__class__', '__doc__', '__eq__', '__hash__', '__module__', 'name', 'today', 'value']</span>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="enum.Enum._generate_next_value_">
@@ -465,7 +515,8 @@ any public methods defined on <em>self.__class__</em>:</p>
 <dd class="field-even"><p>A list of the previous values.</p>
 </dd>
 </dl>
-</div></blockquote>
+</div>
+</blockquote>
 <p>A <em>staticmethod</em> that is used to determine the next value returned by
 <a class="reference internal" href="#enum.auto" title="enum.auto"><code class="xref py py-class docutils literal notranslate"><span class="pre">auto</span></code></a>:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">auto</span>
@@ -478,9 +529,11 @@ any public methods defined on <em>self.__class__</em>:</p>
 <span class="gp">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">PowersOfThree</span><span class="o">.</span><span class="n">SECOND</span><span class="o">.</span><span class="n">value</span>
 <span class="go">9</span>
-</pre></div>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="enum.Enum.__init__">
@@ -489,18 +542,21 @@ any public methods defined on <em>self.__class__</em>:</p>
 assignment, those values become separate arguments to <code class="docutils literal notranslate"><span class="pre">__init__</span></code>; e.g.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Enum</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">class</span><span class="w"> </span><span class="nc">Weekday</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
-<span class="gp">... </span>    <span class="n">MONDAY</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Mon&#39;</span>
-</pre></div>
+<span class="gp">... </span>    <span class="n">MONDAY</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">'Mon'</span>
+</pre>
+</div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">Weekday.__init__()</span></code> would be called as <code class="docutils literal notranslate"><span class="pre">Weekday.__init__(self,</span> <span class="pre">1,</span> <span class="pre">'Mon')</span></code></p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="enum.Enum.__init_subclass__">
 <span class="sig-name descname"><span class="pre">__init_subclass__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>A <em>classmethod</em> that is used to further configure subsequent subclasses.
 By default, does nothing.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="enum.Enum._missing_">
@@ -520,12 +576,14 @@ does nothing, but can be overridden to implement custom search behavior:</p>
 <span class="gp">... </span>        <span class="k">return</span> <span class="kc">None</span>
 <span class="gp">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Build</span><span class="o">.</span><span class="n">DEBUG</span><span class="o">.</span><span class="n">value</span>
-<span class="go">&#39;debug&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Build</span><span class="p">(</span><span class="s1">&#39;deBUG&#39;</span><span class="p">)</span>
-<span class="go">&lt;Build.DEBUG: &#39;debug&#39;&gt;</span>
-</pre></div>
+<span class="go">'debug'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Build</span><span class="p">(</span><span class="s1">'deBUG'</span><span class="p">)</span>
+<span class="go">&lt;Build.DEBUG: 'debug'&gt;</span>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="enum.Enum.__new__">
@@ -535,8 +593,9 @@ definition or in a mixin class (such as <code class="docutils literal notranslat
 in the member assignment will be passed; e.g.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Enum</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">class</span><span class="w"> </span><span class="nc">MyIntEnum</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
-<span class="gp">... </span>    <span class="n">TWENTYSIX</span> <span class="o">=</span> <span class="s1">&#39;1a&#39;</span><span class="p">,</span> <span class="mi">16</span>
-</pre></div>
+<span class="gp">... </span>    <span class="n">TWENTYSIX</span> <span class="o">=</span> <span class="s1">'1a'</span><span class="p">,</span> <span class="mi">16</span>
+</pre>
+</div>
 </div>
 <p>results in the call <code class="docutils literal notranslate"><span class="pre">int('1a',</span> <span class="pre">16)</span></code> and a value of <code class="docutils literal notranslate"><span class="pre">26</span></code> for the member.</p>
 <div class="admonition note">
@@ -544,7 +603,8 @@ in the member assignment will be passed; e.g.</p>
 <p>When writing a custom <code class="docutils literal notranslate"><span class="pre">__new__</span></code>, do not use <code class="docutils literal notranslate"><span class="pre">super().__new__</span></code> –
 call the appropriate <code class="docutils literal notranslate"><span class="pre">__new__</span></code> instead.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="enum.Enum.__repr__">
@@ -557,13 +617,15 @@ call the appropriate <code class="docutils literal notranslate"><span class="pre
 <span class="gp">... </span>    <span class="n">SOMETHING_ELSE</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
 <span class="gp">... </span>    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="gp">... </span>        <span class="n">cls_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span>
-<span class="gp">... </span>        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">cls_name</span><span class="si">}</span><span class="s1">.</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">cls_name</span><span class="si">}</span><span class="s1">.</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">'</span>
 <span class="gp">...</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">OtherStyle</span><span class="o">.</span><span class="n">ALTERNATE</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">OtherStyle</span><span class="o">.</span><span class="n">ALTERNATE</span><span class="p">),</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">OtherStyle</span><span class="o">.</span><span class="n">ALTERNATE</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="go">(OtherStyle.ALTERNATE, &#39;OtherStyle.ALTERNATE&#39;, &#39;OtherStyle.ALTERNATE&#39;)</span>
-</pre></div>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">OtherStyle</span><span class="o">.</span><span class="n">ALTERNATE</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">OtherStyle</span><span class="o">.</span><span class="n">ALTERNATE</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">OtherStyle</span><span class="o">.</span><span class="n">ALTERNATE</span><span class="si">}</span><span class="s2">"</span>
+<span class="go">(OtherStyle.ALTERNATE, 'OtherStyle.ALTERNATE', 'OtherStyle.ALTERNATE')</span>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="enum.Enum.__str__">
@@ -575,13 +637,15 @@ call the appropriate <code class="docutils literal notranslate"><span class="pre
 <span class="gp">... </span>    <span class="n">OTHER</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
 <span class="gp">... </span>    <span class="n">SOMETHING_ELSE</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
 <span class="gp">... </span>    <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="gp">... </span>        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">'</span>
 <span class="gp">...</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">OtherStyle</span><span class="o">.</span><span class="n">ALTERNATE</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">OtherStyle</span><span class="o">.</span><span class="n">ALTERNATE</span><span class="p">),</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">OtherStyle</span><span class="o">.</span><span class="n">ALTERNATE</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="go">(&lt;OtherStyle.ALTERNATE: 1&gt;, &#39;ALTERNATE&#39;, &#39;ALTERNATE&#39;)</span>
-</pre></div>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">OtherStyle</span><span class="o">.</span><span class="n">ALTERNATE</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">OtherStyle</span><span class="o">.</span><span class="n">ALTERNATE</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">OtherStyle</span><span class="o">.</span><span class="n">ALTERNATE</span><span class="si">}</span><span class="s2">"</span>
+<span class="go">(&lt;OtherStyle.ALTERNATE: 1&gt;, 'ALTERNATE', 'ALTERNATE')</span>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="enum.Enum.__format__">
@@ -593,13 +657,15 @@ returns <a class="reference internal" href="#enum.Enum.__str__" title="enum.Enum
 <span class="gp">... </span>    <span class="n">OTHER</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
 <span class="gp">... </span>    <span class="n">SOMETHING_ELSE</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
 <span class="gp">... </span>    <span class="k">def</span><span class="w"> </span><span class="fm">__format__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spec</span><span class="p">):</span>
-<span class="gp">... </span>        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">'</span>
 <span class="gp">...</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">OtherStyle</span><span class="o">.</span><span class="n">ALTERNATE</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">OtherStyle</span><span class="o">.</span><span class="n">ALTERNATE</span><span class="p">),</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">OtherStyle</span><span class="o">.</span><span class="n">ALTERNATE</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="go">(&lt;OtherStyle.ALTERNATE: 1&gt;, &#39;OtherStyle.ALTERNATE&#39;, &#39;ALTERNATE&#39;)</span>
-</pre></div>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">OtherStyle</span><span class="o">.</span><span class="n">ALTERNATE</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">OtherStyle</span><span class="o">.</span><span class="n">ALTERNATE</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">OtherStyle</span><span class="o">.</span><span class="n">ALTERNATE</span><span class="si">}</span><span class="s2">"</span>
+<span class="go">(&lt;OtherStyle.ALTERNATE: 1&gt;, 'OtherStyle.ALTERNATE', 'ALTERNATE')</span>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -609,7 +675,8 @@ starting with <code class="docutils literal notranslate"><span class="pre">1</sp
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.12: </span>Added <a class="reference internal" href="../howto/enum.xhtml#enum-dataclass-support"><span class="std std-ref">Dataclass support</span></a></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="enum.IntEnum">
@@ -631,7 +698,8 @@ with an <em>IntEnum</em> member, the resulting value loses its enumeration statu
 <span class="go">8</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Number</span><span class="o">.</span><span class="n">THREE</span> <span class="o">==</span> <span class="mi">3</span>
 <span class="go">True</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -643,7 +711,8 @@ value, starting with <code class="docutils literal notranslate"><span class="pre
 better support the <em>replacement of existing constants</em> use-case.
 <a class="reference internal" href="../reference/datamodel.xhtml#object.__format__" title="object.__format__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__format__()</span></code></a> was already <code class="xref py py-meth docutils literal notranslate"><span class="pre">int.__format__()</span></code> for that same reason.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="enum.StrEnum">
@@ -672,7 +741,8 @@ name as the value.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.11.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="enum.Flag">
@@ -700,9 +770,11 @@ the results of those operations are (aliases of) members of the enumeration.</p>
 <span class="go">True</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">white</span> <span class="ow">in</span> <span class="n">purple</span>
 <span class="go">False</span>
-</pre></div>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py">
@@ -712,12 +784,14 @@ the results of those operations are (aliases of) members of the enumeration.</p>
 <span class="go">[&lt;Color.RED: 1&gt;]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">purple</span><span class="p">)</span>
 <span class="go">[&lt;Color.RED: 1&gt;, &lt;Color.BLUE: 4&gt;]</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.11.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py">
@@ -727,12 +801,14 @@ the results of those operations are (aliases of) members of the enumeration.</p>
 <span class="go">1</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">white</span><span class="p">)</span>
 <span class="go">3</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.11.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py">
@@ -745,9 +821,11 @@ the results of those operations are (aliases of) members of the enumeration.</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">black</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">bool</span><span class="p">(</span><span class="n">black</span><span class="p">)</span>
 <span class="go">False</span>
-</pre></div>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="enum.Flag.__or__">
@@ -755,9 +833,11 @@ the results of those operations are (aliases of) members of the enumeration.</p>
 <dd><p>Returns current flag binary or’ed with other:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span> <span class="o">|</span> <span class="n">Color</span><span class="o">.</span><span class="n">GREEN</span>
 <span class="go">&lt;Color.RED|GREEN: 3&gt;</span>
-</pre></div>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="enum.Flag.__and__">
@@ -767,9 +847,11 @@ the results of those operations are (aliases of) members of the enumeration.</p>
 <span class="go">&lt;Color.RED|BLUE: 5&gt;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">purple</span> <span class="o">&amp;</span> <span class="n">Color</span><span class="o">.</span><span class="n">GREEN</span>
 <span class="go">&lt;Color: 0&gt;</span>
-</pre></div>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="enum.Flag.__xor__">
@@ -779,9 +861,11 @@ the results of those operations are (aliases of) members of the enumeration.</p>
 <span class="go">&lt;Color.GREEN: 2&gt;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">purple</span> <span class="o">^</span> <span class="n">Color</span><span class="o">.</span><span class="n">GREEN</span>
 <span class="go">&lt;Color.RED|GREEN|BLUE: 7&gt;</span>
-</pre></div>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py">
@@ -793,16 +877,19 @@ the results of those operations are (aliases of) members of the enumeration.</p>
 <span class="go">&lt;Color.GREEN: 2&gt;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="o">~</span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span>
 <span class="go">&lt;Color.GREEN|BLUE: 6&gt;</span>
-</pre></div>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="enum.Flag._numeric_repr_">
 <span class="sig-name descname"><span class="pre">_numeric_repr_</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Function used to format any remaining unnamed numeric values.  Default is
 the value’s repr; common choices are <a class="reference internal" href="functions.xhtml#hex" title="hex"><code class="xref py py-func docutils literal notranslate"><span class="pre">hex()</span></code></a> and <a class="reference internal" href="functions.xhtml#oct" title="oct"><code class="xref py py-func docutils literal notranslate"><span class="pre">oct()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -814,10 +901,12 @@ of two, starting with <code class="docutils literal notranslate"><span class="pr
 is now::</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> 
 <span class="go">&lt;Color: 0&gt;</span>
-</pre></div>
+</pre>
 </div>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="enum.IntFlag">
@@ -834,13 +923,15 @@ used anywhere that an integer can be used.</p>
 <span class="go">&lt;Color: 0&gt;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span> <span class="o">|</span> <span class="mi">2</span>
 <span class="go">&lt;Color.RED|GREEN: 3&gt;</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>If any integer operation is performed with an <em>IntFlag</em> member, the result is
 not an <em>IntFlag</em>:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span> <span class="o">+</span> <span class="mi">2</span>
 <span class="go">3</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>If a <a class="reference internal" href="#enum.Flag" title="enum.Flag"><code class="xref py py-class docutils literal notranslate"><span class="pre">Flag</span></code></a> operation is performed with an <em>IntFlag</em> member and:</p>
 <ul class="simple">
@@ -850,7 +941,8 @@ not an <em>IntFlag</em>:</p>
 <p>The <a class="reference internal" href="functions.xhtml#repr" title="repr"><code class="xref py py-func docutils literal notranslate"><span class="pre">repr()</span></code></a> of unnamed zero-valued flags has changed.  It is now:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="go">&lt;Color: 0&gt;</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -865,7 +957,8 @@ already <code class="xref py py-meth docutils literal notranslate"><span class="
 union of all flags not in the given flag, rather than a negative value.
 This matches the existing <a class="reference internal" href="#enum.Flag" title="enum.Flag"><code class="xref py py-class docutils literal notranslate"><span class="pre">Flag</span></code></a> behavior.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="enum.ReprEnum">
@@ -882,7 +975,8 @@ of the mixed-in data type instead of using the
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.11.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="enum.EnumCheck">
@@ -902,10 +996,12 @@ various constraints; failed constraints result in a <a class="reference internal
 <span class="gp">... </span>    <span class="n">CRIMSON</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="gt">Traceback (most recent call last):</span>
 <span class="c">...</span>
-<span class="gr">ValueError</span>: <span class="n">aliases found in &lt;enum &#39;Color&#39;&gt;: CRIMSON -&gt; RED</span>
-</pre></div>
+<span class="gr">ValueError</span>: <span class="n">aliases found in &lt;enum 'Color'&gt;: CRIMSON -&gt; RED</span>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="enum.EnumCheck.CONTINUOUS">
@@ -920,10 +1016,12 @@ and the highest-valued member:</p>
 <span class="gp">... </span>    <span class="n">BLUE</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="gt">Traceback (most recent call last):</span>
 <span class="c">...</span>
-<span class="gr">ValueError</span>: <span class="n">invalid enum &#39;Color&#39;: missing values 3, 4</span>
-</pre></div>
+<span class="gr">ValueError</span>: <span class="n">invalid enum 'Color': missing values 3, 4</span>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="enum.EnumCheck.NAMED_FLAGS">
@@ -940,10 +1038,12 @@ values are specified instead of being generated by <a class="reference internal"
 <span class="gp">... </span>    <span class="n">NEON</span> <span class="o">=</span> <span class="mi">31</span>
 <span class="gt">Traceback (most recent call last):</span>
 <span class="c">...</span>
-<span class="gr">ValueError</span>: <span class="n">invalid Flag &#39;Color&#39;: aliases WHITE and NEON are missing combined values of 0x18 [use enum.show_flag_values(value) for details]</span>
-</pre></div>
+<span class="gr">ValueError</span>: <span class="n">invalid Flag 'Color': aliases WHITE and NEON are missing combined values of 0x18 [use enum.show_flag_values(value) for details]</span>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -952,7 +1052,8 @@ values are specified instead of being generated by <a class="reference internal"
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.11.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="enum.FlagBoundary">
@@ -973,12 +1074,14 @@ default for <a class="reference internal" href="#enum.Flag" title="enum.Flag"><c
 <span class="gp">&gt;&gt;&gt; </span><span class="n">StrictFlag</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">**</span><span class="mi">4</span><span class="p">)</span>
 <span class="gt">Traceback (most recent call last):</span>
 <span class="c">...</span>
-<span class="gr">ValueError</span>: <span class="n">&lt;flag &#39;StrictFlag&#39;&gt; invalid value 20</span>
+<span class="gr">ValueError</span>: <span class="n">&lt;flag 'StrictFlag'&gt; invalid value 20</span>
 <span class="x">    given 0b0 10100</span>
 <span class="x">  allowed 0b0 00111</span>
-</pre></div>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="enum.FlagBoundary.CONFORM">
@@ -993,9 +1096,11 @@ value:</p>
 <span class="gp">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ConformFlag</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">**</span><span class="mi">4</span><span class="p">)</span>
 <span class="go">&lt;ConformFlag.BLUE: 4&gt;</span>
-</pre></div>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="enum.FlagBoundary.EJECT">
@@ -1009,9 +1114,11 @@ value:</p>
 <span class="gp">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">EjectFlag</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">**</span><span class="mi">4</span><span class="p">)</span>
 <span class="go">20</span>
-</pre></div>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="enum.FlagBoundary.KEEP">
@@ -1026,14 +1133,17 @@ This is the default for <a class="reference internal" href="#enum.IntFlag" title
 <span class="gp">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">KeepFlag</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">**</span><span class="mi">4</span><span class="p">)</span>
 <span class="go">&lt;KeepFlag.BLUE|16: 20&gt;</span>
-</pre></div>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.11.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="enum.EnumDict">
@@ -1052,16 +1162,18 @@ operations like <a class="reference internal" href="../reference/datamodel.xhtml
 <dt class="sig sig-object py" id="enum.EnumDict.member_names">
 <span class="sig-name descname"><span class="pre">member_names</span></span></dt>
 <dd><p>A list of member names.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.13.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
-<hr class="docutils" />
+<hr class="docutils"/>
 <section id="supported-dunder-names">
-<h3>Supported <code class="docutils literal notranslate"><span class="pre">__dunder__</span></code> names</h3>
+<h3 class="sigil_not_in_toc">Supported <code class="docutils literal notranslate"><span class="pre">__dunder__</span></code> names</h3>
 <p><a class="reference internal" href="#enum.EnumType.__members__" title="enum.EnumType.__members__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__members__</span></code></a> is a read-only ordered mapping of <code class="docutils literal notranslate"><span class="pre">member_name</span></code>:<code class="docutils literal notranslate"><span class="pre">member</span></code>
 items.  It is only available on the class.</p>
 <p><a class="reference internal" href="#enum.Enum.__new__" title="enum.Enum.__new__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__new__()</span></code></a>, if specified, must create and return the enum members;
@@ -1069,7 +1181,7 @@ it is also a very good idea to set the member’s <code class="xref py py-attr d
 Once all the members are created it is no longer used.</p>
 </section>
 <section id="supported-sunder-names">
-<h3>Supported <code class="docutils literal notranslate"><span class="pre">_sunder_</span></code> names</h3>
+<h3 class="sigil_not_in_toc">Supported <code class="docutils literal notranslate"><span class="pre">_sunder_</span></code> names</h3>
 <ul>
 <li><p><a class="reference internal" href="#enum.EnumType._add_alias_" title="enum.EnumType._add_alias_"><code class="xref py py-meth docutils literal notranslate"><span class="pre">_add_alias_()</span></code></a> – adds a new name as an alias to an existing
 member.</p></li>
@@ -1112,9 +1224,9 @@ of the <a class="reference internal" href="#enum.Enum" title="enum.Enum"><code c
 </div>
 </section>
 </section>
-<hr class="docutils" />
+<hr class="docutils"/>
 <section id="utilities-and-decorators">
-<h2>Utilities and Decorators</h2>
+<h2 class="sigil_not_in_toc">Utilities and Decorators</h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="enum.auto">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enum.</span></span><span class="sig-name descname"><span class="pre">auto</span></span></dt>
@@ -1145,11 +1257,12 @@ on the assignment line to work properly.</p>
 the highest member value incremented by 1, and will fail if any
 member is an incompatible type.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="enum.property">
-<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">enum.</span></span><span class="sig-name descname"><span class="pre">property</span></span></dt>
+<span class="sig-prename descclassname"><span class="pre">@</span></span><span class="sig-prename descclassname"><span class="pre">enum.</span></span><span class="sig-name descname"><span class="pre">property</span></span></dt>
 <dd><p>A decorator similar to the built-in <em>property</em>, but specifically for
 enumerations.  It allows member attributes to have the same names as members
 themselves.</p>
@@ -1163,11 +1276,12 @@ names <code class="docutils literal notranslate"><span class="pre">value</span><
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.11.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="enum.unique">
-<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">enum.</span></span><span class="sig-name descname"><span class="pre">unique</span></span></dt>
+<span class="sig-prename descclassname"><span class="pre">@</span></span><span class="sig-prename descclassname"><span class="pre">enum.</span></span><span class="sig-name descname"><span class="pre">unique</span></span></dt>
 <dd><p>A <a class="reference internal" href="../reference/compound_stmts.xhtml#class"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">class</span></code></a> decorator specifically for enumerations.  It searches an
 enumeration’s <a class="reference internal" href="#enum.EnumType.__members__" title="enum.EnumType.__members__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__members__</span></code></a>, gathering any aliases it finds; if any are
 found <a class="reference internal" href="exceptions.xhtml#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> is raised with the details:</p>
@@ -1181,43 +1295,48 @@ found <a class="reference internal" href="exceptions.xhtml#ValueError" title="Va
 <span class="gp">...</span>
 <span class="gt">Traceback (most recent call last):</span>
 <span class="c">...</span>
-<span class="gr">ValueError</span>: <span class="n">duplicate values found in &lt;enum &#39;Mistake&#39;&gt;: FOUR -&gt; THREE</span>
-</pre></div>
+<span class="gr">ValueError</span>: <span class="n">duplicate values found in &lt;enum 'Mistake'&gt;: FOUR -&gt; THREE</span>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="enum.verify">
-<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">enum.</span></span><span class="sig-name descname"><span class="pre">verify</span></span></dt>
+<span class="sig-prename descclassname"><span class="pre">@</span></span><span class="sig-prename descclassname"><span class="pre">enum.</span></span><span class="sig-name descname"><span class="pre">verify</span></span></dt>
 <dd><p>A <a class="reference internal" href="../reference/compound_stmts.xhtml#class"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">class</span></code></a> decorator specifically for enumerations.  Members from
 <a class="reference internal" href="#enum.EnumCheck" title="enum.EnumCheck"><code class="xref py py-class docutils literal notranslate"><span class="pre">EnumCheck</span></code></a> are used to specify which constraints should be checked
 on the decorated enumeration.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.11.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="enum.member">
-<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">enum.</span></span><span class="sig-name descname"><span class="pre">member</span></span></dt>
+<span class="sig-prename descclassname"><span class="pre">@</span></span><span class="sig-prename descclassname"><span class="pre">enum.</span></span><span class="sig-name descname"><span class="pre">member</span></span></dt>
 <dd><p>A decorator for use in enums: its target will become a member.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.11.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="enum.nonmember">
-<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">enum.</span></span><span class="sig-name descname"><span class="pre">nonmember</span></span></dt>
+<span class="sig-prename descclassname"><span class="pre">@</span></span><span class="sig-prename descclassname"><span class="pre">enum.</span></span><span class="sig-name descname"><span class="pre">nonmember</span></span></dt>
 <dd><p>A decorator for use in enums: its target will not become a member.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.11.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="enum.global_enum">
-<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">enum.</span></span><span class="sig-name descname"><span class="pre">global_enum</span></span></dt>
+<span class="sig-prename descclassname"><span class="pre">@</span></span><span class="sig-prename descclassname"><span class="pre">enum.</span></span><span class="sig-name descname"><span class="pre">global_enum</span></span></dt>
 <dd><p>A decorator to change the <a class="reference internal" href="stdtypes.xhtml#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str()</span></code></a> and <a class="reference internal" href="functions.xhtml#repr" title="repr"><code class="xref py py-func docutils literal notranslate"><span class="pre">repr()</span></code></a> of an enum
 to show its members as belonging to the module instead of its class.
 Should only be used when the enum members are exported
@@ -1225,7 +1344,8 @@ to the module global namespace (see <a class="reference internal" href="re.xhtml
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.11.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="enum.show_flag_values">
@@ -1234,12 +1354,13 @@ to the module global namespace (see <a class="reference internal" href="re.xhtml
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.11.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
-<hr class="docutils" />
+<hr class="docutils"/>
 <section id="notes">
-<h2>Notes</h2>
+<h2 class="sigil_not_in_toc">Notes</h2>
 <p><a class="reference internal" href="#enum.IntEnum" title="enum.IntEnum"><code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></a>, <a class="reference internal" href="#enum.StrEnum" title="enum.StrEnum"><code class="xref py py-class docutils literal notranslate"><span class="pre">StrEnum</span></code></a>, and <a class="reference internal" href="#enum.IntFlag" title="enum.IntFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">IntFlag</span></code></a></p>
 <blockquote>
 <div><p>These three enum types are designed to be drop-in replacements for existing
@@ -1254,15 +1375,18 @@ base class by mixing in the <code class="docutils literal notranslate"><span cla
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Enum</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">class</span><span class="w"> </span><span class="nc">MyIntEnum</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="k">pass</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>or you can reassign the appropriate <a class="reference internal" href="stdtypes.xhtml#str" title="str"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str()</span></code></a>, etc., in your enum:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Enum</span><span class="p">,</span> <span class="n">IntEnum</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">class</span><span class="w"> </span><span class="nc">MyIntEnum</span><span class="p">(</span><span class="n">IntEnum</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="fm">__str__</span> <span class="o">=</span> <span class="n">Enum</span><span class="o">.</span><span class="fm">__str__</span>
-</pre></div>
+</pre>
 </div>
-</div></blockquote>
+</div>
+</div>
+</blockquote>
 </section>
 </section>
 
@@ -1272,5 +1396,5 @@ base class by mixing in the <code class="docutils literal notranslate"><span cla
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

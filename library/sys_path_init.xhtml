@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="The initialization of the sys.path module search path" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/library/sys_path_init.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="A module search path is initialized when Python starts. This module search path may be accessed at sys.path. The first entry in the module search path is the directory that contains the input scrip..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="A module search path is initialized when Python starts. This module search path may be accessed at sys.path. The first entry in the module search path is the directory that contains the input scrip..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="The initialization of the sys.path module search path"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/library/sys_path_init.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="A module search path is initialized when Python starts. This module search path may be accessed at sys.path. The first entry in the module search path is the directory that contains the input scrip..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="A module search path is initialized when Python starts. This module search path may be accessed at sys.path. The first entry in the module search path is the directory that contains the input scrip..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>The initialization of the sys.path module search path</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/library/sys_path_init.html" />
+    <link rel="canonical" href="https://docs.python.org/3/library/sys_path_init.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -94,7 +95,7 @@ the <a class="reference internal" href="site.xhtml#module-site" title="site: Mod
 See <a class="reference internal" href="../using/cmdline.xhtml#cmdoption-E"><code class="xref std std-option docutils literal notranslate"><span class="pre">-E</span></code></a>, <a class="reference internal" href="../using/cmdline.xhtml#cmdoption-I"><code class="xref std std-option docutils literal notranslate"><span class="pre">-I</span></code></a>, <a class="reference internal" href="../using/cmdline.xhtml#cmdoption-s"><code class="xref std std-option docutils literal notranslate"><span class="pre">-s</span></code></a> and <a class="reference internal" href="../using/cmdline.xhtml#cmdoption-S"><code class="xref std std-option docutils literal notranslate"><span class="pre">-S</span></code></a> for further details.</p>
 </div>
 <section id="virtual-environments">
-<h2>Virtual environments</h2>
+<h2 class="sigil_not_in_toc">Virtual environments</h2>
 <p>If Python is run in a virtual environment (as described at <a class="reference internal" href="../tutorial/venv.xhtml#tut-venv"><span class="std std-ref">Virtual Environments and Packages</span></a>)
 then <code class="docutils literal notranslate"><span class="pre">prefix</span></code> and <code class="docutils literal notranslate"><span class="pre">exec_prefix</span></code> are specific to the virtual environment.</p>
 <p>If a <code class="docutils literal notranslate"><span class="pre">pyvenv.cfg</span></code> file is found alongside the main executable, or in the
@@ -106,7 +107,7 @@ and <code class="docutils literal notranslate"><span class="pre">exec_prefix</sp
 </ul>
 </section>
 <section id="pth-files">
-<h2>_pth files</h2>
+<h2 class="sigil_not_in_toc">_pth files</h2>
 <p>To completely override <a class="reference internal" href="sys.xhtml#sys.path" title="sys.path"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.path</span></code></a> create a <code class="docutils literal notranslate"><span class="pre">._pth</span></code> file with the same
 name as the shared library or executable (<code class="docutils literal notranslate"><span class="pre">python._pth</span></code> or <code class="docutils literal notranslate"><span class="pre">python311._pth</span></code>).
 The shared library path is always known on Windows, however it may not be
@@ -124,7 +125,7 @@ cannot be specified.</p>
 by the <a class="reference internal" href="site.xhtml#module-site" title="site: Module responsible for site-specific configuration."><code class="xref py py-mod docutils literal notranslate"><span class="pre">site</span></code></a> module when <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">site</span></code> has been specified.</p>
 </section>
 <section id="embedded-python">
-<h2>Embedded Python</h2>
+<h2 class="sigil_not_in_toc">Embedded Python</h2>
 <p>If Python is embedded within another application <a class="reference internal" href="../c-api/init.xhtml#c.Py_InitializeFromConfig" title="Py_InitializeFromConfig"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_InitializeFromConfig()</span></code></a> and
 the <a class="reference internal" href="../c-api/init_config.xhtml#c.PyConfig" title="PyConfig"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyConfig</span></code></a> structure can be used to initialize Python. The path specific
 details are described at <a class="reference internal" href="../c-api/init_config.xhtml#init-path-config"><span class="std std-ref">Python Path Configuration</span></a>.</p>
@@ -144,5 +145,5 @@ details are described at <a class="reference internal" href="../c-api/init_confi
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

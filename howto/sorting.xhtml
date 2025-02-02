@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="Sorting Techniques" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/howto/sorting.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="Author, Andrew Dalke and Raymond Hettinger,. Python lists have a built-in list.sort() method that modifies the list in-place. There is also a sorted() built-in function that builds a new sorted lis..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="Author, Andrew Dalke and Raymond Hettinger,. Python lists have a built-in list.sort() method that modifies the list in-place. There is also a sorted() built-in function that builds a new sorted lis..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="Sorting Techniques"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/howto/sorting.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="Author, Andrew Dalke and Raymond Hettinger,. Python lists have a built-in list.sort() method that modifies the list in-place. There is also a sorted() built-in function that builds a new sorted lis..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="Author, Andrew Dalke and Raymond Hettinger,. Python lists have a built-in list.sort() method that modifies the list in-place. There is also a sorted() built-in function that builds a new sorted lis..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>Sorting Techniques</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/howto/sorting.html" />
+    <link rel="canonical" href="https://docs.python.org/3/howto/sorting.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -54,12 +55,13 @@ in-place.  There is also a <a class="reference internal" href="../library/functi
 sorted list from an iterable.</p>
 <p>In this document, we explore the various techniques for sorting data using Python.</p>
 <section id="sorting-basics">
-<h2>Sorting Basics</h2>
+<h2 class="sigil_not_in_toc">Sorting Basics</h2>
 <p>A simple ascending sort is very easy: just call the <a class="reference internal" href="../library/functions.xhtml#sorted" title="sorted"><code class="xref py py-func docutils literal notranslate"><span class="pre">sorted()</span></code></a> function. It
 returns a new sorted list:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
 <span class="go">[1, 2, 3, 4, 5]</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>You can also use the <a class="reference internal" href="../library/stdtypes.xhtml#list.sort" title="list.sort"><code class="xref py py-meth docutils literal notranslate"><span class="pre">list.sort()</span></code></a> method. It modifies the list
 in-place (and returns <code class="docutils literal notranslate"><span class="pre">None</span></code> to avoid confusion). Usually it’s less convenient
@@ -69,24 +71,27 @@ more efficient.</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
 <span class="go">[1, 2, 3, 4, 5]</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Another difference is that the <a class="reference internal" href="../library/stdtypes.xhtml#list.sort" title="list.sort"><code class="xref py py-meth docutils literal notranslate"><span class="pre">list.sort()</span></code></a> method is only defined for
 lists. In contrast, the <a class="reference internal" href="../library/functions.xhtml#sorted" title="sorted"><code class="xref py py-func docutils literal notranslate"><span class="pre">sorted()</span></code></a> function accepts any iterable.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">({</span><span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span> <span class="s1">&#39;A&#39;</span><span class="p">})</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">({</span><span class="mi">1</span><span class="p">:</span> <span class="s1">'D'</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s1">'B'</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s1">'B'</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="s1">'E'</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span> <span class="s1">'A'</span><span class="p">})</span>
 <span class="go">[1, 2, 3, 4, 5]</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 <section id="key-functions">
-<h2>Key Functions</h2>
+<h2 class="sigil_not_in_toc">Key Functions</h2>
 <p>Both <a class="reference internal" href="../library/stdtypes.xhtml#list.sort" title="list.sort"><code class="xref py py-meth docutils literal notranslate"><span class="pre">list.sort()</span></code></a> and <a class="reference internal" href="../library/functions.xhtml#sorted" title="sorted"><code class="xref py py-func docutils literal notranslate"><span class="pre">sorted()</span></code></a> have a <em>key</em> parameter to specify a
 function (or other callable) to be called on each list element prior to making
 comparisons.</p>
 <p>For example, here’s a case-insensitive string comparison:</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="s2">&quot;This is a test string from Andrew&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="nb">str</span><span class="o">.</span><span class="n">casefold</span><span class="p">)</span>
-<span class="go">[&#39;a&#39;, &#39;Andrew&#39;, &#39;from&#39;, &#39;is&#39;, &#39;string&#39;, &#39;test&#39;, &#39;This&#39;]</span>
-</pre></div>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="s2">"This is a test string from Andrew"</span><span class="o">.</span><span class="n">split</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="nb">str</span><span class="o">.</span><span class="n">casefold</span><span class="p">)</span>
+<span class="go">['a', 'Andrew', 'from', 'is', 'string', 'test', 'This']</span>
+</pre>
+</div>
 </div>
 <p>The value of the <em>key</em> parameter should be a function (or other callable) that
 takes a single argument and returns a key to use for sorting purposes. This
@@ -95,13 +100,14 @@ input record.</p>
 <p>A common pattern is to sort complex objects using some of the object’s indices
 as keys. For example:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">student_tuples</span> <span class="o">=</span> <span class="p">[</span>
-<span class="gp">... </span>    <span class="p">(</span><span class="s1">&#39;john&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">15</span><span class="p">),</span>
-<span class="gp">... </span>    <span class="p">(</span><span class="s1">&#39;jane&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span>
-<span class="gp">... </span>    <span class="p">(</span><span class="s1">&#39;dave&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+<span class="gp">... </span>    <span class="p">(</span><span class="s1">'john'</span><span class="p">,</span> <span class="s1">'A'</span><span class="p">,</span> <span class="mi">15</span><span class="p">),</span>
+<span class="gp">... </span>    <span class="p">(</span><span class="s1">'jane'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span>
+<span class="gp">... </span>    <span class="p">(</span><span class="s1">'dave'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
 <span class="gp">... </span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">student_tuples</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">student</span><span class="p">:</span> <span class="n">student</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>   <span class="c1"># sort by age</span>
-<span class="go">[(&#39;dave&#39;, &#39;B&#39;, 10), (&#39;jane&#39;, &#39;B&#39;, 12), (&#39;john&#39;, &#39;A&#39;, 15)]</span>
-</pre></div>
+<span class="go">[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]</span>
+</pre>
+</div>
 </div>
 <p>The same technique works for objects with named attributes. For example:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span><span class="w"> </span><span class="nc">Student</span><span class="p">:</span>
@@ -113,20 +119,21 @@ as keys. For example:</p>
 <span class="gp">... </span>        <span class="k">return</span> <span class="nb">repr</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">grade</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">))</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">student_objects</span> <span class="o">=</span> <span class="p">[</span>
-<span class="gp">... </span>    <span class="n">Student</span><span class="p">(</span><span class="s1">&#39;john&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">15</span><span class="p">),</span>
-<span class="gp">... </span>    <span class="n">Student</span><span class="p">(</span><span class="s1">&#39;jane&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span>
-<span class="gp">... </span>    <span class="n">Student</span><span class="p">(</span><span class="s1">&#39;dave&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+<span class="gp">... </span>    <span class="n">Student</span><span class="p">(</span><span class="s1">'john'</span><span class="p">,</span> <span class="s1">'A'</span><span class="p">,</span> <span class="mi">15</span><span class="p">),</span>
+<span class="gp">... </span>    <span class="n">Student</span><span class="p">(</span><span class="s1">'jane'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span>
+<span class="gp">... </span>    <span class="n">Student</span><span class="p">(</span><span class="s1">'dave'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
 <span class="gp">... </span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">student_objects</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">student</span><span class="p">:</span> <span class="n">student</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>   <span class="c1"># sort by age</span>
-<span class="go">[(&#39;dave&#39;, &#39;B&#39;, 10), (&#39;jane&#39;, &#39;B&#39;, 12), (&#39;john&#39;, &#39;A&#39;, 15)]</span>
-</pre></div>
+<span class="go">[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]</span>
+</pre>
+</div>
 </div>
 <p>Objects with named attributes can be made by a regular class as shown
 above, or they can be instances of <a class="reference internal" href="../library/dataclasses.xhtml#dataclasses.dataclass" title="dataclasses.dataclass"><code class="xref py py-class docutils literal notranslate"><span class="pre">dataclass</span></code></a> or
 a <a class="reference internal" href="../glossary.xhtml#term-named-tuple"><span class="xref std std-term">named tuple</span></a>.</p>
 </section>
 <section id="operator-module-functions-and-partial-function-evaluation">
-<h2>Operator Module Functions and Partial Function Evaluation</h2>
+<h2 class="sigil_not_in_toc">Operator Module Functions and Partial Function Evaluation</h2>
 <p>The <a class="reference internal" href="../glossary.xhtml#term-key-function"><span class="xref std std-term">key function</span></a> patterns shown above are very common, so Python provides
 convenience functions to make accessor functions easier and faster. The
 <a class="reference internal" href="../library/operator.xhtml#module-operator" title="operator: Functions corresponding to the standard operators."><code class="xref py py-mod docutils literal notranslate"><span class="pre">operator</span></code></a> module has <a class="reference internal" href="../library/operator.xhtml#operator.itemgetter" title="operator.itemgetter"><code class="xref py py-func docutils literal notranslate"><span class="pre">itemgetter()</span></code></a>,
@@ -135,20 +142,22 @@ convenience functions to make accessor functions easier and faster. The
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">operator</span><span class="w"> </span><span class="kn">import</span> <span class="n">itemgetter</span><span class="p">,</span> <span class="n">attrgetter</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">student_tuples</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
-<span class="go">[(&#39;dave&#39;, &#39;B&#39;, 10), (&#39;jane&#39;, &#39;B&#39;, 12), (&#39;john&#39;, &#39;A&#39;, 15)]</span>
+<span class="go">[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">student_objects</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">attrgetter</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">))</span>
-<span class="go">[(&#39;dave&#39;, &#39;B&#39;, 10), (&#39;jane&#39;, &#39;B&#39;, 12), (&#39;john&#39;, &#39;A&#39;, 15)]</span>
-</pre></div>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">student_objects</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">attrgetter</span><span class="p">(</span><span class="s1">'age'</span><span class="p">))</span>
+<span class="go">[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]</span>
+</pre>
+</div>
 </div>
 <p>The operator module functions allow multiple levels of sorting. For example, to
 sort by <em>grade</em> then by <em>age</em>:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">student_tuples</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
-<span class="go">[(&#39;john&#39;, &#39;A&#39;, 15), (&#39;dave&#39;, &#39;B&#39;, 10), (&#39;jane&#39;, &#39;B&#39;, 12)]</span>
+<span class="go">[('john', 'A', 15), ('dave', 'B', 10), ('jane', 'B', 12)]</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">student_objects</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">attrgetter</span><span class="p">(</span><span class="s1">&#39;grade&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">))</span>
-<span class="go">[(&#39;john&#39;, &#39;A&#39;, 15), (&#39;dave&#39;, &#39;B&#39;, 10), (&#39;jane&#39;, &#39;B&#39;, 12)]</span>
-</pre></div>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">student_objects</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">attrgetter</span><span class="p">(</span><span class="s1">'grade'</span><span class="p">,</span> <span class="s1">'age'</span><span class="p">))</span>
+<span class="go">[('john', 'A', 15), ('dave', 'B', 10), ('jane', 'B', 12)]</span>
+</pre>
+</div>
 </div>
 <p>The <a class="reference internal" href="../library/functools.xhtml#module-functools" title="functools: Higher-order functions and operations on callable objects."><code class="xref py py-mod docutils literal notranslate"><span class="pre">functools</span></code></a> module provides another helpful tool for making
 key-functions.  The <a class="reference internal" href="../library/functools.xhtml#functools.partial" title="functools.partial"><code class="xref py py-func docutils literal notranslate"><span class="pre">partial()</span></code></a> function can reduce the
@@ -157,47 +166,51 @@ function making it suitable for use as a key-function.</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">functools</span><span class="w"> </span><span class="kn">import</span> <span class="n">partial</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">unicodedata</span><span class="w"> </span><span class="kn">import</span> <span class="n">normalize</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="n">names</span> <span class="o">=</span> <span class="s1">&#39;Zoë Åbjørn Núñez Élana Zeke Abe Nubia Eloise&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">names</span> <span class="o">=</span> <span class="s1">'Zoë Åbjørn Núñez Élana Zeke Abe Nubia Eloise'</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="n">normalize</span><span class="p">,</span> <span class="s1">&#39;NFD&#39;</span><span class="p">))</span>
-<span class="go">[&#39;Abe&#39;, &#39;Åbjørn&#39;, &#39;Eloise&#39;, &#39;Élana&#39;, &#39;Nubia&#39;, &#39;Núñez&#39;, &#39;Zeke&#39;, &#39;Zoë&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="n">normalize</span><span class="p">,</span> <span class="s1">'NFD'</span><span class="p">))</span>
+<span class="go">['Abe', 'Åbjørn', 'Eloise', 'Élana', 'Nubia', 'Núñez', 'Zeke', 'Zoë']</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="n">normalize</span><span class="p">,</span> <span class="s1">&#39;NFC&#39;</span><span class="p">))</span>
-<span class="go">[&#39;Abe&#39;, &#39;Eloise&#39;, &#39;Nubia&#39;, &#39;Núñez&#39;, &#39;Zeke&#39;, &#39;Zoë&#39;, &#39;Åbjørn&#39;, &#39;Élana&#39;]</span>
-</pre></div>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="n">normalize</span><span class="p">,</span> <span class="s1">'NFC'</span><span class="p">))</span>
+<span class="go">['Abe', 'Eloise', 'Nubia', 'Núñez', 'Zeke', 'Zoë', 'Åbjørn', 'Élana']</span>
+</pre>
+</div>
 </div>
 </section>
 <section id="ascending-and-descending">
-<h2>Ascending and Descending</h2>
+<h2 class="sigil_not_in_toc">Ascending and Descending</h2>
 <p>Both <a class="reference internal" href="../library/stdtypes.xhtml#list.sort" title="list.sort"><code class="xref py py-meth docutils literal notranslate"><span class="pre">list.sort()</span></code></a> and <a class="reference internal" href="../library/functions.xhtml#sorted" title="sorted"><code class="xref py py-func docutils literal notranslate"><span class="pre">sorted()</span></code></a> accept a <em>reverse</em> parameter with a
 boolean value. This is used to flag descending sorts. For example, to get the
 student data in reverse <em>age</em> order:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">student_tuples</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="go">[(&#39;john&#39;, &#39;A&#39;, 15), (&#39;jane&#39;, &#39;B&#39;, 12), (&#39;dave&#39;, &#39;B&#39;, 10)]</span>
+<span class="go">[('john', 'A', 15), ('jane', 'B', 12), ('dave', 'B', 10)]</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">student_objects</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">attrgetter</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="go">[(&#39;john&#39;, &#39;A&#39;, 15), (&#39;jane&#39;, &#39;B&#39;, 12), (&#39;dave&#39;, &#39;B&#39;, 10)]</span>
-</pre></div>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">student_objects</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">attrgetter</span><span class="p">(</span><span class="s1">'age'</span><span class="p">),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go">[('john', 'A', 15), ('jane', 'B', 12), ('dave', 'B', 10)]</span>
+</pre>
+</div>
 </div>
 </section>
 <section id="sort-stability-and-complex-sorts">
-<h2>Sort Stability and Complex Sorts</h2>
+<h2 class="sigil_not_in_toc">Sort Stability and Complex Sorts</h2>
 <p>Sorts are guaranteed to be <a class="reference external" href="https://en.wikipedia.org/wiki/Sorting_algorithm#Stability">stable</a><span class="link-target"> [https://en.wikipedia.org/wiki/Sorting_algorithm#Stability]</span>. That means that
 when multiple records have the same key, their original order is preserved.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">'red'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">'blue'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">'red'</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">'blue'</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
-<span class="go">[(&#39;blue&#39;, 1), (&#39;blue&#39;, 2), (&#39;red&#39;, 1), (&#39;red&#39;, 2)]</span>
-</pre></div>
+<span class="go">[('blue', 1), ('blue', 2), ('red', 1), ('red', 2)]</span>
+</pre>
+</div>
 </div>
 <p>Notice how the two records for <em>blue</em> retain their original order so that
 <code class="docutils literal notranslate"><span class="pre">('blue',</span> <span class="pre">1)</span></code> is guaranteed to precede <code class="docutils literal notranslate"><span class="pre">('blue',</span> <span class="pre">2)</span></code>.</p>
 <p>This wonderful property lets you build complex sorts in a series of sorting
 steps. For example, to sort the student data by descending <em>grade</em> and then
 ascending <em>age</em>, do the <em>age</em> sort first and then sort again using <em>grade</em>:</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">student_objects</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">attrgetter</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">))</span>     <span class="c1"># sort on secondary key</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">attrgetter</span><span class="p">(</span><span class="s1">&#39;grade&#39;</span><span class="p">),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>       <span class="c1"># now sort on primary key, descending</span>
-<span class="go">[(&#39;dave&#39;, &#39;B&#39;, 10), (&#39;jane&#39;, &#39;B&#39;, 12), (&#39;john&#39;, &#39;A&#39;, 15)]</span>
-</pre></div>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">student_objects</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">attrgetter</span><span class="p">(</span><span class="s1">'age'</span><span class="p">))</span>     <span class="c1"># sort on secondary key</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">attrgetter</span><span class="p">(</span><span class="s1">'grade'</span><span class="p">),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>       <span class="c1"># now sort on primary key, descending</span>
+<span class="go">[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]</span>
+</pre>
+</div>
 </div>
 <p>This can be abstracted out into a wrapper function that can take a list and
 tuples of field and order to sort them on multiple passes.</p>
@@ -206,16 +219,17 @@ tuples of field and order to sort them on multiple passes.</p>
 <span class="gp">... </span>        <span class="n">xs</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">attrgetter</span><span class="p">(</span><span class="n">key</span><span class="p">),</span> <span class="n">reverse</span><span class="o">=</span><span class="n">reverse</span><span class="p">)</span>
 <span class="gp">... </span>    <span class="k">return</span> <span class="n">xs</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="n">multisort</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">student_objects</span><span class="p">),</span> <span class="p">((</span><span class="s1">&#39;grade&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)))</span>
-<span class="go">[(&#39;dave&#39;, &#39;B&#39;, 10), (&#39;jane&#39;, &#39;B&#39;, 12), (&#39;john&#39;, &#39;A&#39;, 15)]</span>
-</pre></div>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">multisort</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">student_objects</span><span class="p">),</span> <span class="p">((</span><span class="s1">'grade'</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">'age'</span><span class="p">,</span> <span class="kc">False</span><span class="p">)))</span>
+<span class="go">[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]</span>
+</pre>
+</div>
 </div>
 <p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Timsort">Timsort</a><span class="link-target"> [https://en.wikipedia.org/wiki/Timsort]</span> algorithm used in Python
 does multiple sorts efficiently because it can take advantage of any ordering
 already present in a dataset.</p>
 </section>
 <section id="decorate-sort-undecorate">
-<h2>Decorate-Sort-Undecorate</h2>
+<h2 class="sigil_not_in_toc">Decorate-Sort-Undecorate</h2>
 <p>This idiom is called Decorate-Sort-Undecorate after its three steps:</p>
 <ul class="simple">
 <li><p>First, the initial list is decorated with new values that control the sort order.</p></li>
@@ -227,8 +241,9 @@ initial values in the new order.</p></li>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">decorated</span> <span class="o">=</span> <span class="p">[(</span><span class="n">student</span><span class="o">.</span><span class="n">grade</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">student</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">student</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">student_objects</span><span class="p">)]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">decorated</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">student</span> <span class="k">for</span> <span class="n">grade</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">student</span> <span class="ow">in</span> <span class="n">decorated</span><span class="p">]</span>               <span class="c1"># undecorate</span>
-<span class="go">[(&#39;john&#39;, &#39;A&#39;, 15), (&#39;jane&#39;, &#39;B&#39;, 12), (&#39;dave&#39;, &#39;B&#39;, 10)]</span>
-</pre></div>
+<span class="go">[('john', 'A', 15), ('jane', 'B', 12), ('dave', 'B', 10)]</span>
+</pre>
+</div>
 </div>
 <p>This idiom works because tuples are compared lexicographically; the first items
 are compared; if they are the same then the second items are compared, and so
@@ -249,7 +264,7 @@ after Randal L. Schwartz, who popularized it among Perl programmers.</p>
 <p>Now that Python sorting provides key-functions, this technique is not often needed.</p>
 </section>
 <section id="comparison-functions">
-<h2>Comparison Functions</h2>
+<h2 class="sigil_not_in_toc">Comparison Functions</h2>
 <p>Unlike key functions that return an absolute value for sorting, a comparison
 function computes the relative ordering for two inputs.</p>
 <p>For example, a <a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/1/17/Balance_à_tabac_1850.JPG">balance scale</a><span class="link-target"> [https://upload.wikimedia.org/wikipedia/commons/1/17/Balance_à_tabac_1850.JPG]</span>
@@ -264,11 +279,12 @@ their API.  For example, <a class="reference internal" href="../library/locale.x
 <a class="reference internal" href="../library/functools.xhtml#functools.cmp_to_key" title="functools.cmp_to_key"><code class="xref py py-class docutils literal notranslate"><span class="pre">functools.cmp_to_key</span></code></a> to wrap the comparison function
 to make it usable as a key function:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sorted</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">cmp_to_key</span><span class="p">(</span><span class="n">strcoll</span><span class="p">))</span>  <span class="c1"># locale-aware sort order</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 <section id="odds-and-ends">
-<h2>Odds and Ends</h2>
+<h2 class="sigil_not_in_toc">Odds and Ends</h2>
 <ul>
 <li><p>For locale aware sorting, use <a class="reference internal" href="../library/locale.xhtml#locale.strxfrm" title="locale.strxfrm"><code class="xref py py-func docutils literal notranslate"><span class="pre">locale.strxfrm()</span></code></a> for a key function or
 <a class="reference internal" href="../library/locale.xhtml#locale.strcoll" title="locale.strcoll"><code class="xref py py-func docutils literal notranslate"><span class="pre">locale.strcoll()</span></code></a> for a comparison function.  This is necessary
@@ -278,13 +294,14 @@ if the underlying alphabet is the same.</p></li>
 equal keys retain the original order). Interestingly, that effect can be
 simulated without the parameter by using the builtin <a class="reference internal" href="../library/functions.xhtml#reversed" title="reversed"><code class="xref py py-func docutils literal notranslate"><span class="pre">reversed()</span></code></a> function
 twice:</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">'red'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">'blue'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">'red'</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">'blue'</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">standard_way</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">double_reversed</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">key</span><span class="o">=</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">0</span><span class="p">))))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">assert</span> <span class="n">standard_way</span> <span class="o">==</span> <span class="n">double_reversed</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">standard_way</span>
-<span class="go">[(&#39;red&#39;, 1), (&#39;red&#39;, 2), (&#39;blue&#39;, 1), (&#39;blue&#39;, 2)]</span>
-</pre></div>
+<span class="go">[('red', 1), ('red', 2), ('blue', 1), ('blue', 2)]</span>
+</pre>
+</div>
 </div>
 </li>
 <li><p>The sort routines use <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> when making comparisons
@@ -292,8 +309,9 @@ between two objects. So, it is easy to add a standard sort order to a class by
 defining an <a class="reference internal" href="../reference/datamodel.xhtml#object.__lt__" title="object.__lt__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__lt__()</span></code></a> method:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Student</span><span class="o">.</span><span class="fm">__lt__</span> <span class="o">=</span> <span class="k">lambda</span> <span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">&lt;</span> <span class="n">other</span><span class="o">.</span><span class="n">age</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">student_objects</span><span class="p">)</span>
-<span class="go">[(&#39;dave&#39;, &#39;B&#39;, 10), (&#39;jane&#39;, &#39;B&#39;, 12), (&#39;john&#39;, &#39;A&#39;, 15)]</span>
-</pre></div>
+<span class="go">[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]</span>
+</pre>
+</div>
 </div>
 <p>However, note that <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> can fall back to using <a class="reference internal" href="../reference/datamodel.xhtml#object.__gt__" title="object.__gt__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__gt__()</span></code></a> if
 <a class="reference internal" href="../reference/datamodel.xhtml#object.__lt__" title="object.__lt__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__lt__()</span></code></a> is not implemented (see <a class="reference internal" href="../reference/datamodel.xhtml#object.__lt__" title="object.__lt__"><code class="xref py py-func docutils literal notranslate"><span class="pre">object.__lt__()</span></code></a>
@@ -306,17 +324,18 @@ task easier.</p>
 function can also access external resources. For instance, if the student grades
 are stored in a dictionary, they can be used to sort a separate list of student
 names:</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">students</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;dave&#39;</span><span class="p">,</span> <span class="s1">&#39;john&#39;</span><span class="p">,</span> <span class="s1">&#39;jane&#39;</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">newgrades</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;john&#39;</span><span class="p">:</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;jane&#39;</span><span class="p">:</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;dave&#39;</span><span class="p">:</span> <span class="s1">&#39;C&#39;</span><span class="p">}</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">students</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'dave'</span><span class="p">,</span> <span class="s1">'john'</span><span class="p">,</span> <span class="s1">'jane'</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">newgrades</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'john'</span><span class="p">:</span> <span class="s1">'F'</span><span class="p">,</span> <span class="s1">'jane'</span><span class="p">:</span><span class="s1">'A'</span><span class="p">,</span> <span class="s1">'dave'</span><span class="p">:</span> <span class="s1">'C'</span><span class="p">}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">students</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">newgrades</span><span class="o">.</span><span class="fm">__getitem__</span><span class="p">)</span>
-<span class="go">[&#39;jane&#39;, &#39;dave&#39;, &#39;john&#39;]</span>
-</pre></div>
+<span class="go">['jane', 'dave', 'john']</span>
+</pre>
+</div>
 </div>
 </li>
 </ul>
 </section>
 <section id="partial-sorts">
-<h2>Partial Sorts</h2>
+<h2 class="sigil_not_in_toc">Partial Sorts</h2>
 <p>Some applications require only some of the data to be ordered.  The standard
 library provides several tools that do less work than a full sort:</p>
 <ul class="simple">
@@ -342,5 +361,5 @@ priority queues which are commonly used for task scheduling.</p></li>
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

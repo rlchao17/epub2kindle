@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="Policies" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/library/asyncio-policy.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="An event loop policy is a global object used to get and set the current event loop, as well as create new event loops. The default policy can be replaced with built-in alternatives to use different..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="An event loop policy is a global object used to get and set the current event loop, as well as create new event loops. The default policy can be replaced with built-in alternatives to use different..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="Policies"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/library/asyncio-policy.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="An event loop policy is a global object used to get and set the current event loop, as well as create new event loops. The default policy can be replaced with built-in alternatives to use different..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="An event loop policy is a global object used to get and set the current event loop, as well as create new event loops. The default policy can be replaced with built-in alternatives to use different..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>Policies</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/library/asyncio-policy.html" />
+    <link rel="canonical" href="https://docs.python.org/3/library/asyncio-policy.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -61,25 +62,27 @@ though custom policies could define <em>context</em> differently.</p>
 <p>Policy objects should implement the APIs defined
 in the <a class="reference internal" href="#asyncio.AbstractEventLoopPolicy" title="asyncio.AbstractEventLoopPolicy"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractEventLoopPolicy</span></code></a> abstract base class.</p>
 <section id="getting-and-setting-the-policy">
-<span id="asyncio-policy-get-set"></span><h2>Getting and Setting the Policy</h2>
+<span id="asyncio-policy-get-set"></span><h2 class="sigil_not_in_toc">Getting and Setting the Policy</h2>
 <p>The following functions can be used to get and set the policy
 for the current process:</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="asyncio.get_event_loop_policy">
 <span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">get_event_loop_policy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Return the current process-wide policy.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="asyncio.set_event_loop_policy">
 <span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">set_event_loop_policy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">policy</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Set the current process-wide policy to <em>policy</em>.</p>
 <p>If <em>policy</em> is set to <code class="docutils literal notranslate"><span class="pre">None</span></code>, the default policy is restored.</p>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="policy-objects">
-<span id="asyncio-policy-objects"></span><h2>Policy Objects</h2>
+<span id="asyncio-policy-objects"></span><h2 class="sigil_not_in_toc">Policy Objects</h2>
 <p>The abstract event loop policy base class is defined as follows:</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="asyncio.AbstractEventLoopPolicy">
@@ -95,20 +98,23 @@ for the current process:</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.AbstractEventLoopPolicy.set_event_loop">
 <span class="sig-name descname"><span class="pre">set_event_loop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loop</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Set the event loop for the current context to <em>loop</em>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.AbstractEventLoopPolicy.new_event_loop">
 <span class="sig-name descname"><span class="pre">new_event_loop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Create and return a new event loop object.</p>
 <p>This method should never return <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.AbstractEventLoopPolicy.get_child_watcher">
@@ -120,7 +126,8 @@ for the current process:</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 3.12.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.AbstractEventLoopPolicy.set_child_watcher">
@@ -130,9 +137,11 @@ for the current process:</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 3.12.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 <p id="asyncio-policy-builtin">asyncio ships with the following built-in policies:</p>
 <dl class="py class">
@@ -151,7 +160,8 @@ a <a class="reference internal" href="exceptions.xhtml#DeprecationWarning" title
 decides to create one.
 In some future Python release this will become an error.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="asyncio.WindowsSelectorEventLoopPolicy">
@@ -161,7 +171,8 @@ In some future Python release this will become an error.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Windows.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="asyncio.WindowsProactorEventLoopPolicy">
@@ -171,11 +182,12 @@ In some future Python release this will become an error.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Windows.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="process-watchers">
-<span id="asyncio-watchers"></span><h2>Process Watchers</h2>
+<span id="asyncio-watchers"></span><h2 class="sigil_not_in_toc">Process Watchers</h2>
 <p>A process watcher allows customization of how an event loop monitors
 child processes on Unix. Specifically, the event loop needs to know
 when a child process has exited.</p>
@@ -198,7 +210,8 @@ implementation used by the asyncio event loop:</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 3.12.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="asyncio.set_child_watcher">
@@ -209,7 +222,8 @@ policy.  <em>watcher</em> must implement methods defined in the
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 3.12.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -229,7 +243,8 @@ when a process with PID equal to <em>pid</em> terminates.  Specifying
 another callback for the same process replaces the previous
 handler.</p>
 <p>The <em>callback</em> callable must be thread-safe.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.AbstractChildWatcher.remove_child_handler">
@@ -237,7 +252,8 @@ handler.</p>
 <dd><p>Removes the handler for process with PID equal to <em>pid</em>.</p>
 <p>The function returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the handler was successfully
 removed, <code class="docutils literal notranslate"><span class="pre">False</span></code> if there was nothing to remove.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.AbstractChildWatcher.attach_loop">
@@ -246,7 +262,8 @@ removed, <code class="docutils literal notranslate"><span class="pre">False</spa
 <p>If the watcher was previously attached to an event loop, then
 it is first detached before attaching to the new loop.</p>
 <p>Note: loop may be <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.AbstractChildWatcher.is_active">
@@ -257,7 +274,8 @@ it is first detached before attaching to the new loop.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.8.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.AbstractChildWatcher.close">
@@ -265,12 +283,14 @@ it is first detached before attaching to the new loop.</p>
 <dd><p>Close the watcher.</p>
 <p>This method has to be called to ensure that underlying
 resources are cleaned-up.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 3.12.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="asyncio.ThreadedChildWatcher">
@@ -283,7 +303,8 @@ time a child terminates), but starting a thread per process requires extra memor
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.8.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="asyncio.MultiLoopChildWatcher">
@@ -304,7 +325,8 @@ handling a big number of processes (<em>O</em>(<em>n</em>) each time a
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 3.12.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="asyncio.SafeChildWatcher">
@@ -319,7 +341,8 @@ complexity but requires a running event loop in the main thread to work.</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 3.12.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="asyncio.FastChildWatcher">
@@ -334,7 +357,8 @@ children (<em>O</em>(1) each time a child terminates).</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 3.12.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="asyncio.PidfdChildWatcher">
@@ -349,27 +373,29 @@ only work on recent (5.3+) kernels.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.9.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="custom-policies">
-<span id="asyncio-custom-policies"></span><h2>Custom Policies</h2>
+<span id="asyncio-custom-policies"></span><h2 class="sigil_not_in_toc">Custom Policies</h2>
 <p>To implement a new event loop policy, it is recommended to subclass
 <a class="reference internal" href="#asyncio.DefaultEventLoopPolicy" title="asyncio.DefaultEventLoopPolicy"><code class="xref py py-class docutils literal notranslate"><span class="pre">DefaultEventLoopPolicy</span></code></a> and override the methods for which
 custom behavior is wanted, e.g.:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">MyEventLoopPolicy</span><span class="p">(</span><span class="n">asyncio</span><span class="o">.</span><span class="n">DefaultEventLoopPolicy</span><span class="p">):</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">get_event_loop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the event loop.</span>
+<span class="w">        </span><span class="sd">"""Get the event loop.</span>
 
 <span class="sd">        This may be None or an instance of EventLoop.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">loop</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">get_event_loop</span><span class="p">()</span>
         <span class="c1"># Do something with loop ...</span>
         <span class="k">return</span> <span class="n">loop</span>
 
 <span class="n">asyncio</span><span class="o">.</span><span class="n">set_event_loop_policy</span><span class="p">(</span><span class="n">MyEventLoopPolicy</span><span class="p">())</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 </section>
@@ -380,5 +406,5 @@ custom behavior is wanted, e.g.:</p>
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

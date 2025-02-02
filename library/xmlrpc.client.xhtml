@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="xmlrpc.client — XML-RPC client access" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/library/xmlrpc.client.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="Source code: Lib/xmlrpc/client.py[https://github.com/python/cpython/tree/3.13/Lib/xmlrpc/client.py] XML-RPC is a Remote Procedure Call method that uses XML passed via HTTP(S) as a transport. With i..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="Source code: Lib/xmlrpc/client.py[https://github.com/python/cpython/tree/3.13/Lib/xmlrpc/client.py] XML-RPC is a Remote Procedure Call method that uses XML passed via HTTP(S) as a transport. With i..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="xmlrpc.client — XML-RPC client access"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/library/xmlrpc.client.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="Source code: Lib/xmlrpc/client.py[https://github.com/python/cpython/tree/3.13/Lib/xmlrpc/client.py] XML-RPC is a Remote Procedure Call method that uses XML passed via HTTP(S) as a transport. With i..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="Source code: Lib/xmlrpc/client.py[https://github.com/python/cpython/tree/3.13/Lib/xmlrpc/client.py] XML-RPC is a Remote Procedure Call method that uses XML passed via HTTP(S) as a transport. With i..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>xmlrpc.client — XML-RPC client access</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/library/xmlrpc.client.html" />
+    <link rel="canonical" href="https://docs.python.org/3/library/xmlrpc.client.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -45,7 +46,7 @@
   <section id="module-xmlrpc.client">
 <span id="xmlrpc-client-xml-rpc-client-access"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">xmlrpc.client</span></code> — XML-RPC client access</h1>
 <p><strong>Source code:</strong> <a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.13/Lib/xmlrpc/client.py">Lib/xmlrpc/client.py</a><span class="link-target"> [https://github.com/python/cpython/tree/3.13/Lib/xmlrpc/client.py]</span></p>
-<hr class="docutils" />
+<hr class="docutils"/>
 <p>XML-RPC is a Remote Procedure Call method that uses XML passed via HTTP(S) as a
 transport.  With it, a client can call methods with parameters on a remote
 server (the server is named by a URI) and get back structured data.  This module
@@ -99,7 +100,7 @@ applies only to date/time values.</p>
 <p><span class="versionmodified changed">Changed in version 3.8: </span>The <em>headers</em> parameter was added.</p>
 </div>
 <p>Both the HTTP and HTTPS transports support the URL syntax extension for HTTP
-Basic Authentication: <code class="docutils literal notranslate"><span class="pre">http://user:pass&#64;host:port/path</span></code>.  The  <code class="docutils literal notranslate"><span class="pre">user:pass</span></code>
+Basic Authentication: <code class="docutils literal notranslate"><span class="pre">http://user:pass@host:port/path</span></code>.  The  <code class="docutils literal notranslate"><span class="pre">user:pass</span></code>
 portion will be base64-encoded as an HTTP ‘Authorization’ header, and sent to
 the remote server as part of the connection process when invoking an XML-RPC
 method.  You only need to use this if the remote server requires a Basic
@@ -116,55 +117,77 @@ include the following (and except where noted, they are unmarshalled
 as the same Python type):</p>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>XML-RPC type</p></th>
-<th class="head"><p>Python type</p></th>
+<tr class="row-odd"><th class="head"><p>XML-RPC type</p>
+</th>
+<th class="head"><p>Python type</p>
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">boolean</span></code></p></td>
-<td><p><a class="reference internal" href="functions.xhtml#bool" title="bool"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</td>
+<td><p><a class="reference internal" href="functions.xhtml#bool" title="bool"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">i1</span></code>,
 <code class="docutils literal notranslate"><span class="pre">i2</span></code>,  <code class="docutils literal notranslate"><span class="pre">i4</span></code>,
 <code class="docutils literal notranslate"><span class="pre">i8</span></code> or
-<code class="docutils literal notranslate"><span class="pre">biginteger</span></code></p></td>
+<code class="docutils literal notranslate"><span class="pre">biginteger</span></code></p>
+</td>
 <td><p><a class="reference internal" href="functions.xhtml#int" title="int"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a> in range from -2147483648 to 2147483647.
-Values get the <code class="docutils literal notranslate"><span class="pre">&lt;int&gt;</span></code> tag.</p></td>
+Values get the <code class="docutils literal notranslate"><span class="pre">&lt;int&gt;</span></code> tag.</p>
+</td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">double</span></code> or
-<code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
-<td><p><a class="reference internal" href="functions.xhtml#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>.  Values get the <code class="docutils literal notranslate"><span class="pre">&lt;double&gt;</span></code> tag.</p></td>
+<code class="docutils literal notranslate"><span class="pre">float</span></code></p>
+</td>
+<td><p><a class="reference internal" href="functions.xhtml#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>.  Values get the <code class="docutils literal notranslate"><span class="pre">&lt;double&gt;</span></code> tag.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
-<td><p><a class="reference internal" href="stdtypes.xhtml#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p>
+</td>
+<td><p><a class="reference internal" href="stdtypes.xhtml#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">array</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">array</span></code></p>
+</td>
 <td><p><a class="reference internal" href="stdtypes.xhtml#list" title="list"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a> or <a class="reference internal" href="stdtypes.xhtml#tuple" title="tuple"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a> containing
 conformable elements.  Arrays are returned as
-<a class="reference internal" href="stdtypes.xhtml#list" title="list"><code class="xref py py-class docutils literal notranslate"><span class="pre">lists</span></code></a>.</p></td>
+<a class="reference internal" href="stdtypes.xhtml#list" title="list"><code class="xref py py-class docutils literal notranslate"><span class="pre">lists</span></code></a>.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">struct</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">struct</span></code></p>
+</td>
 <td><p><a class="reference internal" href="stdtypes.xhtml#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>.  Keys must be strings, values may be
 any conformable type.  Objects of user-defined
 classes can be passed in; only their
-<a class="reference internal" href="../reference/datamodel.xhtml#object.__dict__" title="object.__dict__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__dict__</span></code></a> attribute is transmitted.</p></td>
+<a class="reference internal" href="../reference/datamodel.xhtml#object.__dict__" title="object.__dict__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__dict__</span></code></a> attribute is transmitted.</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">dateTime.iso8601</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">dateTime.iso8601</span></code></p>
+</td>
 <td><p><a class="reference internal" href="#xmlrpc.client.DateTime" title="xmlrpc.client.DateTime"><code class="xref py py-class docutils literal notranslate"><span class="pre">DateTime</span></code></a> or <a class="reference internal" href="datetime.xhtml#datetime.datetime" title="datetime.datetime"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.datetime</span></code></a>.
 Returned type depends on values of
-<em>use_builtin_types</em> and <em>use_datetime</em> flags.</p></td>
+<em>use_builtin_types</em> and <em>use_datetime</em> flags.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">base64</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">base64</span></code></p>
+</td>
 <td><p><a class="reference internal" href="#xmlrpc.client.Binary" title="xmlrpc.client.Binary"><code class="xref py py-class docutils literal notranslate"><span class="pre">Binary</span></code></a>, <a class="reference internal" href="stdtypes.xhtml#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> or
 <a class="reference internal" href="stdtypes.xhtml#bytearray" title="bytearray"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytearray</span></code></a>.  Returned type depends on the
-value of the <em>use_builtin_types</em> flag.</p></td>
+value of the <em>use_builtin_types</em> flag.</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">nil</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">nil</span></code></p>
+</td>
 <td><p>The <code class="docutils literal notranslate"><span class="pre">None</span></code> constant.  Passing is allowed only if
-<em>allow_none</em> is true.</p></td>
+<em>allow_none</em> is true.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">bigdecimal</span></code></p></td>
-<td><p><a class="reference internal" href="decimal.xhtml#decimal.Decimal" title="decimal.Decimal"><code class="xref py py-class docutils literal notranslate"><span class="pre">decimal.Decimal</span></code></a>.  Returned type only.</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">bigdecimal</span></code></p>
+</td>
+<td><p><a class="reference internal" href="decimal.xhtml#decimal.Decimal" title="decimal.Decimal"><code class="xref py py-class docutils literal notranslate"><span class="pre">decimal.Decimal</span></code></a>.  Returned type only.</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -194,22 +217,26 @@ implementation for numerics: <code class="docutils literal notranslate"><span cl
 <code class="docutils literal notranslate"><span class="pre">float</span></code> and <code class="docutils literal notranslate"><span class="pre">bigdecimal</span></code>.
 See <a class="reference external" href="https://ws.apache.org/xmlrpc/types.html">https://ws.apache.org/xmlrpc/types.html</a> for a description.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt><a class="reference external" href="https://tldp.org/HOWTO/XML-RPC-HOWTO/index.html">XML-RPC HOWTO</a><span class="link-target"> [https://tldp.org/HOWTO/XML-RPC-HOWTO/index.html]</span></dt><dd><p>A good description of XML-RPC operation and client software in several languages.
+<dt><a class="reference external" href="https://tldp.org/HOWTO/XML-RPC-HOWTO/index.html">XML-RPC HOWTO</a><span class="link-target"> [https://tldp.org/HOWTO/XML-RPC-HOWTO/index.html]</span></dt>
+<dd><p>A good description of XML-RPC operation and client software in several languages.
 Contains pretty much everything an XML-RPC client developer needs to know.</p>
 </dd>
-<dt><a class="reference external" href="https://xmlrpc-c.sourceforge.io/introspection.html">XML-RPC Introspection</a><span class="link-target"> [https://xmlrpc-c.sourceforge.io/introspection.html]</span></dt><dd><p>Describes the XML-RPC protocol extension for introspection.</p>
+<dt><a class="reference external" href="https://xmlrpc-c.sourceforge.io/introspection.html">XML-RPC Introspection</a><span class="link-target"> [https://xmlrpc-c.sourceforge.io/introspection.html]</span></dt>
+<dd><p>Describes the XML-RPC protocol extension for introspection.</p>
 </dd>
-<dt><a class="reference external" href="http://xmlrpc.scripting.com/spec.html">XML-RPC Specification</a><span class="link-target"> [http://xmlrpc.scripting.com/spec.html]</span></dt><dd><p>The official specification.</p>
+<dt><a class="reference external" href="http://xmlrpc.scripting.com/spec.html">XML-RPC Specification</a><span class="link-target"> [http://xmlrpc.scripting.com/spec.html]</span></dt>
+<dd><p>The official specification.</p>
 </dd>
 </dl>
 </div>
 <section id="serverproxy-objects">
-<span id="id1"></span><h2>ServerProxy Objects</h2>
+<span id="id1"></span><h2 class="sigil_not_in_toc">ServerProxy Objects</h2>
 <p>A <a class="reference internal" href="#xmlrpc.client.ServerProxy" title="xmlrpc.client.ServerProxy"><code class="xref py py-class docutils literal notranslate"><span class="pre">ServerProxy</span></code></a> instance has a method corresponding to each remote
 procedure call accepted by the XML-RPC server.  Calling the method performs an
 RPC, dispatched by both name and argument signature (e.g. the same method name
@@ -223,7 +250,8 @@ grouped under the reserved <code class="xref py py-attr docutils literal notrans
 <span class="sig-prename descclassname"><span class="pre">ServerProxy.system.</span></span><span class="sig-name descname"><span class="pre">listMethods</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>This method returns a list of strings, one for each (non-system) method
 supported by the XML-RPC server.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="xmlrpc.client.ServerProxy.system.methodSignature">
@@ -241,7 +269,8 @@ three integers and returns a string, its signature is “string, int, int, int�
 <p>If no signature is defined for the method, a non-array value is returned. In
 Python this means that the type of the returned  value will be something other
 than list.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="xmlrpc.client.ServerProxy.system.methodHelp">
@@ -250,7 +279,8 @@ than list.</p>
 server.  It returns a documentation string describing the use of that method. If
 no such string is available, an empty string is returned. The documentation
 string may contain HTML markup.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.5: </span>Instances of <a class="reference internal" href="#xmlrpc.client.ServerProxy" title="xmlrpc.client.ServerProxy"><code class="xref py py-class docutils literal notranslate"><span class="pre">ServerProxy</span></code></a> support the <a class="reference internal" href="../glossary.xhtml#term-context-manager"><span class="xref std std-term">context manager</span></a> protocol
@@ -262,23 +292,25 @@ for closing the underlying transport.</p>
 <span class="k">def</span><span class="w"> </span><span class="nf">is_even</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
 
-<span class="n">server</span> <span class="o">=</span> <span class="n">SimpleXMLRPCServer</span><span class="p">((</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span> <span class="mi">8000</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Listening on port 8000...&quot;</span><span class="p">)</span>
-<span class="n">server</span><span class="o">.</span><span class="n">register_function</span><span class="p">(</span><span class="n">is_even</span><span class="p">,</span> <span class="s2">&quot;is_even&quot;</span><span class="p">)</span>
+<span class="n">server</span> <span class="o">=</span> <span class="n">SimpleXMLRPCServer</span><span class="p">((</span><span class="s2">"localhost"</span><span class="p">,</span> <span class="mi">8000</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Listening on port 8000..."</span><span class="p">)</span>
+<span class="n">server</span><span class="o">.</span><span class="n">register_function</span><span class="p">(</span><span class="n">is_even</span><span class="p">,</span> <span class="s2">"is_even"</span><span class="p">)</span>
 <span class="n">server</span><span class="o">.</span><span class="n">serve_forever</span><span class="p">()</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The client code for the preceding server:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">xmlrpc.client</span>
 
-<span class="k">with</span> <span class="n">xmlrpc</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">ServerProxy</span><span class="p">(</span><span class="s2">&quot;http://localhost:8000/&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">proxy</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3 is even: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">proxy</span><span class="o">.</span><span class="n">is_even</span><span class="p">(</span><span class="mi">3</span><span class="p">)))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;100 is even: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">proxy</span><span class="o">.</span><span class="n">is_even</span><span class="p">(</span><span class="mi">100</span><span class="p">)))</span>
-</pre></div>
+<span class="k">with</span> <span class="n">xmlrpc</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">ServerProxy</span><span class="p">(</span><span class="s2">"http://localhost:8000/"</span><span class="p">)</span> <span class="k">as</span> <span class="n">proxy</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"3 is even: </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">proxy</span><span class="o">.</span><span class="n">is_even</span><span class="p">(</span><span class="mi">3</span><span class="p">)))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"100 is even: </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">proxy</span><span class="o">.</span><span class="n">is_even</span><span class="p">(</span><span class="mi">100</span><span class="p">)))</span>
+</pre>
+</div>
 </div>
 </section>
 <section id="datetime-objects">
-<span id="id2"></span><h2>DateTime Objects</h2>
+<span id="id2"></span><h2 class="sigil_not_in_toc">DateTime Objects</h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="xmlrpc.client.DateTime">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">xmlrpc.client.</span></span><span class="sig-name descname"><span class="pre">DateTime</span></span></dt>
@@ -290,19 +322,22 @@ use by the marshalling/unmarshalling code:</p>
 <dt class="sig sig-object py" id="xmlrpc.client.DateTime.decode">
 <span class="sig-name descname"><span class="pre">decode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Accept a string as the instance’s new time value.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="xmlrpc.client.DateTime.encode">
 <span class="sig-name descname"><span class="pre">encode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">out</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Write the XML-RPC encoding of this <a class="reference internal" href="#xmlrpc.client.DateTime" title="xmlrpc.client.DateTime"><code class="xref py py-class docutils literal notranslate"><span class="pre">DateTime</span></code></a> item to the <em>out</em> stream
 object.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p>It also supports certain of Python’s built-in operators through
 <a class="reference internal" href="../reference/datamodel.xhtml#object.__lt__" title="object.__lt__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">rich</span> <span class="pre">comparison</span></code></a> and <a class="reference internal" href="../reference/datamodel.xhtml#object.__repr__" title="object.__repr__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__repr__()</span></code></a>
 methods.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p>A working example follows. The server code:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
@@ -313,27 +348,29 @@ methods.</p>
     <span class="n">today</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">xmlrpc</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">DateTime</span><span class="p">(</span><span class="n">today</span><span class="p">)</span>
 
-<span class="n">server</span> <span class="o">=</span> <span class="n">SimpleXMLRPCServer</span><span class="p">((</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span> <span class="mi">8000</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Listening on port 8000...&quot;</span><span class="p">)</span>
-<span class="n">server</span><span class="o">.</span><span class="n">register_function</span><span class="p">(</span><span class="n">today</span><span class="p">,</span> <span class="s2">&quot;today&quot;</span><span class="p">)</span>
+<span class="n">server</span> <span class="o">=</span> <span class="n">SimpleXMLRPCServer</span><span class="p">((</span><span class="s2">"localhost"</span><span class="p">,</span> <span class="mi">8000</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Listening on port 8000..."</span><span class="p">)</span>
+<span class="n">server</span><span class="o">.</span><span class="n">register_function</span><span class="p">(</span><span class="n">today</span><span class="p">,</span> <span class="s2">"today"</span><span class="p">)</span>
 <span class="n">server</span><span class="o">.</span><span class="n">serve_forever</span><span class="p">()</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The client code for the preceding server:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">xmlrpc.client</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
 
-<span class="n">proxy</span> <span class="o">=</span> <span class="n">xmlrpc</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">ServerProxy</span><span class="p">(</span><span class="s2">&quot;http://localhost:8000/&quot;</span><span class="p">)</span>
+<span class="n">proxy</span> <span class="o">=</span> <span class="n">xmlrpc</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">ServerProxy</span><span class="p">(</span><span class="s2">"http://localhost:8000/"</span><span class="p">)</span>
 
 <span class="n">today</span> <span class="o">=</span> <span class="n">proxy</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
 <span class="c1"># convert the ISO8601 string to a datetime object</span>
-<span class="n">converted</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">today</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">T%H:%M:%S&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Today: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">converted</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">.%m.%Y, %H:%M&quot;</span><span class="p">))</span>
-</pre></div>
+<span class="n">converted</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">today</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="s2">"%Y%m</span><span class="si">%d</span><span class="s2">T%H:%M:%S"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Today: </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="n">converted</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">"</span><span class="si">%d</span><span class="s2">.%m.%Y, %H:%M"</span><span class="p">))</span>
+</pre>
+</div>
 </div>
 </section>
 <section id="binary-objects">
-<span id="id3"></span><h2>Binary Objects</h2>
+<span id="id3"></span><h2 class="sigil_not_in_toc">Binary Objects</h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="xmlrpc.client.Binary">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">xmlrpc.client.</span></span><span class="sig-name descname"><span class="pre">Binary</span></span></dt>
@@ -345,7 +382,8 @@ attribute:</p>
 <span class="sig-name descname"><span class="pre">data</span></span></dt>
 <dd><p>The binary data encapsulated by the <a class="reference internal" href="#xmlrpc.client.Binary" title="xmlrpc.client.Binary"><code class="xref py py-class docutils literal notranslate"><span class="pre">Binary</span></code></a> instance.  The data is
 provided as a <a class="reference internal" href="stdtypes.xhtml#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> object.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p><a class="reference internal" href="#xmlrpc.client.Binary" title="xmlrpc.client.Binary"><code class="xref py py-class docutils literal notranslate"><span class="pre">Binary</span></code></a> objects have the following methods, supported mainly for
 internal use by the marshalling/unmarshalling code:</p>
@@ -353,7 +391,8 @@ internal use by the marshalling/unmarshalling code:</p>
 <dt class="sig sig-object py" id="xmlrpc.client.Binary.decode">
 <span class="sig-name descname"><span class="pre">decode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Accept a base64 <a class="reference internal" href="stdtypes.xhtml#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> object and decode it as the instance’s new data.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="xmlrpc.client.Binary.encode">
@@ -363,11 +402,13 @@ internal use by the marshalling/unmarshalling code:</p>
 <span class="target" id="index-0"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc2045.html#section-6.8"><strong>RFC 2045 section 6.8</strong></a><span class="link-target"> [https://datatracker.ietf.org/doc/html/rfc2045.html#section-6.8]</span>,
 which was the de facto standard base64 specification when the
 XML-RPC spec was written.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p>It also supports certain of Python’s built-in operators through
 <a class="reference internal" href="../reference/datamodel.xhtml#object.__eq__" title="object.__eq__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__eq__()</span></code></a> and <a class="reference internal" href="../reference/datamodel.xhtml#object.__ne__" title="object.__ne__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__ne__()</span></code></a> methods.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p>Example usage of the binary objects.  We’re going to transfer an image over
 XMLRPC:</p>
@@ -375,27 +416,29 @@ XMLRPC:</p>
 <span class="kn">import</span><span class="w"> </span><span class="nn">xmlrpc.client</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">python_logo</span><span class="p">():</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;python_logo.jpg&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"python_logo.jpg"</span><span class="p">,</span> <span class="s2">"rb"</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">xmlrpc</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">Binary</span><span class="p">(</span><span class="n">handle</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
 
-<span class="n">server</span> <span class="o">=</span> <span class="n">SimpleXMLRPCServer</span><span class="p">((</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span> <span class="mi">8000</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Listening on port 8000...&quot;</span><span class="p">)</span>
-<span class="n">server</span><span class="o">.</span><span class="n">register_function</span><span class="p">(</span><span class="n">python_logo</span><span class="p">,</span> <span class="s1">&#39;python_logo&#39;</span><span class="p">)</span>
+<span class="n">server</span> <span class="o">=</span> <span class="n">SimpleXMLRPCServer</span><span class="p">((</span><span class="s2">"localhost"</span><span class="p">,</span> <span class="mi">8000</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Listening on port 8000..."</span><span class="p">)</span>
+<span class="n">server</span><span class="o">.</span><span class="n">register_function</span><span class="p">(</span><span class="n">python_logo</span><span class="p">,</span> <span class="s1">'python_logo'</span><span class="p">)</span>
 
 <span class="n">server</span><span class="o">.</span><span class="n">serve_forever</span><span class="p">()</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The client gets the image and saves it to a file:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">xmlrpc.client</span>
 
-<span class="n">proxy</span> <span class="o">=</span> <span class="n">xmlrpc</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">ServerProxy</span><span class="p">(</span><span class="s2">&quot;http://localhost:8000/&quot;</span><span class="p">)</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;fetched_python_logo.jpg&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+<span class="n">proxy</span> <span class="o">=</span> <span class="n">xmlrpc</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">ServerProxy</span><span class="p">(</span><span class="s2">"http://localhost:8000/"</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"fetched_python_logo.jpg"</span><span class="p">,</span> <span class="s2">"wb"</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
     <span class="n">handle</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">proxy</span><span class="o">.</span><span class="n">python_logo</span><span class="p">()</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 <section id="fault-objects">
-<span id="id4"></span><h2>Fault Objects</h2>
+<span id="id4"></span><h2 class="sigil_not_in_toc">Fault Objects</h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="xmlrpc.client.Fault">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">xmlrpc.client.</span></span><span class="sig-name descname"><span class="pre">Fault</span></span></dt>
@@ -405,47 +448,52 @@ objects have the following attributes:</p>
 <dt class="sig sig-object py" id="xmlrpc.client.Fault.faultCode">
 <span class="sig-name descname"><span class="pre">faultCode</span></span></dt>
 <dd><p>An int indicating the fault type.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="xmlrpc.client.Fault.faultString">
 <span class="sig-name descname"><span class="pre">faultString</span></span></dt>
 <dd><p>A string containing a diagnostic message associated with the fault.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 <p>In the following example we’re going to intentionally cause a <a class="reference internal" href="#xmlrpc.client.Fault" title="xmlrpc.client.Fault"><code class="xref py py-exc docutils literal notranslate"><span class="pre">Fault</span></code></a> by
 returning a complex type object.  The server code:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">xmlrpc.server</span><span class="w"> </span><span class="kn">import</span> <span class="n">SimpleXMLRPCServer</span>
 
-<span class="c1"># A marshalling error is going to occur because we&#39;re returning a</span>
+<span class="c1"># A marshalling error is going to occur because we're returning a</span>
 <span class="c1"># complex number</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">+</span><span class="mi">0</span><span class="n">j</span>
 
-<span class="n">server</span> <span class="o">=</span> <span class="n">SimpleXMLRPCServer</span><span class="p">((</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span> <span class="mi">8000</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Listening on port 8000...&quot;</span><span class="p">)</span>
-<span class="n">server</span><span class="o">.</span><span class="n">register_function</span><span class="p">(</span><span class="n">add</span><span class="p">,</span> <span class="s1">&#39;add&#39;</span><span class="p">)</span>
+<span class="n">server</span> <span class="o">=</span> <span class="n">SimpleXMLRPCServer</span><span class="p">((</span><span class="s2">"localhost"</span><span class="p">,</span> <span class="mi">8000</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Listening on port 8000..."</span><span class="p">)</span>
+<span class="n">server</span><span class="o">.</span><span class="n">register_function</span><span class="p">(</span><span class="n">add</span><span class="p">,</span> <span class="s1">'add'</span><span class="p">)</span>
 
 <span class="n">server</span><span class="o">.</span><span class="n">serve_forever</span><span class="p">()</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The client code for the preceding server:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">xmlrpc.client</span>
 
-<span class="n">proxy</span> <span class="o">=</span> <span class="n">xmlrpc</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">ServerProxy</span><span class="p">(</span><span class="s2">&quot;http://localhost:8000/&quot;</span><span class="p">)</span>
+<span class="n">proxy</span> <span class="o">=</span> <span class="n">xmlrpc</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">ServerProxy</span><span class="p">(</span><span class="s2">"http://localhost:8000/"</span><span class="p">)</span>
 <span class="k">try</span><span class="p">:</span>
     <span class="n">proxy</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 <span class="k">except</span> <span class="n">xmlrpc</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">Fault</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A fault occurred&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fault code: </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">err</span><span class="o">.</span><span class="n">faultCode</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fault string: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">err</span><span class="o">.</span><span class="n">faultString</span><span class="p">)</span>
-</pre></div>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"A fault occurred"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Fault code: </span><span class="si">%d</span><span class="s2">"</span> <span class="o">%</span> <span class="n">err</span><span class="o">.</span><span class="n">faultCode</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Fault string: </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="n">err</span><span class="o">.</span><span class="n">faultString</span><span class="p">)</span>
+</pre>
+</div>
 </div>
 </section>
 <section id="protocolerror-objects">
-<span id="protocol-error-objects"></span><h2>ProtocolError Objects</h2>
+<span id="protocol-error-objects"></span><h2 class="sigil_not_in_toc">ProtocolError Objects</h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="xmlrpc.client.ProtocolError">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">xmlrpc.client.</span></span><span class="sig-name descname"><span class="pre">ProtocolError</span></span></dt>
@@ -456,49 +504,55 @@ does not exist).  It has the following attributes:</p>
 <dt class="sig sig-object py" id="xmlrpc.client.ProtocolError.url">
 <span class="sig-name descname"><span class="pre">url</span></span></dt>
 <dd><p>The URI or URL that triggered the error.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="xmlrpc.client.ProtocolError.errcode">
 <span class="sig-name descname"><span class="pre">errcode</span></span></dt>
 <dd><p>The error code.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="xmlrpc.client.ProtocolError.errmsg">
 <span class="sig-name descname"><span class="pre">errmsg</span></span></dt>
 <dd><p>The error message or diagnostic string.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="xmlrpc.client.ProtocolError.headers">
 <span class="sig-name descname"><span class="pre">headers</span></span></dt>
 <dd><p>A dict containing the headers of the HTTP/HTTPS request that triggered the
 error.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 <p>In the following example we’re going to intentionally cause a <a class="reference internal" href="#xmlrpc.client.ProtocolError" title="xmlrpc.client.ProtocolError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ProtocolError</span></code></a>
 by providing an invalid URI:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">xmlrpc.client</span>
 
-<span class="c1"># create a ServerProxy with a URI that doesn&#39;t respond to XMLRPC requests</span>
-<span class="n">proxy</span> <span class="o">=</span> <span class="n">xmlrpc</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">ServerProxy</span><span class="p">(</span><span class="s2">&quot;http://google.com/&quot;</span><span class="p">)</span>
+<span class="c1"># create a ServerProxy with a URI that doesn't respond to XMLRPC requests</span>
+<span class="n">proxy</span> <span class="o">=</span> <span class="n">xmlrpc</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">ServerProxy</span><span class="p">(</span><span class="s2">"http://google.com/"</span><span class="p">)</span>
 
 <span class="k">try</span><span class="p">:</span>
     <span class="n">proxy</span><span class="o">.</span><span class="n">some_method</span><span class="p">()</span>
 <span class="k">except</span> <span class="n">xmlrpc</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">ProtocolError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A protocol error occurred&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;URL: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">err</span><span class="o">.</span><span class="n">url</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;HTTP/HTTPS headers: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">err</span><span class="o">.</span><span class="n">headers</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error code: </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">err</span><span class="o">.</span><span class="n">errcode</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error message: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">err</span><span class="o">.</span><span class="n">errmsg</span><span class="p">)</span>
-</pre></div>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"A protocol error occurred"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"URL: </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="n">err</span><span class="o">.</span><span class="n">url</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"HTTP/HTTPS headers: </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="n">err</span><span class="o">.</span><span class="n">headers</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Error code: </span><span class="si">%d</span><span class="s2">"</span> <span class="o">%</span> <span class="n">err</span><span class="o">.</span><span class="n">errcode</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Error message: </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="n">err</span><span class="o">.</span><span class="n">errmsg</span><span class="p">)</span>
+</pre>
+</div>
 </div>
 </section>
 <section id="multicall-objects">
-<h2>MultiCall Objects</h2>
+<h2 class="sigil_not_in_toc">MultiCall Objects</h2>
 <p>The <a class="reference internal" href="#xmlrpc.client.MultiCall" title="xmlrpc.client.MultiCall"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultiCall</span></code></a> object provides a way to encapsulate multiple calls to a
 remote server into a single request <a class="footnote-reference brackets" href="#id6" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p>
 <dl class="py class">
@@ -511,7 +565,8 @@ return <code class="docutils literal notranslate"><span class="pre">None</span><
 be transmitted as a single <code class="docutils literal notranslate"><span class="pre">system.multicall</span></code> request. The result of this call
 is a <a class="reference internal" href="../glossary.xhtml#term-generator"><span class="xref std std-term">generator</span></a>; iterating over this generator yields the individual
 results.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p>A usage example of this class follows.  The server code:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">xmlrpc.server</span><span class="w"> </span><span class="kn">import</span> <span class="n">SimpleXMLRPCServer</span>
@@ -529,20 +584,21 @@ results.</p>
     <span class="k">return</span> <span class="n">x</span> <span class="o">//</span> <span class="n">y</span>
 
 <span class="c1"># A simple server with simple arithmetic functions</span>
-<span class="n">server</span> <span class="o">=</span> <span class="n">SimpleXMLRPCServer</span><span class="p">((</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span> <span class="mi">8000</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Listening on port 8000...&quot;</span><span class="p">)</span>
+<span class="n">server</span> <span class="o">=</span> <span class="n">SimpleXMLRPCServer</span><span class="p">((</span><span class="s2">"localhost"</span><span class="p">,</span> <span class="mi">8000</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Listening on port 8000..."</span><span class="p">)</span>
 <span class="n">server</span><span class="o">.</span><span class="n">register_multicall_functions</span><span class="p">()</span>
-<span class="n">server</span><span class="o">.</span><span class="n">register_function</span><span class="p">(</span><span class="n">add</span><span class="p">,</span> <span class="s1">&#39;add&#39;</span><span class="p">)</span>
-<span class="n">server</span><span class="o">.</span><span class="n">register_function</span><span class="p">(</span><span class="n">subtract</span><span class="p">,</span> <span class="s1">&#39;subtract&#39;</span><span class="p">)</span>
-<span class="n">server</span><span class="o">.</span><span class="n">register_function</span><span class="p">(</span><span class="n">multiply</span><span class="p">,</span> <span class="s1">&#39;multiply&#39;</span><span class="p">)</span>
-<span class="n">server</span><span class="o">.</span><span class="n">register_function</span><span class="p">(</span><span class="n">divide</span><span class="p">,</span> <span class="s1">&#39;divide&#39;</span><span class="p">)</span>
+<span class="n">server</span><span class="o">.</span><span class="n">register_function</span><span class="p">(</span><span class="n">add</span><span class="p">,</span> <span class="s1">'add'</span><span class="p">)</span>
+<span class="n">server</span><span class="o">.</span><span class="n">register_function</span><span class="p">(</span><span class="n">subtract</span><span class="p">,</span> <span class="s1">'subtract'</span><span class="p">)</span>
+<span class="n">server</span><span class="o">.</span><span class="n">register_function</span><span class="p">(</span><span class="n">multiply</span><span class="p">,</span> <span class="s1">'multiply'</span><span class="p">)</span>
+<span class="n">server</span><span class="o">.</span><span class="n">register_function</span><span class="p">(</span><span class="n">divide</span><span class="p">,</span> <span class="s1">'divide'</span><span class="p">)</span>
 <span class="n">server</span><span class="o">.</span><span class="n">serve_forever</span><span class="p">()</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The client code for the preceding server:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">xmlrpc.client</span>
 
-<span class="n">proxy</span> <span class="o">=</span> <span class="n">xmlrpc</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">ServerProxy</span><span class="p">(</span><span class="s2">&quot;http://localhost:8000/&quot;</span><span class="p">)</span>
+<span class="n">proxy</span> <span class="o">=</span> <span class="n">xmlrpc</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">ServerProxy</span><span class="p">(</span><span class="s2">"http://localhost:8000/"</span><span class="p">)</span>
 <span class="n">multicall</span> <span class="o">=</span> <span class="n">xmlrpc</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">MultiCall</span><span class="p">(</span><span class="n">proxy</span><span class="p">)</span>
 <span class="n">multicall</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="n">multicall</span><span class="o">.</span><span class="n">subtract</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
@@ -550,12 +606,13 @@ results.</p>
 <span class="n">multicall</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">multicall</span><span class="p">()</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;7+3=</span><span class="si">%d</span><span class="s2">, 7-3=</span><span class="si">%d</span><span class="s2">, 7*3=</span><span class="si">%d</span><span class="s2">, 7//3=</span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
-</pre></div>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"7+3=</span><span class="si">%d</span><span class="s2">, 7-3=</span><span class="si">%d</span><span class="s2">, 7*3=</span><span class="si">%d</span><span class="s2">, 7//3=</span><span class="si">%d</span><span class="s2">"</span> <span class="o">%</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+</pre>
+</div>
 </div>
 </section>
 <section id="convenience-functions">
-<h2>Convenience Functions</h2>
+<h2 class="sigil_not_in_toc">Convenience Functions</h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="xmlrpc.client.dumps">
 <span class="sig-prename descclassname"><span class="pre">xmlrpc.client.</span></span><span class="sig-name descname"><span class="pre">dumps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">methodname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">methodresponse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_none</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span></dt>
@@ -566,7 +623,8 @@ can be returned, meaning that <em>params</em> must be of length 1. <em>encoding<
 supplied, is the encoding to use in the generated XML; the default is UTF-8.
 Python’s <a class="reference internal" href="constants.xhtml#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a> value cannot be used in standard XML-RPC; to allow using
 it via an extension,  provide a true value for <em>allow_none</em>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="xmlrpc.client.loads">
@@ -583,24 +641,26 @@ applies only to date/time values.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.3: </span>The <em>use_builtin_types</em> flag was added.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="example-of-client-usage">
-<span id="xmlrpc-client-example"></span><h2>Example of Client Usage</h2>
+<span id="xmlrpc-client-example"></span><h2 class="sigil_not_in_toc">Example of Client Usage</h2>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># simple test program (from the XML-RPC specification)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">xmlrpc.client</span><span class="w"> </span><span class="kn">import</span> <span class="n">ServerProxy</span><span class="p">,</span> <span class="n">Error</span>
 
-<span class="c1"># server = ServerProxy(&quot;http://localhost:8000&quot;) # local server</span>
-<span class="k">with</span> <span class="n">ServerProxy</span><span class="p">(</span><span class="s2">&quot;http://betty.userland.com&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">proxy</span><span class="p">:</span>
+<span class="c1"># server = ServerProxy("http://localhost:8000") # local server</span>
+<span class="k">with</span> <span class="n">ServerProxy</span><span class="p">(</span><span class="s2">"http://betty.userland.com"</span><span class="p">)</span> <span class="k">as</span> <span class="n">proxy</span><span class="p">:</span>
 
     <span class="nb">print</span><span class="p">(</span><span class="n">proxy</span><span class="p">)</span>
 
     <span class="k">try</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">proxy</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">getStateName</span><span class="p">(</span><span class="mi">41</span><span class="p">))</span>
     <span class="k">except</span> <span class="n">Error</span> <span class="k">as</span> <span class="n">v</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ERROR&quot;</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
-</pre></div>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"ERROR"</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+</pre>
+</div>
 </div>
 <p>To access an XML-RPC server through a HTTP proxy, you need to define a custom
 transport.  The following example shows how:</p>
@@ -620,14 +680,15 @@ transport.  The following example shows how:</p>
         <span class="k">return</span> <span class="n">connection</span>
 
 <span class="n">transport</span> <span class="o">=</span> <span class="n">ProxiedTransport</span><span class="p">()</span>
-<span class="n">transport</span><span class="o">.</span><span class="n">set_proxy</span><span class="p">(</span><span class="s1">&#39;proxy-server&#39;</span><span class="p">,</span> <span class="mi">8080</span><span class="p">)</span>
-<span class="n">server</span> <span class="o">=</span> <span class="n">xmlrpc</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">ServerProxy</span><span class="p">(</span><span class="s1">&#39;http://betty.userland.com&#39;</span><span class="p">,</span> <span class="n">transport</span><span class="o">=</span><span class="n">transport</span><span class="p">)</span>
+<span class="n">transport</span><span class="o">.</span><span class="n">set_proxy</span><span class="p">(</span><span class="s1">'proxy-server'</span><span class="p">,</span> <span class="mi">8080</span><span class="p">)</span>
+<span class="n">server</span> <span class="o">=</span> <span class="n">xmlrpc</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">ServerProxy</span><span class="p">(</span><span class="s1">'http://betty.userland.com'</span><span class="p">,</span> <span class="n">transport</span><span class="o">=</span><span class="n">transport</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">server</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">getStateName</span><span class="p">(</span><span class="mi">41</span><span class="p">))</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 <section id="example-of-client-and-server-usage">
-<h2>Example of Client and Server Usage</h2>
+<h2 class="sigil_not_in_toc">Example of Client and Server Usage</h2>
 <p>See <a class="reference internal" href="xmlrpc.server.xhtml#simplexmlrpcserver-example"><span class="std std-ref">SimpleXMLRPCServer Example</span></a>.</p>
 <p class="rubric">Footnotes</p>
 <aside class="footnote-list brackets">
@@ -645,5 +706,5 @@ transport.  The following example shows how:</p>
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

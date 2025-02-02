@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="3. Defining Extension Types: Assorted Topics" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/extending/newtypes.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="This section aims to give a quick fly-by on the various type methods you can implement and what they do. Here is the definition of PyTypeObject, with some fields only used in debug builds omitted: ..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="This section aims to give a quick fly-by on the various type methods you can implement and what they do. Here is the definition of PyTypeObject, with some fields only used in debug builds omitted: ..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="3. Defining Extension Types: Assorted Topics"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/extending/newtypes.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="This section aims to give a quick fly-by on the various type methods you can implement and what they do. Here is the definition of PyTypeObject, with some fields only used in debug builds omitted: ..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="This section aims to give a quick fly-by on the various type methods you can implement and what they do. Here is the definition of PyTypeObject, with some fields only used in debug builds omitted: ..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>3. Defining Extension Types: Assorted Topics</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/extending/newtypes.html" />
+    <link rel="canonical" href="https://docs.python.org/3/extending/newtypes.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -50,7 +51,7 @@ implement and what they do.</p>
 <a class="reference internal" href="../using/configure.xhtml#debug-build"><span class="std std-ref">debug builds</span></a> omitted:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">_typeobject</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">PyObject_VAR_HEAD</span>
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">tp_name</span><span class="p">;</span><span class="w"> </span><span class="cm">/* For printing, in format &quot;&lt;module&gt;.&lt;name&gt;&quot; */</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">tp_name</span><span class="p">;</span><span class="w"> </span><span class="cm">/* For printing, in format "&lt;module&gt;.&lt;name&gt;" */</span>
 <span class="w">    </span><span class="n">Py_ssize_t</span><span class="w"> </span><span class="n">tp_basicsize</span><span class="p">,</span><span class="w"> </span><span class="n">tp_itemsize</span><span class="p">;</span><span class="w"> </span><span class="cm">/* For allocation */</span>
 
 <span class="w">    </span><span class="cm">/* Methods to implement standard operations */</span>
@@ -134,7 +135,8 @@ implement and what they do.</p>
 <span class="w">    </span><span class="cm">/* bitset of which type-watchers care about this type */</span>
 <span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">tp_watched</span><span class="p">;</span>
 <span class="p">}</span><span class="w"> </span><span class="n">PyTypeObject</span><span class="p">;</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Now that’s a <em>lot</em> of methods.  Don’t worry too much though – if you have
 a type you want to define, the chances are very good that you will only
@@ -146,29 +148,33 @@ impacts the ordering of the fields.  It’s often easiest to find an example
 that includes the fields you need and then change the values to suit your new
 type.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">tp_name</span><span class="p">;</span><span class="w"> </span><span class="cm">/* For printing */</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The name of the type – as mentioned in the previous chapter, this will appear in
 various places, almost entirely for diagnostic purposes. Try to choose something
 that will be helpful in such a situation!</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">Py_ssize_t</span><span class="w"> </span><span class="n">tp_basicsize</span><span class="p">,</span><span class="w"> </span><span class="n">tp_itemsize</span><span class="p">;</span><span class="w"> </span><span class="cm">/* For allocation */</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>These fields tell the runtime how much memory to allocate when new objects of
 this type are created.  Python has some built-in support for variable length
 structures (think: strings, tuples) which is where the <a class="reference internal" href="../c-api/typeobj.xhtml#c.PyTypeObject.tp_itemsize" title="PyTypeObject.tp_itemsize"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_itemsize</span></code></a> field
 comes in.  This will be dealt with later.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">tp_doc</span><span class="p">;</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Here you can put a string (or its address) that you want returned when the
 Python script references <code class="docutils literal notranslate"><span class="pre">obj.__doc__</span></code> to retrieve the doc string.</p>
 <p>Now we come to the basic type methods – the ones most extension types will
 implement.</p>
 <section id="finalization-and-de-allocation">
-<h2><span class="section-number">3.1. </span>Finalization and De-allocation</h2>
+<h2 class="sigil_not_in_toc"><span class="section-number">3.1. </span>Finalization and De-allocation</h2>
 <div class="highlight-c notranslate" id="index-0"><div class="highlight"><pre><span></span><span class="n">destructor</span><span class="w"> </span><span class="n">tp_dealloc</span><span class="p">;</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>This function is called when the reference count of the instance of your type is
 reduced to zero and the Python interpreter wants to reclaim it.  If your type
@@ -181,7 +187,8 @@ function:</p>
 <span class="w">    </span><span class="n">free</span><span class="p">(</span><span class="n">obj</span><span class="o">-&gt;</span><span class="n">obj_UnderlyingDatatypePtr</span><span class="p">);</span>
 <span class="w">    </span><span class="n">Py_TYPE</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">tp_free</span><span class="p">((</span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">obj</span><span class="p">);</span>
 <span class="p">}</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>If your type supports garbage collection, the destructor should call
 <a class="reference internal" href="../c-api/gcsupport.xhtml#c.PyObject_GC_UnTrack" title="PyObject_GC_UnTrack"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_GC_UnTrack()</span></code></a> before clearing any member fields:</p>
@@ -193,7 +200,8 @@ function:</p>
 <span class="w">    </span><span class="p">...</span>
 <span class="w">    </span><span class="n">Py_TYPE</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">tp_free</span><span class="p">((</span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">obj</span><span class="p">);</span>
 <span class="p">}</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p id="index-1">One important requirement of the deallocator function is that it leaves any
 pending exceptions alone.  This is important since deallocators are frequently
@@ -231,7 +239,8 @@ done.  This can be done using the <a class="reference internal" href="../c-api/e
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="n">Py_TYPE</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">tp_free</span><span class="p">((</span><span class="n">PyObject</span><span class="o">*</span><span class="p">)</span><span class="n">self</span><span class="p">);</span>
 <span class="p">}</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -253,13 +262,14 @@ finalization code in <a class="reference internal" href="../c-api/typeobj.xhtml#
 </div>
 </section>
 <section id="object-presentation">
-<span id="index-3"></span><h2><span class="section-number">3.2. </span>Object Presentation</h2>
+<span id="index-3"></span><h2 class="sigil_not_in_toc"><span class="section-number">3.2. </span>Object Presentation</h2>
 <p>In Python, there are two ways to generate a textual representation of an object:
 the <a class="reference internal" href="../library/functions.xhtml#repr" title="repr"><code class="xref py py-func docutils literal notranslate"><span class="pre">repr()</span></code></a> function, and the <a class="reference internal" href="../library/stdtypes.xhtml#str" title="str"><code class="xref py py-func docutils literal notranslate"><span class="pre">str()</span></code></a> function.  (The <a class="reference internal" href="../library/functions.xhtml#print" title="print"><code class="xref py py-func docutils literal notranslate"><span class="pre">print()</span></code></a>
 function just calls <a class="reference internal" href="../library/stdtypes.xhtml#str" title="str"><code class="xref py py-func docutils literal notranslate"><span class="pre">str()</span></code></a>.)  These handlers are both optional.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">reprfunc</span><span class="w"> </span><span class="n">tp_repr</span><span class="p">;</span>
 <span class="n">reprfunc</span><span class="w"> </span><span class="n">tp_str</span><span class="p">;</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The <a class="reference internal" href="../c-api/typeobj.xhtml#c.PyTypeObject.tp_repr" title="PyTypeObject.tp_repr"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_repr</span></code></a> handler should return a string object containing a
 representation of the instance for which it is called.  Here is a simple
@@ -267,10 +277,11 @@ example:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span>
 <span class="nf">newdatatype_repr</span><span class="p">(</span><span class="n">newdatatypeobject</span><span class="w"> </span><span class="o">*</span><span class="n">obj</span><span class="p">)</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">PyUnicode_FromFormat</span><span class="p">(</span><span class="s">&quot;Repr-ified_newdatatype{{size:%d}}&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">PyUnicode_FromFormat</span><span class="p">(</span><span class="s">"Repr-ified_newdatatype{{size:%d}}"</span><span class="p">,</span>
 <span class="w">                                </span><span class="n">obj</span><span class="o">-&gt;</span><span class="n">obj_UnderlyingDatatypePtr</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">);</span>
 <span class="p">}</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>If no <a class="reference internal" href="../c-api/typeobj.xhtml#c.PyTypeObject.tp_repr" title="PyTypeObject.tp_repr"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_repr</span></code></a> handler is specified, the interpreter will supply a
 representation that uses the type’s <a class="reference internal" href="../c-api/typeobj.xhtml#c.PyTypeObject.tp_name" title="PyTypeObject.tp_name"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_name</span></code></a> and a uniquely identifying
@@ -285,14 +296,15 @@ used instead.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span>
 <span class="nf">newdatatype_str</span><span class="p">(</span><span class="n">newdatatypeobject</span><span class="w"> </span><span class="o">*</span><span class="n">obj</span><span class="p">)</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">PyUnicode_FromFormat</span><span class="p">(</span><span class="s">&quot;Stringified_newdatatype{{size:%d}}&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">PyUnicode_FromFormat</span><span class="p">(</span><span class="s">"Stringified_newdatatype{{size:%d}}"</span><span class="p">,</span>
 <span class="w">                                </span><span class="n">obj</span><span class="o">-&gt;</span><span class="n">obj_UnderlyingDatatypePtr</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">);</span>
 <span class="p">}</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 <section id="attribute-management">
-<h2><span class="section-number">3.3. </span>Attribute Management</h2>
+<h2 class="sigil_not_in_toc"><span class="section-number">3.3. </span>Attribute Management</h2>
 <p>For every object which can support attributes, the corresponding type must
 provide the functions that control how the attributes are resolved.  There needs
 to be a function which can retrieve attributes (if any are defined), and another
@@ -308,7 +320,8 @@ sense for the implementation’s convenience.</p>
 <span class="cm">/* ... */</span>
 <span class="n">getattrofunc</span><span class="w"> </span><span class="n">tp_getattro</span><span class="p">;</span><span class="w">       </span><span class="cm">/* PyObject * version */</span>
 <span class="n">setattrofunc</span><span class="w"> </span><span class="n">tp_setattro</span><span class="p">;</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>If accessing attributes of an object is always a simple operation (this will be
 explained shortly), there are generic implementations which can be used to
@@ -317,7 +330,7 @@ The actual need for type-specific attribute handlers almost completely
 disappeared starting with Python 2.2, though there are many examples which have
 not been updated to use some of the new generic mechanism that is available.</p>
 <section id="generic-attribute-management">
-<span id="id1"></span><h3><span class="section-number">3.3.1. </span>Generic Attribute Management</h3>
+<span id="id1"></span><h3 class="sigil_not_in_toc"><span class="section-number">3.3.1. </span>Generic Attribute Management</h3>
 <p>Most extension types only use <em>simple</em> attributes.  So, what makes the
 attributes simple?  There are only a couple of conditions that must be met:</p>
 <ol class="arabic simple">
@@ -339,7 +352,8 @@ well, allowing the base type to handle attributes.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">PyMethodDef</span><span class="w"> </span><span class="o">*</span><span class="n">tp_methods</span><span class="p">;</span>
 <span class="k">struct</span><span class="w"> </span><span class="nc">PyMemberDef</span><span class="w"> </span><span class="o">*</span><span class="n">tp_members</span><span class="p">;</span>
 <span class="k">struct</span><span class="w"> </span><span class="nc">PyGetSetDef</span><span class="w"> </span><span class="o">*</span><span class="n">tp_getset</span><span class="p">;</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>If <a class="reference internal" href="../c-api/typeobj.xhtml#c.PyTypeObject.tp_methods" title="PyTypeObject.tp_methods"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_methods</span></code></a> is not <code class="docutils literal notranslate"><span class="pre">NULL</span></code>, it must refer to an array of
 <a class="reference internal" href="../c-api/structures.xhtml#c.PyMethodDef" title="PyMethodDef"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyMethodDef</span></code></a> structures.  Each entry in the table is an instance of this
@@ -350,7 +364,8 @@ structure:</p>
 <span class="w">    </span><span class="kt">int</span><span class="w">          </span><span class="n">ml_flags</span><span class="p">;</span><span class="w">      </span><span class="cm">/* flags */</span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w">  </span><span class="o">*</span><span class="n">ml_doc</span><span class="p">;</span><span class="w">        </span><span class="cm">/* docstring */</span>
 <span class="p">}</span><span class="w"> </span><span class="n">PyMethodDef</span><span class="p">;</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>One entry should be defined for each method provided by the type; no entries are
 needed for methods inherited from a base type.  One additional entry is needed
@@ -366,7 +381,8 @@ be read-only or read-write.  The structures in the table are defined as:</p>
 <span class="w">    </span><span class="kt">int</span><span class="w">         </span><span class="n">flags</span><span class="p">;</span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">doc</span><span class="p">;</span>
 <span class="p">}</span><span class="w"> </span><span class="n">PyMemberDef</span><span class="p">;</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>For each entry in the table, a <a class="reference internal" href="../glossary.xhtml#term-descriptor"><span class="xref std std-term">descriptor</span></a> will be constructed and added to the
 type which will be able to extract a value from the instance structure.  The
@@ -384,7 +400,7 @@ class object, and get the doc string using its <a class="reference internal" hre
 of <code class="docutils literal notranslate"><span class="pre">NULL</span></code> is required.</p>
 </section>
 <section id="type-specific-attribute-management">
-<h3><span class="section-number">3.3.2. </span>Type-specific Attribute Management</h3>
+<h3 class="sigil_not_in_toc"><span class="section-number">3.3.2. </span>Type-specific Attribute Management</h3>
 <p>For simplicity, only the <span class="c-expr sig sig-inline c"><span class="kt">char</span><span class="p">*</span></span> version will be demonstrated here; the
 type of the name parameter is the only difference between the <span class="c-expr sig sig-inline c"><span class="kt">char</span><span class="p">*</span></span>
 and <span class="c-expr sig sig-inline c"><a class="reference internal" href="../c-api/structures.xhtml#c.PyObject" title="PyObject"><span class="n">PyObject</span></a><span class="p">*</span></span> flavors of the interface. This example effectively does
@@ -399,17 +415,18 @@ method of a class would be called.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span>
 <span class="nf">newdatatype_getattr</span><span class="p">(</span><span class="n">newdatatypeobject</span><span class="w"> </span><span class="o">*</span><span class="n">obj</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">name</span><span class="p">)</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;data&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="s">"data"</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">PyLong_FromLong</span><span class="p">(</span><span class="n">obj</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="n">PyErr_Format</span><span class="p">(</span><span class="n">PyExc_AttributeError</span><span class="p">,</span>
-<span class="w">                 </span><span class="s">&quot;&#39;%.100s&#39; object has no attribute &#39;%.400s&#39;&quot;</span><span class="p">,</span>
+<span class="w">                 </span><span class="s">"'%.100s' object has no attribute '%.400s'"</span><span class="p">,</span>
 <span class="w">                 </span><span class="n">Py_TYPE</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">tp_name</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">);</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
 <span class="p">}</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The <a class="reference internal" href="../c-api/typeobj.xhtml#c.PyTypeObject.tp_setattr" title="PyTypeObject.tp_setattr"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_setattr</span></code></a> handler is called when the <a class="reference internal" href="../reference/datamodel.xhtml#object.__setattr__" title="object.__setattr__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__setattr__()</span></code></a> or
 <a class="reference internal" href="../reference/datamodel.xhtml#object.__delattr__" title="object.__delattr__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__delattr__()</span></code></a> method of a class instance would be called.  When an
@@ -419,17 +436,19 @@ example that simply raises an exception; if this were really all you wanted, the
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="kt">int</span>
 <span class="nf">newdatatype_setattr</span><span class="p">(</span><span class="n">newdatatypeobject</span><span class="w"> </span><span class="o">*</span><span class="n">obj</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">v</span><span class="p">)</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="n">PyErr_Format</span><span class="p">(</span><span class="n">PyExc_RuntimeError</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Read-only attribute: %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">);</span>
+<span class="w">    </span><span class="n">PyErr_Format</span><span class="p">(</span><span class="n">PyExc_RuntimeError</span><span class="p">,</span><span class="w"> </span><span class="s">"Read-only attribute: %s"</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">);</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
 <span class="p">}</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 </section>
 <section id="object-comparison">
-<h2><span class="section-number">3.4. </span>Object Comparison</h2>
+<h2 class="sigil_not_in_toc"><span class="section-number">3.4. </span>Object Comparison</h2>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">richcmpfunc</span><span class="w"> </span><span class="n">tp_richcompare</span><span class="p">;</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The <a class="reference internal" href="../c-api/typeobj.xhtml#c.PyTypeObject.tp_richcompare" title="PyTypeObject.tp_richcompare"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_richcompare</span></code></a> handler is called when comparisons are needed.  It is
 analogous to the <a class="reference internal" href="../reference/datamodel.xhtml#richcmpfuncs"><span class="std std-ref">rich comparison methods</span></a>, like
@@ -468,11 +487,12 @@ size of an internal pointer is equal:</p>
 <span class="w">    </span><span class="n">Py_INCREF</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
 <span class="w"> </span><span class="p">}</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 <section id="abstract-protocol-support">
-<h2><span class="section-number">3.5. </span>Abstract Protocol Support</h2>
+<h2 class="sigil_not_in_toc"><span class="section-number">3.5. </span>Abstract Protocol Support</h2>
 <p>Python supports a variety of <em>abstract</em> ‘protocols;’ the specific interfaces
 provided to use these interfaces are documented in <a class="reference internal" href="../c-api/abstract.xhtml#abstract"><span class="std std-ref">Abstract Objects Layer</span></a>.</p>
 <p>A number of these abstract interfaces were defined early in the development of
@@ -488,7 +508,8 @@ to indicate the presence of a slot, but a slot may still be unfilled.)</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">PyNumberMethods</span><span class="w">   </span><span class="o">*</span><span class="n">tp_as_number</span><span class="p">;</span>
 <span class="n">PySequenceMethods</span><span class="w"> </span><span class="o">*</span><span class="n">tp_as_sequence</span><span class="p">;</span>
 <span class="n">PyMappingMethods</span><span class="w">  </span><span class="o">*</span><span class="n">tp_as_mapping</span><span class="p">;</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>If you wish your object to be able to act like a number, a sequence, or a
 mapping object, then you place the address of a structure that implements the C
@@ -497,7 +518,8 @@ type <a class="reference internal" href="../c-api/typeobj.xhtml#c.PyNumberMethod
 structure with appropriate values. You can find examples of the use of each of
 these in the <code class="file docutils literal notranslate"><span class="pre">Objects</span></code> directory of the Python source distribution.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">hashfunc</span><span class="w"> </span><span class="n">tp_hash</span><span class="p">;</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>This function, if you choose to provide it, should return a hash number for an
 instance of your data type. Here is a simple example:</p>
@@ -510,14 +532,16 @@ instance of your data type. Here is a simple example:</p>
 <span class="w">       </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-2</span><span class="p">;</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
 <span class="p">}</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p><a class="reference internal" href="../c-api/hash.xhtml#c.Py_hash_t" title="Py_hash_t"><code class="xref c c-type docutils literal notranslate"><span class="pre">Py_hash_t</span></code></a> is a signed integer type with a platform-varying width.
 Returning <code class="docutils literal notranslate"><span class="pre">-1</span></code> from <a class="reference internal" href="../c-api/typeobj.xhtml#c.PyTypeObject.tp_hash" title="PyTypeObject.tp_hash"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_hash</span></code></a> indicates an error,
 which is why you should be careful to avoid returning it when hash computation
 is successful, as seen above.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">ternaryfunc</span><span class="w"> </span><span class="n">tp_call</span><span class="p">;</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>This function is called when an instance of your data type is “called”, for
 example, if <code class="docutils literal notranslate"><span class="pre">obj1</span></code> is an instance of your data type and the Python script
@@ -543,21 +567,23 @@ do not want to support keyword arguments and this is non-<code class="docutils l
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">arg2</span><span class="p">;</span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">arg3</span><span class="p">;</span>
 
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sss:call&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">arg1</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">arg2</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">arg3</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="s">"sss:call"</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">arg1</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">arg2</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">arg3</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PyUnicode_FromFormat</span><span class="p">(</span>
-<span class="w">        </span><span class="s">&quot;Returning -- value: [%d] arg1: [%s] arg2: [%s] arg3: [%s]</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">"Returning -- value: [%d] arg1: [%s] arg2: [%s] arg3: [%s]</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span>
 <span class="w">        </span><span class="n">obj</span><span class="o">-&gt;</span><span class="n">obj_UnderlyingDatatypePtr</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">,</span>
 <span class="w">        </span><span class="n">arg1</span><span class="p">,</span><span class="w"> </span><span class="n">arg2</span><span class="p">,</span><span class="w"> </span><span class="n">arg3</span><span class="p">);</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
 <span class="p">}</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/* Iterators */</span>
 <span class="n">getiterfunc</span><span class="w"> </span><span class="n">tp_iter</span><span class="p">;</span>
 <span class="n">iternextfunc</span><span class="w"> </span><span class="n">tp_iternext</span><span class="p">;</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>These functions provide support for the iterator protocol.  Both handlers
 take exactly one parameter, the instance for which they are being called,
@@ -590,7 +616,7 @@ occurs, <a class="reference internal" href="../c-api/typeobj.xhtml#c.PyTypeObjec
 and return <code class="docutils literal notranslate"><span class="pre">NULL</span></code>.</p>
 </section>
 <section id="weak-reference-support">
-<span id="weakref-support"></span><h2><span class="section-number">3.6. </span>Weak Reference Support</h2>
+<span id="weakref-support"></span><h2 class="sigil_not_in_toc"><span class="section-number">3.6. </span>Weak Reference Support</h2>
 <p>One of the goals of Python’s weak reference implementation is to allow any type
 to participate in the weak reference mechanism without incurring the overhead on
 performance-critical objects (such as numbers).</p>
@@ -608,7 +634,8 @@ be left as zero.</p>
 <span class="w">    </span><span class="cm">/* ... other members omitted for brevity ... */</span>
 <span class="w">    </span><span class="p">.</span><span class="n">tp_flags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Py_TPFLAGS_MANAGED_WEAKREF</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">...,</span>
 <span class="p">};</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The only further addition is that <code class="docutils literal notranslate"><span class="pre">tp_dealloc</span></code> needs to clear any weak
 references (by calling <a class="reference internal" href="../c-api/weakref.xhtml#c.PyObject_ClearWeakRefs" title="PyObject_ClearWeakRefs"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_ClearWeakRefs()</span></code></a>):</p>
@@ -620,11 +647,12 @@ references (by calling <a class="reference internal" href="../c-api/weakref.xhtm
 <span class="w">    </span><span class="cm">/* ... remainder of destruction code omitted for brevity ... */</span>
 <span class="w">    </span><span class="n">Py_TYPE</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">tp_free</span><span class="p">((</span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">self</span><span class="p">);</span>
 <span class="p">}</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 <section id="more-suggestions">
-<h2><span class="section-number">3.7. </span>More Suggestions</h2>
+<h2 class="sigil_not_in_toc"><span class="section-number">3.7. </span>More Suggestions</h2>
 <p>In order to learn how to implement any specific method for your new data type,
 get the <a class="reference internal" href="../glossary.xhtml#term-CPython"><span class="xref std std-term">CPython</span></a> source code.  Go to the <code class="file docutils literal notranslate"><span class="pre">Objects</span></code> directory,
 then search the C source files for <code class="docutils literal notranslate"><span class="pre">tp_</span></code> plus the function you want
@@ -634,17 +662,20 @@ you want to implement.</p>
 are implementing, use the <a class="reference internal" href="../c-api/object.xhtml#c.PyObject_TypeCheck" title="PyObject_TypeCheck"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_TypeCheck()</span></code></a> function.  A sample of
 its use might be something like the following:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">PyObject_TypeCheck</span><span class="p">(</span><span class="n">some_object</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">MyType</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">PyErr_SetString</span><span class="p">(</span><span class="n">PyExc_TypeError</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;arg #1 not a mything&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">PyErr_SetString</span><span class="p">(</span><span class="n">PyExc_TypeError</span><span class="p">,</span><span class="w"> </span><span class="s">"arg #1 not a mything"</span><span class="p">);</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
 <span class="p">}</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt>Download CPython source releases.</dt><dd><p><a class="reference external" href="https://www.python.org/downloads/source/">https://www.python.org/downloads/source/</a></p>
+<dt>Download CPython source releases.</dt>
+<dd><p><a class="reference external" href="https://www.python.org/downloads/source/">https://www.python.org/downloads/source/</a></p>
 </dd>
-<dt>The CPython project on GitHub, where the CPython source code is developed.</dt><dd><p><a class="reference external" href="https://github.com/python/cpython">https://github.com/python/cpython</a></p>
+<dt>The CPython project on GitHub, where the CPython source code is developed.</dt>
+<dd><p><a class="reference external" href="https://github.com/python/cpython">https://github.com/python/cpython</a></p>
 </dd>
 </dl>
 </div>
@@ -657,5 +688,5 @@ its use might be something like the following:</p>
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="gzip — Support for gzip files" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/library/gzip.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="Source code: Lib/gzip.py[https://github.com/python/cpython/tree/3.13/Lib/gzip.py] This module provides a simple interface to compress and decompress files just like the GNU programs gzip and gunzip..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="Source code: Lib/gzip.py[https://github.com/python/cpython/tree/3.13/Lib/gzip.py] This module provides a simple interface to compress and decompress files just like the GNU programs gzip and gunzip..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="gzip — Support for gzip files"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/library/gzip.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="Source code: Lib/gzip.py[https://github.com/python/cpython/tree/3.13/Lib/gzip.py] This module provides a simple interface to compress and decompress files just like the GNU programs gzip and gunzip..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="Source code: Lib/gzip.py[https://github.com/python/cpython/tree/3.13/Lib/gzip.py] This module provides a simple interface to compress and decompress files just like the GNU programs gzip and gunzip..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>gzip — Support for gzip files</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/library/gzip.html" />
+    <link rel="canonical" href="https://docs.python.org/3/library/gzip.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -45,7 +46,7 @@
   <section id="module-gzip">
 <span id="gzip-support-for-gzip-files"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">gzip</span></code> — Support for <strong class="program">gzip</strong> files</h1>
 <p><strong>Source code:</strong> <a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.13/Lib/gzip.py">Lib/gzip.py</a><span class="link-target"> [https://github.com/python/cpython/tree/3.13/Lib/gzip.py]</span></p>
-<hr class="docutils" />
+<hr class="docutils"/>
 <p>This module provides a simple interface to compress and decompress files just
 like the GNU programs <strong class="program">gzip</strong> and <strong class="program">gunzip</strong> would.</p>
 <p>The data compression is provided by the <a class="reference internal" href="zlib.xhtml#module-zlib" title="zlib: Low-level interface to compression and decompression routines compatible with gzip."><code class="xref py py-mod docutils literal notranslate"><span class="pre">zlib</span></code></a> module.</p>
@@ -86,7 +87,8 @@ and the <em>encoding</em>, <em>errors</em> and <em>newline</em> arguments.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="gzip.BadGzipFile">
@@ -97,7 +99,8 @@ files.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.8.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="gzip.GzipFile">
@@ -158,7 +161,8 @@ file object (e.g. if the <a class="reference internal" href="#gzip.GzipFile" tit
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.2.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="gzip.GzipFile.mode">
@@ -167,7 +171,8 @@ file object (e.g. if the <a class="reference internal" href="#gzip.GzipFile" tit
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.13: </span>In previous versions it was an integer <code class="docutils literal notranslate"><span class="pre">1</span></code> or <code class="docutils literal notranslate"><span class="pre">2</span></code>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="gzip.GzipFile.mtime">
@@ -176,7 +181,8 @@ file object (e.g. if the <a class="reference internal" href="#gzip.GzipFile" tit
 recently read header.  It is an integer, holding the number of seconds
 since the Unix epoch (00:00:00 UTC, January 1, 1970).
 The initial value before reading any headers is <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="gzip.GzipFile.name">
@@ -184,7 +190,8 @@ The initial value before reading any headers is <code class="docutils literal no
 <dd><p>The path to the gzip file on disk, as a <a class="reference internal" href="stdtypes.xhtml#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference internal" href="stdtypes.xhtml#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a>.
 Equivalent to the output of <a class="reference internal" href="os.xhtml#os.fspath" title="os.fspath"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.fspath()</span></code></a> on the original input path,
 with no other normalization, resolution or expansion.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.1: </span>Support for the <a class="reference internal" href="../reference/compound_stmts.xhtml#with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">with</span></code></a> statement was added, along with the
@@ -216,7 +223,8 @@ argument is deprecated.</p>
 <p><span class="versionmodified changed">Changed in version 3.12: </span>Remove the <code class="docutils literal notranslate"><span class="pre">filename</span></code> attribute, use the <a class="reference internal" href="#gzip.GzipFile.name" title="gzip.GzipFile.name"><code class="xref py py-attr docutils literal notranslate"><span class="pre">name</span></code></a>
 attribute instead.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="gzip.compress">
@@ -241,7 +249,8 @@ output may contain a gzip header “OS” byte value other than 255
 <p><span class="versionmodified changed">Changed in version 3.13: </span>The gzip header OS byte is guaranteed to be set to 255 when this function
 is used as was the case in 3.10 and earlier.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="gzip.decompress">
@@ -258,48 +267,54 @@ certain to contain only one member the <a class="reference internal" href="zlib.
 <p><span class="versionmodified changed">Changed in version 3.11: </span>Speed is improved by decompressing members at once in memory instead of in
 a streamed fashion.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <section id="examples-of-usage">
-<span id="gzip-usage-examples"></span><h2>Examples of usage</h2>
+<span id="gzip-usage-examples"></span><h2 class="sigil_not_in_toc">Examples of usage</h2>
 <p>Example of how to read a compressed file:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">gzip</span>
-<span class="k">with</span> <span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;/home/joe/file.txt.gz&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="k">with</span> <span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">'/home/joe/file.txt.gz'</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">file_content</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Example of how to create a compressed GZIP file:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">gzip</span>
-<span class="n">content</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;Lots of content here&quot;</span>
-<span class="k">with</span> <span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;/home/joe/file.txt.gz&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="n">content</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">"Lots of content here"</span>
+<span class="k">with</span> <span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">'/home/joe/file.txt.gz'</span><span class="p">,</span> <span class="s1">'wb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Example of how to GZIP compress an existing file:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">gzip</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">shutil</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/home/joe/file.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_in</span><span class="p">:</span>
-    <span class="k">with</span> <span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;/home/joe/file.txt.gz&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_out</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'/home/joe/file.txt'</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_in</span><span class="p">:</span>
+    <span class="k">with</span> <span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">'/home/joe/file.txt.gz'</span><span class="p">,</span> <span class="s1">'wb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_out</span><span class="p">:</span>
         <span class="n">shutil</span><span class="o">.</span><span class="n">copyfileobj</span><span class="p">(</span><span class="n">f_in</span><span class="p">,</span> <span class="n">f_out</span><span class="p">)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Example of how to GZIP compress a binary string:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">gzip</span>
-<span class="n">s_in</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;Lots of content here&quot;</span>
+<span class="n">s_in</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">"Lots of content here"</span>
 <span class="n">s_out</span> <span class="o">=</span> <span class="n">gzip</span><span class="o">.</span><span class="n">compress</span><span class="p">(</span><span class="n">s_in</span><span class="p">)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt>Module <a class="reference internal" href="zlib.xhtml#module-zlib" title="zlib: Low-level interface to compression and decompression routines compatible with gzip."><code class="xref py py-mod docutils literal notranslate"><span class="pre">zlib</span></code></a></dt><dd><p>The basic data compression module needed to support the <strong class="program">gzip</strong> file
+<dt>Module <a class="reference internal" href="zlib.xhtml#module-zlib" title="zlib: Low-level interface to compression and decompression routines compatible with gzip."><code class="xref py py-mod docutils literal notranslate"><span class="pre">zlib</span></code></a></dt>
+<dd><p>The basic data compression module needed to support the <strong class="program">gzip</strong> file
 format.</p>
 </dd>
 </dl>
 </div>
 </section>
 <section id="command-line-interface">
-<span id="gzip-cli"></span><h2>Command Line Interface</h2>
+<span id="gzip-cli"></span><h2 class="sigil_not_in_toc">Command Line Interface</h2>
 <p>The <a class="reference internal" href="#module-gzip" title="gzip: Interfaces for gzip compression and decompression using file objects."><code class="xref py py-mod docutils literal notranslate"><span class="pre">gzip</span></code></a> module provides a simple command line interface to compress or
 decompress files.</p>
 <p>Once executed the <a class="reference internal" href="#module-gzip" title="gzip: Interfaces for gzip compression and decompression using file objects."><code class="xref py py-mod docutils literal notranslate"><span class="pre">gzip</span></code></a> module keeps the input file(s).</p>
@@ -308,36 +323,41 @@ decompress files.</p>
 By default, when you will execute the CLI, the default compression level is 6.</p>
 </div>
 <section id="command-line-options">
-<h3>Command line options</h3>
+<h3 class="sigil_not_in_toc">Command line options</h3>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-gzip-arg-file">
 <span class="sig-name descname"><span class="pre">file</span></span><span class="sig-prename descclassname"></span></dt>
 <dd><p>If <em>file</em> is not specified, read from <a class="reference internal" href="sys.xhtml#sys.stdin" title="sys.stdin"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.stdin</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-gzip-fast">
 <span class="sig-name descname"><span class="pre">--fast</span></span><span class="sig-prename descclassname"></span></dt>
 <dd><p>Indicates the fastest compression method (less compression).</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-gzip-best">
 <span class="sig-name descname"><span class="pre">--best</span></span><span class="sig-prename descclassname"></span></dt>
 <dd><p>Indicates the slowest compression method (best compression).</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-gzip-d">
 <span id="cmdoption-gzip-decompress"></span><span class="sig-name descname"><span class="pre">-d</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--decompress</span></span><span class="sig-prename descclassname"></span></dt>
 <dd><p>Decompress the given file.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-gzip-h">
 <span id="cmdoption-gzip-help"></span><span class="sig-name descname"><span class="pre">-h</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--help</span></span><span class="sig-prename descclassname"></span></dt>
 <dd><p>Show the help message.</p>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 </section>
@@ -349,5 +369,5 @@ By default, when you will execute the CLI, the default compression level is 6.</
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

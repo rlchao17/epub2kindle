@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="Socket Programming HOWTO" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/howto/sockets.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="Author, Gordon McMillan,. Abstract: Sockets are used nearly everywhere, but are one of the most severely misunderstood technologies around. This is a 10,000 foot overview of sockets. It’s not reall..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="Author, Gordon McMillan,. Abstract: Sockets are used nearly everywhere, but are one of the most severely misunderstood technologies around. This is a 10,000 foot overview of sockets. It’s not reall..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="Socket Programming HOWTO"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/howto/sockets.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="Author, Gordon McMillan,. Abstract: Sockets are used nearly everywhere, but are one of the most severely misunderstood technologies around. This is a 10,000 foot overview of sockets. It’s not reall..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="Author, Gordon McMillan,. Abstract: Sockets are used nearly everywhere, but are one of the most severely misunderstood technologies around. This is a 10,000 foot overview of sockets. It’s not reall..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>Socket Programming HOWTO</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/howto/sockets.html" />
+    <link rel="canonical" href="https://docs.python.org/3/howto/sockets.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -58,7 +59,7 @@ operational. It doesn’t cover the fine points (and there are a lot of them), b
 I hope it will give you enough background to begin using them decently.</p>
 </aside>
 <section id="sockets">
-<h2>Sockets</h2>
+<h2 class="sigil_not_in_toc">Sockets</h2>
 <p>I’m only going to talk about INET (i.e. IPv4) sockets, but they account for at least 99% of
 the sockets in use. And I’ll only talk about STREAM (i.e. TCP) sockets - unless you really
 know what you’re doing (in which case this HOWTO isn’t for you!), you’ll get
@@ -74,7 +75,7 @@ distinction between a “client” socket - an endpoint of a conversation, and a
 application (your browser, for example) uses “client” sockets exclusively; the
 web server it’s talking to uses both “server” sockets and “client” sockets.</p>
 <section id="history">
-<h3>History</h3>
+<h3 class="sigil_not_in_toc">History</h3>
 <p>Of the various forms of <abbr title="Inter Process Communication">IPC</abbr>,
 sockets are by far the most popular.  On any given platform, there are
 likely to be other forms of IPC that are faster, but for
@@ -86,14 +87,15 @@ with INET makes talking to arbitrary machines around the world unbelievably easy
 </section>
 </section>
 <section id="creating-a-socket">
-<h2>Creating a Socket</h2>
+<h2 class="sigil_not_in_toc">Creating a Socket</h2>
 <p>Roughly speaking, when you clicked on the link that brought you to this page,
 your browser did something like the following:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create an INET, STREAMing socket</span>
 <span class="n">s</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
 <span class="c1"># now connect to the web server on port 80 - the normal http port</span>
-<span class="n">s</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="s2">&quot;www.python.org&quot;</span><span class="p">,</span> <span class="mi">80</span><span class="p">))</span>
-</pre></div>
+<span class="n">s</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="s2">"www.python.org"</span><span class="p">,</span> <span class="mi">80</span><span class="p">))</span>
+</pre>
+</div>
 </div>
 <p>When the <code class="docutils literal notranslate"><span class="pre">connect</span></code> completes, the socket <code class="docutils literal notranslate"><span class="pre">s</span></code> can be used to send
 in a request for the text of the page. The same socket will read the
@@ -108,7 +110,8 @@ creates a “server socket”:</p>
 <span class="n">serversocket</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="n">socket</span><span class="o">.</span><span class="n">gethostname</span><span class="p">(),</span> <span class="mi">80</span><span class="p">))</span>
 <span class="c1"># become a server socket</span>
 <span class="n">serversocket</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>A couple things to notice: we used <code class="docutils literal notranslate"><span class="pre">socket.gethostname()</span></code> so that the socket
 would be visible to the outside world.  If we had used <code class="docutils literal notranslate"><span class="pre">s.bind(('localhost',</span>
@@ -128,10 +131,11 @@ mainloop of the web server:</p>
     <span class="c1"># accept connections from outside</span>
     <span class="p">(</span><span class="n">clientsocket</span><span class="p">,</span> <span class="n">address</span><span class="p">)</span> <span class="o">=</span> <span class="n">serversocket</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
     <span class="c1"># now do something with the clientsocket</span>
-    <span class="c1"># in this case, we&#39;ll pretend this is a threaded server</span>
+    <span class="c1"># in this case, we'll pretend this is a threaded server</span>
     <span class="n">ct</span> <span class="o">=</span> <span class="n">client_thread</span><span class="p">(</span><span class="n">clientsocket</span><span class="p">)</span>
     <span class="n">ct</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>There’s actually 3 general ways in which this loop could work - dispatching a
 thread to handle <code class="docutils literal notranslate"><span class="pre">clientsocket</span></code>, create a new process to handle
@@ -146,7 +150,7 @@ go back to listening for more connections. The two “clients” are free to cha
 up - they are using some dynamically allocated port which will be recycled when
 the conversation ends.</p>
 <section id="ipc">
-<h3>IPC</h3>
+<h3 class="sigil_not_in_toc">IPC</h3>
 <p>If you need fast IPC between two processes on one machine, you should look into
 pipes or shared memory.  If you do decide to use AF_INET sockets, bind the
 “server” socket to <code class="docutils literal notranslate"><span class="pre">'localhost'</span></code>. On most platforms, this will take a
@@ -159,7 +163,7 @@ API.</p>
 </section>
 </section>
 <section id="using-a-socket">
-<h2>Using a Socket</h2>
+<h2 class="sigil_not_in_toc">Using a Socket</h2>
 <p>The first thing to note, is that the web browser’s “client” socket and the web
 server’s “client” socket are identical beasts. That is, this is a “peer to peer”
 conversation. Or to put it another way, <em>as the designer, you will have to
@@ -201,9 +205,9 @@ righter than others).</p>
 <p>Assuming you don’t want to end the connection, the simplest solution is a fixed
 length message:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">MySocket</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;demonstration class only</span>
+<span class="w">    </span><span class="sd">"""demonstration class only</span>
 <span class="sd">      - coded for clarity, not efficiency</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sock</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">sock</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -220,7 +224,7 @@ length message:</p>
         <span class="k">while</span> <span class="n">totalsent</span> <span class="o">&lt;</span> <span class="n">MSGLEN</span><span class="p">:</span>
             <span class="n">sent</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sock</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">msg</span><span class="p">[</span><span class="n">totalsent</span><span class="p">:])</span>
             <span class="k">if</span> <span class="n">sent</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;socket connection broken&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">"socket connection broken"</span><span class="p">)</span>
             <span class="n">totalsent</span> <span class="o">=</span> <span class="n">totalsent</span> <span class="o">+</span> <span class="n">sent</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">myreceive</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -228,12 +232,13 @@ length message:</p>
         <span class="n">bytes_recd</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">while</span> <span class="n">bytes_recd</span> <span class="o">&lt;</span> <span class="n">MSGLEN</span><span class="p">:</span>
             <span class="n">chunk</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sock</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">MSGLEN</span> <span class="o">-</span> <span class="n">bytes_recd</span><span class="p">,</span> <span class="mi">2048</span><span class="p">))</span>
-            <span class="k">if</span> <span class="n">chunk</span> <span class="o">==</span> <span class="sa">b</span><span class="s1">&#39;&#39;</span><span class="p">:</span>
-                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;socket connection broken&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">chunk</span> <span class="o">==</span> <span class="sa">b</span><span class="s1">''</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">"socket connection broken"</span><span class="p">)</span>
             <span class="n">chunks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
             <span class="n">bytes_recd</span> <span class="o">=</span> <span class="n">bytes_recd</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
-        <span class="k">return</span> <span class="sa">b</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">chunks</span><span class="p">)</span>
-</pre></div>
+        <span class="k">return</span> <span class="sa">b</span><span class="s1">''</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">chunks</span><span class="p">)</span>
+</pre>
+</div>
 </div>
 <p>The sending code here is usable for almost any messaging scheme - in Python you
 send strings, and you can use <code class="docutils literal notranslate"><span class="pre">len()</span></code> to determine its length (even if it has
@@ -264,7 +269,7 @@ get bit by it!</p>
 competitive position), these enhancements are left as an exercise for the
 reader. Lets move on to cleaning up.</p>
 <section id="binary-data">
-<h3>Binary Data</h3>
+<h3 class="sigil_not_in_toc">Binary Data</h3>
 <p>It is perfectly possible to send binary data over a socket. The major problem is
 that not all machines use the same formats for binary data. For example,
 <a class="reference external" href="https://en.wikipedia.org/wiki/Endianness#Networking">network byte order</a><span class="link-target"> [https://en.wikipedia.org/wiki/Endianness#Networking]</span>
@@ -280,13 +285,13 @@ appropriately.</p>
 <p>In these days of 64-bit machines, the ASCII representation of binary data is
 frequently smaller than the binary representation. That’s because a surprising
 amount of the time, most integers have the value 0, or maybe 1.
-The string <code class="docutils literal notranslate"><span class="pre">&quot;0&quot;</span></code> would be two bytes, while a full 64-bit integer would be 8.
+The string <code class="docutils literal notranslate"><span class="pre">"0"</span></code> would be two bytes, while a full 64-bit integer would be 8.
 Of course, this doesn’t fit well with fixed-length messages.
 Decisions, decisions.</p>
 </section>
 </section>
 <section id="disconnecting">
-<h2>Disconnecting</h2>
+<h2 class="sigil_not_in_toc">Disconnecting</h2>
 <p>Strictly speaking, you’re supposed to use <code class="docutils literal notranslate"><span class="pre">shutdown</span></code> on a socket before you
 <code class="docutils literal notranslate"><span class="pre">close</span></code> it.  The <code class="docutils literal notranslate"><span class="pre">shutdown</span></code> is an advisory to the socket at the other end.
 Depending on the argument you pass it, it can mean “I’m not going to send
@@ -306,7 +311,7 @@ relying on this is a very bad habit. If your socket just disappears without
 doing a <code class="docutils literal notranslate"><span class="pre">close</span></code>, the socket at the other end may hang indefinitely, thinking
 you’re just being slow. <em>Please</em> <code class="docutils literal notranslate"><span class="pre">close</span></code> your sockets when you’re done.</p>
 <section id="when-sockets-die">
-<h3>When Sockets Die</h3>
+<h3 class="sigil_not_in_toc">When Sockets Die</h3>
 <p>Probably the worst thing about using blocking sockets is what happens when the
 other side comes down hard (without doing a <code class="docutils literal notranslate"><span class="pre">close</span></code>). Your socket is likely to
 hang. TCP is a reliable protocol, and it will wait a long, long time
@@ -321,7 +326,7 @@ process is likely to be screwed up.</p>
 </section>
 </section>
 <section id="non-blocking-sockets">
-<h2>Non-blocking Sockets</h2>
+<h2 class="sigil_not_in_toc">Non-blocking Sockets</h2>
 <p>If you’ve understood the preceding, you already know most of what you need to
 know about the mechanics of using sockets. You’ll still use the same calls, in
 much the same ways. It’s just that, if you do it right, your app will be almost
@@ -348,7 +353,8 @@ you’ll have little trouble with it in C:</p>
                   <span class="n">potential_writers</span><span class="p">,</span>
                   <span class="n">potential_errs</span><span class="p">,</span>
                   <span class="n">timeout</span><span class="p">)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>You pass <code class="docutils literal notranslate"><span class="pre">select</span></code> three lists: the first contains all sockets that you might
 want to try reading; the second all the sockets you might want to try writing
@@ -389,5 +395,5 @@ very, very well) with my sockets.</p>
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

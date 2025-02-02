@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="cmath — Mathematical functions for complex numbers" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/library/cmath.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="This module provides access to mathematical functions for complex numbers. The functions in this module accept integers, floating-point numbers or complex numbers as arguments. They will also accep..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="This module provides access to mathematical functions for complex numbers. The functions in this module accept integers, floating-point numbers or complex numbers as arguments. They will also accep..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="cmath — Mathematical functions for complex numbers"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/library/cmath.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="This module provides access to mathematical functions for complex numbers. The functions in this module accept integers, floating-point numbers or complex numbers as arguments. They will also accep..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="This module provides access to mathematical functions for complex numbers. The functions in this module accept integers, floating-point numbers or complex numbers as arguments. They will also accep..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>cmath — Mathematical functions for complex numbers</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/library/cmath.html" />
+    <link rel="canonical" href="https://docs.python.org/3/library/cmath.html"/>
     
       
     
@@ -35,16 +37,15 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
             
   <section id="module-cmath">
 <span id="cmath-mathematical-functions-for-complex-numbers"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">cmath</span></code> — Mathematical functions for complex numbers</h1>
-<hr class="docutils" />
+<hr class="docutils"/>
 <p>This module provides access to mathematical functions for complex numbers.  The
 functions in this module accept integers, floating-point numbers or complex
 numbers as arguments. They will also accept any Python object that has either a
@@ -66,17 +67,19 @@ though it lies <em>below</em> the branch cut, and so gives a result on the negat
 imaginary axis:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cmath</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">complex</span><span class="p">(</span><span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0</span><span class="p">))</span>
 <span class="go">-1.4142135623730951j</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>But an argument of <code class="docutils literal notranslate"><span class="pre">complex(-2.0,</span> <span class="pre">0.0)</span></code> is treated as though it lies above
 the branch cut:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cmath</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">complex</span><span class="p">(</span><span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">))</span>
 <span class="go">1.4142135623730951j</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </div>
 <section id="conversions-to-and-from-polar-coordinates">
-<h2>Conversions to and from polar coordinates</h2>
+<h2 class="sigil_not_in_toc">Conversions to and from polar coordinates</h2>
 <p>A Python complex number <code class="docutils literal notranslate"><span class="pre">z</span></code> is stored internally using <em>rectangular</em>
 or <em>Cartesian</em> coordinates.  It is completely determined by its <em>real
 part</em> <code class="docutils literal notranslate"><span class="pre">z.real</span></code> and its <em>imaginary part</em> <code class="docutils literal notranslate"><span class="pre">z.imag</span></code>.</p>
@@ -100,9 +103,11 @@ sign of <code class="docutils literal notranslate"><span class="pre">x.imag</spa
 <span class="go">3.141592653589793</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">phase</span><span class="p">(</span><span class="nb">complex</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0</span><span class="p">))</span>
 <span class="go">-3.141592653589793</span>
-</pre></div>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -117,24 +122,27 @@ separate <a class="reference internal" href="#module-cmath" title="cmath: Mathem
 pair <code class="docutils literal notranslate"><span class="pre">(r,</span> <span class="pre">phi)</span></code> where <em>r</em> is the modulus of <em>x</em> and phi is the
 phase of <em>x</em>.  <code class="docutils literal notranslate"><span class="pre">polar(x)</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">(abs(x),</span>
 <span class="pre">phase(x))</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cmath.rect">
 <span class="sig-prename descclassname"><span class="pre">cmath.</span></span><span class="sig-name descname"><span class="pre">rect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Return the complex number <em>x</em> with polar coordinates <em>r</em> and <em>phi</em>.
 Equivalent to <code class="docutils literal notranslate"><span class="pre">complex(r</span> <span class="pre">*</span> <span class="pre">math.cos(phi),</span> <span class="pre">r</span> <span class="pre">*</span> <span class="pre">math.sin(phi))</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="power-and-logarithmic-functions">
-<h2>Power and logarithmic functions</h2>
+<h2 class="sigil_not_in_toc">Power and logarithmic functions</h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="cmath.exp">
 <span class="sig-prename descclassname"><span class="pre">cmath.</span></span><span class="sig-name descname"><span class="pre">exp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Return <em>e</em> raised to the power <em>x</em>, where <em>e</em> is the base of natural
 logarithms.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cmath.log">
@@ -142,37 +150,42 @@ logarithms.</p>
 <dd><p>Returns the logarithm of <em>x</em> to the given <em>base</em>. If the <em>base</em> is not
 specified, returns the natural logarithm of <em>x</em>. There is one branch cut,
 from 0 along the negative real axis to -∞.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cmath.log10">
 <span class="sig-prename descclassname"><span class="pre">cmath.</span></span><span class="sig-name descname"><span class="pre">log10</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Return the base-10 logarithm of <em>x</em>. This has the same branch cut as
 <a class="reference internal" href="#cmath.log" title="cmath.log"><code class="xref py py-func docutils literal notranslate"><span class="pre">log()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cmath.sqrt">
 <span class="sig-prename descclassname"><span class="pre">cmath.</span></span><span class="sig-name descname"><span class="pre">sqrt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Return the square root of <em>x</em>. This has the same branch cut as <a class="reference internal" href="#cmath.log" title="cmath.log"><code class="xref py py-func docutils literal notranslate"><span class="pre">log()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="trigonometric-functions">
-<h2>Trigonometric functions</h2>
+<h2 class="sigil_not_in_toc">Trigonometric functions</h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="cmath.acos">
 <span class="sig-prename descclassname"><span class="pre">cmath.</span></span><span class="sig-name descname"><span class="pre">acos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Return the arc cosine of <em>x</em>. There are two branch cuts: One extends right
 from 1 along the real axis to ∞. The other extends left from -1 along the
 real axis to -∞.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cmath.asin">
 <span class="sig-prename descclassname"><span class="pre">cmath.</span></span><span class="sig-name descname"><span class="pre">asin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Return the arc sine of <em>x</em>. This has the same branch cuts as <a class="reference internal" href="#cmath.acos" title="cmath.acos"><code class="xref py py-func docutils literal notranslate"><span class="pre">acos()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cmath.atan">
@@ -180,35 +193,40 @@ real axis to -∞.</p>
 <dd><p>Return the arc tangent of <em>x</em>. There are two branch cuts: One extends from
 <code class="docutils literal notranslate"><span class="pre">1j</span></code> along the imaginary axis to <code class="docutils literal notranslate"><span class="pre">∞j</span></code>. The other extends from <code class="docutils literal notranslate"><span class="pre">-1j</span></code>
 along the imaginary axis to <code class="docutils literal notranslate"><span class="pre">-∞j</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cmath.cos">
 <span class="sig-prename descclassname"><span class="pre">cmath.</span></span><span class="sig-name descname"><span class="pre">cos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Return the cosine of <em>x</em>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cmath.sin">
 <span class="sig-prename descclassname"><span class="pre">cmath.</span></span><span class="sig-name descname"><span class="pre">sin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Return the sine of <em>x</em>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cmath.tan">
 <span class="sig-prename descclassname"><span class="pre">cmath.</span></span><span class="sig-name descname"><span class="pre">tan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Return the tangent of <em>x</em>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="hyperbolic-functions">
-<h2>Hyperbolic functions</h2>
+<h2 class="sigil_not_in_toc">Hyperbolic functions</h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="cmath.acosh">
 <span class="sig-prename descclassname"><span class="pre">cmath.</span></span><span class="sig-name descname"><span class="pre">acosh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Return the inverse hyperbolic cosine of <em>x</em>. There is one branch cut,
 extending left from 1 along the real axis to -∞.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cmath.asinh">
@@ -216,7 +234,8 @@ extending left from 1 along the real axis to -∞.</p>
 <dd><p>Return the inverse hyperbolic sine of <em>x</em>. There are two branch cuts:
 One extends from <code class="docutils literal notranslate"><span class="pre">1j</span></code> along the imaginary axis to <code class="docutils literal notranslate"><span class="pre">∞j</span></code>.  The other
 extends from <code class="docutils literal notranslate"><span class="pre">-1j</span></code> along the imaginary axis to <code class="docutils literal notranslate"><span class="pre">-∞j</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cmath.atanh">
@@ -224,29 +243,33 @@ extends from <code class="docutils literal notranslate"><span class="pre">-1j</s
 <dd><p>Return the inverse hyperbolic tangent of <em>x</em>. There are two branch cuts: One
 extends from <code class="docutils literal notranslate"><span class="pre">1</span></code> along the real axis to <code class="docutils literal notranslate"><span class="pre">∞</span></code>. The other extends from
 <code class="docutils literal notranslate"><span class="pre">-1</span></code> along the real axis to <code class="docutils literal notranslate"><span class="pre">-∞</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cmath.cosh">
 <span class="sig-prename descclassname"><span class="pre">cmath.</span></span><span class="sig-name descname"><span class="pre">cosh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Return the hyperbolic cosine of <em>x</em>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cmath.sinh">
 <span class="sig-prename descclassname"><span class="pre">cmath.</span></span><span class="sig-name descname"><span class="pre">sinh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Return the hyperbolic sine of <em>x</em>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cmath.tanh">
 <span class="sig-prename descclassname"><span class="pre">cmath.</span></span><span class="sig-name descname"><span class="pre">tanh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Return the hyperbolic tangent of <em>x</em>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="classification-functions">
-<h2>Classification functions</h2>
+<h2 class="sigil_not_in_toc">Classification functions</h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="cmath.isfinite">
 <span class="sig-prename descclassname"><span class="pre">cmath.</span></span><span class="sig-name descname"><span class="pre">isfinite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span></dt>
@@ -255,21 +278,24 @@ extends from <code class="docutils literal notranslate"><span class="pre">1</spa
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.2.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cmath.isinf">
 <span class="sig-prename descclassname"><span class="pre">cmath.</span></span><span class="sig-name descname"><span class="pre">isinf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if either the real or the imaginary part of <em>x</em> is an
 infinity, and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cmath.isnan">
 <span class="sig-prename descclassname"><span class="pre">cmath.</span></span><span class="sig-name descname"><span class="pre">isnan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if either the real or the imaginary part of <em>x</em> is a NaN,
 and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cmath.isclose">
@@ -301,22 +327,25 @@ considered close to themselves.</p>
 <p class="admonition-title">See also</p>
 <p><span class="target" id="index-0"></span><a class="pep reference external" href="https://peps.python.org/pep-0485/"><strong>PEP 485</strong></a><span class="link-target"> [https://peps.python.org/pep-0485/]</span> – A function for testing approximate equality</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="constants">
-<h2>Constants</h2>
+<h2 class="sigil_not_in_toc">Constants</h2>
 <dl class="py data">
 <dt class="sig sig-object py" id="cmath.pi">
 <span class="sig-prename descclassname"><span class="pre">cmath.</span></span><span class="sig-name descname"><span class="pre">pi</span></span></dt>
 <dd><p>The mathematical constant <em>π</em>, as a float.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="cmath.e">
 <span class="sig-prename descclassname"><span class="pre">cmath.</span></span><span class="sig-name descname"><span class="pre">e</span></span></dt>
 <dd><p>The mathematical constant <em>e</em>, as a float.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="cmath.tau">
@@ -325,7 +354,8 @@ considered close to themselves.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.6.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="cmath.inf">
@@ -334,7 +364,8 @@ considered close to themselves.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.6.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="cmath.infj">
@@ -344,7 +375,8 @@ part. Equivalent to <code class="docutils literal notranslate"><span class="pre"
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.6.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="cmath.nan">
@@ -354,7 +386,8 @@ part. Equivalent to <code class="docutils literal notranslate"><span class="pre"
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.6.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="cmath.nanj">
@@ -364,7 +397,8 @@ part. Equivalent to <code class="docutils literal notranslate"><span class="pre"
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.6.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <p id="index-1">Note that the selection of functions is similar, but not identical, to that in
 module <a class="reference internal" href="math.xhtml#module-math" title="math: Mathematical functions (sin() etc.)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">math</span></code></a>.  The reason for having two modules is that some users aren’t
@@ -394,5 +428,5 @@ in numerical analysis. Clarendon Press (1987) pp165–211.</p>
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="9. Classes" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/tutorial/classes.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="Classes provide a means of bundling data and functionality together. Creating a new class creates a new type of object, allowing new instances of that type to be made. Each class instance can have ..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="Classes provide a means of bundling data and functionality together. Creating a new class creates a new type of object, allowing new instances of that type to be made. Each class instance can have ..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="9. Classes"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/tutorial/classes.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="Classes provide a means of bundling data and functionality together. Creating a new class creates a new type of object, allowing new instances of that type to be made. Each class instance can have ..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="Classes provide a means of bundling data and functionality together. Creating a new class creates a new type of object, allowing new instances of that type to be made. Each class instance can have ..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>9. Classes</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/tutorial/classes.html" />
+    <link rel="canonical" href="https://docs.python.org/3/tutorial/classes.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -73,7 +74,7 @@ occasional use of Smalltalk and C++ terms.  I would use Modula-3 terms, since
 its object-oriented semantics are closer to those of Python than C++, but I
 expect that few readers have heard of it.)</p>
 <section id="a-word-about-names-and-objects">
-<span id="tut-object"></span><h2><span class="section-number">9.1. </span>A Word About Names and Objects</h2>
+<span id="tut-object"></span><h2 class="sigil_not_in_toc"><span class="section-number">9.1. </span>A Word About Names and Objects</h2>
 <p>Objects have individuality, and multiple names (in multiple scopes) can be bound
 to the same object.  This is known as aliasing in other languages.  This is
 usually not appreciated on a first glance at Python, and can be safely ignored
@@ -87,7 +88,7 @@ passed as an argument, the caller will see the change — this eliminates the
 need for two different argument passing mechanisms as in Pascal.</p>
 </section>
 <section id="python-scopes-and-namespaces">
-<span id="tut-scopes"></span><h2><span class="section-number">9.2. </span>Python Scopes and Namespaces</h2>
+<span id="tut-scopes"></span><h2 class="sigil_not_in_toc"><span class="section-number">9.2. </span>Python Scopes and Namespaces</h2>
 <p>Before introducing classes, I first have to tell you something about Python’s
 scope rules.  Class definitions play some neat tricks with namespaces, and you
 need to know how scopes and namespaces work to fully understand what’s going on.
@@ -172,40 +173,42 @@ variables live in the global scope and should be rebound there; the
 <a class="reference internal" href="../reference/simple_stmts.xhtml#nonlocal"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">nonlocal</span></code></a> statement indicates that particular variables live in
 an enclosing scope and should be rebound there.</p>
 <section id="scopes-and-namespaces-example">
-<span id="tut-scopeexample"></span><h3><span class="section-number">9.2.1. </span>Scopes and Namespaces Example</h3>
+<span id="tut-scopeexample"></span><h3 class="sigil_not_in_toc"><span class="section-number">9.2.1. </span>Scopes and Namespaces Example</h3>
 <p>This is an example demonstrating how to reference the different scopes and
 namespaces, and how <a class="reference internal" href="../reference/simple_stmts.xhtml#global"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">global</span></code></a> and <a class="reference internal" href="../reference/simple_stmts.xhtml#nonlocal"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">nonlocal</span></code></a> affect variable
 binding:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">scope_test</span><span class="p">():</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">do_local</span><span class="p">():</span>
-        <span class="n">spam</span> <span class="o">=</span> <span class="s2">&quot;local spam&quot;</span>
+        <span class="n">spam</span> <span class="o">=</span> <span class="s2">"local spam"</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">do_nonlocal</span><span class="p">():</span>
         <span class="k">nonlocal</span> <span class="n">spam</span>
-        <span class="n">spam</span> <span class="o">=</span> <span class="s2">&quot;nonlocal spam&quot;</span>
+        <span class="n">spam</span> <span class="o">=</span> <span class="s2">"nonlocal spam"</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">do_global</span><span class="p">():</span>
         <span class="k">global</span> <span class="n">spam</span>
-        <span class="n">spam</span> <span class="o">=</span> <span class="s2">&quot;global spam&quot;</span>
+        <span class="n">spam</span> <span class="o">=</span> <span class="s2">"global spam"</span>
 
-    <span class="n">spam</span> <span class="o">=</span> <span class="s2">&quot;test spam&quot;</span>
+    <span class="n">spam</span> <span class="o">=</span> <span class="s2">"test spam"</span>
     <span class="n">do_local</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;After local assignment:&quot;</span><span class="p">,</span> <span class="n">spam</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"After local assignment:"</span><span class="p">,</span> <span class="n">spam</span><span class="p">)</span>
     <span class="n">do_nonlocal</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;After nonlocal assignment:&quot;</span><span class="p">,</span> <span class="n">spam</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"After nonlocal assignment:"</span><span class="p">,</span> <span class="n">spam</span><span class="p">)</span>
     <span class="n">do_global</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;After global assignment:&quot;</span><span class="p">,</span> <span class="n">spam</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"After global assignment:"</span><span class="p">,</span> <span class="n">spam</span><span class="p">)</span>
 
 <span class="n">scope_test</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;In global scope:&quot;</span><span class="p">,</span> <span class="n">spam</span><span class="p">)</span>
-</pre></div>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"In global scope:"</span><span class="p">,</span> <span class="n">spam</span><span class="p">)</span>
+</pre>
+</div>
 </div>
 <p>The output of the example code is:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>After local assignment: test spam
 After nonlocal assignment: nonlocal spam
 After global assignment: nonlocal spam
 In global scope: global spam
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Note how the <em>local</em> assignment (which is default) didn’t change <em>scope_test</em>'s
 binding of <em>spam</em>.  The <a class="reference internal" href="../reference/simple_stmts.xhtml#nonlocal"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">nonlocal</span></code></a> assignment changed <em>scope_test</em>'s
@@ -216,11 +219,11 @@ binding.</p>
 </section>
 </section>
 <section id="a-first-look-at-classes">
-<span id="tut-firstclasses"></span><h2><span class="section-number">9.3. </span>A First Look at Classes</h2>
+<span id="tut-firstclasses"></span><h2 class="sigil_not_in_toc"><span class="section-number">9.3. </span>A First Look at Classes</h2>
 <p>Classes introduce a little bit of new syntax, three new object types, and some
 new semantics.</p>
 <section id="class-definition-syntax">
-<span id="tut-classdefinition"></span><h3><span class="section-number">9.3.1. </span>Class Definition Syntax</h3>
+<span id="tut-classdefinition"></span><h3 class="sigil_not_in_toc"><span class="section-number">9.3.1. </span>Class Definition Syntax</h3>
 <p>The simplest form of class definition looks like this:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">ClassName</span><span class="p">:</span>
     <span class="o">&lt;</span><span class="n">statement</span><span class="o">-</span><span class="mi">1</span><span class="o">&gt;</span>
@@ -228,7 +231,8 @@ new semantics.</p>
     <span class="o">.</span>
     <span class="o">.</span>
     <span class="o">&lt;</span><span class="n">statement</span><span class="o">-</span><span class="n">N</span><span class="o">&gt;</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Class definitions, like function definitions (<a class="reference internal" href="../reference/compound_stmts.xhtml#def"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">def</span></code></a> statements) must be
 executed before they have any effect.  (You could conceivably place a class
@@ -251,7 +255,7 @@ class name given in the class definition header (<code class="xref py py-class d
 example).</p>
 </section>
 <section id="class-objects">
-<span id="tut-classobjects"></span><h3><span class="section-number">9.3.2. </span>Class Objects</h3>
+<span id="tut-classobjects"></span><h3 class="sigil_not_in_toc"><span class="section-number">9.3.2. </span>Class Objects</h3>
 <p>Class objects support two kinds of operations: attribute references and
 instantiation.</p>
 <p><em>Attribute references</em> use the standard syntax used for all attribute references
@@ -259,23 +263,25 @@ in Python: <code class="docutils literal notranslate"><span class="pre">obj.name
 the class’s namespace when the class object was created.  So, if the class
 definition looked like this:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">MyClass</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;A simple example class&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""A simple example class"""</span>
     <span class="n">i</span> <span class="o">=</span> <span class="mi">12345</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s1">&#39;hello world&#39;</span>
-</pre></div>
+        <span class="k">return</span> <span class="s1">'hello world'</span>
+</pre>
+</div>
 </div>
 <p>then <code class="docutils literal notranslate"><span class="pre">MyClass.i</span></code> and <code class="docutils literal notranslate"><span class="pre">MyClass.f</span></code> are valid attribute references, returning
 an integer and a function object, respectively. Class attributes can also be
 assigned to, so you can change the value of <code class="docutils literal notranslate"><span class="pre">MyClass.i</span></code> by assignment.
 <a class="reference internal" href="../reference/datamodel.xhtml#type.__doc__" title="type.__doc__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__doc__</span></code></a> is also a valid attribute, returning the docstring
-belonging to the class: <code class="docutils literal notranslate"><span class="pre">&quot;A</span> <span class="pre">simple</span> <span class="pre">example</span> <span class="pre">class&quot;</span></code>.</p>
+belonging to the class: <code class="docutils literal notranslate"><span class="pre">"A</span> <span class="pre">simple</span> <span class="pre">example</span> <span class="pre">class"</span></code>.</p>
 <p>Class <em>instantiation</em> uses function notation.  Just pretend that the class
 object is a parameterless function that returns a new instance of the class.
 For example (assuming the above class):</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>creates a new <em>instance</em> of the class and assigns this object to the local
 variable <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
@@ -285,13 +291,15 @@ initial state. Therefore a class may define a special method named
 <a class="reference internal" href="../reference/datamodel.xhtml#object.__init__" title="object.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__init__()</span></code></a>, like this:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>When a class defines an <a class="reference internal" href="../reference/datamodel.xhtml#object.__init__" title="object.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__init__()</span></code></a> method, class instantiation
 automatically invokes <code class="xref py py-meth docutils literal notranslate"><span class="pre">__init__()</span></code> for the newly created class instance.  So
 in this example, a new, initialized instance can be obtained by:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Of course, the <a class="reference internal" href="../reference/datamodel.xhtml#object.__init__" title="object.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__init__()</span></code></a> method may have arguments for greater
 flexibility.  In that case, arguments given to the class instantiation operator
@@ -304,11 +312,12 @@ are passed on to <code class="xref py py-meth docutils literal notranslate"><spa
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">Complex</span><span class="p">(</span><span class="mf">3.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.5</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="o">.</span><span class="n">r</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">i</span>
 <span class="go">(3.0, -4.5)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 <section id="instance-objects">
-<span id="tut-instanceobjects"></span><h3><span class="section-number">9.3.3. </span>Instance Objects</h3>
+<span id="tut-instanceobjects"></span><h3 class="sigil_not_in_toc"><span class="section-number">9.3.3. </span>Instance Objects</h3>
 <p>Now what can we do with instance objects?  The only operations understood by
 instance objects are attribute references.  There are two kinds of valid
 attribute names: data attributes and methods.</p>
@@ -322,7 +331,8 @@ code will print the value <code class="docutils literal notranslate"><span class
     <span class="n">x</span><span class="o">.</span><span class="n">counter</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">counter</span> <span class="o">*</span> <span class="mi">2</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">counter</span><span class="p">)</span>
 <span class="k">del</span> <span class="n">x</span><span class="o">.</span><span class="n">counter</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The other kind of instance attribute reference is a <em>method</em>. A method is a
 function that “belongs to” an object.</p>
@@ -334,10 +344,11 @@ reference, since <code class="docutils literal notranslate"><span class="pre">My
 is a <em>method object</em>, not a function object.</p>
 </section>
 <section id="method-objects">
-<span id="tut-methodobjects"></span><h3><span class="section-number">9.3.4. </span>Method Objects</h3>
+<span id="tut-methodobjects"></span><h3 class="sigil_not_in_toc"><span class="section-number">9.3.4. </span>Method Objects</h3>
 <p>Usually, a method is called right after it is bound:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">f</span><span class="p">()</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>In the <code class="xref py py-class docutils literal notranslate"><span class="pre">MyClass</span></code> example, this will return the string <code class="docutils literal notranslate"><span class="pre">'hello</span> <span class="pre">world'</span></code>.
 However, it is not necessary to call a method right away: <code class="docutils literal notranslate"><span class="pre">x.f</span></code> is a method
@@ -345,7 +356,8 @@ object, and can be stored away and called at a later time.  For example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">xf</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">f</span>
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">xf</span><span class="p">())</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>will continue to print <code class="docutils literal notranslate"><span class="pre">hello</span> <span class="pre">world</span></code> until the end of time.</p>
 <p>What exactly happens when a method is called?  You may have noticed that
@@ -369,28 +381,29 @@ object and the argument list, and the function object is called with this new
 argument list.</p>
 </section>
 <section id="class-and-instance-variables">
-<span id="tut-class-and-instance-variables"></span><h3><span class="section-number">9.3.5. </span>Class and Instance Variables</h3>
+<span id="tut-class-and-instance-variables"></span><h3 class="sigil_not_in_toc"><span class="section-number">9.3.5. </span>Class and Instance Variables</h3>
 <p>Generally speaking, instance variables are for data unique to each instance
 and class variables are for attributes and methods shared by all instances
 of the class:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Dog</span><span class="p">:</span>
 
-    <span class="n">kind</span> <span class="o">=</span> <span class="s1">&#39;canine&#39;</span>         <span class="c1"># class variable shared by all instances</span>
+    <span class="n">kind</span> <span class="o">=</span> <span class="s1">'canine'</span>         <span class="c1"># class variable shared by all instances</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>    <span class="c1"># instance variable unique to each instance</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s1">&#39;Fido&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">e</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s1">&#39;Buddy&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s1">'Fido'</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">e</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s1">'Buddy'</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">d</span><span class="o">.</span><span class="n">kind</span>                  <span class="c1"># shared by all dogs</span>
-<span class="s1">&#39;canine&#39;</span>
+<span class="s1">'canine'</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">e</span><span class="o">.</span><span class="n">kind</span>                  <span class="c1"># shared by all dogs</span>
-<span class="s1">&#39;canine&#39;</span>
+<span class="s1">'canine'</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">d</span><span class="o">.</span><span class="n">name</span>                  <span class="c1"># unique to d</span>
-<span class="s1">&#39;Fido&#39;</span>
+<span class="s1">'Fido'</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">e</span><span class="o">.</span><span class="n">name</span>                  <span class="c1"># unique to e</span>
-<span class="s1">&#39;Buddy&#39;</span>
-</pre></div>
+<span class="s1">'Buddy'</span>
+</pre>
+</div>
 </div>
 <p>As discussed in <a class="reference internal" href="#tut-object"><span class="std std-ref">A Word About Names and Objects</span></a>, shared data can have possibly surprising
 effects with involving <a class="reference internal" href="../glossary.xhtml#term-mutable"><span class="xref std std-term">mutable</span></a> objects such as lists and dictionaries.
@@ -407,13 +420,14 @@ instances:</p>
     <span class="k">def</span><span class="w"> </span><span class="nf">add_trick</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">trick</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">tricks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trick</span><span class="p">)</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s1">&#39;Fido&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">e</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s1">&#39;Buddy&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span><span class="o">.</span><span class="n">add_trick</span><span class="p">(</span><span class="s1">&#39;roll over&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">e</span><span class="o">.</span><span class="n">add_trick</span><span class="p">(</span><span class="s1">&#39;play dead&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s1">'Fido'</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">e</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s1">'Buddy'</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span><span class="o">.</span><span class="n">add_trick</span><span class="p">(</span><span class="s1">'roll over'</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">e</span><span class="o">.</span><span class="n">add_trick</span><span class="p">(</span><span class="s1">'play dead'</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">d</span><span class="o">.</span><span class="n">tricks</span>                <span class="c1"># unexpectedly shared by all dogs</span>
-<span class="p">[</span><span class="s1">&#39;roll over&#39;</span><span class="p">,</span> <span class="s1">&#39;play dead&#39;</span><span class="p">]</span>
-</pre></div>
+<span class="p">[</span><span class="s1">'roll over'</span><span class="p">,</span> <span class="s1">'play dead'</span><span class="p">]</span>
+</pre>
+</div>
 </div>
 <p>Correct design of the class should use an instance variable instead:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Dog</span><span class="p">:</span>
@@ -425,34 +439,36 @@ instances:</p>
     <span class="k">def</span><span class="w"> </span><span class="nf">add_trick</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">trick</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">tricks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trick</span><span class="p">)</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s1">&#39;Fido&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">e</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s1">&#39;Buddy&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span><span class="o">.</span><span class="n">add_trick</span><span class="p">(</span><span class="s1">&#39;roll over&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">e</span><span class="o">.</span><span class="n">add_trick</span><span class="p">(</span><span class="s1">&#39;play dead&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s1">'Fido'</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">e</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s1">'Buddy'</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span><span class="o">.</span><span class="n">add_trick</span><span class="p">(</span><span class="s1">'roll over'</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">e</span><span class="o">.</span><span class="n">add_trick</span><span class="p">(</span><span class="s1">'play dead'</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">d</span><span class="o">.</span><span class="n">tricks</span>
-<span class="p">[</span><span class="s1">&#39;roll over&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">'roll over'</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">e</span><span class="o">.</span><span class="n">tricks</span>
-<span class="p">[</span><span class="s1">&#39;play dead&#39;</span><span class="p">]</span>
-</pre></div>
+<span class="p">[</span><span class="s1">'play dead'</span><span class="p">]</span>
+</pre>
+</div>
 </div>
 </section>
 </section>
 <section id="random-remarks">
-<span id="tut-remarks"></span><h2><span class="section-number">9.4. </span>Random Remarks</h2>
+<span id="tut-remarks"></span><h2 class="sigil_not_in_toc"><span class="section-number">9.4. </span>Random Remarks</h2>
 <p>If the same attribute name occurs in both an instance and in a class,
 then attribute lookup prioritizes the instance:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span><span class="w"> </span><span class="nc">Warehouse</span><span class="p">:</span>
-<span class="gp">... </span>   <span class="n">purpose</span> <span class="o">=</span> <span class="s1">&#39;storage&#39;</span>
-<span class="gp">... </span>   <span class="n">region</span> <span class="o">=</span> <span class="s1">&#39;west&#39;</span>
+<span class="gp">... </span>   <span class="n">purpose</span> <span class="o">=</span> <span class="s1">'storage'</span>
+<span class="gp">... </span>   <span class="n">region</span> <span class="o">=</span> <span class="s1">'west'</span>
 <span class="gp">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">w1</span> <span class="o">=</span> <span class="n">Warehouse</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">w1</span><span class="o">.</span><span class="n">purpose</span><span class="p">,</span> <span class="n">w1</span><span class="o">.</span><span class="n">region</span><span class="p">)</span>
 <span class="go">storage west</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">w2</span> <span class="o">=</span> <span class="n">Warehouse</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">w2</span><span class="o">.</span><span class="n">region</span> <span class="o">=</span> <span class="s1">&#39;east&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">w2</span><span class="o">.</span><span class="n">region</span> <span class="o">=</span> <span class="s1">'east'</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">w2</span><span class="o">.</span><span class="n">purpose</span><span class="p">,</span> <span class="n">w2</span><span class="o">.</span><span class="n">region</span><span class="p">)</span>
 <span class="go">storage east</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Data attributes may be referenced by methods as well as by ordinary users
 (“clients”) of an object.  In other words, classes are not usable to implement
@@ -487,10 +503,11 @@ variable in the class is also ok.  For example:</p>
     <span class="n">f</span> <span class="o">=</span> <span class="n">f1</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">g</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s1">&#39;hello world&#39;</span>
+        <span class="k">return</span> <span class="s1">'hello world'</span>
 
     <span class="n">h</span> <span class="o">=</span> <span class="n">g</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Now <code class="docutils literal notranslate"><span class="pre">f</span></code>, <code class="docutils literal notranslate"><span class="pre">g</span></code> and <code class="docutils literal notranslate"><span class="pre">h</span></code> are all attributes of class <code class="xref py py-class docutils literal notranslate"><span class="pre">C</span></code> that refer to
 function objects, and consequently they are all methods of instances of
@@ -508,7 +525,8 @@ argument:</p>
     <span class="k">def</span><span class="w"> </span><span class="nf">addtwice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Methods may reference global names in the same way as ordinary functions.  The
 global scope associated with a method is the module containing its
@@ -523,7 +541,7 @@ reasons why a method would want to reference its own class.</p>
 It is stored as <code class="docutils literal notranslate"><span class="pre">object.__class__</span></code>.</p>
 </section>
 <section id="inheritance">
-<span id="tut-inheritance"></span><h2><span class="section-number">9.5. </span>Inheritance</h2>
+<span id="tut-inheritance"></span><h2 class="sigil_not_in_toc"><span class="section-number">9.5. </span>Inheritance</h2>
 <p>Of course, a language feature would not be worthy of the name “class” without
 supporting inheritance.  The syntax for a derived class definition looks like
 this:</p>
@@ -533,7 +551,8 @@ this:</p>
     <span class="o">.</span>
     <span class="o">.</span>
     <span class="o">&lt;</span><span class="n">statement</span><span class="o">-</span><span class="n">N</span><span class="o">&gt;</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The name <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseClassName</span></code> must be defined in a
 namespace accessible from the scope containing the
@@ -541,7 +560,8 @@ derived class definition.  In place of a base class name, other arbitrary
 expressions are also allowed.  This can be useful, for example, when the base
 class is defined in another module:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">DerivedClassName</span><span class="p">(</span><span class="n">modname</span><span class="o">.</span><span class="n">BaseClassName</span><span class="p">):</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Execution of a derived class definition proceeds the same as for a base class.
 When the class object is constructed, the base class is remembered.  This is
@@ -575,7 +595,7 @@ is <code class="docutils literal notranslate"><span class="pre">True</span></cod
 subclass of <a class="reference internal" href="../library/functions.xhtml#int" title="int"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>.</p></li>
 </ul>
 <section id="multiple-inheritance">
-<span id="tut-multiple"></span><h3><span class="section-number">9.5.1. </span>Multiple Inheritance</h3>
+<span id="tut-multiple"></span><h3 class="sigil_not_in_toc"><span class="section-number">9.5.1. </span>Multiple Inheritance</h3>
 <p>Python supports a form of multiple inheritance as well.  A class definition with
 multiple base classes looks like this:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">DerivedClassName</span><span class="p">(</span><span class="n">Base1</span><span class="p">,</span> <span class="n">Base2</span><span class="p">,</span> <span class="n">Base3</span><span class="p">):</span>
@@ -584,7 +604,8 @@ multiple base classes looks like this:</p>
     <span class="o">.</span>
     <span class="o">.</span>
     <span class="o">&lt;</span><span class="n">statement</span><span class="o">-</span><span class="n">N</span><span class="o">&gt;</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>For most purposes, in the simplest cases, you can think of the search for
 attributes inherited from a parent class as depth-first, left-to-right, not
@@ -612,7 +633,7 @@ extensible classes with multiple inheritance.  For more detail, see
 </section>
 </section>
 <section id="private-variables">
-<span id="tut-private"></span><h2><span class="section-number">9.6. </span>Private Variables</h2>
+<span id="tut-private"></span><h2 class="sigil_not_in_toc"><span class="section-number">9.6. </span>Private Variables</h2>
 <p>“Private” instance variables that cannot be accessed except from inside an
 object don’t exist in Python.  However, there is a convention that is followed
 by most Python code: a name prefixed with an underscore (e.g. <code class="docutils literal notranslate"><span class="pre">_spam</span></code>) should
@@ -652,7 +673,8 @@ breaking intraclass method calls.  For example:</p>
         <span class="c1"># but does not break __init__()</span>
         <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">values</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">items_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The above example would work even if <code class="docutils literal notranslate"><span class="pre">MappingSubclass</span></code> were to introduce a
 <code class="docutils literal notranslate"><span class="pre">__update</span></code> identifier since it is replaced with <code class="docutils literal notranslate"><span class="pre">_Mapping__update</span></code> in the
@@ -669,7 +691,7 @@ to code that is byte-compiled together.  The same restriction applies to
 <code class="docutils literal notranslate"><span class="pre">__dict__</span></code> directly.</p>
 </section>
 <section id="odds-and-ends">
-<span id="tut-odds"></span><h2><span class="section-number">9.7. </span>Odds and Ends</h2>
+<span id="tut-odds"></span><h2 class="sigil_not_in_toc"><span class="section-number">9.7. </span>Odds and Ends</h2>
 <p>Sometimes it is useful to have a data type similar to the Pascal “record” or C
 “struct”, bundling together a few named data items. The idiomatic approach
 is to use <a class="reference internal" href="../library/dataclasses.xhtml#module-dataclasses" title="dataclasses: Generate special methods on user-defined classes."><code class="xref py py-mod docutils literal notranslate"><span class="pre">dataclasses</span></code></a> for this purpose:</p>
@@ -680,14 +702,16 @@ is to use <a class="reference internal" href="../library/dataclasses.xhtml#modul
     <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
     <span class="n">dept</span><span class="p">:</span> <span class="nb">str</span>
     <span class="n">salary</span><span class="p">:</span> <span class="nb">int</span>
-</pre></div>
+</pre>
 </div>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">john</span> <span class="o">=</span> <span class="n">Employee</span><span class="p">(</span><span class="s1">&#39;john&#39;</span><span class="p">,</span> <span class="s1">&#39;computer lab&#39;</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+</div>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">john</span> <span class="o">=</span> <span class="n">Employee</span><span class="p">(</span><span class="s1">'john'</span><span class="p">,</span> <span class="s1">'computer lab'</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">john</span><span class="o">.</span><span class="n">dept</span>
-<span class="go">&#39;computer lab&#39;</span>
+<span class="go">'computer lab'</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">john</span><span class="o">.</span><span class="n">salary</span>
 <span class="go">1000</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>A piece of Python code that expects a particular abstract data type can often be
 passed a class that emulates the methods of that data type instead.  For
@@ -702,20 +726,21 @@ the <a class="reference internal" href="../reference/datamodel.xhtml#user-define
 corresponding to the method.</p>
 </section>
 <section id="iterators">
-<span id="tut-iterators"></span><h2><span class="section-number">9.8. </span>Iterators</h2>
+<span id="tut-iterators"></span><h2 class="sigil_not_in_toc"><span class="section-number">9.8. </span>Iterators</h2>
 <p>By now you have probably noticed that most container objects can be looped over
 using a <a class="reference internal" href="../reference/compound_stmts.xhtml#for"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">for</span></code></a> statement:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">{</span><span class="s1">&#39;one&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">}:</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">{</span><span class="s1">'one'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s1">'two'</span><span class="p">:</span><span class="mi">2</span><span class="p">}:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="s2">&quot;123&quot;</span><span class="p">:</span>
+<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="s2">"123"</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;myfile.txt&quot;</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-</pre></div>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"myfile.txt"</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">''</span><span class="p">)</span>
+</pre>
+</div>
 </div>
 <p>This style of access is clear, concise, and convenient.  The use of iterators
 pervades and unifies Python.  Behind the scenes, the <a class="reference internal" href="../reference/compound_stmts.xhtml#for"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">for</span></code></a> statement
@@ -725,29 +750,30 @@ elements in the container one at a time.  When there are no more elements,
 <a class="reference internal" href="../library/stdtypes.xhtml#iterator.__next__" title="iterator.__next__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__next__()</span></code></a> raises a <a class="reference internal" href="../library/exceptions.xhtml#StopIteration" title="StopIteration"><code class="xref py py-exc docutils literal notranslate"><span class="pre">StopIteration</span></code></a> exception which tells the
 <code class="xref std std-keyword docutils literal notranslate"><span class="pre">for</span></code> loop to terminate.  You can call the <a class="reference internal" href="../library/stdtypes.xhtml#iterator.__next__" title="iterator.__next__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__next__()</span></code></a> method
 using the <a class="reference internal" href="../library/functions.xhtml#next" title="next"><code class="xref py py-func docutils literal notranslate"><span class="pre">next()</span></code></a> built-in function; this example shows how it all works:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;abc&#39;</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="s1">'abc'</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">it</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">it</span>
 <span class="go">&lt;str_iterator object at 0x10c90e650&gt;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">it</span><span class="p">)</span>
-<span class="go">&#39;a&#39;</span>
+<span class="go">'a'</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">it</span><span class="p">)</span>
-<span class="go">&#39;b&#39;</span>
+<span class="go">'b'</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">it</span><span class="p">)</span>
-<span class="go">&#39;c&#39;</span>
+<span class="go">'c'</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">it</span><span class="p">)</span>
 <span class="gt">Traceback (most recent call last):</span>
-  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+  File <span class="nb">"&lt;stdin&gt;"</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
 <span class="w">    </span><span class="nb">next</span><span class="p">(</span><span class="n">it</span><span class="p">)</span>
 <span class="gr">StopIteration</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Having seen the mechanics behind the iterator protocol, it is easy to add
 iterator behavior to your classes.  Define an <a class="reference internal" href="../library/stdtypes.xhtml#container.__iter__" title="container.__iter__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__iter__()</span></code></a> method which
 returns an object with a <a class="reference internal" href="../library/stdtypes.xhtml#iterator.__next__" title="iterator.__next__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__next__()</span></code></a> method.  If the class
 defines <code class="xref py py-meth docutils literal notranslate"><span class="pre">__next__()</span></code>, then <code class="xref py py-meth docutils literal notranslate"><span class="pre">__iter__()</span></code> can just return <code class="docutils literal notranslate"><span class="pre">self</span></code>:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Reverse</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Iterator for looping over a sequence backwards.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Iterator for looping over a sequence backwards."""</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
@@ -760,9 +786,10 @@ defines <code class="xref py py-meth docutils literal notranslate"><span class="
             <span class="k">raise</span> <span class="ne">StopIteration</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">index</span> <span class="o">-</span> <span class="mi">1</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="p">]</span>
-</pre></div>
+</pre>
 </div>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rev</span> <span class="o">=</span> <span class="n">Reverse</span><span class="p">(</span><span class="s1">&#39;spam&#39;</span><span class="p">)</span>
+</div>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rev</span> <span class="o">=</span> <span class="n">Reverse</span><span class="p">(</span><span class="s1">'spam'</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">iter</span><span class="p">(</span><span class="n">rev</span><span class="p">)</span>
 <span class="go">&lt;__main__.Reverse object at 0x00A1DB50&gt;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">rev</span><span class="p">:</span>
@@ -772,11 +799,12 @@ defines <code class="xref py py-meth docutils literal notranslate"><span class="
 <span class="go">a</span>
 <span class="go">p</span>
 <span class="go">s</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 <section id="generators">
-<span id="tut-generators"></span><h2><span class="section-number">9.9. </span>Generators</h2>
+<span id="tut-generators"></span><h2 class="sigil_not_in_toc"><span class="section-number">9.9. </span>Generators</h2>
 <p><a class="reference internal" href="../glossary.xhtml#term-generator"><span class="xref std std-term">Generators</span></a> are a simple and powerful tool for creating iterators.  They
 are written like regular functions but use the <a class="reference internal" href="../reference/simple_stmts.xhtml#yield"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">yield</span></code></a> statement
 whenever they want to return data.  Each time <a class="reference internal" href="../library/functions.xhtml#next" title="next"><code class="xref py py-func docutils literal notranslate"><span class="pre">next()</span></code></a> is called on it, the
@@ -786,16 +814,18 @@ easy to create:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">reverse</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
         <span class="k">yield</span> <span class="n">data</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
-</pre></div>
+</pre>
 </div>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">reverse</span><span class="p">(</span><span class="s1">&#39;golf&#39;</span><span class="p">):</span>
+</div>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">reverse</span><span class="p">(</span><span class="s1">'golf'</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
 <span class="gp">...</span>
 <span class="go">f</span>
 <span class="go">l</span>
 <span class="go">o</span>
 <span class="go">g</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Anything that can be done with generators can also be done with class-based
 iterators as described in the previous section.  What makes generators so
@@ -811,7 +841,7 @@ combination, these features make it easy to create iterators with no more effort
 than writing a regular function.</p>
 </section>
 <section id="generator-expressions">
-<span id="tut-genexps"></span><h2><span class="section-number">9.10. </span>Generator Expressions</h2>
+<span id="tut-genexps"></span><h2 class="sigil_not_in_toc"><span class="section-number">9.10. </span>Generator Expressions</h2>
 <p>Some simple generators can be coded succinctly as expressions using a syntax
 similar to list comprehensions but with parentheses instead of square brackets.
 These expressions are designed for situations where the generator is used right
@@ -831,10 +861,11 @@ than equivalent list comprehensions.</p>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">valedictorian</span> <span class="o">=</span> <span class="nb">max</span><span class="p">((</span><span class="n">student</span><span class="o">.</span><span class="n">gpa</span><span class="p">,</span> <span class="n">student</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">student</span> <span class="ow">in</span> <span class="n">graduates</span><span class="p">)</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="s1">&#39;golf&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="s1">'golf'</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
-<span class="go">[&#39;f&#39;, &#39;l&#39;, &#39;o&#39;, &#39;g&#39;]</span>
-</pre></div>
+<span class="go">['f', 'l', 'o', 'g']</span>
+</pre>
+</div>
 </div>
 <p class="rubric">Footnotes</p>
 <aside class="footnote-list brackets">
@@ -856,5 +887,5 @@ should be restricted to things like post-mortem debuggers.</p>
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="1. Introduction" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/reference/introduction.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="This reference manual describes the Python programming language. It is not intended as a tutorial. While I am trying to be as precise as possible, I chose to use English rather than formal specific..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="This reference manual describes the Python programming language. It is not intended as a tutorial. While I am trying to be as precise as possible, I chose to use English rather than formal specific..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="1. Introduction"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/reference/introduction.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="This reference manual describes the Python programming language. It is not intended as a tutorial. While I am trying to be as precise as possible, I chose to use English rather than formal specific..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="This reference manual describes the Python programming language. It is not intended as a tutorial. While I am trying to be as precise as possible, I chose to use English rather than formal specific..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>1. Introduction</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/reference/introduction.html" />
+    <link rel="canonical" href="https://docs.python.org/3/reference/introduction.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -70,30 +71,35 @@ modules.  These are documented in <a class="reference internal" href="../library
 are mentioned when they interact in a significant way with the language
 definition.</p>
 <section id="alternate-implementations">
-<span id="implementations"></span><h2><span class="section-number">1.1. </span>Alternate Implementations</h2>
+<span id="implementations"></span><h2 class="sigil_not_in_toc"><span class="section-number">1.1. </span>Alternate Implementations</h2>
 <p>Though there is one Python implementation which is by far the most popular,
 there are some alternate implementations which are of particular interest to
 different audiences.</p>
 <p>Known implementations include:</p>
 <dl class="simple">
-<dt>CPython</dt><dd><p>This is the original and most-maintained implementation of Python, written in C.
+<dt>CPython</dt>
+<dd><p>This is the original and most-maintained implementation of Python, written in C.
 New language features generally appear here first.</p>
 </dd>
-<dt>Jython</dt><dd><p>Python implemented in Java.  This implementation can be used as a scripting
+<dt>Jython</dt>
+<dd><p>Python implemented in Java.  This implementation can be used as a scripting
 language for Java applications, or can be used to create applications using the
 Java class libraries.  It is also often used to create tests for Java libraries.
 More information can be found at <a class="reference external" href="https://www.jython.org/">the Jython website</a><span class="link-target"> [https://www.jython.org/]</span>.</p>
 </dd>
-<dt>Python for .NET</dt><dd><p>This implementation actually uses the CPython implementation, but is a managed
+<dt>Python for .NET</dt>
+<dd><p>This implementation actually uses the CPython implementation, but is a managed
 .NET application and makes .NET libraries available.  It was created by Brian
 Lloyd.  For more information, see the <a class="reference external" href="https://pythonnet.github.io/">Python for .NET home page</a><span class="link-target"> [https://pythonnet.github.io/]</span>.</p>
 </dd>
-<dt>IronPython</dt><dd><p>An alternate Python for .NET.  Unlike Python.NET, this is a complete Python
+<dt>IronPython</dt>
+<dd><p>An alternate Python for .NET.  Unlike Python.NET, this is a complete Python
 implementation that generates IL, and compiles Python code directly to .NET
 assemblies.  It was created by Jim Hugunin, the original creator of Jython.  For
 more information, see <a class="reference external" href="https://ironpython.net/">the IronPython website</a><span class="link-target"> [https://ironpython.net/]</span>.</p>
 </dd>
-<dt>PyPy</dt><dd><p>An implementation of Python written completely in Python. It supports several
+<dt>PyPy</dt>
+<dd><p>An implementation of Python written completely in Python. It supports several
 advanced features not found in other implementations like stackless support
 and a Just in Time compiler. One of the goals of the project is to encourage
 experimentation with the language itself by making it easier to modify the
@@ -108,13 +114,12 @@ documentation to determine what else you need to know about the specific
 implementation you’re using.</p>
 </section>
 <section id="notation">
-<span id="id2"></span><h2><span class="section-number">1.2. </span>Notation</h2>
+<span id="id2"></span><h2 class="sigil_not_in_toc"><span class="section-number">1.2. </span>Notation</h2>
 <p id="index-0">The descriptions of lexical analysis and syntax use a modified
 <a class="reference external" href="https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form">Backus–Naur form (BNF)</a><span class="link-target"> [https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form]</span> grammar
 notation.  This uses the following style of definition:</p>
-<pre>
-<strong id="grammar-token-notation-name">name     </strong> ::=  <a class="reference internal" href="#grammar-token-notation-lc_letter"><code class="xref docutils literal notranslate"><span class="pre">lc_letter</span></code></a> (<a class="reference internal" href="#grammar-token-notation-lc_letter"><code class="xref docutils literal notranslate"><span class="pre">lc_letter</span></code></a> | &quot;_&quot;)*
-<strong id="grammar-token-notation-lc_letter">lc_letter</strong> ::=  &quot;a&quot;...&quot;z&quot;
+<pre><strong id="grammar-token-notation-name">name     </strong> ::=  <a class="reference internal" href="#grammar-token-notation-lc_letter"><code class="xref docutils literal notranslate"><span class="pre">lc_letter</span></code></a> (<a class="reference internal" href="#grammar-token-notation-lc_letter"><code class="xref docutils literal notranslate"><span class="pre">lc_letter</span></code></a> | "_")*
+<strong id="grammar-token-notation-lc_letter">lc_letter</strong> ::=  "a"..."z"
 </pre>
 <p>The first line says that a <code class="docutils literal notranslate"><span class="pre">name</span></code> is an <code class="docutils literal notranslate"><span class="pre">lc_letter</span></code> followed by a sequence
 of zero or more <code class="docutils literal notranslate"><span class="pre">lc_letter</span></code>s and underscores.  An <code class="docutils literal notranslate"><span class="pre">lc_letter</span></code> in turn is
@@ -152,5 +157,5 @@ definitions; uses in subsequent chapters are syntactic definitions.</p>
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="random — Generate pseudo-random numbers" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/library/random.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="Source code: Lib/random.py[https://github.com/python/cpython/tree/3.13/Lib/random.py] This module implements pseudo-random number generators for various distributions. For integers, there is unifor..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="Source code: Lib/random.py[https://github.com/python/cpython/tree/3.13/Lib/random.py] This module implements pseudo-random number generators for various distributions. For integers, there is unifor..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="random — Generate pseudo-random numbers"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/library/random.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="Source code: Lib/random.py[https://github.com/python/cpython/tree/3.13/Lib/random.py] This module implements pseudo-random number generators for various distributions. For integers, there is unifor..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="Source code: Lib/random.py[https://github.com/python/cpython/tree/3.13/Lib/random.py] This module implements pseudo-random number generators for various distributions. For integers, there is unifor..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>random — Generate pseudo-random numbers</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/library/random.html" />
+    <link rel="canonical" href="https://docs.python.org/3/library/random.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -45,7 +46,7 @@
   <section id="module-random">
 <span id="random-generate-pseudo-random-numbers"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">random</span></code> — Generate pseudo-random numbers</h1>
 <p><strong>Source code:</strong> <a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.13/Lib/random.py">Lib/random.py</a><span class="link-target"> [https://github.com/python/cpython/tree/3.13/Lib/random.py]</span></p>
-<hr class="docutils" />
+<hr class="docutils"/>
 <p>This module implements pseudo-random number generators for various
 distributions.</p>
 <p>For integers, there is uniform selection from a range. For sequences, there is
@@ -95,7 +96,7 @@ to the same instance of <a class="reference internal" href="#random.Random" titl
 Consider using separate instances of <a class="reference internal" href="#random.Random" title="random.Random"><code class="xref py py-class docutils literal notranslate"><span class="pre">Random</span></code></a> per thread instead.</p>
 </div>
 <section id="bookkeeping-functions">
-<h2>Bookkeeping functions</h2>
+<h2 class="sigil_not_in_toc">Bookkeeping functions</h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="random.seed">
 <span class="sig-prename descclassname"><span class="pre">random.</span></span><span class="sig-name descname"><span class="pre">seed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span></dt>
@@ -118,14 +119,16 @@ narrower range of seeds.</p>
 <code class="docutils literal notranslate"><span class="pre">None</span></code>, <a class="reference internal" href="functions.xhtml#int" title="int"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference internal" href="functions.xhtml#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>, <a class="reference internal" href="stdtypes.xhtml#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>,
 <a class="reference internal" href="stdtypes.xhtml#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a>, or <a class="reference internal" href="stdtypes.xhtml#bytearray" title="bytearray"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytearray</span></code></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="random.getstate">
 <span class="sig-prename descclassname"><span class="pre">random.</span></span><span class="sig-name descname"><span class="pre">getstate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Return an object capturing the current internal state of the generator.  This
 object can be passed to <a class="reference internal" href="#random.setstate" title="random.setstate"><code class="xref py py-func docutils literal notranslate"><span class="pre">setstate()</span></code></a> to restore the state.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="random.setstate">
@@ -133,11 +136,12 @@ object can be passed to <a class="reference internal" href="#random.setstate" ti
 <dd><p><em>state</em> should have been obtained from a previous call to <a class="reference internal" href="#random.getstate" title="random.getstate"><code class="xref py py-func docutils literal notranslate"><span class="pre">getstate()</span></code></a>, and
 <a class="reference internal" href="#random.setstate" title="random.setstate"><code class="xref py py-func docutils literal notranslate"><span class="pre">setstate()</span></code></a> restores the internal state of the generator to what it was at
 the time <a class="reference internal" href="#random.getstate" title="random.getstate"><code class="xref py py-func docutils literal notranslate"><span class="pre">getstate()</span></code></a> was called.</p>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="functions-for-bytes">
-<h2>Functions for bytes</h2>
+<h2 class="sigil_not_in_toc">Functions for bytes</h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="random.randbytes">
 <span class="sig-prename descclassname"><span class="pre">random.</span></span><span class="sig-name descname"><span class="pre">randbytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span></dt>
@@ -147,11 +151,12 @@ Use <a class="reference internal" href="secrets.xhtml#secrets.token_bytes" title
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.9.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="functions-for-integers">
-<h2>Functions for integers</h2>
+<h2 class="sigil_not_in_toc">Functions for integers</h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="random.randrange">
 <span class="sig-prename descclassname"><span class="pre">random.</span></span><span class="sig-name descname"><span class="pre">randrange</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stop</span></span></em><span class="sig-paren">)</span></dt>
@@ -174,14 +179,16 @@ slightly uneven distributions.</p>
 Calls such as <code class="docutils literal notranslate"><span class="pre">randrange(10.0)</span></code> and <code class="docutils literal notranslate"><span class="pre">randrange(Fraction(10,</span> <span class="pre">1))</span></code>
 now raise a <a class="reference internal" href="exceptions.xhtml#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="random.randint">
 <span class="sig-prename descclassname"><span class="pre">random.</span></span><span class="sig-name descname"><span class="pre">randint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Return a random integer <em>N</em> such that <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;=</span> <span class="pre">N</span> <span class="pre">&lt;=</span> <span class="pre">b</span></code>.  Alias for
 <code class="docutils literal notranslate"><span class="pre">randrange(a,</span> <span class="pre">b+1)</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="random.getrandbits">
@@ -194,17 +201,19 @@ ranges.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.9: </span>This method now accepts zero for <em>k</em>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="functions-for-sequences">
-<h2>Functions for sequences</h2>
+<h2 class="sigil_not_in_toc">Functions for sequences</h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="random.choice">
 <span class="sig-prename descclassname"><span class="pre">random.</span></span><span class="sig-name descname"><span class="pre">choice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Return a random element from the non-empty sequence <em>seq</em>. If <em>seq</em> is empty,
 raises <a class="reference internal" href="exceptions.xhtml#IndexError" title="IndexError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">IndexError</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="random.choices">
@@ -240,7 +249,8 @@ to avoid small biases from round-off error.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.9: </span>Raises a <a class="reference internal" href="exceptions.xhtml#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> if all weights are zero.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="random.shuffle">
@@ -256,7 +266,8 @@ can fit within the period of the Mersenne Twister random number generator.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.11: </span>Removed the optional parameter <em>random</em>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="random.sample">
@@ -286,11 +297,12 @@ is raised.</p>
 <p><span class="versionmodified changed">Changed in version 3.11: </span>The <em>population</em> must be a sequence.  Automatic conversion of sets
 to lists is no longer supported.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="discrete-distributions">
-<h2>Discrete distributions</h2>
+<h2 class="sigil_not_in_toc">Discrete distributions</h2>
 <p>The following function generates a discrete distribution.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="random.binomialvariate">
@@ -300,7 +312,8 @@ Return the number of successes for <em>n</em> independent trials with the
 probability of success in each trial being <em>p</em>:</p>
 <p>Mathematically equivalent to:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">p</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The number of trials <em>n</em> should be a non-negative integer.
 The probability of success <em>p</em> should be between <code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">&lt;=</span> <span class="pre">p</span> <span class="pre">&lt;=</span> <span class="pre">1.0</span></code>.
@@ -308,11 +321,12 @@ The result is an integer in the range <code class="docutils literal notranslate"
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.12.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="real-valued-distributions">
-<span id="id1"></span><h2>Real-valued distributions</h2>
+<span id="id1"></span><h2 class="sigil_not_in_toc">Real-valued distributions</h2>
 <p>The following functions generate specific real-valued distributions. Function
 parameters are named after the corresponding variables in the distribution’s
 equation, as used in common mathematical practice; most of these equations can
@@ -321,7 +335,8 @@ be found in any statistics text.</p>
 <dt class="sig sig-object py" id="random.random">
 <span class="sig-prename descclassname"><span class="pre">random.</span></span><span class="sig-name descname"><span class="pre">random</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Return the next random floating-point number in the range <code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">&lt;=</span> <span class="pre">X</span> <span class="pre">&lt;</span> <span class="pre">1.0</span></code></p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="random.uniform">
@@ -331,7 +346,8 @@ be found in any statistics text.</p>
 <p>The end-point value <code class="docutils literal notranslate"><span class="pre">b</span></code> may or may not be included in the range
 depending on floating-point rounding in the expression
 <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">(b-a)</span> <span class="pre">*</span> <span class="pre">random()</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="random.triangular">
@@ -340,14 +356,16 @@ depending on floating-point rounding in the expression
 with the specified <em>mode</em> between those bounds.  The <em>low</em> and <em>high</em> bounds
 default to zero and one.  The <em>mode</em> argument defaults to the midpoint
 between the bounds, giving a symmetric distribution.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="random.betavariate">
 <span class="sig-prename descclassname"><span class="pre">random.</span></span><span class="sig-name descname"><span class="pre">betavariate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Beta distribution.  Conditions on the parameters are <code class="docutils literal notranslate"><span class="pre">alpha</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> and
 <code class="docutils literal notranslate"><span class="pre">beta</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>. Returned values range between 0 and 1.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="random.expovariate">
@@ -360,7 +378,8 @@ negative infinity to 0 if <em>lambd</em> is negative.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.12: </span>Added the default value for <code class="docutils literal notranslate"><span class="pre">lambd</span></code>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="random.gammavariate">
@@ -373,9 +392,11 @@ as the inverse of the scale).</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span>          <span class="n">x</span> <span class="o">**</span> <span class="p">(</span><span class="n">alpha</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span> <span class="o">/</span> <span class="n">beta</span><span class="p">)</span>
 <span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">=</span>  <span class="o">--------------------------------------</span>
             <span class="n">math</span><span class="o">.</span><span class="n">gamma</span><span class="p">(</span><span class="n">alpha</span><span class="p">)</span> <span class="o">*</span> <span class="n">beta</span> <span class="o">**</span> <span class="n">alpha</span>
-</pre></div>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="random.gauss">
@@ -393,7 +414,8 @@ slower, but thread-safe <a class="reference internal" href="#random.normalvariat
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.11: </span><em>mu</em> and <em>sigma</em> now have default arguments.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="random.lognormvariate">
@@ -402,7 +424,8 @@ slower, but thread-safe <a class="reference internal" href="#random.normalvariat
 distribution, you’ll get a normal distribution with mean <em>mu</em> and standard
 deviation <em>sigma</em>.  <em>mu</em> can have any value, and <em>sigma</em> must be greater than
 zero.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="random.normalvariate">
@@ -411,7 +434,8 @@ zero.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.11: </span><em>mu</em> and <em>sigma</em> now have default arguments.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="random.vonmisesvariate">
@@ -420,24 +444,27 @@ zero.</p>
 is the concentration parameter, which must be greater than or equal to zero.  If
 <em>kappa</em> is equal to zero, this distribution reduces to a uniform random angle
 over the range 0 to 2*<em>pi</em>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="random.paretovariate">
 <span class="sig-prename descclassname"><span class="pre">random.</span></span><span class="sig-name descname"><span class="pre">paretovariate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Pareto distribution.  <em>alpha</em> is the shape parameter.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="random.weibullvariate">
 <span class="sig-prename descclassname"><span class="pre">random.</span></span><span class="sig-name descname"><span class="pre">weibullvariate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Weibull distribution.  <em>alpha</em> is the scale parameter and <em>beta</em> is the shape
 parameter.</p>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="alternative-generator">
-<h2>Alternative Generator</h2>
+<h2 class="sigil_not_in_toc">Alternative Generator</h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="random.Random">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">random.</span></span><span class="sig-name descname"><span class="pre">Random</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">seed</span></span></em><span class="optional">]</span><span class="sig-paren">)</span></dt>
@@ -455,28 +482,32 @@ wish to make use of a different basic generator:</p>
 <span class="sig-name descname"><span class="pre">seed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Override this method in subclasses to customise the <a class="reference internal" href="#random.seed" title="random.seed"><code class="xref py py-meth docutils literal notranslate"><span class="pre">seed()</span></code></a>
 behaviour of <code class="xref py py-class docutils literal notranslate"><span class="pre">Random</span></code> instances.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="random.Random.getstate">
 <span class="sig-name descname"><span class="pre">getstate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Override this method in subclasses to customise the <a class="reference internal" href="#random.getstate" title="random.getstate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getstate()</span></code></a>
 behaviour of <code class="xref py py-class docutils literal notranslate"><span class="pre">Random</span></code> instances.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="random.Random.setstate">
 <span class="sig-name descname"><span class="pre">setstate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Override this method in subclasses to customise the <a class="reference internal" href="#random.setstate" title="random.setstate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setstate()</span></code></a>
 behaviour of <code class="xref py py-class docutils literal notranslate"><span class="pre">Random</span></code> instances.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="random.Random.random">
 <span class="sig-name descname"><span class="pre">random</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Override this method in subclasses to customise the <a class="reference internal" href="#random.random" title="random.random"><code class="xref py py-meth docutils literal notranslate"><span class="pre">random()</span></code></a>
 behaviour of <code class="xref py py-class docutils literal notranslate"><span class="pre">Random</span></code> instances.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p>Optionally, a custom generator subclass can also supply the following method:</p>
 <dl class="py method">
@@ -484,9 +515,11 @@ behaviour of <code class="xref py py-class docutils literal notranslate"><span c
 <span class="sig-name descname"><span class="pre">getrandbits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Override this method in subclasses to customise the
 <a class="reference internal" href="#random.getrandbits" title="random.getrandbits"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getrandbits()</span></code></a> behaviour of <code class="xref py py-class docutils literal notranslate"><span class="pre">Random</span></code> instances.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="random.SystemRandom">
@@ -497,11 +530,12 @@ Does not rely on software state, and sequences are not reproducible. Accordingly
 the <a class="reference internal" href="#random.seed" title="random.seed"><code class="xref py py-meth docutils literal notranslate"><span class="pre">seed()</span></code></a> method has no effect and is ignored.
 The <a class="reference internal" href="#random.getstate" title="random.getstate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getstate()</span></code></a> and <a class="reference internal" href="#random.setstate" title="random.setstate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setstate()</span></code></a> methods raise
 <a class="reference internal" href="exceptions.xhtml#NotImplementedError" title="NotImplementedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">NotImplementedError</span></code></a> if called.</p>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="notes-on-reproducibility">
-<h2>Notes on Reproducibility</h2>
+<h2 class="sigil_not_in_toc">Notes on Reproducibility</h2>
 <p>Sometimes it is useful to be able to reproduce the sequences given by a
 pseudo-random number generator.  By reusing a seed value, the same sequence should be
 reproducible from run to run as long as multiple threads are not running.</p>
@@ -515,7 +549,7 @@ sequence when the compatible seeder is given the same seed.</p></li>
 </ul>
 </section>
 <section id="examples">
-<span id="random-examples"></span><h2>Examples</h2>
+<span id="random-examples"></span><h2 class="sigil_not_in_toc">Examples</h2>
 <p>Basic examples:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">random</span><span class="p">()</span>                          <span class="c1"># Random float:  0.0 &lt;= x &lt; 1.0</span>
 <span class="go">0.37444887175646646</span>
@@ -532,28 +566,29 @@ sequence when the compatible seeder is given the same seed.</p></li>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">randrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>              <span class="c1"># Even integer from 0 to 100 inclusive</span>
 <span class="go">26</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;win&#39;</span><span class="p">,</span> <span class="s1">&#39;lose&#39;</span><span class="p">,</span> <span class="s1">&#39;draw&#39;</span><span class="p">])</span>   <span class="c1"># Single random element from a sequence</span>
-<span class="go">&#39;draw&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">choice</span><span class="p">([</span><span class="s1">'win'</span><span class="p">,</span> <span class="s1">'lose'</span><span class="p">,</span> <span class="s1">'draw'</span><span class="p">])</span>   <span class="c1"># Single random element from a sequence</span>
+<span class="go">'draw'</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="n">deck</span> <span class="o">=</span> <span class="s1">&#39;ace two three four&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">deck</span> <span class="o">=</span> <span class="s1">'ace two three four'</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">shuffle</span><span class="p">(</span><span class="n">deck</span><span class="p">)</span>                     <span class="c1"># Shuffle a list</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">deck</span>
-<span class="go">[&#39;four&#39;, &#39;two&#39;, &#39;ace&#39;, &#39;three&#39;]</span>
+<span class="go">['four', 'two', 'ace', 'three']</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sample</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">],</span> <span class="n">k</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span> <span class="c1"># Four samples without replacement</span>
 <span class="go">[40, 10, 50, 30]</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Simulations:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Six roulette wheel spins (weighted sampling with replacement)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">choices</span><span class="p">([</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">18</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">k</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
-<span class="go">[&#39;red&#39;, &#39;green&#39;, &#39;black&#39;, &#39;black&#39;, &#39;red&#39;, &#39;black&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">choices</span><span class="p">([</span><span class="s1">'red'</span><span class="p">,</span> <span class="s1">'black'</span><span class="p">,</span> <span class="s1">'green'</span><span class="p">],</span> <span class="p">[</span><span class="mi">18</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">k</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+<span class="go">['red', 'green', 'black', 'black', 'red', 'black']</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># Deal 20 cards without replacement from a deck</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># of 52 playing cards, and determine the proportion of cards</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># with a ten-value:  ten, jack, queen, or king.</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">deal</span> <span class="o">=</span> <span class="n">sample</span><span class="p">([</span><span class="s1">&#39;tens&#39;</span><span class="p">,</span> <span class="s1">&#39;low cards&#39;</span><span class="p">],</span> <span class="n">counts</span><span class="o">=</span><span class="p">[</span><span class="mi">16</span><span class="p">,</span> <span class="mi">36</span><span class="p">],</span> <span class="n">k</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">deal</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;tens&#39;</span><span class="p">)</span> <span class="o">/</span> <span class="mi">20</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">deal</span> <span class="o">=</span> <span class="n">sample</span><span class="p">([</span><span class="s1">'tens'</span><span class="p">,</span> <span class="s1">'low cards'</span><span class="p">],</span> <span class="n">counts</span><span class="o">=</span><span class="p">[</span><span class="mi">16</span><span class="p">,</span> <span class="mi">36</span><span class="p">],</span> <span class="n">k</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">deal</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">'tens'</span><span class="p">)</span> <span class="o">/</span> <span class="mi">20</span>
 <span class="go">0.15</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># Estimate the probability of getting 5 or more heads from 7 spins</span>
@@ -567,7 +602,8 @@ sequence when the compatible seeder is given the same seed.</p></li>
 <span class="gp">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">sum</span><span class="p">(</span><span class="n">trial</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10_000</span><span class="p">))</span> <span class="o">/</span> <span class="mi">10_000</span>
 <span class="go">0.7958</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Example of <a class="reference external" href="https://en.wikipedia.org/wiki/Bootstrapping_(statistics)">statistical bootstrapping</a><span class="link-target"> [https://en.wikipedia.org/wiki/Bootstrapping_(statistics)]</span> using resampling
 with replacement to estimate a confidence interval for the mean of a sample:</p>
@@ -577,14 +613,15 @@ with replacement to estimate a confidence interval for the mean of a sample:</p>
 
 <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">41</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">63</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">95</span><span class="p">]</span>
 <span class="n">means</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">mean</span><span class="p">(</span><span class="n">choices</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The sample mean of </span><span class="si">{</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1"> has a 90% confidence &#39;</span>
-      <span class="sa">f</span><span class="s1">&#39;interval from </span><span class="si">{</span><span class="n">means</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1"> to </span><span class="si">{</span><span class="n">means</span><span class="p">[</span><span class="mi">94</span><span class="p">]</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-</pre></div>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'The sample mean of </span><span class="si">{</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1"> has a 90% confidence '</span>
+      <span class="sa">f</span><span class="s1">'interval from </span><span class="si">{</span><span class="n">means</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1"> to </span><span class="si">{</span><span class="n">means</span><span class="p">[</span><span class="mi">94</span><span class="p">]</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+</pre>
+</div>
 </div>
 <p>Example of a <a class="reference external" href="https://en.wikipedia.org/wiki/Resampling_(statistics)#Permutation_tests">resampling permutation test</a><span class="link-target"> [https://en.wikipedia.org/wiki/Resampling_(statistics)#Permutation_tests]</span>
 to determine the statistical significance or <a class="reference external" href="https://en.wikipedia.org/wiki/P-value">p-value</a><span class="link-target"> [https://en.wikipedia.org/wiki/P-value]</span> of an observed difference
 between the effects of a drug versus a placebo:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example from &quot;Statistics is Easy&quot; by Dennis Shasha and Manda Wilson</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example from "Statistics is Easy" by Dennis Shasha and Manda Wilson</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">statistics</span><span class="w"> </span><span class="kn">import</span> <span class="n">fmean</span> <span class="k">as</span> <span class="n">mean</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">shuffle</span>
 
@@ -600,11 +637,12 @@ between the effects of a drug versus a placebo:</p>
     <span class="n">new_diff</span> <span class="o">=</span> <span class="n">mean</span><span class="p">(</span><span class="n">combined</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">drug</span><span class="p">)])</span> <span class="o">-</span> <span class="n">mean</span><span class="p">(</span><span class="n">combined</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">drug</span><span class="p">):])</span>
     <span class="n">count</span> <span class="o">+=</span> <span class="p">(</span><span class="n">new_diff</span> <span class="o">&gt;=</span> <span class="n">observed_diff</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s1"> label reshufflings produced only </span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s1"> instances with a difference&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;at least as extreme as the observed difference of </span><span class="si">{</span><span class="n">observed_diff</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The one-sided p-value of </span><span class="si">{</span><span class="n">count</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">n</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1"> leads us to reject the null&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;hypothesis that there is no difference between the drug and the placebo.&#39;</span><span class="p">)</span>
-</pre></div>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s1"> label reshufflings produced only </span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s1"> instances with a difference'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'at least as extreme as the observed difference of </span><span class="si">{</span><span class="n">observed_diff</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">.'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'The one-sided p-value of </span><span class="si">{</span><span class="n">count</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">n</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1"> leads us to reject the null'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'hypothesis that there is no difference between the drug and the placebo.'</span><span class="p">)</span>
+</pre>
+</div>
 </div>
 <p>Simulation of arrival times and service deliveries for a multiserver queue:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">heapq</span><span class="w"> </span><span class="kn">import</span> <span class="n">heapify</span><span class="p">,</span> <span class="n">heapreplace</span>
@@ -629,9 +667,10 @@ between the effects of a drug versus a placebo:</p>
     <span class="n">service_completed</span> <span class="o">=</span> <span class="n">arrival_time</span> <span class="o">+</span> <span class="n">wait</span> <span class="o">+</span> <span class="n">service_duration</span>
     <span class="n">heapreplace</span><span class="p">(</span><span class="n">servers</span><span class="p">,</span> <span class="n">service_completed</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Mean wait: </span><span class="si">{</span><span class="n">mean</span><span class="p">(</span><span class="n">waits</span><span class="p">)</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">   Max wait: </span><span class="si">{</span><span class="nb">max</span><span class="p">(</span><span class="n">waits</span><span class="p">)</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Quartiles:&#39;</span><span class="p">,</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">quantiles</span><span class="p">(</span><span class="n">waits</span><span class="p">)])</span>
-</pre></div>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Mean wait: </span><span class="si">{</span><span class="n">mean</span><span class="p">(</span><span class="n">waits</span><span class="p">)</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">   Max wait: </span><span class="si">{</span><span class="nb">max</span><span class="p">(</span><span class="n">waits</span><span class="p">)</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Quartiles:'</span><span class="p">,</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">quantiles</span><span class="p">(</span><span class="n">waits</span><span class="p">)])</span>
+</pre>
+</div>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -652,35 +691,36 @@ how to perform data analysis using Python.</p>
 </div>
 </section>
 <section id="recipes">
-<h2>Recipes</h2>
+<h2 class="sigil_not_in_toc">Recipes</h2>
 <p>These recipes show how to efficiently make random selections
 from the combinatoric iterators in the <a class="reference internal" href="itertools.xhtml#module-itertools" title="itertools: Functions creating iterators for efficient looping."><code class="xref py py-mod docutils literal notranslate"><span class="pre">itertools</span></code></a> module:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">random_product</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">repeat</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-    <span class="s2">&quot;Random selection from itertools.product(*args, **kwds)&quot;</span>
+    <span class="s2">"Random selection from itertools.product(*args, **kwds)"</span>
     <span class="n">pools</span> <span class="o">=</span> <span class="p">[</span><span class="nb">tuple</span><span class="p">(</span><span class="n">pool</span><span class="p">)</span> <span class="k">for</span> <span class="n">pool</span> <span class="ow">in</span> <span class="n">args</span><span class="p">]</span> <span class="o">*</span> <span class="n">repeat</span>
     <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">,</span> <span class="n">pools</span><span class="p">))</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">random_permutation</span><span class="p">(</span><span class="n">iterable</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="s2">&quot;Random selection from itertools.permutations(iterable, r)&quot;</span>
+    <span class="s2">"Random selection from itertools.permutations(iterable, r)"</span>
     <span class="n">pool</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
     <span class="n">r</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">pool</span><span class="p">)</span> <span class="k">if</span> <span class="n">r</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">r</span>
     <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">pool</span><span class="p">,</span> <span class="n">r</span><span class="p">))</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">random_combination</span><span class="p">(</span><span class="n">iterable</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
-    <span class="s2">&quot;Random selection from itertools.combinations(iterable, r)&quot;</span>
+    <span class="s2">"Random selection from itertools.combinations(iterable, r)"</span>
     <span class="n">pool</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">pool</span><span class="p">)</span>
     <span class="n">indices</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">r</span><span class="p">))</span>
     <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">pool</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">indices</span><span class="p">)</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">random_combination_with_replacement</span><span class="p">(</span><span class="n">iterable</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
-    <span class="s2">&quot;Choose r elements with replacement.  Order the result to match the iterable.&quot;</span>
+    <span class="s2">"Choose r elements with replacement.  Order the result to match the iterable."</span>
     <span class="c1"># Result will be in set(itertools.combinations_with_replacement(iterable, r)).</span>
     <span class="n">pool</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">pool</span><span class="p">)</span>
     <span class="n">indices</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">k</span><span class="o">=</span><span class="n">r</span><span class="p">))</span>
     <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">pool</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">indices</span><span class="p">)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The default <a class="reference internal" href="#random.random" title="random.random"><code class="xref py py-func docutils literal notranslate"><span class="pre">random()</span></code></a> returns multiples of 2⁻⁵³ in the range
 <em>0.0 ≤ x &lt; 1.0</em>.  All such numbers are evenly spaced and are exactly
@@ -705,7 +745,8 @@ than <em>-53</em> occur half as often as the next larger exponent.</p>
             <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getrandbits</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
             <span class="n">exponent</span> <span class="o">+=</span> <span class="n">x</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span> <span class="o">-</span> <span class="mi">32</span>
         <span class="k">return</span> <span class="n">ldexp</span><span class="p">(</span><span class="n">mantissa</span><span class="p">,</span> <span class="n">exponent</span><span class="p">)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>All <a class="reference internal" href="#real-valued-distributions"><span class="std std-ref">real valued distributions</span></a>
 in the class will use the new method:</p>
@@ -714,7 +755,8 @@ in the class will use the new method:</p>
 <span class="go">0.05954861408025609</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">fr</span><span class="o">.</span><span class="n">expovariate</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>
 <span class="go">8.87925541791544</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The recipe is conceptually equivalent to an algorithm that chooses from
 all the multiples of 2⁻¹⁰⁷⁴ in the range <em>0.0 ≤ x &lt; 1.0</em>.  All such
@@ -729,20 +771,22 @@ fine-grained floats than normally generated by <a class="reference internal" hre
 </div>
 </section>
 <section id="command-line-usage">
-<span id="random-cli"></span><h2>Command-line usage</h2>
+<span id="random-cli"></span><h2 class="sigil_not_in_toc">Command-line usage</h2>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.13.</span></p>
 </div>
 <p>The <code class="xref py py-mod docutils literal notranslate"><span class="pre">random</span></code> module can be executed from the command line.</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>random<span class="w"> </span><span class="o">[</span>-h<span class="o">]</span><span class="w"> </span><span class="o">[</span>-c<span class="w"> </span>CHOICE<span class="w"> </span><span class="o">[</span>CHOICE<span class="w"> </span>...<span class="o">]</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>-i<span class="w"> </span>N<span class="w"> </span><span class="p">|</span><span class="w"> </span>-f<span class="w"> </span>N<span class="o">]</span><span class="w"> </span><span class="o">[</span>input<span class="w"> </span>...<span class="o">]</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The following options are accepted:</p>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-random-h">
 <span id="cmdoption-random-help"></span><span class="sig-name descname"><span class="pre">-h</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--help</span></span><span class="sig-prename descclassname"></span></dt>
 <dd><p>Show the help message and exit.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-random-c">
@@ -750,7 +794,8 @@ fine-grained floats than normally generated by <a class="reference internal" hre
 <dt class="sig sig-object std" id="cmdoption-random-choice">
 <span class="sig-name descname"><span class="pre">--choice</span></span><span class="sig-prename descclassname"> <span class="pre">CHOICE</span> <span class="pre">[CHOICE</span> <span class="pre">...]</span></span></dt>
 <dd><p>Print a random choice, using <a class="reference internal" href="#random.choice" title="random.choice"><code class="xref py py-meth docutils literal notranslate"><span class="pre">choice()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-random-i">
@@ -758,7 +803,8 @@ fine-grained floats than normally generated by <a class="reference internal" hre
 <dt class="sig sig-object std" id="cmdoption-random-integer">
 <span class="sig-name descname"><span class="pre">--integer</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;N&gt;</span></span></dt>
 <dd><p>Print a random integer between 1 and N inclusive, using <a class="reference internal" href="#random.randint" title="random.randint"><code class="xref py py-meth docutils literal notranslate"><span class="pre">randint()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-random-f">
@@ -767,7 +813,8 @@ fine-grained floats than normally generated by <a class="reference internal" hre
 <span class="sig-name descname"><span class="pre">--float</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;N&gt;</span></span></dt>
 <dd><p>Print a random floating-point number between 0 and N inclusive,
 using <a class="reference internal" href="#random.uniform" title="random.uniform"><code class="xref py py-meth docutils literal notranslate"><span class="pre">uniform()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p>If no options are given, the output depends on the input:</p>
 <ul class="simple">
@@ -777,10 +824,10 @@ using <a class="reference internal" href="#random.uniform" title="random.uniform
 </ul>
 </section>
 <section id="command-line-example">
-<span id="random-cli-example"></span><h2>Command-line example</h2>
+<span id="random-cli-example"></span><h2 class="sigil_not_in_toc">Command-line example</h2>
 <p>Here are some examples of the <code class="xref py py-mod docutils literal notranslate"><span class="pre">random</span></code> command-line interface:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="c1"># Choose one at random</span>
-<span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>random<span class="w"> </span>egg<span class="w"> </span>bacon<span class="w"> </span>sausage<span class="w"> </span>spam<span class="w"> </span><span class="s2">&quot;Lobster Thermidor aux crevettes with a Mornay sauce&quot;</span>
+<span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>random<span class="w"> </span>egg<span class="w"> </span>bacon<span class="w"> </span>sausage<span class="w"> </span>spam<span class="w"> </span><span class="s2">"Lobster Thermidor aux crevettes with a Mornay sauce"</span>
 <span class="go">Lobster Thermidor aux crevettes with a Mornay sauce</span>
 
 <span class="gp">$ </span><span class="c1"># Random integer</span>
@@ -792,7 +839,7 @@ using <a class="reference internal" href="#random.uniform" title="random.uniform
 <span class="go">1.7080016272295635</span>
 
 <span class="gp">$ </span><span class="c1"># With explicit arguments</span>
-<span class="gp">$ </span>python<span class="w">  </span>-m<span class="w"> </span>random<span class="w"> </span>--choice<span class="w"> </span>egg<span class="w"> </span>bacon<span class="w"> </span>sausage<span class="w"> </span>spam<span class="w"> </span><span class="s2">&quot;Lobster Thermidor aux crevettes with a Mornay sauce&quot;</span>
+<span class="gp">$ </span>python<span class="w">  </span>-m<span class="w"> </span>random<span class="w"> </span>--choice<span class="w"> </span>egg<span class="w"> </span>bacon<span class="w"> </span>sausage<span class="w"> </span>spam<span class="w"> </span><span class="s2">"Lobster Thermidor aux crevettes with a Mornay sauce"</span>
 <span class="go">egg</span>
 
 <span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>random<span class="w"> </span>--integer<span class="w"> </span><span class="m">6</span>
@@ -806,7 +853,8 @@ using <a class="reference internal" href="#random.uniform" title="random.uniform
 
 <span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>random<span class="w"> </span>--float<span class="w"> </span><span class="m">6</span>
 <span class="go">3.1942323316565915</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 </section>
@@ -817,5 +865,5 @@ using <a class="reference internal" href="#random.uniform" title="random.uniform
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

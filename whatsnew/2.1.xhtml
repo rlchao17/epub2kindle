@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="What’s New in Python 2.1" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/whatsnew/2.1.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="Author, A.M. Kuchling,. Introduction: This article explains the new features in Python 2.1. While there aren’t as many changes in 2.1 as there were in Python 2.0, there are still some pleasant surp..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="Author, A.M. Kuchling,. Introduction: This article explains the new features in Python 2.1. While there aren’t as many changes in 2.1 as there were in Python 2.0, there are still some pleasant surp..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="What’s New in Python 2.1"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/whatsnew/2.1.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="Author, A.M. Kuchling,. Introduction: This article explains the new features in Python 2.1. While there aren’t as many changes in 2.1 as there were in Python 2.0, there are still some pleasant surp..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="Author, A.M. Kuchling,. Introduction: This article explains the new features in Python 2.1. While there aren’t as many changes in 2.1 as there were in Python 2.0, there are still some pleasant surp..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>What’s New in Python 2.1</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/whatsnew/2.1.html" />
+    <link rel="canonical" href="https://docs.python.org/3/whatsnew/2.1.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -50,7 +51,7 @@
 </dd>
 </dl>
 <section id="introduction">
-<h2>Introduction</h2>
+<h2 class="sigil_not_in_toc">Introduction</h2>
 <p>This article explains the new features in Python 2.1.  While there aren’t as
 many changes in 2.1 as there were in Python 2.0, there are still some pleasant
 surprises in store.  2.1 is the first release to be steered through the use of
@@ -67,7 +68,7 @@ January, 3 months after the final version of 2.0 was released.</p>
 <p>The final release of Python 2.1 was made on April 17, 2001.</p>
 </section>
 <section id="pep-227-nested-scopes">
-<h2>PEP 227: Nested Scopes</h2>
+<h2 class="sigil_not_in_toc">PEP 227: Nested Scopes</h2>
 <p>The largest change in Python 2.1 is to Python’s scoping rules.  In Python 2.0,
 at any given time there are at most three namespaces used to look up variable
 names: local, module-level, and the built-in namespace.  This often surprised
@@ -79,7 +80,8 @@ nested recursive function definition doesn’t work:</p>
         <span class="o">...</span>
         <span class="k">return</span> <span class="n">g</span><span class="p">(</span><span class="n">value</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
     <span class="o">...</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The function <code class="xref py py-func docutils literal notranslate"><span class="pre">g()</span></code> will always raise a <a class="reference internal" href="../library/exceptions.xhtml#NameError" title="NameError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">NameError</span></code></a> exception, because
 the binding of the name <code class="docutils literal notranslate"><span class="pre">g</span></code> isn’t in either its local namespace or in the
@@ -89,11 +91,12 @@ the <a class="reference internal" href="../reference/expressions.xhtml#lambda"><
 In code which uses <a class="reference internal" href="../reference/expressions.xhtml#lambda"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">lambda</span></code></a> you can often find local variables being
 copied by passing them as the default values of arguments.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">find</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-    <span class="s2">&quot;Return list of any entries equal to &#39;name&#39;&quot;</span>
+    <span class="s2">"Return list of any entries equal to 'name'"</span>
     <span class="n">L</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">:</span> <span class="n">x</span> <span class="o">==</span> <span class="n">name</span><span class="p">,</span>
                <span class="bp">self</span><span class="o">.</span><span class="n">list_attribute</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">L</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The readability of Python code written in a strongly functional style suffers
 greatly as a result.</p>
@@ -126,10 +129,11 @@ will flag this by raising a <a class="reference internal" href="../library/excep
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">():</span>
     <span class="c1"># The next line is a syntax error</span>
-    <span class="n">exec</span> <span class="s1">&#39;x=2&#39;</span>
+    <span class="n">exec</span> <span class="s1">'x=2'</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">g</span><span class="p">():</span>
         <span class="k">return</span> <span class="n">x</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Line 4 containing the <code class="docutils literal notranslate"><span class="pre">exec</span></code> statement is a syntax error, since
 <code class="docutils literal notranslate"><span class="pre">exec</span></code> would define a new local variable named <code class="docutils literal notranslate"><span class="pre">x</span></code> whose value should
@@ -146,13 +150,14 @@ all of 2.1’s lifetime to fix any breakage resulting from their introduction.</
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt><span class="target" id="index-2"></span><a class="pep reference external" href="https://peps.python.org/pep-0227/"><strong>PEP 227</strong></a><span class="link-target"> [https://peps.python.org/pep-0227/]</span> - Statically Nested Scopes</dt><dd><p>Written and implemented by Jeremy Hylton.</p>
+<dt><span class="target" id="index-2"></span><a class="pep reference external" href="https://peps.python.org/pep-0227/"><strong>PEP 227</strong></a><span class="link-target"> [https://peps.python.org/pep-0227/]</span> - Statically Nested Scopes</dt>
+<dd><p>Written and implemented by Jeremy Hylton.</p>
 </dd>
 </dl>
 </div>
 </section>
 <section id="pep-236-future-directives">
-<h2>PEP 236: __future__ Directives</h2>
+<h2 class="sigil_not_in_toc">PEP 236: __future__ Directives</h2>
 <p>The reaction to nested scopes was widespread concern about the dangers of
 breaking code with the 2.1 release, and it was strong enough to make the
 Pythoneers take a more conservative approach.  This approach consists of
@@ -161,7 +166,8 @@ will become compulsory in release N+1.</p>
 <p>The syntax uses a <code class="docutils literal notranslate"><span class="pre">from...import</span></code> statement using the reserved module name
 <a class="reference internal" href="../library/__future__.xhtml#module-__future__" title="__future__: Future statement definitions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">__future__</span></code></a>.  Nested scopes can be enabled by the following statement:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">nested_scopes</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>While it looks like a normal <a class="reference internal" href="../reference/simple_stmts.xhtml#import"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">import</span></code></a> statement, it’s not; there are
 strict rules on where such a future statement can be put. They can only be at
@@ -172,13 +178,14 @@ precede any statement that will result in bytecodes being produced.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt><span class="target" id="index-3"></span><a class="pep reference external" href="https://peps.python.org/pep-0236/"><strong>PEP 236</strong></a><span class="link-target"> [https://peps.python.org/pep-0236/]</span> - Back to the <a class="reference internal" href="../library/__future__.xhtml#module-__future__" title="__future__: Future statement definitions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">__future__</span></code></a></dt><dd><p>Written by Tim Peters, and primarily implemented by Jeremy Hylton.</p>
+<dt><span class="target" id="index-3"></span><a class="pep reference external" href="https://peps.python.org/pep-0236/"><strong>PEP 236</strong></a><span class="link-target"> [https://peps.python.org/pep-0236/]</span> - Back to the <a class="reference internal" href="../library/__future__.xhtml#module-__future__" title="__future__: Future statement definitions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">__future__</span></code></a></dt>
+<dd><p>Written by Tim Peters, and primarily implemented by Jeremy Hylton.</p>
 </dd>
 </dl>
 </div>
 </section>
 <section id="pep-207-rich-comparisons">
-<h2>PEP 207: Rich Comparisons</h2>
+<h2 class="sigil_not_in_toc">PEP 207: Rich Comparisons</h2>
 <p>In earlier versions, Python’s support for implementing comparisons on user-defined
 classes and extension types was quite simple. Classes could implement a
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">__cmp__()</span></code> method that was given two instances of a class, and could only
@@ -195,28 +202,42 @@ Python classes can now individually overload each of the <code class="docutils l
 <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">==</span></code>, and <code class="docutils literal notranslate"><span class="pre">!=</span></code> operations.  The new magic method names are:</p>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Operation</p></th>
-<th class="head"><p>Method name</p></th>
+<tr class="row-odd"><th class="head"><p>Operation</p>
+</th>
+<th class="head"><p>Method name</p>
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code></p></td>
-<td><p><a class="reference internal" href="../reference/datamodel.xhtml#object.__lt__" title="object.__lt__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__lt__()</span></code></a></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code></p>
+</td>
+<td><p><a class="reference internal" href="../reference/datamodel.xhtml#object.__lt__" title="object.__lt__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__lt__()</span></code></a></p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code></p></td>
-<td><p><a class="reference internal" href="../reference/datamodel.xhtml#object.__le__" title="object.__le__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__le__()</span></code></a></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code></p>
+</td>
+<td><p><a class="reference internal" href="../reference/datamodel.xhtml#object.__le__" title="object.__le__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__le__()</span></code></a></p>
+</td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code></p></td>
-<td><p><a class="reference internal" href="../reference/datamodel.xhtml#object.__gt__" title="object.__gt__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__gt__()</span></code></a></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code></p>
+</td>
+<td><p><a class="reference internal" href="../reference/datamodel.xhtml#object.__gt__" title="object.__gt__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__gt__()</span></code></a></p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code></p></td>
-<td><p><a class="reference internal" href="../reference/datamodel.xhtml#object.__ge__" title="object.__ge__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__ge__()</span></code></a></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code></p>
+</td>
+<td><p><a class="reference internal" href="../reference/datamodel.xhtml#object.__ge__" title="object.__ge__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__ge__()</span></code></a></p>
+</td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">==</span></code></p></td>
-<td><p><a class="reference internal" href="../reference/datamodel.xhtml#object.__eq__" title="object.__eq__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__eq__()</span></code></a></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">==</span></code></p>
+</td>
+<td><p><a class="reference internal" href="../reference/datamodel.xhtml#object.__eq__" title="object.__eq__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__eq__()</span></code></a></p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">!=</span></code></p></td>
-<td><p><a class="reference internal" href="../reference/datamodel.xhtml#object.__ne__" title="object.__ne__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__ne__()</span></code></a></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">!=</span></code></p>
+</td>
+<td><p><a class="reference internal" href="../reference/datamodel.xhtml#object.__ne__" title="object.__ne__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__ne__()</span></code></a></p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -232,8 +253,8 @@ list, or any other Python object.  Alternatively they can raise an exception if
 the comparison is impossible, inconsistent, or otherwise meaningless.</p>
 <p>The built-in <code class="docutils literal notranslate"><span class="pre">cmp(A,B)</span></code> function can use the rich comparison machinery,
 and now accepts an optional argument specifying which comparison operation to
-use; this is given as one of the strings <code class="docutils literal notranslate"><span class="pre">&quot;&lt;&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;&lt;=&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;&gt;&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;&gt;=&quot;</span></code>,
-<code class="docutils literal notranslate"><span class="pre">&quot;==&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;!=&quot;</span></code>.  If called without the optional third argument,
+use; this is given as one of the strings <code class="docutils literal notranslate"><span class="pre">"&lt;"</span></code>, <code class="docutils literal notranslate"><span class="pre">"&lt;="</span></code>, <code class="docutils literal notranslate"><span class="pre">"&gt;"</span></code>, <code class="docutils literal notranslate"><span class="pre">"&gt;="</span></code>,
+<code class="docutils literal notranslate"><span class="pre">"=="</span></code>, or <code class="docutils literal notranslate"><span class="pre">"!="</span></code>.  If called without the optional third argument,
 <code class="xref py py-func docutils literal notranslate"><span class="pre">cmp()</span></code> will only return -1, 0, or +1 as in previous versions of Python;
 otherwise it will call the appropriate method and can return any Python object.</p>
 <p>There are also corresponding changes of interest to C programmers; there’s a new
@@ -243,14 +264,15 @@ comparison.  I won’t cover the C API here, but will refer you to <span class="
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt><span class="target" id="index-5"></span><a class="pep reference external" href="https://peps.python.org/pep-0207/"><strong>PEP 207</strong></a><span class="link-target"> [https://peps.python.org/pep-0207/]</span> - Rich Comparisons</dt><dd><p>Written by Guido van Rossum, heavily based on earlier work by David Ascher, and
+<dt><span class="target" id="index-5"></span><a class="pep reference external" href="https://peps.python.org/pep-0207/"><strong>PEP 207</strong></a><span class="link-target"> [https://peps.python.org/pep-0207/]</span> - Rich Comparisons</dt>
+<dd><p>Written by Guido van Rossum, heavily based on earlier work by David Ascher, and
 implemented by Guido van Rossum.</p>
 </dd>
 </dl>
 </div>
 </section>
 <section id="pep-230-warning-framework">
-<h2>PEP 230: Warning Framework</h2>
+<h2 class="sigil_not_in_toc">PEP 230: Warning Framework</h2>
 <p>Over its 10 years of existence, Python has accumulated a certain number of
 obsolete modules and features along the way.  It’s difficult to know when a
 feature is safe to remove, since there’s no way of knowing how much code uses it
@@ -271,11 +293,13 @@ it causes a warning to be printed:</p>
 <span class="go">__main__:1: DeprecationWarning: the regex module</span>
 <span class="go">         is deprecated; please use the re module</span>
 <span class="gp">&gt;&gt;&gt;</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Warnings can be issued by calling the <a class="reference internal" href="../library/warnings.xhtml#warnings.warn" title="warnings.warn"><code class="xref py py-func docutils literal notranslate"><span class="pre">warnings.warn()</span></code></a> function:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;feature X no longer supported&quot;</span><span class="p">)</span>
-</pre></div>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">"feature X no longer supported"</span><span class="p">)</span>
+</pre>
+</div>
 </div>
 <p>The first parameter is the warning message; an additional optional parameters
 can be used to specify a particular warning category.</p>
@@ -285,11 +309,12 @@ warning.  For example, you may have a program that uses the <code class="xref py
 and not want to spare the time to convert it to use the <a class="reference internal" href="../library/re.xhtml#module-re" title="re: Regular expression operations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">re</span></code></a> module right
 now.  The warning can be suppressed by calling</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
-<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="n">action</span> <span class="o">=</span> <span class="s1">&#39;ignore&#39;</span><span class="p">,</span>
-                        <span class="n">message</span><span class="o">=</span><span class="s1">&#39;.*regex module is deprecated&#39;</span><span class="p">,</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="n">action</span> <span class="o">=</span> <span class="s1">'ignore'</span><span class="p">,</span>
+                        <span class="n">message</span><span class="o">=</span><span class="s1">'.*regex module is deprecated'</span><span class="p">,</span>
                         <span class="n">category</span><span class="o">=</span><span class="ne">DeprecationWarning</span><span class="p">,</span>
-                        <span class="n">module</span> <span class="o">=</span> <span class="s1">&#39;__main__&#39;</span><span class="p">)</span>
-</pre></div>
+                        <span class="n">module</span> <span class="o">=</span> <span class="s1">'__main__'</span><span class="p">)</span>
+</pre>
+</div>
 </div>
 <p>This adds a filter that will apply only to warnings of the class
 <a class="reference internal" href="../library/exceptions.xhtml#DeprecationWarning" title="DeprecationWarning"><code class="xref py py-class docutils literal notranslate"><span class="pre">DeprecationWarning</span></code></a> triggered in the <a class="reference internal" href="../library/__main__.xhtml#module-__main__" title="__main__: The environment where top-level code is run. Covers command-line interfaces, import-time behavior, and ``__name__ == '__main__'``."><code class="xref py py-mod docutils literal notranslate"><span class="pre">__main__</span></code></a> module, and applies
@@ -303,18 +328,20 @@ exceptions are caught in the usual way, of course).</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt><span class="target" id="index-6"></span><a class="pep reference external" href="https://peps.python.org/pep-0005/"><strong>PEP 5</strong></a><span class="link-target"> [https://peps.python.org/pep-0005/]</span> - Guidelines for Language Evolution</dt><dd><p>Written by Paul Prescod, to specify procedures to be followed when removing old
+<dt><span class="target" id="index-6"></span><a class="pep reference external" href="https://peps.python.org/pep-0005/"><strong>PEP 5</strong></a><span class="link-target"> [https://peps.python.org/pep-0005/]</span> - Guidelines for Language Evolution</dt>
+<dd><p>Written by Paul Prescod, to specify procedures to be followed when removing old
 features from Python.  The policy described in this PEP hasn’t been officially
 adopted, but the eventual policy probably won’t be too different from Prescod’s
 proposal.</p>
 </dd>
-<dt><span class="target" id="index-7"></span><a class="pep reference external" href="https://peps.python.org/pep-0230/"><strong>PEP 230</strong></a><span class="link-target"> [https://peps.python.org/pep-0230/]</span> - Warning Framework</dt><dd><p>Written and implemented by Guido van Rossum.</p>
+<dt><span class="target" id="index-7"></span><a class="pep reference external" href="https://peps.python.org/pep-0230/"><strong>PEP 230</strong></a><span class="link-target"> [https://peps.python.org/pep-0230/]</span> - Warning Framework</dt>
+<dd><p>Written and implemented by Guido van Rossum.</p>
 </dd>
 </dl>
 </div>
 </section>
 <section id="pep-229-new-build-system">
-<h2>PEP 229: New Build System</h2>
+<h2 class="sigil_not_in_toc">PEP 229: New Build System</h2>
 <p>When compiling Python, the user had to go in and edit the <code class="file docutils literal notranslate"><span class="pre">Modules/Setup</span></code>
 file in order to enable various additional modules; the default set is
 relatively small and limited to modules that compile on most Unix platforms.
@@ -342,13 +369,14 @@ simpler.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt><span class="target" id="index-8"></span><a class="pep reference external" href="https://peps.python.org/pep-0229/"><strong>PEP 229</strong></a><span class="link-target"> [https://peps.python.org/pep-0229/]</span> - Using Distutils to Build Python</dt><dd><p>Written and implemented by A.M. Kuchling.</p>
+<dt><span class="target" id="index-8"></span><a class="pep reference external" href="https://peps.python.org/pep-0229/"><strong>PEP 229</strong></a><span class="link-target"> [https://peps.python.org/pep-0229/]</span> - Using Distutils to Build Python</dt>
+<dd><p>Written and implemented by A.M. Kuchling.</p>
 </dd>
 </dl>
 </div>
 </section>
 <section id="pep-205-weak-references">
-<h2>PEP 205: Weak References</h2>
+<h2 class="sigil_not_in_toc">PEP 205: Weak References</h2>
 <p>Weak references, available through the <a class="reference internal" href="../library/weakref.xhtml#module-weakref" title="weakref: Support for weak references and weak dictionaries."><code class="xref py py-mod docutils literal notranslate"><span class="pre">weakref</span></code></a> module, are a minor but
 useful new data type in the Python programmer’s toolbox.</p>
 <p>Storing a reference to an object (say, in a dictionary or a list) has the side
@@ -369,7 +397,8 @@ dictionary:</p>
     <span class="n">_cache</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">retval</span>
 
     <span class="k">return</span> <span class="n">retval</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>This version works for simple things such as integers, but it has a side effect;
 the <code class="docutils literal notranslate"><span class="pre">_cache</span></code> dictionary holds a reference to the return values, so they’ll
@@ -399,7 +428,8 @@ keep objects alive, by storing weak references in the cache.</p>
     <span class="n">_cache</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">weakref</span><span class="o">.</span><span class="n">ref</span><span class="p">(</span><span class="n">retval</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">retval</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The <a class="reference internal" href="../library/weakref.xhtml#module-weakref" title="weakref: Support for weak references and weak dictionaries."><code class="xref py py-mod docutils literal notranslate"><span class="pre">weakref</span></code></a> module also allows creating proxy objects which behave like
 weak references — an object referenced only by proxy objects is deallocated –
@@ -412,18 +442,20 @@ exists.  If the object is deallocated, attempting to use a proxy will cause a
 <span class="n">proxy</span><span class="o">.</span><span class="n">meth</span><span class="p">()</span> <span class="c1"># Equivalent to obj.meth()</span>
 <span class="k">del</span> <span class="n">obj</span>
 <span class="n">proxy</span><span class="o">.</span><span class="n">attr</span>   <span class="c1"># raises weakref.ReferenceError</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt><span class="target" id="index-9"></span><a class="pep reference external" href="https://peps.python.org/pep-0205/"><strong>PEP 205</strong></a><span class="link-target"> [https://peps.python.org/pep-0205/]</span> - Weak References</dt><dd><p>Written and implemented by Fred L. Drake, Jr.</p>
+<dt><span class="target" id="index-9"></span><a class="pep reference external" href="https://peps.python.org/pep-0205/"><strong>PEP 205</strong></a><span class="link-target"> [https://peps.python.org/pep-0205/]</span> - Weak References</dt>
+<dd><p>Written and implemented by Fred L. Drake, Jr.</p>
 </dd>
 </dl>
 </div>
 </section>
 <section id="pep-232-function-attributes">
-<h2>PEP 232: Function Attributes</h2>
+<h2 class="sigil_not_in_toc">PEP 232: Function Attributes</h2>
 <p>In Python 2.1, functions can now have arbitrary information attached to them.
 People were often using docstrings to hold information about functions and
 methods, because the <a class="reference internal" href="../reference/datamodel.xhtml#function.__doc__" title="function.__doc__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__doc__</span></code></a> attribute was the only way of
@@ -440,8 +472,9 @@ Python syntax:</p>
 
 <span class="n">f</span><span class="o">.</span><span class="n">publish</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">f</span><span class="o">.</span><span class="n">secure</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">f</span><span class="o">.</span><span class="n">grammar</span> <span class="o">=</span> <span class="s2">&quot;A ::= B (C D)*&quot;</span>
-</pre></div>
+<span class="n">f</span><span class="o">.</span><span class="n">grammar</span> <span class="o">=</span> <span class="s2">"A ::= B (C D)*"</span>
+</pre>
+</div>
 </div>
 <p>The dictionary containing attributes can be accessed as the function’s
 <a class="reference internal" href="../reference/datamodel.xhtml#function.__dict__" title="function.__dict__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__dict__</span></code></a>. Unlike the <a class="reference internal" href="../reference/datamodel.xhtml#type.__dict__" title="type.__dict__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__dict__</span></code></a> attribute of class instances, in
@@ -452,13 +485,14 @@ that behaves like a mapping.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt><span class="target" id="index-10"></span><a class="pep reference external" href="https://peps.python.org/pep-0232/"><strong>PEP 232</strong></a><span class="link-target"> [https://peps.python.org/pep-0232/]</span> - Function Attributes</dt><dd><p>Written and implemented by Barry Warsaw.</p>
+<dt><span class="target" id="index-10"></span><a class="pep reference external" href="https://peps.python.org/pep-0232/"><strong>PEP 232</strong></a><span class="link-target"> [https://peps.python.org/pep-0232/]</span> - Function Attributes</dt>
+<dd><p>Written and implemented by Barry Warsaw.</p>
 </dd>
 </dl>
 </div>
 </section>
 <section id="pep-235-importing-modules-on-case-insensitive-platforms">
-<h2>PEP 235: Importing Modules on Case-Insensitive Platforms</h2>
+<h2 class="sigil_not_in_toc">PEP 235: Importing Modules on Case-Insensitive Platforms</h2>
 <p>Some operating systems have filesystems that are case-insensitive, MacOS and
 Windows being the primary examples; on these systems, it’s impossible to
 distinguish the filenames <code class="docutils literal notranslate"><span class="pre">FILE.PY</span></code> and <code class="docutils literal notranslate"><span class="pre">file.py</span></code>, even though they do store
@@ -471,7 +505,7 @@ Case-insensitive matching can be requested by setting the <span class="target" i
 environment variable before starting the Python interpreter.</p>
 </section>
 <section id="pep-217-interactive-display-hook">
-<h2>PEP 217: Interactive Display Hook</h2>
+<h2 class="sigil_not_in_toc">PEP 217: Interactive Display Hook</h2>
 <p>When using the Python interpreter interactively, the output of commands is
 displayed using the built-in <a class="reference internal" href="../library/functions.xhtml#repr" title="repr"><code class="xref py py-func docutils literal notranslate"><span class="pre">repr()</span></code></a> function. In Python 2.1, the variable
 <a class="reference internal" href="../library/sys.xhtml#sys.displayhook" title="sys.displayhook"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys.displayhook()</span></code></a> can be set to a callable object which will be called
@@ -480,7 +514,7 @@ pretty-printing function:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Create a recursive data structure</span>
 <span class="gp">... </span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">L</span> <span class="c1"># Show Python&#39;s default output</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">L</span> <span class="c1"># Show Python's default output</span>
 <span class="go">[1, 2, 3, [...]]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># Use pprint.pprint() as the display function</span>
 <span class="gp">... </span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span><span class="o">,</span><span class="w"> </span><span class="nn">pprint</span>
@@ -488,18 +522,20 @@ pretty-printing function:</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">L</span>
 <span class="go">[1, 2, 3,  &lt;Recursion on list with id=135143996&gt;]</span>
 <span class="gp">&gt;&gt;&gt;</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt><span class="target" id="index-12"></span><a class="pep reference external" href="https://peps.python.org/pep-0217/"><strong>PEP 217</strong></a><span class="link-target"> [https://peps.python.org/pep-0217/]</span> - Display Hook for Interactive Use</dt><dd><p>Written and implemented by Moshe Zadka.</p>
+<dt><span class="target" id="index-12"></span><a class="pep reference external" href="https://peps.python.org/pep-0217/"><strong>PEP 217</strong></a><span class="link-target"> [https://peps.python.org/pep-0217/]</span> - Display Hook for Interactive Use</dt>
+<dd><p>Written and implemented by Moshe Zadka.</p>
 </dd>
 </dl>
 </div>
 </section>
 <section id="pep-208-new-coercion-model">
-<h2>PEP 208: New Coercion Model</h2>
+<h2 class="sigil_not_in_toc">PEP 208: New Coercion Model</h2>
 <p>How numeric coercion is done at the C level was significantly modified.  This
 will only affect the authors of C extensions to Python, allowing them more
 flexibility in writing extension types that support numeric operations.</p>
@@ -519,7 +555,8 @@ object’s numeric methods).</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt><span class="target" id="index-13"></span><a class="pep reference external" href="https://peps.python.org/pep-0208/"><strong>PEP 208</strong></a><span class="link-target"> [https://peps.python.org/pep-0208/]</span> - Reworking the Coercion Model</dt><dd><p>Written and implemented by Neil Schemenauer, heavily based upon earlier work by
+<dt><span class="target" id="index-13"></span><a class="pep reference external" href="https://peps.python.org/pep-0208/"><strong>PEP 208</strong></a><span class="link-target"> [https://peps.python.org/pep-0208/]</span> - Reworking the Coercion Model</dt>
+<dd><p>Written and implemented by Neil Schemenauer, heavily based upon earlier work by
 Marc-André Lemburg.  Read this to understand the fine points of how numeric
 operations will now be processed at the C level.</p>
 </dd>
@@ -527,7 +564,7 @@ operations will now be processed at the C level.</p>
 </div>
 </section>
 <section id="pep-241-metadata-in-python-packages">
-<h2>PEP 241: Metadata in Python Packages</h2>
+<h2 class="sigil_not_in_toc">PEP 241: Metadata in Python Packages</h2>
 <p>A common complaint from Python users is that there’s no single catalog of all
 the Python modules in existence.  T. Middleton’s Vaults of Parnassus at
 <code class="docutils literal notranslate"><span class="pre">www.vex.net/parnassus/</span></code> (retired in February 2009, <a class="reference external" href="https://web.archive.org/web/20090130140102/http://www.vex.net/parnassus/">available in the
@@ -554,16 +591,18 @@ available from the Distutils SIG at <a class="reference external" href="https://
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt><span class="target" id="index-16"></span><a class="pep reference external" href="https://peps.python.org/pep-0241/"><strong>PEP 241</strong></a><span class="link-target"> [https://peps.python.org/pep-0241/]</span> - Metadata for Python Software Packages</dt><dd><p>Written and implemented by A.M. Kuchling.</p>
+<dt><span class="target" id="index-16"></span><a class="pep reference external" href="https://peps.python.org/pep-0241/"><strong>PEP 241</strong></a><span class="link-target"> [https://peps.python.org/pep-0241/]</span> - Metadata for Python Software Packages</dt>
+<dd><p>Written and implemented by A.M. Kuchling.</p>
 </dd>
-<dt><span class="target" id="index-17"></span><a class="pep reference external" href="https://peps.python.org/pep-0243/"><strong>PEP 243</strong></a><span class="link-target"> [https://peps.python.org/pep-0243/]</span> - Module Repository Upload Mechanism</dt><dd><p>Written by Sean Reifschneider, this draft PEP describes a proposed mechanism for
+<dt><span class="target" id="index-17"></span><a class="pep reference external" href="https://peps.python.org/pep-0243/"><strong>PEP 243</strong></a><span class="link-target"> [https://peps.python.org/pep-0243/]</span> - Module Repository Upload Mechanism</dt>
+<dd><p>Written by Sean Reifschneider, this draft PEP describes a proposed mechanism for
 uploading  Python packages to a central server.</p>
 </dd>
 </dl>
 </div>
 </section>
 <section id="new-and-improved-modules">
-<h2>New and Improved Modules</h2>
+<h2 class="sigil_not_in_toc">New and Improved Modules</h2>
 <ul>
 <li><p>Ka-Ping Yee contributed two new modules: <code class="xref py py-mod docutils literal notranslate"><span class="pre">inspect.py</span></code>, a module for
 getting information about live Python code, and <code class="xref py py-mod docutils literal notranslate"><span class="pre">pydoc.py</span></code>, a module for
@@ -585,7 +624,8 @@ class name.  For example, <code class="docutils literal notranslate"><span class
 
     <span class="n">This</span> <span class="n">package</span> <span class="n">contains</span> <span class="n">the</span> <span class="n">following</span> <span class="n">modules</span><span class="p">:</span>
       <span class="o">...</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p><code class="file docutils literal notranslate"><span class="pre">pydoc</span></code> also includes a Tk-based interactive help browser.   <code class="file docutils literal notranslate"><span class="pre">pydoc</span></code>
 quickly becomes addictive; try it out!</p>
@@ -655,7 +695,7 @@ production code.</p>
 </ul>
 </section>
 <section id="other-changes-and-fixes">
-<h2>Other Changes and Fixes</h2>
+<h2 class="sigil_not_in_toc">Other Changes and Fixes</h2>
 <p>There were relatively few smaller changes made in Python 2.1 due to the shorter
 release cycle.  A search through the CVS change logs turns up 117 patches
 applied, and 136 bugs fixed; both figures are likely to be underestimates.  Some
@@ -698,7 +738,8 @@ does. You’d use it like this:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">xreadlines</span><span class="p">():</span>
     <span class="c1"># ... do something for each line ...</span>
     <span class="o">...</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>For a fuller discussion of the line I/O changes, see the python-dev summary for
 January 1–15, 2001 at <a class="reference external" href="https://mail.python.org/pipermail/python-dev/2001-January/">https://mail.python.org/pipermail/python-dev/2001-January/</a>.</p>
@@ -717,8 +758,9 @@ modules such as <a class="reference internal" href="../library/sys.xhtml#module-
 them to the importing module’s namespace.  To fix this, simply list the public
 names in <code class="docutils literal notranslate"><span class="pre">__all__</span></code>:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># List public names</span>
-<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Database&#39;</span><span class="p">,</span> <span class="s1">&#39;open&#39;</span><span class="p">]</span>
-</pre></div>
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Database'</span><span class="p">,</span> <span class="s1">'open'</span><span class="p">]</span>
+</pre>
+</div>
 </div>
 <p>A stricter version of this patch was first suggested and implemented by Ben
 Wolfson, but after some python-dev discussion, a weaker final version was
@@ -748,7 +790,7 @@ edits, and other tweaks, too lengthy to be worth itemizing; see the CVS logs for
 the full details if you want them.</p>
 </section>
 <section id="acknowledgements">
-<h2>Acknowledgements</h2>
+<h2 class="sigil_not_in_toc">Acknowledgements</h2>
 <p>The author would like to thank the following people for offering suggestions on
 various drafts of this article: Graeme Cross, David Goodger, Jay Graves, Michael
 Hudson, Marc-André Lemburg, Fredrik Lundh, Neil Schemenauer, Thomas Wouters.</p>
@@ -761,5 +803,5 @@ Hudson, Marc-André Lemburg, Fredrik Lundh, Neil Schemenauer, Thomas Wouters.</p
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="Instrumenting CPython with DTrace and SystemTap" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/howto/instrumentation.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="author, David Malcolm,, author, Łukasz Langa,. DTrace and SystemTap are monitoring tools, each providing a way to inspect what the processes on a computer system are doing. They both use domain-spe..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="author, David Malcolm,, author, Łukasz Langa,. DTrace and SystemTap are monitoring tools, each providing a way to inspect what the processes on a computer system are doing. They both use domain-spe..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="Instrumenting CPython with DTrace and SystemTap"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/howto/instrumentation.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="author, David Malcolm,, author, Łukasz Langa,. DTrace and SystemTap are monitoring tools, each providing a way to inspect what the processes on a computer system are doing. They both use domain-spe..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="author, David Malcolm,, author, Łukasz Langa,. DTrace and SystemTap are monitoring tools, each providing a way to inspect what the processes on a computer system are doing. They both use domain-spe..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>Instrumenting CPython with DTrace and SystemTap</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/howto/instrumentation.html" />
+    <link rel="canonical" href="https://docs.python.org/3/howto/instrumentation.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -71,21 +72,24 @@ CPython. DTrace scripts can stop working or work incorrectly without
 warning when changing CPython versions.</p>
 </div>
 <section id="enabling-the-static-markers">
-<h2>Enabling the static markers</h2>
+<h2 class="sigil_not_in_toc">Enabling the static markers</h2>
 <p>macOS comes with built-in support for DTrace.  On Linux, in order to
 build CPython with the embedded markers for SystemTap, the SystemTap
 development tools must be installed.</p>
 <p>On a Linux machine, this can be done via:</p>
 <div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>yum<span class="w"> </span>install<span class="w"> </span>systemtap-sdt-devel
-</pre></div>
+</pre>
+</div>
 </div>
 <p>or:</p>
 <div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>systemtap-sdt-dev
-</pre></div>
+</pre>
+</div>
 </div>
 <p>CPython must then be <a class="reference internal" href="../using/configure.xhtml#cmdoption-with-dtrace"><code class="xref std std-option docutils literal notranslate"><span class="pre">configured</span> <span class="pre">with</span> <span class="pre">the</span> <span class="pre">--with-dtrace</span> <span class="pre">option</span></code></a>:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>checking for --with-dtrace... yes
-</pre></div>
+</pre>
+</div>
 </div>
 <p>On macOS, you can list available DTrace probes by running a Python
 process in the background and listing all probes made available by the
@@ -102,20 +106,23 @@ Python provider:</p>
 <span class="go">29569 python18035        python3.6                           collect gc-start</span>
 <span class="go">29570 python18035        python3.6          _PyEval_EvalFrameDefault line</span>
 <span class="go">29571 python18035        python3.6                 maybe_dtrace_line line</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>On Linux, you can verify if the SystemTap static markers are present in
 the built binary by seeing if it contains a “.note.stapsdt” section.</p>
 <div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>readelf<span class="w"> </span>-S<span class="w"> </span>./python<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>.note.stapsdt
 <span class="go">[30] .note.stapsdt        NOTE         0000000000000000 00308d78</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>If you’ve built Python as a shared library
 (with the <a class="reference internal" href="../using/configure.xhtml#cmdoption-enable-shared"><code class="xref std std-option docutils literal notranslate"><span class="pre">--enable-shared</span></code></a> configure option), you
 need to look instead within the shared library.  For example:</p>
 <div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>readelf<span class="w"> </span>-S<span class="w"> </span>libpython3.3dm.so.1.0<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>.note.stapsdt
 <span class="go">[29] .note.stapsdt        NOTE         0000000000000000 00365b68</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Sufficiently modern readelf can print the metadata:</p>
 <div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>readelf<span class="w"> </span>-n<span class="w"> </span>./python
@@ -152,14 +159,15 @@ need to look instead within the shared library.  For example:</p>
 <span class="go">        Name: function__return</span>
 <span class="go">        Location: 0x000000000053dba8, Base: 0x0000000000630ce2, Semaphore: 0x00000000008d6bea</span>
 <span class="go">        Arguments: 8@%rbp 8@%r12 -4@%eax</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The above metadata contains information for SystemTap describing how it
 can patch strategically placed machine code instructions to enable the
 tracing hooks used by a SystemTap script.</p>
 </section>
 <section id="static-dtrace-probes">
-<h2>Static DTrace probes</h2>
+<h2 class="sigil_not_in_toc">Static DTrace probes</h2>
 <p>The following example DTrace script can be used to show the call/return
 hierarchy of a Python script, only tracing within the invocation of
 a function called “start”. In other words, import-time function
@@ -167,7 +175,7 @@ invocations are not going to be listed:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>self int indent;
 
 python$target:::function-entry
-/copyinstr(arg1) == &quot;start&quot;/
+/copyinstr(arg1) == "start"/
 {
         self-&gt;trace = 1;
 }
@@ -175,9 +183,9 @@ python$target:::function-entry
 python$target:::function-entry
 /self-&gt;trace/
 {
-        printf(&quot;%d\t%*s:&quot;, timestamp, 15, probename);
-        printf(&quot;%*s&quot;, self-&gt;indent, &quot;&quot;);
-        printf(&quot;%s:%s:%d\n&quot;, basename(copyinstr(arg0)), copyinstr(arg1), arg2);
+        printf("%d\t%*s:", timestamp, 15, probename);
+        printf("%*s", self-&gt;indent, "");
+        printf("%s:%s:%d\n", basename(copyinstr(arg0)), copyinstr(arg1), arg2);
         self-&gt;indent++;
 }
 
@@ -185,21 +193,23 @@ python$target:::function-return
 /self-&gt;trace/
 {
         self-&gt;indent--;
-        printf(&quot;%d\t%*s:&quot;, timestamp, 15, probename);
-        printf(&quot;%*s&quot;, self-&gt;indent, &quot;&quot;);
-        printf(&quot;%s:%s:%d\n&quot;, basename(copyinstr(arg0)), copyinstr(arg1), arg2);
+        printf("%d\t%*s:", timestamp, 15, probename);
+        printf("%*s", self-&gt;indent, "");
+        printf("%s:%s:%d\n", basename(copyinstr(arg0)), copyinstr(arg1), arg2);
 }
 
 python$target:::function-return
-/copyinstr(arg1) == &quot;start&quot;/
+/copyinstr(arg1) == "start"/
 {
         self-&gt;trace = 0;
 }
-</pre></div>
+</pre>
+</div>
 </div>
 <p>It can be invoked like this:</p>
-<div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo<span class="w"> </span>dtrace<span class="w"> </span>-q<span class="w"> </span>-s<span class="w"> </span>call_stack.d<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;python3.6 script.py&quot;</span>
-</pre></div>
+<div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo<span class="w"> </span>dtrace<span class="w"> </span>-q<span class="w"> </span>-s<span class="w"> </span>call_stack.d<span class="w"> </span>-c<span class="w"> </span><span class="s2">"python3.6 script.py"</span>
+</pre>
+</div>
 </div>
 <p>The output looks like this:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>156641360502280  function-entry:call_stack.py:start:23
@@ -220,40 +230,43 @@ python$target:::function-return
 156641360719640  function-entry: call_stack.py:function_5:18
 156641360732567 function-return: call_stack.py:function_5:21
 156641360747370 function-return:call_stack.py:start:28
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 <section id="static-systemtap-markers">
-<h2>Static SystemTap markers</h2>
+<h2 class="sigil_not_in_toc">Static SystemTap markers</h2>
 <p>The low-level way to use the SystemTap integration is to use the static
 markers directly.  This requires you to explicitly state the binary file
 containing them.</p>
 <p>For example, this SystemTap script can be used to show the call/return
 hierarchy of a Python script:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>probe process(&quot;python&quot;).mark(&quot;function__entry&quot;) {
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>probe process("python").mark("function__entry") {
      filename = user_string($arg1);
      funcname = user_string($arg2);
      lineno = $arg3;
 
-     printf(&quot;%s =&gt; %s in %s:%d\\n&quot;,
+     printf("%s =&gt; %s in %s:%d\\n",
             thread_indent(1), funcname, filename, lineno);
 }
 
-probe process(&quot;python&quot;).mark(&quot;function__return&quot;) {
+probe process("python").mark("function__return") {
     filename = user_string($arg1);
     funcname = user_string($arg2);
     lineno = $arg3;
 
-    printf(&quot;%s &lt;= %s in %s:%d\\n&quot;,
+    printf("%s &lt;= %s in %s:%d\\n",
            thread_indent(-1), funcname, filename, lineno);
 }
-</pre></div>
+</pre>
+</div>
 </div>
 <p>It can be invoked like this:</p>
 <div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>stap<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>show-call-hierarchy.stp<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-c<span class="w"> </span><span class="s2">&quot;./python test.py&quot;</span>
-</pre></div>
+<span class="w">  </span>-c<span class="w"> </span><span class="s2">"./python test.py"</span>
+</pre>
+</div>
 </div>
 <p>The output looks like this:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>11408 python(8274):        =&gt; __contains__ in Lib/_abcoll.py:362
@@ -262,7 +275,8 @@ probe process(&quot;python&quot;).mark(&quot;function__return&quot;) {
 11424 python(8274):          &lt;= encode in Lib/os.py:493
 11428 python(8274):         &lt;= __getitem__ in Lib/os.py:426
 11433 python(8274):        &lt;= __contains__ in Lib/_abcoll.py:366
-</pre></div>
+</pre>
+</div>
 </div>
 <p>where the columns are:</p>
 <ul class="simple">
@@ -274,17 +288,19 @@ probe process(&quot;python&quot;).mark(&quot;function__return&quot;) {
 <p>For a <a class="reference internal" href="../using/configure.xhtml#cmdoption-enable-shared"><code class="xref std std-option docutils literal notranslate"><span class="pre">--enable-shared</span></code></a> build of CPython, the markers are contained within the
 libpython shared library, and the probe’s dotted path needs to reflect this. For
 example, this line from the above example:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>probe process(&quot;python&quot;).mark(&quot;function__entry&quot;) {
-</pre></div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>probe process("python").mark("function__entry") {
+</pre>
+</div>
 </div>
 <p>should instead read:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>probe process(&quot;python&quot;).library(&quot;libpython3.6dm.so.1.0&quot;).mark(&quot;function__entry&quot;) {
-</pre></div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>probe process("python").library("libpython3.6dm.so.1.0").mark("function__entry") {
+</pre>
+</div>
 </div>
 <p>(assuming a <a class="reference internal" href="../using/configure.xhtml#debug-build"><span class="std std-ref">debug build</span></a> of CPython 3.6)</p>
 </section>
 <section id="available-static-markers">
-<h2>Available static markers</h2>
+<h2 class="sigil_not_in_toc">Available static markers</h2>
 <dl class="object">
 <dt class="sig sig-object">
 <span class="sig-name descname"><span class="pre">function__entry(str</span> <span class="pre">filename,</span> <span class="pre">str</span> <span class="pre">funcname,</span> <span class="pre">int</span> <span class="pre">lineno)</span></span></dt>
@@ -300,8 +316,10 @@ tracing script as positional arguments, which must be accessed using
 <code class="docutils literal notranslate"><span class="pre">user_string($arg2)</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">$arg3</span></code> : <code class="docutils literal notranslate"><span class="pre">int</span></code> line number</p></li>
 </ul>
-</div></blockquote>
-</dd></dl>
+</div>
+</blockquote>
+</dd>
+</dl>
 
 <dl class="object">
 <dt class="sig sig-object">
@@ -310,7 +328,8 @@ tracing script as positional arguments, which must be accessed using
 execution of a Python function has ended (either via <code class="docutils literal notranslate"><span class="pre">return</span></code>, or via an
 exception).  It is only triggered for pure-Python (bytecode) functions.</p>
 <p>The arguments are the same as for <code class="xref c c-func docutils literal notranslate"><span class="pre">function__entry()</span></code></p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="object">
 <dt class="sig sig-object">
@@ -319,21 +338,24 @@ exception).  It is only triggered for pure-Python (bytecode) functions.</p>
 the equivalent of line-by-line tracing with a Python profiler.  It is
 not triggered within C functions.</p>
 <p>The arguments are the same as for <code class="xref c c-func docutils literal notranslate"><span class="pre">function__entry()</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="object">
 <dt class="sig sig-object">
 <span class="sig-name descname"><span class="pre">gc__start(int</span> <span class="pre">generation)</span></span></dt>
 <dd><p>Fires when the Python interpreter starts a garbage collection cycle.
 <code class="docutils literal notranslate"><span class="pre">arg0</span></code> is the generation to scan, like <a class="reference internal" href="../library/gc.xhtml#gc.collect" title="gc.collect"><code class="xref py py-func docutils literal notranslate"><span class="pre">gc.collect()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="object">
 <dt class="sig sig-object">
 <span class="sig-name descname"><span class="pre">gc__done(long</span> <span class="pre">collected)</span></span></dt>
 <dd><p>Fires when the Python interpreter finishes a garbage collection
 cycle. <code class="docutils literal notranslate"><span class="pre">arg0</span></code> is the number of collected objects.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="object">
 <dt class="sig sig-object">
@@ -343,7 +365,8 @@ cycle. <code class="docutils literal notranslate"><span class="pre">arg0</span><
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="object">
 <dt class="sig sig-object">
@@ -354,7 +377,8 @@ successfully loaded.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="object">
 <dt class="sig sig-object">
@@ -365,11 +389,12 @@ pointer to a tuple object.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.8.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="systemtap-tapsets">
-<h2>SystemTap Tapsets</h2>
+<h2 class="sigil_not_in_toc">SystemTap Tapsets</h2>
 <p>The higher-level way to use the SystemTap integration is to use a “tapset”:
 SystemTap’s equivalent of a library, which hides some of the lower-level
 details of the static markers.</p>
@@ -378,21 +403,22 @@ details of the static markers.</p>
    Provide a higher-level wrapping around the function__entry and
    function__return markers:
  \*/
-probe python.function.entry = process(&quot;python&quot;).mark(&quot;function__entry&quot;)
+probe python.function.entry = process("python").mark("function__entry")
 {
     filename = user_string($arg1);
     funcname = user_string($arg2);
     lineno = $arg3;
     frameptr = $arg4
 }
-probe python.function.return = process(&quot;python&quot;).mark(&quot;function__return&quot;)
+probe python.function.return = process("python").mark("function__return")
 {
     filename = user_string($arg1);
     funcname = user_string($arg2);
     lineno = $arg3;
     frameptr = $arg4
 }
-</pre></div>
+</pre>
+</div>
 </div>
 <p>If this file is installed in SystemTap’s tapset directory (e.g.
 <code class="docutils literal notranslate"><span class="pre">/usr/share/systemtap/tapset</span></code>), then these additional probepoints become
@@ -402,7 +428,8 @@ available:</p>
 <span class="sig-name descname"><span class="pre">python.function.entry(str</span> <span class="pre">filename,</span> <span class="pre">str</span> <span class="pre">funcname,</span> <span class="pre">int</span> <span class="pre">lineno,</span> <span class="pre">frameptr)</span></span></dt>
 <dd><p>This probe point indicates that execution of a Python function has begun.
 It is only triggered for pure-Python (bytecode) functions.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="object">
 <dt class="sig sig-object">
@@ -411,26 +438,28 @@ It is only triggered for pure-Python (bytecode) functions.</p>
 indicates that execution of a Python function has ended (either via
 <code class="docutils literal notranslate"><span class="pre">return</span></code>, or via an exception).  It is only triggered for pure-Python
 (bytecode) functions.</p>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="examples">
-<h2>Examples</h2>
+<h2 class="sigil_not_in_toc">Examples</h2>
 <p>This SystemTap script uses the tapset above to more cleanly implement the
 example given above of tracing the Python function-call hierarchy, without
 needing to directly name the static markers:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>probe python.function.entry
 {
-  printf(&quot;%s =&gt; %s in %s:%d\n&quot;,
+  printf("%s =&gt; %s in %s:%d\n",
          thread_indent(1), funcname, filename, lineno);
 }
 
 probe python.function.return
 {
-  printf(&quot;%s &lt;= %s in %s:%d\n&quot;,
+  printf("%s &lt;= %s in %s:%d\n",
          thread_indent(-1), funcname, filename, lineno);
 }
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The following script uses the tapset above to provide a top-like view of all
 running CPython code, showing the top 20 most frequently entered bytecode
@@ -443,17 +472,18 @@ probe python.function.entry
 }
 
 probe timer.ms(1000) {
-    printf(&quot;\033[2J\033[1;1H&quot;) /* clear screen \*/
-    printf(&quot;%6s %80s %6s %30s %6s\n&quot;,
-           &quot;PID&quot;, &quot;FILENAME&quot;, &quot;LINE&quot;, &quot;FUNCTION&quot;, &quot;CALLS&quot;)
+    printf("\033[2J\033[1;1H") /* clear screen \*/
+    printf("%6s %80s %6s %30s %6s\n",
+           "PID", "FILENAME", "LINE", "FUNCTION", "CALLS")
     foreach ([pid, filename, funcname, lineno] in fn_calls- limit 20) {
-        printf(&quot;%6d %80s %6d %30s %6d\n&quot;,
+        printf("%6d %80s %6d %30s %6d\n",
             pid, filename, lineno, funcname,
             fn_calls[pid, filename, funcname, lineno]);
     }
     delete fn_calls;
 }
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 </section>
@@ -464,5 +494,5 @@ probe timer.ms(1000) {
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

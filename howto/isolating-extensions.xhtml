@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="Isolating Extension Modules" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/howto/isolating-extensions.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="Abstract: Traditionally, state belonging to Python extension modules was kept in C static variables, which have process-wide scope. This document describes problems of such per-process state and sh..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="Abstract: Traditionally, state belonging to Python extension modules was kept in C static variables, which have process-wide scope. This document describes problems of such per-process state and sh..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="Isolating Extension Modules"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/howto/isolating-extensions.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="Abstract: Traditionally, state belonging to Python extension modules was kept in C static variables, which have process-wide scope. This document describes problems of such per-process state and sh..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="Abstract: Traditionally, state belonging to Python extension modules was kept in C static variables, which have process-wide scope. This document describes problems of such per-process state and sh..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>Isolating Extension Modules</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/howto/isolating-extensions.html" />
+    <link rel="canonical" href="https://docs.python.org/3/howto/isolating-extensions.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -56,13 +57,13 @@ switching from static types to heap types, and—perhaps most
 importantly—accessing per-module state from code.</p>
 </aside>
 <section id="who-should-read-this">
-<h2>Who should read this</h2>
+<h2 class="sigil_not_in_toc">Who should read this</h2>
 <p>This guide is written for maintainers of <a class="reference internal" href="../c-api/index.xhtml#c-api-index"><span class="std std-ref">C-API</span></a> extensions
 who would like to make that extension safer to use in applications where
 Python itself is used as a library.</p>
 </section>
 <section id="background">
-<h2>Background</h2>
+<h2 class="sigil_not_in_toc">Background</h2>
 <p>An <em>interpreter</em> is the context in which Python code runs. It contains
 configuration (e.g. the import path) and runtime state (e.g. the set of
 imported modules).</p>
@@ -89,7 +90,7 @@ more than one interpreter in the same process.</p>
 authors tend to not keep multiple interpreters in mind when developing,
 and it is currently cumbersome to test the behavior.</p>
 <section id="enter-per-module-state">
-<h3>Enter Per-Module State</h3>
+<h3 class="sigil_not_in_toc">Enter Per-Module State</h3>
 <p>Instead of focusing on per-interpreter state, Python’s C API is evolving
 to better support the more granular <em>per-module</em> state.
 This means that C-level data should be attached to a <em>module object</em>.
@@ -109,18 +110,19 @@ if you need them, you should give them additional care and testing.
 (Note that this guide does not cover them.)</p>
 </section>
 <section id="isolated-module-objects">
-<h3>Isolated Module Objects</h3>
+<h3 class="sigil_not_in_toc">Isolated Module Objects</h3>
 <p>The key point to keep in mind when developing an extension module is
 that several module objects can be created from a single shared library.
 For example:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">binascii</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">old_binascii</span> <span class="o">=</span> <span class="n">binascii</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">del</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="s1">&#39;binascii&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">del</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="s1">'binascii'</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">binascii</span>  <span class="c1"># create a new module object</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">old_binascii</span> <span class="o">==</span> <span class="n">binascii</span>
 <span class="go">False</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>As a rule of thumb, the two modules should be completely independent.
 All objects and state specific to the module should be encapsulated
@@ -134,7 +136,7 @@ modules make it easier to set clear expectations and guidelines that
 work across a variety of use cases.</p>
 </section>
 <section id="surprising-edge-cases">
-<h3>Surprising Edge Cases</h3>
+<h3 class="sigil_not_in_toc">Surprising Edge Cases</h3>
 <p>Note that isolated modules do create some surprising edge cases. Most
 notably, each module object will typically not share its classes and
 exceptions with other similar modules. Continuing from the
@@ -144,14 +146,15 @@ separate objects. In the following code, the exception is <em>not</em> caught:</
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">old_binascii</span><span class="o">.</span><span class="n">Error</span> <span class="o">==</span> <span class="n">binascii</span><span class="o">.</span><span class="n">Error</span>
 <span class="go">False</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">try</span><span class="p">:</span>
-<span class="gp">... </span>    <span class="n">old_binascii</span><span class="o">.</span><span class="n">unhexlify</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;qwertyuiop&#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">old_binascii</span><span class="o">.</span><span class="n">unhexlify</span><span class="p">(</span><span class="sa">b</span><span class="s1">'qwertyuiop'</span><span class="p">)</span>
 <span class="gp">... </span><span class="k">except</span> <span class="n">binascii</span><span class="o">.</span><span class="n">Error</span><span class="p">:</span>
-<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;boo&#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">'boo'</span><span class="p">)</span>
 <span class="gp">...</span>
 <span class="gt">Traceback (most recent call last):</span>
-  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">2</span>, in <span class="n">&lt;module&gt;</span>
+  File <span class="nb">"&lt;stdin&gt;"</span>, line <span class="m">2</span>, in <span class="n">&lt;module&gt;</span>
 <span class="gr">binascii.Error</span>: <span class="n">Non-hexadecimal digit found</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>This is expected. Notice that pure-Python modules behave the same way:
 it is a part of how Python works.</p>
@@ -161,9 +164,9 @@ as a hack.</p>
 </section>
 </section>
 <section id="making-modules-safe-with-multiple-interpreters">
-<h2>Making Modules Safe with Multiple Interpreters</h2>
+<h2 class="sigil_not_in_toc">Making Modules Safe with Multiple Interpreters</h2>
 <section id="managing-global-state">
-<h3>Managing Global State</h3>
+<h3 class="sigil_not_in_toc">Managing Global State</h3>
 <p>Sometimes, the state associated with a Python module is not specific to that module, but
 to the entire process (or something else “more global” than a module).
 For example:</p>
@@ -183,7 +186,7 @@ module from being loaded more than once per process—see
 <a class="reference internal" href="#opt-out-limiting-to-one-module-object-per-process">Opt-Out: Limiting to One Module Object per Process</a>.</p>
 </section>
 <section id="managing-per-module-state">
-<h3>Managing Per-Module State</h3>
+<h3 class="sigil_not_in_toc">Managing Per-Module State</h3>
 <p>To use per-module state, use
 <a class="reference internal" href="../c-api/module.xhtml#multi-phase-initialization"><span class="std std-ref">multi-phase extension module initialization</span></a>.
 This signals that your module supports multiple interpreters correctly.</p>
@@ -214,7 +217,7 @@ modules which can be unloaded cleanly.</p>
 example module initialization shown at the bottom of the file.</p>
 </section>
 <section id="opt-out-limiting-to-one-module-object-per-process">
-<h3>Opt-Out: Limiting to One Module Object per Process</h3>
+<h3 class="sigil_not_in_toc">Opt-Out: Limiting to One Module Object per Process</h3>
 <p>A non-negative <code class="docutils literal notranslate"><span class="pre">PyModuleDef.m_size</span></code> signals that a module supports
 multiple interpreters correctly. If this is not yet the case for your
 module, you can explicitly make your module loadable only once per
@@ -226,17 +229,18 @@ process. For example:</p>
 <span class="p">{</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">loaded</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">PyErr_SetString</span><span class="p">(</span><span class="n">PyExc_ImportError</span><span class="p">,</span>
-<span class="w">                        </span><span class="s">&quot;cannot load module more than once per process&quot;</span><span class="p">);</span>
+<span class="w">                        </span><span class="s">"cannot load module more than once per process"</span><span class="p">);</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="n">loaded</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <span class="w">    </span><span class="c1">// ... rest of initialization</span>
 <span class="p">}</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 <section id="module-state-access-from-functions">
-<h3>Module State Access from Functions</h3>
+<h3 class="sigil_not_in_toc">Module State Access from Functions</h3>
 <p>Accessing the state from module-level functions is straightforward.
 Functions get the module object as their first argument; for extracting
 the state, you can use <code class="docutils literal notranslate"><span class="pre">PyModule_GetState</span></code>:</p>
@@ -249,7 +253,8 @@ the state, you can use <code class="docutils literal notranslate"><span class="p
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="c1">// ... rest of logic</span>
 <span class="p">}</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -261,7 +266,7 @@ easy to prevent.</p>
 </section>
 </section>
 <section id="heap-types">
-<h2>Heap Types</h2>
+<h2 class="sigil_not_in_toc">Heap Types</h2>
 <p>Traditionally, types defined in C code are <em>static</em>; that is,
 <code class="docutils literal notranslate"><span class="pre">static</span> <span class="pre">PyTypeObject</span></code> structures defined directly in code and
 initialized using <code class="docutils literal notranslate"><span class="pre">PyType_Ready()</span></code>.</p>
@@ -285,7 +290,7 @@ for short. These correspond more closely to classes created by Python’s
 <code class="docutils literal notranslate"><span class="pre">class</span></code> statement.</p>
 <p>For new modules, using heap types by default is a good rule of thumb.</p>
 <section id="changing-static-types-to-heap-types">
-<h3>Changing Static Types to Heap Types</h3>
+<h3 class="sigil_not_in_toc">Changing Static Types to Heap Types</h3>
 <p>Static types can be converted to heap types, but note that
 the heap type API was not designed for “lossless” conversion
 from static types—that is, creating a type that works exactly like a given
@@ -305,7 +310,7 @@ You can prevent this with the <a class="reference internal" href="../c-api/typeo
 </ul>
 </section>
 <section id="defining-heap-types">
-<h3>Defining Heap Types</h3>
+<h3 class="sigil_not_in_toc">Defining Heap Types</h3>
 <p>Heap types can be created by filling a <a class="reference internal" href="../c-api/type.xhtml#c.PyType_Spec" title="PyType_Spec"><code class="xref c c-struct docutils literal notranslate"><span class="pre">PyType_Spec</span></code></a> structure, a
 description or “blueprint” of a class, and calling
 <a class="reference internal" href="../c-api/type.xhtml#c.PyType_FromModuleAndSpec" title="PyType_FromModuleAndSpec"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyType_FromModuleAndSpec()</span></code></a> to construct a new class object.</p>
@@ -320,7 +325,7 @@ safe access from C) and the module’s <code class="docutils literal notranslate
 Python code).</p>
 </section>
 <section id="garbage-collection-protocol">
-<h3>Garbage-Collection Protocol</h3>
+<h3 class="sigil_not_in_toc">Garbage-Collection Protocol</h3>
 <p>Instances of heap types hold a reference to their type.
 This ensures that the type isn’t destroyed before all its instances are,
 but may result in reference cycles that need to be broken by the
@@ -340,7 +345,7 @@ for additional considerations.</p>
 somewhat awkward to use in its current state.
 The following sections will guide you through common issues.</p>
 <section id="tp-traverse-in-python-3-8-and-lower">
-<h4><code class="docutils literal notranslate"><span class="pre">tp_traverse</span></code> in Python 3.8 and lower</h4>
+<h4 class="sigil_not_in_toc"><code class="docutils literal notranslate"><span class="pre">tp_traverse</span></code> in Python 3.8 and lower</h4>
 <p>The requirement to visit the type from <code class="docutils literal notranslate"><span class="pre">tp_traverse</span></code> was added in Python 3.9.
 If you support Python 3.8 and lower, the traverse function must <em>not</em>
 visit the type, so it must be more complicated:</p>
@@ -351,7 +356,8 @@ visit the type, so it must be more complicated:</p>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Unfortunately, <a class="reference internal" href="../c-api/apiabiversion.xhtml#c.Py_Version" title="Py_Version"><code class="xref c c-data docutils literal notranslate"><span class="pre">Py_Version</span></code></a> was only added in Python 3.11.
 As a replacement, use:</p>
@@ -362,30 +368,32 @@ As a replacement, use:</p>
 </ul>
 </section>
 <section id="delegating-tp-traverse">
-<h4>Delegating <code class="docutils literal notranslate"><span class="pre">tp_traverse</span></code></h4>
+<h4 class="sigil_not_in_toc">Delegating <code class="docutils literal notranslate"><span class="pre">tp_traverse</span></code></h4>
 <p>If your traverse function delegates to the <a class="reference internal" href="../c-api/typeobj.xhtml#c.PyTypeObject.tp_traverse" title="PyTypeObject.tp_traverse"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_traverse</span></code></a>
 of its base class (or another type), ensure that <code class="docutils literal notranslate"><span class="pre">Py_TYPE(self)</span></code> is visited
 only once.
 Note that only heap type are expected to visit the type in <code class="docutils literal notranslate"><span class="pre">tp_traverse</span></code>.</p>
 <p>For example, if your traverse function includes:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">base</span><span class="o">-&gt;</span><span class="n">tp_traverse</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">visit</span><span class="p">,</span><span class="w"> </span><span class="n">arg</span><span class="p">)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>…and <code class="docutils literal notranslate"><span class="pre">base</span></code> may be a static type, then it should also include:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">base</span><span class="o">-&gt;</span><span class="n">tp_flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">Py_TPFLAGS_HEAPTYPE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// a heap type&#39;s tp_traverse already visited Py_TYPE(self)</span>
+<span class="w">    </span><span class="c1">// a heap type's tp_traverse already visited Py_TYPE(self)</span>
 <span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Py_Version</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mh">0x03090000</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">Py_VISIT</span><span class="p">(</span><span class="n">Py_TYPE</span><span class="p">(</span><span class="n">self</span><span class="p">));</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>It is not necessary to handle the type’s reference count in
 <a class="reference internal" href="../c-api/typeobj.xhtml#c.PyTypeObject.tp_new" title="PyTypeObject.tp_new"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_new</span></code></a> and <a class="reference internal" href="../c-api/typeobj.xhtml#c.PyTypeObject.tp_clear" title="PyTypeObject.tp_clear"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_clear</span></code></a>.</p>
 </section>
 <section id="defining-tp-dealloc">
-<h4>Defining <code class="docutils literal notranslate"><span class="pre">tp_dealloc</span></code></h4>
+<h4 class="sigil_not_in_toc">Defining <code class="docutils literal notranslate"><span class="pre">tp_dealloc</span></code></h4>
 <p>If your type has a custom <a class="reference internal" href="../c-api/typeobj.xhtml#c.PyTypeObject.tp_dealloc" title="PyTypeObject.tp_dealloc"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_dealloc</span></code></a> function,
 it needs to:</p>
 <ul class="simple">
@@ -402,27 +410,29 @@ to be decremented <em>after</em> the instance is deallocated. For example:</p>
 <span class="w">    </span><span class="n">type</span><span class="o">-&gt;</span><span class="n">tp_free</span><span class="p">(</span><span class="n">self</span><span class="p">);</span>
 <span class="w">    </span><span class="n">Py_DECREF</span><span class="p">(</span><span class="n">type</span><span class="p">);</span>
 <span class="p">}</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The default <code class="docutils literal notranslate"><span class="pre">tp_dealloc</span></code> function does this, so
 if your type does <em>not</em> override
 <code class="docutils literal notranslate"><span class="pre">tp_dealloc</span></code> you don’t need to add it.</p>
 </section>
 <section id="not-overriding-tp-free">
-<h4>Not overriding <code class="docutils literal notranslate"><span class="pre">tp_free</span></code></h4>
+<h4 class="sigil_not_in_toc">Not overriding <code class="docutils literal notranslate"><span class="pre">tp_free</span></code></h4>
 <p>The <a class="reference internal" href="../c-api/typeobj.xhtml#c.PyTypeObject.tp_free" title="PyTypeObject.tp_free"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_free</span></code></a> slot of a heap type must be set to
 <a class="reference internal" href="../c-api/gcsupport.xhtml#c.PyObject_GC_Del" title="PyObject_GC_Del"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_GC_Del()</span></code></a>.
 This is the default; do not override it.</p>
 </section>
 <section id="avoiding-pyobject-new">
-<h4>Avoiding <code class="docutils literal notranslate"><span class="pre">PyObject_New</span></code></h4>
+<h4 class="sigil_not_in_toc">Avoiding <code class="docutils literal notranslate"><span class="pre">PyObject_New</span></code></h4>
 <p>GC-tracked objects need to be allocated using GC-aware functions.</p>
 <p>If you use use <a class="reference internal" href="../c-api/allocation.xhtml#c.PyObject_New" title="PyObject_New"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_New()</span></code></a> or <a class="reference internal" href="../c-api/allocation.xhtml#c.PyObject_NewVar" title="PyObject_NewVar"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_NewVar()</span></code></a>:</p>
 <ul>
 <li><p>Get and call type’s <a class="reference internal" href="../c-api/typeobj.xhtml#c.PyTypeObject.tp_alloc" title="PyTypeObject.tp_alloc"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_alloc</span></code></a> slot, if possible.
 That is, replace <code class="docutils literal notranslate"><span class="pre">TYPE</span> <span class="pre">*o</span> <span class="pre">=</span> <span class="pre">PyObject_New(TYPE,</span> <span class="pre">typeobj)</span></code> with:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">TYPE</span><span class="w"> </span><span class="o">*</span><span class="n">o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">typeobj</span><span class="o">-&gt;</span><span class="n">tp_alloc</span><span class="p">(</span><span class="n">typeobj</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Replace <code class="docutils literal notranslate"><span class="pre">o</span> <span class="pre">=</span> <span class="pre">PyObject_NewVar(TYPE,</span> <span class="pre">typeobj,</span> <span class="pre">size)</span></code> with the same,
 but use size instead of the 0.</p>
@@ -432,14 +442,15 @@ call <a class="reference internal" href="../c-api/gcsupport.xhtml#c.PyObject_GC_
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">TYPE</span><span class="w"> </span><span class="o">*</span><span class="n">o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PyObject_GC_New</span><span class="p">(</span><span class="n">TYPE</span><span class="p">,</span><span class="w"> </span><span class="n">typeobj</span><span class="p">);</span>
 
 <span class="n">TYPE</span><span class="w"> </span><span class="o">*</span><span class="n">o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PyObject_GC_NewVar</span><span class="p">(</span><span class="n">TYPE</span><span class="p">,</span><span class="w"> </span><span class="n">typeobj</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">);</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </li>
 </ul>
 </section>
 </section>
 <section id="module-state-access-from-classes">
-<h3>Module State Access from Classes</h3>
+<h3 class="sigil_not_in_toc">Module State Access from Classes</h3>
 <p>If you have a type object defined with <a class="reference internal" href="../c-api/type.xhtml#c.PyType_FromModuleAndSpec" title="PyType_FromModuleAndSpec"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyType_FromModuleAndSpec()</span></code></a>,
 you can call <a class="reference internal" href="../c-api/type.xhtml#c.PyType_GetModule" title="PyType_GetModule"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyType_GetModule()</span></code></a> to get the associated module, and then
 <a class="reference internal" href="../c-api/module.xhtml#c.PyModule_GetState" title="PyModule_GetState"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyModule_GetState()</span></code></a> to get the module’s state.</p>
@@ -449,11 +460,12 @@ these two steps with <a class="reference internal" href="../c-api/type.xhtml#c.P
 <span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">state</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
 <span class="p">}</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 <section id="module-state-access-from-regular-methods">
-<h3>Module State Access from Regular Methods</h3>
+<h3 class="sigil_not_in_toc">Module State Access from Regular Methods</h3>
 <p>Accessing the module-level state from methods of a class is somewhat more
 complicated, but is possible thanks to API introduced in Python 3.9.
 To get the state, you need to first get the <em>defining class</em>, and then
@@ -478,7 +490,8 @@ if <code class="docutils literal notranslate"><span class="pre">type(self)</span
 
 <span class="k">class</span><span class="w"> </span><span class="nc">Sub</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="k">pass</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </div>
 <p>For a method to get its “defining class”, it must use the
@@ -489,9 +502,10 @@ and the corresponding <a class="reference internal" href="../c-api/structures.xh
 <span class="w">    </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="p">,</span><span class="w">               </span><span class="c1">// object the method was called on</span>
 <span class="w">    </span><span class="n">PyTypeObject</span><span class="w"> </span><span class="o">*</span><span class="n">defining_class</span><span class="p">,</span><span class="w"> </span><span class="c1">// defining class</span>
 <span class="w">    </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="w">        </span><span class="c1">// C array of arguments</span>
-<span class="w">    </span><span class="n">Py_ssize_t</span><span class="w"> </span><span class="n">nargs</span><span class="p">,</span><span class="w">             </span><span class="c1">// length of &quot;args&quot;</span>
+<span class="w">    </span><span class="n">Py_ssize_t</span><span class="w"> </span><span class="n">nargs</span><span class="p">,</span><span class="w">             </span><span class="c1">// length of "args"</span>
 <span class="w">    </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">kwnames</span><span class="p">)</span><span class="w">            </span><span class="c1">// NULL, or dict of keyword arguments</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Once you have the defining class, call <a class="reference internal" href="../c-api/type.xhtml#c.PyType_GetModuleState" title="PyType_GetModuleState"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyType_GetModuleState()</span></code></a> to get
 the state of its associated module.</p>
@@ -510,20 +524,21 @@ the state of its associated module.</p>
 <span class="w">    </span><span class="p">...</span><span class="w"> </span><span class="c1">// rest of logic</span>
 <span class="p">}</span>
 
-<span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">example_method_doc</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;...&quot;</span><span class="p">);</span>
+<span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">example_method_doc</span><span class="p">,</span><span class="w"> </span><span class="s">"..."</span><span class="p">);</span>
 
 <span class="k">static</span><span class="w"> </span><span class="n">PyMethodDef</span><span class="w"> </span><span class="n">my_methods</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="p">{</span><span class="s">&quot;example_method&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">{</span><span class="s">"example_method"</span><span class="p">,</span>
 <span class="w">      </span><span class="p">(</span><span class="n">PyCFunction</span><span class="p">)(</span><span class="kt">void</span><span class="p">(</span><span class="o">*</span><span class="p">)(</span><span class="kt">void</span><span class="p">))</span><span class="n">example_method</span><span class="p">,</span>
 <span class="w">      </span><span class="n">METH_METHOD</span><span class="o">|</span><span class="n">METH_FASTCALL</span><span class="o">|</span><span class="n">METH_KEYWORDS</span><span class="p">,</span>
 <span class="w">      </span><span class="n">example_method_doc</span><span class="p">}</span>
 <span class="w">    </span><span class="p">{</span><span class="nb">NULL</span><span class="p">},</span>
 <span class="p">}</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 <section id="module-state-access-from-slot-methods-getters-and-setters">
-<h3>Module State Access from Slot Methods, Getters and Setters</h3>
+<h3 class="sigil_not_in_toc">Module State Access from Slot Methods, Getters and Setters</h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is new in Python 3.11.</p>
@@ -543,7 +558,8 @@ to get the state:</p>
 <span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">state</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
 <span class="p">}</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p><code class="xref c c-func docutils literal notranslate"><span class="pre">PyType_GetModuleByDef()</span></code> works by searching the
 <a class="reference internal" href="../glossary.xhtml#term-method-resolution-order"><span class="xref std std-term">method resolution order</span></a> (i.e. all superclasses) for the first
@@ -558,7 +574,7 @@ C memory layout.</p>
 </div>
 </section>
 <section id="lifetime-of-the-module-state">
-<h3>Lifetime of the Module State</h3>
+<h3 class="sigil_not_in_toc">Lifetime of the Module State</h3>
 <p>When a module object is garbage-collected, its module state is freed.
 For each pointer to (a part of) the module state, you must hold a reference
 to the module object.</p>
@@ -571,19 +587,19 @@ libraries.</p>
 </section>
 </section>
 <section id="open-issues">
-<h2>Open Issues</h2>
+<h2 class="sigil_not_in_toc">Open Issues</h2>
 <p>Several issues around per-module state and heap types are still open.</p>
 <p>Discussions about improving the situation are best held on the <a class="reference external" href="https://mail.python.org/mailman3/lists/capi-sig.python.org/">capi-sig
 mailing list</a><span class="link-target"> [https://mail.python.org/mailman3/lists/capi-sig.python.org/]</span>.</p>
 <section id="per-class-scope">
-<h3>Per-Class Scope</h3>
+<h3 class="sigil_not_in_toc">Per-Class Scope</h3>
 <p>It is currently (as of Python 3.11) not possible to attach state to individual
 <em>types</em> without relying on CPython implementation details (which may change
 in the future—perhaps, ironically, to allow a proper solution for
 per-class scope).</p>
 </section>
 <section id="lossless-conversion-to-heap-types">
-<h3>Lossless Conversion to Heap Types</h3>
+<h3 class="sigil_not_in_toc">Lossless Conversion to Heap Types</h3>
 <p>The heap type API was not designed for “lossless” conversion from static types;
 that is, creating a type that works exactly like a given static type.</p>
 </section>
@@ -596,5 +612,5 @@ that is, creating a type that works exactly like a given static type.</p>
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

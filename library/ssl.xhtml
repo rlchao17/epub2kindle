@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="ssl — TLS/SSL wrapper for socket objects" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/library/ssl.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="Source code: Lib/ssl.py[https://github.com/python/cpython/tree/3.13/Lib/ssl.py] This module provides access to Transport Layer Security (often known as “Secure Sockets Layer”) encryption and peer a..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="Source code: Lib/ssl.py[https://github.com/python/cpython/tree/3.13/Lib/ssl.py] This module provides access to Transport Layer Security (often known as “Secure Sockets Layer”) encryption and peer a..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="ssl — TLS/SSL wrapper for socket objects"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/library/ssl.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="Source code: Lib/ssl.py[https://github.com/python/cpython/tree/3.13/Lib/ssl.py] This module provides access to Transport Layer Security (often known as “Secure Sockets Layer”) encryption and peer a..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="Source code: Lib/ssl.py[https://github.com/python/cpython/tree/3.13/Lib/ssl.py] This module provides access to Transport Layer Security (often known as “Secure Sockets Layer”) encryption and peer a..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>ssl — TLS/SSL wrapper for socket objects</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/library/ssl.html" />
+    <link rel="canonical" href="https://docs.python.org/3/library/ssl.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -45,7 +46,7 @@
   <section id="module-ssl">
 <span id="ssl-tls-ssl-wrapper-for-socket-objects"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">ssl</span></code> — TLS/SSL wrapper for socket objects</h1>
 <p><strong>Source code:</strong> <a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.13/Lib/ssl.py">Lib/ssl.py</a><span class="link-target"> [https://github.com/python/cpython/tree/3.13/Lib/ssl.py]</span></p>
-<span id="index-0"></span><hr class="docutils" id="index-1" />
+<span id="index-0"></span><hr class="docutils" id="index-1"/>
 <p>This module provides access to Transport Layer Security (often known as “Secure
 Sockets Layer”) encryption and peer authentication facilities for network
 sockets, both client-side and server-side.  This module uses the OpenSSL
@@ -97,9 +98,9 @@ or newer.</p>
 <p>Use of deprecated constants and functions result in deprecation warnings.</p>
 </div>
 <section id="functions-constants-and-exceptions">
-<h2>Functions, Constants, and Exceptions</h2>
+<h2 class="sigil_not_in_toc">Functions, Constants, and Exceptions</h2>
 <section id="socket-creation">
-<h3>Socket creation</h3>
+<h3 class="sigil_not_in_toc">Socket creation</h3>
 <p>Instances of <a class="reference internal" href="#ssl.SSLSocket" title="ssl.SSLSocket"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSLSocket</span></code></a> must be created using the
 <a class="reference internal" href="#ssl.SSLContext.wrap_socket" title="ssl.SSLContext.wrap_socket"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SSLContext.wrap_socket()</span></code></a> method. The helper function
 <a class="reference internal" href="#ssl.create_default_context" title="ssl.create_default_context"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_default_context()</span></code></a> returns a new context with secure default
@@ -108,40 +109,43 @@ settings.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">socket</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">ssl</span>
 
-<span class="n">hostname</span> <span class="o">=</span> <span class="s1">&#39;www.python.org&#39;</span>
+<span class="n">hostname</span> <span class="o">=</span> <span class="s1">'www.python.org'</span>
 <span class="n">context</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">create_default_context</span><span class="p">()</span>
 
 <span class="k">with</span> <span class="n">socket</span><span class="o">.</span><span class="n">create_connection</span><span class="p">((</span><span class="n">hostname</span><span class="p">,</span> <span class="mi">443</span><span class="p">))</span> <span class="k">as</span> <span class="n">sock</span><span class="p">:</span>
     <span class="k">with</span> <span class="n">context</span><span class="o">.</span><span class="n">wrap_socket</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span> <span class="n">server_hostname</span><span class="o">=</span><span class="n">hostname</span><span class="p">)</span> <span class="k">as</span> <span class="n">ssock</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">ssock</span><span class="o">.</span><span class="n">version</span><span class="p">())</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Client socket example with custom context and IPv4:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">hostname</span> <span class="o">=</span> <span class="s1">&#39;www.python.org&#39;</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">hostname</span> <span class="o">=</span> <span class="s1">'www.python.org'</span>
 <span class="c1"># PROTOCOL_TLS_CLIENT requires valid cert chain and hostname</span>
 <span class="n">context</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">SSLContext</span><span class="p">(</span><span class="n">ssl</span><span class="o">.</span><span class="n">PROTOCOL_TLS_CLIENT</span><span class="p">)</span>
-<span class="n">context</span><span class="o">.</span><span class="n">load_verify_locations</span><span class="p">(</span><span class="s1">&#39;path/to/cabundle.pem&#39;</span><span class="p">)</span>
+<span class="n">context</span><span class="o">.</span><span class="n">load_verify_locations</span><span class="p">(</span><span class="s1">'path/to/cabundle.pem'</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="k">as</span> <span class="n">sock</span><span class="p">:</span>
     <span class="k">with</span> <span class="n">context</span><span class="o">.</span><span class="n">wrap_socket</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span> <span class="n">server_hostname</span><span class="o">=</span><span class="n">hostname</span><span class="p">)</span> <span class="k">as</span> <span class="n">ssock</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">ssock</span><span class="o">.</span><span class="n">version</span><span class="p">())</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Server socket example listening on localhost IPv4:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">context</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">SSLContext</span><span class="p">(</span><span class="n">ssl</span><span class="o">.</span><span class="n">PROTOCOL_TLS_SERVER</span><span class="p">)</span>
-<span class="n">context</span><span class="o">.</span><span class="n">load_cert_chain</span><span class="p">(</span><span class="s1">&#39;/path/to/certchain.pem&#39;</span><span class="p">,</span> <span class="s1">&#39;/path/to/private.key&#39;</span><span class="p">)</span>
+<span class="n">context</span><span class="o">.</span><span class="n">load_cert_chain</span><span class="p">(</span><span class="s1">'/path/to/certchain.pem'</span><span class="p">,</span> <span class="s1">'/path/to/private.key'</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="k">as</span> <span class="n">sock</span><span class="p">:</span>
-    <span class="n">sock</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="mi">8443</span><span class="p">))</span>
+    <span class="n">sock</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="s1">'127.0.0.1'</span><span class="p">,</span> <span class="mi">8443</span><span class="p">))</span>
     <span class="n">sock</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
     <span class="k">with</span> <span class="n">context</span><span class="o">.</span><span class="n">wrap_socket</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span> <span class="n">server_side</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">as</span> <span class="n">ssock</span><span class="p">:</span>
         <span class="n">conn</span><span class="p">,</span> <span class="n">addr</span> <span class="o">=</span> <span class="n">ssock</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
         <span class="o">...</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 <section id="context-creation">
-<h3>Context creation</h3>
+<h3 class="sigil_not_in_toc">Context creation</h3>
 <p>A convenience function helps create <a class="reference internal" href="#ssl.SSLContext" title="ssl.SSLContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSLContext</span></code></a> objects for common
 purposes.</p>
 <dl class="py function">
@@ -191,7 +195,8 @@ use this function but still allow SSL 3.0 connections you can re-enable
 them using:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">ctx</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">create_default_context</span><span class="p">(</span><span class="n">Purpose</span><span class="o">.</span><span class="n">CLIENT_AUTH</span><span class="p">)</span>
 <span class="n">ctx</span><span class="o">.</span><span class="n">options</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="n">ssl</span><span class="o">.</span><span class="n">OP_NO_SSLv3</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </div>
 <div class="admonition note">
@@ -202,7 +207,8 @@ underlying OpenSSL implementation otherwise would accept. While disabling
 this is not recommended, you can do so using:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">ctx</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">create_default_context</span><span class="p">()</span>
 <span class="n">ctx</span><span class="o">.</span><span class="n">verify_flags</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="n">ssl</span><span class="o">.</span><span class="n">VERIFY_X509_STRICT</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </div>
 <div class="versionadded">
@@ -227,11 +233,12 @@ this is not recommended, you can do so using:</p>
 <p><span class="versionmodified changed">Changed in version 3.13: </span>The context now uses <a class="reference internal" href="#ssl.VERIFY_X509_PARTIAL_CHAIN" title="ssl.VERIFY_X509_PARTIAL_CHAIN"><code class="xref py py-data docutils literal notranslate"><span class="pre">VERIFY_X509_PARTIAL_CHAIN</span></code></a> and
 <a class="reference internal" href="#ssl.VERIFY_X509_STRICT" title="ssl.VERIFY_X509_STRICT"><code class="xref py py-data docutils literal notranslate"><span class="pre">VERIFY_X509_STRICT</span></code></a> in its default verify flags.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="exceptions">
-<h3>Exceptions</h3>
+<h3 class="sigil_not_in_toc">Exceptions</h3>
 <dl class="py exception">
 <dt class="sig sig-object py" id="ssl.SSLError">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">SSLError</span></span></dt>
@@ -253,7 +260,8 @@ values depends on the OpenSSL version.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.SSLError.reason">
@@ -264,9 +272,11 @@ values depends on the OpenSSL version.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="ssl.SSLZeroReturnError">
@@ -277,7 +287,8 @@ mean that the underlying transport (read TCP) has been closed.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="ssl.SSLWantReadError">
@@ -288,7 +299,8 @@ fulfilled.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="ssl.SSLWantWriteError">
@@ -299,7 +311,8 @@ fulfilled.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="ssl.SSLSyscallError">
@@ -310,7 +323,8 @@ there is no easy way to inspect the original errno number.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="ssl.SSLEOFError">
@@ -321,7 +335,8 @@ transport when this error is encountered.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="ssl.SSLCertVerificationError">
@@ -335,15 +350,18 @@ failed.</p>
 <dt class="sig sig-object py" id="ssl.SSLCertVerificationError.verify_code">
 <span class="sig-name descname"><span class="pre">verify_code</span></span></dt>
 <dd><p>A numeric error number that denotes the verification error.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.SSLCertVerificationError.verify_message">
 <span class="sig-name descname"><span class="pre">verify_message</span></span></dt>
 <dd><p>A human readable string of the verification error.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="ssl.CertificateError">
@@ -352,11 +370,12 @@ failed.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.7: </span>The exception is now an alias for <a class="reference internal" href="#ssl.SSLCertVerificationError" title="ssl.SSLCertVerificationError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SSLCertVerificationError</span></code></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="random-generation">
-<h3>Random generation</h3>
+<h3 class="sigil_not_in_toc">Random generation</h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="ssl.RAND_bytes">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">RAND_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num</span></span></em><span class="sig-paren">)</span></dt>
@@ -372,7 +391,8 @@ to get the requirements of a cryptographically strong generator.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ssl.RAND_status">
@@ -381,7 +401,8 @@ to get the requirements of a cryptographically strong generator.</p>
 with ‘enough’ randomness, and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.  You can use
 <code class="xref py py-func docutils literal notranslate"><span class="pre">ssl.RAND_egd()</span></code> and <a class="reference internal" href="#ssl.RAND_add" title="ssl.RAND_add"><code class="xref py py-func docutils literal notranslate"><span class="pre">ssl.RAND_add()</span></code></a> to increase the randomness of
 the pseudo-random number generator.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ssl.RAND_add">
@@ -393,27 +414,29 @@ information on sources of entropy.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.5: </span>Writable <a class="reference internal" href="../glossary.xhtml#term-bytes-like-object"><span class="xref std std-term">bytes-like object</span></a> is now accepted.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="certificate-handling">
-<h3>Certificate handling</h3>
+<h3 class="sigil_not_in_toc">Certificate handling</h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="ssl.cert_time_to_seconds">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">cert_time_to_seconds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cert_time</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Return the time in seconds since the Epoch, given the <code class="docutils literal notranslate"><span class="pre">cert_time</span></code>
 string representing the “notBefore” or “notAfter” date from a
-certificate in <code class="docutils literal notranslate"><span class="pre">&quot;%b</span> <span class="pre">%d</span> <span class="pre">%H:%M:%S</span> <span class="pre">%Y</span> <span class="pre">%Z&quot;</span></code> strptime format (C
+certificate in <code class="docutils literal notranslate"><span class="pre">"%b</span> <span class="pre">%d</span> <span class="pre">%H:%M:%S</span> <span class="pre">%Y</span> <span class="pre">%Z"</span></code> strptime format (C
 locale).</p>
 <p>Here’s an example:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">ssl</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">timestamp</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">cert_time_to_seconds</span><span class="p">(</span><span class="s2">&quot;Jan  5 09:34:43 2018 GMT&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">timestamp</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">cert_time_to_seconds</span><span class="p">(</span><span class="s2">"Jan  5 09:34:43 2018 GMT"</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">timestamp</span>  
 <span class="go">1515144883</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcfromtimestamp</span><span class="p">(</span><span class="n">timestamp</span><span class="p">))</span>  
 <span class="go">2018-01-05 09:34:43</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>“notBefore” or “notAfter” dates must use GMT (<span class="target" id="index-8"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc5280.html"><strong>RFC 5280</strong></a><span class="link-target"> [https://datatracker.ietf.org/doc/html/rfc5280.html]</span>).</p>
 <div class="versionchanged">
@@ -422,7 +445,8 @@ timezone in the input string. Local timezone was used
 previously. Return an integer (no fractions of a second in the
 input format)</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ssl.get_server_certificate">
@@ -447,21 +471,24 @@ if the validation attempt fails.  A timeout can be specified with the
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.10: </span>The <em>timeout</em> parameter was added.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ssl.DER_cert_to_PEM_cert">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">DER_cert_to_PEM_cert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">DER_cert_bytes</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Given a certificate as a DER-encoded blob of bytes, returns a PEM-encoded
 string version of the same certificate.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ssl.PEM_cert_to_DER_cert">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">PEM_cert_to_DER_cert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PEM_cert_string</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Given a certificate as an ASCII PEM string, returns a DER-encoded sequence of
 bytes for that same certificate.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ssl.get_default_verify_paths">
@@ -481,7 +508,8 @@ The paths are the same as used by
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.4.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ssl.enum_certificates">
@@ -496,10 +524,11 @@ PKCS#7 ASN.1 data. Trust specifies the purpose of the certificate as a set
 of OIDS or exactly <code class="docutils literal notranslate"><span class="pre">True</span></code> if the certificate is trustworthy for all
 purposes.</p>
 <p>Example:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ssl</span><span class="o">.</span><span class="n">enum_certificates</span><span class="p">(</span><span class="s2">&quot;CA&quot;</span><span class="p">)</span>
-<span class="go">[(b&#39;data...&#39;, &#39;x509_asn&#39;, {&#39;1.3.6.1.5.5.7.3.1&#39;, &#39;1.3.6.1.5.5.7.3.2&#39;}),</span>
-<span class="go"> (b&#39;data...&#39;, &#39;x509_asn&#39;, True)]</span>
-</pre></div>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ssl</span><span class="o">.</span><span class="n">enum_certificates</span><span class="p">(</span><span class="s2">"CA"</span><span class="p">)</span>
+<span class="go">[(b'data...', 'x509_asn', {'1.3.6.1.5.5.7.3.1', '1.3.6.1.5.5.7.3.2'}),</span>
+<span class="go"> (b'data...', 'x509_asn', True)]</span>
+</pre>
+</div>
 </div>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Windows.</p>
@@ -507,7 +536,8 @@ purposes.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.4.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ssl.enum_crls">
@@ -525,17 +555,19 @@ PKCS#7 ASN.1 data.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.4.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="constants">
-<h3>Constants</h3>
+<h3 class="sigil_not_in_toc">Constants</h3>
 <blockquote>
 <div><p>All constants are now <a class="reference internal" href="enum.xhtml#enum.IntEnum" title="enum.IntEnum"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntEnum</span></code></a> or <a class="reference internal" href="enum.xhtml#enum.IntFlag" title="enum.IntFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntFlag</span></code></a> collections.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.6.</span></p>
 </div>
-</div></blockquote>
+</div>
+</blockquote>
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.CERT_NONE">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">CERT_NONE</span></span></dt>
@@ -547,7 +579,8 @@ are ignored and do not abort the TLS/SSL handshake.</p>
 <p>In server mode, no certificate is requested from the client, so the client
 does not send any for client cert authentication.</p>
 <p>See the discussion of <a class="reference internal" href="#ssl-security"><span class="std std-ref">Security considerations</span></a> below.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.CERT_OPTIONAL">
@@ -563,7 +596,8 @@ a certificate, it is verified.  Any verification error immediately aborts
 the TLS handshake.</p>
 <p>Use of this setting requires a valid set of CA certificates to
 be passed to <a class="reference internal" href="#ssl.SSLContext.load_verify_locations" title="ssl.SSLContext.load_verify_locations"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SSLContext.load_verify_locations()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.CERT_REQUIRED">
@@ -582,7 +616,8 @@ authentication.  A client certificate request is sent to the client and
 the client must provide a valid and trusted certificate.</p>
 <p>Use of this setting requires a valid set of CA certificates to
 be passed to <a class="reference internal" href="#ssl.SSLContext.load_verify_locations" title="ssl.SSLContext.load_verify_locations"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SSLContext.load_verify_locations()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ssl.VerifyMode">
@@ -591,7 +626,8 @@ be passed to <a class="reference internal" href="#ssl.SSLContext.load_verify_loc
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.6.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.VERIFY_DEFAULT">
@@ -602,7 +638,8 @@ require nor verify CRLs.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.4.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.VERIFY_CRL_CHECK_LEAF">
@@ -615,7 +652,8 @@ ancestor CA). If no proper CRL has been loaded with
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.4.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.VERIFY_CRL_CHECK_CHAIN">
@@ -625,7 +663,8 @@ all certificates in the peer cert chain are checked.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.4.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.VERIFY_X509_STRICT">
@@ -635,7 +674,8 @@ for broken X.509 certificates.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.4.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.VERIFY_ALLOW_PROXY_CERTS">
@@ -645,7 +685,8 @@ certificate verification.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.10.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.VERIFY_X509_TRUSTED_FIRST">
@@ -656,7 +697,8 @@ certificate. This flag is enabled by default.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.4.4.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.VERIFY_X509_PARTIAL_CHAIN">
@@ -669,7 +711,8 @@ to trust its ancestor root CA.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.10.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ssl.VerifyFlags">
@@ -678,7 +721,8 @@ to trust its ancestor root CA.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.6.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.PROTOCOL_TLS">
@@ -693,7 +737,8 @@ Despite the name, this option can select both “SSL” and “TLS” protocols.
 communication. The generic TLS protocol constant is deprecated in
 favor of <a class="reference internal" href="#ssl.PROTOCOL_TLS_CLIENT" title="ssl.PROTOCOL_TLS_CLIENT"><code class="xref py py-data docutils literal notranslate"><span class="pre">PROTOCOL_TLS_CLIENT</span></code></a> and <a class="reference internal" href="#ssl.PROTOCOL_TLS_SERVER" title="ssl.PROTOCOL_TLS_SERVER"><code class="xref py py-data docutils literal notranslate"><span class="pre">PROTOCOL_TLS_SERVER</span></code></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.PROTOCOL_TLS_CLIENT">
@@ -705,7 +750,8 @@ protocol enables <a class="reference internal" href="#ssl.CERT_REQUIRED" title="
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.6.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.PROTOCOL_TLS_SERVER">
@@ -715,7 +761,8 @@ server support, and configure the context server-side connections.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.6.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.PROTOCOL_SSLv23">
@@ -724,7 +771,8 @@ server support, and configure the context server-side connections.</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 3.6: </span>Use <a class="reference internal" href="#ssl.PROTOCOL_TLS" title="ssl.PROTOCOL_TLS"><code class="xref py py-data docutils literal notranslate"><span class="pre">PROTOCOL_TLS</span></code></a> instead.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.PROTOCOL_SSLv3">
@@ -742,7 +790,8 @@ protocol <a class="reference internal" href="#ssl.PROTOCOL_TLS_SERVER" title="ss
 with <a class="reference internal" href="#ssl.SSLContext.minimum_version" title="ssl.SSLContext.minimum_version"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.minimum_version</span></code></a> and
 <a class="reference internal" href="#ssl.SSLContext.maximum_version" title="ssl.SSLContext.maximum_version"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.maximum_version</span></code></a> instead.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.PROTOCOL_TLSv1">
@@ -751,7 +800,8 @@ with <a class="reference internal" href="#ssl.SSLContext.minimum_version" title=
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 3.6: </span>OpenSSL has deprecated all version specific protocols.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.PROTOCOL_TLSv1_1">
@@ -764,7 +814,8 @@ Available only with openssl version 1.0.1+.</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 3.6: </span>OpenSSL has deprecated all version specific protocols.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.PROTOCOL_TLSv1_2">
@@ -777,7 +828,8 @@ Available only with openssl version 1.0.1+.</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 3.6: </span>OpenSSL has deprecated all version specific protocols.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.OP_ALL">
@@ -788,7 +840,8 @@ flags as OpenSSL’s <code class="docutils literal notranslate"><span class="pre
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.2.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.OP_NO_SSLv2">
@@ -802,7 +855,8 @@ choosing SSLv2 as the protocol version.</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 3.6: </span>SSLv2 is deprecated</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.OP_NO_SSLv3">
@@ -816,7 +870,8 @@ choosing SSLv3 as the protocol version.</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 3.6: </span>SSLv3 is deprecated</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.OP_NO_TLSv1">
@@ -832,7 +887,8 @@ choosing TLSv1 as the protocol version.</p>
 <a class="reference internal" href="#ssl.SSLContext.minimum_version" title="ssl.SSLContext.minimum_version"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.minimum_version</span></code></a> and
 <a class="reference internal" href="#ssl.SSLContext.maximum_version" title="ssl.SSLContext.maximum_version"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.maximum_version</span></code></a> instead.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.OP_NO_TLSv1_1">
@@ -846,7 +902,8 @@ the protocol version. Available only with openssl version 1.0.1+.</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 3.7: </span>The option is deprecated since OpenSSL 1.1.0.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.OP_NO_TLSv1_2">
@@ -860,7 +917,8 @@ the protocol version. Available only with openssl version 1.0.1+.</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 3.7: </span>The option is deprecated since OpenSSL 1.1.0.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.OP_NO_TLSv1_3">
@@ -877,7 +935,8 @@ flag defaults to <em>0</em>.</p>
 <p><span class="versionmodified deprecated">Deprecated since version 3.7: </span>The option is deprecated since OpenSSL 1.1.0. It was added to 2.7.15 and
 3.6.3 for backwards compatibility with OpenSSL 1.0.2.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.OP_NO_RENEGOTIATION">
@@ -888,7 +947,8 @@ HelloRequest messages, and ignore renegotiation requests via ClientHello.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.OP_CIPHER_SERVER_PREFERENCE">
@@ -898,7 +958,8 @@ This option has no effect on client sockets and SSLv2 server sockets.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.OP_SINGLE_DH_USE">
@@ -909,7 +970,8 @@ This option only applies to server sockets.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.OP_SINGLE_ECDH_USE">
@@ -920,7 +982,8 @@ This option only applies to server sockets.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.OP_ENABLE_MIDDLEBOX_COMPAT">
@@ -931,7 +994,8 @@ a TLS 1.3 connection look more like a TLS 1.2 connection.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.8.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.OP_NO_COMPRESSION">
@@ -941,13 +1005,15 @@ protocol supports its own compression scheme.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ssl.Options">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">Options</span></span></dt>
 <dd><p><a class="reference internal" href="enum.xhtml#enum.IntFlag" title="enum.IntFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntFlag</span></code></a> collection of OP_* constants.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.OP_NO_TICKET">
@@ -956,7 +1022,8 @@ protocol supports its own compression scheme.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.6.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.OP_IGNORE_UNEXPECTED_EOF">
@@ -966,7 +1033,8 @@ protocol supports its own compression scheme.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.10.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.OP_ENABLE_KTLS">
@@ -983,7 +1051,8 @@ requires all cryptographic operations to be performed by the FIPS provider.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.12.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.OP_LEGACY_SERVER_CONNECT">
@@ -993,7 +1062,8 @@ only.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.12.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.HAS_ALPN">
@@ -1003,7 +1073,8 @@ Protocol Negotiation</em> TLS extension as described in <span class="target" id=
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.5.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.HAS_NEVER_CHECK_COMMON_NAME">
@@ -1014,7 +1085,8 @@ writeable.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.HAS_ECDH">
@@ -1025,7 +1097,8 @@ explicitly disabled by the distributor.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.HAS_SNI">
@@ -1035,7 +1108,8 @@ Indication</em> extension (as defined in <span class="target" id="index-10"></sp
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.2.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.HAS_NPN">
@@ -1048,7 +1122,8 @@ which protocols you want to support.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.HAS_SSLv2">
@@ -1057,7 +1132,8 @@ which protocols you want to support.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.HAS_SSLv3">
@@ -1066,7 +1142,8 @@ which protocols you want to support.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.HAS_TLSv1">
@@ -1075,7 +1152,8 @@ which protocols you want to support.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.HAS_TLSv1_1">
@@ -1084,7 +1162,8 @@ which protocols you want to support.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.HAS_TLSv1_2">
@@ -1093,7 +1172,8 @@ which protocols you want to support.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.HAS_TLSv1_3">
@@ -1102,7 +1182,8 @@ which protocols you want to support.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.HAS_PSK">
@@ -1111,7 +1192,8 @@ which protocols you want to support.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.13.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.CHANNEL_BINDING_TYPES">
@@ -1121,20 +1203,23 @@ can be used as arguments to <a class="reference internal" href="#ssl.SSLSocket.g
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.OPENSSL_VERSION">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">OPENSSL_VERSION</span></span></dt>
 <dd><p>The version string of the OpenSSL library loaded by the interpreter:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ssl</span><span class="o">.</span><span class="n">OPENSSL_VERSION</span>
-<span class="go">&#39;OpenSSL 1.0.2k  26 Jan 2017&#39;</span>
-</pre></div>
+<span class="go">'OpenSSL 1.0.2k  26 Jan 2017'</span>
+</pre>
+</div>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.2.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.OPENSSL_VERSION_INFO">
@@ -1143,12 +1228,14 @@ can be used as arguments to <a class="reference internal" href="#ssl.SSLSocket.g
 OpenSSL library:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ssl</span><span class="o">.</span><span class="n">OPENSSL_VERSION_INFO</span>
 <span class="go">(1, 0, 2, 11, 15)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.2.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.OPENSSL_VERSION_NUMBER">
@@ -1157,13 +1244,15 @@ OpenSSL library:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ssl</span><span class="o">.</span><span class="n">OPENSSL_VERSION_NUMBER</span>
 <span class="go">268443839</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">hex</span><span class="p">(</span><span class="n">ssl</span><span class="o">.</span><span class="n">OPENSSL_VERSION_NUMBER</span><span class="p">)</span>
-<span class="go">&#39;0x100020bf&#39;</span>
-</pre></div>
+<span class="go">'0x100020bf'</span>
+</pre>
+</div>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.2.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.ALERT_DESCRIPTION_HANDSHAKE_FAILURE">
@@ -1179,7 +1268,8 @@ contains this list and references to the RFCs where their meaning is defined.</p
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.4.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ssl.AlertDescription">
@@ -1188,7 +1278,8 @@ contains this list and references to the RFCs where their meaning is defined.</p
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.6.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.Purpose.SERVER_AUTH">
@@ -1200,7 +1291,8 @@ be used to create client-side sockets).</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.4.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.Purpose.CLIENT_AUTH">
@@ -1212,7 +1304,8 @@ be used to create server-side sockets).</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.4.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ssl.SSLErrorNumber">
@@ -1221,7 +1314,8 @@ be used to create server-side sockets).</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.6.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ssl.TLSVersion">
@@ -1231,12 +1325,14 @@ be used to create server-side sockets).</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.TLSVersion.MINIMUM_SUPPORTED">
 <span class="sig-prename descclassname"><span class="pre">TLSVersion.</span></span><span class="sig-name descname"><span class="pre">MINIMUM_SUPPORTED</span></span></dt>
-<dd></dd></dl>
+<dd></dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.TLSVersion.MAXIMUM_SUPPORTED">
@@ -1244,27 +1340,32 @@ be used to create server-side sockets).</p>
 <dd><p>The minimum or maximum supported SSL or TLS version. These are magic
 constants. Their values don’t reflect the lowest and highest available
 TLS/SSL versions.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.TLSVersion.SSLv3">
 <span class="sig-prename descclassname"><span class="pre">TLSVersion.</span></span><span class="sig-name descname"><span class="pre">SSLv3</span></span></dt>
-<dd></dd></dl>
+<dd></dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.TLSVersion.TLSv1">
 <span class="sig-prename descclassname"><span class="pre">TLSVersion.</span></span><span class="sig-name descname"><span class="pre">TLSv1</span></span></dt>
-<dd></dd></dl>
+<dd></dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.TLSVersion.TLSv1_1">
 <span class="sig-prename descclassname"><span class="pre">TLSVersion.</span></span><span class="sig-name descname"><span class="pre">TLSv1_1</span></span></dt>
-<dd></dd></dl>
+<dd></dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.TLSVersion.TLSv1_2">
 <span class="sig-prename descclassname"><span class="pre">TLSVersion.</span></span><span class="sig-name descname"><span class="pre">TLSv1_2</span></span></dt>
-<dd></dd></dl>
+<dd></dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.TLSVersion.TLSv1_3">
@@ -1274,12 +1375,13 @@ TLS/SSL versions.</p>
 <p><span class="versionmodified deprecated">Deprecated since version 3.10: </span>All <a class="reference internal" href="#ssl.TLSVersion" title="ssl.TLSVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">TLSVersion</span></code></a> members except <a class="reference internal" href="#ssl.TLSVersion.TLSv1_2" title="ssl.TLSVersion.TLSv1_2"><code class="xref py py-attr docutils literal notranslate"><span class="pre">TLSVersion.TLSv1_2</span></code></a> and
 <a class="reference internal" href="#ssl.TLSVersion.TLSv1_3" title="ssl.TLSVersion.TLSv1_3"><code class="xref py py-attr docutils literal notranslate"><span class="pre">TLSVersion.TLSv1_3</span></code></a> are deprecated.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 </section>
 <section id="ssl-sockets">
-<h2>SSL Sockets</h2>
+<h2 class="sigil_not_in_toc">SSL Sockets</h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="ssl.SSLSocket">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">SSLSocket</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">socket.socket</span></span></em><span class="sig-paren">)</span></dt>
@@ -1334,7 +1436,8 @@ supported.</p>
 functions support reading and writing of data larger than 2 GB. Writing
 zero-length data no longer fails with a protocol violation error.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <p>SSL sockets also have the following additional methods and attributes:</p>
 <dl class="py method">
@@ -1355,7 +1458,8 @@ bytes.</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 3.6: </span>Use <code class="xref py py-meth docutils literal notranslate"><span class="pre">recv()</span></code> instead of <a class="reference internal" href="#ssl.SSLSocket.read" title="ssl.SSLSocket.read"><code class="xref py py-meth docutils literal notranslate"><span class="pre">read()</span></code></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.SSLSocket.write">
@@ -1373,7 +1477,8 @@ The socket timeout is now the maximum total duration to write <em>buf</em>.</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 3.6: </span>Use <code class="xref py py-meth docutils literal notranslate"><span class="pre">send()</span></code> instead of <a class="reference internal" href="#ssl.SSLSocket.write" title="ssl.SSLSocket.write"><code class="xref py py-meth docutils literal notranslate"><span class="pre">write()</span></code></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1405,7 +1510,8 @@ function <code class="xref py py-func docutils literal notranslate"><span class=
 refuses a hostname or IP address, the handshake is aborted early and
 a TLS alert message is sent to the peer.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.SSLSocket.getpeercert">
@@ -1425,25 +1531,26 @@ there will also be a <code class="docutils literal notranslate"><span class="pre
 of relative distinguished names (RDNs) given in the certificate’s data
 structure for the respective fields, and each RDN is a sequence of
 name-value pairs.  Here is a real-world example:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;issuer&#39;</span><span class="p">:</span> <span class="p">(((</span><span class="s1">&#39;countryName&#39;</span><span class="p">,</span> <span class="s1">&#39;IL&#39;</span><span class="p">),),</span>
-            <span class="p">((</span><span class="s1">&#39;organizationName&#39;</span><span class="p">,</span> <span class="s1">&#39;StartCom Ltd.&#39;</span><span class="p">),),</span>
-            <span class="p">((</span><span class="s1">&#39;organizationalUnitName&#39;</span><span class="p">,</span>
-              <span class="s1">&#39;Secure Digital Certificate Signing&#39;</span><span class="p">),),</span>
-            <span class="p">((</span><span class="s1">&#39;commonName&#39;</span><span class="p">,</span>
-              <span class="s1">&#39;StartCom Class 2 Primary Intermediate Server CA&#39;</span><span class="p">),)),</span>
- <span class="s1">&#39;notAfter&#39;</span><span class="p">:</span> <span class="s1">&#39;Nov 22 08:15:19 2013 GMT&#39;</span><span class="p">,</span>
- <span class="s1">&#39;notBefore&#39;</span><span class="p">:</span> <span class="s1">&#39;Nov 21 03:09:52 2011 GMT&#39;</span><span class="p">,</span>
- <span class="s1">&#39;serialNumber&#39;</span><span class="p">:</span> <span class="s1">&#39;95F0&#39;</span><span class="p">,</span>
- <span class="s1">&#39;subject&#39;</span><span class="p">:</span> <span class="p">(((</span><span class="s1">&#39;description&#39;</span><span class="p">,</span> <span class="s1">&#39;571208-SLe257oHY9fVQ07Z&#39;</span><span class="p">),),</span>
-             <span class="p">((</span><span class="s1">&#39;countryName&#39;</span><span class="p">,</span> <span class="s1">&#39;US&#39;</span><span class="p">),),</span>
-             <span class="p">((</span><span class="s1">&#39;stateOrProvinceName&#39;</span><span class="p">,</span> <span class="s1">&#39;California&#39;</span><span class="p">),),</span>
-             <span class="p">((</span><span class="s1">&#39;localityName&#39;</span><span class="p">,</span> <span class="s1">&#39;San Francisco&#39;</span><span class="p">),),</span>
-             <span class="p">((</span><span class="s1">&#39;organizationName&#39;</span><span class="p">,</span> <span class="s1">&#39;Electronic Frontier Foundation, Inc.&#39;</span><span class="p">),),</span>
-             <span class="p">((</span><span class="s1">&#39;commonName&#39;</span><span class="p">,</span> <span class="s1">&#39;*.eff.org&#39;</span><span class="p">),),</span>
-             <span class="p">((</span><span class="s1">&#39;emailAddress&#39;</span><span class="p">,</span> <span class="s1">&#39;hostmaster@eff.org&#39;</span><span class="p">),)),</span>
- <span class="s1">&#39;subjectAltName&#39;</span><span class="p">:</span> <span class="p">((</span><span class="s1">&#39;DNS&#39;</span><span class="p">,</span> <span class="s1">&#39;*.eff.org&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;DNS&#39;</span><span class="p">,</span> <span class="s1">&#39;eff.org&#39;</span><span class="p">)),</span>
- <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
-</pre></div>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">'issuer'</span><span class="p">:</span> <span class="p">(((</span><span class="s1">'countryName'</span><span class="p">,</span> <span class="s1">'IL'</span><span class="p">),),</span>
+            <span class="p">((</span><span class="s1">'organizationName'</span><span class="p">,</span> <span class="s1">'StartCom Ltd.'</span><span class="p">),),</span>
+            <span class="p">((</span><span class="s1">'organizationalUnitName'</span><span class="p">,</span>
+              <span class="s1">'Secure Digital Certificate Signing'</span><span class="p">),),</span>
+            <span class="p">((</span><span class="s1">'commonName'</span><span class="p">,</span>
+              <span class="s1">'StartCom Class 2 Primary Intermediate Server CA'</span><span class="p">),)),</span>
+ <span class="s1">'notAfter'</span><span class="p">:</span> <span class="s1">'Nov 22 08:15:19 2013 GMT'</span><span class="p">,</span>
+ <span class="s1">'notBefore'</span><span class="p">:</span> <span class="s1">'Nov 21 03:09:52 2011 GMT'</span><span class="p">,</span>
+ <span class="s1">'serialNumber'</span><span class="p">:</span> <span class="s1">'95F0'</span><span class="p">,</span>
+ <span class="s1">'subject'</span><span class="p">:</span> <span class="p">(((</span><span class="s1">'description'</span><span class="p">,</span> <span class="s1">'571208-SLe257oHY9fVQ07Z'</span><span class="p">),),</span>
+             <span class="p">((</span><span class="s1">'countryName'</span><span class="p">,</span> <span class="s1">'US'</span><span class="p">),),</span>
+             <span class="p">((</span><span class="s1">'stateOrProvinceName'</span><span class="p">,</span> <span class="s1">'California'</span><span class="p">),),</span>
+             <span class="p">((</span><span class="s1">'localityName'</span><span class="p">,</span> <span class="s1">'San Francisco'</span><span class="p">),),</span>
+             <span class="p">((</span><span class="s1">'organizationName'</span><span class="p">,</span> <span class="s1">'Electronic Frontier Foundation, Inc.'</span><span class="p">),),</span>
+             <span class="p">((</span><span class="s1">'commonName'</span><span class="p">,</span> <span class="s1">'*.eff.org'</span><span class="p">),),</span>
+             <span class="p">((</span><span class="s1">'emailAddress'</span><span class="p">,</span> <span class="s1">'hostmaster@eff.org'</span><span class="p">),)),</span>
+ <span class="s1">'subjectAltName'</span><span class="p">:</span> <span class="p">((</span><span class="s1">'DNS'</span><span class="p">,</span> <span class="s1">'*.eff.org'</span><span class="p">),</span> <span class="p">(</span><span class="s1">'DNS'</span><span class="p">,</span> <span class="s1">'eff.org'</span><span class="p">)),</span>
+ <span class="s1">'version'</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+</pre>
+</div>
 </div>
 <p>If the <code class="docutils literal notranslate"><span class="pre">binary_form</span></code> parameter is <a class="reference internal" href="constants.xhtml#True" title="True"><code class="xref py py-const docutils literal notranslate"><span class="pre">True</span></code></a>, and a certificate was
 provided, this method returns the DER-encoded form of the entire certificate
@@ -1471,7 +1578,8 @@ The returned dictionary includes additional X509v3 extension items
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.9: </span>IPv6 address strings no longer have a trailing new line.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.SSLSocket.get_verified_chain">
@@ -1483,7 +1591,8 @@ If certificate verification was disabled method acts the same as
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.13.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.SSLSocket.get_unverified_chain">
@@ -1493,7 +1602,8 @@ end of the SSL channel as a list of DER-encoded bytes.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.13.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.SSLSocket.cipher">
@@ -1501,7 +1611,8 @@ end of the SSL channel as a list of DER-encoded bytes.</p>
 <dd><p>Returns a three-value tuple containing the name of the cipher being used, the
 version of the SSL protocol that defines its use, and the number of secret
 bits being used.  If no connection has been established, returns <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.SSLSocket.shared_ciphers">
@@ -1515,7 +1626,8 @@ socket.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.5.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.SSLSocket.compression">
@@ -1527,7 +1639,8 @@ you can use <a class="reference internal" href="#ssl.OP_NO_COMPRESSION" title="s
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.SSLSocket.get_channel_binding">
@@ -1542,7 +1655,8 @@ raised if an unsupported channel binding type is requested.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.SSLSocket.selected_alpn_protocol">
@@ -1555,7 +1669,8 @@ returned.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.5.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.SSLSocket.selected_npn_protocol">
@@ -1570,7 +1685,8 @@ happened, this will return <code class="docutils literal notranslate"><span clas
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 3.10: </span>NPN has been superseded by ALPN</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.SSLSocket.unwrap">
@@ -1580,7 +1696,8 @@ underlying socket, and returns the underlying socket object.  This can be
 used to go from encrypted operation over a connection to unencrypted.  The
 returned socket should always be used for further communication with the
 other side of the connection, rather than the original socket.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.SSLSocket.verify_client_post_handshake">
@@ -1602,27 +1719,30 @@ support, the method raises <a class="reference internal" href="exceptions.xhtml#
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.8.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.SSLSocket.version">
 <span class="sig-prename descclassname"><span class="pre">SSLSocket.</span></span><span class="sig-name descname"><span class="pre">version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Return the actual SSL protocol version negotiated by the connection
 as a string, or <code class="docutils literal notranslate"><span class="pre">None</span></code> if no secure connection is established.
-As of this writing, possible return values include <code class="docutils literal notranslate"><span class="pre">&quot;SSLv2&quot;</span></code>,
-<code class="docutils literal notranslate"><span class="pre">&quot;SSLv3&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;TLSv1&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;TLSv1.1&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;TLSv1.2&quot;</span></code>.
+As of this writing, possible return values include <code class="docutils literal notranslate"><span class="pre">"SSLv2"</span></code>,
+<code class="docutils literal notranslate"><span class="pre">"SSLv3"</span></code>, <code class="docutils literal notranslate"><span class="pre">"TLSv1"</span></code>, <code class="docutils literal notranslate"><span class="pre">"TLSv1.1"</span></code> and <code class="docutils literal notranslate"><span class="pre">"TLSv1.2"</span></code>.
 Recent OpenSSL versions may define more return values.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.5.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.SSLSocket.pending">
 <span class="sig-prename descclassname"><span class="pre">SSLSocket.</span></span><span class="sig-name descname"><span class="pre">pending</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Returns the number of already decrypted bytes available for read, pending on
 the connection.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.SSLSocket.context">
@@ -1631,7 +1751,8 @@ the connection.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.2.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.SSLSocket.server_side">
@@ -1641,7 +1762,8 @@ client-side sockets.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.2.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.SSLSocket.server_hostname">
@@ -1654,10 +1776,11 @@ socket or if the hostname was not specified in the constructor.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.7: </span>The attribute is now always ASCII text. When <code class="docutils literal notranslate"><span class="pre">server_hostname</span></code> is
 an internationalized domain name (IDN), this attribute now stores the
-A-label form (<code class="docutils literal notranslate"><span class="pre">&quot;xn--pythn-mua.org&quot;</span></code>), rather than the U-label form
-(<code class="docutils literal notranslate"><span class="pre">&quot;pythön.org&quot;</span></code>).</p>
+A-label form (<code class="docutils literal notranslate"><span class="pre">"xn--pythn-mua.org"</span></code>), rather than the U-label form
+(<code class="docutils literal notranslate"><span class="pre">"pythön.org"</span></code>).</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.SSLSocket.session">
@@ -1669,7 +1792,8 @@ performed. For client sockets the session can be set before
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.6.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.SSLSocket.session_reused">
@@ -1677,11 +1801,12 @@ performed. For client sockets the session can be set before
 <dd><div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.6.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="ssl-contexts">
-<h2>SSL Contexts</h2>
+<h2 class="sigil_not_in_toc">SSL Contexts</h2>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.2.</span></p>
 </div>
@@ -1704,61 +1829,110 @@ versions.</p>
 to which versions in a server (along the top):</p>
 <table class="docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><em>client</em> / <strong>server</strong></p></td>
-<td><p><strong>SSLv2</strong></p></td>
-<td><p><strong>SSLv3</strong></p></td>
-<td><p><strong>TLS</strong> <a class="footnote-reference brackets" href="#id9" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p></td>
-<td><p><strong>TLSv1</strong></p></td>
-<td><p><strong>TLSv1.1</strong></p></td>
-<td><p><strong>TLSv1.2</strong></p></td>
+<tr class="row-odd"><td><p><em>client</em> / <strong>server</strong></p>
+</td>
+<td><p><strong>SSLv2</strong></p>
+</td>
+<td><p><strong>SSLv3</strong></p>
+</td>
+<td><p><strong>TLS</strong> <a class="footnote-reference brackets" href="#id9" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p>
+</td>
+<td><p><strong>TLSv1</strong></p>
+</td>
+<td><p><strong>TLSv1.1</strong></p>
+</td>
+<td><p><strong>TLSv1.2</strong></p>
+</td>
 </tr>
-<tr class="row-even"><td><p><em>SSLv2</em></p></td>
-<td><p>yes</p></td>
-<td><p>no</p></td>
-<td><p>no <a class="footnote-reference brackets" href="#id7" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></td>
-<td><p>no</p></td>
-<td><p>no</p></td>
-<td><p>no</p></td>
+<tr class="row-even"><td><p><em>SSLv2</em></p>
+</td>
+<td><p>yes</p>
+</td>
+<td><p>no</p>
+</td>
+<td><p>no <a class="footnote-reference brackets" href="#id7" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+</td>
+<td><p>no</p>
+</td>
+<td><p>no</p>
+</td>
+<td><p>no</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><em>SSLv3</em></p></td>
-<td><p>no</p></td>
-<td><p>yes</p></td>
-<td><p>no <a class="footnote-reference brackets" href="#id8" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
-<td><p>no</p></td>
-<td><p>no</p></td>
-<td><p>no</p></td>
+<tr class="row-odd"><td><p><em>SSLv3</em></p>
+</td>
+<td><p>no</p>
+</td>
+<td><p>yes</p>
+</td>
+<td><p>no <a class="footnote-reference brackets" href="#id8" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
+</td>
+<td><p>no</p>
+</td>
+<td><p>no</p>
+</td>
+<td><p>no</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><em>TLS</em> (<em>SSLv23</em>) <a class="footnote-reference brackets" href="#id9" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p></td>
-<td><p>no <a class="footnote-reference brackets" href="#id7" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></td>
-<td><p>no <a class="footnote-reference brackets" href="#id8" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
-<td><p>yes</p></td>
-<td><p>yes</p></td>
-<td><p>yes</p></td>
-<td><p>yes</p></td>
+<tr class="row-even"><td><p><em>TLS</em> (<em>SSLv23</em>) <a class="footnote-reference brackets" href="#id9" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p>
+</td>
+<td><p>no <a class="footnote-reference brackets" href="#id7" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+</td>
+<td><p>no <a class="footnote-reference brackets" href="#id8" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
+</td>
+<td><p>yes</p>
+</td>
+<td><p>yes</p>
+</td>
+<td><p>yes</p>
+</td>
+<td><p>yes</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><em>TLSv1</em></p></td>
-<td><p>no</p></td>
-<td><p>no</p></td>
-<td><p>yes</p></td>
-<td><p>yes</p></td>
-<td><p>no</p></td>
-<td><p>no</p></td>
+<tr class="row-odd"><td><p><em>TLSv1</em></p>
+</td>
+<td><p>no</p>
+</td>
+<td><p>no</p>
+</td>
+<td><p>yes</p>
+</td>
+<td><p>yes</p>
+</td>
+<td><p>no</p>
+</td>
+<td><p>no</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><em>TLSv1.1</em></p></td>
-<td><p>no</p></td>
-<td><p>no</p></td>
-<td><p>yes</p></td>
-<td><p>no</p></td>
-<td><p>yes</p></td>
-<td><p>no</p></td>
+<tr class="row-even"><td><p><em>TLSv1.1</em></p>
+</td>
+<td><p>no</p>
+</td>
+<td><p>no</p>
+</td>
+<td><p>yes</p>
+</td>
+<td><p>no</p>
+</td>
+<td><p>yes</p>
+</td>
+<td><p>no</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><em>TLSv1.2</em></p></td>
-<td><p>no</p></td>
-<td><p>no</p></td>
-<td><p>yes</p></td>
-<td><p>no</p></td>
-<td><p>no</p></td>
-<td><p>yes</p></td>
+<tr class="row-odd"><td><p><em>TLSv1.2</em></p>
+</td>
+<td><p>no</p>
+</td>
+<td><p>no</p>
+</td>
+<td><p>yes</p>
+</td>
+<td><p>no</p>
+</td>
+<td><p>no</p>
+</td>
+<td><p>yes</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -1822,7 +1996,8 @@ connections.
 Thus, it is thread-safe as long as it is not reconfigured after being
 used by a connection.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <p><a class="reference internal" href="#ssl.SSLContext" title="ssl.SSLContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSLContext</span></code></a> objects have the following methods and attributes:</p>
 <dl class="py method">
@@ -1833,13 +2008,15 @@ X.509 certificates flagged as CA certificates and certificate revocation
 lists as dictionary.</p>
 <p>Example for a context with one CA cert and one other cert:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">context</span><span class="o">.</span><span class="n">cert_store_stats</span><span class="p">()</span>
-<span class="go">{&#39;crl&#39;: 0, &#39;x509_ca&#39;: 1, &#39;x509&#39;: 2}</span>
-</pre></div>
+<span class="go">{'crl': 0, 'x509_ca': 1, 'x509': 2}</span>
+</pre>
+</div>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.4.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.SSLContext.load_cert_chain">
@@ -1868,7 +2045,8 @@ match with the certificate.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.3: </span>New optional argument <em>password</em>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.SSLContext.load_default_certs">
@@ -1886,7 +2064,8 @@ certificate verification on the server side.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.4.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.SSLContext.load_verify_locations">
@@ -1911,7 +2090,8 @@ certificates are ignored but at least one certificate must be present.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.4: </span>New optional argument <em>cadata</em></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.SSLContext.get_ca_certs">
@@ -1930,7 +2110,8 @@ been used at least once.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.4.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.SSLContext.get_ciphers">
@@ -1939,38 +2120,40 @@ been used at least once.</p>
 See <a class="reference internal" href="#ssl.SSLContext.set_ciphers" title="ssl.SSLContext.set_ciphers"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SSLContext.set_ciphers()</span></code></a>.</p>
 <p>Example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">SSLContext</span><span class="p">(</span><span class="n">ssl</span><span class="o">.</span><span class="n">PROTOCOL_SSLv23</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span><span class="o">.</span><span class="n">set_ciphers</span><span class="p">(</span><span class="s1">&#39;ECDHE+AESGCM:!ECDSA&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span><span class="o">.</span><span class="n">set_ciphers</span><span class="p">(</span><span class="s1">'ECDHE+AESGCM:!ECDSA'</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span><span class="o">.</span><span class="n">get_ciphers</span><span class="p">()</span>
-<span class="go">[{&#39;aead&#39;: True,</span>
-<span class="go">  &#39;alg_bits&#39;: 256,</span>
-<span class="go">  &#39;auth&#39;: &#39;auth-rsa&#39;,</span>
-<span class="go">  &#39;description&#39;: &#39;ECDHE-RSA-AES256-GCM-SHA384 TLSv1.2 Kx=ECDH     Au=RSA  &#39;</span>
-<span class="go">                 &#39;Enc=AESGCM(256) Mac=AEAD&#39;,</span>
-<span class="go">  &#39;digest&#39;: None,</span>
-<span class="go">  &#39;id&#39;: 50380848,</span>
-<span class="go">  &#39;kea&#39;: &#39;kx-ecdhe&#39;,</span>
-<span class="go">  &#39;name&#39;: &#39;ECDHE-RSA-AES256-GCM-SHA384&#39;,</span>
-<span class="go">  &#39;protocol&#39;: &#39;TLSv1.2&#39;,</span>
-<span class="go">  &#39;strength_bits&#39;: 256,</span>
-<span class="go">  &#39;symmetric&#39;: &#39;aes-256-gcm&#39;},</span>
-<span class="go"> {&#39;aead&#39;: True,</span>
-<span class="go">  &#39;alg_bits&#39;: 128,</span>
-<span class="go">  &#39;auth&#39;: &#39;auth-rsa&#39;,</span>
-<span class="go">  &#39;description&#39;: &#39;ECDHE-RSA-AES128-GCM-SHA256 TLSv1.2 Kx=ECDH     Au=RSA  &#39;</span>
-<span class="go">                 &#39;Enc=AESGCM(128) Mac=AEAD&#39;,</span>
-<span class="go">  &#39;digest&#39;: None,</span>
-<span class="go">  &#39;id&#39;: 50380847,</span>
-<span class="go">  &#39;kea&#39;: &#39;kx-ecdhe&#39;,</span>
-<span class="go">  &#39;name&#39;: &#39;ECDHE-RSA-AES128-GCM-SHA256&#39;,</span>
-<span class="go">  &#39;protocol&#39;: &#39;TLSv1.2&#39;,</span>
-<span class="go">  &#39;strength_bits&#39;: 128,</span>
-<span class="go">  &#39;symmetric&#39;: &#39;aes-128-gcm&#39;}]</span>
-</pre></div>
+<span class="go">[{'aead': True,</span>
+<span class="go">  'alg_bits': 256,</span>
+<span class="go">  'auth': 'auth-rsa',</span>
+<span class="go">  'description': 'ECDHE-RSA-AES256-GCM-SHA384 TLSv1.2 Kx=ECDH     Au=RSA  '</span>
+<span class="go">                 'Enc=AESGCM(256) Mac=AEAD',</span>
+<span class="go">  'digest': None,</span>
+<span class="go">  'id': 50380848,</span>
+<span class="go">  'kea': 'kx-ecdhe',</span>
+<span class="go">  'name': 'ECDHE-RSA-AES256-GCM-SHA384',</span>
+<span class="go">  'protocol': 'TLSv1.2',</span>
+<span class="go">  'strength_bits': 256,</span>
+<span class="go">  'symmetric': 'aes-256-gcm'},</span>
+<span class="go"> {'aead': True,</span>
+<span class="go">  'alg_bits': 128,</span>
+<span class="go">  'auth': 'auth-rsa',</span>
+<span class="go">  'description': 'ECDHE-RSA-AES128-GCM-SHA256 TLSv1.2 Kx=ECDH     Au=RSA  '</span>
+<span class="go">                 'Enc=AESGCM(128) Mac=AEAD',</span>
+<span class="go">  'digest': None,</span>
+<span class="go">  'id': 50380847,</span>
+<span class="go">  'kea': 'kx-ecdhe',</span>
+<span class="go">  'name': 'ECDHE-RSA-AES128-GCM-SHA256',</span>
+<span class="go">  'protocol': 'TLSv1.2',</span>
+<span class="go">  'strength_bits': 128,</span>
+<span class="go">  'symmetric': 'aes-128-gcm'}]</span>
+</pre>
+</div>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.6.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.SSLContext.set_default_verify_paths">
@@ -1981,7 +2164,8 @@ there’s no easy way to know whether this method succeeds: no error is
 returned if no certificates are to be found.  When the OpenSSL library is
 provided as part of the operating system, though, it is likely to be
 configured properly.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.SSLContext.set_ciphers">
@@ -1998,7 +2182,8 @@ give the currently selected cipher.</p>
 <p>TLS 1.3 cipher suites cannot be disabled with
 <a class="reference internal" href="#ssl.SSLContext.set_ciphers" title="ssl.SSLContext.set_ciphers"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_ciphers()</span></code></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.SSLContext.set_alpn_protocols">
@@ -2014,7 +2199,8 @@ return the agreed-upon protocol.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.5.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.SSLContext.set_npn_protocols">
@@ -2033,7 +2219,8 @@ return the agreed-upon protocol.</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 3.10: </span>NPN has been superseded by ALPN</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.SSLContext.sni_callback">
@@ -2051,7 +2238,7 @@ that represents the server name that the client is intending to communicate
 (or <a class="reference internal" href="constants.xhtml#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a> if the TLS Client Hello does not contain a server name)
 and the third argument is the original <a class="reference internal" href="#ssl.SSLContext" title="ssl.SSLContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSLContext</span></code></a>. The server name
 argument is text. For internationalized domain name, the server
-name is an IDN A-label (<code class="docutils literal notranslate"><span class="pre">&quot;xn--pythn-mua.org&quot;</span></code>).</p>
+name is an IDN A-label (<code class="docutils literal notranslate"><span class="pre">"xn--pythn-mua.org"</span></code>).</p>
 <p>A typical use of this callback is to change the <a class="reference internal" href="#ssl.SSLSocket" title="ssl.SSLSocket"><code class="xref py py-class docutils literal notranslate"><span class="pre">ssl.SSLSocket</span></code></a>’s
 <a class="reference internal" href="#ssl.SSLSocket.context" title="ssl.SSLSocket.context"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLSocket.context</span></code></a> attribute to a new object of type
 <a class="reference internal" href="#ssl.SSLContext" title="ssl.SSLContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSLContext</span></code></a> representing a certificate chain that matches the server
@@ -2077,7 +2264,8 @@ had OPENSSL_NO_TLSEXT defined when it was built.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.SSLContext.set_servername_callback">
@@ -2086,14 +2274,15 @@ had OPENSSL_NO_TLSEXT defined when it was built.</p>
 you should use <a class="reference internal" href="#ssl.SSLContext.sni_callback" title="ssl.SSLContext.sni_callback"><code class="xref py py-attr docutils literal notranslate"><span class="pre">sni_callback</span></code></a> instead. The given <em>server_name_callback</em>
 is similar to <em>sni_callback</em>, except that when the server hostname is an
 IDN-encoded internationalized domain name, the <em>server_name_callback</em>
-receives a decoded U-label (<code class="docutils literal notranslate"><span class="pre">&quot;pythön.org&quot;</span></code>).</p>
+receives a decoded U-label (<code class="docutils literal notranslate"><span class="pre">"pythön.org"</span></code>).</p>
 <p>If there is a decoding error on the server name, the TLS connection will
 terminate with an <a class="reference internal" href="#ssl.ALERT_DESCRIPTION_INTERNAL_ERROR" title="ssl.ALERT_DESCRIPTION_INTERNAL_ERROR"><code class="xref py py-const docutils literal notranslate"><span class="pre">ALERT_DESCRIPTION_INTERNAL_ERROR</span></code></a> fatal TLS
 alert message to the client.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.4.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.SSLContext.load_dh_params">
@@ -2108,7 +2297,8 @@ parameters in PEM format.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.SSLContext.set_ecdh_curve">
@@ -2127,11 +2317,13 @@ supported curve.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt><a class="reference external" href="https://vincent.bernat.ch/en/blog/2011-ssl-perfect-forward-secrecy">SSL/TLS &amp; Perfect Forward Secrecy</a><span class="link-target"> [https://vincent.bernat.ch/en/blog/2011-ssl-perfect-forward-secrecy]</span></dt><dd><p>Vincent Bernat.</p>
+<dt><a class="reference external" href="https://vincent.bernat.ch/en/blog/2011-ssl-perfect-forward-secrecy">SSL/TLS &amp; Perfect Forward Secrecy</a><span class="link-target"> [https://vincent.bernat.ch/en/blog/2011-ssl-perfect-forward-secrecy]</span></dt>
+<dd><p>Vincent Bernat.</p>
 </dd>
 </dl>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.SSLContext.wrap_socket">
@@ -2181,7 +2373,8 @@ have SNI.</p>
 <p><span class="versionmodified changed">Changed in version 3.7: </span>The method returns an instance of <a class="reference internal" href="#ssl.SSLContext.sslsocket_class" title="ssl.SSLContext.sslsocket_class"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.sslsocket_class</span></code></a>
 instead of hard-coded <a class="reference internal" href="#ssl.SSLSocket" title="ssl.SSLSocket"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSLSocket</span></code></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.SSLContext.sslsocket_class">
@@ -2192,7 +2385,8 @@ in order to return a custom subclass of <a class="reference internal" href="#ssl
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.SSLContext.wrap_bio">
@@ -2210,7 +2404,8 @@ same meaning as in <a class="reference internal" href="#ssl.SSLContext.wrap_sock
 <p><span class="versionmodified changed">Changed in version 3.7: </span>The method returns an instance of <a class="reference internal" href="#ssl.SSLContext.sslobject_class" title="ssl.SSLContext.sslobject_class"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.sslobject_class</span></code></a>
 instead of hard-coded <a class="reference internal" href="#ssl.SSLObject" title="ssl.SSLObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSLObject</span></code></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.SSLContext.sslobject_class">
@@ -2221,7 +2416,8 @@ in order to return a custom subclass of <a class="reference internal" href="#ssl
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.SSLContext.session_stats">
@@ -2231,11 +2427,13 @@ A dictionary is returned which maps the names of each <a class="reference extern
 numeric values.  For example, here is the total number of hits and misses
 in the session cache since the context was created:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">stats</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">session_stats</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">stats</span><span class="p">[</span><span class="s1">&#39;hits&#39;</span><span class="p">],</span> <span class="n">stats</span><span class="p">[</span><span class="s1">&#39;misses&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">stats</span><span class="p">[</span><span class="s1">'hits'</span><span class="p">],</span> <span class="n">stats</span><span class="p">[</span><span class="s1">'misses'</span><span class="p">]</span>
 <span class="go">(0, 0)</span>
-</pre></div>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.SSLContext.check_hostname">
@@ -2259,9 +2457,10 @@ With other protocols, hostname checking must be enabled explicitly.</p>
 <span class="n">context</span><span class="o">.</span><span class="n">load_default_certs</span><span class="p">()</span>
 
 <span class="n">s</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
-<span class="n">ssl_sock</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">wrap_socket</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">server_hostname</span><span class="o">=</span><span class="s1">&#39;www.verisign.com&#39;</span><span class="p">)</span>
-<span class="n">ssl_sock</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="s1">&#39;www.verisign.com&#39;</span><span class="p">,</span> <span class="mi">443</span><span class="p">))</span>
-</pre></div>
+<span class="n">ssl_sock</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">wrap_socket</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">server_hostname</span><span class="o">=</span><span class="s1">'www.verisign.com'</span><span class="p">)</span>
+<span class="n">ssl_sock</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="s1">'www.verisign.com'</span><span class="p">,</span> <span class="mi">443</span><span class="p">))</span>
+</pre>
+</div>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.4.</span></p>
@@ -2272,7 +2471,8 @@ to <a class="reference internal" href="#ssl.CERT_REQUIRED" title="ssl.CERT_REQUI
 <a class="reference internal" href="#ssl.SSLContext.verify_mode" title="ssl.SSLContext.verify_mode"><code class="xref py py-attr docutils literal notranslate"><span class="pre">verify_mode</span></code></a> is <a class="reference internal" href="#ssl.CERT_NONE" title="ssl.CERT_NONE"><code class="xref py py-data docutils literal notranslate"><span class="pre">CERT_NONE</span></code></a>. Previously
 the same operation would have failed with a <a class="reference internal" href="exceptions.xhtml#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.SSLContext.keylog_filename">
@@ -2285,7 +2485,8 @@ synchronized between threads, but not between processes.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.8.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.SSLContext.maximum_version">
@@ -2305,7 +2506,8 @@ will not be able to establish a TLS 1.2 connection.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.SSLContext.minimum_version">
@@ -2315,7 +2517,8 @@ supported version or <a class="reference internal" href="#ssl.TLSVersion.MINIMUM
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.SSLContext.num_tickets">
@@ -2326,7 +2529,8 @@ supported version or <a class="reference internal" href="#ssl.TLSVersion.MINIMUM
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.8.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.SSLContext.options">
@@ -2338,7 +2542,8 @@ such as <a class="reference internal" href="#ssl.OP_NO_SSLv2" title="ssl.OP_NO_S
 <p><span class="versionmodified changed">Changed in version 3.6: </span><a class="reference internal" href="#ssl.SSLContext.options" title="ssl.SSLContext.options"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.options</span></code></a> returns <a class="reference internal" href="#ssl.Options" title="ssl.Options"><code class="xref py py-class docutils literal notranslate"><span class="pre">Options</span></code></a> flags:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ssl</span><span class="o">.</span><span class="n">create_default_context</span><span class="p">()</span><span class="o">.</span><span class="n">options</span>  
 <span class="go">&lt;Options.OP_ALL|OP_NO_SSLv3|OP_NO_SSLv2|OP_NO_COMPRESSION: 2197947391&gt;</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </div>
 <div class="deprecated">
@@ -2346,7 +2551,8 @@ such as <a class="reference internal" href="#ssl.OP_NO_SSLv2" title="ssl.OP_NO_S
 Python 3.7. Use <a class="reference internal" href="#ssl.SSLContext.minimum_version" title="ssl.SSLContext.minimum_version"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.minimum_version</span></code></a> and
 <a class="reference internal" href="#ssl.SSLContext.maximum_version" title="ssl.SSLContext.maximum_version"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.maximum_version</span></code></a> instead.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.SSLContext.post_handshake_auth">
@@ -2365,14 +2571,16 @@ performed.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.8.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.SSLContext.protocol">
 <span class="sig-prename descclassname"><span class="pre">SSLContext.</span></span><span class="sig-name descname"><span class="pre">protocol</span></span></dt>
 <dd><p>The protocol version chosen when constructing the context.  This attribute
 is read-only.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.SSLContext.hostname_checks_common_name">
@@ -2387,7 +2595,8 @@ extension (default: true).</p>
 <p><span class="versionmodified changed">Changed in version 3.10: </span>The flag had no effect with OpenSSL before version 1.1.1l. Python 3.8.9,
 3.9.3, and 3.10 include workarounds for previous versions.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.SSLContext.security_level">
@@ -2397,7 +2606,8 @@ for the context. This attribute is read-only.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.10.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.SSLContext.verify_flags">
@@ -2412,10 +2622,12 @@ does neither require nor verify certificate revocation lists (CRLs).</p>
 <p><span class="versionmodified changed">Changed in version 3.6: </span><a class="reference internal" href="#ssl.SSLContext.verify_flags" title="ssl.SSLContext.verify_flags"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.verify_flags</span></code></a> returns <a class="reference internal" href="#ssl.VerifyFlags" title="ssl.VerifyFlags"><code class="xref py py-class docutils literal notranslate"><span class="pre">VerifyFlags</span></code></a> flags:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ssl</span><span class="o">.</span><span class="n">create_default_context</span><span class="p">()</span><span class="o">.</span><span class="n">verify_flags</span>  
 <span class="go">&lt;VerifyFlags.VERIFY_X509_TRUSTED_FIRST: 32768&gt;</span>
-</pre></div>
+</pre>
 </div>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.SSLContext.verify_mode">
@@ -2427,10 +2639,12 @@ if verification fails.  This attribute must be one of
 <p><span class="versionmodified changed">Changed in version 3.6: </span><a class="reference internal" href="#ssl.SSLContext.verify_mode" title="ssl.SSLContext.verify_mode"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.verify_mode</span></code></a> returns <a class="reference internal" href="#ssl.VerifyMode" title="ssl.VerifyMode"><code class="xref py py-class docutils literal notranslate"><span class="pre">VerifyMode</span></code></a> enum:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ssl</span><span class="o">.</span><span class="n">create_default_context</span><span class="p">()</span><span class="o">.</span><span class="n">verify_mode</span>  
 <span class="go">&lt;VerifyMode.CERT_REQUIRED: 2&gt;</span>
-</pre></div>
+</pre>
 </div>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.SSLContext.set_psk_client_callback">
@@ -2460,27 +2674,29 @@ length PSK to reject the connection.</p>
 <span class="n">context</span><span class="o">.</span><span class="n">check_hostname</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="n">context</span><span class="o">.</span><span class="n">verify_mode</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">CERT_NONE</span>
 <span class="n">context</span><span class="o">.</span><span class="n">maximum_version</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">TLSVersion</span><span class="o">.</span><span class="n">TLSv1_2</span>
-<span class="n">context</span><span class="o">.</span><span class="n">set_ciphers</span><span class="p">(</span><span class="s1">&#39;PSK&#39;</span><span class="p">)</span>
+<span class="n">context</span><span class="o">.</span><span class="n">set_ciphers</span><span class="p">(</span><span class="s1">'PSK'</span><span class="p">)</span>
 
 <span class="c1"># A simple lambda:</span>
-<span class="n">psk</span> <span class="o">=</span> <span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="s1">&#39;c0ffee&#39;</span><span class="p">)</span>
+<span class="n">psk</span> <span class="o">=</span> <span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="s1">'c0ffee'</span><span class="p">)</span>
 <span class="n">context</span><span class="o">.</span><span class="n">set_psk_client_callback</span><span class="p">(</span><span class="k">lambda</span> <span class="n">hint</span><span class="p">:</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">psk</span><span class="p">))</span>
 
 <span class="c1"># A table using the hint from the server:</span>
-<span class="n">psk_table</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;ServerId_1&#39;</span><span class="p">:</span> <span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="s1">&#39;c0ffee&#39;</span><span class="p">),</span>
-              <span class="s1">&#39;ServerId_2&#39;</span><span class="p">:</span> <span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="s1">&#39;facade&#39;</span><span class="p">)</span>
+<span class="n">psk_table</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">'ServerId_1'</span><span class="p">:</span> <span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="s1">'c0ffee'</span><span class="p">),</span>
+              <span class="s1">'ServerId_2'</span><span class="p">:</span> <span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="s1">'facade'</span><span class="p">)</span>
 <span class="p">}</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">callback</span><span class="p">(</span><span class="n">hint</span><span class="p">):</span>
-    <span class="k">return</span> <span class="s1">&#39;ClientId_1&#39;</span><span class="p">,</span> <span class="n">psk_table</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">hint</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s1">'ClientId_1'</span><span class="p">,</span> <span class="n">psk_table</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">hint</span><span class="p">,</span> <span class="sa">b</span><span class="s1">''</span><span class="p">)</span>
 <span class="n">context</span><span class="o">.</span><span class="n">set_psk_client_callback</span><span class="p">(</span><span class="n">callback</span><span class="p">)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>This method will raise <a class="reference internal" href="exceptions.xhtml#NotImplementedError" title="NotImplementedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">NotImplementedError</span></code></a> if <a class="reference internal" href="#ssl.HAS_PSK" title="ssl.HAS_PSK"><code class="xref py py-data docutils literal notranslate"><span class="pre">HAS_PSK</span></code></a> is
 <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.13.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.SSLContext.set_psk_server_callback">
@@ -2504,31 +2720,33 @@ UTF-8 encoded.</p>
 <p>Example usage:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">context</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">SSLContext</span><span class="p">(</span><span class="n">ssl</span><span class="o">.</span><span class="n">PROTOCOL_TLS_SERVER</span><span class="p">)</span>
 <span class="n">context</span><span class="o">.</span><span class="n">maximum_version</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">TLSVersion</span><span class="o">.</span><span class="n">TLSv1_2</span>
-<span class="n">context</span><span class="o">.</span><span class="n">set_ciphers</span><span class="p">(</span><span class="s1">&#39;PSK&#39;</span><span class="p">)</span>
+<span class="n">context</span><span class="o">.</span><span class="n">set_ciphers</span><span class="p">(</span><span class="s1">'PSK'</span><span class="p">)</span>
 
 <span class="c1"># A simple lambda:</span>
-<span class="n">psk</span> <span class="o">=</span> <span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="s1">&#39;c0ffee&#39;</span><span class="p">)</span>
+<span class="n">psk</span> <span class="o">=</span> <span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="s1">'c0ffee'</span><span class="p">)</span>
 <span class="n">context</span><span class="o">.</span><span class="n">set_psk_server_callback</span><span class="p">(</span><span class="k">lambda</span> <span class="n">identity</span><span class="p">:</span> <span class="n">psk</span><span class="p">)</span>
 
 <span class="c1"># A table using the identity of the client:</span>
-<span class="n">psk_table</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;ClientId_1&#39;</span><span class="p">:</span> <span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="s1">&#39;c0ffee&#39;</span><span class="p">),</span>
-              <span class="s1">&#39;ClientId_2&#39;</span><span class="p">:</span> <span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="s1">&#39;facade&#39;</span><span class="p">)</span>
+<span class="n">psk_table</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">'ClientId_1'</span><span class="p">:</span> <span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="s1">'c0ffee'</span><span class="p">),</span>
+              <span class="s1">'ClientId_2'</span><span class="p">:</span> <span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="s1">'facade'</span><span class="p">)</span>
 <span class="p">}</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">callback</span><span class="p">(</span><span class="n">identity</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">psk_table</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">identity</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-<span class="n">context</span><span class="o">.</span><span class="n">set_psk_server_callback</span><span class="p">(</span><span class="n">callback</span><span class="p">,</span> <span class="s1">&#39;ServerId_1&#39;</span><span class="p">)</span>
-</pre></div>
+    <span class="k">return</span> <span class="n">psk_table</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">identity</span><span class="p">,</span> <span class="sa">b</span><span class="s1">''</span><span class="p">)</span>
+<span class="n">context</span><span class="o">.</span><span class="n">set_psk_server_callback</span><span class="p">(</span><span class="n">callback</span><span class="p">,</span> <span class="s1">'ServerId_1'</span><span class="p">)</span>
+</pre>
+</div>
 </div>
 <p>This method will raise <a class="reference internal" href="exceptions.xhtml#NotImplementedError" title="NotImplementedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">NotImplementedError</span></code></a> if <a class="reference internal" href="#ssl.HAS_PSK" title="ssl.HAS_PSK"><code class="xref py py-data docutils literal notranslate"><span class="pre">HAS_PSK</span></code></a> is
 <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.13.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="certificates">
-<span id="ssl-certificates"></span><span id="index-17"></span><span id="index-16"></span><h2>Certificates</h2>
+<span id="ssl-certificates"></span><span id="index-17"></span><span id="index-16"></span><h2 class="sigil_not_in_toc">Certificates</h2>
 <p>Certificates in general are part of a public-key / private-key system.  In this
 system, each <em>principal</em>, (which may be a machine, or a person, or an
 organization) is assigned a unique two-part encryption key.  One part of the key
@@ -2560,10 +2778,11 @@ and a footer line:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="o">-----</span><span class="n">BEGIN</span> <span class="n">CERTIFICATE</span><span class="o">-----</span>
 <span class="o">...</span> <span class="p">(</span><span class="n">certificate</span> <span class="ow">in</span> <span class="n">base64</span> <span class="n">PEM</span> <span class="n">encoding</span><span class="p">)</span> <span class="o">...</span>
 <span class="o">-----</span><span class="n">END</span> <span class="n">CERTIFICATE</span><span class="o">-----</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <section id="certificate-chains">
-<h3>Certificate chains</h3>
+<h3 class="sigil_not_in_toc">Certificate chains</h3>
 <p>The Python files which contain certificates can contain a sequence of
 certificates, sometimes called a <em>certificate chain</em>.  This chain should start
 with the specific certificate for the principal who “is” the client or server,
@@ -2583,13 +2802,14 @@ certification authority’s certificate:</p>
 <span class="o">...</span> <span class="p">(</span><span class="n">the</span> <span class="n">certificate</span> <span class="k">for</span> <span class="n">the</span> <span class="n">CA</span><span class="p">)</span><span class="o">...</span>
 <span class="o">-----</span><span class="n">END</span> <span class="n">CERTIFICATE</span><span class="o">-----</span>
 <span class="o">-----</span><span class="n">BEGIN</span> <span class="n">CERTIFICATE</span><span class="o">-----</span>
-<span class="o">...</span> <span class="p">(</span><span class="n">the</span> <span class="n">root</span> <span class="n">certificate</span> <span class="k">for</span> <span class="n">the</span> <span class="n">CA</span><span class="s1">&#39;s issuer)...</span>
+<span class="o">...</span> <span class="p">(</span><span class="n">the</span> <span class="n">root</span> <span class="n">certificate</span> <span class="k">for</span> <span class="n">the</span> <span class="n">CA</span><span class="s1">'s issuer)...</span>
 <span class="o">-----</span><span class="n">END</span> <span class="n">CERTIFICATE</span><span class="o">-----</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 <section id="ca-certificates">
-<h3>CA certificates</h3>
+<h3 class="sigil_not_in_toc">CA certificates</h3>
 <p>If you are going to require validation of the other side of the connection’s
 certificate, you need to provide a “CA certs” file, filled with the certificate
 chains for each issuer you are willing to trust.  Again, this file just contains
@@ -2599,7 +2819,7 @@ be used by calling <a class="reference internal" href="#ssl.SSLContext.load_defa
 automatically with <a class="reference internal" href="#ssl.create_default_context" title="ssl.create_default_context"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_default_context()</span></code></a>.</p>
 </section>
 <section id="combined-key-and-certificate">
-<h3>Combined key and certificate</h3>
+<h3 class="sigil_not_in_toc">Combined key and certificate</h3>
 <p>Often the private key is stored in the same file as the certificate; in this
 case, only the <code class="docutils literal notranslate"><span class="pre">certfile</span></code> parameter to <a class="reference internal" href="#ssl.SSLContext.load_cert_chain" title="ssl.SSLContext.load_cert_chain"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SSLContext.load_cert_chain()</span></code></a>
 needs to be passed.  If the private key is stored
@@ -2611,11 +2831,12 @@ the certificate chain:</p>
 <span class="o">-----</span><span class="n">BEGIN</span> <span class="n">CERTIFICATE</span><span class="o">-----</span>
 <span class="o">...</span> <span class="p">(</span><span class="n">certificate</span> <span class="ow">in</span> <span class="n">base64</span> <span class="n">PEM</span> <span class="n">encoding</span><span class="p">)</span> <span class="o">...</span>
 <span class="o">-----</span><span class="n">END</span> <span class="n">CERTIFICATE</span><span class="o">-----</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 <section id="self-signed-certificates">
-<h3>Self-signed certificates</h3>
+<h3 class="sigil_not_in_toc">Self-signed certificates</h3>
 <p>If you are going to create a server that provides SSL-encrypted connection
 services, you will need to acquire a certificate for that service.  There are
 many ways of acquiring appropriate certificates, such as buying one from a
@@ -2626,14 +2847,14 @@ something like the following:</p>
 <span class="n">Generating</span> <span class="n">a</span> <span class="mi">1024</span> <span class="n">bit</span> <span class="n">RSA</span> <span class="n">private</span> <span class="n">key</span>
 <span class="o">.......++++++</span>
 <span class="o">.............................++++++</span>
-<span class="n">writing</span> <span class="n">new</span> <span class="n">private</span> <span class="n">key</span> <span class="n">to</span> <span class="s1">&#39;cert.pem&#39;</span>
+<span class="n">writing</span> <span class="n">new</span> <span class="n">private</span> <span class="n">key</span> <span class="n">to</span> <span class="s1">'cert.pem'</span>
 <span class="o">-----</span>
 <span class="n">You</span> <span class="n">are</span> <span class="n">about</span> <span class="n">to</span> <span class="n">be</span> <span class="n">asked</span> <span class="n">to</span> <span class="n">enter</span> <span class="n">information</span> <span class="n">that</span> <span class="n">will</span> <span class="n">be</span> <span class="n">incorporated</span>
 <span class="n">into</span> <span class="n">your</span> <span class="n">certificate</span> <span class="n">request</span><span class="o">.</span>
 <span class="n">What</span> <span class="n">you</span> <span class="n">are</span> <span class="n">about</span> <span class="n">to</span> <span class="n">enter</span> <span class="ow">is</span> <span class="n">what</span> <span class="ow">is</span> <span class="n">called</span> <span class="n">a</span> <span class="n">Distinguished</span> <span class="n">Name</span> <span class="ow">or</span> <span class="n">a</span> <span class="n">DN</span><span class="o">.</span>
 <span class="n">There</span> <span class="n">are</span> <span class="n">quite</span> <span class="n">a</span> <span class="n">few</span> <span class="n">fields</span> <span class="n">but</span> <span class="n">you</span> <span class="n">can</span> <span class="n">leave</span> <span class="n">some</span> <span class="n">blank</span>
 <span class="n">For</span> <span class="n">some</span> <span class="n">fields</span> <span class="n">there</span> <span class="n">will</span> <span class="n">be</span> <span class="n">a</span> <span class="n">default</span> <span class="n">value</span><span class="p">,</span>
-<span class="n">If</span> <span class="n">you</span> <span class="n">enter</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">the</span> <span class="n">field</span> <span class="n">will</span> <span class="n">be</span> <span class="n">left</span> <span class="n">blank</span><span class="o">.</span>
+<span class="n">If</span> <span class="n">you</span> <span class="n">enter</span> <span class="s1">'.'</span><span class="p">,</span> <span class="n">the</span> <span class="n">field</span> <span class="n">will</span> <span class="n">be</span> <span class="n">left</span> <span class="n">blank</span><span class="o">.</span>
 <span class="o">-----</span>
 <span class="n">Country</span> <span class="n">Name</span> <span class="p">(</span><span class="mi">2</span> <span class="n">letter</span> <span class="n">code</span><span class="p">)</span> <span class="p">[</span><span class="n">AU</span><span class="p">]:</span><span class="n">US</span>
 <span class="n">State</span> <span class="ow">or</span> <span class="n">Province</span> <span class="n">Name</span> <span class="p">(</span><span class="n">full</span> <span class="n">name</span><span class="p">)</span> <span class="p">[</span><span class="n">Some</span><span class="o">-</span><span class="n">State</span><span class="p">]:</span><span class="n">MyState</span>
@@ -2643,7 +2864,8 @@ something like the following:</p>
 <span class="n">Common</span> <span class="n">Name</span> <span class="p">(</span><span class="n">eg</span><span class="p">,</span> <span class="n">YOUR</span> <span class="n">name</span><span class="p">)</span> <span class="p">[]:</span><span class="n">myserver</span><span class="o">.</span><span class="n">mygroup</span><span class="o">.</span><span class="n">myorganization</span><span class="o">.</span><span class="n">com</span>
 <span class="n">Email</span> <span class="n">Address</span> <span class="p">[]:</span><span class="n">ops</span><span class="nd">@myserver</span><span class="o">.</span><span class="n">mygroup</span><span class="o">.</span><span class="n">myorganization</span><span class="o">.</span><span class="n">com</span>
 <span class="o">%</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The disadvantage of a self-signed certificate is that it is its own root
 certificate, and no one else will have it in their cache of known (and trusted)
@@ -2651,9 +2873,9 @@ root certificates.</p>
 </section>
 </section>
 <section id="examples">
-<h2>Examples</h2>
+<h2 class="sigil_not_in_toc">Examples</h2>
 <section id="testing-for-ssl-support">
-<h3>Testing for SSL support</h3>
+<h3 class="sigil_not_in_toc">Testing for SSL support</h3>
 <p>To test for the presence of SSL support in a Python installation, user code
 should use the following idiom:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
@@ -2662,22 +2884,25 @@ should use the following idiom:</p>
     <span class="k">pass</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="o">...</span>  <span class="c1"># do something that requires SSL support</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 <section id="client-side-operation">
-<h3>Client-side operation</h3>
+<h3 class="sigil_not_in_toc">Client-side operation</h3>
 <p>This example creates a SSL context with the recommended security settings
 for client sockets, including automatic certificate verification:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">context</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">create_default_context</span><span class="p">()</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>If you prefer to tune security settings yourself, you might create
 a context from scratch (but beware that you might not get the settings
 right):</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">context</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">SSLContext</span><span class="p">(</span><span class="n">ssl</span><span class="o">.</span><span class="n">PROTOCOL_TLS_CLIENT</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">context</span><span class="o">.</span><span class="n">load_verify_locations</span><span class="p">(</span><span class="s2">&quot;/etc/ssl/certs/ca-bundle.crt&quot;</span><span class="p">)</span>
-</pre></div>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">context</span><span class="o">.</span><span class="n">load_verify_locations</span><span class="p">(</span><span class="s2">"/etc/ssl/certs/ca-bundle.crt"</span><span class="p">)</span>
+</pre>
+</div>
 </div>
 <p>(this snippet assumes your operating system places a bundle of all CA
 certificates in <code class="docutils literal notranslate"><span class="pre">/etc/ssl/certs/ca-bundle.crt</span></code>; if not, you’ll get an
@@ -2692,84 +2917,88 @@ ensures that the server certificate was signed with one of the CA
 certificates, checks the signature for correctness, and verifies other
 properties like validity and identity of the hostname:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">wrap_socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">),</span>
-<span class="gp">... </span>                           <span class="n">server_hostname</span><span class="o">=</span><span class="s2">&quot;www.python.org&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="s2">&quot;www.python.org&quot;</span><span class="p">,</span> <span class="mi">443</span><span class="p">))</span>
-</pre></div>
+<span class="gp">... </span>                           <span class="n">server_hostname</span><span class="o">=</span><span class="s2">"www.python.org"</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="s2">"www.python.org"</span><span class="p">,</span> <span class="mi">443</span><span class="p">))</span>
+</pre>
+</div>
 </div>
 <p>You may then fetch the certificate:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cert</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getpeercert</span><span class="p">()</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Visual inspection shows that the certificate does identify the desired service
 (that is, the HTTPS host <code class="docutils literal notranslate"><span class="pre">www.python.org</span></code>):</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">cert</span><span class="p">)</span>
-<span class="go">{&#39;OCSP&#39;: (&#39;http://ocsp.digicert.com&#39;,),</span>
-<span class="go"> &#39;caIssuers&#39;: (&#39;http://cacerts.digicert.com/DigiCertSHA2ExtendedValidationServerCA.crt&#39;,),</span>
-<span class="go"> &#39;crlDistributionPoints&#39;: (&#39;http://crl3.digicert.com/sha2-ev-server-g1.crl&#39;,</span>
-<span class="go">                           &#39;http://crl4.digicert.com/sha2-ev-server-g1.crl&#39;),</span>
-<span class="go"> &#39;issuer&#39;: (((&#39;countryName&#39;, &#39;US&#39;),),</span>
-<span class="go">            ((&#39;organizationName&#39;, &#39;DigiCert Inc&#39;),),</span>
-<span class="go">            ((&#39;organizationalUnitName&#39;, &#39;www.digicert.com&#39;),),</span>
-<span class="go">            ((&#39;commonName&#39;, &#39;DigiCert SHA2 Extended Validation Server CA&#39;),)),</span>
-<span class="go"> &#39;notAfter&#39;: &#39;Sep  9 12:00:00 2016 GMT&#39;,</span>
-<span class="go"> &#39;notBefore&#39;: &#39;Sep  5 00:00:00 2014 GMT&#39;,</span>
-<span class="go"> &#39;serialNumber&#39;: &#39;01BB6F00122B177F36CAB49CEA8B6B26&#39;,</span>
-<span class="go"> &#39;subject&#39;: (((&#39;businessCategory&#39;, &#39;Private Organization&#39;),),</span>
-<span class="go">             ((&#39;1.3.6.1.4.1.311.60.2.1.3&#39;, &#39;US&#39;),),</span>
-<span class="go">             ((&#39;1.3.6.1.4.1.311.60.2.1.2&#39;, &#39;Delaware&#39;),),</span>
-<span class="go">             ((&#39;serialNumber&#39;, &#39;3359300&#39;),),</span>
-<span class="go">             ((&#39;streetAddress&#39;, &#39;16 Allen Rd&#39;),),</span>
-<span class="go">             ((&#39;postalCode&#39;, &#39;03894-4801&#39;),),</span>
-<span class="go">             ((&#39;countryName&#39;, &#39;US&#39;),),</span>
-<span class="go">             ((&#39;stateOrProvinceName&#39;, &#39;NH&#39;),),</span>
-<span class="go">             ((&#39;localityName&#39;, &#39;Wolfeboro&#39;),),</span>
-<span class="go">             ((&#39;organizationName&#39;, &#39;Python Software Foundation&#39;),),</span>
-<span class="go">             ((&#39;commonName&#39;, &#39;www.python.org&#39;),)),</span>
-<span class="go"> &#39;subjectAltName&#39;: ((&#39;DNS&#39;, &#39;www.python.org&#39;),</span>
-<span class="go">                    (&#39;DNS&#39;, &#39;python.org&#39;),</span>
-<span class="go">                    (&#39;DNS&#39;, &#39;pypi.org&#39;),</span>
-<span class="go">                    (&#39;DNS&#39;, &#39;docs.python.org&#39;),</span>
-<span class="go">                    (&#39;DNS&#39;, &#39;testpypi.org&#39;),</span>
-<span class="go">                    (&#39;DNS&#39;, &#39;bugs.python.org&#39;),</span>
-<span class="go">                    (&#39;DNS&#39;, &#39;wiki.python.org&#39;),</span>
-<span class="go">                    (&#39;DNS&#39;, &#39;hg.python.org&#39;),</span>
-<span class="go">                    (&#39;DNS&#39;, &#39;mail.python.org&#39;),</span>
-<span class="go">                    (&#39;DNS&#39;, &#39;packaging.python.org&#39;),</span>
-<span class="go">                    (&#39;DNS&#39;, &#39;pythonhosted.org&#39;),</span>
-<span class="go">                    (&#39;DNS&#39;, &#39;www.pythonhosted.org&#39;),</span>
-<span class="go">                    (&#39;DNS&#39;, &#39;test.pythonhosted.org&#39;),</span>
-<span class="go">                    (&#39;DNS&#39;, &#39;us.pycon.org&#39;),</span>
-<span class="go">                    (&#39;DNS&#39;, &#39;id.python.org&#39;)),</span>
-<span class="go"> &#39;version&#39;: 3}</span>
-</pre></div>
+<span class="go">{'OCSP': ('http://ocsp.digicert.com',),</span>
+<span class="go"> 'caIssuers': ('http://cacerts.digicert.com/DigiCertSHA2ExtendedValidationServerCA.crt',),</span>
+<span class="go"> 'crlDistributionPoints': ('http://crl3.digicert.com/sha2-ev-server-g1.crl',</span>
+<span class="go">                           'http://crl4.digicert.com/sha2-ev-server-g1.crl'),</span>
+<span class="go"> 'issuer': ((('countryName', 'US'),),</span>
+<span class="go">            (('organizationName', 'DigiCert Inc'),),</span>
+<span class="go">            (('organizationalUnitName', 'www.digicert.com'),),</span>
+<span class="go">            (('commonName', 'DigiCert SHA2 Extended Validation Server CA'),)),</span>
+<span class="go"> 'notAfter': 'Sep  9 12:00:00 2016 GMT',</span>
+<span class="go"> 'notBefore': 'Sep  5 00:00:00 2014 GMT',</span>
+<span class="go"> 'serialNumber': '01BB6F00122B177F36CAB49CEA8B6B26',</span>
+<span class="go"> 'subject': ((('businessCategory', 'Private Organization'),),</span>
+<span class="go">             (('1.3.6.1.4.1.311.60.2.1.3', 'US'),),</span>
+<span class="go">             (('1.3.6.1.4.1.311.60.2.1.2', 'Delaware'),),</span>
+<span class="go">             (('serialNumber', '3359300'),),</span>
+<span class="go">             (('streetAddress', '16 Allen Rd'),),</span>
+<span class="go">             (('postalCode', '03894-4801'),),</span>
+<span class="go">             (('countryName', 'US'),),</span>
+<span class="go">             (('stateOrProvinceName', 'NH'),),</span>
+<span class="go">             (('localityName', 'Wolfeboro'),),</span>
+<span class="go">             (('organizationName', 'Python Software Foundation'),),</span>
+<span class="go">             (('commonName', 'www.python.org'),)),</span>
+<span class="go"> 'subjectAltName': (('DNS', 'www.python.org'),</span>
+<span class="go">                    ('DNS', 'python.org'),</span>
+<span class="go">                    ('DNS', 'pypi.org'),</span>
+<span class="go">                    ('DNS', 'docs.python.org'),</span>
+<span class="go">                    ('DNS', 'testpypi.org'),</span>
+<span class="go">                    ('DNS', 'bugs.python.org'),</span>
+<span class="go">                    ('DNS', 'wiki.python.org'),</span>
+<span class="go">                    ('DNS', 'hg.python.org'),</span>
+<span class="go">                    ('DNS', 'mail.python.org'),</span>
+<span class="go">                    ('DNS', 'packaging.python.org'),</span>
+<span class="go">                    ('DNS', 'pythonhosted.org'),</span>
+<span class="go">                    ('DNS', 'www.pythonhosted.org'),</span>
+<span class="go">                    ('DNS', 'test.pythonhosted.org'),</span>
+<span class="go">                    ('DNS', 'us.pycon.org'),</span>
+<span class="go">                    ('DNS', 'id.python.org')),</span>
+<span class="go"> 'version': 3}</span>
+</pre>
+</div>
 </div>
 <p>Now the SSL channel is established and the certificate verified, you can
 proceed to talk with the server:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;HEAD / HTTP/1.0</span><span class="se">\r\n</span><span class="s2">Host: linuxfr.org</span><span class="se">\r\n\r\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">conn</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;</span><span class="se">\r\n</span><span class="s2">&quot;</span><span class="p">))</span>
-<span class="go">[b&#39;HTTP/1.1 200 OK&#39;,</span>
-<span class="go"> b&#39;Date: Sat, 18 Oct 2014 18:27:20 GMT&#39;,</span>
-<span class="go"> b&#39;Server: nginx&#39;,</span>
-<span class="go"> b&#39;Content-Type: text/html; charset=utf-8&#39;,</span>
-<span class="go"> b&#39;X-Frame-Options: SAMEORIGIN&#39;,</span>
-<span class="go"> b&#39;Content-Length: 45679&#39;,</span>
-<span class="go"> b&#39;Accept-Ranges: bytes&#39;,</span>
-<span class="go"> b&#39;Via: 1.1 varnish&#39;,</span>
-<span class="go"> b&#39;Age: 2188&#39;,</span>
-<span class="go"> b&#39;X-Served-By: cache-lcy1134-LCY&#39;,</span>
-<span class="go"> b&#39;X-Cache: HIT&#39;,</span>
-<span class="go"> b&#39;X-Cache-Hits: 11&#39;,</span>
-<span class="go"> b&#39;Vary: Cookie&#39;,</span>
-<span class="go"> b&#39;Strict-Transport-Security: max-age=63072000; includeSubDomains&#39;,</span>
-<span class="go"> b&#39;Connection: close&#39;,</span>
-<span class="go"> b&#39;&#39;,</span>
-<span class="go"> b&#39;&#39;]</span>
-</pre></div>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="sa">b</span><span class="s2">"HEAD / HTTP/1.0</span><span class="se">\r\n</span><span class="s2">Host: linuxfr.org</span><span class="se">\r\n\r\n</span><span class="s2">"</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">conn</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">b</span><span class="s2">"</span><span class="se">\r\n</span><span class="s2">"</span><span class="p">))</span>
+<span class="go">[b'HTTP/1.1 200 OK',</span>
+<span class="go"> b'Date: Sat, 18 Oct 2014 18:27:20 GMT',</span>
+<span class="go"> b'Server: nginx',</span>
+<span class="go"> b'Content-Type: text/html; charset=utf-8',</span>
+<span class="go"> b'X-Frame-Options: SAMEORIGIN',</span>
+<span class="go"> b'Content-Length: 45679',</span>
+<span class="go"> b'Accept-Ranges: bytes',</span>
+<span class="go"> b'Via: 1.1 varnish',</span>
+<span class="go"> b'Age: 2188',</span>
+<span class="go"> b'X-Served-By: cache-lcy1134-LCY',</span>
+<span class="go"> b'X-Cache: HIT',</span>
+<span class="go"> b'X-Cache-Hits: 11',</span>
+<span class="go"> b'Vary: Cookie',</span>
+<span class="go"> b'Strict-Transport-Security: max-age=63072000; includeSubDomains',</span>
+<span class="go"> b'Connection: close',</span>
+<span class="go"> b'',</span>
+<span class="go"> b'']</span>
+</pre>
+</div>
 </div>
 <p>See the discussion of <a class="reference internal" href="#ssl-security"><span class="std std-ref">Security considerations</span></a> below.</p>
 </section>
 <section id="server-side-operation">
-<h3>Server-side operation</h3>
+<h3 class="sigil_not_in_toc">Server-side operation</h3>
 <p>For server operation, typically you’ll need to have a server certificate, and
 private key, each in a file.  You’ll first create a context holding the key
 and the certificate, so that clients can check your authenticity.  Then
@@ -2778,12 +3007,13 @@ waiting for clients to connect:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">socket</span><span class="o">,</span><span class="w"> </span><span class="nn">ssl</span>
 
 <span class="n">context</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">create_default_context</span><span class="p">(</span><span class="n">ssl</span><span class="o">.</span><span class="n">Purpose</span><span class="o">.</span><span class="n">CLIENT_AUTH</span><span class="p">)</span>
-<span class="n">context</span><span class="o">.</span><span class="n">load_cert_chain</span><span class="p">(</span><span class="n">certfile</span><span class="o">=</span><span class="s2">&quot;mycertfile&quot;</span><span class="p">,</span> <span class="n">keyfile</span><span class="o">=</span><span class="s2">&quot;mykeyfile&quot;</span><span class="p">)</span>
+<span class="n">context</span><span class="o">.</span><span class="n">load_cert_chain</span><span class="p">(</span><span class="n">certfile</span><span class="o">=</span><span class="s2">"mycertfile"</span><span class="p">,</span> <span class="n">keyfile</span><span class="o">=</span><span class="s2">"mykeyfile"</span><span class="p">)</span>
 
 <span class="n">bindsocket</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">()</span>
-<span class="n">bindsocket</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="s1">&#39;myaddr.example.com&#39;</span><span class="p">,</span> <span class="mi">10023</span><span class="p">))</span>
+<span class="n">bindsocket</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="s1">'myaddr.example.com'</span><span class="p">,</span> <span class="mi">10023</span><span class="p">))</span>
 <span class="n">bindsocket</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>When a client connects, you’ll call <code class="xref py py-meth docutils literal notranslate"><span class="pre">accept()</span></code> on the socket to get the
 new socket from the other end, and use the context’s <a class="reference internal" href="#ssl.SSLContext.wrap_socket" title="ssl.SSLContext.wrap_socket"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SSLContext.wrap_socket()</span></code></a>
@@ -2796,7 +3026,8 @@ method to create a server-side SSL socket for the connection:</p>
     <span class="k">finally</span><span class="p">:</span>
         <span class="n">connstream</span><span class="o">.</span><span class="n">shutdown</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">SHUT_RDWR</span><span class="p">)</span>
         <span class="n">connstream</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Then you’ll read data from the <code class="docutils literal notranslate"><span class="pre">connstream</span></code> and do something with it till you
 are finished with the client (or the client is finished with you):</p>
@@ -2805,12 +3036,13 @@ are finished with the client (or the client is finished with you):</p>
     <span class="c1"># empty data means the client is finished with us</span>
     <span class="k">while</span> <span class="n">data</span><span class="p">:</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">do_something</span><span class="p">(</span><span class="n">connstream</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-            <span class="c1"># we&#39;ll assume do_something returns False</span>
-            <span class="c1"># when we&#39;re finished with client</span>
+            <span class="c1"># we'll assume do_something returns False</span>
+            <span class="c1"># when we're finished with client</span>
             <span class="k">break</span>
         <span class="n">data</span> <span class="o">=</span> <span class="n">connstream</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>
     <span class="c1"># finished with client</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>And go back to listening for new client connections (of course, a real server
 would probably handle each client connection in a separate thread, or put
@@ -2818,7 +3050,7 @@ the sockets in <a class="reference internal" href="#ssl-nonblocking"><span class
 </section>
 </section>
 <section id="notes-on-non-blocking-sockets">
-<span id="ssl-nonblocking"></span><h2>Notes on non-blocking sockets</h2>
+<span id="ssl-nonblocking"></span><h2 class="sigil_not_in_toc">Notes on non-blocking sockets</h2>
 <p>SSL sockets behave slightly different than regular sockets in
 non-blocking mode. When working with non-blocking sockets, there are
 thus several things you need to be aware of:</p>
@@ -2864,7 +3096,8 @@ the socket’s readiness:</p>
         <span class="n">select</span><span class="o">.</span><span class="n">select</span><span class="p">([</span><span class="n">sock</span><span class="p">],</span> <span class="p">[],</span> <span class="p">[])</span>
     <span class="k">except</span> <span class="n">ssl</span><span class="o">.</span><span class="n">SSLWantWriteError</span><span class="p">:</span>
         <span class="n">select</span><span class="o">.</span><span class="n">select</span><span class="p">([],</span> <span class="p">[</span><span class="n">sock</span><span class="p">],</span> <span class="p">[])</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </li>
 </ul>
@@ -2878,7 +3111,7 @@ as well.</p>
 </div>
 </section>
 <section id="memory-bio-support">
-<h2>Memory BIO Support</h2>
+<h2 class="sigil_not_in_toc">Memory BIO Support</h2>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.5.</span></p>
 </div>
@@ -2970,7 +3203,8 @@ available.</p></li>
 create instances directly. This was never documented or officially
 supported.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <p>An SSLObject communicates with the outside world using memory buffers. The
 class <a class="reference internal" href="#ssl.MemoryBIO" title="ssl.MemoryBIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">MemoryBIO</span></code></a> provides a memory buffer that can be used for this
@@ -2984,21 +3218,24 @@ protocol instance.</p>
 <dt class="sig sig-object py" id="ssl.MemoryBIO.pending">
 <span class="sig-name descname"><span class="pre">pending</span></span></dt>
 <dd><p>Return the number of bytes currently in the memory buffer.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.MemoryBIO.eof">
 <span class="sig-name descname"><span class="pre">eof</span></span></dt>
 <dd><p>A boolean indicating whether the memory BIO is current at the end-of-file
 position.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.MemoryBIO.read">
 <span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Read up to <em>n</em> bytes from the memory buffer. If <em>n</em> is not specified or
 negative, all bytes are returned.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.MemoryBIO.write">
@@ -3007,7 +3244,8 @@ negative, all bytes are returned.</p>
 object supporting the buffer protocol.</p>
 <p>The return value is the number of bytes written, which is always equal to
 the length of <em>buf</em>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ssl.MemoryBIO.write_eof">
@@ -3015,13 +3253,15 @@ the length of <em>buf</em>.</p>
 <dd><p>Write an EOF marker to the memory BIO. After this method has been called, it
 is illegal to call <a class="reference internal" href="#ssl.MemoryBIO.write" title="ssl.MemoryBIO.write"><code class="xref py py-meth docutils literal notranslate"><span class="pre">write()</span></code></a>. The attribute <a class="reference internal" href="#ssl.MemoryBIO.eof" title="ssl.MemoryBIO.eof"><code class="xref py py-attr docutils literal notranslate"><span class="pre">eof</span></code></a> will
 become true after all data currently in the buffer has been read.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="ssl-session">
-<h2>SSL session</h2>
+<h2 class="sigil_not_in_toc">SSL session</h2>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.6.</span></p>
 </div>
@@ -3032,35 +3272,41 @@ become true after all data currently in the buffer has been read.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.SSLSession.id">
 <span class="sig-name descname"><span class="pre">id</span></span></dt>
-<dd></dd></dl>
+<dd></dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.SSLSession.time">
 <span class="sig-name descname"><span class="pre">time</span></span></dt>
-<dd></dd></dl>
+<dd></dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.SSLSession.timeout">
 <span class="sig-name descname"><span class="pre">timeout</span></span></dt>
-<dd></dd></dl>
+<dd></dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.SSLSession.ticket_lifetime_hint">
 <span class="sig-name descname"><span class="pre">ticket_lifetime_hint</span></span></dt>
-<dd></dd></dl>
+<dd></dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ssl.SSLSession.has_ticket">
 <span class="sig-name descname"><span class="pre">has_ticket</span></span></dt>
-<dd></dd></dl>
+<dd></dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="security-considerations">
-<span id="ssl-security"></span><h2>Security considerations</h2>
+<span id="ssl-security"></span><h2 class="sigil_not_in_toc">Security considerations</h2>
 <section id="best-defaults">
-<h3>Best defaults</h3>
+<h3 class="sigil_not_in_toc">Best defaults</h3>
 <p>For <strong>client use</strong>, if you don’t have any special requirements for your
 security policy, it is highly recommended that you use the
 <a class="reference internal" href="#ssl.create_default_context" title="ssl.create_default_context"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_default_context()</span></code></a> function to create your SSL context.
@@ -3070,11 +3316,12 @@ protocol and cipher settings.</p>
 <p>For example, here is how you would use the <a class="reference internal" href="smtplib.xhtml#smtplib.SMTP" title="smtplib.SMTP"><code class="xref py py-class docutils literal notranslate"><span class="pre">smtplib.SMTP</span></code></a> class to
 create a trusted, secure connection to a SMTP server:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">ssl</span><span class="o">,</span><span class="w"> </span><span class="nn">smtplib</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">smtp</span> <span class="o">=</span> <span class="n">smtplib</span><span class="o">.</span><span class="n">SMTP</span><span class="p">(</span><span class="s2">&quot;mail.python.org&quot;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">587</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">smtp</span> <span class="o">=</span> <span class="n">smtplib</span><span class="o">.</span><span class="n">SMTP</span><span class="p">(</span><span class="s2">"mail.python.org"</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">587</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">context</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">create_default_context</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">smtp</span><span class="o">.</span><span class="n">starttls</span><span class="p">(</span><span class="n">context</span><span class="o">=</span><span class="n">context</span><span class="p">)</span>
-<span class="go">(220, b&#39;2.0.0 Ready to start TLS&#39;)</span>
-</pre></div>
+<span class="go">(220, b'2.0.0 Ready to start TLS')</span>
+</pre>
+</div>
 </div>
 <p>If a client certificate is needed for the connection, it can be added with
 <a class="reference internal" href="#ssl.SSLContext.load_cert_chain" title="ssl.SSLContext.load_cert_chain"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SSLContext.load_cert_chain()</span></code></a>.</p>
@@ -3084,9 +3331,9 @@ checking enabled by default.  If you do so, please read the paragraphs below
 to achieve a good security level.</p>
 </section>
 <section id="manual-settings">
-<h3>Manual settings</h3>
+<h3 class="sigil_not_in_toc">Manual settings</h3>
 <section id="verifying-certificates">
-<h4>Verifying certificates</h4>
+<h4 class="sigil_not_in_toc">Verifying certificates</h4>
 <p>When calling the <a class="reference internal" href="#ssl.SSLContext" title="ssl.SSLContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSLContext</span></code></a> constructor directly,
 <a class="reference internal" href="#ssl.CERT_NONE" title="ssl.CERT_NONE"><code class="xref py py-const docutils literal notranslate"><span class="pre">CERT_NONE</span></code></a> is the default.  Since it does not authenticate the other
 peer, it can be insecure, especially in client mode where most of the time you
@@ -3107,7 +3354,7 @@ This common check is automatically performed when
 to specify <a class="reference internal" href="#ssl.CERT_REQUIRED" title="ssl.CERT_REQUIRED"><code class="xref py py-const docutils literal notranslate"><span class="pre">CERT_REQUIRED</span></code></a> and similarly check the client certificate.</p>
 </section>
 <section id="protocol-versions">
-<h4>Protocol versions</h4>
+<h4 class="sigil_not_in_toc">Protocol versions</h4>
 <p>SSL versions 2 and 3 are considered insecure and are therefore dangerous to
 use.  If you want maximum compatibility between clients and servers, it is
 recommended to use <a class="reference internal" href="#ssl.PROTOCOL_TLS_CLIENT" title="ssl.PROTOCOL_TLS_CLIENT"><code class="xref py py-const docutils literal notranslate"><span class="pre">PROTOCOL_TLS_CLIENT</span></code></a> or
@@ -3116,7 +3363,8 @@ disabled by default.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">client_context</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">SSLContext</span><span class="p">(</span><span class="n">ssl</span><span class="o">.</span><span class="n">PROTOCOL_TLS_CLIENT</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">client_context</span><span class="o">.</span><span class="n">minimum_version</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">TLSVersion</span><span class="o">.</span><span class="n">TLSv1_3</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">client_context</span><span class="o">.</span><span class="n">maximum_version</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">TLSVersion</span><span class="o">.</span><span class="n">TLSv1_3</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The SSL context created above will only allow TLSv1.3 and later (if
 supported by your system) connections to a server. <a class="reference internal" href="#ssl.PROTOCOL_TLS_CLIENT" title="ssl.PROTOCOL_TLS_CLIENT"><code class="xref py py-const docutils literal notranslate"><span class="pre">PROTOCOL_TLS_CLIENT</span></code></a>
@@ -3124,7 +3372,7 @@ implies certificate validation and hostname checks by default. You have to
 load certificates into the context.</p>
 </section>
 <section id="cipher-selection">
-<h4>Cipher selection</h4>
+<h4 class="sigil_not_in_toc">Cipher selection</h4>
 <p>If you have advanced security requirements, fine-tuning of the ciphers
 enabled when negotiating a SSL session is possible through the
 <a class="reference internal" href="#ssl.SSLContext.set_ciphers" title="ssl.SSLContext.set_ciphers"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SSLContext.set_ciphers()</span></code></a> method.  Starting from Python 3.2.3, the
@@ -3137,7 +3385,7 @@ system.</p>
 </section>
 </section>
 <section id="multi-processing">
-<h3>Multi-processing</h3>
+<h3 class="sigil_not_in_toc">Multi-processing</h3>
 <p>If using this module as part of a multi-processed application (using,
 for example the <a class="reference internal" href="multiprocessing.xhtml#module-multiprocessing" title="multiprocessing: Process-based parallelism."><code class="xref py py-mod docutils literal notranslate"><span class="pre">multiprocessing</span></code></a> or <a class="reference internal" href="concurrent.futures.xhtml#module-concurrent.futures" title="concurrent.futures: Execute computations concurrently using threads or processes."><code class="xref py py-mod docutils literal notranslate"><span class="pre">concurrent.futures</span></code></a> modules),
 be aware that OpenSSL’s internal random number generator does not properly
@@ -3148,7 +3396,7 @@ sufficient.</p>
 </section>
 </section>
 <section id="tls-1-3">
-<span id="ssl-tlsv1-3"></span><h2>TLS 1.3</h2>
+<span id="ssl-tlsv1-3"></span><h2 class="sigil_not_in_toc">TLS 1.3</h2>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
@@ -3172,25 +3420,35 @@ signature algorithm configuration, and rekeying are not supported yet.</p></li>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt>Class <a class="reference internal" href="socket.xhtml#socket.socket" title="socket.socket"><code class="xref py py-class docutils literal notranslate"><span class="pre">socket.socket</span></code></a></dt><dd><p>Documentation of underlying <a class="reference internal" href="socket.xhtml#module-socket" title="socket: Low-level networking interface."><code class="xref py py-mod docutils literal notranslate"><span class="pre">socket</span></code></a> class</p>
+<dt>Class <a class="reference internal" href="socket.xhtml#socket.socket" title="socket.socket"><code class="xref py py-class docutils literal notranslate"><span class="pre">socket.socket</span></code></a></dt>
+<dd><p>Documentation of underlying <a class="reference internal" href="socket.xhtml#module-socket" title="socket: Low-level networking interface."><code class="xref py py-mod docutils literal notranslate"><span class="pre">socket</span></code></a> class</p>
 </dd>
-<dt><a class="reference external" href="https://httpd.apache.org/docs/trunk/en/ssl/ssl_intro.html">SSL/TLS Strong Encryption: An Introduction</a><span class="link-target"> [https://httpd.apache.org/docs/trunk/en/ssl/ssl_intro.html]</span></dt><dd><p>Intro from the Apache HTTP Server documentation</p>
+<dt><a class="reference external" href="https://httpd.apache.org/docs/trunk/en/ssl/ssl_intro.html">SSL/TLS Strong Encryption: An Introduction</a><span class="link-target"> [https://httpd.apache.org/docs/trunk/en/ssl/ssl_intro.html]</span></dt>
+<dd><p>Intro from the Apache HTTP Server documentation</p>
 </dd>
-<dt><span class="target" id="index-19"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc1422.html"><strong>RFC 1422: Privacy Enhancement for Internet Electronic Mail: Part II: Certificate-Based Key Management</strong></a><span class="link-target"> [https://datatracker.ietf.org/doc/html/rfc1422.html]</span></dt><dd><p>Steve Kent</p>
+<dt><span class="target" id="index-19"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc1422.html"><strong>RFC 1422: Privacy Enhancement for Internet Electronic Mail: Part II: Certificate-Based Key Management</strong></a><span class="link-target"> [https://datatracker.ietf.org/doc/html/rfc1422.html]</span></dt>
+<dd><p>Steve Kent</p>
 </dd>
-<dt><span class="target" id="index-20"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc4086.html"><strong>RFC 4086: Randomness Requirements for Security</strong></a><span class="link-target"> [https://datatracker.ietf.org/doc/html/rfc4086.html]</span></dt><dd><p>Donald E., Jeffrey I. Schiller</p>
+<dt><span class="target" id="index-20"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc4086.html"><strong>RFC 4086: Randomness Requirements for Security</strong></a><span class="link-target"> [https://datatracker.ietf.org/doc/html/rfc4086.html]</span></dt>
+<dd><p>Donald E., Jeffrey I. Schiller</p>
 </dd>
-<dt><span class="target" id="index-21"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc5280.html"><strong>RFC 5280: Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile</strong></a><span class="link-target"> [https://datatracker.ietf.org/doc/html/rfc5280.html]</span></dt><dd><p>D. Cooper</p>
+<dt><span class="target" id="index-21"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc5280.html"><strong>RFC 5280: Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile</strong></a><span class="link-target"> [https://datatracker.ietf.org/doc/html/rfc5280.html]</span></dt>
+<dd><p>D. Cooper</p>
 </dd>
-<dt><span class="target" id="index-22"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc5246.html"><strong>RFC 5246: The Transport Layer Security (TLS) Protocol Version 1.2</strong></a><span class="link-target"> [https://datatracker.ietf.org/doc/html/rfc5246.html]</span></dt><dd><p>T. Dierks et. al.</p>
+<dt><span class="target" id="index-22"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc5246.html"><strong>RFC 5246: The Transport Layer Security (TLS) Protocol Version 1.2</strong></a><span class="link-target"> [https://datatracker.ietf.org/doc/html/rfc5246.html]</span></dt>
+<dd><p>T. Dierks et. al.</p>
 </dd>
-<dt><span class="target" id="index-23"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc6066.html"><strong>RFC 6066: Transport Layer Security (TLS) Extensions</strong></a><span class="link-target"> [https://datatracker.ietf.org/doc/html/rfc6066.html]</span></dt><dd><p>D. Eastlake</p>
+<dt><span class="target" id="index-23"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc6066.html"><strong>RFC 6066: Transport Layer Security (TLS) Extensions</strong></a><span class="link-target"> [https://datatracker.ietf.org/doc/html/rfc6066.html]</span></dt>
+<dd><p>D. Eastlake</p>
 </dd>
-<dt><a class="reference external" href="https://www.iana.org/assignments/tls-parameters/tls-parameters.xml">IANA TLS: Transport Layer Security (TLS) Parameters</a><span class="link-target"> [https://www.iana.org/assignments/tls-parameters/tls-parameters.xml]</span></dt><dd><p>IANA</p>
+<dt><a class="reference external" href="https://www.iana.org/assignments/tls-parameters/tls-parameters.xml">IANA TLS: Transport Layer Security (TLS) Parameters</a><span class="link-target"> [https://www.iana.org/assignments/tls-parameters/tls-parameters.xml]</span></dt>
+<dd><p>IANA</p>
 </dd>
-<dt><span class="target" id="index-24"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc7525.html"><strong>RFC 7525: Recommendations for Secure Use of Transport Layer Security (TLS) and Datagram Transport Layer Security (DTLS)</strong></a><span class="link-target"> [https://datatracker.ietf.org/doc/html/rfc7525.html]</span></dt><dd><p>IETF</p>
+<dt><span class="target" id="index-24"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc7525.html"><strong>RFC 7525: Recommendations for Secure Use of Transport Layer Security (TLS) and Datagram Transport Layer Security (DTLS)</strong></a><span class="link-target"> [https://datatracker.ietf.org/doc/html/rfc7525.html]</span></dt>
+<dd><p>IETF</p>
 </dd>
-<dt><a class="reference external" href="https://wiki.mozilla.org/Security/Server_Side_TLS">Mozilla’s Server Side TLS recommendations</a><span class="link-target"> [https://wiki.mozilla.org/Security/Server_Side_TLS]</span></dt><dd><p>Mozilla</p>
+<dt><a class="reference external" href="https://wiki.mozilla.org/Security/Server_Side_TLS">Mozilla’s Server Side TLS recommendations</a><span class="link-target"> [https://wiki.mozilla.org/Security/Server_Side_TLS]</span></dt>
+<dd><p>Mozilla</p>
 </dd>
 </dl>
 </div>
@@ -3203,5 +3461,5 @@ signature algorithm configuration, and rekeying are not supported yet.</p></li>
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

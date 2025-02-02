@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="logging.handlers — Logging handlers" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/library/logging.handlers.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="Source code: Lib/logging/handlers.py[https://github.com/python/cpython/tree/3.13/Lib/logging/handlers.py] Important: This page contains only reference information. For tutorials, please see Basic T..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="Source code: Lib/logging/handlers.py[https://github.com/python/cpython/tree/3.13/Lib/logging/handlers.py] Important: This page contains only reference information. For tutorials, please see Basic T..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="logging.handlers — Logging handlers"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/library/logging.handlers.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="Source code: Lib/logging/handlers.py[https://github.com/python/cpython/tree/3.13/Lib/logging/handlers.py] Important: This page contains only reference information. For tutorials, please see Basic T..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="Source code: Lib/logging/handlers.py[https://github.com/python/cpython/tree/3.13/Lib/logging/handlers.py] Important: This page contains only reference information. For tutorials, please see Basic T..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>logging.handlers — Logging handlers</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/library/logging.handlers.html" />
+    <link rel="canonical" href="https://docs.python.org/3/library/logging.handlers.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -55,13 +56,13 @@ please see</p>
 <li><p><a class="reference internal" href="../howto/logging-cookbook.xhtml#logging-cookbook"><span class="std std-ref">Logging Cookbook</span></a></p></li>
 </ul>
 </aside>
-<hr class="docutils" />
+<hr class="docutils"/>
 <p>The following useful handlers are provided in the package. Note that three of
 the handlers (<a class="reference internal" href="#logging.StreamHandler" title="logging.StreamHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamHandler</span></code></a>, <a class="reference internal" href="#logging.FileHandler" title="logging.FileHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">FileHandler</span></code></a> and
 <a class="reference internal" href="#logging.NullHandler" title="logging.NullHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">NullHandler</span></code></a>) are actually defined in the <a class="reference internal" href="logging.xhtml#module-logging" title="logging: Flexible event logging system for applications."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging</span></code></a> module itself,
 but have been documented here along with the other handlers.</p>
 <section id="streamhandler">
-<span id="stream-handler"></span><h2>StreamHandler</h2>
+<span id="stream-handler"></span><h2 class="sigil_not_in_toc">StreamHandler</h2>
 <p>The <a class="reference internal" href="#logging.StreamHandler" title="logging.StreamHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamHandler</span></code></a> class, located in the core <a class="reference internal" href="logging.xhtml#module-logging" title="logging: Flexible event logging system for applications."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging</span></code></a> package,
 sends logging output to streams such as <em>sys.stdout</em>, <em>sys.stderr</em> or any
 file-like object (or, more precisely, any object which supports <code class="xref py py-meth docutils literal notranslate"><span class="pre">write()</span></code>
@@ -79,7 +80,8 @@ will be used.</p>
 is then written to the stream followed by <a class="reference internal" href="#logging.StreamHandler.terminator" title="logging.StreamHandler.terminator"><code class="xref py py-attr docutils literal notranslate"><span class="pre">terminator</span></code></a>. If exception information
 is present, it is formatted using <a class="reference internal" href="traceback.xhtml#traceback.print_exception" title="traceback.print_exception"><code class="xref py py-func docutils literal notranslate"><span class="pre">traceback.print_exception()</span></code></a> and
 appended to the stream.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.StreamHandler.flush">
@@ -87,7 +89,8 @@ appended to the stream.</p>
 <dd><p>Flushes the stream by calling its <a class="reference internal" href="#logging.StreamHandler.flush" title="logging.StreamHandler.flush"><code class="xref py py-meth docutils literal notranslate"><span class="pre">flush()</span></code></a> method. Note that the
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">close()</span></code> method is inherited from <a class="reference internal" href="logging.xhtml#logging.Handler" title="logging.Handler"><code class="xref py py-class docutils literal notranslate"><span class="pre">Handler</span></code></a> and so
 does no output, so an explicit <a class="reference internal" href="#logging.StreamHandler.flush" title="logging.StreamHandler.flush"><code class="xref py py-meth docutils literal notranslate"><span class="pre">flush()</span></code></a> call may be needed at times.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.StreamHandler.setStream">
@@ -105,7 +108,8 @@ The old stream is flushed before the new stream is set.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="logging.StreamHandler.terminator">
@@ -118,13 +122,15 @@ Default value is <code class="docutils literal notranslate"><span class="pre">'\
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.2.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="filehandler">
-<span id="file-handler"></span><h2>FileHandler</h2>
+<span id="file-handler"></span><h2 class="sigil_not_in_toc">FileHandler</h2>
 <p>The <a class="reference internal" href="#logging.FileHandler" title="logging.FileHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">FileHandler</span></code></a> class, located in the core <a class="reference internal" href="logging.xhtml#module-logging" title="logging: Flexible event logging system for applications."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging</span></code></a> package,
 sends logging output to a disk file.  It inherits the output functionality from
 <a class="reference internal" href="#logging.StreamHandler" title="logging.StreamHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamHandler</span></code></a>.</p>
@@ -148,21 +154,24 @@ for the <em>filename</em> argument.</p>
 <dt class="sig sig-object py" id="logging.FileHandler.close">
 <span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Closes the file.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.FileHandler.emit">
 <span class="sig-name descname"><span class="pre">emit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Outputs the record to the file.</p>
 <p>Note that if the file was closed due to logging shutdown at exit and the file
-mode is ‘w’, the record will not be emitted (see <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=42378">bpo-42378</a><span class="link-target"> [https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=42378]</span>).</p>
-</dd></dl>
+mode is ‘w’, the record will not be emitted (see <a class="reference external" href="https://bugs.python.org/issue?@action=redirect&amp;bpo=42378">bpo-42378</a><span class="link-target"> [https://bugs.python.org/issue?@action=redirect&amp;bpo=42378]</span>).</p>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="nullhandler">
-<span id="null-handler"></span><h2>NullHandler</h2>
+<span id="null-handler"></span><h2 class="sigil_not_in_toc">NullHandler</h2>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.1.</span></p>
 </div>
@@ -177,28 +186,32 @@ for use by library developers.</p>
 <dt class="sig sig-object py" id="logging.NullHandler.emit">
 <span class="sig-name descname"><span class="pre">emit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>This method does nothing.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.NullHandler.handle">
 <span class="sig-name descname"><span class="pre">handle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>This method does nothing.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.NullHandler.createLock">
 <span class="sig-name descname"><span class="pre">createLock</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>This method returns <code class="docutils literal notranslate"><span class="pre">None</span></code> for the lock, since there is no
 underlying I/O to which access needs to be serialized.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 <p>See <a class="reference internal" href="../howto/logging.xhtml#library-config"><span class="std std-ref">Configuring Logging for a Library</span></a> for more information on how to use
 <a class="reference internal" href="#logging.NullHandler" title="logging.NullHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">NullHandler</span></code></a>.</p>
 </section>
 <section id="watchedfilehandler">
-<span id="watched-file-handler"></span><h2>WatchedFileHandler</h2>
+<span id="watched-file-handler"></span><h2 class="sigil_not_in_toc">WatchedFileHandler</h2>
 <p>The <a class="reference internal" href="#logging.handlers.WatchedFileHandler" title="logging.handlers.WatchedFileHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">WatchedFileHandler</span></code></a> class, located in the <a class="reference internal" href="#module-logging.handlers" title="logging.handlers: Handlers for the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.handlers</span></code></a>
 module, is a <code class="xref py py-class docutils literal notranslate"><span class="pre">FileHandler</span></code> which watches the file it is logging to. If
 the file changes, it is closed and reopened using the file name.</p>
@@ -238,20 +251,23 @@ outputting the record to the file.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.6.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.WatchedFileHandler.emit">
 <span class="sig-name descname"><span class="pre">emit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Outputs the record to the file, but first calls <a class="reference internal" href="#logging.handlers.WatchedFileHandler.reopenIfNeeded" title="logging.handlers.WatchedFileHandler.reopenIfNeeded"><code class="xref py py-meth docutils literal notranslate"><span class="pre">reopenIfNeeded()</span></code></a> to
 reopen the file if it has changed.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="baserotatinghandler">
-<span id="base-rotating-handler"></span><h2>BaseRotatingHandler</h2>
+<span id="base-rotating-handler"></span><h2 class="sigil_not_in_toc">BaseRotatingHandler</h2>
 <p>The <a class="reference internal" href="#logging.handlers.BaseRotatingHandler" title="logging.handlers.BaseRotatingHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseRotatingHandler</span></code></a> class, located in the <a class="reference internal" href="#module-logging.handlers" title="logging.handlers: Handlers for the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.handlers</span></code></a>
 module, is the base class for the rotating file handlers,
 <a class="reference internal" href="#logging.handlers.RotatingFileHandler" title="logging.handlers.RotatingFileHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">RotatingFileHandler</span></code></a> and <a class="reference internal" href="#logging.handlers.TimedRotatingFileHandler" title="logging.handlers.TimedRotatingFileHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">TimedRotatingFileHandler</span></code></a>. You should
@@ -289,7 +305,8 @@ fit in with the custom naming scheme.)</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="logging.handlers.BaseRotatingHandler.rotator">
@@ -300,7 +317,8 @@ those passed to <a class="reference internal" href="#logging.handlers.BaseRotati
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.BaseRotatingHandler.rotation_filename">
@@ -318,7 +336,8 @@ callable (the default is <code class="docutils literal notranslate"><span class=
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.BaseRotatingHandler.rotate">
@@ -341,9 +360,11 @@ what the source is rotated to, e.g. ‘test.log.1’.</p></li>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 <p>The reason the attributes exist is to save you having to subclass - you can use
 the same callables for instances of <a class="reference internal" href="#logging.handlers.RotatingFileHandler" title="logging.handlers.RotatingFileHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">RotatingFileHandler</span></code></a> and
@@ -356,7 +377,7 @@ override the methods.</p>
 <p>For an example, see <a class="reference internal" href="../howto/logging-cookbook.xhtml#cookbook-rotator-namer"><span class="std std-ref">Using a rotator and namer to customize log rotation processing</span></a>.</p>
 </section>
 <section id="rotatingfilehandler">
-<span id="rotating-file-handler"></span><h2>RotatingFileHandler</h2>
+<span id="rotating-file-handler"></span><h2 class="sigil_not_in_toc">RotatingFileHandler</h2>
 <p>The <a class="reference internal" href="#logging.handlers.RotatingFileHandler" title="logging.handlers.RotatingFileHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">RotatingFileHandler</span></code></a> class, located in the <a class="reference internal" href="#module-logging.handlers" title="logging.handlers: Handlers for the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.handlers</span></code></a>
 module, supports rotation of disk log files.</p>
 <dl class="py class">
@@ -393,20 +414,23 @@ for the <em>filename</em> argument.</p>
 <dt class="sig sig-object py" id="logging.handlers.RotatingFileHandler.doRollover">
 <span class="sig-name descname"><span class="pre">doRollover</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Does a rollover, as described above.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.RotatingFileHandler.emit">
 <span class="sig-name descname"><span class="pre">emit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Outputs the record to the file, catering for rollover as described
 previously.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="timedrotatingfilehandler">
-<span id="timed-rotating-file-handler"></span><h2>TimedRotatingFileHandler</h2>
+<span id="timed-rotating-file-handler"></span><h2 class="sigil_not_in_toc">TimedRotatingFileHandler</h2>
 <p>The <a class="reference internal" href="#logging.handlers.TimedRotatingFileHandler" title="logging.handlers.TimedRotatingFileHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">TimedRotatingFileHandler</span></code></a> class, located in the
 <a class="reference internal" href="#module-logging.handlers" title="logging.handlers: Handlers for the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.handlers</span></code></a> module, supports rotation of disk log files at certain
 timed intervals.</p>
@@ -421,39 +445,60 @@ sets the filename suffix. Rotating happens based on the product of <em>when</em>
 values is below.  Note that they are not case sensitive.</p>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Value</p></th>
-<th class="head"><p>Type of interval</p></th>
-<th class="head"><p>If/how <em>atTime</em> is used</p></th>
+<tr class="row-odd"><th class="head"><p>Value</p>
+</th>
+<th class="head"><p>Type of interval</p>
+</th>
+<th class="head"><p>If/how <em>atTime</em> is used</p>
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'S'</span></code></p></td>
-<td><p>Seconds</p></td>
-<td><p>Ignored</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'S'</span></code></p>
+</td>
+<td><p>Seconds</p>
+</td>
+<td><p>Ignored</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'M'</span></code></p></td>
-<td><p>Minutes</p></td>
-<td><p>Ignored</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'M'</span></code></p>
+</td>
+<td><p>Minutes</p>
+</td>
+<td><p>Ignored</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'H'</span></code></p></td>
-<td><p>Hours</p></td>
-<td><p>Ignored</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'H'</span></code></p>
+</td>
+<td><p>Hours</p>
+</td>
+<td><p>Ignored</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'D'</span></code></p></td>
-<td><p>Days</p></td>
-<td><p>Ignored</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'D'</span></code></p>
+</td>
+<td><p>Days</p>
+</td>
+<td><p>Ignored</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'W0'-'W6'</span></code></p></td>
-<td><p>Weekday (0=Monday)</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'W0'-'W6'</span></code></p>
+</td>
+<td><p>Weekday (0=Monday)</p>
+</td>
 <td><p>Used to compute initial
-rollover time</p></td>
+rollover time</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'midnight'</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'midnight'</span></code></p>
+</td>
 <td><p>Roll over at midnight, if
 <em>atTime</em> not specified,
-else at time <em>atTime</em></p></td>
+else at time <em>atTime</em></p>
+</td>
 <td><p>Used to compute initial
-rollover time</p></td>
+rollover time</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -512,26 +557,30 @@ for the <em>filename</em> argument.</p>
 <dt class="sig sig-object py" id="logging.handlers.TimedRotatingFileHandler.doRollover">
 <span class="sig-name descname"><span class="pre">doRollover</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Does a rollover, as described above.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.TimedRotatingFileHandler.emit">
 <span class="sig-name descname"><span class="pre">emit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Outputs the record to the file, catering for rollover as described above.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.TimedRotatingFileHandler.getFilesToDelete">
 <span class="sig-name descname"><span class="pre">getFilesToDelete</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Returns a list of filenames which should be deleted as part of rollover. These
 are the absolute paths of the oldest backup log files written by the handler.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="sockethandler">
-<span id="socket-handler"></span><h2>SocketHandler</h2>
+<span id="socket-handler"></span><h2 class="sigil_not_in_toc">SocketHandler</h2>
 <p>The <a class="reference internal" href="#logging.handlers.SocketHandler" title="logging.handlers.SocketHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">SocketHandler</span></code></a> class, located in the <a class="reference internal" href="#module-logging.handlers" title="logging.handlers: Handlers for the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.handlers</span></code></a> module,
 sends logging output to a network socket. The base class uses a TCP socket.</p>
 <dl class="py class">
@@ -547,7 +596,8 @@ using the value in <code class="docutils literal notranslate"><span class="pre">
 <dt class="sig sig-object py" id="logging.handlers.SocketHandler.close">
 <span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Closes the socket.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.SocketHandler.emit">
@@ -558,7 +608,8 @@ packet. If the connection was previously lost, re-establishes the
 connection. To unpickle the record at the receiving end into a
 <a class="reference internal" href="logging.xhtml#logging.LogRecord" title="logging.LogRecord"><code class="xref py py-class docutils literal notranslate"><span class="pre">LogRecord</span></code></a>, use the <a class="reference internal" href="logging.xhtml#logging.makeLogRecord" title="logging.makeLogRecord"><code class="xref py py-func docutils literal notranslate"><span class="pre">makeLogRecord()</span></code></a>
 function.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.SocketHandler.handleError">
@@ -566,7 +617,8 @@ function.</p>
 <dd><p>Handles an error which has occurred during <a class="reference internal" href="#logging.handlers.SocketHandler.emit" title="logging.handlers.SocketHandler.emit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emit()</span></code></a>. The most likely
 cause is a lost connection. Closes the socket so that we can retry on the
 next event.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.SocketHandler.makeSocket">
@@ -574,7 +626,8 @@ next event.</p>
 <dd><p>This is a factory method which allows subclasses to define the precise
 type of socket they want. The default implementation creates a TCP socket
 (<a class="reference internal" href="socket.xhtml#socket.SOCK_STREAM" title="socket.SOCK_STREAM"><code class="xref py py-const docutils literal notranslate"><span class="pre">socket.SOCK_STREAM</span></code></a>).</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.SocketHandler.makePickle">
@@ -583,16 +636,18 @@ type of socket they want. The default implementation creates a TCP socket
 prefix, and returns it ready for transmission across the socket. The
 details of this operation are equivalent to:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">record_attr_dict</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">datalen</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s1">&#39;&gt;L&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+<span class="n">datalen</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s1">'&gt;L'</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
 <span class="k">return</span> <span class="n">datalen</span> <span class="o">+</span> <span class="n">data</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Note that pickles aren’t completely secure. If you are concerned about
 security, you may want to override this method to implement a more secure
 mechanism. For example, you can sign pickles using HMAC and then verify
 them on the receiving end, or alternatively you can disable unpickling of
 global objects on the receiving end.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.SocketHandler.send">
@@ -602,7 +657,8 @@ byte-string is as described in the documentation for
 <a class="reference internal" href="#logging.handlers.SocketHandler.makePickle" title="logging.handlers.SocketHandler.makePickle"><code class="xref py py-meth docutils literal notranslate"><span class="pre">makePickle()</span></code></a>.</p>
 <p>This function allows for partial sends, which can happen when the network
 is busy.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.SocketHandler.createSocket">
@@ -624,13 +680,15 @@ double the delay each time up to a maximum of 30 seconds.</p>
 been used, you could lose messages (since the handler won’t even attempt
 a connection until the delay has elapsed, but just silently drop messages
 during the delay period).</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="datagramhandler">
-<span id="datagram-handler"></span><h2>DatagramHandler</h2>
+<span id="datagram-handler"></span><h2 class="sigil_not_in_toc">DatagramHandler</h2>
 <p>The <a class="reference internal" href="#logging.handlers.DatagramHandler" title="logging.handlers.DatagramHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">DatagramHandler</span></code></a> class, located in the <a class="reference internal" href="#module-logging.handlers" title="logging.handlers: Handlers for the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.handlers</span></code></a>
 module, inherits from <a class="reference internal" href="#logging.handlers.SocketHandler" title="logging.handlers.SocketHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">SocketHandler</span></code></a> to support sending logging messages
 over UDP sockets.</p>
@@ -660,27 +718,31 @@ binary format. If there is an error with the socket, silently drops the
 packet. To unpickle the record at the receiving end into a
 <a class="reference internal" href="logging.xhtml#logging.LogRecord" title="logging.LogRecord"><code class="xref py py-class docutils literal notranslate"><span class="pre">LogRecord</span></code></a>, use the <a class="reference internal" href="logging.xhtml#logging.makeLogRecord" title="logging.makeLogRecord"><code class="xref py py-func docutils literal notranslate"><span class="pre">makeLogRecord()</span></code></a>
 function.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.DatagramHandler.makeSocket">
 <span class="sig-name descname"><span class="pre">makeSocket</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>The factory method of <a class="reference internal" href="#logging.handlers.SocketHandler" title="logging.handlers.SocketHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">SocketHandler</span></code></a> is here overridden to create
 a UDP socket (<a class="reference internal" href="socket.xhtml#socket.SOCK_DGRAM" title="socket.SOCK_DGRAM"><code class="xref py py-const docutils literal notranslate"><span class="pre">socket.SOCK_DGRAM</span></code></a>).</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.DatagramHandler.send">
 <span class="sig-name descname"><span class="pre">send</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Send a pickled byte-string to a socket. The format of the sent byte-string
 is as described in the documentation for <a class="reference internal" href="#logging.handlers.SocketHandler.makePickle" title="logging.handlers.SocketHandler.makePickle"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SocketHandler.makePickle()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="sysloghandler">
-<span id="syslog-handler"></span><h2>SysLogHandler</h2>
+<span id="syslog-handler"></span><h2 class="sigil_not_in_toc">SysLogHandler</h2>
 <p>The <a class="reference internal" href="#logging.handlers.SysLogHandler" title="logging.handlers.SysLogHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">SysLogHandler</span></code></a> class, located in the <a class="reference internal" href="#module-logging.handlers" title="logging.handlers: Handlers for the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.handlers</span></code></a> module,
 supports sending logging messages to a remote or local Unix syslog.</p>
 <dl class="py class">
@@ -719,7 +781,8 @@ expect <a class="reference internal" href="#logging.handlers.SysLogHandler" titl
 <dt class="sig sig-object py" id="logging.handlers.SysLogHandler.close">
 <span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Closes the socket to the remote host.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.SysLogHandler.createSocket">
@@ -732,7 +795,8 @@ there is no socket at that point.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.11.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.SysLogHandler.emit">
@@ -740,7 +804,7 @@ there is no socket at that point.</p>
 <dd><p>The record is formatted, and then sent to the syslog server. If exception
 information is present, it is <em>not</em> sent to the server.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">Changed in version 3.2.1: </span>(See: <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=12168">bpo-12168</a><span class="link-target"> [https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=12168]</span>.) In earlier versions, the message sent to the
+<p><span class="versionmodified changed">Changed in version 3.2.1: </span>(See: <a class="reference external" href="https://bugs.python.org/issue?@action=redirect&amp;bpo=12168">bpo-12168</a><span class="link-target"> [https://bugs.python.org/issue?@action=redirect&amp;bpo=12168]</span>.) In earlier versions, the message sent to the
 syslog daemons was always terminated with a NUL byte, because early
 versions of these daemons expected a NUL terminated message - even
 though it’s not in the relevant specification (<span class="target" id="index-0"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc5424.html"><strong>RFC 5424</strong></a><span class="link-target"> [https://datatracker.ietf.org/doc/html/rfc5424.html]</span>). More recent
@@ -755,15 +819,16 @@ behaviour) but can be set to <code class="docutils literal notranslate"><span cl
 in order for that instance to <em>not</em> append the NUL terminator.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">Changed in version 3.3: </span>(See: <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=12419">bpo-12419</a><span class="link-target"> [https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=12419]</span>.) In earlier versions, there was no facility for
+<p><span class="versionmodified changed">Changed in version 3.3: </span>(See: <a class="reference external" href="https://bugs.python.org/issue?@action=redirect&amp;bpo=12419">bpo-12419</a><span class="link-target"> [https://bugs.python.org/issue?@action=redirect&amp;bpo=12419]</span>.) In earlier versions, there was no facility for
 an “ident” or “tag” prefix to identify the source of the message. This
 can now be specified using a class-level attribute, defaulting to
-<code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> to preserve existing behaviour, but which can be overridden on
+<code class="docutils literal notranslate"><span class="pre">""</span></code> to preserve existing behaviour, but which can be overridden on
 a <code class="docutils literal notranslate"><span class="pre">SysLogHandler</span></code> instance in order for that instance to prepend
 the ident to every message handled. Note that the provided ident must
 be text, not bytes, and is prepended to the message exactly as is.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.SysLogHandler.encodePriority">
@@ -776,108 +841,169 @@ mirror the values defined in the <code class="docutils literal notranslate"><spa
 <p><strong>Priorities</strong></p>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name (string)</p></th>
-<th class="head"><p>Symbolic value</p></th>
+<tr class="row-odd"><th class="head"><p>Name (string)</p>
+</th>
+<th class="head"><p>Symbolic value</p>
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">alert</span></code></p></td>
-<td><p>LOG_ALERT</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">alert</span></code></p>
+</td>
+<td><p>LOG_ALERT</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">crit</span></code> or <code class="docutils literal notranslate"><span class="pre">critical</span></code></p></td>
-<td><p>LOG_CRIT</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">crit</span></code> or <code class="docutils literal notranslate"><span class="pre">critical</span></code></p>
+</td>
+<td><p>LOG_CRIT</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">debug</span></code></p></td>
-<td><p>LOG_DEBUG</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">debug</span></code></p>
+</td>
+<td><p>LOG_DEBUG</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">emerg</span></code> or <code class="docutils literal notranslate"><span class="pre">panic</span></code></p></td>
-<td><p>LOG_EMERG</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">emerg</span></code> or <code class="docutils literal notranslate"><span class="pre">panic</span></code></p>
+</td>
+<td><p>LOG_EMERG</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">err</span></code> or <code class="docutils literal notranslate"><span class="pre">error</span></code></p></td>
-<td><p>LOG_ERR</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">err</span></code> or <code class="docutils literal notranslate"><span class="pre">error</span></code></p>
+</td>
+<td><p>LOG_ERR</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">info</span></code></p></td>
-<td><p>LOG_INFO</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">info</span></code></p>
+</td>
+<td><p>LOG_INFO</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">notice</span></code></p></td>
-<td><p>LOG_NOTICE</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">notice</span></code></p>
+</td>
+<td><p>LOG_NOTICE</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">warn</span></code> or <code class="docutils literal notranslate"><span class="pre">warning</span></code></p></td>
-<td><p>LOG_WARNING</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">warn</span></code> or <code class="docutils literal notranslate"><span class="pre">warning</span></code></p>
+</td>
+<td><p>LOG_WARNING</p>
+</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Facilities</strong></p>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name (string)</p></th>
-<th class="head"><p>Symbolic value</p></th>
+<tr class="row-odd"><th class="head"><p>Name (string)</p>
+</th>
+<th class="head"><p>Symbolic value</p>
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">auth</span></code></p></td>
-<td><p>LOG_AUTH</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">auth</span></code></p>
+</td>
+<td><p>LOG_AUTH</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">authpriv</span></code></p></td>
-<td><p>LOG_AUTHPRIV</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">authpriv</span></code></p>
+</td>
+<td><p>LOG_AUTHPRIV</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">cron</span></code></p></td>
-<td><p>LOG_CRON</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">cron</span></code></p>
+</td>
+<td><p>LOG_CRON</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">daemon</span></code></p></td>
-<td><p>LOG_DAEMON</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">daemon</span></code></p>
+</td>
+<td><p>LOG_DAEMON</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ftp</span></code></p></td>
-<td><p>LOG_FTP</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ftp</span></code></p>
+</td>
+<td><p>LOG_FTP</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">kern</span></code></p></td>
-<td><p>LOG_KERN</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">kern</span></code></p>
+</td>
+<td><p>LOG_KERN</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">lpr</span></code></p></td>
-<td><p>LOG_LPR</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">lpr</span></code></p>
+</td>
+<td><p>LOG_LPR</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mail</span></code></p></td>
-<td><p>LOG_MAIL</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mail</span></code></p>
+</td>
+<td><p>LOG_MAIL</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">news</span></code></p></td>
-<td><p>LOG_NEWS</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">news</span></code></p>
+</td>
+<td><p>LOG_NEWS</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">syslog</span></code></p></td>
-<td><p>LOG_SYSLOG</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">syslog</span></code></p>
+</td>
+<td><p>LOG_SYSLOG</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">user</span></code></p></td>
-<td><p>LOG_USER</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">user</span></code></p>
+</td>
+<td><p>LOG_USER</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">uucp</span></code></p></td>
-<td><p>LOG_UUCP</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">uucp</span></code></p>
+</td>
+<td><p>LOG_UUCP</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">local0</span></code></p></td>
-<td><p>LOG_LOCAL0</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">local0</span></code></p>
+</td>
+<td><p>LOG_LOCAL0</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">local1</span></code></p></td>
-<td><p>LOG_LOCAL1</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">local1</span></code></p>
+</td>
+<td><p>LOG_LOCAL1</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">local2</span></code></p></td>
-<td><p>LOG_LOCAL2</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">local2</span></code></p>
+</td>
+<td><p>LOG_LOCAL2</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">local3</span></code></p></td>
-<td><p>LOG_LOCAL3</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">local3</span></code></p>
+</td>
+<td><p>LOG_LOCAL3</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">local4</span></code></p></td>
-<td><p>LOG_LOCAL4</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">local4</span></code></p>
+</td>
+<td><p>LOG_LOCAL4</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">local5</span></code></p></td>
-<td><p>LOG_LOCAL5</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">local5</span></code></p>
+</td>
+<td><p>LOG_LOCAL5</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">local6</span></code></p></td>
-<td><p>LOG_LOCAL6</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">local6</span></code></p>
+</td>
+<td><p>LOG_LOCAL6</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">local7</span></code></p></td>
-<td><p>LOG_LOCAL7</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">local7</span></code></p>
+</td>
+<td><p>LOG_LOCAL7</p>
+</td>
 </tr>
 </tbody>
 </table>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.SysLogHandler.mapPriority">
@@ -888,13 +1014,15 @@ if the default algorithm is not suitable for your needs. The
 default algorithm maps <code class="docutils literal notranslate"><span class="pre">DEBUG</span></code>, <code class="docutils literal notranslate"><span class="pre">INFO</span></code>, <code class="docutils literal notranslate"><span class="pre">WARNING</span></code>, <code class="docutils literal notranslate"><span class="pre">ERROR</span></code> and
 <code class="docutils literal notranslate"><span class="pre">CRITICAL</span></code> to the equivalent syslog names, and all other level
 names to ‘warning’.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="nteventloghandler">
-<span id="nt-eventlog-handler"></span><h2>NTEventLogHandler</h2>
+<span id="nt-eventlog-handler"></span><h2 class="sigil_not_in_toc">NTEventLogHandler</h2>
 <p>The <a class="reference internal" href="#logging.handlers.NTEventLogHandler" title="logging.handlers.NTEventLogHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">NTEventLogHandler</span></code></a> class, located in the <a class="reference internal" href="#module-logging.handlers" title="logging.handlers: Handlers for the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.handlers</span></code></a>
 module, supports sending logging messages to a local Windows NT, Windows 2000 or
 Windows XP event log. Before you can use it, you need Mark Hammond’s Win32
@@ -922,21 +1050,24 @@ source of event log entries. However, if you do this, you will not be able
 to see the events as you intended in the Event Log Viewer - it needs to be
 able to access the registry to get the .dll name. The current version does
 not do this.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.NTEventLogHandler.emit">
 <span class="sig-name descname"><span class="pre">emit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Determines the message ID, event category and event type, and then logs
 the message in the NT event log.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.NTEventLogHandler.getEventCategory">
 <span class="sig-name descname"><span class="pre">getEventCategory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Returns the event category for the record. Override this if you want to
 specify your own categories. This version returns 0.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.NTEventLogHandler.getEventType">
@@ -948,7 +1079,8 @@ which contains mappings for <code class="xref py py-const docutils literal notra
 <code class="xref py py-const docutils literal notranslate"><span class="pre">WARNING</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">ERROR</span></code> and <code class="xref py py-const docutils literal notranslate"><span class="pre">CRITICAL</span></code>. If you are using
 your own levels, you will either need to override this method or place a
 suitable dictionary in the handler’s <em>typemap</em> attribute.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.NTEventLogHandler.getMessageID">
@@ -958,13 +1090,15 @@ you could do this by having the <em>msg</em> passed to the logger being an ID
 rather than a format string. Then, in here, you could use a dictionary
 lookup to get the message ID. This version returns 1, which is the base
 message ID in <code class="file docutils literal notranslate"><span class="pre">win32service.pyd</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="smtphandler">
-<span id="smtp-handler"></span><h2>SMTPHandler</h2>
+<span id="smtp-handler"></span><h2 class="sigil_not_in_toc">SMTPHandler</h2>
 <p>The <a class="reference internal" href="#logging.handlers.SMTPHandler" title="logging.handlers.SMTPHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">SMTPHandler</span></code></a> class, located in the <a class="reference internal" href="#module-logging.handlers" title="logging.handlers: Handlers for the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.handlers</span></code></a> module,
 supports sending logging messages to an email address via SMTP.</p>
 <dl class="py class">
@@ -991,20 +1125,23 @@ and certificate file. (This tuple is passed to the
 <dt class="sig sig-object py" id="logging.handlers.SMTPHandler.emit">
 <span class="sig-name descname"><span class="pre">emit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Formats the record and sends it to the specified addressees.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.SMTPHandler.getSubject">
 <span class="sig-name descname"><span class="pre">getSubject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>If you want to specify a subject line which is record-dependent, override
 this method.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="memoryhandler">
-<span id="memory-handler"></span><h2>MemoryHandler</h2>
+<span id="memory-handler"></span><h2 class="sigil_not_in_toc">MemoryHandler</h2>
 <p>The <a class="reference internal" href="#logging.handlers.MemoryHandler" title="logging.handlers.MemoryHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">MemoryHandler</span></code></a> class, located in the <a class="reference internal" href="#module-logging.handlers" title="logging.handlers: Handlers for the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.handlers</span></code></a> module,
 supports buffering of logging records in memory, periodically flushing them to a
 <em class="dfn">target</em> handler. Flushing occurs whenever the buffer is full, or when an
@@ -1024,7 +1161,8 @@ should, then <code class="xref py py-meth docutils literal notranslate"><span cl
 <span class="sig-name descname"><span class="pre">emit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Append the record to the buffer. If <a class="reference internal" href="#logging.handlers.BufferingHandler.shouldFlush" title="logging.handlers.BufferingHandler.shouldFlush"><code class="xref py py-meth docutils literal notranslate"><span class="pre">shouldFlush()</span></code></a> returns true,
 call <a class="reference internal" href="#logging.handlers.BufferingHandler.flush" title="logging.handlers.BufferingHandler.flush"><code class="xref py py-meth docutils literal notranslate"><span class="pre">flush()</span></code></a> to process the buffer.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.BufferingHandler.flush">
@@ -1032,16 +1170,19 @@ call <a class="reference internal" href="#logging.handlers.BufferingHandler.flus
 <dd><p>For a <a class="reference internal" href="#logging.handlers.BufferingHandler" title="logging.handlers.BufferingHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">BufferingHandler</span></code></a> instance, flushing means that it sets the
 buffer to an empty list. This method can be overwritten to implement more useful
 flushing behavior.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.BufferingHandler.shouldFlush">
 <span class="sig-name descname"><span class="pre">shouldFlush</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the buffer is up to capacity. This method can be
 overridden to implement custom flushing strategies.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="logging.handlers.MemoryHandler">
@@ -1062,7 +1203,8 @@ occur when the handler is closed.</p>
 <span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Calls <a class="reference internal" href="#logging.handlers.MemoryHandler.flush" title="logging.handlers.MemoryHandler.flush"><code class="xref py py-meth docutils literal notranslate"><span class="pre">flush()</span></code></a>, sets the target to <code class="docutils literal notranslate"><span class="pre">None</span></code> and clears the
 buffer.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.MemoryHandler.flush">
@@ -1070,25 +1212,29 @@ buffer.</p>
 <dd><p>For a <a class="reference internal" href="#logging.handlers.MemoryHandler" title="logging.handlers.MemoryHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">MemoryHandler</span></code></a> instance, flushing means just sending the buffered
 records to the target, if there is one. The buffer is also cleared when
 buffered records are sent to the target. Override if you want different behavior.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.MemoryHandler.setTarget">
 <span class="sig-name descname"><span class="pre">setTarget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Sets the target handler for this handler.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.MemoryHandler.shouldFlush">
 <span class="sig-name descname"><span class="pre">shouldFlush</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Checks for buffer full or a record at the <em>flushLevel</em> or higher.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="httphandler">
-<span id="http-handler"></span><h2>HTTPHandler</h2>
+<span id="http-handler"></span><h2 class="sigil_not_in_toc">HTTPHandler</h2>
 <p>The <a class="reference internal" href="#logging.handlers.HTTPHandler" title="logging.handlers.HTTPHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">HTTPHandler</span></code></a> class, located in the <a class="reference internal" href="#module-logging.handlers" title="logging.handlers: Handlers for the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.handlers</span></code></a> module,
 supports sending logging messages to a web server, using either <code class="docutils literal notranslate"><span class="pre">GET</span></code> or
 <code class="docutils literal notranslate"><span class="pre">POST</span></code> semantics.</p>
@@ -1116,7 +1262,8 @@ and sent to the web server. The default implementation just returns
 <code class="docutils literal notranslate"><span class="pre">record.__dict__</span></code>. This method can be overridden if e.g. only a
 subset of <a class="reference internal" href="logging.xhtml#logging.LogRecord" title="logging.LogRecord"><code class="xref py py-class docutils literal notranslate"><span class="pre">LogRecord</span></code></a> is to be sent to the web server, or
 if more specific customization of what’s sent to the server is required.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.HTTPHandler.emit">
@@ -1124,7 +1271,8 @@ if more specific customization of what’s sent to the server is required.</p>
 <dd><p>Sends the record to the web server as a URL-encoded dictionary. The
 <a class="reference internal" href="#logging.handlers.HTTPHandler.mapLogRecord" title="logging.handlers.HTTPHandler.mapLogRecord"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mapLogRecord()</span></code></a> method is used to convert the record to the
 dictionary to be sent.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1136,11 +1284,12 @@ Instead of calling <a class="reference internal" href="logging.xhtml#logging.Han
 <a class="reference internal" href="#logging.handlers.HTTPHandler.mapLogRecord" title="logging.handlers.HTTPHandler.mapLogRecord"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mapLogRecord()</span></code></a> and then <a class="reference internal" href="urllib.parse.xhtml#urllib.parse.urlencode" title="urllib.parse.urlencode"><code class="xref py py-func docutils literal notranslate"><span class="pre">urllib.parse.urlencode()</span></code></a> to encode the
 dictionary in a form suitable for sending to a web server.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="queuehandler">
-<span id="queue-handler"></span><h2>QueueHandler</h2>
+<span id="queue-handler"></span><h2 class="sigil_not_in_toc">QueueHandler</h2>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.2.</span></p>
 </div>
@@ -1176,7 +1325,8 @@ occur (e.g. because a bounded queue has filled up), the
 error. This can result in the record silently being dropped (if
 <a class="reference internal" href="logging.xhtml#logging.raiseExceptions" title="logging.raiseExceptions"><code class="xref py py-data docutils literal notranslate"><span class="pre">logging.raiseExceptions</span></code></a> is <code class="docutils literal notranslate"><span class="pre">False</span></code>) or a message printed to
 <code class="docutils literal notranslate"><span class="pre">sys.stderr</span></code> (if <a class="reference internal" href="logging.xhtml#logging.raiseExceptions" title="logging.raiseExceptions"><code class="xref py py-data docutils literal notranslate"><span class="pre">logging.raiseExceptions</span></code></a> is <code class="docutils literal notranslate"><span class="pre">True</span></code>).</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.QueueHandler.prepare">
@@ -1209,7 +1359,8 @@ whether your <code class="docutils literal notranslate"><span class="pre">args</
 consider not only your own code but also code in any libraries that
 you use.)</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.QueueHandler.enqueue">
@@ -1217,7 +1368,8 @@ you use.)</p>
 <dd><p>Enqueues the record on the queue using <code class="docutils literal notranslate"><span class="pre">put_nowait()</span></code>; you may
 want to override this if you want to use blocking behaviour, or a
 timeout, or a customized queue implementation.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="logging.handlers.QueueHandler.listener">
@@ -1228,13 +1380,15 @@ handler. Otherwise, it will be <code class="docutils literal notranslate"><span 
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.12.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="queuelistener">
-<span id="queue-listener"></span><h2>QueueListener</h2>
+<span id="queue-listener"></span><h2 class="sigil_not_in_toc">QueueListener</h2>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.2.</span></p>
 </div>
@@ -1280,7 +1434,8 @@ versions - to always pass each message to each handler.</p>
 <p>The base implementation uses <code class="docutils literal notranslate"><span class="pre">get()</span></code>. You may want to override this
 method if you want to use timeouts or work with custom queue
 implementations.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.QueueListener.prepare">
@@ -1289,7 +1444,8 @@ implementations.</p>
 <p>This implementation just returns the passed-in record. You may want to
 override this method if you need to do any custom marshalling or
 manipulation of the record before passing it to the handlers.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.QueueListener.handle">
@@ -1298,7 +1454,8 @@ manipulation of the record before passing it to the handlers.</p>
 <p>This just loops through the handlers offering them the record
 to handle. The actual object passed to the handlers is that which
 is returned from <a class="reference internal" href="#logging.handlers.QueueListener.prepare" title="logging.handlers.QueueListener.prepare"><code class="xref py py-meth docutils literal notranslate"><span class="pre">prepare()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.QueueListener.start">
@@ -1306,7 +1463,8 @@ is returned from <a class="reference internal" href="#logging.handlers.QueueList
 <dd><p>Starts the listener.</p>
 <p>This starts up a background thread to monitor the queue for
 LogRecords to process.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.QueueListener.stop">
@@ -1315,7 +1473,8 @@ LogRecords to process.</p>
 <p>This asks the thread to terminate, and then waits for it to do so.
 Note that if you don’t call this before your application exits, there
 may be some records still left on the queue, which won’t be processed.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.QueueListener.enqueue_sentinel">
@@ -1327,16 +1486,20 @@ implementations.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt>Module <a class="reference internal" href="logging.xhtml#module-logging" title="logging: Flexible event logging system for applications."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging</span></code></a></dt><dd><p>API reference for the logging module.</p>
+<dt>Module <a class="reference internal" href="logging.xhtml#module-logging" title="logging: Flexible event logging system for applications."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging</span></code></a></dt>
+<dd><p>API reference for the logging module.</p>
 </dd>
-<dt>Module <a class="reference internal" href="logging.config.xhtml#module-logging.config" title="logging.config: Configuration of the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.config</span></code></a></dt><dd><p>Configuration API for the logging module.</p>
+<dt>Module <a class="reference internal" href="logging.config.xhtml#module-logging.config" title="logging.config: Configuration of the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.config</span></code></a></dt>
+<dd><p>Configuration API for the logging module.</p>
 </dd>
 </dl>
 </div>
@@ -1349,5 +1512,5 @@ implementations.</p>
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

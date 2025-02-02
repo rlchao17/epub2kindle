@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="http.client — HTTP protocol client" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/library/http.client.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="Source code: Lib/http/client.py[https://github.com/python/cpython/tree/3.13/Lib/http/client.py] This module defines classes that implement the client side of the HTTP and HTTPS protocols. It is nor..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="Source code: Lib/http/client.py[https://github.com/python/cpython/tree/3.13/Lib/http/client.py] This module defines classes that implement the client side of the HTTP and HTTPS protocols. It is nor..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="http.client — HTTP protocol client"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/library/http.client.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="Source code: Lib/http/client.py[https://github.com/python/cpython/tree/3.13/Lib/http/client.py] This module defines classes that implement the client side of the HTTP and HTTPS protocols. It is nor..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="Source code: Lib/http/client.py[https://github.com/python/cpython/tree/3.13/Lib/http/client.py] This module defines classes that implement the client side of the HTTP and HTTPS protocols. It is nor..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>http.client — HTTP protocol client</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/library/http.client.html" />
+    <link rel="canonical" href="https://docs.python.org/3/library/http.client.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -45,7 +46,7 @@
   <section id="module-http.client">
 <span id="http-client-http-protocol-client"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">http.client</span></code> — HTTP protocol client</h1>
 <p><strong>Source code:</strong> <a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.13/Lib/http/client.py">Lib/http/client.py</a><span class="link-target"> [https://github.com/python/cpython/tree/3.13/Lib/http/client.py]</span></p>
-<span id="index-0"></span><hr class="docutils" id="index-1" />
+<span id="index-0"></span><hr class="docutils" id="index-1"/>
 <p>This module defines classes that implement the client side of the HTTP and
 HTTPS protocols.  It is normally not used directly — the module
 <a class="reference internal" href="urllib.request.xhtml#module-urllib.request" title="urllib.request: Extensible library for opening URLs."><code class="xref py py-mod docutils literal notranslate"><span class="pre">urllib.request</span></code></a> uses it to handle URLs that use HTTP and HTTPS.</p>
@@ -81,11 +82,12 @@ The optional <em>blocksize</em> parameter sets the buffer size in bytes for
 sending a file-like message body.</p>
 <p>For example, the following calls all create instances that connect to the server
 at the same host and port:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">h1</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPConnection</span><span class="p">(</span><span class="s1">&#39;www.python.org&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">h2</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPConnection</span><span class="p">(</span><span class="s1">&#39;www.python.org:80&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">h3</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPConnection</span><span class="p">(</span><span class="s1">&#39;www.python.org&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">h4</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPConnection</span><span class="p">(</span><span class="s1">&#39;www.python.org&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">h1</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPConnection</span><span class="p">(</span><span class="s1">'www.python.org'</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">h2</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPConnection</span><span class="p">(</span><span class="s1">'www.python.org:80'</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">h3</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPConnection</span><span class="p">(</span><span class="s1">'www.python.org'</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">h4</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPConnection</span><span class="p">(</span><span class="s1">'www.python.org'</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre>
+</div>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.2: </span><em>source_address</em> was added.</p>
@@ -97,7 +99,8 @@ no longer supported.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.7: </span><em>blocksize</em> parameter was added.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="http.client.HTTPSConnection">
@@ -138,7 +141,8 @@ ALPN protocols with <a class="reference internal" href="ssl.xhtml#ssl.SSLContext
 <p><span class="versionmodified changed">Changed in version 3.12: </span>The deprecated <em>key_file</em>, <em>cert_file</em> and <em>check_hostname</em> parameters
 have been removed.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="http.client.HTTPResponse">
@@ -149,7 +153,8 @@ instantiated directly by user.</p>
 <p><span class="versionmodified changed">Changed in version 3.4: </span>The <em>strict</em> parameter was removed. HTTP 0.9 style “Simple Responses” are
 no longer supported.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <p>This module provides the following function:</p>
 <dl class="py function">
@@ -170,7 +175,8 @@ it only parses the <code class="docutils literal notranslate"><span class="pre">
 read these field lines, so the first line should already be consumed
 before calling the function.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <p>The following exceptions are raised as appropriate:</p>
 <dl class="py exception">
@@ -178,82 +184,95 @@ before calling the function.</p>
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">http.client.</span></span><span class="sig-name descname"><span class="pre">HTTPException</span></span></dt>
 <dd><p>The base class of the other exceptions in this module.  It is a subclass of
 <a class="reference internal" href="exceptions.xhtml#Exception" title="Exception"><code class="xref py py-exc docutils literal notranslate"><span class="pre">Exception</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="http.client.NotConnected">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">http.client.</span></span><span class="sig-name descname"><span class="pre">NotConnected</span></span></dt>
 <dd><p>A subclass of <a class="reference internal" href="#http.client.HTTPException" title="http.client.HTTPException"><code class="xref py py-exc docutils literal notranslate"><span class="pre">HTTPException</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="http.client.InvalidURL">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">http.client.</span></span><span class="sig-name descname"><span class="pre">InvalidURL</span></span></dt>
 <dd><p>A subclass of <a class="reference internal" href="#http.client.HTTPException" title="http.client.HTTPException"><code class="xref py py-exc docutils literal notranslate"><span class="pre">HTTPException</span></code></a>, raised if a port is given and is either
 non-numeric or empty.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="http.client.UnknownProtocol">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">http.client.</span></span><span class="sig-name descname"><span class="pre">UnknownProtocol</span></span></dt>
 <dd><p>A subclass of <a class="reference internal" href="#http.client.HTTPException" title="http.client.HTTPException"><code class="xref py py-exc docutils literal notranslate"><span class="pre">HTTPException</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="http.client.UnknownTransferEncoding">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">http.client.</span></span><span class="sig-name descname"><span class="pre">UnknownTransferEncoding</span></span></dt>
 <dd><p>A subclass of <a class="reference internal" href="#http.client.HTTPException" title="http.client.HTTPException"><code class="xref py py-exc docutils literal notranslate"><span class="pre">HTTPException</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="http.client.UnimplementedFileMode">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">http.client.</span></span><span class="sig-name descname"><span class="pre">UnimplementedFileMode</span></span></dt>
 <dd><p>A subclass of <a class="reference internal" href="#http.client.HTTPException" title="http.client.HTTPException"><code class="xref py py-exc docutils literal notranslate"><span class="pre">HTTPException</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="http.client.IncompleteRead">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">http.client.</span></span><span class="sig-name descname"><span class="pre">IncompleteRead</span></span></dt>
 <dd><p>A subclass of <a class="reference internal" href="#http.client.HTTPException" title="http.client.HTTPException"><code class="xref py py-exc docutils literal notranslate"><span class="pre">HTTPException</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="http.client.ImproperConnectionState">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">http.client.</span></span><span class="sig-name descname"><span class="pre">ImproperConnectionState</span></span></dt>
 <dd><p>A subclass of <a class="reference internal" href="#http.client.HTTPException" title="http.client.HTTPException"><code class="xref py py-exc docutils literal notranslate"><span class="pre">HTTPException</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="http.client.CannotSendRequest">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">http.client.</span></span><span class="sig-name descname"><span class="pre">CannotSendRequest</span></span></dt>
 <dd><p>A subclass of <a class="reference internal" href="#http.client.ImproperConnectionState" title="http.client.ImproperConnectionState"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ImproperConnectionState</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="http.client.CannotSendHeader">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">http.client.</span></span><span class="sig-name descname"><span class="pre">CannotSendHeader</span></span></dt>
 <dd><p>A subclass of <a class="reference internal" href="#http.client.ImproperConnectionState" title="http.client.ImproperConnectionState"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ImproperConnectionState</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="http.client.ResponseNotReady">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">http.client.</span></span><span class="sig-name descname"><span class="pre">ResponseNotReady</span></span></dt>
 <dd><p>A subclass of <a class="reference internal" href="#http.client.ImproperConnectionState" title="http.client.ImproperConnectionState"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ImproperConnectionState</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="http.client.BadStatusLine">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">http.client.</span></span><span class="sig-name descname"><span class="pre">BadStatusLine</span></span></dt>
 <dd><p>A subclass of <a class="reference internal" href="#http.client.HTTPException" title="http.client.HTTPException"><code class="xref py py-exc docutils literal notranslate"><span class="pre">HTTPException</span></code></a>.  Raised if a server responds with a HTTP
 status code that we don’t understand.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="http.client.LineTooLong">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">http.client.</span></span><span class="sig-name descname"><span class="pre">LineTooLong</span></span></dt>
 <dd><p>A subclass of <a class="reference internal" href="#http.client.HTTPException" title="http.client.HTTPException"><code class="xref py py-exc docutils literal notranslate"><span class="pre">HTTPException</span></code></a>.  Raised if an excessively long line
 is received in the HTTP protocol from the server.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="http.client.RemoteDisconnected">
@@ -265,32 +284,36 @@ has closed the connection.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.5: </span>Previously, <a class="reference internal" href="#http.client.BadStatusLine" title="http.client.BadStatusLine"><code class="xref py py-exc docutils literal notranslate"><span class="pre">BadStatusLine</span></code></a><code class="docutils literal notranslate"><span class="pre">('')</span></code> was raised.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <p>The constants defined in this module are:</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="http.client.HTTP_PORT">
 <span class="sig-prename descclassname"><span class="pre">http.client.</span></span><span class="sig-name descname"><span class="pre">HTTP_PORT</span></span></dt>
 <dd><p>The default port for the HTTP protocol (always <code class="docutils literal notranslate"><span class="pre">80</span></code>).</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="http.client.HTTPS_PORT">
 <span class="sig-prename descclassname"><span class="pre">http.client.</span></span><span class="sig-name descname"><span class="pre">HTTPS_PORT</span></span></dt>
 <dd><p>The default port for the HTTPS protocol (always <code class="docutils literal notranslate"><span class="pre">443</span></code>).</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="http.client.responses">
 <span class="sig-prename descclassname"><span class="pre">http.client.</span></span><span class="sig-name descname"><span class="pre">responses</span></span></dt>
 <dd><p>This dictionary maps the HTTP 1.1 status codes to the W3C names.</p>
 <p>Example: <code class="docutils literal notranslate"><span class="pre">http.client.responses[http.client.NOT_FOUND]</span></code> is <code class="docutils literal notranslate"><span class="pre">'Not</span> <span class="pre">Found'</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p>See <a class="reference internal" href="http.xhtml#http-status-codes"><span class="std std-ref">HTTP status codes</span></a> for a list of HTTP status codes that are
 available in this module as constants.</p>
 <section id="httpconnection-objects">
-<span id="id1"></span><h2>HTTPConnection Objects</h2>
+<span id="id1"></span><h2 class="sigil_not_in_toc">HTTPConnection Objects</h2>
 <p><a class="reference internal" href="#http.client.HTTPConnection" title="http.client.HTTPConnection"><code class="xref py py-class docutils literal notranslate"><span class="pre">HTTPConnection</span></code></a> instances have the following methods:</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="http.client.HTTPConnection.request">
@@ -333,13 +356,14 @@ HTTPConnection object assumes that all encoding is handled by the
 calling code.  If it is <code class="docutils literal notranslate"><span class="pre">True</span></code>, the body will be chunk-encoded.</p>
 <p>For example, to perform a <code class="docutils literal notranslate"><span class="pre">GET</span></code> request to <code class="docutils literal notranslate"><span class="pre">https://docs.python.org/3/</span></code>:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">http.client</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">host</span> <span class="o">=</span> <span class="s2">&quot;docs.python.org&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">host</span> <span class="o">=</span> <span class="s2">"docs.python.org"</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPSConnection</span><span class="p">(</span><span class="n">host</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;/3/&quot;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Host&quot;</span><span class="p">:</span> <span class="n">host</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"GET"</span><span class="p">,</span> <span class="s2">"/3/"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">"Host"</span><span class="p">:</span> <span class="n">host</span><span class="p">})</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">reason</span><span class="p">)</span>
 <span class="go">200 OK</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -359,7 +383,8 @@ The <em>encode_chunked</em> argument was added.
 No attempt is made to determine the Content-Length for file
 objects.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="http.client.HTTPConnection.getresponse">
@@ -376,7 +401,8 @@ request to the server.</p>
 <a class="reference internal" href="#http.client.HTTPConnection" title="http.client.HTTPConnection"><code class="xref py py-class docutils literal notranslate"><span class="pre">HTTPConnection</span></code></a> object will be ready to reconnect when
 a new request is sent.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="http.client.HTTPConnection.set_debuglevel">
@@ -388,7 +414,8 @@ is passed to any new <a class="reference internal" href="#http.client.HTTPRespon
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.1.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="http.client.HTTPConnection.set_tunnel">
@@ -410,10 +437,11 @@ transmitted automatically.</p>
 constructor, and the address of the host that we eventually want to reach to
 the <a class="reference internal" href="#http.client.HTTPConnection.set_tunnel" title="http.client.HTTPConnection.set_tunnel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_tunnel()</span></code></a> method:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">http.client</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPSConnection</span><span class="p">(</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span> <span class="mi">8080</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span><span class="o">.</span><span class="n">set_tunnel</span><span class="p">(</span><span class="s2">&quot;www.python.org&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;HEAD&quot;</span><span class="p">,</span><span class="s2">&quot;/index.html&quot;</span><span class="p">)</span>
-</pre></div>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPSConnection</span><span class="p">(</span><span class="s2">"localhost"</span><span class="p">,</span> <span class="mi">8080</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span><span class="o">.</span><span class="n">set_tunnel</span><span class="p">(</span><span class="s2">"www.python.org"</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"HEAD"</span><span class="p">,</span><span class="s2">"/index.html"</span><span class="p">)</span>
+</pre>
+</div>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.2.</span></p>
@@ -424,7 +452,8 @@ protocol HTTP/1.0. <code class="docutils literal notranslate"><span class="pre">
 one will be automatically generated and transmitted if not provided in
 the headers argument.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="http.client.HTTPConnection.get_proxy_response_headers">
@@ -435,7 +464,8 @@ the proxy server to the CONNECT request.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.12.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="http.client.HTTPConnection.connect">
@@ -444,13 +474,15 @@ the proxy server to the CONNECT request.</p>
 this is called automatically when making a request if the client does not
 already have a connection.</p>
 <p class="audit-hook">Raises an <a class="reference internal" href="sys.xhtml#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">http.client.connect</span></code> with arguments <code class="docutils literal notranslate"><span class="pre">self</span></code>, <code class="docutils literal notranslate"><span class="pre">host</span></code>, <code class="docutils literal notranslate"><span class="pre">port</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="http.client.HTTPConnection.close">
 <span class="sig-prename descclassname"><span class="pre">HTTPConnection.</span></span><span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Close the connection to the server.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="http.client.HTTPConnection.blocksize">
@@ -459,7 +491,8 @@ already have a connection.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <p>As an alternative to using the <a class="reference internal" href="#http.client.HTTPConnection.request" title="http.client.HTTPConnection.request"><code class="xref py py-meth docutils literal notranslate"><span class="pre">request()</span></code></a> method described above, you can
 also send your request step by step, by using the four functions below.</p>
@@ -472,7 +505,8 @@ the <em>url</em> string, and the HTTP version (<code class="docutils literal not
 sending of <code class="docutils literal notranslate"><span class="pre">Host:</span></code> or <code class="docutils literal notranslate"><span class="pre">Accept-Encoding:</span></code> headers (for example to accept
 additional content encodings), specify <em>skip_host</em> or <em>skip_accept_encoding</em>
 with non-False values.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="http.client.HTTPConnection.putheader">
@@ -481,7 +515,8 @@ with non-False values.</p>
 consisting of the header, a colon and a space, and the first argument.  If more
 arguments are given, continuation lines are sent, each consisting of a tab and
 an argument.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="http.client.HTTPConnection.endheaders">
@@ -508,7 +543,8 @@ the target server due to malformed encoding.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Added chunked encoding support and the <em>encode_chunked</em> parameter.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="http.client.HTTPConnection.send">
@@ -517,11 +553,12 @@ the target server due to malformed encoding.</p>
 <a class="reference internal" href="#http.client.HTTPConnection.endheaders" title="http.client.HTTPConnection.endheaders"><code class="xref py py-meth docutils literal notranslate"><span class="pre">endheaders()</span></code></a> method has been called and before <a class="reference internal" href="#http.client.HTTPConnection.getresponse" title="http.client.HTTPConnection.getresponse"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getresponse()</span></code></a> is
 called.</p>
 <p class="audit-hook">Raises an <a class="reference internal" href="sys.xhtml#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">http.client.send</span></code> with arguments <code class="docutils literal notranslate"><span class="pre">self</span></code>, <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="httpresponse-objects">
-<span id="id2"></span><h2>HTTPResponse Objects</h2>
+<span id="id2"></span><h2 class="sigil_not_in_toc">HTTPResponse Objects</h2>
 <p>An <a class="reference internal" href="#http.client.HTTPResponse" title="http.client.HTTPResponse"><code class="xref py py-class docutils literal notranslate"><span class="pre">HTTPResponse</span></code></a> instance wraps the HTTP response from the
 server.  It provides access to the request headers and the entity
 body.  The response is an iterable object and can be used in a with
@@ -534,7 +571,8 @@ all of its reader operations are supported.</p>
 <dt class="sig sig-object py" id="http.client.HTTPResponse.read">
 <span class="sig-prename descclassname"><span class="pre">HTTPResponse.</span></span><span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">amt</span></span></em><span class="optional">]</span><span class="sig-paren">)</span></dt>
 <dd><p>Reads and returns the response body, or up to the next <em>amt</em> bytes.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="http.client.HTTPResponse.readinto">
@@ -544,7 +582,8 @@ Returns the number of bytes read.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="http.client.HTTPResponse.getheader">
@@ -553,19 +592,22 @@ Returns the number of bytes read.</p>
 matching <em>name</em>.  If there is more than one  header with the name <em>name</em>,
 return all of the values joined by ‘, ‘.  If <em>default</em> is any iterable other
 than a single string, its elements are similarly returned joined by commas.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="http.client.HTTPResponse.getheaders">
 <span class="sig-prename descclassname"><span class="pre">HTTPResponse.</span></span><span class="sig-name descname"><span class="pre">getheaders</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Return a list of (header, value) tuples.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="http.client.HTTPResponse.fileno">
 <span class="sig-prename descclassname"><span class="pre">HTTPResponse.</span></span><span class="sig-name descname"><span class="pre">fileno</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Return the <code class="docutils literal notranslate"><span class="pre">fileno</span></code> of the underlying socket.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="http.client.HTTPResponse.msg">
@@ -573,50 +615,58 @@ than a single string, its elements are similarly returned joined by commas.</p>
 <dd><p>A <a class="reference internal" href="#http.client.HTTPMessage" title="http.client.HTTPMessage"><code class="xref py py-class docutils literal notranslate"><span class="pre">http.client.HTTPMessage</span></code></a> instance containing the response
 headers.  <a class="reference internal" href="#http.client.HTTPMessage" title="http.client.HTTPMessage"><code class="xref py py-class docutils literal notranslate"><span class="pre">http.client.HTTPMessage</span></code></a> is a subclass of
 <a class="reference internal" href="email.compat32-message.xhtml#email.message.Message" title="email.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">email.message.Message</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="http.client.HTTPResponse.version">
 <span class="sig-prename descclassname"><span class="pre">HTTPResponse.</span></span><span class="sig-name descname"><span class="pre">version</span></span></dt>
 <dd><p>HTTP protocol version used by server.  10 for HTTP/1.0, 11 for HTTP/1.1.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="http.client.HTTPResponse.url">
 <span class="sig-prename descclassname"><span class="pre">HTTPResponse.</span></span><span class="sig-name descname"><span class="pre">url</span></span></dt>
 <dd><p>URL of the resource retrieved, commonly used to determine if a redirect was followed.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="http.client.HTTPResponse.headers">
 <span class="sig-prename descclassname"><span class="pre">HTTPResponse.</span></span><span class="sig-name descname"><span class="pre">headers</span></span></dt>
 <dd><p>Headers of the response in the form of an <a class="reference internal" href="email.message.xhtml#email.message.EmailMessage" title="email.message.EmailMessage"><code class="xref py py-class docutils literal notranslate"><span class="pre">email.message.EmailMessage</span></code></a> instance.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="http.client.HTTPResponse.status">
 <span class="sig-prename descclassname"><span class="pre">HTTPResponse.</span></span><span class="sig-name descname"><span class="pre">status</span></span></dt>
 <dd><p>Status code returned by server.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="http.client.HTTPResponse.reason">
 <span class="sig-prename descclassname"><span class="pre">HTTPResponse.</span></span><span class="sig-name descname"><span class="pre">reason</span></span></dt>
 <dd><p>Reason phrase returned by server.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="http.client.HTTPResponse.debuglevel">
 <span class="sig-prename descclassname"><span class="pre">HTTPResponse.</span></span><span class="sig-name descname"><span class="pre">debuglevel</span></span></dt>
 <dd><p>A debugging hook.  If <a class="reference internal" href="#http.client.HTTPResponse.debuglevel" title="http.client.HTTPResponse.debuglevel"><code class="xref py py-attr docutils literal notranslate"><span class="pre">debuglevel</span></code></a> is greater than zero, messages
 will be printed to stdout as the response is read and parsed.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="http.client.HTTPResponse.closed">
 <span class="sig-prename descclassname"><span class="pre">HTTPResponse.</span></span><span class="sig-name descname"><span class="pre">closed</span></span></dt>
 <dd><p>Is <code class="docutils literal notranslate"><span class="pre">True</span></code> if the stream is closed.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="http.client.HTTPResponse.geturl">
@@ -624,7 +674,8 @@ will be printed to stdout as the response is read and parsed.</p>
 <dd><div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 3.9: </span>Deprecated in favor of <a class="reference internal" href="#http.client.HTTPResponse.url" title="http.client.HTTPResponse.url"><code class="xref py py-attr docutils literal notranslate"><span class="pre">url</span></code></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="http.client.HTTPResponse.info">
@@ -632,7 +683,8 @@ will be printed to stdout as the response is read and parsed.</p>
 <dd><div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 3.9: </span>Deprecated in favor of <a class="reference internal" href="#http.client.HTTPResponse.headers" title="http.client.HTTPResponse.headers"><code class="xref py py-attr docutils literal notranslate"><span class="pre">headers</span></code></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="http.client.HTTPResponse.getcode">
@@ -640,66 +692,70 @@ will be printed to stdout as the response is read and parsed.</p>
 <dd><div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 3.9: </span>Deprecated in favor of <a class="reference internal" href="#http.client.HTTPResponse.status" title="http.client.HTTPResponse.status"><code class="xref py py-attr docutils literal notranslate"><span class="pre">status</span></code></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="examples">
-<h2>Examples</h2>
+<h2 class="sigil_not_in_toc">Examples</h2>
 <p>Here is an example session that uses the <code class="docutils literal notranslate"><span class="pre">GET</span></code> method:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">http.client</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPSConnection</span><span class="p">(</span><span class="s2">&quot;www.python.org&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPSConnection</span><span class="p">(</span><span class="s2">"www.python.org"</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"GET"</span><span class="p">,</span> <span class="s2">"/"</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">r1</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">r1</span><span class="o">.</span><span class="n">status</span><span class="p">,</span> <span class="n">r1</span><span class="o">.</span><span class="n">reason</span><span class="p">)</span>
 <span class="go">200 OK</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">data1</span> <span class="o">=</span> <span class="n">r1</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>  <span class="c1"># This will return entire content.</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># The following example demonstrates reading data in chunks.</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"GET"</span><span class="p">,</span> <span class="s2">"/"</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">r1</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">while</span> <span class="n">chunk</span> <span class="o">:=</span> <span class="n">r1</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">200</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">chunk</span><span class="p">))</span>
-<span class="go">b&#39;&lt;!doctype html&gt;\n&lt;!--[if&quot;...</span>
+<span class="go">b'&lt;!doctype html&gt;\n&lt;!--[if"...</span>
 <span class="go">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># Example of an invalid request</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPSConnection</span><span class="p">(</span><span class="s2">&quot;docs.python.org&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;/parrot.spam&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPSConnection</span><span class="p">(</span><span class="s2">"docs.python.org"</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"GET"</span><span class="p">,</span> <span class="s2">"/parrot.spam"</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">r2</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">r2</span><span class="o">.</span><span class="n">status</span><span class="p">,</span> <span class="n">r2</span><span class="o">.</span><span class="n">reason</span><span class="p">)</span>
 <span class="go">404 Not Found</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">data2</span> <span class="o">=</span> <span class="n">r2</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Here is an example session that uses the <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> method.  Note that the
 <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> method never returns any data.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">http.client</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPSConnection</span><span class="p">(</span><span class="s2">&quot;www.python.org&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;HEAD&quot;</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPSConnection</span><span class="p">(</span><span class="s2">"www.python.org"</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"HEAD"</span><span class="p">,</span> <span class="s2">"/"</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">res</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">status</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">reason</span><span class="p">)</span>
 <span class="go">200 OK</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
 <span class="go">0</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">==</span> <span class="sa">b</span><span class="s1">&#39;&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">==</span> <span class="sa">b</span><span class="s1">''</span>
 <span class="go">True</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Here is an example session that uses the <code class="docutils literal notranslate"><span class="pre">POST</span></code> method:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">http.client</span><span class="o">,</span><span class="w"> </span><span class="nn">urllib.parse</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">params</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlencode</span><span class="p">({</span><span class="s1">&#39;@number&#39;</span><span class="p">:</span> <span class="mi">12524</span><span class="p">,</span> <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;issue&#39;</span><span class="p">,</span> <span class="s1">&#39;@action&#39;</span><span class="p">:</span> <span class="s1">&#39;show&#39;</span><span class="p">})</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Content-type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/x-www-form-urlencoded&quot;</span><span class="p">,</span>
-<span class="gp">... </span>           <span class="s2">&quot;Accept&quot;</span><span class="p">:</span> <span class="s2">&quot;text/plain&quot;</span><span class="p">}</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPConnection</span><span class="p">(</span><span class="s2">&quot;bugs.python.org&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;POST&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">headers</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">params</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlencode</span><span class="p">({</span><span class="s1">'@number'</span><span class="p">:</span> <span class="mi">12524</span><span class="p">,</span> <span class="s1">'@type'</span><span class="p">:</span> <span class="s1">'issue'</span><span class="p">,</span> <span class="s1">'@action'</span><span class="p">:</span> <span class="s1">'show'</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"Content-type"</span><span class="p">:</span> <span class="s2">"application/x-www-form-urlencoded"</span><span class="p">,</span>
+<span class="gp">... </span>           <span class="s2">"Accept"</span><span class="p">:</span> <span class="s2">"text/plain"</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPConnection</span><span class="p">(</span><span class="s2">"bugs.python.org"</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"POST"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">headers</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">reason</span><span class="p">)</span>
 <span class="go">302 Found</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">data</span>
-<span class="go">b&#39;Redirecting to &lt;a href=&quot;https://bugs.python.org/issue12524&quot;&gt;https://bugs.python.org/issue12524&lt;/a&gt;&#39;</span>
+<span class="go">b'Redirecting to &lt;a href="https://bugs.python.org/issue12524"&gt;https://bugs.python.org/issue12524&lt;/a&gt;'</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Client side HTTP <code class="docutils literal notranslate"><span class="pre">PUT</span></code> requests are very similar to <code class="docutils literal notranslate"><span class="pre">POST</span></code> requests. The
 difference lies only on the server side where HTTP servers will allow resources to
@@ -711,21 +767,23 @@ method attribute. Here is an example session that uses the <code class="docutils
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># for the resource http://localhost:8080/file</span>
 <span class="gp">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">http.client</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">BODY</span> <span class="o">=</span> <span class="s2">&quot;***filecontents***&quot;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPConnection</span><span class="p">(</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span> <span class="mi">8080</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;PUT&quot;</span><span class="p">,</span> <span class="s2">&quot;/file&quot;</span><span class="p">,</span> <span class="n">BODY</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">BODY</span> <span class="o">=</span> <span class="s2">"***filecontents***"</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPConnection</span><span class="p">(</span><span class="s2">"localhost"</span><span class="p">,</span> <span class="mi">8080</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"PUT"</span><span class="p">,</span> <span class="s2">"/file"</span><span class="p">,</span> <span class="n">BODY</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">reason</span><span class="p">)</span>
 <span class="go">200, OK</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 <section id="httpmessage-objects">
-<span id="id3"></span><h2>HTTPMessage Objects</h2>
+<span id="id3"></span><h2 class="sigil_not_in_toc">HTTPMessage Objects</h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="http.client.HTTPMessage">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">http.client.</span></span><span class="sig-name descname"><span class="pre">HTTPMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email.message.Message</span></span></em><span class="sig-paren">)</span></dt>
-<dd></dd></dl>
+<dd></dd>
+</dl>
 
 <p>An <a class="reference internal" href="#http.client.HTTPMessage" title="http.client.HTTPMessage"><code class="xref py py-class docutils literal notranslate"><span class="pre">http.client.HTTPMessage</span></code></a> instance holds the headers from an HTTP
 response.  It is implemented using the <a class="reference internal" href="email.compat32-message.xhtml#email.message.Message" title="email.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">email.message.Message</span></code></a> class.</p>
@@ -738,5 +796,5 @@ response.  It is implemented using the <a class="reference internal" href="email
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

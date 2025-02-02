@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="Debugging C API extensions and CPython Internals with GDB" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/howto/gdb_helpers.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="This document explains how the Python GDB extension, python-gdb.py, can be used with the GDB debugger to debug CPython extensions and the CPython interpreter itself. When debugging low-level proble..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="This document explains how the Python GDB extension, python-gdb.py, can be used with the GDB debugger to debug CPython extensions and the CPython interpreter itself. When debugging low-level proble..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="Debugging C API extensions and CPython Internals with GDB"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/howto/gdb_helpers.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="This document explains how the Python GDB extension, python-gdb.py, can be used with the GDB debugger to debug CPython extensions and the CPython interpreter itself. When debugging low-level proble..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="This document explains how the Python GDB extension, python-gdb.py, can be used with the GDB debugger to debug CPython extensions and the CPython interpreter itself. When debugging low-level proble..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>Debugging C API extensions and CPython Internals with GDB</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/howto/gdb_helpers.html" />
+    <link rel="canonical" href="https://docs.python.org/3/howto/gdb_helpers.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -66,7 +67,7 @@ CPython C API. It consolidates guidance from the
 <a class="reference external" href="https://wiki.python.org/moin/DebuggingWithGdb">Python wiki</a><span class="link-target"> [https://wiki.python.org/moin/DebuggingWithGdb]</span>.</p>
 </div>
 <section id="prerequisites">
-<h2>Prerequisites</h2>
+<h2 class="sigil_not_in_toc">Prerequisites</h2>
 <p>You need to have:</p>
 <ul class="simple">
 <li><p>GDB 7 or later. (For earlier versions of GDB, see <code class="docutils literal notranslate"><span class="pre">Misc/gdbinit</span></code> in the
@@ -79,7 +80,7 @@ debugging.</p></li>
 not at all. Below, we include tips for a few common systems as examples.
 Note that even if the instructions match your system, they might be outdated.</p>
 <section id="setup-with-python-built-from-source">
-<h3>Setup with Python built from source</h3>
+<h3 class="sigil_not_in_toc">Setup with Python built from source</h3>
 <p>When you build CPython from source, debugging information should be available,
 and the build should add a <code class="docutils literal notranslate"><span class="pre">python-gdb.py</span></code> file to the root directory of
 your repository.</p>
@@ -92,13 +93,14 @@ with instructions on how to do this.</p>
 <p>If you do not see instructions for your version of GDB, put this in your
 configuration file (<code class="docutils literal notranslate"><span class="pre">~/.gdbinit</span></code> or <code class="docutils literal notranslate"><span class="pre">~/.config/gdb/gdbinit</span></code>):</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>add-auto-load-safe-path /path/to/cpython
-</pre></div>
+</pre>
+</div>
 </div>
 <p>You can also add multiple paths, separated by <code class="docutils literal notranslate"><span class="pre">:</span></code>.</p>
 </div>
 </section>
 <section id="setup-for-python-from-a-linux-distro">
-<h3>Setup for Python from a Linux distro</h3>
+<h3 class="sigil_not_in_toc">Setup for Python from a Linux distro</h3>
 <p>Most Linux systems provide debug information for the system Python
 in a package called <code class="docutils literal notranslate"><span class="pre">python-debuginfo</span></code>, <code class="docutils literal notranslate"><span class="pre">python-dbg</span></code> or similar.
 For example:</p>
@@ -107,16 +109,20 @@ For example:</p>
 <blockquote>
 <div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>gdb
 sudo<span class="w"> </span>dnf<span class="w"> </span>debuginfo-install<span class="w"> </span>python3
-</pre></div>
+</pre>
 </div>
-</div></blockquote>
+</div>
+</div>
+</blockquote>
 </li>
 <li><p>Ubuntu:</p>
 <blockquote>
 <div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gdb<span class="w"> </span>python3-dbg
-</pre></div>
+</pre>
 </div>
-</div></blockquote>
+</div>
+</div>
+</blockquote>
 </li>
 </ul>
 <p>On several recent Linux systems, GDB can download debugging symbols
@@ -126,7 +132,7 @@ you generally do need to install the debug info package separately.</p>
 </section>
 </section>
 <section id="using-the-debug-build-and-development-mode">
-<h2>Using the Debug build and Development mode</h2>
+<h2 class="sigil_not_in_toc">Using the Debug build and Development mode</h2>
 <p>For easier debugging, you might want to:</p>
 <ul class="simple">
 <li><p>Use a <a class="reference internal" href="../using/configure.xhtml#debug-build"><span class="std std-ref">debug build</span></a> of Python. (When building from source,
@@ -139,29 +145,30 @@ Sometimes this hides the bug you are trying to find, but in most cases they
 make the process easier.</p>
 </section>
 <section id="using-the-python-gdb-extension">
-<h2>Using the <code class="docutils literal notranslate"><span class="pre">python-gdb</span></code> extension</h2>
+<h2 class="sigil_not_in_toc">Using the <code class="docutils literal notranslate"><span class="pre">python-gdb</span></code> extension</h2>
 <p>When the extension is loaded, it provides two main features:
 pretty printers for Python values, and additional commands.</p>
 <section id="pretty-printers">
-<h3>Pretty-printers</h3>
+<h3 class="sigil_not_in_toc">Pretty-printers</h3>
 <p>This is what a GDB backtrace looks like (truncated) when this extension is
 enabled:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#0  0x000000000041a6b1 in PyObject_Malloc (nbytes=Cannot access memory at address 0x7fffff7fefe8
 ) at Objects/obmalloc.c:748
-#1  0x000000000041b7c0 in _PyObject_DebugMallocApi (id=111 &#39;o&#39;, nbytes=24) at Objects/obmalloc.c:1445
+#1  0x000000000041b7c0 in _PyObject_DebugMallocApi (id=111 'o', nbytes=24) at Objects/obmalloc.c:1445
 #2  0x000000000041b717 in _PyObject_DebugMalloc (nbytes=24) at Objects/obmalloc.c:1412
 #3  0x000000000044060a in _PyUnicode_New (length=11) at Objects/unicodeobject.c:346
-#4  0x00000000004466aa in PyUnicodeUCS2_DecodeUTF8Stateful (s=0x5c2b8d &quot;__lltrace__&quot;, size=11, errors=0x0, consumed=
+#4  0x00000000004466aa in PyUnicodeUCS2_DecodeUTF8Stateful (s=0x5c2b8d "__lltrace__", size=11, errors=0x0, consumed=
     0x0) at Objects/unicodeobject.c:2531
-#5  0x0000000000446647 in PyUnicodeUCS2_DecodeUTF8 (s=0x5c2b8d &quot;__lltrace__&quot;, size=11, errors=0x0)
+#5  0x0000000000446647 in PyUnicodeUCS2_DecodeUTF8 (s=0x5c2b8d "__lltrace__", size=11, errors=0x0)
     at Objects/unicodeobject.c:2495
-#6  0x0000000000440d1b in PyUnicodeUCS2_FromStringAndSize (u=0x5c2b8d &quot;__lltrace__&quot;, size=11)
+#6  0x0000000000440d1b in PyUnicodeUCS2_FromStringAndSize (u=0x5c2b8d "__lltrace__", size=11)
     at Objects/unicodeobject.c:551
-#7  0x0000000000440d94 in PyUnicodeUCS2_FromString (u=0x5c2b8d &quot;__lltrace__&quot;) at Objects/unicodeobject.c:569
+#7  0x0000000000440d94 in PyUnicodeUCS2_FromString (u=0x5c2b8d "__lltrace__") at Objects/unicodeobject.c:569
 #8  0x0000000000584abd in PyDict_GetItemString (v=
-    {&#39;Yuck&#39;: &lt;type at remote 0xad4730&gt;, &#39;__builtins__&#39;: &lt;module at remote 0x7ffff7fd5ee8&gt;, &#39;__file__&#39;: &#39;Lib/test/crashers/nasty_eq_vs_dict.py&#39;, &#39;__package__&#39;: None, &#39;y&#39;: &lt;Yuck(i=0) at remote 0xaacd80&gt;, &#39;dict&#39;: {0: 0, 1: 1, 2: 2, 3: 3}, &#39;__cached__&#39;: None, &#39;__name__&#39;: &#39;__main__&#39;, &#39;z&#39;: &lt;Yuck(i=0) at remote 0xaace60&gt;, &#39;__doc__&#39;: None}, key=
-    0x5c2b8d &quot;__lltrace__&quot;) at Objects/dictobject.c:2171
-</pre></div>
+    {'Yuck': &lt;type at remote 0xad4730&gt;, '__builtins__': &lt;module at remote 0x7ffff7fd5ee8&gt;, '__file__': 'Lib/test/crashers/nasty_eq_vs_dict.py', '__package__': None, 'y': &lt;Yuck(i=0) at remote 0xaacd80&gt;, 'dict': {0: 0, 1: 1, 2: 2, 3: 3}, '__cached__': None, '__name__': '__main__', 'z': &lt;Yuck(i=0) at remote 0xaace60&gt;, '__doc__': None}, key=
+    0x5c2b8d "__lltrace__") at Objects/dictobject.c:2171
+</pre>
+</div>
 </div>
 <p>Notice how the dictionary argument to <code class="docutils literal notranslate"><span class="pre">PyDict_GetItemString</span></code> is displayed
 as its <code class="docutils literal notranslate"><span class="pre">repr()</span></code>, rather than an opaque <code class="docutils literal notranslate"><span class="pre">PyObject</span> <span class="pre">*</span></code> pointer.</p>
@@ -169,24 +176,25 @@ as its <code class="docutils literal notranslate"><span class="pre">repr()</span
 <code class="docutils literal notranslate"><span class="pre">PyObject</span> <span class="pre">*</span></code>.  If you need to access lower-level details of an object, then
 cast the value to a pointer of the appropriate type.  For example:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>(gdb) p globals
-$1 = {&#39;__builtins__&#39;: &lt;module at remote 0x7ffff7fb1868&gt;, &#39;__name__&#39;:
-&#39;__main__&#39;, &#39;ctypes&#39;: &lt;module at remote 0x7ffff7f14360&gt;, &#39;__doc__&#39;: None,
-&#39;__package__&#39;: None}
+$1 = {'__builtins__': &lt;module at remote 0x7ffff7fb1868&gt;, '__name__':
+'__main__', 'ctypes': &lt;module at remote 0x7ffff7f14360&gt;, '__doc__': None,
+'__package__': None}
 
 (gdb) p *(PyDictObject*)globals
 $2 = {ob_refcnt = 3, ob_type = 0x3dbdf85820, ma_fill = 5, ma_used = 5,
 ma_mask = 7, ma_table = 0x63d0f8, ma_lookup = 0x3dbdc7ea70
 &lt;lookdict_string&gt;, ma_smalltable = {{me_hash = 7065186196740147912,
-me_key = &#39;__builtins__&#39;, me_value = &lt;module at remote 0x7ffff7fb1868&gt;},
-{me_hash = -368181376027291943, me_key = &#39;__name__&#39;,
-me_value =&#39;__main__&#39;}, {me_hash = 0, me_key = 0x0, me_value = 0x0},
+me_key = '__builtins__', me_value = &lt;module at remote 0x7ffff7fb1868&gt;},
+{me_hash = -368181376027291943, me_key = '__name__',
+me_value ='__main__'}, {me_hash = 0, me_key = 0x0, me_value = 0x0},
 {me_hash = 0, me_key = 0x0, me_value = 0x0},
-{me_hash = -9177857982131165996, me_key = &#39;ctypes&#39;,
+{me_hash = -9177857982131165996, me_key = 'ctypes',
 me_value = &lt;module at remote 0x7ffff7f14360&gt;},
-{me_hash = -8518757509529533123, me_key = &#39;__doc__&#39;, me_value = None},
+{me_hash = -8518757509529533123, me_key = '__doc__', me_value = None},
 {me_hash = 0, me_key = 0x0, me_value = 0x0}, {
-  me_hash = 6614918939584953775, me_key = &#39;__package__&#39;, me_value = None}}}
-</pre></div>
+  me_hash = 6614918939584953775, me_key = '__package__', me_value = None}}}
+</pre>
+</div>
 </div>
 <p>Note that the pretty-printers do not actually call <code class="docutils literal notranslate"><span class="pre">repr()</span></code>.
 For basic types, they try to match its result closely.</p>
@@ -200,37 +208,42 @@ $3 = 42
 
 (gdb) p some_python_integer
 $4 = 42
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The internal structure can be revealed with a cast to <span class="c-expr sig sig-inline c"><a class="reference internal" href="../c-api/long.xhtml#c.PyLongObject" title="PyLongObject"><span class="n">PyLongObject</span></a><span class="p">*</span></span>:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>(gdb) p *(PyLongObject*)some_python_integer
 $5 = {ob_base = {ob_base = {ob_refcnt = 8, ob_type = 0x3dad39f5e0}, ob_size = 1},
 ob_digit = {42}}
-</pre></div>
+</pre>
+</div>
 </div>
 <p>A similar confusion can arise with the <code class="docutils literal notranslate"><span class="pre">str</span></code> type, where the output looks a
 lot like gdb’s built-in printer for <code class="docutils literal notranslate"><span class="pre">char</span> <span class="pre">*</span></code>:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>(gdb) p ptr_to_python_str
-$6 = &#39;__builtins__&#39;
-</pre></div>
+$6 = '__builtins__'
+</pre>
+</div>
 </div>
 <p>The pretty-printer for <code class="docutils literal notranslate"><span class="pre">str</span></code> instances defaults to using single-quotes (as
 does Python’s <code class="docutils literal notranslate"><span class="pre">repr</span></code> for strings) whereas the standard printer for <code class="docutils literal notranslate"><span class="pre">char</span> <span class="pre">*</span></code>
 values uses double-quotes and contains a hexadecimal address:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>(gdb) p ptr_to_char_star
-$7 = 0x6d72c0 &quot;hello world&quot;
-</pre></div>
+$7 = 0x6d72c0 "hello world"
+</pre>
+</div>
 </div>
 <p>Again, the implementation details can be revealed with a cast to
 <span class="c-expr sig sig-inline c"><a class="reference internal" href="../c-api/unicode.xhtml#c.PyUnicodeObject" title="PyUnicodeObject"><span class="n">PyUnicodeObject</span></a><span class="p">*</span></span>:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>(gdb) p *(PyUnicodeObject*)$6
 $8 = {ob_base = {ob_refcnt = 33, ob_type = 0x3dad3a95a0}, length = 12,
 str = 0x7ffff2128500, hash = 7065186196740147912, state = 1, defenc = 0x0}
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 <section id="py-list">
-<h3><code class="docutils literal notranslate"><span class="pre">py-list</span></code></h3>
+<h3 class="sigil_not_in_toc"><code class="docutils literal notranslate"><span class="pre">py-list</span></code></h3>
 <blockquote>
 <div><p>The extension adds a <code class="docutils literal notranslate"><span class="pre">py-list</span></code> command, which
 lists the Python source code (if any) for the current frame in the selected
@@ -247,15 +260,17 @@ thread.  The current line is marked with a “&gt;”:</p>
  909                gtk.main()
  910            except KeyboardInterrupt:
  911                # properly quit on a keyboard interrupt...
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Use <code class="docutils literal notranslate"><span class="pre">py-list</span> <span class="pre">START</span></code> to list at a different line number within the Python
 source, and <code class="docutils literal notranslate"><span class="pre">py-list</span> <span class="pre">START,END</span></code> to list a specific range of lines within
 the Python source.</p>
-</div></blockquote>
+</div>
+</blockquote>
 </section>
 <section id="py-up-and-py-down">
-<h3><code class="docutils literal notranslate"><span class="pre">py-up</span></code> and <code class="docutils literal notranslate"><span class="pre">py-down</span></code></h3>
+<h3 class="sigil_not_in_toc"><code class="docutils literal notranslate"><span class="pre">py-up</span></code> and <code class="docutils literal notranslate"><span class="pre">py-down</span></code></h3>
 <blockquote>
 <div><p>The <code class="docutils literal notranslate"><span class="pre">py-up</span></code> and <code class="docutils literal notranslate"><span class="pre">py-down</span></code> commands are analogous to GDB’s regular <code class="docutils literal notranslate"><span class="pre">up</span></code>
 and <code class="docutils literal notranslate"><span class="pre">down</span></code> commands, but try to move at the level of CPython frames, rather
@@ -277,7 +292,8 @@ gnome_sudoku/gnome_sudoku.py, line 22, in start_game(main=&lt;module at remote 0
     main.start_game()
 (gdb) py-up
 Unable to find an older python frame
-</pre></div>
+</pre>
+</div>
 </div>
 <p>so we’re at the top of the Python stack.</p>
 <p>The frame numbers correspond to those displayed by GDB’s standard
@@ -294,7 +310,7 @@ The command skips C frames which are not executing Python code.</p>
 (gdb) py-down
 #19 (unable to read python frame information)
 (gdb) py-down
-#14 Frame 0x99262ac, for file /usr/lib/python2.6/site-packages/gnome_sudoku/game_selector.py, line 201, in run_swallowed_dialog (self=&lt;NewOrSavedGameSelector(new_game_model=&lt;gtk.ListStore at remote 0x98fab44&gt;, puzzle=None, saved_games=[{&#39;gsd.auto_fills&#39;: 0, &#39;tracking&#39;: {}, &#39;trackers&#39;: {}, &#39;notes&#39;: [], &#39;saved_at&#39;: 1270084485, &#39;game&#39;: &#39;7 8 0 0 0 0 0 5 6 0 0 9 0 8 0 1 0 0 0 4 6 0 0 0 0 7 0 6 5 0 0 0 4 7 9 2 0 0 0 9 0 1 0 0 0 3 9 7 6 0 0 0 1 8 0 6 0 0 0 0 2 8 0 0 0 5 0 4 0 6 0 0 2 1 0 0 0 0 0 4 5\n7 8 0 0 0 0 0 5 6 0 0 9 0 8 0 1 0 0 0 4 6 0 0 0 0 7 0 6 5 1 8 3 4 7 9 2 0 0 0 9 0 1 0 0 0 3 9 7 6 0 0 0 1 8 0 6 0 0 0 0 2 8 0 0 0 5 0 4 0 6 0 0 2 1 0 0 0 0 0 4 5&#39;, &#39;gsd.impossible_hints&#39;: 0, &#39;timer.__absolute_start_time__&#39;: &lt;float at remote 0x984b474&gt;, &#39;gsd.hints&#39;: 0, &#39;timer.active_time&#39;: &lt;float at remote 0x984b494&gt;, &#39;timer.total_time&#39;: &lt;float at remote 0x984b464&gt;}], dialog=&lt;gtk.Dialog at remote 0x98faaa4&gt;, saved_game_model=&lt;gtk.ListStore at remote 0x98fad24&gt;, sudoku_maker=&lt;SudokuMaker(terminated=False, played=[], batch_siz...(truncated)
+#14 Frame 0x99262ac, for file /usr/lib/python2.6/site-packages/gnome_sudoku/game_selector.py, line 201, in run_swallowed_dialog (self=&lt;NewOrSavedGameSelector(new_game_model=&lt;gtk.ListStore at remote 0x98fab44&gt;, puzzle=None, saved_games=[{'gsd.auto_fills': 0, 'tracking': {}, 'trackers': {}, 'notes': [], 'saved_at': 1270084485, 'game': '7 8 0 0 0 0 0 5 6 0 0 9 0 8 0 1 0 0 0 4 6 0 0 0 0 7 0 6 5 0 0 0 4 7 9 2 0 0 0 9 0 1 0 0 0 3 9 7 6 0 0 0 1 8 0 6 0 0 0 0 2 8 0 0 0 5 0 4 0 6 0 0 2 1 0 0 0 0 0 4 5\n7 8 0 0 0 0 0 5 6 0 0 9 0 8 0 1 0 0 0 4 6 0 0 0 0 7 0 6 5 1 8 3 4 7 9 2 0 0 0 9 0 1 0 0 0 3 9 7 6 0 0 0 1 8 0 6 0 0 0 0 2 8 0 0 0 5 0 4 0 6 0 0 2 1 0 0 0 0 0 4 5', 'gsd.impossible_hints': 0, 'timer.__absolute_start_time__': &lt;float at remote 0x984b474&gt;, 'gsd.hints': 0, 'timer.active_time': &lt;float at remote 0x984b494&gt;, 'timer.total_time': &lt;float at remote 0x984b464&gt;}], dialog=&lt;gtk.Dialog at remote 0x98faaa4&gt;, saved_game_model=&lt;gtk.ListStore at remote 0x98fad24&gt;, sudoku_maker=&lt;SudokuMaker(terminated=False, played=[], batch_siz...(truncated)
             swallower.run_dialog(self.dialog)
 (gdb) py-down
 #11 Frame 0x9aead74, for file /usr/lib/python2.6/site-packages/gnome_sudoku/dialog_swallower.py, line 48, in run_dialog (self=&lt;SwappableArea(running=&lt;gtk.Dialog at remote 0x98faaa4&gt;, main_page=0) at remote 0x98fa6e4&gt;, d=&lt;gtk.Dialog at remote 0x98faaa4&gt;)
@@ -303,7 +319,8 @@ The command skips C frames which are not executing Python code.</p>
 #8 (unable to read python frame information)
 (gdb) py-down
 Unable to find a newer python frame
-</pre></div>
+</pre>
+</div>
 </div>
 <p>and we’re at the bottom of the Python stack.</p>
 <p>Note that in Python 3.12 and newer, the same C stack frame can be used for
@@ -326,12 +343,14 @@ may move multiple Python frames at once. For example:</p>
    recursive_function(5)
 (gdb) py-up
 Unable to find an older python frame
-</pre></div>
+</pre>
 </div>
-</div></blockquote>
+</div>
+</div>
+</blockquote>
 </section>
 <section id="py-bt">
-<h3><code class="docutils literal notranslate"><span class="pre">py-bt</span></code></h3>
+<h3 class="sigil_not_in_toc"><code class="docutils literal notranslate"><span class="pre">py-bt</span></code></h3>
 <blockquote>
 <div><p>The <code class="docutils literal notranslate"><span class="pre">py-bt</span></code> command attempts to display a Python-level backtrace of the
 current thread.</p>
@@ -340,7 +359,7 @@ current thread.</p>
 #8 (unable to read python frame information)
 #11 Frame 0x9aead74, for file /usr/lib/python2.6/site-packages/gnome_sudoku/dialog_swallower.py, line 48, in run_dialog (self=&lt;SwappableArea(running=&lt;gtk.Dialog at remote 0x98faaa4&gt;, main_page=0) at remote 0x98fa6e4&gt;, d=&lt;gtk.Dialog at remote 0x98faaa4&gt;)
             gtk.main()
-#14 Frame 0x99262ac, for file /usr/lib/python2.6/site-packages/gnome_sudoku/game_selector.py, line 201, in run_swallowed_dialog (self=&lt;NewOrSavedGameSelector(new_game_model=&lt;gtk.ListStore at remote 0x98fab44&gt;, puzzle=None, saved_games=[{&#39;gsd.auto_fills&#39;: 0, &#39;tracking&#39;: {}, &#39;trackers&#39;: {}, &#39;notes&#39;: [], &#39;saved_at&#39;: 1270084485, &#39;game&#39;: &#39;7 8 0 0 0 0 0 5 6 0 0 9 0 8 0 1 0 0 0 4 6 0 0 0 0 7 0 6 5 0 0 0 4 7 9 2 0 0 0 9 0 1 0 0 0 3 9 7 6 0 0 0 1 8 0 6 0 0 0 0 2 8 0 0 0 5 0 4 0 6 0 0 2 1 0 0 0 0 0 4 5\n7 8 0 0 0 0 0 5 6 0 0 9 0 8 0 1 0 0 0 4 6 0 0 0 0 7 0 6 5 1 8 3 4 7 9 2 0 0 0 9 0 1 0 0 0 3 9 7 6 0 0 0 1 8 0 6 0 0 0 0 2 8 0 0 0 5 0 4 0 6 0 0 2 1 0 0 0 0 0 4 5&#39;, &#39;gsd.impossible_hints&#39;: 0, &#39;timer.__absolute_start_time__&#39;: &lt;float at remote 0x984b474&gt;, &#39;gsd.hints&#39;: 0, &#39;timer.active_time&#39;: &lt;float at remote 0x984b494&gt;, &#39;timer.total_time&#39;: &lt;float at remote 0x984b464&gt;}], dialog=&lt;gtk.Dialog at remote 0x98faaa4&gt;, saved_game_model=&lt;gtk.ListStore at remote 0x98fad24&gt;, sudoku_maker=&lt;SudokuMaker(terminated=False, played=[], batch_siz...(truncated)
+#14 Frame 0x99262ac, for file /usr/lib/python2.6/site-packages/gnome_sudoku/game_selector.py, line 201, in run_swallowed_dialog (self=&lt;NewOrSavedGameSelector(new_game_model=&lt;gtk.ListStore at remote 0x98fab44&gt;, puzzle=None, saved_games=[{'gsd.auto_fills': 0, 'tracking': {}, 'trackers': {}, 'notes': [], 'saved_at': 1270084485, 'game': '7 8 0 0 0 0 0 5 6 0 0 9 0 8 0 1 0 0 0 4 6 0 0 0 0 7 0 6 5 0 0 0 4 7 9 2 0 0 0 9 0 1 0 0 0 3 9 7 6 0 0 0 1 8 0 6 0 0 0 0 2 8 0 0 0 5 0 4 0 6 0 0 2 1 0 0 0 0 0 4 5\n7 8 0 0 0 0 0 5 6 0 0 9 0 8 0 1 0 0 0 4 6 0 0 0 0 7 0 6 5 1 8 3 4 7 9 2 0 0 0 9 0 1 0 0 0 3 9 7 6 0 0 0 1 8 0 6 0 0 0 0 2 8 0 0 0 5 0 4 0 6 0 0 2 1 0 0 0 0 0 4 5', 'gsd.impossible_hints': 0, 'timer.__absolute_start_time__': &lt;float at remote 0x984b474&gt;, 'gsd.hints': 0, 'timer.active_time': &lt;float at remote 0x984b494&gt;, 'timer.total_time': &lt;float at remote 0x984b464&gt;}], dialog=&lt;gtk.Dialog at remote 0x98faaa4&gt;, saved_game_model=&lt;gtk.ListStore at remote 0x98fad24&gt;, sudoku_maker=&lt;SudokuMaker(terminated=False, played=[], batch_siz...(truncated)
             swallower.run_dialog(self.dialog)
 #19 (unable to read python frame information)
 #23 (unable to read python frame information)
@@ -349,35 +368,39 @@ current thread.</p>
     u = UI()
 #40 Frame 0x948e82c, for file /usr/lib/python2.6/site-packages/gnome_sudoku/gnome_sudoku.py, line 22, in start_game (main=&lt;module at remote 0xb771b7f4&gt;)
     main.start_game()
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The frame numbers correspond to those displayed by GDB’s standard
 <code class="docutils literal notranslate"><span class="pre">backtrace</span></code> command.</p>
-</div></blockquote>
+</div>
+</blockquote>
 </section>
 <section id="py-print">
-<h3><code class="docutils literal notranslate"><span class="pre">py-print</span></code></h3>
+<h3 class="sigil_not_in_toc"><code class="docutils literal notranslate"><span class="pre">py-print</span></code></h3>
 <blockquote>
 <div><p>The <code class="docutils literal notranslate"><span class="pre">py-print</span></code> command looks up a Python name and tries to print it.
 It looks in locals within the current thread, then globals, then finally
 builtins:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>(gdb) py-print self
-local &#39;self&#39; = &lt;SwappableArea(running=&lt;gtk.Dialog at remote 0x98faaa4&gt;,
+local 'self' = &lt;SwappableArea(running=&lt;gtk.Dialog at remote 0x98faaa4&gt;,
 main_page=0) at remote 0x98fa6e4&gt;
 (gdb) py-print __name__
-global &#39;__name__&#39; = &#39;gnome_sudoku.dialog_swallower&#39;
+global '__name__' = 'gnome_sudoku.dialog_swallower'
 (gdb) py-print len
-builtin &#39;len&#39; = &lt;built-in function len&gt;
+builtin 'len' = &lt;built-in function len&gt;
 (gdb) py-print scarlet_pimpernel
-&#39;scarlet_pimpernel&#39; not found
-</pre></div>
+'scarlet_pimpernel' not found
+</pre>
+</div>
 </div>
 <p>If the current C frame corresponds to multiple Python frames, <code class="docutils literal notranslate"><span class="pre">py-print</span></code>
 only considers the first one.</p>
-</div></blockquote>
+</div>
+</blockquote>
 </section>
 <section id="py-locals">
-<h3><code class="docutils literal notranslate"><span class="pre">py-locals</span></code></h3>
+<h3 class="sigil_not_in_toc"><code class="docutils literal notranslate"><span class="pre">py-locals</span></code></h3>
 <blockquote>
 <div><p>The <code class="docutils literal notranslate"><span class="pre">py-locals</span></code> command looks up all Python locals within the current
 Python frame in the selected thread, and prints their representations:</p>
@@ -385,7 +408,8 @@ Python frame in the selected thread, and prints their representations:</p>
 self = &lt;SwappableArea(running=&lt;gtk.Dialog at remote 0x98faaa4&gt;,
 main_page=0) at remote 0x98fa6e4&gt;
 d = &lt;gtk.Dialog at remote 0x98faaa4&gt;
-</pre></div>
+</pre>
+</div>
 </div>
 <p>If the current C frame corresponds to multiple Python frames, locals from
 all of them will be shown:</p>
@@ -403,13 +427,15 @@ n = 4
 Locals for recursive_function
 n = 5
 Locals for &lt;module&gt;
-</pre></div>
+</pre>
 </div>
-</div></blockquote>
+</div>
+</div>
+</blockquote>
 </section>
 </section>
 <section id="use-with-gdb-commands">
-<h2>Use with GDB commands</h2>
+<h2 class="sigil_not_in_toc">Use with GDB commands</h2>
 <p>The extension commands complement GDB’s built-in commands.
 For example, you can use a frame numbers shown by <code class="docutils literal notranslate"><span class="pre">py-bt</span></code> with the <code class="docutils literal notranslate"><span class="pre">frame</span></code>
 command to go a specific frame within the selected thread, like this:</p>
@@ -422,12 +448,13 @@ command to go a specific frame within the selected thread, like this:</p>
 2665                            x = call_function(&amp;sp, oparg);
 (gdb) py-list
 1543        # Run the tests in a context manager that temporary changes the CWD to a
-1544        # temporary and writable directory. If it&#39;s not possible to create or
+1544        # temporary and writable directory. If it's not possible to create or
 1545        # change the CWD, the original CWD will be used. The original CWD is
 1546        # available from test_support.SAVEDCWD.
 1547        with test_support.temp_cwd(TESTCWD, quiet=True):
 &gt;1548            main()
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">info</span> <span class="pre">threads</span></code> command will give you a list of the threads within the
 process, and you can use the <code class="docutils literal notranslate"><span class="pre">thread</span></code> command to select a different one:</p>
@@ -435,7 +462,8 @@ process, and you can use the <code class="docutils literal notranslate"><span cl
   105 Thread 0x7fffefa18710 (LWP 10260)  sem_wait () at ../nptl/sysdeps/unix/sysv/linux/x86_64/sem_wait.S:86
   104 Thread 0x7fffdf5fe710 (LWP 10259)  sem_wait () at ../nptl/sysdeps/unix/sysv/linux/x86_64/sem_wait.S:86
 * 1 Thread 0x7ffff7fe2700 (LWP 10145)  0x00000038e46d73e3 in select () at ../sysdeps/unix/syscall-template.S:82
-</pre></div>
+</pre>
+</div>
 </div>
 <p>You can use <code class="docutils literal notranslate"><span class="pre">thread</span> <span class="pre">apply</span> <span class="pre">all</span> <span class="pre">COMMAND</span></code> or (<code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">a</span> <span class="pre">a</span> <span class="pre">COMMAND</span></code> for short) to run
 a command on all threads.  With <code class="docutils literal notranslate"><span class="pre">py-bt</span></code>, this lets you see what every
@@ -465,9 +493,10 @@ Thread 104 (Thread 0x7fffdf5fe710 (LWP 10259)):
 Thread 1 (Thread 0x7ffff7fe2700 (LWP 10145)):
 #5 Frame 0xcb5380, for file /home/david/coding/python-svn/Lib/test/lock_tests.py, line 16, in _wait ()
     time.sleep(0.01)
-#8 Frame 0x7fffd00024a0, for file /home/david/coding/python-svn/Lib/test/lock_tests.py, line 378, in _check_notify (self=&lt;ConditionTests(_testMethodName=&#39;test_notify&#39;, _resultForDoCleanups=&lt;TestResult(_original_stdout=&lt;cStringIO.StringO at remote 0xc191e0&gt;, skipped=[], _mirrorOutput=False, testsRun=39, buffer=False, _original_stderr=&lt;file at remote 0x7ffff7fc6340&gt;, _stdout_buffer=&lt;cStringIO.StringO at remote 0xc9c7f8&gt;, _stderr_buffer=&lt;cStringIO.StringO at remote 0xc9c790&gt;, _moduleSetUpFailed=False, expectedFailures=[], errors=[], _previousTestClass=&lt;type at remote 0x928310&gt;, unexpectedSuccesses=[], failures=[], shouldStop=False, failfast=False) at remote 0xc185a0&gt;, _threads=(0,), _cleanups=[], _type_equality_funcs={&lt;type at remote 0x7eba00&gt;: &lt;instancemethod at remote 0xd750e0&gt;, &lt;type at remote 0x7e7820&gt;: &lt;instancemethod at remote 0xd75160&gt;, &lt;type at remote 0x7e30e0&gt;: &lt;instancemethod at remote 0xd75060&gt;, &lt;type at remote 0x7e7d20&gt;: &lt;instancemethod at remote 0xd751e0&gt;, &lt;type at remote 0x7f19e0...(truncated)
+#8 Frame 0x7fffd00024a0, for file /home/david/coding/python-svn/Lib/test/lock_tests.py, line 378, in _check_notify (self=&lt;ConditionTests(_testMethodName='test_notify', _resultForDoCleanups=&lt;TestResult(_original_stdout=&lt;cStringIO.StringO at remote 0xc191e0&gt;, skipped=[], _mirrorOutput=False, testsRun=39, buffer=False, _original_stderr=&lt;file at remote 0x7ffff7fc6340&gt;, _stdout_buffer=&lt;cStringIO.StringO at remote 0xc9c7f8&gt;, _stderr_buffer=&lt;cStringIO.StringO at remote 0xc9c790&gt;, _moduleSetUpFailed=False, expectedFailures=[], errors=[], _previousTestClass=&lt;type at remote 0x928310&gt;, unexpectedSuccesses=[], failures=[], shouldStop=False, failfast=False) at remote 0xc185a0&gt;, _threads=(0,), _cleanups=[], _type_equality_funcs={&lt;type at remote 0x7eba00&gt;: &lt;instancemethod at remote 0xd750e0&gt;, &lt;type at remote 0x7e7820&gt;: &lt;instancemethod at remote 0xd75160&gt;, &lt;type at remote 0x7e30e0&gt;: &lt;instancemethod at remote 0xd75060&gt;, &lt;type at remote 0x7e7d20&gt;: &lt;instancemethod at remote 0xd751e0&gt;, &lt;type at remote 0x7f19e0...(truncated)
         _wait()
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 </section>
@@ -478,5 +507,5 @@ Thread 1 (Thread 0x7ffff7fe2700 (LWP 10145)):
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="Python Development Mode" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/library/devmode.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="The Python Development Mode introduces additional runtime checks that are too expensive to be enabled by default. It should not be more verbose than the default if the code is correct; new warnings..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="The Python Development Mode introduces additional runtime checks that are too expensive to be enabled by default. It should not be more verbose than the default if the code is correct; new warnings..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="Python Development Mode"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/library/devmode.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="The Python Development Mode introduces additional runtime checks that are too expensive to be enabled by default. It should not be more verbose than the default if the code is correct; new warnings..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="The Python Development Mode introduces additional runtime checks that are too expensive to be enabled by default. It should not be more verbose than the default if the code is correct; new warnings..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>Python Development Mode</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/library/devmode.html" />
+    <link rel="canonical" href="https://docs.python.org/3/library/devmode.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -55,11 +56,12 @@ detected.</p>
 setting the <span class="target" id="index-0"></span><a class="reference internal" href="../using/cmdline.xhtml#envvar-PYTHONDEVMODE"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONDEVMODE</span></code></a> environment variable to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
 <p>See also <a class="reference internal" href="../using/configure.xhtml#debug-build"><span class="std std-ref">Python debug build</span></a>.</p>
 <section id="effects-of-the-python-development-mode">
-<h2>Effects of the Python Development Mode</h2>
+<h2 class="sigil_not_in_toc">Effects of the Python Development Mode</h2>
 <p>Enabling the Python Development Mode is similar to the following command, but
 with additional effects described below:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">PYTHONMALLOC</span><span class="o">=</span><span class="n">debug</span> <span class="n">PYTHONASYNCIODEBUG</span><span class="o">=</span><span class="mi">1</span> <span class="n">python</span> <span class="o">-</span><span class="n">W</span> <span class="n">default</span> <span class="o">-</span><span class="n">X</span> <span class="n">faulthandler</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Effects of the Python Development Mode:</p>
 <ul>
@@ -136,7 +138,7 @@ and decoding operations.</p>
 </div>
 </section>
 <section id="resourcewarning-example">
-<h2>ResourceWarning Example</h2>
+<h2 class="sigil_not_in_toc">ResourceWarning Example</h2>
 <p>Example of a script counting the number of lines of the text file specified in
 the command line:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
@@ -147,36 +149,40 @@ the command line:</p>
     <span class="nb">print</span><span class="p">(</span><span class="n">nlines</span><span class="p">)</span>
     <span class="c1"># The file is closed implicitly</span>
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
     <span class="n">main</span><span class="p">()</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The script does not close the file explicitly. By default, Python does not emit
 any warning. Example using README.txt, which has 269 lines:</p>
 <div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python<span class="w"> </span>script.py<span class="w"> </span>README.txt
 <span class="go">269</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Enabling the Python Development Mode displays a <a class="reference internal" href="exceptions.xhtml#ResourceWarning" title="ResourceWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ResourceWarning</span></code></a> warning:</p>
 <div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python<span class="w"> </span>-X<span class="w"> </span>dev<span class="w"> </span>script.py<span class="w"> </span>README.txt
 <span class="go">269</span>
-<span class="go">script.py:10: ResourceWarning: unclosed file &lt;_io.TextIOWrapper name=&#39;README.rst&#39; mode=&#39;r&#39; encoding=&#39;UTF-8&#39;&gt;</span>
+<span class="go">script.py:10: ResourceWarning: unclosed file &lt;_io.TextIOWrapper name='README.rst' mode='r' encoding='UTF-8'&gt;</span>
 <span class="go">  main()</span>
 <span class="go">ResourceWarning: Enable tracemalloc to get the object allocation traceback</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>In addition, enabling <a class="reference internal" href="tracemalloc.xhtml#module-tracemalloc" title="tracemalloc: Trace memory allocations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">tracemalloc</span></code></a> shows the line where the file was
 opened:</p>
 <div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python<span class="w"> </span>-X<span class="w"> </span>dev<span class="w"> </span>-X<span class="w"> </span><span class="nv">tracemalloc</span><span class="o">=</span><span class="m">5</span><span class="w"> </span>script.py<span class="w"> </span>README.rst
 <span class="go">269</span>
-<span class="go">script.py:10: ResourceWarning: unclosed file &lt;_io.TextIOWrapper name=&#39;README.rst&#39; mode=&#39;r&#39; encoding=&#39;UTF-8&#39;&gt;</span>
+<span class="go">script.py:10: ResourceWarning: unclosed file &lt;_io.TextIOWrapper name='README.rst' mode='r' encoding='UTF-8'&gt;</span>
 <span class="go">  main()</span>
 <span class="go">Object allocated at (most recent call last):</span>
-<span class="go">  File &quot;script.py&quot;, lineno 10</span>
+<span class="go">  File "script.py", lineno 10</span>
 <span class="go">    main()</span>
-<span class="go">  File &quot;script.py&quot;, lineno 4</span>
+<span class="go">  File "script.py", lineno 4</span>
 <span class="go">    fp = open(sys.argv[1])</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The fix is to close explicitly the file. Example using a context manager:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
@@ -184,7 +190,8 @@ opened:</p>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
         <span class="n">nlines</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">fp</span><span class="o">.</span><span class="n">readlines</span><span class="p">())</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">nlines</span><span class="p">)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Not closing a resource explicitly can leave a resource open for way longer than
 expected; it can cause severe issues upon exiting Python. It is bad in
@@ -192,7 +199,7 @@ CPython, but it is even worse in PyPy. Closing resources explicitly makes an
 application more deterministic and more reliable.</p>
 </section>
 <section id="bad-file-descriptor-error-example">
-<h2>Bad file descriptor error example</h2>
+<h2 class="sigil_not_in_toc">Bad file descriptor error example</h2>
 <p>Script displaying the first line of itself:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
@@ -204,31 +211,34 @@ application more deterministic and more reliable.</p>
     <span class="c1"># The file is closed implicitly</span>
 
 <span class="n">main</span><span class="p">()</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>By default, Python does not emit any warning:</p>
 <div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python<span class="w"> </span>script.py
 <span class="go">import os</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The Python Development Mode shows a <a class="reference internal" href="exceptions.xhtml#ResourceWarning" title="ResourceWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ResourceWarning</span></code></a> and logs a “Bad file
 descriptor” error when finalizing the file object:</p>
 <div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python<span class="w"> </span>-X<span class="w"> </span>dev<span class="w"> </span>script.py
 <span class="go">import os</span>
-<span class="go">script.py:10: ResourceWarning: unclosed file &lt;_io.TextIOWrapper name=&#39;script.py&#39; mode=&#39;r&#39; encoding=&#39;UTF-8&#39;&gt;</span>
+<span class="go">script.py:10: ResourceWarning: unclosed file &lt;_io.TextIOWrapper name='script.py' mode='r' encoding='UTF-8'&gt;</span>
 <span class="go">  main()</span>
 <span class="go">ResourceWarning: Enable tracemalloc to get the object allocation traceback</span>
-<span class="go">Exception ignored in: &lt;_io.TextIOWrapper name=&#39;script.py&#39; mode=&#39;r&#39; encoding=&#39;UTF-8&#39;&gt;</span>
+<span class="go">Exception ignored in: &lt;_io.TextIOWrapper name='script.py' mode='r' encoding='UTF-8'&gt;</span>
 <span class="go">Traceback (most recent call last):</span>
-<span class="go">  File &quot;script.py&quot;, line 10, in &lt;module&gt;</span>
+<span class="go">  File "script.py", line 10, in &lt;module&gt;</span>
 <span class="go">    main()</span>
 <span class="go">OSError: [Errno 9] Bad file descriptor</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">os.close(fp.fileno())</span></code> closes the file descriptor. When the file object
 finalizer tries to close the file descriptor again, it fails with the <code class="docutils literal notranslate"><span class="pre">Bad</span>
 <span class="pre">file</span> <span class="pre">descriptor</span></code> error. A file descriptor must be closed only once. In the
-worst case scenario, closing it twice can lead to a crash (see <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=18748">bpo-18748</a><span class="link-target"> [https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=18748]</span>
+worst case scenario, closing it twice can lead to a crash (see <a class="reference external" href="https://bugs.python.org/issue?@action=redirect&amp;bpo=18748">bpo-18748</a><span class="link-target"> [https://bugs.python.org/issue?@action=redirect&amp;bpo=18748]</span>
 for an example).</p>
 <p>The fix is to remove the <code class="docutils literal notranslate"><span class="pre">os.close(fp.fileno())</span></code> line, or open the file with
 <code class="docutils literal notranslate"><span class="pre">closefd=False</span></code>.</p>
@@ -241,5 +251,5 @@ for an example).</p>
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

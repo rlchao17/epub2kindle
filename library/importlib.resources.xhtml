@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="importlib.resources – Package resource reading, opening and access" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/library/importlib.resources.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="Source code: Lib/importlib/resources/__init__.py[https://github.com/python/cpython/tree/3.13/Lib/importlib/resources/__init__.py] This module leverages Python’s import system to provide access to r..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="Source code: Lib/importlib/resources/__init__.py[https://github.com/python/cpython/tree/3.13/Lib/importlib/resources/__init__.py] This module leverages Python’s import system to provide access to r..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="importlib.resources – Package resource reading, opening and access"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/library/importlib.resources.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="Source code: Lib/importlib/resources/__init__.py[https://github.com/python/cpython/tree/3.13/Lib/importlib/resources/__init__.py] This module leverages Python’s import system to provide access to r..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="Source code: Lib/importlib/resources/__init__.py[https://github.com/python/cpython/tree/3.13/Lib/importlib/resources/__init__.py] This module leverages Python’s import system to provide access to r..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>importlib.resources – Package resource reading, opening and access</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/library/importlib.resources.html" />
+    <link rel="canonical" href="https://docs.python.org/3/library/importlib.resources.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -45,7 +46,7 @@
   <section id="module-importlib.resources">
 <span id="importlib-resources-package-resource-reading-opening-and-access"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">importlib.resources</span></code> – Package resource reading, opening and access</h1>
 <p><strong>Source code:</strong> <a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.13/Lib/importlib/resources/__init__.py">Lib/importlib/resources/__init__.py</a><span class="link-target"> [https://github.com/python/cpython/tree/3.13/Lib/importlib/resources/__init__.py]</span></p>
-<hr class="docutils" />
+<hr class="docutils"/>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
@@ -84,7 +85,8 @@ on <a class="reference external" href="https://importlib-resources.readthedocs.i
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">importlib.resources.</span></span><span class="sig-name descname"><span class="pre">Anchor</span></span></dt>
 <dd><p>Represents an anchor for resources, either a <a class="reference internal" href="types.xhtml#types.ModuleType" title="types.ModuleType"><code class="xref py py-class docutils literal notranslate"><span class="pre">module</span> <span class="pre">object</span></code></a> or a module name as a string. Defined as
 <code class="docutils literal notranslate"><span class="pre">Union[str,</span> <span class="pre">ModuleType]</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="importlib.resources.files">
@@ -109,7 +111,8 @@ a <a class="reference internal" href="exceptions.xhtml#DeprecationWarning" title
 using <code class="docutils literal notranslate"><span class="pre">importlib_resources</span> <span class="pre">&gt;=</span> <span class="pre">5.10</span></code> for a compatible interface
 on older Pythons.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="importlib.resources.as_file">
@@ -129,10 +132,11 @@ the file system is required.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.12: </span>Added support for <em>traversable</em> representing a directory.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <section id="functional-api">
-<span id="importlib-resources-functional"></span><h2>Functional API</h2>
+<span id="importlib-resources-functional"></span><h2 class="sigil_not_in_toc">Functional API</h2>
 <p>A set of simplified, backwards-compatible helpers is available.
 These allow common operations in a single function call.</p>
 <p>For all the following functions:</p>
@@ -143,23 +147,26 @@ Unlike in <code class="docutils literal notranslate"><span class="pre">files</sp
 <li><p><em>path_names</em> are components of a resource’s path name, relative to
 the anchor.
 For example, to get the text of resource named <code class="docutils literal notranslate"><span class="pre">info.txt</span></code>, use:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">importlib</span><span class="o">.</span><span class="n">resources</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">my_module</span><span class="p">,</span> <span class="s2">&quot;info.txt&quot;</span><span class="p">)</span>
-</pre></div>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">importlib</span><span class="o">.</span><span class="n">resources</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">my_module</span><span class="p">,</span> <span class="s2">"info.txt"</span><span class="p">)</span>
+</pre>
+</div>
 </div>
 <p>Like <a class="reference internal" href="importlib.resources.abc.xhtml#importlib.resources.abc.Traversable" title="importlib.resources.abc.Traversable"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Traversable.joinpath</span></code></a>,
 The individual components should use forward slashes (<code class="docutils literal notranslate"><span class="pre">/</span></code>)
 as path separators.
 For example, the following are equivalent:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">importlib</span><span class="o">.</span><span class="n">resources</span><span class="o">.</span><span class="n">read_binary</span><span class="p">(</span><span class="n">my_module</span><span class="p">,</span> <span class="s2">&quot;pics/painting.png&quot;</span><span class="p">)</span>
-<span class="n">importlib</span><span class="o">.</span><span class="n">resources</span><span class="o">.</span><span class="n">read_binary</span><span class="p">(</span><span class="n">my_module</span><span class="p">,</span> <span class="s2">&quot;pics&quot;</span><span class="p">,</span> <span class="s2">&quot;painting.png&quot;</span><span class="p">)</span>
-</pre></div>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">importlib</span><span class="o">.</span><span class="n">resources</span><span class="o">.</span><span class="n">read_binary</span><span class="p">(</span><span class="n">my_module</span><span class="p">,</span> <span class="s2">"pics/painting.png"</span><span class="p">)</span>
+<span class="n">importlib</span><span class="o">.</span><span class="n">resources</span><span class="o">.</span><span class="n">read_binary</span><span class="p">(</span><span class="n">my_module</span><span class="p">,</span> <span class="s2">"pics"</span><span class="p">,</span> <span class="s2">"painting.png"</span><span class="p">)</span>
+</pre>
+</div>
 </div>
 <p>For backward compatibility reasons, functions that read text require
 an explicit <em>encoding</em> argument if multiple <em>path_names</em> are given.
 For example, to get the text of <code class="docutils literal notranslate"><span class="pre">info/chapter1.txt</span></code>, use:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">importlib</span><span class="o">.</span><span class="n">resources</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">my_module</span><span class="p">,</span> <span class="s2">&quot;info&quot;</span><span class="p">,</span> <span class="s2">&quot;chapter1.txt&quot;</span><span class="p">,</span>
-                              <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-</pre></div>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">importlib</span><span class="o">.</span><span class="n">resources</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">my_module</span><span class="p">,</span> <span class="s2">"info"</span><span class="p">,</span> <span class="s2">"chapter1.txt"</span><span class="p">,</span>
+                              <span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">)</span>
+</pre>
+</div>
 </div>
 </li>
 </ul>
@@ -172,13 +179,15 @@ details on <em>anchor</em> and <em>path_names</em>.</p>
 <p>This function returns a <a class="reference internal" href="typing.xhtml#typing.BinaryIO" title="typing.BinaryIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">BinaryIO</span></code></a> object,
 that is, a binary stream open for reading.</p>
 <p>This function is roughly equivalent to:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">files</span><span class="p">(</span><span class="n">anchor</span><span class="p">)</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="o">*</span><span class="n">path_names</span><span class="p">)</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;rb&#39;</span><span class="p">)</span>
-</pre></div>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">files</span><span class="p">(</span><span class="n">anchor</span><span class="p">)</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="o">*</span><span class="n">path_names</span><span class="p">)</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">'rb'</span><span class="p">)</span>
+</pre>
+</div>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.13: </span>Multiple <em>path_names</em> are accepted.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="importlib.resources.open_text">
@@ -194,14 +203,16 @@ This limitation is scheduled to be removed in Python 3.15.</p>
 <p>This function returns a <a class="reference internal" href="typing.xhtml#typing.TextIO" title="typing.TextIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">TextIO</span></code></a> object,
 that is, a text stream open for reading.</p>
 <p>This function is roughly equivalent to:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">files</span><span class="p">(</span><span class="n">anchor</span><span class="p">)</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="o">*</span><span class="n">path_names</span><span class="p">)</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">)</span>
-</pre></div>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">files</span><span class="p">(</span><span class="n">anchor</span><span class="p">)</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="o">*</span><span class="n">path_names</span><span class="p">)</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">'r'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">)</span>
+</pre>
+</div>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.13: </span>Multiple <em>path_names</em> are accepted.
 <em>encoding</em> and <em>errors</em> must be given as keyword arguments.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="importlib.resources.read_binary">
@@ -211,12 +222,14 @@ that is, a text stream open for reading.</p>
 details on <em>anchor</em> and <em>path_names</em>.</p>
 <p>This function is roughly equivalent to:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">files</span><span class="p">(</span><span class="n">anchor</span><span class="p">)</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="o">*</span><span class="n">path_names</span><span class="p">)</span><span class="o">.</span><span class="n">read_bytes</span><span class="p">()</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.13: </span>Multiple <em>path_names</em> are accepted.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="importlib.resources.read_text">
@@ -231,13 +244,15 @@ explicitly if there are multiple <em>path_names</em>.
 This limitation is scheduled to be removed in Python 3.15.</p>
 <p>This function is roughly equivalent to:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">files</span><span class="p">(</span><span class="n">anchor</span><span class="p">)</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="o">*</span><span class="n">path_names</span><span class="p">)</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.13: </span>Multiple <em>path_names</em> are accepted.
 <em>encoding</em> and <em>errors</em> must be given as keyword arguments.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="importlib.resources.path">
@@ -249,21 +264,24 @@ The context manager provides a <a class="reference internal" href="pathlib.xhtml
 when the resource needs to be extracted from a zip file.</p>
 <p>For example, the <a class="reference internal" href="pathlib.xhtml#pathlib.Path.stat" title="pathlib.Path.stat"><code class="xref py py-meth docutils literal notranslate"><span class="pre">stat()</span></code></a> method requires
 an actual file system path; it can be used like this:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">importlib</span><span class="o">.</span><span class="n">resources</span><span class="o">.</span><span class="n">path</span><span class="p">(</span><span class="n">anchor</span><span class="p">,</span> <span class="s2">&quot;resource.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fspath</span><span class="p">:</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">importlib</span><span class="o">.</span><span class="n">resources</span><span class="o">.</span><span class="n">path</span><span class="p">(</span><span class="n">anchor</span><span class="p">,</span> <span class="s2">"resource.txt"</span><span class="p">)</span> <span class="k">as</span> <span class="n">fspath</span><span class="p">:</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">fspath</span><span class="o">.</span><span class="n">stat</span><span class="p">()</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>See <a class="reference internal" href="#importlib-resources-functional"><span class="std std-ref">the introduction</span></a> for
 details on <em>anchor</em> and <em>path_names</em>.</p>
 <p>This function is roughly equivalent to:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">as_file</span><span class="p">(</span><span class="n">files</span><span class="p">(</span><span class="n">anchor</span><span class="p">)</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="o">*</span><span class="n">path_names</span><span class="p">))</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.13: </span>Multiple <em>path_names</em> are accepted.
 <em>encoding</em> and <em>errors</em> must be given as keyword arguments.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="importlib.resources.is_resource">
@@ -274,12 +292,14 @@ This function does not consider directories to be resources.</p>
 details on <em>anchor</em> and <em>path_names</em>.</p>
 <p>This function is roughly equivalent to:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">files</span><span class="p">(</span><span class="n">anchor</span><span class="p">)</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="o">*</span><span class="n">path_names</span><span class="p">)</span><span class="o">.</span><span class="n">is_file</span><span class="p">()</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.13: </span>Multiple <em>path_names</em> are accepted.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="importlib.resources.contents">
@@ -293,13 +313,15 @@ details on <em>anchor</em> and <em>path_names</em>.</p>
 <p>This function is roughly equivalent to:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">resource</span> <span class="ow">in</span> <span class="n">files</span><span class="p">(</span><span class="n">anchor</span><span class="p">)</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="o">*</span><span class="n">path_names</span><span class="p">)</span><span class="o">.</span><span class="n">iterdir</span><span class="p">():</span>
     <span class="k">yield</span> <span class="n">resource</span><span class="o">.</span><span class="n">name</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 3.11: </span>Prefer <code class="docutils literal notranslate"><span class="pre">iterdir()</span></code> as above, which offers more control over the
 results and richer functionality.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 </section>
@@ -310,5 +332,5 @@ results and richer functionality.</p>
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

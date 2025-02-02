@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="contextvars — Context Variables" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/library/contextvars.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="This module provides APIs to manage, store, and access context-local state. The ContextVar class is used to declare and work with Context Variables. The copy_context() function and the Context clas..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="This module provides APIs to manage, store, and access context-local state. The ContextVar class is used to declare and work with Context Variables. The copy_context() function and the Context clas..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="contextvars — Context Variables"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/library/contextvars.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="This module provides APIs to manage, store, and access context-local state. The ContextVar class is used to declare and work with Context Variables. The copy_context() function and the Context clas..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="This module provides APIs to manage, store, and access context-local state. The ContextVar class is used to declare and work with Context Variables. The copy_context() function and the Context clas..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>contextvars — Context Variables</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/library/contextvars.html" />
+    <link rel="canonical" href="https://docs.python.org/3/library/contextvars.html"/>
     
       
     
@@ -35,16 +37,15 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
             
   <section id="module-contextvars">
 <span id="contextvars-context-variables"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">contextvars</span></code> — Context Variables</h1>
-<hr class="docutils" />
+<hr class="docutils"/>
 <p>This module provides APIs to manage, store, and access context-local
 state.  The <a class="reference internal" href="#contextvars.ContextVar" title="contextvars.ContextVar"><code class="xref py py-class docutils literal notranslate"><span class="pre">ContextVar</span></code></a> class is used to declare
 and work with <em>Context Variables</em>.  The <a class="reference internal" href="#contextvars.copy_context" title="contextvars.copy_context"><code class="xref py py-func docutils literal notranslate"><span class="pre">copy_context()</span></code></a>
@@ -58,13 +59,14 @@ bleeding to other code unexpectedly, when used in concurrent code.</p>
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
 <section id="context-variables">
-<h2>Context Variables</h2>
+<h2 class="sigil_not_in_toc">Context Variables</h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="contextvars.ContextVar">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">contextvars.</span></span><span class="sig-name descname"><span class="pre">ContextVar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span></em><span class="optional">]</span><span class="sig-paren">)</span></dt>
 <dd><p>This class is used to declare a new Context Variable, e.g.:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">:</span> <span class="n">ContextVar</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">ContextVar</span><span class="p">(</span><span class="s1">&#39;var&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
-</pre></div>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">:</span> <span class="n">ContextVar</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">ContextVar</span><span class="p">(</span><span class="s1">'var'</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</pre>
+</div>
 </div>
 <p>The required <em>name</em> parameter is used for introspection and debug
 purposes.</p>
@@ -82,7 +84,8 @@ from being properly garbage collected.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.1.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="contextvars.ContextVar.get">
@@ -97,7 +100,8 @@ if provided; or</p></li>
 if it was created with one; or</p></li>
 <li><p>raise a <a class="reference internal" href="exceptions.xhtml#LookupError" title="LookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">LookupError</span></code></a>.</p></li>
 </ul>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="contextvars.ContextVar.set">
@@ -109,7 +113,8 @@ variable.</p>
 <p>Returns a <a class="reference internal" href="#contextvars.Token" title="contextvars.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">Token</span></code></a> object that can be used
 to restore the variable to its previous value via the
 <a class="reference internal" href="#contextvars.ContextVar.reset" title="contextvars.ContextVar.reset"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ContextVar.reset()</span></code></a> method.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="contextvars.ContextVar.reset">
@@ -117,19 +122,22 @@ to restore the variable to its previous value via the
 <dd><p>Reset the context variable to the value it had before the
 <a class="reference internal" href="#contextvars.ContextVar.set" title="contextvars.ContextVar.set"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ContextVar.set()</span></code></a> that created the <em>token</em> was used.</p>
 <p>For example:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="n">ContextVar</span><span class="p">(</span><span class="s1">&#39;var&#39;</span><span class="p">)</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="n">ContextVar</span><span class="p">(</span><span class="s1">'var'</span><span class="p">)</span>
 
-<span class="n">token</span> <span class="o">=</span> <span class="n">var</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;new value&#39;</span><span class="p">)</span>
-<span class="c1"># code that uses &#39;var&#39;; var.get() returns &#39;new value&#39;.</span>
+<span class="n">token</span> <span class="o">=</span> <span class="n">var</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">'new value'</span><span class="p">)</span>
+<span class="c1"># code that uses 'var'; var.get() returns 'new value'.</span>
 <span class="n">var</span><span class="o">.</span><span class="n">reset</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
 
 <span class="c1"># After the reset call the var has no value again, so</span>
 <span class="c1"># var.get() would raise a LookupError.</span>
-</pre></div>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="contextvars.Token">
@@ -143,7 +151,8 @@ the value of the variable to what it was before the corresponding
 <span class="sig-name descname"><span class="pre">var</span></span></dt>
 <dd><p>A read-only property.  Points to the <a class="reference internal" href="#contextvars.ContextVar" title="contextvars.ContextVar"><code class="xref py py-class docutils literal notranslate"><span class="pre">ContextVar</span></code></a> object
 that created the token.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="contextvars.Token.old_value">
@@ -152,19 +161,22 @@ that created the token.</p>
 the <a class="reference internal" href="#contextvars.ContextVar.set" title="contextvars.ContextVar.set"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ContextVar.set()</span></code></a> method call that created the token.
 It points to <a class="reference internal" href="#contextvars.Token.MISSING" title="contextvars.Token.MISSING"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Token.MISSING</span></code></a> if the variable was not set
 before the call.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="contextvars.Token.MISSING">
 <span class="sig-name descname"><span class="pre">MISSING</span></span></dt>
 <dd><p>A marker object used by <a class="reference internal" href="#contextvars.Token.old_value" title="contextvars.Token.old_value"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Token.old_value</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="manual-context-management">
-<h2>Manual Context Management</h2>
+<h2 class="sigil_not_in_toc">Manual Context Management</h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="contextvars.copy_context">
 <span class="sig-prename descclassname"><span class="pre">contextvars.</span></span><span class="sig-name descname"><span class="pre">copy_context</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
@@ -173,12 +185,14 @@ before the call.</p>
 all variables and their values that are set in it:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">ctx</span><span class="p">:</span> <span class="n">Context</span> <span class="o">=</span> <span class="n">copy_context</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">items</span><span class="p">()))</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The function has an <em>O</em>(1) complexity, i.e. works equally fast for
 contexts with a few context variables and for contexts that have
 a lot of them.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="contextvars.Context">
@@ -220,50 +234,54 @@ one occurred.</p>
 <p>Example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">contextvars</span>
 
-<span class="n">var</span> <span class="o">=</span> <span class="n">contextvars</span><span class="o">.</span><span class="n">ContextVar</span><span class="p">(</span><span class="s1">&#39;var&#39;</span><span class="p">)</span>
-<span class="n">var</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;spam&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">var</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>  <span class="c1"># &#39;spam&#39;</span>
+<span class="n">var</span> <span class="o">=</span> <span class="n">contextvars</span><span class="o">.</span><span class="n">ContextVar</span><span class="p">(</span><span class="s1">'var'</span><span class="p">)</span>
+<span class="n">var</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">'spam'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">var</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>  <span class="c1"># 'spam'</span>
 
 <span class="n">ctx</span> <span class="o">=</span> <span class="n">contextvars</span><span class="o">.</span><span class="n">copy_context</span><span class="p">()</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
-    <span class="c1"># &#39;var&#39; was set to &#39;spam&#39; before</span>
-    <span class="c1"># calling &#39;copy_context()&#39; and &#39;ctx.run(main)&#39;, so:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">var</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>  <span class="c1"># &#39;spam&#39;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="p">[</span><span class="n">var</span><span class="p">])</span>  <span class="c1"># &#39;spam&#39;</span>
+    <span class="c1"># 'var' was set to 'spam' before</span>
+    <span class="c1"># calling 'copy_context()' and 'ctx.run(main)', so:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">var</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>  <span class="c1"># 'spam'</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="p">[</span><span class="n">var</span><span class="p">])</span>  <span class="c1"># 'spam'</span>
 
-    <span class="n">var</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;ham&#39;</span><span class="p">)</span>
+    <span class="n">var</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">'ham'</span><span class="p">)</span>
 
-    <span class="c1"># Now, after setting &#39;var&#39; to &#39;ham&#39;:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">var</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>  <span class="c1"># &#39;ham&#39;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="p">[</span><span class="n">var</span><span class="p">])</span>  <span class="c1"># &#39;ham&#39;</span>
+    <span class="c1"># Now, after setting 'var' to 'ham':</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">var</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>  <span class="c1"># 'ham'</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="p">[</span><span class="n">var</span><span class="p">])</span>  <span class="c1"># 'ham'</span>
 
-<span class="c1"># Any changes that the &#39;main&#39; function makes to &#39;var&#39;</span>
-<span class="c1"># will be contained in &#39;ctx&#39;.</span>
+<span class="c1"># Any changes that the 'main' function makes to 'var'</span>
+<span class="c1"># will be contained in 'ctx'.</span>
 <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">)</span>
 
-<span class="c1"># The &#39;main()&#39; function was run in the &#39;ctx&#39; context,</span>
-<span class="c1"># so changes to &#39;var&#39; are contained in it:</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="p">[</span><span class="n">var</span><span class="p">])</span>  <span class="c1"># &#39;ham&#39;</span>
+<span class="c1"># The 'main()' function was run in the 'ctx' context,</span>
+<span class="c1"># so changes to 'var' are contained in it:</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="p">[</span><span class="n">var</span><span class="p">])</span>  <span class="c1"># 'ham'</span>
 
-<span class="c1"># However, outside of &#39;ctx&#39;, &#39;var&#39; is still set to &#39;spam&#39;:</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">var</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>  <span class="c1"># &#39;spam&#39;</span>
-</pre></div>
+<span class="c1"># However, outside of 'ctx', 'var' is still set to 'spam':</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">var</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>  <span class="c1"># 'spam'</span>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="contextvars.Context.copy">
 <span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Return a shallow copy of the context object.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="describe">
 <dt class="sig sig-object">
 <span class="sig-name descname"><span class="pre">var</span> <span class="pre">in</span> <span class="pre">context</span></span></dt>
 <dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the <em>context</em> has a value for <em>var</em> set;
 return <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="describe">
 <dt class="sig sig-object">
@@ -271,7 +289,8 @@ return <code class="docutils literal notranslate"><span class="pre">False</span>
 <dd><p>Return the value of the <em>var</em> <a class="reference internal" href="#contextvars.ContextVar" title="contextvars.ContextVar"><code class="xref py py-class docutils literal notranslate"><span class="pre">ContextVar</span></code></a> variable.
 If the variable is not set in the context object, a
 <a class="reference internal" href="exceptions.xhtml#KeyError" title="KeyError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyError</span></code></a> is raised.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="contextvars.Context.get">
@@ -279,45 +298,52 @@ If the variable is not set in the context object, a
 <dd><p>Return the value for <em>var</em> if <em>var</em> has the value in the context
 object.  Return <em>default</em> otherwise.  If <em>default</em> is not given,
 return <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="describe">
 <dt class="sig sig-object">
 <span class="sig-name descname"><span class="pre">iter(context)</span></span></dt>
 <dd><p>Return an iterator over the variables stored in the context
 object.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="describe">
 <dt class="sig sig-object">
 <span class="sig-name descname"><span class="pre">len(proxy)</span></span></dt>
 <dd><p>Return the number of variables set in the context object.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="contextvars.Context.keys">
 <span class="sig-name descname"><span class="pre">keys</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Return a list of all variables in the context object.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="contextvars.Context.values">
 <span class="sig-name descname"><span class="pre">values</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Return a list of all variables’ values in the context object.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="contextvars.Context.items">
 <span class="sig-name descname"><span class="pre">items</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Return a list of 2-tuples containing all variables and their
 values in the context object.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="asyncio-support">
-<h2>asyncio support</h2>
+<h2 class="sigil_not_in_toc">asyncio support</h2>
 <p>Context variables are natively supported in <a class="reference internal" href="asyncio.xhtml#module-asyncio" title="asyncio: Asynchronous I/O."><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code></a> and are
 ready to be used without any extra configuration.  For example, here
 is a simple echo server, that uses a context variable to make the
@@ -326,21 +352,21 @@ client:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">contextvars</span>
 
-<span class="n">client_addr_var</span> <span class="o">=</span> <span class="n">contextvars</span><span class="o">.</span><span class="n">ContextVar</span><span class="p">(</span><span class="s1">&#39;client_addr&#39;</span><span class="p">)</span>
+<span class="n">client_addr_var</span> <span class="o">=</span> <span class="n">contextvars</span><span class="o">.</span><span class="n">ContextVar</span><span class="p">(</span><span class="s1">'client_addr'</span><span class="p">)</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">render_goodbye</span><span class="p">():</span>
     <span class="c1"># The address of the currently handled client can be accessed</span>
     <span class="c1"># without passing it explicitly to this function.</span>
 
     <span class="n">client_addr</span> <span class="o">=</span> <span class="n">client_addr_var</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;Good bye, client @ </span><span class="si">{</span><span class="n">client_addr</span><span class="si">}</span><span class="se">\r\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s1">'Good bye, client @ </span><span class="si">{</span><span class="n">client_addr</span><span class="si">}</span><span class="se">\r\n</span><span class="s1">'</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
 
 <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">handle_request</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="n">writer</span><span class="p">):</span>
-    <span class="n">addr</span> <span class="o">=</span> <span class="n">writer</span><span class="o">.</span><span class="n">transport</span><span class="o">.</span><span class="n">get_extra_info</span><span class="p">(</span><span class="s1">&#39;socket&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">getpeername</span><span class="p">()</span>
+    <span class="n">addr</span> <span class="o">=</span> <span class="n">writer</span><span class="o">.</span><span class="n">transport</span><span class="o">.</span><span class="n">get_extra_info</span><span class="p">(</span><span class="s1">'socket'</span><span class="p">)</span><span class="o">.</span><span class="n">getpeername</span><span class="p">()</span>
     <span class="n">client_addr_var</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">addr</span><span class="p">)</span>
 
     <span class="c1"># In any code that we call is now possible to get</span>
-    <span class="c1"># client&#39;s address by calling &#39;client_addr_var.get()&#39;.</span>
+    <span class="c1"># client's address by calling 'client_addr_var.get()'.</span>
 
     <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
         <span class="n">line</span> <span class="o">=</span> <span class="k">await</span> <span class="n">reader</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
@@ -348,14 +374,14 @@ client:</p>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">():</span>
             <span class="k">break</span>
 
-    <span class="n">writer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;HTTP/1.1 200 OK</span><span class="se">\r\n</span><span class="s1">&#39;</span><span class="p">)</span>  <span class="c1"># status line</span>
-    <span class="n">writer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\r\n</span><span class="s1">&#39;</span><span class="p">)</span>  <span class="c1"># headers</span>
+    <span class="n">writer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s1">'HTTP/1.1 200 OK</span><span class="se">\r\n</span><span class="s1">'</span><span class="p">)</span>  <span class="c1"># status line</span>
+    <span class="n">writer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s1">'</span><span class="se">\r\n</span><span class="s1">'</span><span class="p">)</span>  <span class="c1"># headers</span>
     <span class="n">writer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">render_goodbye</span><span class="p">())</span>  <span class="c1"># body</span>
     <span class="n">writer</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
 <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
     <span class="n">srv</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">start_server</span><span class="p">(</span>
-        <span class="n">handle_request</span><span class="p">,</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="mi">8081</span><span class="p">)</span>
+        <span class="n">handle_request</span><span class="p">,</span> <span class="s1">'127.0.0.1'</span><span class="p">,</span> <span class="mi">8081</span><span class="p">)</span>
 
     <span class="k">async</span> <span class="k">with</span> <span class="n">srv</span><span class="p">:</span>
         <span class="k">await</span> <span class="n">srv</span><span class="o">.</span><span class="n">serve_forever</span><span class="p">()</span>
@@ -365,7 +391,8 @@ client:</p>
 <span class="c1"># To test it you can use telnet or curl:</span>
 <span class="c1">#     telnet 127.0.0.1 8081</span>
 <span class="c1">#     curl 127.0.0.1:8081</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 </section>
@@ -376,5 +403,5 @@ client:</p>
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

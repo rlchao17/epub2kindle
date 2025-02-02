@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="PyTime C API" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/c-api/time.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="The clock C API provides access to system clocks. It is similar to the Python time module. For C API related to the datetime module, see DateTime Objects. Types: Clock Functions: The following func..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="The clock C API provides access to system clocks. It is similar to the Python time module. For C API related to the datetime module, see DateTime Objects. Types: Clock Functions: The following func..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="PyTime C API"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/c-api/time.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="The clock C API provides access to system clocks. It is similar to the Python time module. For C API related to the datetime module, see DateTime Objects. Types: Clock Functions: The following func..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="The clock C API provides access to system clocks. It is similar to the Python time module. For C API related to the datetime module, see DateTime Objects. Types: Clock Functions: The following func..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>PyTime C API</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/c-api/time.html" />
+    <link rel="canonical" href="https://docs.python.org/3/c-api/time.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -51,10 +52,10 @@
 It is similar to the Python <a class="reference internal" href="../library/time.xhtml#module-time" title="time: Time access and conversions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a> module.</p>
 <p>For C API related to the <a class="reference internal" href="../library/datetime.xhtml#module-datetime" title="datetime: Basic date and time types."><code class="xref py py-mod docutils literal notranslate"><span class="pre">datetime</span></code></a> module, see <a class="reference internal" href="datetime.xhtml#datetimeobjects"><span class="std std-ref">DateTime Objects</span></a>.</p>
 <section id="types">
-<h2>Types</h2>
+<h2 class="sigil_not_in_toc">Types</h2>
 <dl class="c type">
 <dt class="sig sig-object c" id="c.PyTime_t">
-<span class="k"><span class="pre">type</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyTime_t</span></span></span><br /></dt>
+<span class="k"><span class="pre">type</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyTime_t</span></span></span><br/></dt>
 <dd><p>A timestamp or duration in nanoseconds, represented as a signed 64-bit
 integer.</p>
 <p>The reference point for timestamps depends on the clock used. For example,
@@ -63,23 +64,26 @@ integer.</p>
 Using the Unix epoch (January 1st, 1970) as reference, the supported date
 range is around [1677-09-21; 2262-04-11].
 The exact limits are exposed as constants:</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="c var">
 <dt class="sig sig-object c" id="c.PyTime_MIN">
-<a class="reference internal" href="#c.PyTime_t" title="PyTime_t"><span class="n"><span class="pre">PyTime_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyTime_MIN</span></span></span><br /></dt>
+<a class="reference internal" href="#c.PyTime_t" title="PyTime_t"><span class="n"><span class="pre">PyTime_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyTime_MIN</span></span></span><br/></dt>
 <dd><p>Minimum value of <a class="reference internal" href="#c.PyTime_t" title="PyTime_t"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyTime_t</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="c var">
 <dt class="sig sig-object c" id="c.PyTime_MAX">
-<a class="reference internal" href="#c.PyTime_t" title="PyTime_t"><span class="n"><span class="pre">PyTime_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyTime_MAX</span></span></span><br /></dt>
+<a class="reference internal" href="#c.PyTime_t" title="PyTime_t"><span class="n"><span class="pre">PyTime_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyTime_MAX</span></span></span><br/></dt>
 <dd><p>Maximum value of <a class="reference internal" href="#c.PyTime_t" title="PyTime_t"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyTime_t</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="clock-functions">
-<h2>Clock Functions</h2>
+<h2 class="sigil_not_in_toc">Clock Functions</h2>
 <p>The following functions take a pointer to a <span class="c-expr sig sig-inline c"><a class="reference internal" href="#c.PyTime_t" title="PyTime_t"><span class="n">PyTime_t</span></a></span> that they
 set to the value of a particular clock.
 Details of each clock are given in the documentation of the corresponding
@@ -95,28 +99,31 @@ system time.)</p>
 with the <a class="reference internal" href="../glossary.xhtml#term-GIL"><span class="xref std std-term">GIL</span></a> held.</p>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyTime_Monotonic">
-<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyTime_Monotonic</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTime_t" title="PyTime_t"><span class="n"><span class="pre">PyTime_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><br /></dt>
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyTime_Monotonic</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTime_t" title="PyTime_t"><span class="n"><span class="pre">PyTime_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><br/></dt>
 <dd><p>Read the monotonic clock.
 See <a class="reference internal" href="../library/time.xhtml#time.monotonic" title="time.monotonic"><code class="xref py py-func docutils literal notranslate"><span class="pre">time.monotonic()</span></code></a> for important details on this clock.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyTime_PerfCounter">
-<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyTime_PerfCounter</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTime_t" title="PyTime_t"><span class="n"><span class="pre">PyTime_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><br /></dt>
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyTime_PerfCounter</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTime_t" title="PyTime_t"><span class="n"><span class="pre">PyTime_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><br/></dt>
 <dd><p>Read the performance counter.
 See <a class="reference internal" href="../library/time.xhtml#time.perf_counter" title="time.perf_counter"><code class="xref py py-func docutils literal notranslate"><span class="pre">time.perf_counter()</span></code></a> for important details on this clock.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyTime_Time">
-<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyTime_Time</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTime_t" title="PyTime_t"><span class="n"><span class="pre">PyTime_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><br /></dt>
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyTime_Time</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTime_t" title="PyTime_t"><span class="n"><span class="pre">PyTime_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><br/></dt>
 <dd><p>Read the “wall clock” time.
 See <a class="reference internal" href="../library/time.xhtml#time.time" title="time.time"><code class="xref py py-func docutils literal notranslate"><span class="pre">time.time()</span></code></a> for details important on this clock.</p>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="raw-clock-functions">
-<h2>Raw Clock Functions</h2>
+<h2 class="sigil_not_in_toc">Raw Clock Functions</h2>
 <p>Similar to clock functions, but don’t set an exception on error and don’t
 require the caller to hold the GIL.</p>
 <p>On success, the functions return <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
@@ -126,35 +133,39 @@ regular (non-<code class="docutils literal notranslate"><span class="pre">Raw</s
 the <code class="docutils literal notranslate"><span class="pre">Raw</span></code> one failed.</p>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyTime_MonotonicRaw">
-<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyTime_MonotonicRaw</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTime_t" title="PyTime_t"><span class="n"><span class="pre">PyTime_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><br /></dt>
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyTime_MonotonicRaw</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTime_t" title="PyTime_t"><span class="n"><span class="pre">PyTime_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><br/></dt>
 <dd><p>Similar to <a class="reference internal" href="#c.PyTime_Monotonic" title="PyTime_Monotonic"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyTime_Monotonic()</span></code></a>,
 but don’t set an exception on error and don’t require holding the GIL.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyTime_PerfCounterRaw">
-<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyTime_PerfCounterRaw</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTime_t" title="PyTime_t"><span class="n"><span class="pre">PyTime_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><br /></dt>
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyTime_PerfCounterRaw</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTime_t" title="PyTime_t"><span class="n"><span class="pre">PyTime_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><br/></dt>
 <dd><p>Similar to <a class="reference internal" href="#c.PyTime_PerfCounter" title="PyTime_PerfCounter"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyTime_PerfCounter()</span></code></a>,
 but don’t set an exception on error and don’t require holding the GIL.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyTime_TimeRaw">
-<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyTime_TimeRaw</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTime_t" title="PyTime_t"><span class="n"><span class="pre">PyTime_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><br /></dt>
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyTime_TimeRaw</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTime_t" title="PyTime_t"><span class="n"><span class="pre">PyTime_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><br/></dt>
 <dd><p>Similar to <a class="reference internal" href="#c.PyTime_Time" title="PyTime_Time"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyTime_Time()</span></code></a>,
 but don’t set an exception on error and don’t require holding the GIL.</p>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="conversion-functions">
-<h2>Conversion functions</h2>
+<h2 class="sigil_not_in_toc">Conversion functions</h2>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyTime_AsSecondsDouble">
-<span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyTime_AsSecondsDouble</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTime_t" title="PyTime_t"><span class="n"><span class="pre">PyTime_t</span></span></a><span class="w"> </span><span class="n"><span class="pre">t</span></span><span class="sig-paren">)</span><br /></dt>
+<span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyTime_AsSecondsDouble</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTime_t" title="PyTime_t"><span class="n"><span class="pre">PyTime_t</span></span></a><span class="w"> </span><span class="n"><span class="pre">t</span></span><span class="sig-paren">)</span><br/></dt>
 <dd><p>Convert a timestamp to a number of seconds as a C <span class="c-expr sig sig-inline c"><span class="kt">double</span></span>.</p>
 <p>The function cannot fail, but note that <span class="c-expr sig sig-inline c"><span class="kt">double</span></span> has limited
 accuracy for large values.</p>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 </section>
@@ -165,5 +176,5 @@ accuracy for large values.</p>
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

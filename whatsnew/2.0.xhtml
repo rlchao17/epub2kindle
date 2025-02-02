@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="What’s New in Python 2.0" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/whatsnew/2.0.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="Author, A.M. Kuchling and Moshe Zadka,. Introduction: A new release of Python, version 2.0, was released on October 16, 2000. This article covers the exciting new features in 2.0, highlights some o..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="Author, A.M. Kuchling and Moshe Zadka,. Introduction: A new release of Python, version 2.0, was released on October 16, 2000. This article covers the exciting new features in 2.0, highlights some o..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="What’s New in Python 2.0"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/whatsnew/2.0.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="Author, A.M. Kuchling and Moshe Zadka,. Introduction: A new release of Python, version 2.0, was released on October 16, 2000. This article covers the exciting new features in 2.0, highlights some o..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="Author, A.M. Kuchling and Moshe Zadka,. Introduction: A new release of Python, version 2.0, was released on October 16, 2000. This article covers the exciting new features in 2.0, highlights some o..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>What’s New in Python 2.0</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/whatsnew/2.0.html" />
+    <link rel="canonical" href="https://docs.python.org/3/whatsnew/2.0.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -50,7 +51,7 @@
 </dd>
 </dl>
 <section id="introduction">
-<h2>Introduction</h2>
+<h2 class="sigil_not_in_toc">Introduction</h2>
 <p>A new release of Python, version 2.0, was released on October 16, 2000. This
 article covers the exciting new features in 2.0, highlights some other useful
 changes, and points out a few incompatible changes that may require rewriting
@@ -65,7 +66,7 @@ paid to spend their days fixing bugs, and also due to the improved communication
 resulting  from moving to SourceForge.</p>
 </section>
 <section id="what-about-python-1-6">
-<h2>What About Python 1.6?</h2>
+<h2 class="sigil_not_in_toc">What About Python 1.6?</h2>
 <p>Python 1.6 can be thought of as the Contractual Obligations Python release.
 After the core development team left CNRI in May 2000, CNRI requested that a 1.6
 release be created, containing all the work on Python that had been performed at
@@ -84,7 +85,7 @@ features described in this document are only in 2.0, because a lot of work was
 done between May and September.</p>
 </section>
 <section id="new-development-process">
-<h2>New Development Process</h2>
+<h2 class="sigil_not_in_toc">New Development Process</h2>
 <p>The most important change in Python 2.0 may not be to the code at all, but to
 how Python is developed: in May 2000 the Python developers began using the tools
 made available by SourceForge for storing  source code, tracking bug reports,
@@ -147,7 +148,8 @@ and a rationale for the feature.</p>
 collecting community input on an issue, and for documenting the design decisions
 that have gone into Python.  The PEP author is responsible for building
 consensus within the community and documenting dissenting opinions.</p>
-</div></blockquote>
+</div>
+</blockquote>
 <p>Read the rest of <span class="target" id="index-1"></span><a class="pep reference external" href="https://peps.python.org/pep-0001/"><strong>PEP 1</strong></a><span class="link-target"> [https://peps.python.org/pep-0001/]</span> for the details of the PEP editorial process, style, and
 format.  PEPs are kept in the Python CVS tree on SourceForge, though they’re not
 part of the Python 2.0 distribution, and are also available in HTML form from
@@ -156,7 +158,7 @@ from <span class="target" id="index-2"></span><a class="pep reference external" 
 Operators”.</p>
 </section>
 <section id="unicode">
-<h2>Unicode</h2>
+<h2 class="sigil_not_in_toc">Unicode</h2>
 <p>The largest new feature in Python 2.0 is a new fundamental data type: Unicode
 strings.  Unicode uses 16-bit numbers to represent characters instead of the
 8-bit number used by ASCII, meaning that 65,536 distinct characters can be
@@ -167,7 +169,7 @@ Marc-André Lemburg, based on a Unicode string type implementation by Fredrik
 Lundh.  A detailed explanation of the interface was written up as <span class="target" id="index-3"></span><a class="pep reference external" href="https://peps.python.org/pep-0100/"><strong>PEP 100</strong></a><span class="link-target"> [https://peps.python.org/pep-0100/]</span>,
 “Python Unicode Integration”. This article will simply cover the most
 significant points about the Unicode interfaces.</p>
-<p>In Python source code, Unicode strings are written as <code class="docutils literal notranslate"><span class="pre">u&quot;string&quot;</span></code>.  Arbitrary
+<p>In Python source code, Unicode strings are written as <code class="docutils literal notranslate"><span class="pre">u"string"</span></code>.  Arbitrary
 Unicode characters can be written using a new escape sequence, <code class="samp docutils literal notranslate"><span class="pre">\u</span><em><span class="pre">HHHH</span></em></code>, where
 <em>HHHH</em> is a 4-digit hexadecimal number from 0000 to FFFF.  The existing
 <code class="samp docutils literal notranslate"><span class="pre">\x</span><em><span class="pre">HH</span></em></code> escape sequence can also be used, and octal escapes can be used for
@@ -235,21 +237,23 @@ strings, translating them to the given encoding on output.</p></li>
 it as UTF-8:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">codecs</span>
 
-<span class="n">unistr</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="se">\u0660\u2000</span><span class="s1">ab ...&#39;</span>
+<span class="n">unistr</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">'</span><span class="se">\u0660\u2000</span><span class="s1">ab ...'</span>
 
 <span class="p">(</span><span class="n">UTF8_encode</span><span class="p">,</span> <span class="n">UTF8_decode</span><span class="p">,</span>
- <span class="n">UTF8_streamreader</span><span class="p">,</span> <span class="n">UTF8_streamwriter</span><span class="p">)</span> <span class="o">=</span> <span class="n">codecs</span><span class="o">.</span><span class="n">lookup</span><span class="p">(</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span>
+ <span class="n">UTF8_streamreader</span><span class="p">,</span> <span class="n">UTF8_streamwriter</span><span class="p">)</span> <span class="o">=</span> <span class="n">codecs</span><span class="o">.</span><span class="n">lookup</span><span class="p">(</span><span class="s1">'UTF-8'</span><span class="p">)</span>
 
-<span class="n">output</span> <span class="o">=</span> <span class="n">UTF8_streamwriter</span><span class="p">(</span> <span class="nb">open</span><span class="p">(</span> <span class="s1">&#39;/tmp/output&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">output</span> <span class="o">=</span> <span class="n">UTF8_streamwriter</span><span class="p">(</span> <span class="nb">open</span><span class="p">(</span> <span class="s1">'/tmp/output'</span><span class="p">,</span> <span class="s1">'wb'</span><span class="p">)</span> <span class="p">)</span>
 <span class="n">output</span><span class="o">.</span><span class="n">write</span><span class="p">(</span> <span class="n">unistr</span> <span class="p">)</span>
 <span class="n">output</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The following code would then read UTF-8 input from the file:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">input</span> <span class="o">=</span> <span class="n">UTF8_streamreader</span><span class="p">(</span> <span class="nb">open</span><span class="p">(</span> <span class="s1">&#39;/tmp/output&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="p">)</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">input</span> <span class="o">=</span> <span class="n">UTF8_streamreader</span><span class="p">(</span> <span class="nb">open</span><span class="p">(</span> <span class="s1">'/tmp/output'</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">)</span> <span class="p">)</span>
 <span class="nb">print</span> <span class="nb">repr</span><span class="p">(</span><span class="nb">input</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
 <span class="nb">input</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Unicode-aware regular expressions are available through the <a class="reference internal" href="../library/re.xhtml#module-re" title="re: Regular expression operations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">re</span></code></a> module,
 which has a new underlying implementation called SRE written by Fredrik Lundh of
@@ -260,7 +264,7 @@ used in testing and future-proofing your Python code, since some future version
 of Python may drop support for 8-bit strings and provide only Unicode strings.</p>
 </section>
 <section id="list-comprehensions">
-<h2>List Comprehensions</h2>
+<h2 class="sigil_not_in_toc">List Comprehensions</h2>
 <p>Lists are a workhorse data type in Python, and many programs manipulate a list
 at some point.  Two common operations on lists are to loop over them, and either
 pick out the elements that meet a certain criterion, or apply some function to
@@ -280,20 +284,23 @@ write the following to do it:</p>
 <span class="n">sublist</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">,</span> <span class="n">substring</span><span class="o">=</span><span class="n">S</span><span class="p">:</span>
                      <span class="n">string</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">substring</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
                   <span class="n">L</span><span class="p">)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Because of Python’s scoping rules, a default argument is used so that the
 anonymous function created by the <a class="reference internal" href="../reference/expressions.xhtml#lambda"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">lambda</span></code></a> expression knows what
 substring is being searched for.  List comprehensions make this cleaner:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">sublist</span> <span class="o">=</span> <span class="p">[</span> <span class="n">s</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">L</span> <span class="k">if</span> <span class="n">string</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">S</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="p">]</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>List comprehensions have the form:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="n">expression</span> <span class="k">for</span> <span class="n">expr</span> <span class="ow">in</span> <span class="n">sequence1</span>
              <span class="k">for</span> <span class="n">expr2</span> <span class="ow">in</span> <span class="n">sequence2</span> <span class="o">...</span>
              <span class="k">for</span> <span class="n">exprN</span> <span class="ow">in</span> <span class="n">sequenceN</span>
              <span class="k">if</span> <span class="n">condition</span> <span class="p">]</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The <code class="xref std std-keyword docutils literal notranslate"><span class="pre">for</span></code>…<code class="xref std std-keyword docutils literal notranslate"><span class="pre">in</span></code> clauses contain the sequences to be
 iterated over.  The sequences do not have to be the same length, because they
@@ -312,18 +319,20 @@ following Python code:</p>
                   <span class="c1"># Append the value of</span>
                   <span class="c1"># the expression to the</span>
                   <span class="c1"># resulting list.</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>This means that when there are multiple <code class="xref std std-keyword docutils literal notranslate"><span class="pre">for</span></code>…<code class="xref std std-keyword docutils literal notranslate"><span class="pre">in</span></code>
 clauses, the resulting list will be equal to the product of the lengths of all
 the sequences.  If you have two lists of length 3, the output list is 9 elements
 long:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">seq1</span> <span class="o">=</span> <span class="s1">&#39;abc&#39;</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">seq1</span> <span class="o">=</span> <span class="s1">'abc'</span>
 <span class="n">seq2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="p">[</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">seq1</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">seq2</span><span class="p">]</span>
-<span class="p">[(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
-<span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)]</span>
-</pre></div>
+<span class="p">[(</span><span class="s1">'a'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">'a'</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">'a'</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="s1">'b'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">'b'</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">'b'</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="s1">'c'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">'c'</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">'c'</span><span class="p">,</span> <span class="mi">3</span><span class="p">)]</span>
+</pre>
+</div>
 </div>
 <p>To avoid introducing an ambiguity into Python’s grammar, if <em>expression</em> is
 creating a tuple, it must be surrounded with parentheses.  The first list
@@ -332,7 +341,8 @@ comprehension below is a syntax error, while the second one is correct:</p>
 <span class="p">[</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">seq1</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">seq2</span><span class="p">]</span>
 <span class="c1"># Correct</span>
 <span class="p">[</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">seq1</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">seq2</span><span class="p">]</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The idea of list comprehensions originally comes from the functional programming
 language Haskell (<a class="reference external" href="https://www.haskell.org">https://www.haskell.org</a>).  Greg Ewing argued most effectively
@@ -341,7 +351,7 @@ was then discussed for a seemingly endless time on the python-dev mailing list
 and kept up-to-date by Skip Montanaro.</p>
 </section>
 <section id="augmented-assignment">
-<h2>Augmented Assignment</h2>
+<h2 class="sigil_not_in_toc">Augmented Assignment</h2>
 <p>Augmented assignment operators, another long-requested feature, have been added
 to Python 2.0.  Augmented assignment operators include <code class="docutils literal notranslate"><span class="pre">+=</span></code>, <code class="docutils literal notranslate"><span class="pre">-=</span></code>, <code class="docutils literal notranslate"><span class="pre">*=</span></code>,
 and so forth.  For example, the statement <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+=</span> <span class="pre">2</span></code> increments the value of the
@@ -361,7 +371,8 @@ instance with an incremented value.</p>
 <span class="n">n</span> <span class="o">=</span> <span class="n">Number</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">n</span> <span class="o">+=</span> <span class="mi">3</span>
 <span class="nb">print</span> <span class="n">n</span><span class="o">.</span><span class="n">value</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The <code class="xref py py-meth docutils literal notranslate"><span class="pre">__iadd__()</span></code> special method is called with the value of the increment,
 and should return a new instance with an appropriately modified value; this
@@ -372,7 +383,7 @@ and PHP also support them.  The augmented assignment patch was implemented by
 Thomas Wouters.</p>
 </section>
 <section id="string-methods">
-<h2>String Methods</h2>
+<h2 class="sigil_not_in_toc">String Methods</h2>
 <p>Until now string-manipulation functionality was in the <a class="reference internal" href="../library/string.xhtml#module-string" title="string: Common string operations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">string</span></code></a> module,
 which was usually a front-end for the <code class="xref py py-mod docutils literal notranslate"><span class="pre">strop</span></code> module written in C.  The
 addition of Unicode posed a difficulty for the <code class="xref py py-mod docutils literal notranslate"><span class="pre">strop</span></code> module, because the
@@ -383,13 +394,14 @@ complicated code.</p>
 <p>Instead, Python 2.0 pushes the problem onto the string type, making string
 manipulation functionality available through methods on both 8-bit strings and
 Unicode strings.</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;andrew&#39;</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
-<span class="go">&#39;Andrew&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;hostname&#39;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;os&#39;</span><span class="p">,</span> <span class="s1">&#39;linux&#39;</span><span class="p">)</span>
-<span class="go">&#39;hlinuxtname&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;moshe&#39;</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;sh&#39;</span><span class="p">)</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">'andrew'</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+<span class="go">'Andrew'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">'hostname'</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'os'</span><span class="p">,</span> <span class="s1">'linux'</span><span class="p">)</span>
+<span class="go">'hlinuxtname'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">'moshe'</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">'sh'</span><span class="p">)</span>
 <span class="go">2</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>One thing that hasn’t changed, a noteworthy April Fools’ joke notwithstanding,
 is that Python strings are immutable. Thus, the string methods return new
@@ -407,7 +419,7 @@ module, with the arguments reversed. In other words, <code class="docutils liter
 equivalent to the old <code class="docutils literal notranslate"><span class="pre">string.join(seq,</span> <span class="pre">s)</span></code>.</p>
 </section>
 <section id="garbage-collection-of-cycles">
-<h2>Garbage Collection of Cycles</h2>
+<h2 class="sigil_not_in_toc">Garbage Collection of Cycles</h2>
 <p>The C implementation of Python uses reference counting to implement garbage
 collection.  Every Python object maintains a count of the number of references
 pointing to itself, and adjusts the count as references are created or
@@ -424,7 +436,8 @@ there are cycles of references.</p>
 itself:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">instance</span> <span class="o">=</span> <span class="n">SomeClass</span><span class="p">()</span>
 <span class="n">instance</span><span class="o">.</span><span class="n">myself</span> <span class="o">=</span> <span class="n">instance</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>After the above two lines of code have been executed, the reference count of
 <code class="docutils literal notranslate"><span class="pre">instance</span></code> is 2; one reference is from the variable named <code class="docutils literal notranslate"><span class="pre">'instance'</span></code>, and
@@ -459,11 +472,11 @@ the relevant discussion, especially in the threads titled “Reference cycle
 collection for Python” and “Finalization again”.</p>
 </section>
 <section id="other-core-changes">
-<h2>Other Core Changes</h2>
+<h2 class="sigil_not_in_toc">Other Core Changes</h2>
 <p>Various minor changes have been made to Python’s syntax and built-in functions.
 None of the changes are very far-reaching, but they’re handy conveniences.</p>
 <section id="minor-language-changes">
-<h3>Minor Language Changes</h3>
+<h3 class="sigil_not_in_toc">Minor Language Changes</h3>
 <p>A new syntax makes it more convenient to call a given function with a tuple of
 arguments and/or a dictionary of keyword arguments. In Python 1.5 and earlier,
 you’d use the <code class="xref py py-func docutils literal notranslate"><span class="pre">apply()</span></code> built-in function: <code class="docutils literal notranslate"><span class="pre">apply(f,</span> <span class="pre">args,</span> <span class="pre">kw)</span></code> calls the
@@ -476,7 +489,8 @@ functions:</p>
     <span class="c1"># args is a tuple of positional args,</span>
     <span class="c1"># kw is a dictionary of keyword args</span>
     <span class="o">...</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">print</span></code> statement can now have its output directed to a file-like
 object by following the <code class="docutils literal notranslate"><span class="pre">print</span></code> with  <code class="docutils literal notranslate"><span class="pre">&gt;&gt;</span> <span class="pre">file</span></code>, similar to the
@@ -485,8 +499,9 @@ redirection operator in Unix shells. Previously you’d either have to use the
 simplicity of <code class="docutils literal notranslate"><span class="pre">print</span></code>, or you could assign a new value to
 <code class="docutils literal notranslate"><span class="pre">sys.stdout</span></code> and then restore the old value.  For sending output to standard
 error, it’s much easier to write this:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="o">&gt;&gt;</span> <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">,</span> <span class="s2">&quot;Warning: action field not supplied&quot;</span>
-</pre></div>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="o">&gt;&gt;</span> <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">,</span> <span class="s2">"Warning: action field not supplied"</span>
+</pre>
+</div>
 </div>
 <p>Modules can now be renamed on importing them, using the syntax <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">module</span>
 <span class="pre">as</span> <span class="pre">name</span></code> or <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">module</span> <span class="pre">import</span> <span class="pre">name</span> <span class="pre">as</span> <span class="pre">othername</span></code>.  The patch was submitted
@@ -514,7 +529,8 @@ instead.  For example, after this code:</p>
 <span class="n">b</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="n">b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The comparison <code class="docutils literal notranslate"><span class="pre">a==b</span></code> returns true, because the two recursive data structures
 are isomorphic. See the thread “trashcan and PR#7” in the April 2000 archives of
@@ -541,17 +557,18 @@ exception on the <code class="docutils literal notranslate"><span class="pre">pr
 <a class="reference internal" href="../library/exceptions.xhtml#NameError" title="NameError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">NameError</span></code></a>, so any existing code that expects <a class="reference internal" href="../library/exceptions.xhtml#NameError" title="NameError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">NameError</span></code></a> to be
 raised should still work.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">():</span>
-    <span class="nb">print</span> <span class="s2">&quot;i=&quot;</span><span class="p">,</span><span class="n">i</span>
+    <span class="nb">print</span> <span class="s2">"i="</span><span class="p">,</span><span class="n">i</span>
     <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
 <span class="n">f</span><span class="p">()</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Two new exceptions, <a class="reference internal" href="../library/exceptions.xhtml#TabError" title="TabError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TabError</span></code></a> and <a class="reference internal" href="../library/exceptions.xhtml#IndentationError" title="IndentationError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">IndentationError</span></code></a>, have been
 introduced.  They’re both subclasses of <a class="reference internal" href="../library/exceptions.xhtml#SyntaxError" title="SyntaxError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SyntaxError</span></code></a>, and are raised when
 Python code is found to be improperly indented.</p>
 </section>
 <section id="changes-to-built-in-functions">
-<h3>Changes to Built-in Functions</h3>
+<h3 class="sigil_not_in_toc">Changes to Built-in Functions</h3>
 <p>A new built-in, <code class="docutils literal notranslate"><span class="pre">zip(seq1,</span> <span class="pre">seq2,</span> <span class="pre">...)</span></code>, has been added.  <a class="reference internal" href="../library/functions.xhtml#zip" title="zip"><code class="xref py py-func docutils literal notranslate"><span class="pre">zip()</span></code></a>
 returns a list of tuples where each tuple contains the i-th element from each of
 the argument sequences.  The difference between <a class="reference internal" href="../library/functions.xhtml#zip" title="zip"><code class="xref py py-func docutils literal notranslate"><span class="pre">zip()</span></code></a> and <code class="docutils literal notranslate"><span class="pre">map(None,</span>
@@ -566,8 +583,8 @@ explicit base”.</p>
 <p>A new variable holding more detailed version information has been added to the
 <a class="reference internal" href="../library/sys.xhtml#module-sys" title="sys: Access system-specific parameters and functions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sys</span></code></a> module.  <code class="docutils literal notranslate"><span class="pre">sys.version_info</span></code> is a tuple <code class="docutils literal notranslate"><span class="pre">(major,</span> <span class="pre">minor,</span> <span class="pre">micro,</span>
 <span class="pre">level,</span> <span class="pre">serial)</span></code> For example, in a hypothetical 2.0.1beta1, <code class="docutils literal notranslate"><span class="pre">sys.version_info</span></code>
-would be <code class="docutils literal notranslate"><span class="pre">(2,</span> <span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">'beta',</span> <span class="pre">1)</span></code>. <em>level</em> is a string such as <code class="docutils literal notranslate"><span class="pre">&quot;alpha&quot;</span></code>,
-<code class="docutils literal notranslate"><span class="pre">&quot;beta&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;final&quot;</span></code> for a final release.</p>
+would be <code class="docutils literal notranslate"><span class="pre">(2,</span> <span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">'beta',</span> <span class="pre">1)</span></code>. <em>level</em> is a string such as <code class="docutils literal notranslate"><span class="pre">"alpha"</span></code>,
+<code class="docutils literal notranslate"><span class="pre">"beta"</span></code>, or <code class="docutils literal notranslate"><span class="pre">"final"</span></code> for a final release.</p>
 <p>Dictionaries have an odd new method, <code class="docutils literal notranslate"><span class="pre">setdefault(key,</span> <span class="pre">default)</span></code>, which
 behaves similarly to the existing <code class="xref py py-meth docutils literal notranslate"><span class="pre">get()</span></code> method.  However, if the key is
 missing, <code class="xref py py-meth docutils literal notranslate"><span class="pre">setdefault()</span></code> both returns the value of <em>default</em> as <code class="xref py py-meth docutils literal notranslate"><span class="pre">get()</span></code>
@@ -577,7 +594,8 @@ the following lines of code:</p>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">return</span> <span class="nb">dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>can be reduced to a single <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">dict.setdefault(key,</span> <span class="pre">[])</span></code> statement.</p>
 <p>The interpreter sets a maximum recursion depth in order to catch runaway
@@ -590,7 +608,7 @@ value for a given platform can be found by running a new script,
 </section>
 </section>
 <section id="porting-to-2-0">
-<h2>Porting to 2.0</h2>
+<h2 class="sigil_not_in_toc">Porting to 2.0</h2>
 <p>New Python releases try hard to be compatible with previous releases, and the
 record has been pretty good.  However, some changes are considered useful
 enough, usually because they fix initial design decisions that turned out to be
@@ -641,7 +659,7 @@ intuitively expect it to; <code class="docutils literal notranslate"><span class
 <code class="docutils literal notranslate"><span class="pre">(0,1,2,3)[2L:4L]</span></code> produces (2,3). Long integers can also be used in various
 contexts where previously only integers were accepted, such as in the
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">seek()</span></code> method of file objects, and in the formats supported by the <code class="docutils literal notranslate"><span class="pre">%</span></code>
-operator (<code class="docutils literal notranslate"><span class="pre">%d</span></code>, <code class="docutils literal notranslate"><span class="pre">%i</span></code>, <code class="docutils literal notranslate"><span class="pre">%x</span></code>, etc.).  For example, <code class="docutils literal notranslate"><span class="pre">&quot;%d&quot;</span> <span class="pre">%</span> <span class="pre">2L**64</span></code> will
+operator (<code class="docutils literal notranslate"><span class="pre">%d</span></code>, <code class="docutils literal notranslate"><span class="pre">%i</span></code>, <code class="docutils literal notranslate"><span class="pre">%x</span></code>, etc.).  For example, <code class="docutils literal notranslate"><span class="pre">"%d"</span> <span class="pre">%</span> <span class="pre">2L**64</span></code> will
 produce the string <code class="docutils literal notranslate"><span class="pre">18446744073709551616</span></code>.</p>
 <p>The subtlest long integer change of all is that the <a class="reference internal" href="../library/stdtypes.xhtml#str" title="str"><code class="xref py py-func docutils literal notranslate"><span class="pre">str()</span></code></a> of a long
 integer no longer has a trailing ‘L’ character, though <a class="reference internal" href="../library/functions.xhtml#repr" title="repr"><code class="xref py py-func docutils literal notranslate"><span class="pre">repr()</span></code></a> still
@@ -664,7 +682,7 @@ exceptions was translated from Python to a built-in C module, written by Barry
 Warsaw and Fredrik Lundh.</p>
 </section>
 <section id="extending-embedding-changes">
-<h2>Extending/Embedding Changes</h2>
+<h2 class="sigil_not_in_toc">Extending/Embedding Changes</h2>
 <p>Some of the changes are under the covers, and will only be apparent to people
 writing C extension modules or embedding a Python interpreter in a larger
 application.  If you aren’t dealing with Python’s C API, you can safely skip
@@ -721,7 +739,7 @@ string.</p>
 a signal handler and <a class="reference internal" href="../c-api/sys.xhtml#c.PyOS_setsig" title="PyOS_setsig"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyOS_setsig()</span></code></a> will set a new handler.</p>
 </section>
 <section id="distutils-making-modules-easy-to-install">
-<h2>Distutils: Making Modules Easy to Install</h2>
+<h2 class="sigil_not_in_toc">Distutils: Making Modules Easy to Install</h2>
 <p>Before Python 2.0, installing modules was a tedious affair – there was no way
 to figure out automatically where Python is installed, or what compiler options
 to use for extension modules.  Software authors had to go through an arduous
@@ -744,32 +762,35 @@ or installing in non-default directories, and more.</p>
 the simple case, when the software contains only .py files, a minimal
 <code class="file docutils literal notranslate"><span class="pre">setup.py</span></code> can be just a few lines long:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">distutils.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">setup</span>
-<span class="n">setup</span> <span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="n">version</span> <span class="o">=</span> <span class="s2">&quot;1.0&quot;</span><span class="p">,</span>
-       <span class="n">py_modules</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;module1&quot;</span><span class="p">,</span> <span class="s2">&quot;module2&quot;</span><span class="p">])</span>
-</pre></div>
+<span class="n">setup</span> <span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s2">"foo"</span><span class="p">,</span> <span class="n">version</span> <span class="o">=</span> <span class="s2">"1.0"</span><span class="p">,</span>
+       <span class="n">py_modules</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"module1"</span><span class="p">,</span> <span class="s2">"module2"</span><span class="p">])</span>
+</pre>
+</div>
 </div>
 <p>The <code class="file docutils literal notranslate"><span class="pre">setup.py</span></code> file isn’t much more complicated if the software consists
 of a few packages:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">distutils.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">setup</span>
-<span class="n">setup</span> <span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="n">version</span> <span class="o">=</span> <span class="s2">&quot;1.0&quot;</span><span class="p">,</span>
-       <span class="n">packages</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;package&quot;</span><span class="p">,</span> <span class="s2">&quot;package.subpackage&quot;</span><span class="p">])</span>
-</pre></div>
+<span class="n">setup</span> <span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s2">"foo"</span><span class="p">,</span> <span class="n">version</span> <span class="o">=</span> <span class="s2">"1.0"</span><span class="p">,</span>
+       <span class="n">packages</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"package"</span><span class="p">,</span> <span class="s2">"package.subpackage"</span><span class="p">])</span>
+</pre>
+</div>
 </div>
 <p>A C extension can be the most complicated case; here’s an example taken from
 the PyXML package:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">distutils.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">setup</span><span class="p">,</span> <span class="n">Extension</span>
 
-<span class="n">expat_extension</span> <span class="o">=</span> <span class="n">Extension</span><span class="p">(</span><span class="s1">&#39;xml.parsers.pyexpat&#39;</span><span class="p">,</span>
-     <span class="n">define_macros</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;XML_NS&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)],</span>
-     <span class="n">include_dirs</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;extensions/expat/xmltok&#39;</span><span class="p">,</span>
-                      <span class="s1">&#39;extensions/expat/xmlparse&#39;</span> <span class="p">],</span>
-     <span class="n">sources</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;extensions/pyexpat.c&#39;</span><span class="p">,</span>
-                 <span class="s1">&#39;extensions/expat/xmltok/xmltok.c&#39;</span><span class="p">,</span>
-                 <span class="s1">&#39;extensions/expat/xmltok/xmlrole.c&#39;</span><span class="p">,</span> <span class="p">]</span>
+<span class="n">expat_extension</span> <span class="o">=</span> <span class="n">Extension</span><span class="p">(</span><span class="s1">'xml.parsers.pyexpat'</span><span class="p">,</span>
+     <span class="n">define_macros</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">'XML_NS'</span><span class="p">,</span> <span class="kc">None</span><span class="p">)],</span>
+     <span class="n">include_dirs</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">'extensions/expat/xmltok'</span><span class="p">,</span>
+                      <span class="s1">'extensions/expat/xmlparse'</span> <span class="p">],</span>
+     <span class="n">sources</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">'extensions/pyexpat.c'</span><span class="p">,</span>
+                 <span class="s1">'extensions/expat/xmltok/xmltok.c'</span><span class="p">,</span>
+                 <span class="s1">'extensions/expat/xmltok/xmlrole.c'</span><span class="p">,</span> <span class="p">]</span>
        <span class="p">)</span>
-<span class="n">setup</span> <span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;PyXML&quot;</span><span class="p">,</span> <span class="n">version</span> <span class="o">=</span> <span class="s2">&quot;0.5.4&quot;</span><span class="p">,</span>
+<span class="n">setup</span> <span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s2">"PyXML"</span><span class="p">,</span> <span class="n">version</span> <span class="o">=</span> <span class="s2">"0.5.4"</span><span class="p">,</span>
        <span class="n">ext_modules</span> <span class="o">=</span><span class="p">[</span> <span class="n">expat_extension</span> <span class="p">]</span> <span class="p">)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The Distutils can also take care of creating source and binary distributions.
 The “sdist” command, run by “<code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">sdist</span></code>’, builds a source
@@ -783,7 +804,7 @@ development.</p>
 joins the basic set of Python documentation.</p>
 </section>
 <section id="xml-modules">
-<h2>XML Modules</h2>
+<h2 class="sigil_not_in_toc">XML Modules</h2>
 <p>Python 1.5.2 included a simple XML parser in the form of the <code class="xref py py-mod docutils literal notranslate"><span class="pre">xmllib</span></code>
 module, contributed by Sjoerd Mullender.  Since 1.5.2’s release, two different
 interfaces for processing XML have become common: SAX2 (version 2 of the Simple
@@ -796,7 +817,7 @@ overview of these new interfaces; consult the Python documentation or the source
 code for complete details. The Python XML SIG is also working on improved
 documentation.</p>
 <section id="sax2-support">
-<h3>SAX2 Support</h3>
+<h3 class="sigil_not_in_toc">SAX2 Support</h3>
 <p>SAX defines an event-driven interface for parsing XML.  To use SAX, you must
 write a SAX handler class.  Handler classes inherit from various classes
 provided by SAX, and override various methods that will then be called by the
@@ -816,10 +837,10 @@ using it:</p>
 
 <span class="k">class</span><span class="w"> </span><span class="nc">SimpleHandler</span><span class="p">(</span><span class="n">sax</span><span class="o">.</span><span class="n">ContentHandler</span><span class="p">):</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">startElement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">attrs</span><span class="p">):</span>
-        <span class="nb">print</span> <span class="s1">&#39;Start of element:&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">attrs</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+        <span class="nb">print</span> <span class="s1">'Start of element:'</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">attrs</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">endElement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-        <span class="nb">print</span> <span class="s1">&#39;End of element:&#39;</span><span class="p">,</span> <span class="n">name</span>
+        <span class="nb">print</span> <span class="s1">'End of element:'</span><span class="p">,</span> <span class="n">name</span>
 
 <span class="c1"># Create a parser object</span>
 <span class="n">parser</span> <span class="o">=</span> <span class="n">sax</span><span class="o">.</span><span class="n">make_parser</span><span class="p">()</span>
@@ -829,14 +850,15 @@ using it:</p>
 <span class="n">parser</span><span class="o">.</span><span class="n">setContentHandler</span><span class="p">(</span> <span class="n">handler</span> <span class="p">)</span>
 
 <span class="c1"># Parse a file!</span>
-<span class="n">parser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span> <span class="s1">&#39;hamlet.xml&#39;</span> <span class="p">)</span>
-</pre></div>
+<span class="n">parser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span> <span class="s1">'hamlet.xml'</span> <span class="p">)</span>
+</pre>
+</div>
 </div>
 <p>For more information, consult the Python documentation, or the XML HOWTO at
 <a class="reference external" href="https://pyxml.sourceforge.net/topics/howto/xml-howto.html">https://pyxml.sourceforge.net/topics/howto/xml-howto.html</a>.</p>
 </section>
 <section id="dom-support">
-<h3>DOM Support</h3>
+<h3 class="sigil_not_in_toc">DOM Support</h3>
 <p>The Document Object Model is a tree-based representation for an XML document.  A
 top-level <code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code> instance is the root of the tree, and has a single
 child which is the top-level <code class="xref py py-class docutils literal notranslate"><span class="pre">Element</span></code> instance. This <code class="xref py py-class docutils literal notranslate"><span class="pre">Element</span></code>
@@ -854,8 +876,9 @@ module.  It’s a lightweight implementation of the Level 1 DOM with support for
 XML namespaces.  The  <code class="xref py py-func docutils literal notranslate"><span class="pre">parse()</span></code> and <code class="xref py py-func docutils literal notranslate"><span class="pre">parseString()</span></code> convenience
 functions are provided for generating a DOM tree:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">xml.dom</span><span class="w"> </span><span class="kn">import</span> <span class="n">minidom</span>
-<span class="n">doc</span> <span class="o">=</span> <span class="n">minidom</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;hamlet.xml&#39;</span><span class="p">)</span>
-</pre></div>
+<span class="n">doc</span> <span class="o">=</span> <span class="n">minidom</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">'hamlet.xml'</span><span class="p">)</span>
+</pre>
+</div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">doc</span></code> is a <code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code> instance.  <code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code>, like all the other
 DOM classes such as <code class="xref py py-class docutils literal notranslate"><span class="pre">Element</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">Text</span></code>, is a subclass of the
@@ -865,15 +888,17 @@ representation of the node and its children.  Each class also has special
 methods of its own; for example, <code class="xref py py-class docutils literal notranslate"><span class="pre">Element</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code>
 instances have a method to find all child elements with a given tag name.
 Continuing from the previous 2-line example:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">perslist</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">getElementsByTagName</span><span class="p">(</span> <span class="s1">&#39;PERSONA&#39;</span> <span class="p">)</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">perslist</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">getElementsByTagName</span><span class="p">(</span> <span class="s1">'PERSONA'</span> <span class="p">)</span>
 <span class="nb">print</span> <span class="n">perslist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">toxml</span><span class="p">()</span>
 <span class="nb">print</span> <span class="n">perslist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">toxml</span><span class="p">()</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>For the <em>Hamlet</em> XML file, the above few lines output:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">PERSONA</span><span class="o">&gt;</span><span class="n">CLAUDIUS</span><span class="p">,</span> <span class="n">king</span> <span class="n">of</span> <span class="n">Denmark</span><span class="o">.</span> <span class="o">&lt;/</span><span class="n">PERSONA</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="n">PERSONA</span><span class="o">&gt;</span><span class="n">HAMLET</span><span class="p">,</span> <span class="n">son</span> <span class="n">to</span> <span class="n">the</span> <span class="n">late</span><span class="p">,</span> <span class="ow">and</span> <span class="n">nephew</span> <span class="n">to</span> <span class="n">the</span> <span class="n">present</span> <span class="n">king</span><span class="o">.&lt;/</span><span class="n">PERSONA</span><span class="o">&gt;</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The root element of the document is available as <code class="docutils literal notranslate"><span class="pre">doc.documentElement</span></code>, and
 its children can be easily modified by deleting, adding, or removing nodes:</p>
@@ -888,13 +913,14 @@ its children can be easily modified by deleting, adding, or removing nodes:</p>
 <span class="c1"># Insert the new first child (originally,</span>
 <span class="c1"># the third child) before the 20th child.</span>
 <span class="n">root</span><span class="o">.</span><span class="n">insertBefore</span><span class="p">(</span> <span class="n">root</span><span class="o">.</span><span class="n">childNodes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">root</span><span class="o">.</span><span class="n">childNodes</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span> <span class="p">)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Again, I will refer you to the Python documentation for a complete listing of
 the different <code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code> classes and their various methods.</p>
 </section>
 <section id="relationship-to-pyxml">
-<h3>Relationship to PyXML</h3>
+<h3 class="sigil_not_in_toc">Relationship to PyXML</h3>
 <p>The XML Special Interest Group has been working on XML-related Python code for a
 while.  Its code distribution, called PyXML, is available from the SIG’s web
 pages at <a class="reference external" href="https://www.python.org/community/sigs/current/xml-sig">https://www.python.org/community/sigs/current/xml-sig</a>. The PyXML distribution also used
@@ -916,7 +942,7 @@ features in PyXML include:</p>
 </section>
 </section>
 <section id="module-changes">
-<h2>Module changes</h2>
+<h2 class="sigil_not_in_toc">Module changes</h2>
 <p>Lots of improvements and bugfixes were made to Python’s extensive standard
 library; some of the affected modules include <a class="reference internal" href="../library/readline.xhtml#module-readline" title="readline: GNU readline support for Python. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">readline</span></code></a>,
 <a class="reference internal" href="../library/configparser.xhtml#module-configparser" title="configparser: Configuration file parser."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ConfigParser</span></code></a>, <code class="xref py py-mod docutils literal notranslate"><span class="pre">cgi</span></code>, <a class="reference internal" href="../library/calendar.xhtml#module-calendar" title="calendar: Functions for working with calendars, including some emulation of the Unix cal program."><code class="xref py py-mod docutils literal notranslate"><span class="pre">calendar</span></code></a>, <a class="reference internal" href="../library/posix.xhtml#module-posix" title="posix: The most common POSIX system calls (normally used via module os). (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">posix</span></code></a>, <a class="reference internal" href="../library/readline.xhtml#module-readline" title="readline: GNU readline support for Python. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">readline</span></code></a>,
@@ -952,7 +978,7 @@ partially funded by Hewlett Packard, supports matching against both 8-bit
 strings and Unicode strings.</p>
 </section>
 <section id="new-modules">
-<h2>New modules</h2>
+<h2 class="sigil_not_in_toc">New modules</h2>
 <p>A number of new modules were added.  We’ll simply list them with brief
 descriptions; consult the 2.0 documentation for the details of a particular
 module.</p>
@@ -1012,7 +1038,7 @@ by Greg Stein, with much discussion on python-dev along the way.)</p></li>
 </ul>
 </section>
 <section id="idle-improvements">
-<h2>IDLE Improvements</h2>
+<h2 class="sigil_not_in_toc">IDLE Improvements</h2>
 <p>IDLE is the official Python cross-platform IDE, written using Tkinter. Python
 2.0 includes IDLE 0.6, which adds a number of new features and improvements.  A
 partial list:</p>
@@ -1035,7 +1061,7 @@ Run script (<kbd class="kbd compound docutils literal notranslate"><kbd class="k
 </ul>
 </section>
 <section id="deleted-and-deprecated-modules">
-<h2>Deleted and Deprecated Modules</h2>
+<h2 class="sigil_not_in_toc">Deleted and Deprecated Modules</h2>
 <p>A few modules have been dropped because they’re obsolete, or because there are
 now better ways to do the same thing.  The <code class="xref py py-mod docutils literal notranslate"><span class="pre">stdwin</span></code> module is gone; it was
 for a platform-independent windowing toolkit that’s no longer developed.</p>
@@ -1047,7 +1073,7 @@ for a platform-independent windowing toolkit that’s no longer developed.</p>
 back, but you’re encouraged to update any code that uses these modules.</p>
 </section>
 <section id="acknowledgements">
-<h2>Acknowledgements</h2>
+<h2 class="sigil_not_in_toc">Acknowledgements</h2>
 <p>The authors would like to thank the following people for offering suggestions on
 various drafts of this article: David Bolen, Mark Hammond, Gregg Hauser, Jeremy
 Hylton, Fredrik Lundh, Detlef Lannert, Aahz Maruch, Skip Montanaro, Vladimir
@@ -1061,5 +1087,5 @@ Marangozov, Tobias Polzin, Guido van Rossum, Neil Schemenauer, and Russ Schmidt.
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

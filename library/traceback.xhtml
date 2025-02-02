@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="traceback — Print or retrieve a stack traceback" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/library/traceback.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="Source code: Lib/traceback.py[https://github.com/python/cpython/tree/3.13/Lib/traceback.py] This module provides a standard interface to extract, format and print stack traces of Python programs. I..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="Source code: Lib/traceback.py[https://github.com/python/cpython/tree/3.13/Lib/traceback.py] This module provides a standard interface to extract, format and print stack traces of Python programs. I..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="traceback — Print or retrieve a stack traceback"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/library/traceback.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="Source code: Lib/traceback.py[https://github.com/python/cpython/tree/3.13/Lib/traceback.py] This module provides a standard interface to extract, format and print stack traces of Python programs. I..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="Source code: Lib/traceback.py[https://github.com/python/cpython/tree/3.13/Lib/traceback.py] This module provides a standard interface to extract, format and print stack traces of Python programs. I..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>traceback — Print or retrieve a stack traceback</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/library/traceback.html" />
+    <link rel="canonical" href="https://docs.python.org/3/library/traceback.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -45,7 +46,7 @@
   <section id="module-traceback">
 <span id="traceback-print-or-retrieve-a-stack-traceback"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">traceback</span></code> — Print or retrieve a stack traceback</h1>
 <p><strong>Source code:</strong> <a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.13/Lib/traceback.py">Lib/traceback.py</a><span class="link-target"> [https://github.com/python/cpython/tree/3.13/Lib/traceback.py]</span></p>
-<hr class="docutils" />
+<hr class="docutils"/>
 <p>This module provides a standard interface to extract, format and print
 stack traces of Python programs. It is more flexible than the
 interpreter’s default traceback display, and therefore makes it
@@ -62,9 +63,11 @@ which are assigned to the <a class="reference internal" href="exceptions.xhtml#B
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt>Module <a class="reference internal" href="faulthandler.xhtml#module-faulthandler" title="faulthandler: Dump the Python traceback."><code class="xref py py-mod docutils literal notranslate"><span class="pre">faulthandler</span></code></a></dt><dd><p>Used to dump Python tracebacks explicitly, on a fault, after a timeout, or on a user signal.</p>
+<dt>Module <a class="reference internal" href="faulthandler.xhtml#module-faulthandler" title="faulthandler: Dump the Python traceback."><code class="xref py py-mod docutils literal notranslate"><span class="pre">faulthandler</span></code></a></dt>
+<dd><p>Used to dump Python tracebacks explicitly, on a fault, after a timeout, or on a user signal.</p>
 </dd>
-<dt>Module <a class="reference internal" href="pdb.xhtml#module-pdb" title="pdb: The Python debugger for interactive interpreters."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pdb</span></code></a></dt><dd><p>Interactive source code debugger for Python programs.</p>
+<dt>Module <a class="reference internal" href="pdb.xhtml#module-pdb" title="pdb: The Python debugger for interactive interpreters."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pdb</span></code></a></dt>
+<dd><p>Interactive source code debugger for Python programs.</p>
 </dd>
 </dl>
 </div>
@@ -79,7 +82,7 @@ necessary for later formatting without holding references to actual exception
 and traceback objects.</p></li>
 </ul>
 <section id="module-level-functions">
-<h2>Module-Level Functions</h2>
+<h2 class="sigil_not_in_toc">Module-Level Functions</h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="traceback.print_tb">
 <span class="sig-prename descclassname"><span class="pre">traceback.</span></span><span class="sig-name descname"><span class="pre">print_tb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
@@ -102,7 +105,8 @@ a positive <em>limit</em> value cannot be achieved with
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.5: </span>Added negative <em>limit</em> support.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="traceback.print_exception">
@@ -137,14 +141,16 @@ exception.</p>
 <p><span class="versionmodified changed">Changed in version 3.10: </span>The <em>etype</em> parameter has been renamed to <em>exc</em> and is now
 positional-only.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="traceback.print_exc">
 <span class="sig-prename descclassname"><span class="pre">traceback.</span></span><span class="sig-name descname"><span class="pre">print_exc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>This is a shorthand for <code class="docutils literal notranslate"><span class="pre">print_exception(sys.exception(),</span> <span class="pre">limit,</span> <span class="pre">file,</span>
 <span class="pre">chain)</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="traceback.print_last">
@@ -152,7 +158,8 @@ positional-only.</p>
 <dd><p>This is a shorthand for <code class="docutils literal notranslate"><span class="pre">print_exception(sys.last_exc,</span> <span class="pre">limit,</span> <span class="pre">file,</span>
 <span class="pre">chain)</span></code>.  In general it will work only after an exception has reached
 an interactive prompt (see <a class="reference internal" href="sys.xhtml#sys.last_exc" title="sys.last_exc"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.last_exc</span></code></a>).</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="traceback.print_stack">
@@ -167,7 +174,8 @@ to start.  The optional <em>file</em> argument has the same meaning as for
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.5: </span>Added negative <em>limit</em> support.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="traceback.extract_tb">
@@ -181,7 +189,8 @@ entry is a <a class="reference internal" href="#traceback.FrameSummary" title="t
 <a class="reference internal" href="#traceback.FrameSummary.filename" title="traceback.FrameSummary.filename"><code class="xref py py-attr docutils literal notranslate"><span class="pre">filename</span></code></a>, <a class="reference internal" href="#traceback.FrameSummary.lineno" title="traceback.FrameSummary.lineno"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lineno</span></code></a>,
 <a class="reference internal" href="#traceback.FrameSummary.name" title="traceback.FrameSummary.name"><code class="xref py py-attr docutils literal notranslate"><span class="pre">name</span></code></a>, and <a class="reference internal" href="#traceback.FrameSummary.line" title="traceback.FrameSummary.line"><code class="xref py py-attr docutils literal notranslate"><span class="pre">line</span></code></a> representing the
 information that is usually printed for a stack trace.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="traceback.extract_stack">
@@ -190,7 +199,8 @@ information that is usually printed for a stack trace.</p>
 <a class="reference internal" href="../reference/datamodel.xhtml#frame-objects"><span class="std std-ref">stack frame</span></a>.  The return value has
 the same format as for <a class="reference internal" href="#traceback.extract_tb" title="traceback.extract_tb"><code class="xref py py-func docutils literal notranslate"><span class="pre">extract_tb()</span></code></a>.  The optional <em>f</em> and <em>limit</em>
 arguments have the same meaning as for <a class="reference internal" href="#traceback.print_stack" title="traceback.print_stack"><code class="xref py py-func docutils literal notranslate"><span class="pre">print_stack()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="traceback.print_list">
@@ -198,7 +208,8 @@ arguments have the same meaning as for <a class="reference internal" href="#trac
 <dd><p>Print the list of tuples as returned by <a class="reference internal" href="#traceback.extract_tb" title="traceback.extract_tb"><code class="xref py py-func docutils literal notranslate"><span class="pre">extract_tb()</span></code></a> or
 <a class="reference internal" href="#traceback.extract_stack" title="traceback.extract_stack"><code class="xref py py-func docutils literal notranslate"><span class="pre">extract_stack()</span></code></a> as a formatted stack trace to the given file.
 If <em>file</em> is <code class="docutils literal notranslate"><span class="pre">None</span></code>, the output is written to <a class="reference internal" href="sys.xhtml#sys.stderr" title="sys.stderr"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.stderr</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="traceback.format_list">
@@ -209,7 +220,8 @@ for printing.  Each string in the resulting list corresponds to the item with
 the same index in the argument list.  Each string ends in a newline; the
 strings may contain internal newlines as well, for those items whose source
 text line is not <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="traceback.format_exception_only">
@@ -238,7 +250,8 @@ positional-only.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.13: </span><em>show_group</em> parameter was added.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="traceback.format_exception">
@@ -255,26 +268,30 @@ exactly the same text is printed as does <a class="reference internal" href="#tr
 <p><span class="versionmodified changed">Changed in version 3.10: </span>This function’s behavior and signature were modified to match
 <a class="reference internal" href="#traceback.print_exception" title="traceback.print_exception"><code class="xref py py-func docutils literal notranslate"><span class="pre">print_exception()</span></code></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="traceback.format_exc">
 <span class="sig-prename descclassname"><span class="pre">traceback.</span></span><span class="sig-name descname"><span class="pre">format_exc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>This is like <code class="docutils literal notranslate"><span class="pre">print_exc(limit)</span></code> but returns a string instead of printing to
 a file.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="traceback.format_tb">
 <span class="sig-prename descclassname"><span class="pre">traceback.</span></span><span class="sig-name descname"><span class="pre">format_tb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>A shorthand for <code class="docutils literal notranslate"><span class="pre">format_list(extract_tb(tb,</span> <span class="pre">limit))</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="traceback.format_stack">
 <span class="sig-prename descclassname"><span class="pre">traceback.</span></span><span class="sig-name descname"><span class="pre">format_stack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>A shorthand for <code class="docutils literal notranslate"><span class="pre">format_list(extract_stack(f,</span> <span class="pre">limit))</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="traceback.clear_frames">
@@ -286,7 +303,8 @@ by calling the <a class="reference internal" href="../reference/datamodel.xhtml#
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.4.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="traceback.walk_stack">
@@ -298,7 +316,8 @@ used. This helper is used with <a class="reference internal" href="#traceback.St
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.5.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="traceback.walk_tb">
@@ -309,11 +328,12 @@ for each frame. This helper is used with <a class="reference internal" href="#tr
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.5.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="tracebackexception-objects">
-<h2><code class="xref py py-class docutils literal notranslate"><span class="pre">TracebackException</span></code> Objects</h2>
+<h2 class="sigil_not_in_toc"><code class="xref py py-class docutils literal notranslate"><span class="pre">TracebackException</span></code> Objects</h2>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.5.</span></p>
 </div>
@@ -351,14 +371,16 @@ limit is exceeded.</p>
 <span class="sig-name descname"><span class="pre">__cause__</span></span></dt>
 <dd><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">TracebackException</span></code> of the original
 <a class="reference internal" href="exceptions.xhtml#BaseException.__cause__" title="BaseException.__cause__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__cause__</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="traceback.TracebackException.__context__">
 <span class="sig-name descname"><span class="pre">__context__</span></span></dt>
 <dd><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">TracebackException</span></code> of the original
 <a class="reference internal" href="exceptions.xhtml#BaseException.__context__" title="BaseException.__context__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__context__</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="traceback.TracebackException.exceptions">
@@ -369,14 +391,16 @@ Otherwise it is <code class="docutils literal notranslate"><span class="pre">Non
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.11.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="traceback.TracebackException.__suppress_context__">
 <span class="sig-name descname"><span class="pre">__suppress_context__</span></span></dt>
 <dd><p>The <a class="reference internal" href="exceptions.xhtml#BaseException.__suppress_context__" title="BaseException.__suppress_context__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__suppress_context__</span></code></a> value from the original
 exception.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="traceback.TracebackException.__notes__">
@@ -388,13 +412,15 @@ is it formatted in the traceback after the exception string.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.11.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="traceback.TracebackException.stack">
 <span class="sig-name descname"><span class="pre">stack</span></span></dt>
 <dd><p>A <a class="reference internal" href="#traceback.StackSummary" title="traceback.StackSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">StackSummary</span></code></a> representing the traceback.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="traceback.TracebackException.exc_type">
@@ -403,7 +429,8 @@ is it formatted in the traceback after the exception string.</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 3.13.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="traceback.TracebackException.exc_type_str">
@@ -412,19 +439,22 @@ is it formatted in the traceback after the exception string.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.13.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="traceback.TracebackException.filename">
 <span class="sig-name descname"><span class="pre">filename</span></span></dt>
 <dd><p>For syntax errors - the file name where the error occurred.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="traceback.TracebackException.lineno">
 <span class="sig-name descname"><span class="pre">lineno</span></span></dt>
 <dd><p>For syntax errors - the line number where the error occurred.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="traceback.TracebackException.end_lineno">
@@ -434,19 +464,22 @@ Can be <code class="docutils literal notranslate"><span class="pre">None</span><
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.10.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="traceback.TracebackException.text">
 <span class="sig-name descname"><span class="pre">text</span></span></dt>
 <dd><p>For syntax errors - the text where the error occurred.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="traceback.TracebackException.offset">
 <span class="sig-name descname"><span class="pre">offset</span></span></dt>
 <dd><p>For syntax errors - the offset into the text where the error occurred.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="traceback.TracebackException.end_offset">
@@ -456,13 +489,15 @@ Can be <code class="docutils literal notranslate"><span class="pre">None</span><
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.10.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="traceback.TracebackException.msg">
 <span class="sig-name descname"><span class="pre">msg</span></span></dt>
 <dd><p>For syntax errors - the compiler error message.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="traceback.TracebackException.from_exception">
@@ -470,7 +505,8 @@ Can be <code class="docutils literal notranslate"><span class="pre">None</span><
 <dd><p>Capture an exception for later rendering. <em>limit</em>, <em>lookup_lines</em> and
 <em>capture_locals</em> are as for the <a class="reference internal" href="#traceback.StackSummary" title="traceback.StackSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">StackSummary</span></code></a> class.</p>
 <p>Note that when locals are captured, they are also shown in the traceback.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="traceback.TracebackException.print">
@@ -480,7 +516,8 @@ Can be <code class="docutils literal notranslate"><span class="pre">None</span><
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.11.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="traceback.TracebackException.format">
@@ -491,7 +528,8 @@ will not be formatted.</p>
 <p>The return value is a generator of strings, each ending in a newline and
 some containing internal newlines. <a class="reference internal" href="#traceback.print_exception" title="traceback.print_exception"><code class="xref py py-func docutils literal notranslate"><span class="pre">print_exception()</span></code></a>
 is a wrapper around this method which just prints the lines to a file.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="traceback.TracebackException.format_exception_only">
@@ -513,13 +551,15 @@ included in the output.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.13: </span>Added the <em>show_group</em> parameter.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="stacksummary-objects">
-<h2><code class="xref py py-class docutils literal notranslate"><span class="pre">StackSummary</span></code> Objects</h2>
+<h2 class="sigil_not_in_toc"><code class="xref py py-class docutils literal notranslate"><span class="pre">StackSummary</span></code> Objects</h2>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.5.</span></p>
 </div>
@@ -544,7 +584,8 @@ representations.</p>
 <p><span class="versionmodified changed">Changed in version 3.12: </span>Exceptions raised from <a class="reference internal" href="functions.xhtml#repr" title="repr"><code class="xref py py-func docutils literal notranslate"><span class="pre">repr()</span></code></a> on a local variable (when
 <em>capture_locals</em> is <code class="docutils literal notranslate"><span class="pre">True</span></code>) are no longer propagated to the caller.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="traceback.StackSummary.from_list">
@@ -553,7 +594,8 @@ representations.</p>
 <a class="reference internal" href="#traceback.FrameSummary" title="traceback.FrameSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">FrameSummary</span></code></a> objects or old-style list of tuples.  Each tuple
 should be a 4-tuple with <em>filename</em>, <em>lineno</em>, <em>name</em>, <em>line</em> as the
 elements.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="traceback.StackSummary.format">
@@ -569,7 +611,8 @@ number of further repetitions.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Long sequences of repeated frames are now abbreviated.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="traceback.StackSummary.format_frame_summary">
@@ -582,13 +625,15 @@ frame is omitted from the output.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.11.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="framesummary-objects">
-<h2><code class="xref py py-class docutils literal notranslate"><span class="pre">FrameSummary</span></code> Objects</h2>
+<h2 class="sigil_not_in_toc"><code class="xref py py-class docutils literal notranslate"><span class="pre">FrameSummary</span></code> Objects</h2>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.5.</span></p>
 </div>
@@ -614,20 +659,23 @@ summary for later display.</p>
 <dd><p>The filename of the source code for this frame. Equivalent to accessing
 <a class="reference internal" href="../reference/datamodel.xhtml#codeobject.co_filename" title="codeobject.co_filename"><code class="xref py py-attr docutils literal notranslate"><span class="pre">f.f_code.co_filename</span></code></a> on a
 <a class="reference internal" href="../reference/datamodel.xhtml#frame-objects"><span class="std std-ref">frame object</span></a> <em>f</em>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="traceback.FrameSummary.lineno">
 <span class="sig-name descname"><span class="pre">lineno</span></span></dt>
 <dd><p>The line number of the source code for this frame.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="traceback.FrameSummary.name">
 <span class="sig-name descname"><span class="pre">name</span></span></dt>
 <dd><p>Equivalent to accessing <a class="reference internal" href="../reference/datamodel.xhtml#codeobject.co_name" title="codeobject.co_name"><code class="xref py py-attr docutils literal notranslate"><span class="pre">f.f_code.co_name</span></code></a> on
 a <a class="reference internal" href="../reference/datamodel.xhtml#frame-objects"><span class="std std-ref">frame object</span></a> <em>f</em>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="traceback.FrameSummary.line">
@@ -635,13 +683,15 @@ a <a class="reference internal" href="../reference/datamodel.xhtml#frame-objects
 <dd><p>A string representing the source code for this frame, with leading and
 trailing whitespace stripped.
 If the source is not available, it is <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="examples-of-using-the-module-level-functions">
-<span id="traceback-example"></span><h2>Examples of Using the Module-Level Functions</h2>
+<span id="traceback-example"></span><h2 class="sigil_not_in_toc">Examples of Using the Module-Level Functions</h2>
 <p>This simple example implements a basic read-eval-print loop, similar to (but
 less useful than) the standard Python interactive interpreter loop.  For a more
 complete implementation of the interpreter loop, refer to the <a class="reference internal" href="code.xhtml#module-code" title="code: Facilities to implement read-eval-print loops."><code class="xref py py-mod docutils literal notranslate"><span class="pre">code</span></code></a>
@@ -649,19 +699,20 @@ module.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span><span class="o">,</span><span class="w"> </span><span class="nn">traceback</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">run_user_code</span><span class="p">(</span><span class="n">envdir</span><span class="p">):</span>
-    <span class="n">source</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;&gt;&gt;&gt; &quot;</span><span class="p">)</span>
+    <span class="n">source</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"&gt;&gt;&gt; "</span><span class="p">)</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">exec</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">envdir</span><span class="p">)</span>
     <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Exception in user code:&quot;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Exception in user code:"</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"-"</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>
         <span class="n">traceback</span><span class="o">.</span><span class="n">print_exc</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"-"</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>
 
 <span class="n">envdir</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">run_user_code</span><span class="p">(</span><span class="n">envdir</span><span class="p">)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The following example demonstrates the different ways to print and format the
 exception and traceback:</p>
@@ -676,45 +727,46 @@ exception and traceback:</p>
 <span class="k">try</span><span class="p">:</span>
     <span class="n">lumberjack</span><span class="p">()</span>
 <span class="k">except</span> <span class="ne">IndexError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;*** print_tb:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"*** print_tb:"</span><span class="p">)</span>
     <span class="n">traceback</span><span class="o">.</span><span class="n">print_tb</span><span class="p">(</span><span class="n">exc</span><span class="o">.</span><span class="n">__traceback__</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;*** print_exception:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"*** print_exception:"</span><span class="p">)</span>
     <span class="n">traceback</span><span class="o">.</span><span class="n">print_exception</span><span class="p">(</span><span class="n">exc</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;*** print_exc:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"*** print_exc:"</span><span class="p">)</span>
     <span class="n">traceback</span><span class="o">.</span><span class="n">print_exc</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;*** format_exc, first and last line:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"*** format_exc, first and last line:"</span><span class="p">)</span>
     <span class="n">formatted_lines</span> <span class="o">=</span> <span class="n">traceback</span><span class="o">.</span><span class="n">format_exc</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">formatted_lines</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">formatted_lines</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;*** format_exception:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"*** format_exception:"</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">traceback</span><span class="o">.</span><span class="n">format_exception</span><span class="p">(</span><span class="n">exc</span><span class="p">)))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;*** extract_tb:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"*** extract_tb:"</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">traceback</span><span class="o">.</span><span class="n">extract_tb</span><span class="p">(</span><span class="n">exc</span><span class="o">.</span><span class="n">__traceback__</span><span class="p">)))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;*** format_tb:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"*** format_tb:"</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">traceback</span><span class="o">.</span><span class="n">format_tb</span><span class="p">(</span><span class="n">exc</span><span class="o">.</span><span class="n">__traceback__</span><span class="p">)))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;*** tb_lineno:&quot;</span><span class="p">,</span> <span class="n">exc</span><span class="o">.</span><span class="n">__traceback__</span><span class="o">.</span><span class="n">tb_lineno</span><span class="p">)</span>
-</pre></div>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"*** tb_lineno:"</span><span class="p">,</span> <span class="n">exc</span><span class="o">.</span><span class="n">__traceback__</span><span class="o">.</span><span class="n">tb_lineno</span><span class="p">)</span>
+</pre>
+</div>
 </div>
 <p>The output for the example would look similar to this:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>*** print_tb:
-  File &quot;&lt;doctest...&gt;&quot;, line 10, in &lt;module&gt;
+  File "&lt;doctest...&gt;", line 10, in &lt;module&gt;
     lumberjack()
     ~~~~~~~~~~^^
 *** print_exception:
 Traceback (most recent call last):
-  File &quot;&lt;doctest...&gt;&quot;, line 10, in &lt;module&gt;
+  File "&lt;doctest...&gt;", line 10, in &lt;module&gt;
     lumberjack()
     ~~~~~~~~~~^^
-  File &quot;&lt;doctest...&gt;&quot;, line 4, in lumberjack
+  File "&lt;doctest...&gt;", line 4, in lumberjack
     bright_side_of_life()
     ~~~~~~~~~~~~~~~~~~~^^
 IndexError: tuple index out of range
 *** print_exc:
 Traceback (most recent call last):
-  File &quot;&lt;doctest...&gt;&quot;, line 10, in &lt;module&gt;
+  File "&lt;doctest...&gt;", line 10, in &lt;module&gt;
     lumberjack()
     ~~~~~~~~~~^^
-  File &quot;&lt;doctest...&gt;&quot;, line 4, in lumberjack
+  File "&lt;doctest...&gt;", line 4, in lumberjack
     bright_side_of_life()
     ~~~~~~~~~~~~~~~~~~~^^
 IndexError: tuple index out of range
@@ -722,21 +774,22 @@ IndexError: tuple index out of range
 Traceback (most recent call last):
 IndexError: tuple index out of range
 *** format_exception:
-[&#39;Traceback (most recent call last):\n&#39;,
- &#39;  File &quot;&lt;doctest default[0]&gt;&quot;, line 10, in &lt;module&gt;\n    lumberjack()\n    ~~~~~~~~~~^^\n&#39;,
- &#39;  File &quot;&lt;doctest default[0]&gt;&quot;, line 4, in lumberjack\n    bright_side_of_life()\n    ~~~~~~~~~~~~~~~~~~~^^\n&#39;,
- &#39;  File &quot;&lt;doctest default[0]&gt;&quot;, line 7, in bright_side_of_life\n    return tuple()[0]\n           ~~~~~~~^^^\n&#39;,
- &#39;IndexError: tuple index out of range\n&#39;]
+['Traceback (most recent call last):\n',
+ '  File "&lt;doctest default[0]&gt;", line 10, in &lt;module&gt;\n    lumberjack()\n    ~~~~~~~~~~^^\n',
+ '  File "&lt;doctest default[0]&gt;", line 4, in lumberjack\n    bright_side_of_life()\n    ~~~~~~~~~~~~~~~~~~~^^\n',
+ '  File "&lt;doctest default[0]&gt;", line 7, in bright_side_of_life\n    return tuple()[0]\n           ~~~~~~~^^^\n',
+ 'IndexError: tuple index out of range\n']
 *** extract_tb:
 [&lt;FrameSummary file &lt;doctest...&gt;, line 10 in &lt;module&gt;&gt;,
  &lt;FrameSummary file &lt;doctest...&gt;, line 4 in lumberjack&gt;,
  &lt;FrameSummary file &lt;doctest...&gt;, line 7 in bright_side_of_life&gt;]
 *** format_tb:
-[&#39;  File &quot;&lt;doctest default[0]&gt;&quot;, line 10, in &lt;module&gt;\n    lumberjack()\n    ~~~~~~~~~~^^\n&#39;,
- &#39;  File &quot;&lt;doctest default[0]&gt;&quot;, line 4, in lumberjack\n    bright_side_of_life()\n    ~~~~~~~~~~~~~~~~~~~^^\n&#39;,
- &#39;  File &quot;&lt;doctest default[0]&gt;&quot;, line 7, in bright_side_of_life\n    return tuple()[0]\n           ~~~~~~~^^^\n&#39;]
+['  File "&lt;doctest default[0]&gt;", line 10, in &lt;module&gt;\n    lumberjack()\n    ~~~~~~~~~~^^\n',
+ '  File "&lt;doctest default[0]&gt;", line 4, in lumberjack\n    bright_side_of_life()\n    ~~~~~~~~~~~~~~~~~~~^^\n',
+ '  File "&lt;doctest default[0]&gt;", line 7, in bright_side_of_life\n    return tuple()[0]\n           ~~~~~~~^^^\n']
 *** tb_lineno: 10
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The following example shows the different ways to print and format the stack:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">traceback</span>
@@ -749,34 +802,36 @@ IndexError: tuple index out of range
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">traceback</span><span class="o">.</span><span class="n">format_stack</span><span class="p">()))</span>
 <span class="gp">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">another_function</span><span class="p">()</span>
-  File <span class="nb">&quot;&lt;doctest&gt;&quot;</span>, line <span class="m">10</span>, in <span class="n">&lt;module&gt;</span>
+  File <span class="nb">"&lt;doctest&gt;"</span>, line <span class="m">10</span>, in <span class="n">&lt;module&gt;</span>
 <span class="w">    </span><span class="n">another_function</span><span class="p">()</span>
-  File <span class="nb">&quot;&lt;doctest&gt;&quot;</span>, line <span class="m">3</span>, in <span class="n">another_function</span>
+  File <span class="nb">"&lt;doctest&gt;"</span>, line <span class="m">3</span>, in <span class="n">another_function</span>
 <span class="w">    </span><span class="n">lumberstack</span><span class="p">()</span>
-  File <span class="nb">&quot;&lt;doctest&gt;&quot;</span>, line <span class="m">6</span>, in <span class="n">lumberstack</span>
+  File <span class="nb">"&lt;doctest&gt;"</span>, line <span class="m">6</span>, in <span class="n">lumberstack</span>
 <span class="w">    </span><span class="n">traceback</span><span class="o">.</span><span class="n">print_stack</span><span class="p">()</span>
-<span class="x">[(&#39;&lt;doctest&gt;&#39;, 10, &#39;&lt;module&gt;&#39;, &#39;another_function()&#39;),</span>
-<span class="x"> (&#39;&lt;doctest&gt;&#39;, 3, &#39;another_function&#39;, &#39;lumberstack()&#39;),</span>
-<span class="x"> (&#39;&lt;doctest&gt;&#39;, 7, &#39;lumberstack&#39;, &#39;print(repr(traceback.extract_stack()))&#39;)]</span>
-<span class="x">[&#39;  File &quot;&lt;doctest&gt;&quot;, line 10, in &lt;module&gt;\n    another_function()\n&#39;,</span>
-<span class="x"> &#39;  File &quot;&lt;doctest&gt;&quot;, line 3, in another_function\n    lumberstack()\n&#39;,</span>
-<span class="x"> &#39;  File &quot;&lt;doctest&gt;&quot;, line 8, in lumberstack\n    print(repr(traceback.format_stack()))\n&#39;]</span>
-</pre></div>
+<span class="x">[('&lt;doctest&gt;', 10, '&lt;module&gt;', 'another_function()'),</span>
+<span class="x"> ('&lt;doctest&gt;', 3, 'another_function', 'lumberstack()'),</span>
+<span class="x"> ('&lt;doctest&gt;', 7, 'lumberstack', 'print(repr(traceback.extract_stack()))')]</span>
+<span class="x">['  File "&lt;doctest&gt;", line 10, in &lt;module&gt;\n    another_function()\n',</span>
+<span class="x"> '  File "&lt;doctest&gt;", line 3, in another_function\n    lumberstack()\n',</span>
+<span class="x"> '  File "&lt;doctest&gt;", line 8, in lumberstack\n    print(repr(traceback.format_stack()))\n']</span>
+</pre>
+</div>
 </div>
 <p>This last example demonstrates the final few formatting functions:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">traceback</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">traceback</span><span class="o">.</span><span class="n">format_list</span><span class="p">([(</span><span class="s1">&#39;spam.py&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;&lt;module&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;spam.eggs()&#39;</span><span class="p">),</span>
-<span class="gp">... </span>                       <span class="p">(</span><span class="s1">&#39;eggs.py&#39;</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;return &quot;bacon&quot;&#39;</span><span class="p">)])</span>
-<span class="go">[&#39;  File &quot;spam.py&quot;, line 3, in &lt;module&gt;\n    spam.eggs()\n&#39;,</span>
-<span class="go"> &#39;  File &quot;eggs.py&quot;, line 42, in eggs\n    return &quot;bacon&quot;\n&#39;]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">an_error</span> <span class="o">=</span> <span class="ne">IndexError</span><span class="p">(</span><span class="s1">&#39;tuple index out of range&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">traceback</span><span class="o">.</span><span class="n">format_list</span><span class="p">([(</span><span class="s1">'spam.py'</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">'&lt;module&gt;'</span><span class="p">,</span> <span class="s1">'spam.eggs()'</span><span class="p">),</span>
+<span class="gp">... </span>                       <span class="p">(</span><span class="s1">'eggs.py'</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="s1">'eggs'</span><span class="p">,</span> <span class="s1">'return "bacon"'</span><span class="p">)])</span>
+<span class="go">['  File "spam.py", line 3, in &lt;module&gt;\n    spam.eggs()\n',</span>
+<span class="go"> '  File "eggs.py", line 42, in eggs\n    return "bacon"\n']</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">an_error</span> <span class="o">=</span> <span class="ne">IndexError</span><span class="p">(</span><span class="s1">'tuple index out of range'</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">traceback</span><span class="o">.</span><span class="n">format_exception_only</span><span class="p">(</span><span class="n">an_error</span><span class="p">)</span>
-<span class="go">[&#39;IndexError: tuple index out of range\n&#39;]</span>
-</pre></div>
+<span class="go">['IndexError: tuple index out of range\n']</span>
+</pre>
+</div>
 </div>
 </section>
 <section id="examples-of-using-tracebackexception">
-<h2>Examples of Using <a class="reference internal" href="#traceback.TracebackException" title="traceback.TracebackException"><code class="xref py py-class docutils literal notranslate"><span class="pre">TracebackException</span></code></a></h2>
+<h2 class="sigil_not_in_toc">Examples of Using <a class="reference internal" href="#traceback.TracebackException" title="traceback.TracebackException"><code class="xref py py-class docutils literal notranslate"><span class="pre">TracebackException</span></code></a></h2>
 <p>With the helper class, we have more options:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">traceback</span><span class="w"> </span><span class="kn">import</span> <span class="n">TracebackException</span>
@@ -785,7 +840,7 @@ IndexError: tuple index out of range
 <span class="gp">... </span>    <span class="n">bright_side_of_life</span><span class="p">()</span>
 <span class="gp">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">def</span><span class="w"> </span><span class="nf">bright_side_of_life</span><span class="p">():</span>
-<span class="gp">... </span>    <span class="n">t</span> <span class="o">=</span> <span class="s2">&quot;bright&quot;</span><span class="p">,</span> <span class="s2">&quot;side&quot;</span><span class="p">,</span> <span class="s2">&quot;of&quot;</span><span class="p">,</span> <span class="s2">&quot;life&quot;</span>
+<span class="gp">... </span>    <span class="n">t</span> <span class="o">=</span> <span class="s2">"bright"</span><span class="p">,</span> <span class="s2">"side"</span><span class="p">,</span> <span class="s2">"of"</span><span class="p">,</span> <span class="s2">"life"</span>
 <span class="gp">... </span>    <span class="k">return</span> <span class="n">t</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
 <span class="gp">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">try</span><span class="p">:</span>
@@ -804,10 +859,10 @@ IndexError: tuple index out of range
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># limit works as with the module-level functions</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">TracebackException</span><span class="o">.</span><span class="n">from_exception</span><span class="p">(</span><span class="n">exc</span><span class="p">,</span> <span class="n">limit</span><span class="o">=-</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>
 <span class="gt">Traceback (most recent call last):</span>
-  File <span class="nb">&quot;&lt;python-input-1&gt;&quot;</span>, line <span class="m">6</span>, in <span class="n">lumberjack</span>
+  File <span class="nb">"&lt;python-input-1&gt;"</span>, line <span class="m">6</span>, in <span class="n">lumberjack</span>
 <span class="w">    </span><span class="n">bright_side_of_life</span><span class="p">()</span>
 <span class="w">    </span><span class="pm">~~~~~~~~~~~~~~~~~~~^^</span>
-  File <span class="nb">&quot;&lt;python-input-1&gt;&quot;</span>, line <span class="m">10</span>, in <span class="n">bright_side_of_life</span>
+  File <span class="nb">"&lt;python-input-1&gt;"</span>, line <span class="m">10</span>, in <span class="n">bright_side_of_life</span>
 <span class="w">    </span><span class="k">return</span> <span class="n">t</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
 <span class="w">           </span><span class="pm">~^^^</span>
 <span class="gr">IndexError</span>: <span class="n">tuple index out of range</span>
@@ -815,26 +870,26 @@ IndexError: tuple index out of range
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># capture_locals adds local variables in frames</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">TracebackException</span><span class="o">.</span><span class="n">from_exception</span><span class="p">(</span><span class="n">exc</span><span class="p">,</span> <span class="n">limit</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="n">capture_locals</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>
 <span class="gt">Traceback (most recent call last):</span>
-  File <span class="nb">&quot;&lt;python-input-1&gt;&quot;</span>, line <span class="m">6</span>, in <span class="n">lumberjack</span>
+  File <span class="nb">"&lt;python-input-1&gt;"</span>, line <span class="m">6</span>, in <span class="n">lumberjack</span>
 <span class="w">    </span><span class="n">bright_side_of_life</span><span class="p">()</span>
 <span class="w">    </span><span class="pm">~~~~~~~~~~~~~~~~~~~^^</span>
-  File <span class="nb">&quot;&lt;python-input-1&gt;&quot;</span>, line <span class="m">10</span>, in <span class="n">bright_side_of_life</span>
+  File <span class="nb">"&lt;python-input-1&gt;"</span>, line <span class="m">10</span>, in <span class="n">bright_side_of_life</span>
 <span class="w">    </span><span class="k">return</span> <span class="n">t</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
 <span class="w">           </span><span class="pm">~^^^</span>
-<span class="w">    </span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;bright&quot;</span><span class="p">,</span> <span class="s2">&quot;side&quot;</span><span class="p">,</span> <span class="s2">&quot;of&quot;</span><span class="p">,</span> <span class="s2">&quot;life&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"bright"</span><span class="p">,</span> <span class="s2">"side"</span><span class="p">,</span> <span class="s2">"of"</span><span class="p">,</span> <span class="s2">"life"</span><span class="p">)</span>
 <span class="gr">IndexError</span>: <span class="n">tuple index out of range</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># The *chain* kwarg to print() controls whether chained</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># exceptions are displayed</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">TracebackException</span><span class="o">.</span><span class="n">from_exception</span><span class="p">(</span><span class="n">chained_exc</span><span class="p">)</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>
 <span class="gt">Traceback (most recent call last):</span>
-  File <span class="nb">&quot;&lt;python-input-19&gt;&quot;</span>, line <span class="m">4</span>, in <span class="n">&lt;module&gt;</span>
+  File <span class="nb">"&lt;python-input-19&gt;"</span>, line <span class="m">4</span>, in <span class="n">&lt;module&gt;</span>
 <span class="w">    </span><span class="n">lumberjack</span><span class="p">()</span>
 <span class="w">    </span><span class="pm">~~~~~~~~~~^^</span>
-  File <span class="nb">&quot;&lt;python-input-8&gt;&quot;</span>, line <span class="m">7</span>, in <span class="n">lumberjack</span>
+  File <span class="nb">"&lt;python-input-8&gt;"</span>, line <span class="m">7</span>, in <span class="n">lumberjack</span>
 <span class="w">    </span><span class="n">bright_side_of_life</span><span class="p">()</span>
 <span class="w">    </span><span class="pm">~~~~~~~~~~~~~~~~~~~^^</span>
-  File <span class="nb">&quot;&lt;python-input-8&gt;&quot;</span>, line <span class="m">11</span>, in <span class="n">bright_side_of_life</span>
+  File <span class="nb">"&lt;python-input-8&gt;"</span>, line <span class="m">11</span>, in <span class="n">bright_side_of_life</span>
 <span class="w">    </span><span class="k">return</span> <span class="n">t</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
 <span class="w">           </span><span class="pm">~^^^</span>
 <span class="gr">IndexError</span>: <span class="n">tuple index out of range</span>
@@ -842,18 +897,19 @@ IndexError: tuple index out of range
 <span class="gt">During handling of the above exception, another exception occurred:</span>
 
 <span class="gt">Traceback (most recent call last):</span>
-  File <span class="nb">&quot;&lt;python-input-19&gt;&quot;</span>, line <span class="m">6</span>, in <span class="n">&lt;module&gt;</span>
+  File <span class="nb">"&lt;python-input-19&gt;"</span>, line <span class="m">6</span>, in <span class="n">&lt;module&gt;</span>
 <span class="w">    </span><span class="mi">1</span><span class="o">/</span><span class="mi">0</span>
 <span class="w">    </span><span class="pm">~^~</span>
 <span class="gr">ZeroDivisionError</span>: <span class="n">division by zero</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">TracebackException</span><span class="o">.</span><span class="n">from_exception</span><span class="p">(</span><span class="n">chained_exc</span><span class="p">)</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="n">chain</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="gt">Traceback (most recent call last):</span>
-  File <span class="nb">&quot;&lt;python-input-19&gt;&quot;</span>, line <span class="m">6</span>, in <span class="n">&lt;module&gt;</span>
+  File <span class="nb">"&lt;python-input-19&gt;"</span>, line <span class="m">6</span>, in <span class="n">&lt;module&gt;</span>
 <span class="w">    </span><span class="mi">1</span><span class="o">/</span><span class="mi">0</span>
 <span class="w">    </span><span class="pm">~^~</span>
 <span class="gr">ZeroDivisionError</span>: <span class="n">division by zero</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 </section>
@@ -864,5 +920,5 @@ IndexError: tuple index out of range
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

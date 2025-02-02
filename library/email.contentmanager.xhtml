@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="email.contentmanager: Managing MIME Content" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/library/email.contentmanager.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="Source code: Lib/email/contentmanager.py[https://github.com/python/cpython/tree/3.13/Lib/email/contentmanager.py] Content Manager Instances: Currently the email package provides only one concrete c..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="Source code: Lib/email/contentmanager.py[https://github.com/python/cpython/tree/3.13/Lib/email/contentmanager.py] Content Manager Instances: Currently the email package provides only one concrete c..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="email.contentmanager: Managing MIME Content"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/library/email.contentmanager.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="Source code: Lib/email/contentmanager.py[https://github.com/python/cpython/tree/3.13/Lib/email/contentmanager.py] Content Manager Instances: Currently the email package provides only one concrete c..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="Source code: Lib/email/contentmanager.py[https://github.com/python/cpython/tree/3.13/Lib/email/contentmanager.py] Content Manager Instances: Currently the email package provides only one concrete c..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>email.contentmanager: Managing MIME Content</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/library/email.contentmanager.html" />
+    <link rel="canonical" href="https://docs.python.org/3/library/email.contentmanager.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -45,7 +46,7 @@
   <section id="module-email.contentmanager">
 <span id="email-contentmanager-managing-mime-content"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">email.contentmanager</span></code>: Managing MIME Content</h1>
 <p><strong>Source code:</strong> <a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.13/Lib/email/contentmanager.py">Lib/email/contentmanager.py</a><span class="link-target"> [https://github.com/python/cpython/tree/3.13/Lib/email/contentmanager.py]</span></p>
-<hr class="docutils" />
+<hr class="docutils"/>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.6: </span><a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 </div>
@@ -72,7 +73,8 @@ stopping with the first one found:</p>
 </ul>
 <p>If none of these keys produce a handler, raise a <a class="reference internal" href="exceptions.xhtml#KeyError" title="KeyError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyError</span></code></a> for the
 full MIME type.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="email.contentmanager.ContentManager.set_content">
@@ -103,14 +105,16 @@ no handler for <code class="docutils literal notranslate"><span class="pre">None
 qualified name of the type.</p>
 <p>Also add a <em class="mailheader">MIME-Version</em> header if one is not present (see
 also <a class="reference internal" href="email.message.xhtml#email.message.MIMEPart" title="email.message.MIMEPart"><code class="xref py py-class docutils literal notranslate"><span class="pre">MIMEPart</span></code></a>).</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="email.contentmanager.ContentManager.add_get_handler">
 <span class="sig-name descname"><span class="pre">add_get_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handler</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Record the function <em>handler</em> as the handler for <em>key</em>.  For the possible
 values of <em>key</em>, see <a class="reference internal" href="#email.contentmanager.get_content" title="email.contentmanager.get_content"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_content()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="email.contentmanager.ContentManager.add_set_handler">
@@ -118,12 +122,14 @@ values of <em>key</em>, see <a class="reference internal" href="#email.contentma
 <dd><p>Record <em>handler</em> as the function to call when an object of a type
 matching <em>typekey</em> is passed to <a class="reference internal" href="#email.contentmanager.set_content" title="email.contentmanager.set_content"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_content()</span></code></a>.  For the possible
 values of <em>typekey</em>, see <a class="reference internal" href="#email.contentmanager.set_content" title="email.contentmanager.set_content"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_content()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 <section id="content-manager-instances">
-<h2>Content Manager Instances</h2>
+<h2 class="sigil_not_in_toc">Content Manager Instances</h2>
 <p>Currently the email package provides only one concrete content manager,
 <a class="reference internal" href="#email.contentmanager.raw_data_manager" title="email.contentmanager.raw_data_manager"><code class="xref py py-data docutils literal notranslate"><span class="pre">raw_data_manager</span></code></a>, although more may be added in the future.
 <a class="reference internal" href="#email.contentmanager.raw_data_manager" title="email.contentmanager.raw_data_manager"><code class="xref py py-data docutils literal notranslate"><span class="pre">raw_data_manager</span></code></a> is the
@@ -151,13 +157,14 @@ a <a class="reference internal" href="exceptions.xhtml#KeyError" title="KeyError
 <code class="docutils literal notranslate"><span class="pre">text</span></code> part and <em>errors</em> is specified, use it as the error handler when
 decoding the payload to unicode.  The default error handler is
 <code class="docutils literal notranslate"><span class="pre">replace</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="email.contentmanager.set_content">
-<span class="sig-prename descclassname"><span class="pre">email.contentmanager.</span></span><span class="sig-name descname"><span class="pre">set_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;'str'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subtype=&quot;plain&quot;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">charset='utf-8'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cte=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disposition=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cid=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers=None</span></span></em><span class="sig-paren">)</span></dt>
+<span class="sig-prename descclassname"><span class="pre">email.contentmanager.</span></span><span class="sig-name descname"><span class="pre">set_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;'str'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subtype="plain"</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">charset='utf-8'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cte=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disposition=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cid=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers=None</span></span></em><span class="sig-paren">)</span></dt>
 <dt class="sig sig-object py">
-<span class="sig-prename descclassname"><span class="pre">email.contentmanager.</span></span><span class="sig-name descname"><span class="pre">set_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;'bytes'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maintype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subtype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cte=&quot;base64&quot;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disposition=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cid=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers=None</span></span></em><span class="sig-paren">)</span></dt>
+<span class="sig-prename descclassname"><span class="pre">email.contentmanager.</span></span><span class="sig-name descname"><span class="pre">set_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;'bytes'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maintype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subtype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cte="base64"</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disposition=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cid=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers=None</span></span></em><span class="sig-paren">)</span></dt>
 <dt class="sig sig-object py">
 <span class="sig-prename descclassname"><span class="pre">email.contentmanager.</span></span><span class="sig-name descname"><span class="pre">set_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;'EmailMessage'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cte=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disposition=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cid=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers=None</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Add headers and payload to <em>msg</em>:</p>
@@ -225,9 +232,11 @@ resulting <code class="docutils literal notranslate"><span class="pre">(key,</sp
 <code class="docutils literal notranslate"><span class="pre">headername:</span> <span class="pre">headervalue</span></code> or a list of <code class="docutils literal notranslate"><span class="pre">header</span></code> objects
 (distinguished from strings by having a <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute), add the
 headers to <em>msg</em>.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 <p class="rubric">Footnotes</p>
 <aside class="footnote-list brackets">
@@ -245,5 +254,5 @@ headers to <em>msg</em>.</p>
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

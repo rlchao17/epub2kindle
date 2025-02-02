@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="mimetypes — Map filenames to MIME types" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/library/mimetypes.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="Source code: Lib/mimetypes.py[https://github.com/python/cpython/tree/3.13/Lib/mimetypes.py] The mimetypes module converts between a filename or URL and the MIME type associated with the filename ex..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="Source code: Lib/mimetypes.py[https://github.com/python/cpython/tree/3.13/Lib/mimetypes.py] The mimetypes module converts between a filename or URL and the MIME type associated with the filename ex..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="mimetypes — Map filenames to MIME types"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/library/mimetypes.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="Source code: Lib/mimetypes.py[https://github.com/python/cpython/tree/3.13/Lib/mimetypes.py] The mimetypes module converts between a filename or URL and the MIME type associated with the filename ex..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="Source code: Lib/mimetypes.py[https://github.com/python/cpython/tree/3.13/Lib/mimetypes.py] The mimetypes module converts between a filename or URL and the MIME type associated with the filename ex..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>mimetypes — Map filenames to MIME types</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/library/mimetypes.html" />
+    <link rel="canonical" href="https://docs.python.org/3/library/mimetypes.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -45,7 +46,7 @@
   <section id="module-mimetypes">
 <span id="mimetypes-map-filenames-to-mime-types"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">mimetypes</span></code> — Map filenames to MIME types</h1>
 <p><strong>Source code:</strong> <a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.13/Lib/mimetypes.py">Lib/mimetypes.py</a><span class="link-target"> [https://github.com/python/cpython/tree/3.13/Lib/mimetypes.py]</span></p>
-<hr class="docutils" id="index-0" />
+<hr class="docutils" id="index-0"/>
 <p>The <a class="reference internal" href="#module-mimetypes" title="mimetypes: Mapping of filename extensions to MIME types."><code class="xref py py-mod docutils literal notranslate"><span class="pre">mimetypes</span></code></a> module converts between a filename or URL and the MIME type
 associated with the filename extension.  Conversions are provided from filename
 to MIME type and from MIME type to filename extension; encodings are not
@@ -82,7 +83,8 @@ are also recognized.</p>
 <p><span class="versionmodified deprecated">Deprecated since version 3.13: </span>Passing a file path instead of URL is <a class="reference internal" href="../glossary.xhtml#term-soft-deprecated"><span class="xref std std-term">soft deprecated</span></a>.
 Use <a class="reference internal" href="#mimetypes.guess_file_type" title="mimetypes.guess_file_type"><code class="xref py py-func docutils literal notranslate"><span class="pre">guess_file_type()</span></code></a> for this.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="mimetypes.guess_file_type">
@@ -93,7 +95,8 @@ Path can be a string, a bytes object or a <a class="reference internal" href="..
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.13.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="mimetypes.guess_all_extensions">
@@ -104,7 +107,8 @@ including the leading dot (<code class="docutils literal notranslate"><span clas
 been associated with any particular data stream, but would be mapped to the MIME
 type <em>type</em> by <a class="reference internal" href="#mimetypes.guess_type" title="mimetypes.guess_type"><code class="xref py py-func docutils literal notranslate"><span class="pre">guess_type()</span></code></a> and <a class="reference internal" href="#mimetypes.guess_file_type" title="mimetypes.guess_file_type"><code class="xref py py-func docutils literal notranslate"><span class="pre">guess_file_type()</span></code></a>.</p>
 <p>The optional <em>strict</em> argument has the same meaning as with the <a class="reference internal" href="#mimetypes.guess_type" title="mimetypes.guess_type"><code class="xref py py-func docutils literal notranslate"><span class="pre">guess_type()</span></code></a> function.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="mimetypes.guess_extension">
@@ -116,7 +120,8 @@ particular data stream, but would be mapped to the MIME type <em>type</em> by
 <a class="reference internal" href="#mimetypes.guess_type" title="mimetypes.guess_type"><code class="xref py py-func docutils literal notranslate"><span class="pre">guess_type()</span></code></a> and <a class="reference internal" href="#mimetypes.guess_file_type" title="mimetypes.guess_file_type"><code class="xref py py-func docutils literal notranslate"><span class="pre">guess_file_type()</span></code></a>.
 If no extension can be guessed for <em>type</em>, <code class="docutils literal notranslate"><span class="pre">None</span></code> is returned.</p>
 <p>The optional <em>strict</em> argument has the same meaning as with the <a class="reference internal" href="#mimetypes.guess_type" title="mimetypes.guess_type"><code class="xref py py-func docutils literal notranslate"><span class="pre">guess_type()</span></code></a> function.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p>Some additional functions and data items are available for controlling the
 behavior of the module.</p>
@@ -137,7 +142,8 @@ when called multiple times.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.2: </span>Previously, Windows registry settings were ignored.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="mimetypes.read_mime_types">
@@ -146,7 +152,8 @@ when called multiple times.</p>
 returned as a dictionary mapping filename extensions, including the leading dot
 (<code class="docutils literal notranslate"><span class="pre">'.'</span></code>), to strings of the form <code class="docutils literal notranslate"><span class="pre">'type/subtype'</span></code>.  If the file <em>filename</em>
 does not exist or cannot be read, <code class="docutils literal notranslate"><span class="pre">None</span></code> is returned.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="mimetypes.add_type">
@@ -156,14 +163,16 @@ extension is already known, the new type will replace the old one. When the type
 is already known the extension will be added to the list of known extensions.</p>
 <p>When <em>strict</em> is <code class="docutils literal notranslate"><span class="pre">True</span></code> (the default), the mapping will be added to the
 official MIME types, otherwise to the non-standard ones.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="mimetypes.inited">
 <span class="sig-prename descclassname"><span class="pre">mimetypes.</span></span><span class="sig-name descname"><span class="pre">inited</span></span></dt>
 <dd><p>Flag indicating whether or not the global data structures have been initialized.
 This is set to <code class="docutils literal notranslate"><span class="pre">True</span></code> by <a class="reference internal" href="#mimetypes.init" title="mimetypes.init"><code class="xref py py-func docutils literal notranslate"><span class="pre">init()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="mimetypes.knownfiles">
@@ -171,7 +180,8 @@ This is set to <code class="docutils literal notranslate"><span class="pre">True
 <dd><p id="index-3">List of type map file names commonly installed.  These files are typically named
 <code class="file docutils literal notranslate"><span class="pre">mime.types</span></code> and are installed in different locations by different
 packages.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="mimetypes.suffix_map">
@@ -180,42 +190,47 @@ packages.</p>
 encoded files for which the encoding and the type are indicated by the same
 extension.  For example, the <code class="file docutils literal notranslate"><span class="pre">.tgz</span></code> extension is mapped to <code class="file docutils literal notranslate"><span class="pre">.tar.gz</span></code>
 to allow the encoding and type to be recognized separately.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="mimetypes.encodings_map">
 <span class="sig-prename descclassname"><span class="pre">mimetypes.</span></span><span class="sig-name descname"><span class="pre">encodings_map</span></span></dt>
 <dd><p>Dictionary mapping filename extensions to encoding types.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="mimetypes.types_map">
 <span class="sig-prename descclassname"><span class="pre">mimetypes.</span></span><span class="sig-name descname"><span class="pre">types_map</span></span></dt>
 <dd><p>Dictionary mapping filename extensions to MIME types.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="mimetypes.common_types">
 <span class="sig-prename descclassname"><span class="pre">mimetypes.</span></span><span class="sig-name descname"><span class="pre">common_types</span></span></dt>
 <dd><p>Dictionary mapping filename extensions to non-standard, but commonly found MIME
 types.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p>An example usage of the module:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">mimetypes</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mimetypes</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mimetypes</span><span class="o">.</span><span class="n">knownfiles</span>
-<span class="go">[&#39;/etc/mime.types&#39;, &#39;/etc/httpd/mime.types&#39;, ... ]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mimetypes</span><span class="o">.</span><span class="n">suffix_map</span><span class="p">[</span><span class="s1">&#39;.tgz&#39;</span><span class="p">]</span>
-<span class="go">&#39;.tar.gz&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mimetypes</span><span class="o">.</span><span class="n">encodings_map</span><span class="p">[</span><span class="s1">&#39;.gz&#39;</span><span class="p">]</span>
-<span class="go">&#39;gzip&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mimetypes</span><span class="o">.</span><span class="n">types_map</span><span class="p">[</span><span class="s1">&#39;.tgz&#39;</span><span class="p">]</span>
-<span class="go">&#39;application/x-tar-gz&#39;</span>
-</pre></div>
+<span class="go">['/etc/mime.types', '/etc/httpd/mime.types', ... ]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mimetypes</span><span class="o">.</span><span class="n">suffix_map</span><span class="p">[</span><span class="s1">'.tgz'</span><span class="p">]</span>
+<span class="go">'.tar.gz'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mimetypes</span><span class="o">.</span><span class="n">encodings_map</span><span class="p">[</span><span class="s1">'.gz'</span><span class="p">]</span>
+<span class="go">'gzip'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mimetypes</span><span class="o">.</span><span class="n">types_map</span><span class="p">[</span><span class="s1">'.tgz'</span><span class="p">]</span>
+<span class="go">'application/x-tar-gz'</span>
+</pre>
+</div>
 </div>
 <section id="mimetypes-objects">
-<span id="id1"></span><h2>MimeTypes Objects</h2>
+<span id="id1"></span><h2 class="sigil_not_in_toc">MimeTypes Objects</h2>
 <p>The <a class="reference internal" href="#mimetypes.MimeTypes" title="mimetypes.MimeTypes"><code class="xref py py-class docutils literal notranslate"><span class="pre">MimeTypes</span></code></a> class may be useful for applications which may want more
 than one MIME-type database; it provides an interface similar to the one of the
 <a class="reference internal" href="#module-mimetypes" title="mimetypes: Mapping of filename extensions to MIME types."><code class="xref py py-mod docutils literal notranslate"><span class="pre">mimetypes</span></code></a> module.</p>
@@ -238,14 +253,16 @@ encoded files for which the encoding and the type are indicated by the same
 extension.  For example, the <code class="file docutils literal notranslate"><span class="pre">.tgz</span></code> extension is mapped to <code class="file docutils literal notranslate"><span class="pre">.tar.gz</span></code>
 to allow the encoding and type to be recognized separately.  This is initially a
 copy of the global <a class="reference internal" href="#mimetypes.suffix_map" title="mimetypes.suffix_map"><code class="xref py py-data docutils literal notranslate"><span class="pre">suffix_map</span></code></a> defined in the module.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mimetypes.MimeTypes.encodings_map">
 <span class="sig-name descname"><span class="pre">encodings_map</span></span></dt>
 <dd><p>Dictionary mapping filename extensions to encoding types.  This is initially a
 copy of the global <a class="reference internal" href="#mimetypes.encodings_map" title="mimetypes.encodings_map"><code class="xref py py-data docutils literal notranslate"><span class="pre">encodings_map</span></code></a> defined in the module.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mimetypes.MimeTypes.types_map">
@@ -254,7 +271,8 @@ copy of the global <a class="reference internal" href="#mimetypes.encodings_map"
 the first dictionary is for the non-standards types and the second one is for
 the standard types. They are initialized by <a class="reference internal" href="#mimetypes.common_types" title="mimetypes.common_types"><code class="xref py py-data docutils literal notranslate"><span class="pre">common_types</span></code></a> and
 <a class="reference internal" href="#mimetypes.types_map" title="mimetypes.types_map"><code class="xref py py-data docutils literal notranslate"><span class="pre">types_map</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mimetypes.MimeTypes.types_map_inv">
@@ -263,21 +281,24 @@ the standard types. They are initialized by <a class="reference internal" href="
 extensions: the first dictionary is for the non-standards types and the
 second one is for the standard types. They are initialized by
 <a class="reference internal" href="#mimetypes.common_types" title="mimetypes.common_types"><code class="xref py py-data docutils literal notranslate"><span class="pre">common_types</span></code></a> and <a class="reference internal" href="#mimetypes.types_map" title="mimetypes.types_map"><code class="xref py py-data docutils literal notranslate"><span class="pre">types_map</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mimetypes.MimeTypes.guess_extension">
 <span class="sig-name descname"><span class="pre">guess_extension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Similar to the <a class="reference internal" href="#mimetypes.guess_extension" title="mimetypes.guess_extension"><code class="xref py py-func docutils literal notranslate"><span class="pre">guess_extension()</span></code></a> function, using the tables stored as part
 of the object.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mimetypes.MimeTypes.guess_type">
 <span class="sig-name descname"><span class="pre">guess_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Similar to the <a class="reference internal" href="#mimetypes.guess_type" title="mimetypes.guess_type"><code class="xref py py-func docutils literal notranslate"><span class="pre">guess_type()</span></code></a> function, using the tables stored as part of
 the object.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mimetypes.MimeTypes.guess_file_type">
@@ -287,14 +308,16 @@ as part of the object.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.13.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mimetypes.MimeTypes.guess_all_extensions">
 <span class="sig-name descname"><span class="pre">guess_all_extensions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Similar to the <a class="reference internal" href="#mimetypes.guess_all_extensions" title="mimetypes.guess_all_extensions"><code class="xref py py-func docutils literal notranslate"><span class="pre">guess_all_extensions()</span></code></a> function, using the tables stored
 as part of the object.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mimetypes.MimeTypes.read">
@@ -303,7 +326,8 @@ as part of the object.</p>
 parse the file.</p>
 <p>If <em>strict</em> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, information will be added to list of standard types,
 else to the list of non-standard types.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mimetypes.MimeTypes.readfp">
@@ -312,7 +336,8 @@ else to the list of non-standard types.</p>
 the standard <code class="file docutils literal notranslate"><span class="pre">mime.types</span></code> files.</p>
 <p>If <em>strict</em> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, information will be added to the list of standard
 types, else to the list of non-standard types.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mimetypes.MimeTypes.read_windows_registry">
@@ -326,7 +351,8 @@ types, else to the list of non-standard types.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.2.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mimetypes.MimeTypes.add_type">
@@ -336,9 +362,11 @@ extension is already known, the new type will replace the old one. When the type
 is already known the extension will be added to the list of known extensions.</p>
 <p>When <em>strict</em> is <code class="docutils literal notranslate"><span class="pre">True</span></code> (the default), the mapping will be added to the
 official MIME types, otherwise to the non-standard ones.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 </section>
@@ -349,5 +377,5 @@ official MIME types, otherwise to the non-standard ones.</p>
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

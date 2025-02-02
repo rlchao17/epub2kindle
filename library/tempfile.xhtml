@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="tempfile — Generate temporary files and directories" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/library/tempfile.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="Source code: Lib/tempfile.py[https://github.com/python/cpython/tree/3.13/Lib/tempfile.py] This module creates temporary files and directories. It works on all supported platforms. TemporaryFile, Na..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="Source code: Lib/tempfile.py[https://github.com/python/cpython/tree/3.13/Lib/tempfile.py] This module creates temporary files and directories. It works on all supported platforms. TemporaryFile, Na..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="tempfile — Generate temporary files and directories"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/library/tempfile.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="Source code: Lib/tempfile.py[https://github.com/python/cpython/tree/3.13/Lib/tempfile.py] This module creates temporary files and directories. It works on all supported platforms. TemporaryFile, Na..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="Source code: Lib/tempfile.py[https://github.com/python/cpython/tree/3.13/Lib/tempfile.py] This module creates temporary files and directories. It works on all supported platforms. TemporaryFile, Na..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>tempfile — Generate temporary files and directories</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/library/tempfile.html" />
+    <link rel="canonical" href="https://docs.python.org/3/library/tempfile.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -45,7 +46,7 @@
   <section id="module-tempfile">
 <span id="tempfile-generate-temporary-files-and-directories"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">tempfile</span></code> — Generate temporary files and directories</h1>
 <p><strong>Source code:</strong> <a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.13/Lib/tempfile.py">Lib/tempfile.py</a><span class="link-target"> [https://github.com/python/cpython/tree/3.13/Lib/tempfile.py]</span></p>
-<hr class="docutils" id="index-0" />
+<hr class="docutils" id="index-0"/>
 <p>This module creates temporary files and directories.  It works on all
 supported platforms. <a class="reference internal" href="#tempfile.TemporaryFile" title="tempfile.TemporaryFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">TemporaryFile</span></code></a>, <a class="reference internal" href="#tempfile.NamedTemporaryFile" title="tempfile.NamedTemporaryFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">NamedTemporaryFile</span></code></a>,
 <a class="reference internal" href="#tempfile.TemporaryDirectory" title="tempfile.TemporaryDirectory"><code class="xref py py-class docutils literal notranslate"><span class="pre">TemporaryDirectory</span></code></a>, and <a class="reference internal" href="#tempfile.SpooledTemporaryFile" title="tempfile.SpooledTemporaryFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpooledTemporaryFile</span></code></a> are high-level
@@ -95,7 +96,8 @@ for NamedTemporaryFile.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.8: </span>Added <em>errors</em> parameter.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="tempfile.NamedTemporaryFile">
@@ -161,7 +163,8 @@ cannot automatically delete any NamedTemporaryFiles it created.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.12: </span>Added <em>delete_on_close</em> parameter.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="tempfile.SpooledTemporaryFile">
@@ -176,7 +179,8 @@ contents are written to disk and operation proceeds as with
 <span class="sig-name descname"><span class="pre">rollover</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>The resulting file has one additional method, <code class="xref py py-meth docutils literal notranslate"><span class="pre">rollover()</span></code>, which
 causes the file to roll over to an on-disk file regardless of its size.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p>The returned object is a file-like object whose <code class="xref py py-attr docutils literal notranslate"><span class="pre">_file</span></code> attribute
 is either an <a class="reference internal" href="io.xhtml#io.BytesIO" title="io.BytesIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">io.BytesIO</span></code></a> or <a class="reference internal" href="io.xhtml#io.TextIOWrapper" title="io.TextIOWrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">io.TextIOWrapper</span></code></a> object
@@ -195,7 +199,8 @@ a normal file.</p>
 <a class="reference internal" href="io.xhtml#io.TextIOBase" title="io.TextIOBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">io.TextIOBase</span></code></a> abstract base classes (depending on whether binary
 or text <em>mode</em> was specified).</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="tempfile.TemporaryDirectory">
@@ -212,7 +217,8 @@ and all its contents are removed from the filesystem.</p>
 returned object.  When the returned object is used as a <a class="reference internal" href="../glossary.xhtml#term-context-manager"><span class="xref std std-term">context manager</span></a>, the
 <code class="xref py py-attr docutils literal notranslate"><span class="pre">name</span></code> will be assigned to the target of the <code class="xref std std-keyword docutils literal notranslate"><span class="pre">as</span></code> clause in
 the <a class="reference internal" href="../reference/compound_stmts.xhtml#with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">with</span></code></a> statement, if there is one.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="tempfile.TemporaryDirectory.cleanup">
@@ -225,7 +231,8 @@ and the remaining removable items deleted on a “best-effort” basis.
 Otherwise, errors will be raised in whatever context cleanup occurs
 (the <code class="xref py py-meth docutils literal notranslate"><span class="pre">cleanup()</span></code> call, exiting the context manager, when the object
 is garbage-collected or during interpreter shutdown).</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p>The <em>delete</em> parameter can be used to disable cleanup of the directory tree
 upon exiting the context.  While it may seem unusual for a context manager
@@ -242,7 +249,8 @@ other logic.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.12: </span>Added the <em>delete</em> parameter.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="tempfile.mkstemp">
@@ -290,7 +298,8 @@ an appropriate default value to be used.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>The <em>dir</em> parameter now accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="tempfile.mkdtemp">
@@ -316,7 +325,8 @@ an appropriate default value to be used.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.12: </span><a class="reference internal" href="#tempfile.mkdtemp" title="tempfile.mkdtemp"><code class="xref py py-func docutils literal notranslate"><span class="pre">mkdtemp()</span></code></a> now always returns an absolute path, even if <em>dir</em> is relative.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="tempfile.gettempdir">
@@ -346,7 +356,8 @@ the calling user can create files in.  The list is:</p>
 <p><span class="versionmodified changed">Changed in version 3.10: </span>Always returns a str.  Previously it would return any <a class="reference internal" href="#tempfile.tempdir" title="tempfile.tempdir"><code class="xref py py-data docutils literal notranslate"><span class="pre">tempdir</span></code></a>
 value regardless of type so long as it was not <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="tempfile.gettempdirb">
@@ -355,14 +366,16 @@ value regardless of type so long as it was not <code class="docutils literal not
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.5.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="tempfile.gettempprefix">
 <span class="sig-prename descclassname"><span class="pre">tempfile.</span></span><span class="sig-name descname"><span class="pre">gettempprefix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Return the filename prefix used to create temporary files.  This does not
 contain the directory component.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="tempfile.gettempprefixb">
@@ -371,7 +384,8 @@ contain the directory component.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.5.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <p>The module uses a global variable to store the name of the directory
 used for temporary files returned by <a class="reference internal" href="#tempfile.gettempdir" title="tempfile.gettempdir"><code class="xref py py-func docutils literal notranslate"><span class="pre">gettempdir()</span></code></a>.  It can be
@@ -399,55 +413,57 @@ str are supplied. Please do not write code expecting or
 depending on this. This awkward behavior is maintained for
 compatibility with the historical implementation.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <section id="examples">
-<span id="tempfile-examples"></span><h2>Examples</h2>
+<span id="tempfile-examples"></span><h2 class="sigil_not_in_toc">Examples</h2>
 <p>Here are some examples of typical usage of the <a class="reference internal" href="#module-tempfile" title="tempfile: Generate temporary files and directories."><code class="xref py py-mod docutils literal notranslate"><span class="pre">tempfile</span></code></a> module:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">tempfile</span>
 
 <span class="go"># create a temporary file and write some data to it</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">fp</span> <span class="o">=</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">TemporaryFile</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;Hello world!&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s1">'Hello world!'</span><span class="p">)</span>
 <span class="go"># read data from file</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">fp</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">fp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="go">b&#39;Hello world!&#39;</span>
+<span class="go">b'Hello world!'</span>
 <span class="go"># close the file, it will be removed</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">fp</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
 <span class="go"># create a temporary file using a context manager</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">TemporaryFile</span><span class="p">()</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
-<span class="gp">... </span>    <span class="n">fp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;Hello world!&#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">fp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s1">'Hello world!'</span><span class="p">)</span>
 <span class="gp">... </span>    <span class="n">fp</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="gp">... </span>    <span class="n">fp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="go">b&#39;Hello world!&#39;</span>
+<span class="go">b'Hello world!'</span>
 <span class="gp">&gt;&gt;&gt;</span>
 <span class="go"># file is now closed and removed</span>
 
 <span class="go"># create a temporary file using a context manager</span>
 <span class="go"># close the file, use the name to open the file again</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">NamedTemporaryFile</span><span class="p">(</span><span class="n">delete_on_close</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
-<span class="gp">... </span>    <span class="n">fp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;Hello world!&#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">fp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s1">'Hello world!'</span><span class="p">)</span>
 <span class="gp">... </span>    <span class="n">fp</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 <span class="gp">... </span><span class="c1"># the file is closed, but not removed</span>
 <span class="gp">... </span><span class="c1"># open the file again by using its name</span>
-<span class="gp">... </span>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fp</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fp</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">'rb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
 <span class="gp">... </span>        <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="go">b&#39;Hello world!&#39;</span>
+<span class="go">b'Hello world!'</span>
 <span class="gp">&gt;&gt;&gt;</span>
 <span class="go"># file is now removed</span>
 
 <span class="go"># create a temporary directory using the context manager</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">TemporaryDirectory</span><span class="p">()</span> <span class="k">as</span> <span class="n">tmpdirname</span><span class="p">:</span>
-<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;created temporary directory&#39;</span><span class="p">,</span> <span class="n">tmpdirname</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">'created temporary directory'</span><span class="p">,</span> <span class="n">tmpdirname</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt;</span>
 <span class="go"># directory and contents have been removed</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 <section id="deprecated-functions-and-variables">
-<span id="tempfile-mktemp-deprecated"></span><h2>Deprecated functions and variables</h2>
+<span id="tempfile-mktemp-deprecated"></span><h2 class="sigil_not_in_toc">Deprecated functions and variables</h2>
 <p>A historical way to create temporary files was to first generate a
 file name with the <a class="reference internal" href="#tempfile.mktemp" title="tempfile.mktemp"><code class="xref py py-func docutils literal notranslate"><span class="pre">mktemp()</span></code></a> function and then create a file
 using this name. Unfortunately this is not secure, because a different
@@ -475,17 +491,19 @@ be replaced easily with <a class="reference internal" href="#tempfile.NamedTempo
 <code class="docutils literal notranslate"><span class="pre">delete=False</span></code> parameter:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="n">NamedTemporaryFile</span><span class="p">(</span><span class="n">delete</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">name</span>
-<span class="go">&#39;/tmp/tmptjujjt&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;Hello World!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="go">'/tmp/tmptjujjt'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">"Hello World!</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
 <span class="go">13</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">unlink</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 <span class="go">False</span>
-</pre></div>
+</pre>
 </div>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 </section>
 </section>
@@ -496,5 +514,5 @@ be replaced easily with <a class="reference internal" href="#tempfile.NamedTempo
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="signal — Set handlers for asynchronous events" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/library/signal.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="Source code: Lib/signal.py[https://github.com/python/cpython/tree/3.13/Lib/signal.py] This module provides mechanisms to use signal handlers in Python. General rules: The signal.signal() function a..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="Source code: Lib/signal.py[https://github.com/python/cpython/tree/3.13/Lib/signal.py] This module provides mechanisms to use signal handlers in Python. General rules: The signal.signal() function a..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="signal — Set handlers for asynchronous events"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/library/signal.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="Source code: Lib/signal.py[https://github.com/python/cpython/tree/3.13/Lib/signal.py] This module provides mechanisms to use signal handlers in Python. General rules: The signal.signal() function a..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="Source code: Lib/signal.py[https://github.com/python/cpython/tree/3.13/Lib/signal.py] This module provides mechanisms to use signal handlers in Python. General rules: The signal.signal() function a..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>signal — Set handlers for asynchronous events</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/library/signal.html" />
+    <link rel="canonical" href="https://docs.python.org/3/library/signal.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -45,10 +46,10 @@
   <section id="module-signal">
 <span id="signal-set-handlers-for-asynchronous-events"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">signal</span></code> — Set handlers for asynchronous events</h1>
 <p><strong>Source code:</strong> <a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.13/Lib/signal.py">Lib/signal.py</a><span class="link-target"> [https://github.com/python/cpython/tree/3.13/Lib/signal.py]</span></p>
-<hr class="docutils" />
+<hr class="docutils"/>
 <p>This module provides mechanisms to use signal handlers in Python.</p>
 <section id="general-rules">
-<h2>General rules</h2>
+<h2 class="sigil_not_in_toc">General rules</h2>
 <p>The <a class="reference internal" href="#signal.signal" title="signal.signal"><code class="xref py py-func docutils literal notranslate"><span class="pre">signal.signal()</span></code></a> function allows defining custom handlers to be
 executed when a signal is received.  A small number of default handlers are
 installed: <a class="reference internal" href="#signal.SIGPIPE" title="signal.SIGPIPE"><code class="xref py py-const docutils literal notranslate"><span class="pre">SIGPIPE</span></code></a> is ignored (so write errors on pipes and sockets
@@ -63,7 +64,7 @@ underlying implementation), with the exception of the handler for
 differently. Several functions and signals are not available on these
 platforms.</p>
 <section id="execution-of-python-signal-handlers">
-<h3>Execution of Python signal handlers</h3>
+<h3 class="sigil_not_in_toc">Execution of Python signal handlers</h3>
 <p>A Python signal handler does not get executed inside the low-level (C) signal
 handler.  Instead, the low-level signal handler sets a flag which tells the
 <a class="reference internal" href="../glossary.xhtml#term-virtual-machine"><span class="xref std std-term">virtual machine</span></a> to execute the corresponding Python signal handler
@@ -86,7 +87,7 @@ discussion.</p></li>
 </ul>
 </section>
 <section id="signals-and-threads">
-<span id="id1"></span><h3>Signals and threads</h3>
+<span id="id1"></span><h3 class="sigil_not_in_toc">Signals and threads</h3>
 <p>Python signal handlers are always executed in the main Python thread of the main interpreter,
 even if the signal was received in another thread.  This means that signals
 can’t be used as a means of inter-thread communication.  You can use
@@ -95,7 +96,7 @@ the synchronization primitives from the <a class="reference internal" href="thre
 </section>
 </section>
 <section id="module-contents">
-<h2>Module contents</h2>
+<h2 class="sigil_not_in_toc">Module contents</h2>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.5: </span>signal (SIG*), handler (<a class="reference internal" href="#signal.SIG_DFL" title="signal.SIG_DFL"><code class="xref py py-const docutils literal notranslate"><span class="pre">SIG_DFL</span></code></a>, <a class="reference internal" href="#signal.SIG_IGN" title="signal.SIG_IGN"><code class="xref py py-const docutils literal notranslate"><span class="pre">SIG_IGN</span></code></a>) and sigmask
 (<a class="reference internal" href="#signal.SIG_BLOCK" title="signal.SIG_BLOCK"><code class="xref py py-const docutils literal notranslate"><span class="pre">SIG_BLOCK</span></code></a>, <a class="reference internal" href="#signal.SIG_UNBLOCK" title="signal.SIG_UNBLOCK"><code class="xref py py-const docutils literal notranslate"><span class="pre">SIG_UNBLOCK</span></code></a>, <a class="reference internal" href="#signal.SIG_SETMASK" title="signal.SIG_SETMASK"><code class="xref py py-const docutils literal notranslate"><span class="pre">SIG_SETMASK</span></code></a>)
@@ -113,7 +114,8 @@ related constants listed below were turned into
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.5.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="signal.Handlers">
@@ -122,7 +124,8 @@ related constants listed below were turned into
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.5.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="signal.Sigmasks">
@@ -136,7 +139,8 @@ related constants listed below were turned into
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.5.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <p>The variables defined in the <a class="reference internal" href="#module-signal" title="signal: Set handlers for asynchronous events."><code class="xref py py-mod docutils literal notranslate"><span class="pre">signal</span></code></a> module are:</p>
 <dl class="py data">
@@ -146,20 +150,23 @@ related constants listed below were turned into
 the default function for the signal.  For example, on most systems the
 default action for <code class="xref py py-const docutils literal notranslate"><span class="pre">SIGQUIT</span></code> is to dump core and exit, while the
 default action for <a class="reference internal" href="#signal.SIGCHLD" title="signal.SIGCHLD"><code class="xref py py-const docutils literal notranslate"><span class="pre">SIGCHLD</span></code></a> is to simply ignore it.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="signal.SIG_IGN">
 <span class="sig-prename descclassname"><span class="pre">signal.</span></span><span class="sig-name descname"><span class="pre">SIG_IGN</span></span></dt>
 <dd><p>This is another standard signal handler, which will simply ignore the given
 signal.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="signal.SIGABRT">
 <span class="sig-prename descclassname"><span class="pre">signal.</span></span><span class="sig-name descname"><span class="pre">SIGABRT</span></span></dt>
 <dd><p>Abort signal from <em class="manpage"><a class="manpage reference external" href="https://manpages.debian.org/abort(3)">abort(3)</a><span class="link-target"> [https://manpages.debian.org/abort(3)]</span></em>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="signal.SIGALRM">
@@ -168,7 +175,8 @@ signal.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="signal.SIGBREAK">
@@ -177,7 +185,8 @@ signal.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Windows.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="signal.SIGBUS">
@@ -186,7 +195,8 @@ signal.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="signal.SIGCHLD">
@@ -195,7 +205,8 @@ signal.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="signal.SIGCLD">
@@ -204,7 +215,8 @@ signal.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: not macOS.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="signal.SIGCONT">
@@ -213,7 +225,8 @@ signal.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="signal.SIGFPE">
@@ -224,7 +237,8 @@ signal.</p>
 <p><a class="reference internal" href="exceptions.xhtml#ZeroDivisionError" title="ZeroDivisionError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ZeroDivisionError</span></code></a> is raised when the second argument of a division
 or modulo operation is zero.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="signal.SIGHUP">
@@ -233,20 +247,23 @@ or modulo operation is zero.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="signal.SIGILL">
 <span class="sig-prename descclassname"><span class="pre">signal.</span></span><span class="sig-name descname"><span class="pre">SIGILL</span></span></dt>
 <dd><p>Illegal instruction.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="signal.SIGINT">
 <span class="sig-prename descclassname"><span class="pre">signal.</span></span><span class="sig-name descname"><span class="pre">SIGINT</span></span></dt>
 <dd><p>Interrupt from keyboard (CTRL + C).</p>
 <p>Default action is to raise <a class="reference internal" href="exceptions.xhtml#KeyboardInterrupt" title="KeyboardInterrupt"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyboardInterrupt</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="signal.SIGKILL">
@@ -256,7 +273,8 @@ or modulo operation is zero.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="signal.SIGPIPE">
@@ -266,13 +284,15 @@ or modulo operation is zero.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="signal.SIGSEGV">
 <span class="sig-prename descclassname"><span class="pre">signal.</span></span><span class="sig-name descname"><span class="pre">SIGSEGV</span></span></dt>
 <dd><p>Segmentation fault: invalid memory reference.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="signal.SIGSTKFLT">
@@ -280,7 +300,8 @@ or modulo operation is zero.</p>
 <dd><blockquote>
 <div><p>Stack fault on coprocessor. The Linux kernel does not raise this signal: it
 can only be raised in user space.</p>
-</div></blockquote>
+</div>
+</blockquote>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Linux.</p>
 <p>On architectures where the signal is available. See
@@ -289,13 +310,15 @@ the man page <em class="manpage"><a class="manpage reference external" href="htt
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.11.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="signal.SIGTERM">
 <span class="sig-prename descclassname"><span class="pre">signal.</span></span><span class="sig-name descname"><span class="pre">SIGTERM</span></span></dt>
 <dd><p>Termination signal.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="signal.SIGUSR1">
@@ -304,7 +327,8 @@ the man page <em class="manpage"><a class="manpage reference external" href="htt
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="signal.SIGUSR2">
@@ -313,7 +337,8 @@ the man page <em class="manpage"><a class="manpage reference external" href="htt
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="signal.SIGWINCH">
@@ -322,7 +347,8 @@ the man page <em class="manpage"><a class="manpage reference external" href="htt
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py">
@@ -334,7 +360,8 @@ names used in C programs, as found in <code class="docutils literal notranslate"
 <em class="manpage"><a class="manpage reference external" href="https://manpages.debian.org/signal(2)">signal(2)</a><span class="link-target"> [https://manpages.debian.org/signal(2)]</span></em>, on others the list is in <em class="manpage"><a class="manpage reference external" href="https://manpages.debian.org/signal(7)">signal(7)</a><span class="link-target"> [https://manpages.debian.org/signal(7)]</span></em>). Note that
 not all systems define the same set of signal names; only those names defined by
 the system are defined by this module.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="signal.CTRL_C_EVENT">
@@ -347,7 +374,8 @@ only be used with <a class="reference internal" href="os.xhtml#os.kill" title="o
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.2.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="signal.CTRL_BREAK_EVENT">
@@ -360,28 +388,32 @@ only be used with <a class="reference internal" href="os.xhtml#os.kill" title="o
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.2.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="signal.NSIG">
 <span class="sig-prename descclassname"><span class="pre">signal.</span></span><span class="sig-name descname"><span class="pre">NSIG</span></span></dt>
 <dd><p>One more than the number of the highest signal number.
 Use <a class="reference internal" href="#signal.valid_signals" title="signal.valid_signals"><code class="xref py py-func docutils literal notranslate"><span class="pre">valid_signals()</span></code></a> to get valid signal numbers.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="signal.ITIMER_REAL">
 <span class="sig-prename descclassname"><span class="pre">signal.</span></span><span class="sig-name descname"><span class="pre">ITIMER_REAL</span></span></dt>
 <dd><p>Decrements interval timer in real time, and delivers <a class="reference internal" href="#signal.SIGALRM" title="signal.SIGALRM"><code class="xref py py-const docutils literal notranslate"><span class="pre">SIGALRM</span></code></a> upon
 expiration.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="signal.ITIMER_VIRTUAL">
 <span class="sig-prename descclassname"><span class="pre">signal.</span></span><span class="sig-name descname"><span class="pre">ITIMER_VIRTUAL</span></span></dt>
 <dd><p>Decrements interval timer only when the process is executing, and delivers
 SIGVTALRM upon expiration.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="signal.ITIMER_PROF">
@@ -390,7 +422,8 @@ SIGVTALRM upon expiration.</p>
 system is executing on behalf of the process. Coupled with ITIMER_VIRTUAL,
 this timer is usually used to profile the time spent by the application
 in user and kernel space. SIGPROF is delivered upon expiration.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="signal.SIG_BLOCK">
@@ -400,7 +433,8 @@ indicating that signals are to be blocked.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="signal.SIG_UNBLOCK">
@@ -410,7 +444,8 @@ indicating that signals are to be unblocked.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="signal.SIG_SETMASK">
@@ -420,7 +455,8 @@ indicating that the signal mask is to be replaced.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <p>The <a class="reference internal" href="#module-signal" title="signal: Set handlers for asynchronous events."><code class="xref py py-mod docutils literal notranslate"><span class="pre">signal</span></code></a> module defines one exception:</p>
 <dl class="py exception">
@@ -434,7 +470,8 @@ This error is a subtype of <a class="reference internal" href="exceptions.xhtml#
 <p><span class="versionmodified added">Added in version 3.3: </span>This error used to be a subtype of <a class="reference internal" href="exceptions.xhtml#IOError" title="IOError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">IOError</span></code></a>, which is now an
 alias of <a class="reference internal" href="exceptions.xhtml#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <p>The <a class="reference internal" href="#module-signal" title="signal: Set handlers for asynchronous events."><code class="xref py py-mod docutils literal notranslate"><span class="pre">signal</span></code></a> module defines the following functions:</p>
 <dl class="py function">
@@ -450,7 +487,8 @@ canceled.  If the return value is zero, no alarm is currently scheduled.</p>
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix.</p>
 <p>See the man page <em class="manpage"><a class="manpage reference external" href="https://manpages.debian.org/alarm(2)">alarm(2)</a><span class="link-target"> [https://manpages.debian.org/alarm(2)]</span></em> for further information.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="signal.getsignal">
@@ -462,7 +500,8 @@ may be a callable Python object, or one of the special values
 <a class="reference internal" href="#signal.SIG_DFL" title="signal.SIG_DFL"><code class="xref py py-const docutils literal notranslate"><span class="pre">signal.SIG_DFL</span></code></a> means that the default way of handling the signal was
 previously in use, and <code class="docutils literal notranslate"><span class="pre">None</span></code> means that the previous signal handler was not
 installed from Python.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="signal.strsignal">
@@ -473,7 +512,8 @@ description. Raises <a class="reference internal" href="exceptions.xhtml#ValueEr
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.8.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="signal.valid_signals">
@@ -484,7 +524,8 @@ for internal use.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.8.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="signal.pause">
@@ -497,7 +538,8 @@ will then be called.  Returns nothing.</p>
 </div>
 <p>See also <a class="reference internal" href="#signal.sigwait" title="signal.sigwait"><code class="xref py py-func docutils literal notranslate"><span class="pre">sigwait()</span></code></a>, <a class="reference internal" href="#signal.sigwaitinfo" title="signal.sigwaitinfo"><code class="xref py py-func docutils literal notranslate"><span class="pre">sigwaitinfo()</span></code></a>, <a class="reference internal" href="#signal.sigtimedwait" title="signal.sigtimedwait"><code class="xref py py-func docutils literal notranslate"><span class="pre">sigtimedwait()</span></code></a> and
 <a class="reference internal" href="#signal.sigpending" title="signal.sigpending"><code class="xref py py-func docutils literal notranslate"><span class="pre">sigpending()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="signal.raise_signal">
@@ -506,7 +548,8 @@ will then be called.  Returns nothing.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.8.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="signal.pidfd_send_signal">
@@ -522,7 +565,8 @@ values are currently defined.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.9.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="signal.pthread_kill">
@@ -548,7 +592,8 @@ performed; this can be used to check if the target thread is still running.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="signal.pthread_sigmask">
@@ -581,7 +626,8 @@ signal mask of the calling thread.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="signal.setitimer">
@@ -603,7 +649,8 @@ and <a class="reference internal" href="#signal.ITIMER_PROF" title="signal.ITIME
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="signal.getitimer">
@@ -612,7 +659,8 @@ and <a class="reference internal" href="#signal.ITIMER_PROF" title="signal.ITIME
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="signal.set_wakeup_fd">
@@ -653,7 +701,8 @@ are not confused by spurious warning messages.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.7: </span>Added <code class="docutils literal notranslate"><span class="pre">warn_on_full_buffer</span></code> parameter.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="signal.siginterrupt">
@@ -668,7 +717,8 @@ system calls will be interrupted.  Returns nothing.</p>
 <p>Note that installing a signal handler with <a class="reference internal" href="#module-signal" title="signal: Set handlers for asynchronous events."><code class="xref py py-func docutils literal notranslate"><span class="pre">signal()</span></code></a> will reset the
 restart behaviour to interruptible by implicitly calling
 <code class="xref c c-func docutils literal notranslate"><span class="pre">siginterrupt()</span></code> with a true <em>flag</em> value for the given signal.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="signal.signal">
@@ -693,7 +743,8 @@ A <a class="reference internal" href="exceptions.xhtml#ValueError" title="ValueE
 Note that not all systems define the same set of signal names; an
 <a class="reference internal" href="exceptions.xhtml#AttributeError" title="AttributeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">AttributeError</span></code></a> will be raised if a signal name is not defined as
 <code class="docutils literal notranslate"><span class="pre">SIG*</span></code> module level constant.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="signal.sigpending">
@@ -709,7 +760,8 @@ set of the pending signals.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="signal.sigwait">
@@ -726,7 +778,8 @@ signals specified in the signal set <em>sigset</em>.  The function accepts the s
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="signal.sigwaitinfo">
@@ -756,7 +809,8 @@ handler is not called for the delivered signal. The function raises an
 and the signal handler does not raise an exception (see <span class="target" id="index-0"></span><a class="pep reference external" href="https://peps.python.org/pep-0475/"><strong>PEP 475</strong></a><span class="link-target"> [https://peps.python.org/pep-0475/]</span> for
 the rationale).</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="signal.sigtimedwait">
@@ -777,11 +831,12 @@ performed. Returns <a class="reference internal" href="constants.xhtml#None" tit
 by a signal not in <em>sigset</em> and the signal handler does not raise an
 exception (see <span class="target" id="index-1"></span><a class="pep reference external" href="https://peps.python.org/pep-0475/"><strong>PEP 475</strong></a><span class="link-target"> [https://peps.python.org/pep-0475/]</span> for the rationale).</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="examples">
-<span id="signal-example"></span><h2>Examples</h2>
+<span id="signal-example"></span><h2 class="sigil_not_in_toc">Examples</h2>
 <p>Here is a minimal example program. It uses the <a class="reference internal" href="#signal.alarm" title="signal.alarm"><code class="xref py py-func docutils literal notranslate"><span class="pre">alarm()</span></code></a> function to limit
 the time spent waiting to open a file; this is useful if the file is for a
 serial device that may not be turned on, which would normally cause the
@@ -792,22 +847,23 @@ be sent, and the handler raises an exception.</p>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">handler</span><span class="p">(</span><span class="n">signum</span><span class="p">,</span> <span class="n">frame</span><span class="p">):</span>
     <span class="n">signame</span> <span class="o">=</span> <span class="n">signal</span><span class="o">.</span><span class="n">Signals</span><span class="p">(</span><span class="n">signum</span><span class="p">)</span><span class="o">.</span><span class="n">name</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Signal handler called with signal </span><span class="si">{</span><span class="n">signame</span><span class="si">}</span><span class="s1"> (</span><span class="si">{</span><span class="n">signum</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
-    <span class="k">raise</span> <span class="ne">OSError</span><span class="p">(</span><span class="s2">&quot;Couldn&#39;t open device!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Signal handler called with signal </span><span class="si">{</span><span class="n">signame</span><span class="si">}</span><span class="s1"> (</span><span class="si">{</span><span class="n">signum</span><span class="si">}</span><span class="s1">)'</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="ne">OSError</span><span class="p">(</span><span class="s2">"Couldn't open device!"</span><span class="p">)</span>
 
 <span class="c1"># Set the signal handler and a 5-second alarm</span>
 <span class="n">signal</span><span class="o">.</span><span class="n">signal</span><span class="p">(</span><span class="n">signal</span><span class="o">.</span><span class="n">SIGALRM</span><span class="p">,</span> <span class="n">handler</span><span class="p">)</span>
 <span class="n">signal</span><span class="o">.</span><span class="n">alarm</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 
 <span class="c1"># This open() may hang indefinitely</span>
-<span class="n">fd</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;/dev/ttyS0&#39;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">O_RDWR</span><span class="p">)</span>
+<span class="n">fd</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">'/dev/ttyS0'</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">O_RDWR</span><span class="p">)</span>
 
 <span class="n">signal</span><span class="o">.</span><span class="n">alarm</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>          <span class="c1"># Disable the alarm</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 <section id="note-on-sigpipe">
-<h2>Note on SIGPIPE</h2>
+<h2 class="sigil_not_in_toc">Note on SIGPIPE</h2>
 <p>Piping output of your program to tools like <em class="manpage"><a class="manpage reference external" href="https://manpages.debian.org/head(1)">head(1)</a><span class="link-target"> [https://manpages.debian.org/head(1)]</span></em> will
 cause a <a class="reference internal" href="#signal.SIGPIPE" title="signal.SIGPIPE"><code class="xref py py-const docutils literal notranslate"><span class="pre">SIGPIPE</span></code></a> signal to be sent to your process when the receiver
 of its standard output closes early.  This results in an exception
@@ -820,7 +876,7 @@ case, wrap your entry point to catch this exception as follows:</p>
     <span class="k">try</span><span class="p">:</span>
         <span class="c1"># simulate large output (your code replaces this loop)</span>
         <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">):</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"y"</span><span class="p">)</span>
         <span class="c1"># flush output here to force SIGPIPE to be triggered</span>
         <span class="c1"># while inside this try block.</span>
         <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
@@ -831,9 +887,10 @@ case, wrap your entry point to catch this exception as follows:</p>
         <span class="n">os</span><span class="o">.</span><span class="n">dup2</span><span class="p">(</span><span class="n">devnull</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">fileno</span><span class="p">())</span>
         <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Python exits with error code 1 on EPIPE</span>
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
     <span class="n">main</span><span class="p">()</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Do not set <a class="reference internal" href="#signal.SIGPIPE" title="signal.SIGPIPE"><code class="xref py py-const docutils literal notranslate"><span class="pre">SIGPIPE</span></code></a>’s disposition to <a class="reference internal" href="#signal.SIG_DFL" title="signal.SIG_DFL"><code class="xref py py-const docutils literal notranslate"><span class="pre">SIG_DFL</span></code></a> in
 order to avoid <a class="reference internal" href="exceptions.xhtml#BrokenPipeError" title="BrokenPipeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">BrokenPipeError</span></code></a>.  Doing that would cause
@@ -842,7 +899,7 @@ connection is interrupted while your program is still writing to
 it.</p>
 </section>
 <section id="note-on-signal-handlers-and-exceptions">
-<span id="handlers-and-exceptions"></span><h2>Note on Signal Handlers and Exceptions</h2>
+<span id="handlers-and-exceptions"></span><h2 class="sigil_not_in_toc">Note on Signal Handlers and Exceptions</h2>
 <p>If a signal handler raises an exception, the exception will be propagated to
 the main thread and may be raised after any <a class="reference internal" href="../glossary.xhtml#term-bytecode"><span class="xref std std-term">bytecode</span></a> instruction. Most
 notably, a <a class="reference internal" href="exceptions.xhtml#KeyboardInterrupt" title="KeyboardInterrupt"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyboardInterrupt</span></code></a> may appear at any point during execution.
@@ -864,7 +921,8 @@ a signal handler) may on rare occasions put the program in an unexpected state.<
     <span class="k">def</span><span class="w"> </span><span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc_type</span><span class="p">,</span> <span class="n">exc_val</span><span class="p">,</span> <span class="n">exc_tb</span><span class="p">):</span>
         <span class="o">...</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">lock</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>For many programs, especially those that merely want to exit on
 <a class="reference internal" href="exceptions.xhtml#KeyboardInterrupt" title="KeyboardInterrupt"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyboardInterrupt</span></code></a>, this is not a problem, but applications that are
@@ -881,8 +939,8 @@ of gracefully shutting down.  Instead, they should install their own
 <span class="n">interrupt_read</span><span class="p">,</span> <span class="n">interrupt_write</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socketpair</span><span class="p">()</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">handler</span><span class="p">(</span><span class="n">signum</span><span class="p">,</span> <span class="n">frame</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Signal handler called with signal&#39;</span><span class="p">,</span> <span class="n">signum</span><span class="p">)</span>
-    <span class="n">interrupt_write</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\0</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Signal handler called with signal'</span><span class="p">,</span> <span class="n">signum</span><span class="p">)</span>
+    <span class="n">interrupt_write</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="sa">b</span><span class="s1">'</span><span class="se">\0</span><span class="s1">'</span><span class="p">)</span>
 <span class="n">signal</span><span class="o">.</span><span class="n">signal</span><span class="p">(</span><span class="n">signal</span><span class="o">.</span><span class="n">SIGINT</span><span class="p">,</span> <span class="n">handler</span><span class="p">)</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">serve_forever</span><span class="p">(</span><span class="n">httpd</span><span class="p">):</span>
@@ -898,11 +956,12 @@ of gracefully shutting down.  Instead, they should install their own
             <span class="k">if</span> <span class="n">key</span><span class="o">.</span><span class="n">fileobj</span> <span class="o">==</span> <span class="n">httpd</span><span class="p">:</span>
                 <span class="n">httpd</span><span class="o">.</span><span class="n">handle_request</span><span class="p">()</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Serving on port 8000&quot;</span><span class="p">)</span>
-<span class="n">httpd</span> <span class="o">=</span> <span class="n">HTTPServer</span><span class="p">((</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="mi">8000</span><span class="p">),</span> <span class="n">SimpleHTTPRequestHandler</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Serving on port 8000"</span><span class="p">)</span>
+<span class="n">httpd</span> <span class="o">=</span> <span class="n">HTTPServer</span><span class="p">((</span><span class="s1">''</span><span class="p">,</span> <span class="mi">8000</span><span class="p">),</span> <span class="n">SimpleHTTPRequestHandler</span><span class="p">)</span>
 <span class="n">serve_forever</span><span class="p">(</span><span class="n">httpd</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Shutdown...&quot;</span><span class="p">)</span>
-</pre></div>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Shutdown..."</span><span class="p">)</span>
+</pre>
+</div>
 </div>
 </section>
 </section>
@@ -913,5 +972,5 @@ of gracefully shutting down.  Instead, they should install their own
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

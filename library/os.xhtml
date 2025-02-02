@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="os — Miscellaneous operating system interfaces" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/library/os.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="Source code: Lib/os.py[https://github.com/python/cpython/tree/3.13/Lib/os.py] This module provides a portable way of using operating system dependent functionality. If you just want to read or writ..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="Source code: Lib/os.py[https://github.com/python/cpython/tree/3.13/Lib/os.py] This module provides a portable way of using operating system dependent functionality. If you just want to read or writ..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="os — Miscellaneous operating system interfaces"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/library/os.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="Source code: Lib/os.py[https://github.com/python/cpython/tree/3.13/Lib/os.py] This module provides a portable way of using operating system dependent functionality. If you just want to read or writ..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="Source code: Lib/os.py[https://github.com/python/cpython/tree/3.13/Lib/os.py] This module provides a portable way of using operating system dependent functionality. If you just want to read or writ..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>os — Miscellaneous operating system interfaces</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/library/os.html" />
+    <link rel="canonical" href="https://docs.python.org/3/library/os.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -45,7 +46,7 @@
   <section id="module-os">
 <span id="os-miscellaneous-operating-system-interfaces"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">os</span></code> — Miscellaneous operating system interfaces</h1>
 <p><strong>Source code:</strong> <a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.13/Lib/os.py">Lib/os.py</a><span class="link-target"> [https://github.com/python/cpython/tree/3.13/Lib/os.py]</span></p>
-<hr class="docutils" />
+<hr class="docutils"/>
 <p>This module provides a portable way of using operating system dependent
 functionality.  If you just want to read or write a file see <a class="reference internal" href="functions.xhtml#open" title="open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a>, if
 you want to manipulate paths, see the <a class="reference internal" href="os.path.xhtml#module-os.path" title="os.path: Operations on pathnames."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os.path</span></code></a> module, and if you want to
@@ -84,7 +85,8 @@ that have the correct type, but are not accepted by the operating system.</p>
 <dt class="sig sig-object py" id="os.error">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">error</span></span></dt>
 <dd><p>An alias for the built-in <a class="reference internal" href="exceptions.xhtml#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> exception.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.name">
@@ -99,10 +101,11 @@ system-dependent version information.</p>
 <p>The <a class="reference internal" href="platform.xhtml#module-platform" title="platform: Retrieves as much platform identifying data as possible."><code class="xref py py-mod docutils literal notranslate"><span class="pre">platform</span></code></a> module provides detailed checks for the
 system’s identity.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <section id="file-names-command-line-arguments-and-environment-variables">
-<span id="filesystem-encoding"></span><span id="os-filenames"></span><h2>File Names, Command Line Arguments, and Environment Variables</h2>
+<span id="filesystem-encoding"></span><span id="os-filenames"></span><h2 class="sigil_not_in_toc">File Names, Command Line Arguments, and Environment Variables</h2>
 <p>In Python, file names, command line arguments, and environment variables are
 represented using the string type. On some systems, decoding these strings to
 and from bytes is necessary before passing them to the operating system. Python
@@ -125,7 +128,7 @@ encoding fails to provide this guarantee, API functions can raise
 <p>See also the <a class="reference internal" href="../glossary.xhtml#term-locale-encoding"><span class="xref std std-term">locale encoding</span></a>.</p>
 </section>
 <section id="python-utf-8-mode">
-<span id="utf8-mode"></span><h2>Python UTF-8 Mode</h2>
+<span id="utf8-mode"></span><h2 class="sigil_not_in_toc">Python UTF-8 Mode</h2>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7: </span>See <span class="target" id="index-0"></span><a class="pep reference external" href="https://peps.python.org/pep-0540/"><strong>PEP 540</strong></a><span class="link-target"> [https://peps.python.org/pep-0540/]</span> for more details.</p>
 </div>
@@ -176,13 +179,14 @@ and the <a class="reference internal" href="../glossary.xhtml#term-filesystem-en
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt><span class="target" id="index-5"></span><a class="pep reference external" href="https://peps.python.org/pep-0686/"><strong>PEP 686</strong></a><span class="link-target"> [https://peps.python.org/pep-0686/]</span></dt><dd><p>Python 3.15 will make <a class="reference internal" href="#utf8-mode"><span class="std std-ref">Python UTF-8 Mode</span></a> default.</p>
+<dt><span class="target" id="index-5"></span><a class="pep reference external" href="https://peps.python.org/pep-0686/"><strong>PEP 686</strong></a><span class="link-target"> [https://peps.python.org/pep-0686/]</span></dt>
+<dd><p>Python 3.15 will make <a class="reference internal" href="#utf8-mode"><span class="std std-ref">Python UTF-8 Mode</span></a> default.</p>
 </dd>
 </dl>
 </div>
 </section>
 <section id="process-parameters">
-<span id="os-procinfo"></span><h2>Process Parameters</h2>
+<span id="os-procinfo"></span><h2 class="sigil_not_in_toc">Process Parameters</h2>
 <p>These functions and data items provide information and operate on the current
 process and user.</p>
 <dl class="py function">
@@ -192,7 +196,8 @@ process and user.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.environ">
@@ -200,7 +205,7 @@ process and user.</p>
 <dd><p>A <a class="reference internal" href="../glossary.xhtml#term-mapping"><span class="xref std std-term">mapping</span></a> object where keys and values are strings that represent
 the process environment.  For example, <code class="docutils literal notranslate"><span class="pre">environ['HOME']</span></code> is the pathname
 of your home directory (on some platforms), and is equivalent to
-<code class="docutils literal notranslate"><span class="pre">getenv(&quot;HOME&quot;)</span></code> in C.</p>
+<code class="docutils literal notranslate"><span class="pre">getenv("HOME")</span></code> in C.</p>
 <p>This mapping is captured the first time the <a class="reference internal" href="#module-os" title="os: Miscellaneous operating system interfaces."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os</span></code></a> module is imported,
 typically during Python startup as part of processing <code class="file docutils literal notranslate"><span class="pre">site.py</span></code>.  Changes
 to the environment made after this time are not reflected in <a class="reference internal" href="#os.environ" title="os.environ"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.environ</span></code></a>,
@@ -233,7 +238,8 @@ called.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.9: </span>Updated to support <span class="target" id="index-6"></span><a class="pep reference external" href="https://peps.python.org/pep-0584/"><strong>PEP 584</strong></a><span class="link-target"> [https://peps.python.org/pep-0584/]</span>’s merge (<code class="docutils literal notranslate"><span class="pre">|</span></code>) and update (<code class="docutils literal notranslate"><span class="pre">|=</span></code>) operators.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.environb">
@@ -250,7 +256,8 @@ and values are <a class="reference internal" href="stdtypes.xhtml#bytes" title="
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.9: </span>Updated to support <span class="target" id="index-7"></span><a class="pep reference external" href="https://peps.python.org/pep-0584/"><strong>PEP 584</strong></a><span class="link-target"> [https://peps.python.org/pep-0584/]</span>’s merge (<code class="docutils literal notranslate"><span class="pre">|</span></code>) and update (<code class="docutils literal notranslate"><span class="pre">|=</span></code>) operators.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py">
@@ -260,7 +267,8 @@ and values are <a class="reference internal" href="stdtypes.xhtml#bytes" title="
 <dt class="sig sig-object py">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">getcwd</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>These functions are described in <a class="reference internal" href="#os-file-dir"><span class="std std-ref">Files and Directories</span></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.fsencode">
@@ -276,7 +284,8 @@ unchanged.</p>
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Support added to accept objects implementing the <a class="reference internal" href="#os.PathLike" title="os.PathLike"><code class="xref py py-class docutils literal notranslate"><span class="pre">os.PathLike</span></code></a>
 interface.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.fsdecode">
@@ -292,7 +301,8 @@ unchanged.</p>
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Support added to accept objects implementing the <a class="reference internal" href="#os.PathLike" title="os.PathLike"><code class="xref py py-class docutils literal notranslate"><span class="pre">os.PathLike</span></code></a>
 interface.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.fspath">
@@ -305,7 +315,8 @@ In all other cases, <a class="reference internal" href="exceptions.xhtml#TypeErr
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.6.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="os.PathLike">
@@ -321,9 +332,11 @@ e.g. <a class="reference internal" href="pathlib.xhtml#pathlib.PurePath" title="
 <dd><p>Return the file system path representation of the object.</p>
 <p>The method should only return a <a class="reference internal" href="stdtypes.xhtml#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference internal" href="stdtypes.xhtml#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> object,
 with the preference being for <a class="reference internal" href="stdtypes.xhtml#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.getenv">
@@ -339,7 +352,8 @@ would like to use a different encoding.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, Windows.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.getenvb">
@@ -357,7 +371,8 @@ is <code class="docutils literal notranslate"><span class="pre">True</span></cod
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.2.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.get_exec_path">
@@ -370,7 +385,8 @@ By default, when <em>env</em> is <code class="docutils literal notranslate"><spa
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.2.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.getegid">
@@ -380,7 +396,8 @@ By default, when <em>env</em> is <code class="docutils literal notranslate"><spa
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.geteuid">
@@ -389,7 +406,8 @@ By default, when <em>env</em> is <code class="docutils literal notranslate"><spa
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.getgid">
@@ -400,7 +418,8 @@ By default, when <em>env</em> is <code class="docutils literal notranslate"><spa
 <p>The function is a stub on WASI, see <a class="reference internal" href="intro.xhtml#wasm-availability"><span class="std std-ref">WebAssembly platforms</span></a> for more
 information.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.getgrouplist">
@@ -415,7 +434,8 @@ otherwise be potentially omitted.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.getgroups">
@@ -440,7 +460,8 @@ calls to <a class="reference internal" href="#os.setgroups" title="os.setgroups"
 deployment target value, <code class="xref py py-const docutils literal notranslate"><span class="pre">MACOSX_DEPLOYMENT_TARGET</span></code>, can be
 obtained with <a class="reference internal" href="sysconfig.xhtml#sysconfig.get_config_var" title="sysconfig.get_config_var"><code class="xref py py-func docutils literal notranslate"><span class="pre">sysconfig.get_config_var()</span></code></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.getlogin">
@@ -454,7 +475,8 @@ current real user id.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, Windows, not WASI.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.getpgid">
@@ -464,7 +486,8 @@ the process group id of the current process is returned.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.getpgrp">
@@ -473,7 +496,8 @@ the process group id of the current process is returned.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.getpid">
@@ -481,7 +505,8 @@ the process group id of the current process is returned.</p>
 <dd><p id="index-13">Return the current process id.</p>
 <p>The function is a stub on WASI, see <a class="reference internal" href="intro.xhtml#wasm-availability"><span class="std std-ref">WebAssembly platforms</span></a> for more
 information.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.getppid">
@@ -495,7 +520,8 @@ the same id, which may be already reused by another process.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.2: </span>Added support for Windows.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.getpriority">
@@ -513,7 +539,8 @@ or the real user ID of the calling process.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.PRIO_PROCESS">
@@ -529,7 +556,8 @@ or the real user ID of the calling process.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.PRIO_DARWIN_THREAD">
@@ -547,7 +575,8 @@ or the real user ID of the calling process.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.12.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.getresuid">
@@ -560,7 +589,8 @@ real, effective, and saved user ids.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.2.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.getresgid">
@@ -573,7 +603,8 @@ real, effective, and saved group ids.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.2.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.getuid">
@@ -584,7 +615,8 @@ real, effective, and saved group ids.</p>
 <p>The function is a stub on WASI, see <a class="reference internal" href="intro.xhtml#wasm-availability"><span class="std std-ref">WebAssembly platforms</span></a> for more
 information.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.initgroups">
@@ -598,7 +630,8 @@ group id.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.2.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.putenv">
@@ -620,7 +653,8 @@ cause memory leaks. Refer to the system documentation for <code class="xref c c-
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.9: </span>The function is now always available.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.setegid">
@@ -629,7 +663,8 @@ cause memory leaks. Refer to the system documentation for <code class="xref c c-
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI, not Android.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.seteuid">
@@ -638,7 +673,8 @@ cause memory leaks. Refer to the system documentation for <code class="xref c c-
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI, not Android.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.setgid">
@@ -647,7 +683,8 @@ cause memory leaks. Refer to the system documentation for <code class="xref c c-
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI, not Android.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.setgroups">
@@ -665,7 +702,8 @@ system-defined maximum number of effective group ids, typically 16.
 See the documentation for <a class="reference internal" href="#os.getgroups" title="os.getgroups"><code class="xref py py-func docutils literal notranslate"><span class="pre">getgroups()</span></code></a> for cases where it may not
 return the same group list set by calling setgroups().</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.setns">
@@ -689,10 +727,11 @@ e.g. <code class="docutils literal notranslate"><span class="pre">setns(fd,</spa
 The caller’s memberships in unspecified namespaces are left unchanged.</p>
 <p><em>fd</em> can be any object with a <a class="reference internal" href="io.xhtml#io.IOBase.fileno" title="io.IOBase.fileno"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fileno()</span></code></a> method, or a raw file descriptor.</p>
 <p>This example reassociates the thread with the <code class="docutils literal notranslate"><span class="pre">init</span></code> process’s network namespace:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">fd</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;/proc/1/ns/net&quot;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">O_RDONLY</span><span class="p">)</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">fd</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">"/proc/1/ns/net"</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">O_RDONLY</span><span class="p">)</span>
 <span class="n">os</span><span class="o">.</span><span class="n">setns</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">CLONE_NEWNET</span><span class="p">)</span>
 <span class="n">os</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="n">fd</span><span class="p">)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Linux &gt;= 3.0 with glibc &gt;= 2.14.</p>
@@ -704,7 +743,8 @@ The caller’s memberships in unspecified namespaces are left unchanged.</p>
 <p class="admonition-title">See also</p>
 <p>The <a class="reference internal" href="#os.unshare" title="os.unshare"><code class="xref py py-func docutils literal notranslate"><span class="pre">unshare()</span></code></a> function.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.setpgrp">
@@ -714,7 +754,8 @@ which version is implemented (if any).  See the Unix manual for the semantics.</
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.setpgid">
@@ -725,7 +766,8 @@ for the semantics.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.setpriority">
@@ -745,7 +787,8 @@ lower priorities cause more favorable scheduling.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.setregid">
@@ -754,7 +797,8 @@ lower priorities cause more favorable scheduling.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI, not Android.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.setresgid">
@@ -766,7 +810,8 @@ lower priorities cause more favorable scheduling.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.2.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.setresuid">
@@ -778,7 +823,8 @@ lower priorities cause more favorable scheduling.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.2.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.setreuid">
@@ -787,7 +833,8 @@ lower priorities cause more favorable scheduling.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI, not Android.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.getsid">
@@ -796,7 +843,8 @@ lower priorities cause more favorable scheduling.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.setsid">
@@ -805,7 +853,8 @@ lower priorities cause more favorable scheduling.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.setuid">
@@ -814,7 +863,8 @@ lower priorities cause more favorable scheduling.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI, not Android.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.strerror">
@@ -822,7 +872,8 @@ lower priorities cause more favorable scheduling.</p>
 <dd><p>Return the error message corresponding to the error code in <em>code</em>.
 On platforms where <code class="xref c c-func docutils literal notranslate"><span class="pre">strerror()</span></code> returns <code class="docutils literal notranslate"><span class="pre">NULL</span></code> when given an unknown
 error number, <a class="reference internal" href="exceptions.xhtml#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> is raised.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.supports_bytes_environ">
@@ -832,7 +883,8 @@ Windows).</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.2.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.umask">
@@ -840,7 +892,8 @@ Windows).</p>
 <dd><p>Set the current numeric umask and return the previous umask.</p>
 <p>The function is a stub on WASI, see <a class="reference internal" href="intro.xhtml#wasm-availability"><span class="std std-ref">WebAssembly platforms</span></a> for more
 information.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.uname">
@@ -873,7 +926,8 @@ Android.</p>
 <p><span class="versionmodified changed">Changed in version 3.3: </span>Return type changed from a tuple to a tuple-like object
 with named attributes.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.unsetenv">
@@ -889,7 +943,8 @@ don’t update <a class="reference internal" href="#os.environ" title="os.enviro
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.9: </span>The function is now always available and is also available on Windows.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.unshare">
@@ -914,7 +969,8 @@ execution context.</p>
 <p class="admonition-title">See also</p>
 <p>The <a class="reference internal" href="#os.setns" title="os.setns"><code class="xref py py-func docutils literal notranslate"><span class="pre">setns()</span></code></a> function.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <p id="os-unshare-clone-flags">Flags to the <a class="reference internal" href="#os.unshare" title="os.unshare"><code class="xref py py-func docutils literal notranslate"><span class="pre">unshare()</span></code></a> function, if the implementation supports them.
 See <em class="manpage"><a class="manpage reference external" href="https://manpages.debian.org/unshare(2)">unshare(2)</a><span class="link-target"> [https://manpages.debian.org/unshare(2)]</span></em> in the Linux manual
@@ -948,11 +1004,12 @@ for their exact effect and availability.</p>
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">CLONE_THREAD</span></span></dt>
 <dt class="sig sig-object py" id="os.CLONE_VM">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">CLONE_VM</span></span></dt>
-<dd></dd></dl>
+<dd></dd>
+</dl>
 
 </section>
 <section id="file-object-creation">
-<span id="os-newstreams"></span><h2>File Object Creation</h2>
+<span id="os-newstreams"></span><h2 class="sigil_not_in_toc">File Object Creation</h2>
 <p>These functions create new <a class="reference internal" href="../glossary.xhtml#term-file-object"><span class="xref std std-term">file objects</span></a>.  (See also
 <a class="reference internal" href="#os.open" title="os.open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> for opening file descriptors.)</p>
 <dl class="py function">
@@ -962,11 +1019,12 @@ for their exact effect and availability.</p>
 alias of the <a class="reference internal" href="functions.xhtml#open" title="open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> built-in function and accepts the same arguments.
 The only difference is that the first argument of <a class="reference internal" href="#os.fdopen" title="os.fdopen"><code class="xref py py-func docutils literal notranslate"><span class="pre">fdopen()</span></code></a> must always
 be an integer.</p>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="file-descriptor-operations">
-<span id="os-fd-ops"></span><h2>File Descriptor Operations</h2>
+<span id="os-fd-ops"></span><h2 class="sigil_not_in_toc">File Descriptor Operations</h2>
 <p>These functions operate on I/O streams referenced using file descriptors.</p>
 <p>File descriptors are small integers corresponding to a file that has been opened
 by the current process.  For example, standard input is usually file descriptor
@@ -989,7 +1047,8 @@ descriptor as returned by <a class="reference internal" href="#os.open" title="o
 object” returned by the built-in function <a class="reference internal" href="functions.xhtml#open" title="open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> or by <a class="reference internal" href="#os.popen" title="os.popen"><code class="xref py py-func docutils literal notranslate"><span class="pre">popen()</span></code></a> or
 <a class="reference internal" href="#os.fdopen" title="os.fdopen"><code class="xref py py-func docutils literal notranslate"><span class="pre">fdopen()</span></code></a>, use its <a class="reference internal" href="io.xhtml#io.IOBase.close" title="io.IOBase.close"><code class="xref py py-meth docutils literal notranslate"><span class="pre">close()</span></code></a> method.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.closerange">
@@ -1001,9 +1060,11 @@ ignoring errors. Equivalent to (but much faster than):</p>
         <span class="n">os</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="n">fd</span><span class="p">)</span>
     <span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span>
         <span class="k">pass</span>
-</pre></div>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.copy_file_range">
@@ -1038,7 +1099,8 @@ because of a known Linux kernel issue.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.8.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.device_encoding">
@@ -1050,7 +1112,8 @@ if it is connected to a terminal; else return <a class="reference internal" href
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.10: </span>On Unix, the function now implements the Python UTF-8 Mode.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.dup">
@@ -1065,7 +1128,8 @@ if it is connected to a terminal; else return <a class="reference internal" href
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.4: </span>The new file descriptor is now non-inheritable.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.dup2">
@@ -1082,7 +1146,8 @@ is <code class="docutils literal notranslate"><span class="pre">False</span></co
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.7: </span>Return <em>fd2</em> on success. Previously, <code class="docutils literal notranslate"><span class="pre">None</span></code> was always returned.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.fchmod">
@@ -1099,7 +1164,8 @@ information.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.13: </span>Added support on Windows.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.fchown">
@@ -1114,7 +1180,8 @@ and <em>gid</em>.  To leave one of the ids unchanged, set it to -1.  See
 <p>The function is limited on WASI, see <a class="reference internal" href="intro.xhtml#wasm-availability"><span class="std std-ref">WebAssembly platforms</span></a> for more
 information.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.fdatasync">
@@ -1128,7 +1195,8 @@ metadata.</p>
 <p class="admonition-title">Note</p>
 <p>This function is not available on MacOS.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.fpathconf">
@@ -1148,7 +1216,8 @@ included in <code class="docutils literal notranslate"><span class="pre">pathcon
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.fstat">
@@ -1160,7 +1229,8 @@ object.</p>
 <p class="admonition-title">See also</p>
 <p>The <a class="reference internal" href="#os.stat" title="os.stat"><code class="xref py py-func docutils literal notranslate"><span class="pre">stat()</span></code></a> function.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.fstatvfs">
@@ -1171,7 +1241,8 @@ equivalent to <code class="docutils literal notranslate"><span class="pre">os.st
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.fsync">
@@ -1184,7 +1255,8 @@ buffers associated with <em>f</em> are written to disk.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, Windows.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.ftruncate">
@@ -1199,7 +1271,8 @@ most <em>length</em> bytes in size.  As of Python 3.3, this is equivalent to
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.5: </span>Added support for Windows</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.get_blocking">
@@ -1219,7 +1292,8 @@ information.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.12: </span>Added support for pipes on Windows.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.grantpt">
@@ -1234,14 +1308,16 @@ The file descriptor <em>fd</em> is not closed upon failure.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.13.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.isatty">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">isatty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fd</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the file descriptor <em>fd</em> is open and connected to a
 tty(-like) device, else <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.lockf">
@@ -1258,7 +1334,8 @@ tty(-like) device, else <code class="docutils literal notranslate"><span class="
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.F_LOCK">
@@ -1276,7 +1353,8 @@ tty(-like) device, else <code class="docutils literal notranslate"><span class="
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.login_tty">
@@ -1290,7 +1368,8 @@ the stdin, the stdout, and the stderr of the calling process; close fd.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.11.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.lseek">
@@ -1309,7 +1388,8 @@ Valid values for <em>whence</em> are:</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.3: </span>Add support for <code class="xref py py-const docutils literal notranslate"><span class="pre">SEEK_HOLE</span></code> and <code class="xref py py-const docutils literal notranslate"><span class="pre">SEEK_DATA</span></code>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.SEEK_SET">
@@ -1322,15 +1402,19 @@ Valid values for <em>whence</em> are:</p>
 method on <a class="reference internal" href="../glossary.xhtml#term-file-object"><span class="xref std std-term">file-like objects</span></a>,
 for whence to adjust the file position indicator.</p>
 <dl class="simple">
-<dt><a class="reference internal" href="#os.SEEK_SET" title="os.SEEK_SET"><code class="xref py py-const docutils literal notranslate"><span class="pre">SEEK_SET</span></code></a></dt><dd><p>Adjust the file position relative to the beginning of the file.</p>
+<dt><a class="reference internal" href="#os.SEEK_SET" title="os.SEEK_SET"><code class="xref py py-const docutils literal notranslate"><span class="pre">SEEK_SET</span></code></a></dt>
+<dd><p>Adjust the file position relative to the beginning of the file.</p>
 </dd>
-<dt><a class="reference internal" href="#os.SEEK_CUR" title="os.SEEK_CUR"><code class="xref py py-const docutils literal notranslate"><span class="pre">SEEK_CUR</span></code></a></dt><dd><p>Adjust the file position relative to the current file position.</p>
+<dt><a class="reference internal" href="#os.SEEK_CUR" title="os.SEEK_CUR"><code class="xref py py-const docutils literal notranslate"><span class="pre">SEEK_CUR</span></code></a></dt>
+<dd><p>Adjust the file position relative to the current file position.</p>
 </dd>
-<dt><a class="reference internal" href="#os.SEEK_END" title="os.SEEK_END"><code class="xref py py-const docutils literal notranslate"><span class="pre">SEEK_END</span></code></a></dt><dd><p>Adjust the file position relative to the end of the file.</p>
+<dt><a class="reference internal" href="#os.SEEK_END" title="os.SEEK_END"><code class="xref py py-const docutils literal notranslate"><span class="pre">SEEK_END</span></code></a></dt>
+<dd><p>Adjust the file position relative to the end of the file.</p>
 </dd>
 </dl>
 <p>Their values are 0, 1, and 2, respectively.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.SEEK_HOLE">
@@ -1341,10 +1425,12 @@ for whence to adjust the file position indicator.</p>
 method on <a class="reference internal" href="../glossary.xhtml#term-file-object"><span class="xref std std-term">file-like objects</span></a>,
 for seeking file data and holes on sparsely allocated files.</p>
 <dl class="simple">
-<dt><code class="xref py py-data docutils literal notranslate"><span class="pre">SEEK_DATA</span></code></dt><dd><p>Adjust the file offset to the next location containing data,
+<dt><code class="xref py py-data docutils literal notranslate"><span class="pre">SEEK_DATA</span></code></dt>
+<dd><p>Adjust the file offset to the next location containing data,
 relative to the seek position.</p>
 </dd>
-<dt><code class="xref py py-data docutils literal notranslate"><span class="pre">SEEK_HOLE</span></code></dt><dd><p>Adjust the file offset to the next location containing a hole,
+<dt><code class="xref py py-data docutils literal notranslate"><span class="pre">SEEK_HOLE</span></code></dt>
+<dd><p>Adjust the file offset to the next location containing a hole,
 relative to the seek position.
 A hole is defined as a sequence of zeros.</p>
 </dd>
@@ -1359,7 +1445,8 @@ A hole is defined as a sequence of zeros.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.open">
@@ -1395,7 +1482,8 @@ exception, the function now retries the system call instead of raising an
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <p>The following constants are options for the <em>flags</em> parameter to the
 <a class="reference internal" href="#os.open" title="os.open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> function.  They can be combined using the bitwise OR operator
@@ -1418,7 +1506,8 @@ or <a class="reference external" href="https://msdn.microsoft.com/en-us/library/
 <dt class="sig sig-object py" id="os.O_TRUNC">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">O_TRUNC</span></span></dt>
 <dd><p>The above constants are available on Unix and Windows.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.O_DSYNC">
@@ -1439,7 +1528,8 @@ or <a class="reference external" href="https://msdn.microsoft.com/en-us/library/
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.3: </span>Add <a class="reference internal" href="#os.O_CLOEXEC" title="os.O_CLOEXEC"><code class="xref py py-data docutils literal notranslate"><span class="pre">O_CLOEXEC</span></code></a> constant.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.O_BINARY">
@@ -1457,7 +1547,8 @@ or <a class="reference external" href="https://msdn.microsoft.com/en-us/library/
 <dt class="sig sig-object py" id="os.O_TEXT">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">O_TEXT</span></span></dt>
 <dd><p>The above constants are only available on Windows.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.O_EVTONLY">
@@ -1473,7 +1564,8 @@ or <a class="reference external" href="https://msdn.microsoft.com/en-us/library/
 <p><span class="versionmodified changed">Changed in version 3.10: </span>Add <a class="reference internal" href="#os.O_EVTONLY" title="os.O_EVTONLY"><code class="xref py py-data docutils literal notranslate"><span class="pre">O_EVTONLY</span></code></a>, <a class="reference internal" href="#os.O_FSYNC" title="os.O_FSYNC"><code class="xref py py-data docutils literal notranslate"><span class="pre">O_FSYNC</span></code></a>, <a class="reference internal" href="#os.O_SYMLINK" title="os.O_SYMLINK"><code class="xref py py-data docutils literal notranslate"><span class="pre">O_SYMLINK</span></code></a>
 and <a class="reference internal" href="#os.O_NOFOLLOW_ANY" title="os.O_NOFOLLOW_ANY"><code class="xref py py-data docutils literal notranslate"><span class="pre">O_NOFOLLOW_ANY</span></code></a> constants.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.O_ASYNC">
@@ -1501,7 +1593,8 @@ the C library.</p>
 Add <a class="reference internal" href="#os.O_TMPFILE" title="os.O_TMPFILE"><code class="xref py py-data docutils literal notranslate"><span class="pre">O_TMPFILE</span></code></a>, only available on Linux Kernel 3.11
   or newer.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.openpty">
@@ -1516,7 +1609,8 @@ portable approach, use the <a class="reference internal" href="pty.xhtml#module-
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.4: </span>The new file descriptors are now non-inheritable.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.pipe">
@@ -1530,7 +1624,8 @@ reading and writing, respectively. The new file descriptor is
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.4: </span>The new file descriptors are now non-inheritable.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.pipe2">
@@ -1546,7 +1641,8 @@ respectively.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.posix_fallocate">
@@ -1559,7 +1655,8 @@ starting from <em>offset</em> and continuing for <em>len</em> bytes.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.posix_fadvise">
@@ -1577,7 +1674,8 @@ The advice applies to the region of the file specified by <em>fd</em> starting a
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.POSIX_FADV_NORMAL">
@@ -1600,7 +1698,8 @@ the access pattern that is likely to be used.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.pread">
@@ -1615,7 +1714,8 @@ referred to by <em>fd</em> has been reached, an empty bytes object is returned.<
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.posix_openpt">
@@ -1633,7 +1733,8 @@ If the value <a class="reference internal" href="#os.O_CLOEXEC" title="os.O_CLOE
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.13.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.preadv">
@@ -1660,7 +1761,8 @@ total capacity of all the objects.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.RWF_NOWAIT">
@@ -1677,7 +1779,8 @@ If no bytes were read, it will return <code class="docutils literal notranslate"
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.RWF_HIPRI">
@@ -1693,7 +1796,8 @@ using the <a class="reference internal" href="#os.O_DIRECT" title="os.O_DIRECT">
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.ptsname">
@@ -1710,7 +1814,8 @@ it is available; otherwise, the C standard library function
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.13.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.pwrite">
@@ -1724,7 +1829,8 @@ it is available; otherwise, the C standard library function
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.pwritev">
@@ -1752,7 +1858,8 @@ flags:</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.RWF_DSYNC">
@@ -1765,7 +1872,8 @@ This flag effect applies only to the data range written by the system call.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.RWF_SYNC">
@@ -1778,7 +1886,8 @@ This flag effect applies only to the data range written by the system call.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.RWF_APPEND">
@@ -1795,7 +1904,8 @@ appended to the end of the file. However, if the <em>offset</em> argument is
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.10.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.read">
@@ -1816,7 +1926,8 @@ descriptor as returned by <a class="reference internal" href="#os.open" title="o
 exception, the function now retries the system call instead of raising an
 <a class="reference internal" href="exceptions.xhtml#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a> exception (see <span class="target" id="index-24"></span><a class="pep reference external" href="https://peps.python.org/pep-0475/"><strong>PEP 475</strong></a><span class="link-target"> [https://peps.python.org/pep-0475/]</span> for the rationale).</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.sendfile">
@@ -1853,7 +1964,8 @@ arguments.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.9: </span>Parameters <em>out</em> and <em>in</em> was renamed to <em>out_fd</em> and <em>in_fd</em>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.SF_NODISKIO">
@@ -1870,7 +1982,8 @@ them.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.SF_NOCACHE">
@@ -1883,7 +1996,8 @@ it. The data won’t be cached in the virtual memory and will be freed afterward
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.11.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.set_blocking">
@@ -1903,7 +2017,8 @@ information.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.12: </span>Added support for pipes on Windows.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.splice">
@@ -1931,7 +2046,8 @@ of the pipe.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.10.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.SPLICE_F_MOVE">
@@ -1943,7 +2059,8 @@ of the pipe.</p>
 <dd><div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.10.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.readv">
@@ -1962,7 +2079,8 @@ total capacity of all the objects.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.tcgetpgrp">
@@ -1972,7 +2090,8 @@ file descriptor as returned by <a class="reference internal" href="#os.open" tit
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.tcsetpgrp">
@@ -1982,7 +2101,8 @@ descriptor as returned by <a class="reference internal" href="#os.open" title="o
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.ttyname">
@@ -1993,7 +2113,8 @@ exception is raised.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.unlockpt">
@@ -2008,7 +2129,8 @@ The file descriptor <em>fd</em> is not closed upon failure.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.13.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.write">
@@ -2028,7 +2150,8 @@ object” returned by the built-in function <a class="reference internal" href="
 exception, the function now retries the system call instead of raising an
 <a class="reference internal" href="exceptions.xhtml#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a> exception (see <span class="target" id="index-25"></span><a class="pep reference external" href="https://peps.python.org/pep-0475/"><strong>PEP 475</strong></a><span class="link-target"> [https://peps.python.org/pep-0475/]</span> for the rationale).</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.writev">
@@ -2046,10 +2169,11 @@ before proceeding to the second, and so on.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <section id="querying-the-size-of-a-terminal">
-<span id="terminal-size"></span><h3>Querying the size of a terminal</h3>
+<span id="terminal-size"></span><h3 class="sigil_not_in_toc">Querying the size of a terminal</h3>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
@@ -2068,7 +2192,8 @@ implementation.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, Windows.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="os.terminal_size">
@@ -2078,19 +2203,22 @@ implementation.</p>
 <dt class="sig sig-object py" id="os.terminal_size.columns">
 <span class="sig-name descname"><span class="pre">columns</span></span></dt>
 <dd><p>Width of the terminal window in characters.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="os.terminal_size.lines">
 <span class="sig-name descname"><span class="pre">lines</span></span></dt>
 <dd><p>Height of the terminal window in characters.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="inheritance-of-file-descriptors">
-<span id="fd-inheritance"></span><h3>Inheritance of File Descriptors</h3>
+<span id="fd-inheritance"></span><h3 class="sigil_not_in_toc">Inheritance of File Descriptors</h3>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.4.</span></p>
 </div>
@@ -2111,13 +2239,15 @@ streams are closed, and inheritable handles are only inherited if the
 <dt class="sig sig-object py" id="os.get_inheritable">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">get_inheritable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fd</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Get the “inheritable” flag of the specified file descriptor (a boolean).</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.set_inheritable">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">set_inheritable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inheritable</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Set the “inheritable” flag of the specified file descriptor.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.get_handle_inheritable">
@@ -2126,7 +2256,8 @@ streams are closed, and inheritable handles are only inherited if the
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Windows.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.set_handle_inheritable">
@@ -2135,12 +2266,13 @@ streams are closed, and inheritable handles are only inherited if the
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Windows.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 </section>
 <section id="files-and-directories">
-<span id="os-file-dir"></span><h2>Files and Directories</h2>
+<span id="os-file-dir"></span><h2 class="sigil_not_in_toc">Files and Directories</h2>
 <p>On some Unix platforms, many of these functions support one or more of these
 features:</p>
 <ul id="path-fd">
@@ -2207,21 +2339,23 @@ before actually doing so using <a class="reference internal" href="functions.xht
 because the user might exploit the short time interval between checking
 and opening the file to manipulate it. It’s preferable to use <a class="reference internal" href="../glossary.xhtml#term-EAFP"><span class="xref std std-term">EAFP</span></a>
 techniques. For example:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">access</span><span class="p">(</span><span class="s2">&quot;myfile&quot;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">R_OK</span><span class="p">):</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;myfile&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">access</span><span class="p">(</span><span class="s2">"myfile"</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">R_OK</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"myfile"</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">fp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="k">return</span> <span class="s2">&quot;some default data&quot;</span>
-</pre></div>
+<span class="k">return</span> <span class="s2">"some default data"</span>
+</pre>
+</div>
 </div>
 <p>is better written as:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
-    <span class="n">fp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;myfile&quot;</span><span class="p">)</span>
+    <span class="n">fp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"myfile"</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">PermissionError</span><span class="p">:</span>
-    <span class="k">return</span> <span class="s2">&quot;some default data&quot;</span>
+    <span class="k">return</span> <span class="s2">"some default data"</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="k">with</span> <span class="n">fp</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">fp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </div>
 <div class="admonition note">
@@ -2236,7 +2370,8 @@ permissions semantics beyond the usual POSIX permission-bit model.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.F_OK">
@@ -2250,7 +2385,8 @@ permissions semantics beyond the usual POSIX permission-bit model.</p>
 <dd><p>Values to pass as the <em>mode</em> parameter of <a class="reference internal" href="#os.access" title="os.access"><code class="xref py py-func docutils literal notranslate"><span class="pre">access()</span></code></a> to test the
 existence, readability, writability and executability of <em>path</em>,
 respectively.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.chdir">
@@ -2268,7 +2404,8 @@ on some platforms.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.chflags">
@@ -2300,7 +2437,8 @@ on some platforms.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.chmod">
@@ -2353,7 +2491,8 @@ and the <em>dir_fd</em> and <em>follow_symlinks</em> arguments.</p>
 <p><span class="versionmodified changed">Changed in version 3.13: </span>Added support for a file descriptor and the <em>follow_symlinks</em> argument
 on Windows.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.chown">
@@ -2378,7 +2517,8 @@ and the <em>dir_fd</em> and <em>follow_symlinks</em> arguments.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Supports a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.chroot">
@@ -2390,7 +2530,8 @@ and the <em>dir_fd</em> and <em>follow_symlinks</em> arguments.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.fchdir">
@@ -2402,13 +2543,15 @@ open file.  As of Python 3.3, this is equivalent to <code class="docutils litera
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.getcwd">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">getcwd</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Return a string representing the current working directory.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.getcwdb">
@@ -2419,7 +2562,8 @@ open file.  As of Python 3.3, this is equivalent to <code class="docutils litera
 code page: see <span class="target" id="index-27"></span><a class="pep reference external" href="https://peps.python.org/pep-0529/"><strong>PEP 529</strong></a><span class="link-target"> [https://peps.python.org/pep-0529/]</span> for the rationale. The function is no longer
 deprecated on Windows.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.lchflags">
@@ -2434,7 +2578,8 @@ not follow symbolic links.  As of Python 3.3, this is equivalent to
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.lchmod">
@@ -2455,7 +2600,8 @@ changing the mode of symbolic links is supported.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.13: </span>Added support on Windows.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.lchown">
@@ -2470,7 +2616,8 @@ to <code class="docutils literal notranslate"><span class="pre">os.chown(path,</
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.link">
@@ -2492,7 +2639,8 @@ following symlinks</span></a>.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a> for <em>src</em> and <em>dst</em>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.listdir">
@@ -2527,7 +2675,8 @@ common use cases.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.listdrives">
@@ -2546,7 +2695,8 @@ names.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.12.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.listmounts">
@@ -2569,7 +2719,8 @@ occurs collecting the paths.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.12.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.listvolumes">
@@ -2589,7 +2740,8 @@ using <a class="reference internal" href="#os.listmounts" title="os.listmounts">
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.12.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.lstat">
@@ -2621,7 +2773,8 @@ Similar to <a class="reference internal" href="#os.stat" title="os.stat"><code c
 Other kinds of reparse points are resolved by the operating system as
 for <a class="reference internal" href="#os.stat" title="os.stat"><code class="xref py py-func docutils literal notranslate"><span class="pre">stat()</span></code></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.mkdir">
@@ -2650,7 +2803,8 @@ administrators have access. Other values of <em>mode</em> are ignored.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.13: </span>Windows now handles a <em>mode</em> of <code class="docutils literal notranslate"><span class="pre">0o700</span></code>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.makedirs">
@@ -2678,7 +2832,7 @@ include <a class="reference internal" href="#os.pardir" title="os.pardir"><code 
 <p><span class="versionmodified changed">Changed in version 3.4.1: </span>Before Python 3.4.1, if <em>exist_ok</em> was <code class="docutils literal notranslate"><span class="pre">True</span></code> and the directory existed,
 <a class="reference internal" href="#os.makedirs" title="os.makedirs"><code class="xref py py-func docutils literal notranslate"><span class="pre">makedirs()</span></code></a> would still raise an error if <em>mode</em> did not match the
 mode of the existing directory. Since this behavior was impossible to
-implement safely, it was removed in Python 3.4.1. See <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=21082">bpo-21082</a><span class="link-target"> [https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=21082]</span>.</p>
+implement safely, it was removed in Python 3.4.1. See <a class="reference external" href="https://bugs.python.org/issue?@action=redirect&amp;bpo=21082">bpo-21082</a><span class="link-target"> [https://bugs.python.org/issue?@action=redirect&amp;bpo=21082]</span>.</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
@@ -2687,7 +2841,8 @@ implement safely, it was removed in Python 3.4.1. See <a class="reference extern
 <p><span class="versionmodified changed">Changed in version 3.7: </span>The <em>mode</em> argument no longer affects the file permission bits of
 newly created intermediate-level directories.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.mkfifo">
@@ -2709,7 +2864,8 @@ doesn’t open the FIFO — it just creates the rendezvous point.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.mknod">
@@ -2731,27 +2887,31 @@ available in <a class="reference internal" href="stat.xhtml#module-stat" title="
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.major">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">major</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Extract the device major number from a raw device number (usually the
 <code class="xref py py-attr docutils literal notranslate"><span class="pre">st_dev</span></code> or <code class="xref py py-attr docutils literal notranslate"><span class="pre">st_rdev</span></code> field from <code class="xref c c-struct docutils literal notranslate"><span class="pre">stat</span></code>).</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.minor">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">minor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Extract the device minor number from a raw device number (usually the
 <code class="xref py py-attr docutils literal notranslate"><span class="pre">st_dev</span></code> or <code class="xref py py-attr docutils literal notranslate"><span class="pre">st_rdev</span></code> field from <code class="xref c c-struct docutils literal notranslate"><span class="pre">stat</span></code>).</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.makedev">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">makedev</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">major</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minor</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Compose a raw device number from the major and minor device numbers.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.pathconf">
@@ -2774,7 +2934,8 @@ included in <code class="docutils literal notranslate"><span class="pre">pathcon
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.pathconf_names">
@@ -2785,7 +2946,8 @@ can be used to determine the set of names known to the system.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.readlink">
@@ -2820,7 +2982,8 @@ differences.</p>
 substitution path (which typically includes <code class="docutils literal notranslate"><span class="pre">\\?\</span></code> prefix) rather
 than the optional “print name” field that was previously returned.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.remove">
@@ -2840,7 +3003,8 @@ to the file is not made available until the original file is no longer in use.</
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.removedirs">
@@ -2857,7 +3021,8 @@ successfully removed.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.rename">
@@ -2885,7 +3050,8 @@ supply <a class="reference internal" href="#dir-fd"><span class="std std-ref">pa
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a> for <em>src</em> and <em>dst</em>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.renames">
@@ -2903,7 +3069,8 @@ permissions needed to remove the leaf directory or file.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a> for <em>old</em> and <em>new</em>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.replace">
@@ -2922,7 +3089,8 @@ supply <a class="reference internal" href="#dir-fd"><span class="std std-ref">pa
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a> for <em>src</em> and <em>dst</em>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.rmdir">
@@ -2939,7 +3107,8 @@ respectively.  In order to remove whole directory trees,
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.scandir">
@@ -2979,7 +3148,8 @@ statement.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.6.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <p>The following example shows a simple use of <a class="reference internal" href="#os.scandir" title="os.scandir"><code class="xref py py-func docutils literal notranslate"><span class="pre">scandir()</span></code></a> to display all
 the files (excluding directories) in the given <em>path</em> that don’t start with
@@ -2987,9 +3157,10 @@ the files (excluding directories) in the given <em>path</em> that don’t start 
 system call:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">os</span><span class="o">.</span><span class="n">scandir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">as</span> <span class="n">it</span><span class="p">:</span>
     <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">it</span><span class="p">:</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">entry</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">entry</span><span class="o">.</span><span class="n">is_file</span><span class="p">():</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">entry</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">'.'</span><span class="p">)</span> <span class="ow">and</span> <span class="n">entry</span><span class="o">.</span><span class="n">is_file</span><span class="p">():</span>
             <span class="nb">print</span><span class="p">(</span><span class="n">entry</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -3016,7 +3187,8 @@ in its destructor.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.7: </span>Added support for <a class="reference internal" href="#path-fd"><span class="std std-ref">file descriptors</span></a> on Unix.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="os.DirEntry">
@@ -3045,7 +3217,8 @@ argument.</p>
 <p>The <a class="reference internal" href="#os.name" title="os.name"><code class="xref py py-attr docutils literal notranslate"><span class="pre">name</span></code></a> attribute will be <code class="docutils literal notranslate"><span class="pre">bytes</span></code> if the <a class="reference internal" href="#os.scandir" title="os.scandir"><code class="xref py py-func docutils literal notranslate"><span class="pre">scandir()</span></code></a>
 <em>path</em> argument is of type <code class="docutils literal notranslate"><span class="pre">bytes</span></code> and <code class="docutils literal notranslate"><span class="pre">str</span></code> otherwise.  Use
 <a class="reference internal" href="#os.fsdecode" title="os.fsdecode"><code class="xref py py-func docutils literal notranslate"><span class="pre">fsdecode()</span></code></a> to decode byte filenames.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="os.DirEntry.path">
@@ -3059,7 +3232,8 @@ attribute is the same as the <a class="reference internal" href="#os.name" title
 <p>The <a class="reference internal" href="os.path.xhtml#module-os.path" title="os.path: Operations on pathnames."><code class="xref py py-attr docutils literal notranslate"><span class="pre">path</span></code></a> attribute will be <code class="docutils literal notranslate"><span class="pre">bytes</span></code> if the <a class="reference internal" href="#os.scandir" title="os.scandir"><code class="xref py py-func docutils literal notranslate"><span class="pre">scandir()</span></code></a>
 <em>path</em> argument is of type <code class="docutils literal notranslate"><span class="pre">bytes</span></code> and <code class="docutils literal notranslate"><span class="pre">str</span></code> otherwise.  Use
 <a class="reference internal" href="#os.fsdecode" title="os.fsdecode"><code class="xref py py-func docutils literal notranslate"><span class="pre">fsdecode()</span></code></a> to decode byte filenames.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="os.DirEntry.inode">
@@ -3070,7 +3244,8 @@ attribute is the same as the <a class="reference internal" href="#os.name" title
 information.</p>
 <p>On the first, uncached call, a system call is required on Windows but
 not on Unix.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="os.DirEntry.is_dir">
@@ -3092,7 +3267,8 @@ a system call will be required to follow the symlink unless
 <em>follow_symlinks</em> is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 <p>This method can raise <a class="reference internal" href="exceptions.xhtml#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a>, such as <a class="reference internal" href="exceptions.xhtml#PermissionError" title="PermissionError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">PermissionError</span></code></a>,
 but <a class="reference internal" href="exceptions.xhtml#FileNotFoundError" title="FileNotFoundError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileNotFoundError</span></code></a> is caught and not raised.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="os.DirEntry.is_file">
@@ -3105,7 +3281,8 @@ is a file (without following symlinks); return <code class="docutils literal not
 a directory or other non-file entry, or if it doesn’t exist anymore.</p>
 <p>The result is cached on the <code class="docutils literal notranslate"><span class="pre">os.DirEntry</span></code> object. Caching, system calls
 made, and exceptions raised are as per <a class="reference internal" href="#os.DirEntry.is_dir" title="os.DirEntry.is_dir"><code class="xref py py-func docutils literal notranslate"><span class="pre">is_dir()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="os.DirEntry.is_symlink">
@@ -3121,7 +3298,8 @@ certain Unix file systems, such as network file systems, that return
 <code class="docutils literal notranslate"><span class="pre">dirent.d_type</span> <span class="pre">==</span> <span class="pre">DT_UNKNOWN</span></code>.</p>
 <p>This method can raise <a class="reference internal" href="exceptions.xhtml#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a>, such as <a class="reference internal" href="exceptions.xhtml#PermissionError" title="PermissionError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">PermissionError</span></code></a>,
 but <a class="reference internal" href="exceptions.xhtml#FileNotFoundError" title="FileNotFoundError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileNotFoundError</span></code></a> is caught and not raised.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="os.DirEntry.is_junction">
@@ -3134,7 +3312,8 @@ of file, a symlink, or if it doesn’t exist anymore.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.12.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="os.DirEntry.stat">
@@ -3152,7 +3331,8 @@ get these attributes.</p>
 <p>The result is cached on the <code class="docutils literal notranslate"><span class="pre">os.DirEntry</span></code> object, with a separate cache
 for <em>follow_symlinks</em> <code class="docutils literal notranslate"><span class="pre">True</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code>. Call <a class="reference internal" href="#os.stat" title="os.stat"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.stat()</span></code></a> to
 fetch up-to-date information.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p>Note that there is a nice correspondence between several attributes
 and methods of <code class="docutils literal notranslate"><span class="pre">os.DirEntry</span></code> and of <a class="reference internal" href="pathlib.xhtml#pathlib.Path" title="pathlib.Path"><code class="xref py py-class docutils literal notranslate"><span class="pre">pathlib.Path</span></code></a>.  In
@@ -3172,7 +3352,8 @@ The file creation time is properly available as <code class="docutils literal no
 in the future <code class="docutils literal notranslate"><span class="pre">st_ctime</span></code> may be changed to return zero or the
 metadata change time, if available.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.stat">
@@ -3198,14 +3379,15 @@ possible and call <a class="reference internal" href="#os.lstat" title="os.lstat
 dangling symlinks or junction points, which will raise the usual exceptions.</p>
 <p id="index-30">Example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">statinfo</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">stat</span><span class="p">(</span><span class="s1">&#39;somefile.txt&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">statinfo</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">stat</span><span class="p">(</span><span class="s1">'somefile.txt'</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">statinfo</span>
 <span class="go">os.stat_result(st_mode=33188, st_ino=7876932, st_dev=234881026,</span>
 <span class="go">st_nlink=1, st_uid=501, st_gid=501, st_size=264, st_atime=1297230295,</span>
 <span class="go">st_mtime=1297230027, st_ctime=1297230027)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">statinfo</span><span class="o">.</span><span class="n">st_size</span>
 <span class="go">264</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -3226,7 +3408,8 @@ system reaches a reparse point that it is not able to follow, <em>stat</em> now
 returns the information for the original path as if
 <code class="docutils literal notranslate"><span class="pre">follow_symlinks=False</span></code> had been specified instead of raising an error.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="os.stat_result">
@@ -3239,7 +3422,8 @@ returns the information for the original path as if
 <dt class="sig sig-object py" id="os.stat_result.st_mode">
 <span class="sig-name descname"><span class="pre">st_mode</span></span></dt>
 <dd><p>File mode: file type and file mode bits (permissions).</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="os.stat_result.st_ino">
@@ -3251,31 +3435,36 @@ file for a given value of <code class="docutils literal notranslate"><span class
 <li><p>the <a class="reference external" href="https://msdn.microsoft.com/en-us/library/aa363788">file index</a><span class="link-target"> [https://msdn.microsoft.com/en-us/library/aa363788]</span> on
 Windows</p></li>
 </ul>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="os.stat_result.st_dev">
 <span class="sig-name descname"><span class="pre">st_dev</span></span></dt>
 <dd><p>Identifier of the device on which this file resides.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="os.stat_result.st_nlink">
 <span class="sig-name descname"><span class="pre">st_nlink</span></span></dt>
 <dd><p>Number of hard links.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="os.stat_result.st_uid">
 <span class="sig-name descname"><span class="pre">st_uid</span></span></dt>
 <dd><p>User identifier of the file owner.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="os.stat_result.st_gid">
 <span class="sig-name descname"><span class="pre">st_gid</span></span></dt>
 <dd><p>Group identifier of the file owner.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="os.stat_result.st_size">
@@ -3283,20 +3472,23 @@ Windows</p></li>
 <dd><p>Size of the file in bytes, if it is a regular file or a symbolic link.
 The size of a symbolic link is the length of the pathname it contains,
 without a terminating null byte.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p>Timestamps:</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="os.stat_result.st_atime">
 <span class="sig-name descname"><span class="pre">st_atime</span></span></dt>
 <dd><p>Time of most recent access expressed in seconds.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="os.stat_result.st_mtime">
 <span class="sig-name descname"><span class="pre">st_mtime</span></span></dt>
 <dd><p>Time of most recent content modification expressed in seconds.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="os.stat_result.st_ctime">
@@ -3307,7 +3499,8 @@ without a terminating null byte.</p>
 the file creation time. In the future, <code class="docutils literal notranslate"><span class="pre">st_ctime</span></code> will contain
 the time of the most recent metadata change, as for other platforms.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="os.stat_result.st_atime_ns">
@@ -3316,7 +3509,8 @@ the time of the most recent metadata change, as for other platforms.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="os.stat_result.st_mtime_ns">
@@ -3326,7 +3520,8 @@ integer.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="os.stat_result.st_ctime_ns">
@@ -3341,7 +3536,8 @@ integer.</p>
 for the file creation time. In the future, <code class="docutils literal notranslate"><span class="pre">st_ctime</span></code> will contain
 the time of the most recent metadata change, as for other platforms.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="os.stat_result.st_birthtime">
@@ -3351,7 +3547,8 @@ always available, and may raise <a class="reference internal" href="exceptions.x
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.12: </span><code class="docutils literal notranslate"><span class="pre">st_birthtime</span></code> is now available on Windows.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="os.stat_result.st_birthtime_ns">
@@ -3362,7 +3559,8 @@ This attribute is not always available, and may raise
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.12.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -3389,26 +3587,30 @@ available:</p>
 <span class="sig-name descname"><span class="pre">st_blocks</span></span></dt>
 <dd><p>Number of 512-byte blocks allocated for file.
 This may be smaller than <a class="reference internal" href="#os.stat_result.st_size" title="os.stat_result.st_size"><code class="xref py py-attr docutils literal notranslate"><span class="pre">st_size</span></code></a>/512 when the file has holes.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="os.stat_result.st_blksize">
 <span class="sig-name descname"><span class="pre">st_blksize</span></span></dt>
 <dd><p>“Preferred” blocksize for efficient file system I/O. Writing to a file in
 smaller chunks may cause an inefficient read-modify-rewrite.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="os.stat_result.st_rdev">
 <span class="sig-name descname"><span class="pre">st_rdev</span></span></dt>
 <dd><p>Type of device if an inode device.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="os.stat_result.st_flags">
 <span class="sig-name descname"><span class="pre">st_flags</span></span></dt>
 <dd><p>User defined flags for file.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p>On other Unix systems (such as FreeBSD), the following attributes may be
 available (but may be only filled out if root tries to use them):</p>
@@ -3416,7 +3618,8 @@ available (but may be only filled out if root tries to use them):</p>
 <dt class="sig sig-object py" id="os.stat_result.st_gen">
 <span class="sig-name descname"><span class="pre">st_gen</span></span></dt>
 <dd><p>File generation number.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p>On Solaris and derivatives, the following attributes may also be
 available:</p>
@@ -3425,26 +3628,30 @@ available:</p>
 <span class="sig-name descname"><span class="pre">st_fstype</span></span></dt>
 <dd><p>String that uniquely identifies the type of the filesystem that
 contains the file.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p>On macOS systems, the following attributes may also be available:</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="os.stat_result.st_rsize">
 <span class="sig-name descname"><span class="pre">st_rsize</span></span></dt>
 <dd><p>Real size of the file.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="os.stat_result.st_creator">
 <span class="sig-name descname"><span class="pre">st_creator</span></span></dt>
 <dd><p>Creator of the file.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="os.stat_result.st_type">
 <span class="sig-name descname"><span class="pre">st_type</span></span></dt>
 <dd><p>File type.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p>On Windows systems, the following attributes are also available:</p>
 <dl class="py attribute">
@@ -3458,7 +3665,8 @@ constants in the <a class="reference internal" href="stat.xhtml#module-stat" tit
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.5.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="os.stat_result.st_reparse_tag">
@@ -3467,7 +3675,8 @@ constants in the <a class="reference internal" href="stat.xhtml#module-stat" tit
 set, this field contains the tag identifying the type of reparse point.
 See the <a class="reference internal" href="stat.xhtml#stat.IO_REPARSE_TAG_SYMLINK" title="stat.IO_REPARSE_TAG_SYMLINK"><code class="xref py py-const docutils literal notranslate"><span class="pre">IO_REPARSE_TAG_*</span></code></a>
 constants in the <a class="reference internal" href="stat.xhtml#module-stat" title="stat: Utilities for interpreting the results of os.stat(), os.lstat() and os.fstat()."><code class="xref py py-mod docutils literal notranslate"><span class="pre">stat</span></code></a> module.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p>The standard module <a class="reference internal" href="stat.xhtml#module-stat" title="stat: Utilities for interpreting the results of os.stat(), os.lstat() and os.fstat()."><code class="xref py py-mod docutils literal notranslate"><span class="pre">stat</span></code></a> defines functions and constants that are
 useful for extracting information from a <code class="xref c c-struct docutils literal notranslate"><span class="pre">stat</span></code> structure. (On
@@ -3507,7 +3716,8 @@ larger file identifiers would be arbitrarily packed.</p>
 it would contain the same as <a class="reference internal" href="#os.stat_result.st_dev" title="os.stat_result.st_dev"><code class="xref py py-attr docutils literal notranslate"><span class="pre">st_dev</span></code></a>, which was incorrect.</p>
 <p>Added the <a class="reference internal" href="#os.stat_result.st_birthtime" title="os.stat_result.st_birthtime"><code class="xref py py-attr docutils literal notranslate"><span class="pre">st_birthtime</span></code></a> member on Windows.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.statvfs">
@@ -3552,7 +3762,8 @@ and <code class="xref py py-const docutils literal notranslate"><span class="pre
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.7: </span>Added the <code class="xref py py-attr docutils literal notranslate"><span class="pre">f_fsid</span></code> attribute.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.supports_dir_fd">
@@ -3571,14 +3782,16 @@ for its <em>dir_fd</em> parameter, use the <code class="docutils literal notrans
 As an example, this expression evaluates to <code class="docutils literal notranslate"><span class="pre">True</span></code> if <a class="reference internal" href="#os.stat" title="os.stat"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.stat()</span></code></a>
 accepts open file descriptors for <em>dir_fd</em> on the local platform:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">stat</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">supports_dir_fd</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Currently <em>dir_fd</em> parameters only work on Unix platforms;
 none of them work on Windows.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.supports_effective_ids">
@@ -3591,14 +3804,16 @@ platforms.)  If the local platform supports it, the collection will contain
 <p>This expression evaluates to <code class="docutils literal notranslate"><span class="pre">True</span></code> if <a class="reference internal" href="#os.access" title="os.access"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.access()</span></code></a> supports
 <code class="docutils literal notranslate"><span class="pre">effective_ids=True</span></code> on the local platform:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">access</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">supports_effective_ids</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Currently <em>effective_ids</em> is only supported on Unix platforms;
 it does not work on Windows.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.supports_fd">
@@ -3615,12 +3830,14 @@ descriptor for its <em>path</em> parameter, use the <code class="docutils litera
 <a class="reference internal" href="#os.chdir" title="os.chdir"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.chdir()</span></code></a> accepts open file descriptors for <em>path</em> on your local
 platform:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">supports_fd</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.supports_follow_symlinks">
@@ -3640,12 +3857,14 @@ on all platforms.)</p>
 to <code class="docutils literal notranslate"><span class="pre">True</span></code> if you may specify <code class="docutils literal notranslate"><span class="pre">follow_symlinks=False</span></code> when calling
 <a class="reference internal" href="#os.stat" title="os.stat"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.stat()</span></code></a> on the local platform:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">stat</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">supports_follow_symlinks</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.symlink">
@@ -3685,7 +3904,8 @@ on non-Windows platforms.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.8: </span>Added support for unelevated symlinks on Windows with Developer Mode.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.sync">
@@ -3697,7 +3917,8 @@ on non-Windows platforms.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.truncate">
@@ -3718,7 +3939,8 @@ on non-Windows platforms.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.unlink">
@@ -3734,7 +3956,8 @@ traditional Unix name.  Please see the documentation for
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.utime">
@@ -3771,7 +3994,8 @@ and the <em>dir_fd</em>, <em>follow_symlinks</em>, and <em>ns</em> parameters.</
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.walk">
@@ -3830,20 +4054,21 @@ directory under the starting directory, except that it doesn’t look under any
 CVS subdirectory:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">os.path</span><span class="w"> </span><span class="kn">import</span> <span class="n">join</span><span class="p">,</span> <span class="n">getsize</span>
-<span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="s1">&#39;python/Lib/email&#39;</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="s2">&quot;consumes&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">getsize</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">name</span><span class="p">))</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">files</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;bytes in&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">files</span><span class="p">),</span> <span class="s2">&quot;non-directory files&quot;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="s1">&#39;CVS&#39;</span> <span class="ow">in</span> <span class="n">dirs</span><span class="p">:</span>
-        <span class="n">dirs</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;CVS&#39;</span><span class="p">)</span>  <span class="c1"># don&#39;t visit CVS directories</span>
-</pre></div>
+<span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="s1">'python/Lib/email'</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="s2">"consumes"</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">" "</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">getsize</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">name</span><span class="p">))</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">files</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s2">" "</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"bytes in"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">files</span><span class="p">),</span> <span class="s2">"non-directory files"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">'CVS'</span> <span class="ow">in</span> <span class="n">dirs</span><span class="p">:</span>
+        <span class="n">dirs</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">'CVS'</span><span class="p">)</span>  <span class="c1"># don't visit CVS directories</span>
+</pre>
+</div>
 </div>
 <p>In the next example (simple implementation of <a class="reference internal" href="shutil.xhtml#shutil.rmtree" title="shutil.rmtree"><code class="xref py py-func docutils literal notranslate"><span class="pre">shutil.rmtree()</span></code></a>),
 walking the tree bottom-up is essential, <a class="reference internal" href="#os.rmdir" title="os.rmdir"><code class="xref py py-func docutils literal notranslate"><span class="pre">rmdir()</span></code></a> doesn’t allow
 deleting a directory before the directory is empty:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Delete everything reachable from the directory named in &quot;top&quot;,</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Delete everything reachable from the directory named in "top",</span>
 <span class="c1"># assuming there are no symbolic links.</span>
-<span class="c1"># CAUTION:  This is dangerous!  For example, if top == &#39;/&#39;, it</span>
+<span class="c1"># CAUTION:  This is dangerous!  For example, if top == '/', it</span>
 <span class="c1"># could delete all your disk files.</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">top</span><span class="p">,</span> <span class="n">topdown</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
@@ -3852,7 +4077,8 @@ deleting a directory before the directory is empty:</p>
     <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">dirs</span><span class="p">:</span>
         <span class="n">os</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">name</span><span class="p">))</span>
 <span class="n">os</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="n">top</span><span class="p">)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p class="audit-hook">Raises an <a class="reference internal" href="sys.xhtml#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">os.walk</span></code> with arguments <code class="docutils literal notranslate"><span class="pre">top</span></code>, <code class="docutils literal notranslate"><span class="pre">topdown</span></code>, <code class="docutils literal notranslate"><span class="pre">onerror</span></code>, <code class="docutils literal notranslate"><span class="pre">followlinks</span></code>.</p>
 <div class="versionchanged">
@@ -3862,7 +4088,8 @@ making it faster by reducing the number of calls to <a class="reference internal
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.fwalk">
@@ -3884,21 +4111,22 @@ the next iteration step, so you should duplicate them (e.g. with
 directory under the starting directory, except that it doesn’t look under any
 CVS subdirectory:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
-<span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span><span class="p">,</span> <span class="n">rootfd</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">fwalk</span><span class="p">(</span><span class="s1">&#39;python/Lib/email&#39;</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="s2">&quot;consumes&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span><span class="p">,</span> <span class="n">rootfd</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">fwalk</span><span class="p">(</span><span class="s1">'python/Lib/email'</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="s2">"consumes"</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">([</span><span class="n">os</span><span class="o">.</span><span class="n">stat</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">dir_fd</span><span class="o">=</span><span class="n">rootfd</span><span class="p">)</span><span class="o">.</span><span class="n">st_size</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">files</span><span class="p">]),</span>
-          <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;bytes in&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">files</span><span class="p">),</span> <span class="s2">&quot;non-directory files&quot;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="s1">&#39;CVS&#39;</span> <span class="ow">in</span> <span class="n">dirs</span><span class="p">:</span>
-        <span class="n">dirs</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;CVS&#39;</span><span class="p">)</span>  <span class="c1"># don&#39;t visit CVS directories</span>
-</pre></div>
+          <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"bytes in"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">files</span><span class="p">),</span> <span class="s2">"non-directory files"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">'CVS'</span> <span class="ow">in</span> <span class="n">dirs</span><span class="p">:</span>
+        <span class="n">dirs</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">'CVS'</span><span class="p">)</span>  <span class="c1"># don't visit CVS directories</span>
+</pre>
+</div>
 </div>
 <p>In the next example, walking the tree bottom-up is essential:
 <a class="reference internal" href="#os.rmdir" title="os.rmdir"><code class="xref py py-func docutils literal notranslate"><span class="pre">rmdir()</span></code></a> doesn’t allow deleting a directory before the directory is
 empty:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Delete everything reachable from the directory named in &quot;top&quot;,</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Delete everything reachable from the directory named in "top",</span>
 <span class="c1"># assuming there are no symbolic links.</span>
-<span class="c1"># CAUTION:  This is dangerous!  For example, if top == &#39;/&#39;, it</span>
+<span class="c1"># CAUTION:  This is dangerous!  For example, if top == '/', it</span>
 <span class="c1"># could delete all your disk files.</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span><span class="p">,</span> <span class="n">rootfd</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">fwalk</span><span class="p">(</span><span class="n">top</span><span class="p">,</span> <span class="n">topdown</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
@@ -3906,7 +4134,8 @@ empty:</p>
         <span class="n">os</span><span class="o">.</span><span class="n">unlink</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">dir_fd</span><span class="o">=</span><span class="n">rootfd</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">dirs</span><span class="p">:</span>
         <span class="n">os</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">dir_fd</span><span class="o">=</span><span class="n">rootfd</span><span class="p">)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p class="audit-hook">Raises an <a class="reference internal" href="sys.xhtml#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">os.fwalk</span></code> with arguments <code class="docutils literal notranslate"><span class="pre">top</span></code>, <code class="docutils literal notranslate"><span class="pre">topdown</span></code>, <code class="docutils literal notranslate"><span class="pre">onerror</span></code>, <code class="docutils literal notranslate"><span class="pre">follow_symlinks</span></code>, <code class="docutils literal notranslate"><span class="pre">dir_fd</span></code>.</p>
 <div class="availability docutils container">
@@ -3921,7 +4150,8 @@ empty:</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.7: </span>Added support for <a class="reference internal" href="stdtypes.xhtml#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> paths.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.memfd_create">
@@ -3942,7 +4172,8 @@ without any side effects.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.8.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.MFD_CLOEXEC">
@@ -3987,7 +4218,8 @@ without any side effects.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.8.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.eventfd">
@@ -4016,7 +4248,7 @@ write operation would increment the counter to a value larger than
 <p>Example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
-<span class="c1"># semaphore with start value &#39;1&#39;</span>
+<span class="c1"># semaphore with start value '1'</span>
 <span class="n">fd</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">eventfd</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">EFD_SEMAPHORE</span> <span class="o">|</span> <span class="n">os</span><span class="o">.</span><span class="n">EFC_CLOEXEC</span><span class="p">)</span>
 <span class="k">try</span><span class="p">:</span>
     <span class="c1"># acquire semaphore</span>
@@ -4028,7 +4260,8 @@ write operation would increment the counter to a value larger than
         <span class="n">os</span><span class="o">.</span><span class="n">eventfd_write</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
 <span class="k">finally</span><span class="p">:</span>
     <span class="n">os</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="n">fd</span><span class="p">)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Linux &gt;= 2.6.27 with glibc &gt;= 2.8</p>
@@ -4036,7 +4269,8 @@ write operation would increment the counter to a value larger than
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.10.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.eventfd_read">
@@ -4049,7 +4283,8 @@ unsigned int. The function does not verify that <em>fd</em> is an <a class="refe
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.10.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.eventfd_write">
@@ -4062,7 +4297,8 @@ unsigned int. The function does not verify that <em>fd</em> is an <a class="refe
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.10.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.EFD_CLOEXEC">
@@ -4074,7 +4310,8 @@ unsigned int. The function does not verify that <em>fd</em> is an <a class="refe
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.10.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.EFD_NONBLOCK">
@@ -4087,7 +4324,8 @@ descriptor.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.10.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.EFD_SEMAPHORE">
@@ -4100,10 +4338,11 @@ descriptor. On read the internal counter is decremented by one.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.10.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <section id="timer-file-descriptors">
-<span id="os-timerfd"></span><h3>Timer File Descriptors</h3>
+<span id="os-timerfd"></span><h3 class="sigil_not_in_toc">Timer File Descriptors</h3>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.13.</span></p>
 </div>
@@ -4166,7 +4405,8 @@ longer needed, or else the file descriptor will be leaked.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.13.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.timerfd_settime">
@@ -4224,7 +4464,8 @@ and <em class="manpage"><a class="manpage reference external" href="https://manp
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.13.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.timerfd_settime_ns">
@@ -4237,7 +4478,8 @@ This function operates the same interval timer as <a class="reference internal" 
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.13.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.timerfd_gettime">
@@ -4258,7 +4500,8 @@ have elapsed.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.13.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.timerfd_gettime_ns">
@@ -4270,7 +4513,8 @@ have elapsed.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.13.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.TFD_NONBLOCK">
@@ -4284,7 +4528,8 @@ descriptor. If <a class="reference internal" href="#os.TFD_NONBLOCK" title="os.T
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.13.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.TFD_CLOEXEC">
@@ -4298,7 +4543,8 @@ descriptor.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.13.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.TFD_TIMER_ABSTIME">
@@ -4312,7 +4558,8 @@ timer’s clock (in UTC seconds or nanoseconds since the Unix Epoch).</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.13.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.TFD_TIMER_CANCEL_ON_SET">
@@ -4327,11 +4574,12 @@ discontinuously.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.13.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="linux-extended-attributes">
-<h3>Linux extended attributes</h3>
+<h3 class="sigil_not_in_toc">Linux extended attributes</h3>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
@@ -4349,7 +4597,8 @@ encoding.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a> for <em>path</em> and <em>attribute</em>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.listxattr">
@@ -4364,7 +4613,8 @@ directory.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.removexattr">
@@ -4379,7 +4629,8 @@ with the <a class="reference internal" href="../glossary.xhtml#term-filesystem-e
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a> for <em>path</em> and <em>attribute</em>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.setxattr">
@@ -4403,33 +4654,37 @@ to be ignored on some filesystems.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a> for <em>path</em> and <em>attribute</em>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.XATTR_SIZE_MAX">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">XATTR_SIZE_MAX</span></span></dt>
 <dd><p>The maximum size the value of an extended attribute can be. Currently, this
 is 64 KiB on Linux.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.XATTR_CREATE">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">XATTR_CREATE</span></span></dt>
 <dd><p>This is a possible value for the flags argument in <a class="reference internal" href="#os.setxattr" title="os.setxattr"><code class="xref py py-func docutils literal notranslate"><span class="pre">setxattr()</span></code></a>. It
 indicates the operation must create an attribute.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.XATTR_REPLACE">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">XATTR_REPLACE</span></span></dt>
 <dd><p>This is a possible value for the flags argument in <a class="reference internal" href="#os.setxattr" title="os.setxattr"><code class="xref py py-func docutils literal notranslate"><span class="pre">setxattr()</span></code></a>. It
 indicates the operation must replace an existing attribute.</p>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 </section>
 <section id="process-management">
-<span id="os-process"></span><h2>Process Management</h2>
+<span id="os-process"></span><h2 class="sigil_not_in_toc">Process Management</h2>
 <p>These functions may be used to create and manage processes.</p>
 <p>The various <a class="reference internal" href="#os.execl" title="os.execl"><code class="xref py py-func docutils literal notranslate"><span class="pre">exec*</span></code></a> functions take a list of arguments for the new
 program loaded into the process.  In each case, the first of these arguments is
@@ -4446,7 +4701,8 @@ behavior is to produce a core dump; on Windows, the process immediately returns
 an exit code of <code class="docutils literal notranslate"><span class="pre">3</span></code>.  Be aware that calling this function will not call the
 Python signal handler registered for <code class="xref py py-const docutils literal notranslate"><span class="pre">SIGABRT</span></code> with
 <a class="reference internal" href="signal.xhtml#signal.signal" title="signal.signal"><code class="xref py py-func docutils literal notranslate"><span class="pre">signal.signal()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.add_dll_directory">
@@ -4474,7 +4730,8 @@ override the process-wide behavior to ensure consistency. See the
 <a class="reference internal" href="../whatsnew/3.8.xhtml#bpo-36085-whatsnew"><span class="std std-ref">porting notes</span></a> for information on
 updating libraries.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.execl">
@@ -4541,7 +4798,8 @@ for <a class="reference internal" href="#os.execve" title="os.execve"><code clas
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os._exit">
@@ -4553,7 +4811,8 @@ stdio buffers, etc.</p>
 <p>The standard way to exit is <a class="reference internal" href="sys.xhtml#sys.exit" title="sys.exit"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys.exit(n)</span></code></a>.  <code class="xref py py-func docutils literal notranslate"><span class="pre">_exit()</span></code> should
 normally only be used in the child process after a <a class="reference internal" href="#os.fork" title="os.fork"><code class="xref py py-func docutils literal notranslate"><span class="pre">fork()</span></code></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <p>The following exit codes are defined and can be used with <a class="reference internal" href="#os._exit" title="os._exit"><code class="xref py py-func docutils literal notranslate"><span class="pre">_exit()</span></code></a>,
 although they are not required.  These are typically used for system programs
@@ -4572,7 +4831,8 @@ platform.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, Windows.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.EX_USAGE">
@@ -4582,7 +4842,8 @@ number of arguments are given.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.EX_DATAERR">
@@ -4591,7 +4852,8 @@ number of arguments are given.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.EX_NOINPUT">
@@ -4600,7 +4862,8 @@ number of arguments are given.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.EX_NOUSER">
@@ -4609,7 +4872,8 @@ number of arguments are given.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.EX_NOHOST">
@@ -4618,7 +4882,8 @@ number of arguments are given.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.EX_UNAVAILABLE">
@@ -4627,7 +4892,8 @@ number of arguments are given.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.EX_SOFTWARE">
@@ -4636,7 +4902,8 @@ number of arguments are given.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.EX_OSERR">
@@ -4646,7 +4913,8 @@ inability to fork or create a pipe.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.EX_OSFILE">
@@ -4656,7 +4924,8 @@ some other kind of error.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.EX_CANTCREAT">
@@ -4665,7 +4934,8 @@ some other kind of error.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.EX_IOERR">
@@ -4674,7 +4944,8 @@ some other kind of error.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.EX_TEMPFAIL">
@@ -4685,7 +4956,8 @@ made during a retryable operation.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.EX_PROTOCOL">
@@ -4695,7 +4967,8 @@ understood.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.EX_NOPERM">
@@ -4705,7 +4978,8 @@ operation (but not intended for file system problems).</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.EX_CONFIG">
@@ -4714,7 +4988,8 @@ operation (but not intended for file system problems).</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.EX_NOTFOUND">
@@ -4723,7 +4998,8 @@ operation (but not intended for file system problems).</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.fork">
@@ -4768,7 +5044,8 @@ platform compatibility problem to developers.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: POSIX, not WASI, not Android, not iOS.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.forkpty">
@@ -4796,7 +5073,8 @@ longer explanation on <a class="reference internal" href="#os.fork" title="os.fo
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI, not Android, not iOS.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.kill">
@@ -4817,7 +5095,8 @@ will be set to <em>sig</em>.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.2: </span>Added Windows support.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.killpg">
@@ -4827,7 +5106,8 @@ will be set to <em>sig</em>.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI, not iOS.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.nice">
@@ -4836,7 +5116,8 @@ will be set to <em>sig</em>.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.pidfd_open">
@@ -4858,7 +5139,8 @@ and signals.</p>
 If the process referred to by the file descriptor has not yet terminated,
 then an attempt to wait on the file descriptor using <em class="manpage"><a class="manpage reference external" href="https://manpages.debian.org/waitid(2)">waitid(2)</a><span class="link-target"> [https://manpages.debian.org/waitid(2)]</span></em>
 will immediately return the error <a class="reference internal" href="errno.xhtml#errno.EAGAIN" title="errno.EAGAIN"><code class="xref py py-const docutils literal notranslate"><span class="pre">EAGAIN</span></code></a> rather than blocking.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Linux &gt;= 5.10</p>
@@ -4866,7 +5148,8 @@ will immediately return the error <a class="reference internal" href="errno.xhtm
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.12.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.plock">
@@ -4876,7 +5159,8 @@ will immediately return the error <a class="reference internal" href="errno.xhtm
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI, not iOS.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.popen">
@@ -4915,7 +5199,8 @@ for <em>cmd</em> and pipe contents.</p>
 Use <a class="reference internal" href="subprocess.xhtml#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">subprocess.Popen</span></code></a> or <a class="reference internal" href="subprocess.xhtml#subprocess.run" title="subprocess.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">subprocess.run()</span></code></a> to
 control options like encodings.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.posix_spawn">
@@ -4938,28 +5223,32 @@ listed below describing the remaining tuple elements:</p>
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">POSIX_SPAWN_OPEN</span></span></dt>
 <dd><p>(<code class="docutils literal notranslate"><span class="pre">os.POSIX_SPAWN_OPEN</span></code>, <em>fd</em>, <em>path</em>, <em>flags</em>, <em>mode</em>)</p>
 <p>Performs <code class="docutils literal notranslate"><span class="pre">os.dup2(os.open(path,</span> <span class="pre">flags,</span> <span class="pre">mode),</span> <span class="pre">fd)</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.POSIX_SPAWN_CLOSE">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">POSIX_SPAWN_CLOSE</span></span></dt>
 <dd><p>(<code class="docutils literal notranslate"><span class="pre">os.POSIX_SPAWN_CLOSE</span></code>, <em>fd</em>)</p>
 <p>Performs <code class="docutils literal notranslate"><span class="pre">os.close(fd)</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.POSIX_SPAWN_DUP2">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">POSIX_SPAWN_DUP2</span></span></dt>
 <dd><p>(<code class="docutils literal notranslate"><span class="pre">os.POSIX_SPAWN_DUP2</span></code>, <em>fd</em>, <em>new_fd</em>)</p>
 <p>Performs <code class="docutils literal notranslate"><span class="pre">os.dup2(fd,</span> <span class="pre">new_fd)</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.POSIX_SPAWN_CLOSEFROM">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">POSIX_SPAWN_CLOSEFROM</span></span></dt>
 <dd><p>(<code class="docutils literal notranslate"><span class="pre">os.POSIX_SPAWN_CLOSEFROM</span></code>, <em>fd</em>)</p>
 <p>Performs <code class="docutils literal notranslate"><span class="pre">os.closerange(fd,</span> <span class="pre">INF)</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p>These tuples correspond to the C library
 <code class="xref c c-func docutils literal notranslate"><span class="pre">posix_spawn_file_actions_addopen()</span></code>,
@@ -5008,7 +5297,8 @@ flags.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI, not Android, not iOS.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.posix_spawnp">
@@ -5025,7 +5315,8 @@ for the <em>executable</em> file in the list of directories specified by the
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: POSIX, not WASI, not Android, not iOS.</p>
 <p>See <a class="reference internal" href="#os.posix_spawn" title="os.posix_spawn"><code class="xref py py-func docutils literal notranslate"><span class="pre">posix_spawn()</span></code></a> documentation.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.register_at_fork">
@@ -5057,7 +5348,8 @@ call those functions, unless it explicitly calls <a class="reference internal" h
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.7.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.spawnl">
@@ -5116,11 +5408,12 @@ values will cause the function to fail, with a return value of <code class="docu
 <p>As an example, the following calls to <a class="reference internal" href="#os.spawnlp" title="os.spawnlp"><code class="xref py py-func docutils literal notranslate"><span class="pre">spawnlp()</span></code></a> and <a class="reference internal" href="#os.spawnvpe" title="os.spawnvpe"><code class="xref py py-func docutils literal notranslate"><span class="pre">spawnvpe()</span></code></a> are
 equivalent:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
-<span class="n">os</span><span class="o">.</span><span class="n">spawnlp</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">P_WAIT</span><span class="p">,</span> <span class="s1">&#39;cp&#39;</span><span class="p">,</span> <span class="s1">&#39;cp&#39;</span><span class="p">,</span> <span class="s1">&#39;index.html&#39;</span><span class="p">,</span> <span class="s1">&#39;/dev/null&#39;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">spawnlp</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">P_WAIT</span><span class="p">,</span> <span class="s1">'cp'</span><span class="p">,</span> <span class="s1">'cp'</span><span class="p">,</span> <span class="s1">'index.html'</span><span class="p">,</span> <span class="s1">'/dev/null'</span><span class="p">)</span>
 
-<span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cp&#39;</span><span class="p">,</span> <span class="s1">&#39;index.html&#39;</span><span class="p">,</span> <span class="s1">&#39;/dev/null&#39;</span><span class="p">]</span>
-<span class="n">os</span><span class="o">.</span><span class="n">spawnvpe</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">P_WAIT</span><span class="p">,</span> <span class="s1">&#39;cp&#39;</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">)</span>
-</pre></div>
+<span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'cp'</span><span class="p">,</span> <span class="s1">'index.html'</span><span class="p">,</span> <span class="s1">'/dev/null'</span><span class="p">]</span>
+<span class="n">os</span><span class="o">.</span><span class="n">spawnvpe</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">P_WAIT</span><span class="p">,</span> <span class="s1">'cp'</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">)</span>
+</pre>
+</div>
 </div>
 <p class="audit-hook">Raises an <a class="reference internal" href="sys.xhtml#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">os.spawn</span></code> with arguments <code class="docutils literal notranslate"><span class="pre">mode</span></code>, <code class="docutils literal notranslate"><span class="pre">path</span></code>, <code class="docutils literal notranslate"><span class="pre">args</span></code>, <code class="docutils literal notranslate"><span class="pre">env</span></code>.</p>
 <div class="availability docutils container">
@@ -5133,7 +5426,8 @@ and <a class="reference internal" href="#os.spawnvpe" title="os.spawnvpe"><code 
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>Accepts a <a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.P_NOWAIT">
@@ -5147,7 +5441,8 @@ the return value.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, Windows.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.P_WAIT">
@@ -5160,7 +5455,8 @@ process.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, Windows.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.P_DETACH">
@@ -5175,7 +5471,8 @@ process will be replaced; the <a class="reference internal" href="#os.spawnl" ti
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Windows.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.startfile">
@@ -5217,7 +5514,8 @@ cannot be resolved, <a class="reference internal" href="exceptions.xhtml#NotImpl
 <p><span class="versionmodified changed">Changed in version 3.10: </span>Added the <em>arguments</em>, <em>cwd</em> and <em>show_cmd</em> arguments, and the
 <code class="docutils literal notranslate"><span class="pre">os.startfile/2</span></code> audit event.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.system">
@@ -5247,7 +5545,8 @@ code.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, Windows, not WASI, not Android, not iOS.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.times">
@@ -5274,7 +5573,8 @@ on Windows. On Windows, only <code class="xref py py-attr docutils literal notra
 <p><span class="versionmodified changed">Changed in version 3.3: </span>Return type changed from a tuple to a tuple-like object
 with named attributes.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.wait">
@@ -5297,7 +5597,8 @@ exit code.</p>
 completion of a specific child process and have more options.
 <a class="reference internal" href="#os.waitpid" title="os.waitpid"><code class="xref py py-func docutils literal notranslate"><span class="pre">waitpid()</span></code></a> is the only one also available on Windows.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.waitid">
@@ -5330,7 +5631,8 @@ that could be waited for, <a class="reference internal" href="exceptions.xhtml#C
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.13: </span>This function is now available on macOS as well.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.waitpid">
@@ -5368,7 +5670,8 @@ exit code.</p>
 exception, the function now retries the system call instead of raising an
 <a class="reference internal" href="exceptions.xhtml#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a> exception (see <span class="target" id="index-44"></span><a class="pep reference external" href="https://peps.python.org/pep-0475/"><strong>PEP 475</strong></a><span class="link-target"> [https://peps.python.org/pep-0475/]</span> for the rationale).</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.wait3">
@@ -5384,7 +5687,8 @@ exitcode.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI, not Android, not iOS.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.wait4">
@@ -5399,7 +5703,8 @@ exitcode.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI, not Android, not iOS.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.P_PID">
@@ -5432,7 +5737,8 @@ how <em>id</em> is interpreted:</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.9: </span>The <code class="xref py py-data docutils literal notranslate"><span class="pre">P_PIDFD</span></code> constant.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.WCONTINUED">
@@ -5443,7 +5749,8 @@ continued from a job control stop since they were last reported.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI, not Android, not iOS.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.WEXITED">
@@ -5458,7 +5765,8 @@ so this option is not available for them.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.WSTOPPED">
@@ -5472,7 +5780,8 @@ by the delivery of a signal to be reported.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.WUNTRACED">
@@ -5484,7 +5793,8 @@ current state has not been reported since they were stopped.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI, not Android, not iOS.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.WNOHANG">
@@ -5495,7 +5805,8 @@ immediately.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI, not Android, not iOS.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.WNOWAIT">
@@ -5506,7 +5817,8 @@ a later <code class="xref py py-func docutils literal notranslate"><span class="
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI, not Android, not iOS.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.CLD_EXITED">
@@ -5532,7 +5844,8 @@ a later <code class="xref py py-func docutils literal notranslate"><span class="
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.9: </span>Added <a class="reference internal" href="#os.CLD_KILLED" title="os.CLD_KILLED"><code class="xref py py-data docutils literal notranslate"><span class="pre">CLD_KILLED</span></code></a> and <a class="reference internal" href="#os.CLD_STOPPED" title="os.CLD_STOPPED"><code class="xref py py-data docutils literal notranslate"><span class="pre">CLD_STOPPED</span></code></a> values.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.waitstatus_to_exitcode">
@@ -5565,7 +5878,8 @@ with <a class="reference internal" href="#os.WUNTRACED" title="os.WUNTRACED"><co
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.9.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <p>The following functions take a process status code as returned by
 <a class="reference internal" href="#os.system" title="os.system"><code class="xref py py-func docutils literal notranslate"><span class="pre">system()</span></code></a>, <a class="reference internal" href="#os.wait" title="os.wait"><code class="xref py py-func docutils literal notranslate"><span class="pre">wait()</span></code></a>, or <a class="reference internal" href="#os.waitpid" title="os.waitpid"><code class="xref py py-func docutils literal notranslate"><span class="pre">waitpid()</span></code></a> as a parameter.  They may be
@@ -5579,7 +5893,8 @@ return <code class="docutils literal notranslate"><span class="pre">False</span>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI, not Android, not iOS.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.WIFCONTINUED">
@@ -5591,7 +5906,8 @@ control stop), otherwise return <code class="docutils literal notranslate"><span
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI, not Android, not iOS.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.WIFSTOPPED">
@@ -5604,7 +5920,8 @@ done using <a class="reference internal" href="#os.WUNTRACED" title="os.WUNTRACE
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI, not Android, not iOS.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.WIFSIGNALED">
@@ -5614,7 +5931,8 @@ done using <a class="reference internal" href="#os.WUNTRACED" title="os.WUNTRACE
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI, not Android, not iOS.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.WIFEXITED">
@@ -5625,7 +5943,8 @@ otherwise return <code class="docutils literal notranslate"><span class="pre">Fa
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI, not Android, not iOS.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.WEXITSTATUS">
@@ -5635,7 +5954,8 @@ otherwise return <code class="docutils literal notranslate"><span class="pre">Fa
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI, not Android, not iOS.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.WSTOPSIG">
@@ -5645,7 +5965,8 @@ otherwise return <code class="docutils literal notranslate"><span class="pre">Fa
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI, not Android, not iOS.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.WTERMSIG">
@@ -5655,11 +5976,12 @@ otherwise return <code class="docutils literal notranslate"><span class="pre">Fa
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix, not WASI, not Android, not iOS.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="interface-to-the-scheduler">
-<h2>Interface to the scheduler</h2>
+<h2 class="sigil_not_in_toc">Interface to the scheduler</h2>
 <p>These functions control how a process is allocated CPU time by the operating
 system. They are only available on some Unix platforms. For more detailed
 information, consult your Unix manpages.</p>
@@ -5672,38 +5994,44 @@ operating system.</p>
 <dt class="sig sig-object py" id="os.SCHED_OTHER">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">SCHED_OTHER</span></span></dt>
 <dd><p>The default scheduling policy.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.SCHED_BATCH">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">SCHED_BATCH</span></span></dt>
 <dd><p>Scheduling policy for CPU-intensive processes that tries to preserve
 interactivity on the rest of the computer.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.SCHED_IDLE">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">SCHED_IDLE</span></span></dt>
 <dd><p>Scheduling policy for extremely low priority background tasks.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.SCHED_SPORADIC">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">SCHED_SPORADIC</span></span></dt>
 <dd><p>Scheduling policy for sporadic server programs.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.SCHED_FIFO">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">SCHED_FIFO</span></span></dt>
 <dd><p>A First In First Out scheduling policy.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.SCHED_RR">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">SCHED_RR</span></span></dt>
 <dd><p>A round-robin scheduling policy.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.SCHED_RESET_ON_FORK">
@@ -5711,7 +6039,8 @@ interactivity on the rest of the computer.</p>
 <dd><p>This flag can be OR’ed with any other scheduling policy. When a process with
 this flag set forks, its child’s scheduling policy and priority are reset to
 the default.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="os.sched_param">
@@ -5724,23 +6053,27 @@ the default.</p>
 <dt class="sig sig-object py" id="os.sched_param.sched_priority">
 <span class="sig-name descname"><span class="pre">sched_priority</span></span></dt>
 <dd><p>The scheduling priority for a scheduling policy.</p>
-</dd></dl>
+</dd>
+</dl>
 
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.sched_get_priority_min">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">sched_get_priority_min</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">policy</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Get the minimum priority value for <em>policy</em>. <em>policy</em> is one of the
 scheduling policy constants above.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.sched_get_priority_max">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">sched_get_priority_max</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">policy</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Get the maximum priority value for <em>policy</em>. <em>policy</em> is one of the
 scheduling policy constants above.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.sched_setscheduler">
@@ -5748,7 +6081,8 @@ scheduling policy constants above.</p>
 <dd><p>Set the scheduling policy for the process with PID <em>pid</em>. A <em>pid</em> of 0 means
 the calling process. <em>policy</em> is one of the scheduling policy constants
 above. <em>param</em> is a <a class="reference internal" href="#os.sched_param" title="os.sched_param"><code class="xref py py-class docutils literal notranslate"><span class="pre">sched_param</span></code></a> instance.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.sched_getscheduler">
@@ -5756,34 +6090,39 @@ above. <em>param</em> is a <a class="reference internal" href="#os.sched_param" 
 <dd><p>Return the scheduling policy for the process with PID <em>pid</em>. A <em>pid</em> of 0
 means the calling process. The result is one of the scheduling policy
 constants above.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.sched_setparam">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">sched_setparam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Set the scheduling parameters for the process with PID <em>pid</em>. A <em>pid</em> of 0 means
 the calling process. <em>param</em> is a <a class="reference internal" href="#os.sched_param" title="os.sched_param"><code class="xref py py-class docutils literal notranslate"><span class="pre">sched_param</span></code></a> instance.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.sched_getparam">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">sched_getparam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pid</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Return the scheduling parameters as a <a class="reference internal" href="#os.sched_param" title="os.sched_param"><code class="xref py py-class docutils literal notranslate"><span class="pre">sched_param</span></code></a> instance for the
 process with PID <em>pid</em>. A <em>pid</em> of 0 means the calling process.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.sched_rr_get_interval">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">sched_rr_get_interval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pid</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Return the round-robin quantum in seconds for the process with PID <em>pid</em>. A
 <em>pid</em> of 0 means the calling process.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.sched_yield">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">sched_yield</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Voluntarily relinquish the CPU. See <em class="manpage"><a class="manpage reference external" href="https://manpages.debian.org/sched_yield(2)">sched_yield(2)</a><span class="link-target"> [https://manpages.debian.org/sched_yield(2)]</span></em> for details.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.sched_setaffinity">
@@ -5791,7 +6130,8 @@ process with PID <em>pid</em>. A <em>pid</em> of 0 means the calling process.</p
 <dd><p>Restrict the process with PID <em>pid</em> (or the current process if zero) to a
 set of CPUs.  <em>mask</em> is an iterable of integers representing the set of
 CPUs to which the process should be restricted.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.sched_getaffinity">
@@ -5800,11 +6140,12 @@ CPUs to which the process should be restricted.</p>
 <p>If <em>pid</em> is zero, return the set of CPUs the calling thread of the current
 process is restricted to.</p>
 <p>See also the <a class="reference internal" href="#os.process_cpu_count" title="os.process_cpu_count"><code class="xref py py-func docutils literal notranslate"><span class="pre">process_cpu_count()</span></code></a> function.</p>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="miscellaneous-system-information">
-<span id="os-path"></span><h2>Miscellaneous System Information</h2>
+<span id="os-path"></span><h2 class="sigil_not_in_toc">Miscellaneous System Information</h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="os.confstr">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">confstr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span></dt>
@@ -5824,7 +6165,8 @@ included in <code class="docutils literal notranslate"><span class="pre">confstr
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.confstr_names">
@@ -5835,7 +6177,8 @@ determine the set of names known to the system.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.cpu_count">
@@ -5851,7 +6194,8 @@ logical CPUs usable by the calling thread of the <strong>current process</strong
 <p><span class="versionmodified changed">Changed in version 3.13: </span>If <a class="reference internal" href="../using/cmdline.xhtml#cmdoption-X"><code class="xref std std-option docutils literal notranslate"><span class="pre">-X</span> <span class="pre">cpu_count</span></code></a> is given or <span class="target" id="index-45"></span><a class="reference internal" href="../using/cmdline.xhtml#envvar-PYTHON_CPU_COUNT"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHON_CPU_COUNT</span></code></a> is set,
 <a class="reference internal" href="#os.cpu_count" title="os.cpu_count"><code class="xref py py-func docutils literal notranslate"><span class="pre">cpu_count()</span></code></a> returns the overridden value <em>n</em>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.getloadavg">
@@ -5862,7 +6206,8 @@ unobtainable.</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.process_cpu_count">
@@ -5878,7 +6223,8 @@ in the <strong>system</strong>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.13.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.sysconf">
@@ -5890,7 +6236,8 @@ provides information on the known names is given by <code class="docutils litera
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.xhtml#availability"><span class="std std-ref">Availability</span></a>: Unix.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.sysconf_names">
@@ -5904,7 +6251,8 @@ determine the set of names known to the system.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.11: </span>Add <code class="docutils literal notranslate"><span class="pre">'SC_MINSIGSTKSZ'</span></code> name.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <p>The following data values are used to support path manipulation operations.  These
 are defined for all platforms.</p>
@@ -5915,7 +6263,8 @@ are defined for all platforms.</p>
 <dd><p>The constant string used by the operating system to refer to the current
 directory. This is <code class="docutils literal notranslate"><span class="pre">'.'</span></code> for Windows and POSIX. Also available via
 <a class="reference internal" href="os.path.xhtml#module-os.path" title="os.path: Operations on pathnames."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os.path</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data" id="index-48">
 <dt class="sig sig-object py" id="os.pardir">
@@ -5923,7 +6272,8 @@ directory. This is <code class="docutils literal notranslate"><span class="pre">
 <dd><p>The constant string used by the operating system to refer to the parent
 directory. This is <code class="docutils literal notranslate"><span class="pre">'..'</span></code> for Windows and POSIX. Also available via
 <a class="reference internal" href="os.path.xhtml#module-os.path" title="os.path: Operations on pathnames."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os.path</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data" id="index-50">
 <span id="index-49"></span><dt class="sig sig-object py" id="os.sep">
@@ -5933,7 +6283,8 @@ This is <code class="docutils literal notranslate"><span class="pre">'/'</span><
 is not sufficient to be able to parse or concatenate pathnames — use
 <a class="reference internal" href="os.path.xhtml#os.path.split" title="os.path.split"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.path.split()</span></code></a> and <a class="reference internal" href="os.path.xhtml#os.path.join" title="os.path.join"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.path.join()</span></code></a> — but it is occasionally
 useful. Also available via <a class="reference internal" href="os.path.xhtml#module-os.path" title="os.path: Operations on pathnames."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os.path</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data" id="index-51">
 <dt class="sig sig-object py" id="os.altsep">
@@ -5942,14 +6293,16 @@ useful. Also available via <a class="reference internal" href="os.path.xhtml#mod
 components, or <code class="docutils literal notranslate"><span class="pre">None</span></code> if only one separator character exists.  This is set to
 <code class="docutils literal notranslate"><span class="pre">'/'</span></code> on Windows systems where <code class="docutils literal notranslate"><span class="pre">sep</span></code> is a backslash. Also available via
 <a class="reference internal" href="os.path.xhtml#module-os.path" title="os.path: Operations on pathnames."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os.path</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data" id="index-52">
 <dt class="sig sig-object py" id="os.extsep">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">extsep</span></span></dt>
 <dd><p>The character which separates the base filename from the extension; for example,
 the <code class="docutils literal notranslate"><span class="pre">'.'</span></code> in <code class="file docutils literal notranslate"><span class="pre">os.py</span></code>. Also available via <a class="reference internal" href="os.path.xhtml#module-os.path" title="os.path: Operations on pathnames."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os.path</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data" id="index-53">
 <dt class="sig sig-object py" id="os.pathsep">
@@ -5957,7 +6310,8 @@ the <code class="docutils literal notranslate"><span class="pre">'.'</span></cod
 <dd><p>The character conventionally used by the operating system to separate search
 path components (as in <span class="target" id="index-54"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PATH</span></code>), such as <code class="docutils literal notranslate"><span class="pre">':'</span></code> for POSIX or <code class="docutils literal notranslate"><span class="pre">';'</span></code> for
 Windows. Also available via <a class="reference internal" href="os.path.xhtml#module-os.path" title="os.path: Operations on pathnames."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os.path</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.defpath">
@@ -5965,7 +6319,8 @@ Windows. Also available via <a class="reference internal" href="os.path.xhtml#mo
 <dd><p>The default search path used by <a class="reference internal" href="#os.execl" title="os.execl"><code class="xref py py-func docutils literal notranslate"><span class="pre">exec*p*</span></code></a> and
 <a class="reference internal" href="#os.spawnl" title="os.spawnl"><code class="xref py py-func docutils literal notranslate"><span class="pre">spawn*p*</span></code></a> if the environment doesn’t have a <code class="docutils literal notranslate"><span class="pre">'PATH'</span></code>
 key. Also available via <a class="reference internal" href="os.path.xhtml#module-os.path" title="os.path: Operations on pathnames."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os.path</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.linesep">
@@ -5975,14 +6330,16 @@ platform.  This may be a single character, such as <code class="docutils literal
 multiple characters, for example, <code class="docutils literal notranslate"><span class="pre">'\r\n'</span></code> for Windows. Do not use
 <em>os.linesep</em> as a line terminator when writing files opened in text mode (the
 default); use a single <code class="docutils literal notranslate"><span class="pre">'\n'</span></code> instead, on all platforms.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.devnull">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">devnull</span></span></dt>
 <dd><p>The file path of the null device. For example: <code class="docutils literal notranslate"><span class="pre">'/dev/null'</span></code> for
 POSIX, <code class="docutils literal notranslate"><span class="pre">'nul'</span></code> for Windows.  Also available via <a class="reference internal" href="os.path.xhtml#module-os.path" title="os.path: Operations on pathnames."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os.path</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.RTLD_LAZY">
@@ -6005,11 +6362,12 @@ POSIX, <code class="docutils literal notranslate"><span class="pre">'nul'</span>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.3.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="random-numbers">
-<h2>Random numbers</h2>
+<h2 class="sigil_not_in_toc">Random numbers</h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="os.getrandom">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">getrandom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span></dt>
@@ -6031,7 +6389,8 @@ following values ORed together: <a class="reference internal" href="#os.GRND_RAN
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.6.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="os.urandom">
@@ -6074,7 +6433,8 @@ security.</p>
 <p><span class="versionmodified changed">Changed in version 3.11: </span>On Windows, <code class="docutils literal notranslate"><span class="pre">BCryptGenRandom()</span></code> is used instead of <code class="docutils literal notranslate"><span class="pre">CryptGenRandom()</span></code>
 which is deprecated.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.GRND_NONBLOCK">
@@ -6087,7 +6447,8 @@ block in these cases, but instead immediately raises <a class="reference interna
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.6.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="os.GRND_RANDOM">
@@ -6097,7 +6458,8 @@ block in these cases, but instead immediately raises <a class="reference interna
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.6.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 </section>
@@ -6108,5 +6470,5 @@ block in these cases, but instead immediately raises <a class="reference interna
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

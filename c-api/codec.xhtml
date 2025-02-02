@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="Codec registry and support functions" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/c-api/codec.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="Codec lookup API: In the following functions, the encoding string is looked up converted to all lower-case characters, which makes encodings looked up through this mechanism effectively case-insens..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="Codec lookup API: In the following functions, the encoding string is looked up converted to all lower-case characters, which makes encodings looked up through this mechanism effectively case-insens..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="Codec registry and support functions"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/c-api/codec.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="Codec lookup API: In the following functions, the encoding string is looked up converted to all lower-case characters, which makes encodings looked up through this mechanism effectively case-insens..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="Codec lookup API: In the following functions, the encoding string is looked up converted to all lower-case characters, which makes encodings looked up through this mechanism effectively case-insens..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>Codec registry and support functions</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/c-api/codec.html" />
+    <link rel="canonical" href="https://docs.python.org/3/c-api/codec.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -46,98 +47,109 @@
 <span id="codec-registry"></span><h1>Codec registry and support functions</h1>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyCodec_Register">
-<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_Register</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">search_function</span></span><span class="sig-paren">)</span><br /></dt>
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_Register</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">search_function</span></span><span class="sig-paren">)</span><br/></dt>
 <dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.xhtml#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Register a new codec search function.</p>
 <p>As side effect, this tries to load the <code class="xref py py-mod docutils literal notranslate"><span class="pre">encodings</span></code> package, if not yet
 done, to make sure that it is always first in the list of search functions.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyCodec_Unregister">
-<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_Unregister</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">search_function</span></span><span class="sig-paren">)</span><br /></dt>
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_Unregister</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">search_function</span></span><span class="sig-paren">)</span><br/></dt>
 <dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.xhtml#stable"><span class="std std-ref">Stable ABI</span></a> since version 3.10.</em><p>Unregister a codec search function and clear the registry’s cache.
 If the search function is not registered, do nothing.
 Return 0 on success. Raise an exception and return -1 on error.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.10.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyCodec_KnownEncoding">
-<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_KnownEncoding</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">encoding</span></span><span class="sig-paren">)</span><br /></dt>
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_KnownEncoding</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">encoding</span></span><span class="sig-paren">)</span><br/></dt>
 <dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.xhtml#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Return <code class="docutils literal notranslate"><span class="pre">1</span></code> or <code class="docutils literal notranslate"><span class="pre">0</span></code> depending on whether there is a registered codec for
 the given <em>encoding</em>.  This function always succeeds.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyCodec_Encode">
-<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_Encode</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">object</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">encoding</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">errors</span></span><span class="sig-paren">)</span><br /></dt>
+<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_Encode</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">object</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">encoding</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">errors</span></span><span class="sig-paren">)</span><br/></dt>
 <dd><em class="refcount return_new_ref">Return value: New reference.</em><em class="stableabi"> Part of the <a class="reference internal" href="stable.xhtml#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Generic codec based encoding API.</p>
 <p><em>object</em> is passed through the encoder function found for the given
 <em>encoding</em> using the error handling method defined by <em>errors</em>.  <em>errors</em> may
 be <code class="docutils literal notranslate"><span class="pre">NULL</span></code> to use the default method defined for the codec.  Raises a
 <a class="reference internal" href="../library/exceptions.xhtml#LookupError" title="LookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">LookupError</span></code></a> if no encoder can be found.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyCodec_Decode">
-<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_Decode</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">object</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">encoding</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">errors</span></span><span class="sig-paren">)</span><br /></dt>
+<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_Decode</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">object</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">encoding</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">errors</span></span><span class="sig-paren">)</span><br/></dt>
 <dd><em class="refcount return_new_ref">Return value: New reference.</em><em class="stableabi"> Part of the <a class="reference internal" href="stable.xhtml#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Generic codec based decoding API.</p>
 <p><em>object</em> is passed through the decoder function found for the given
 <em>encoding</em> using the error handling method defined by <em>errors</em>.  <em>errors</em> may
 be <code class="docutils literal notranslate"><span class="pre">NULL</span></code> to use the default method defined for the codec.  Raises a
 <a class="reference internal" href="../library/exceptions.xhtml#LookupError" title="LookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">LookupError</span></code></a> if no encoder can be found.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <section id="codec-lookup-api">
-<h2>Codec lookup API</h2>
+<h2 class="sigil_not_in_toc">Codec lookup API</h2>
 <p>In the following functions, the <em>encoding</em> string is looked up converted to all
 lower-case characters, which makes encodings looked up through this mechanism
 effectively case-insensitive.  If no codec is found, a <a class="reference internal" href="../library/exceptions.xhtml#KeyError" title="KeyError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyError</span></code></a> is set
 and <code class="docutils literal notranslate"><span class="pre">NULL</span></code> returned.</p>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyCodec_Encoder">
-<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_Encoder</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">encoding</span></span><span class="sig-paren">)</span><br /></dt>
+<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_Encoder</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">encoding</span></span><span class="sig-paren">)</span><br/></dt>
 <dd><em class="refcount return_new_ref">Return value: New reference.</em><em class="stableabi"> Part of the <a class="reference internal" href="stable.xhtml#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Get an encoder function for the given <em>encoding</em>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyCodec_Decoder">
-<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_Decoder</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">encoding</span></span><span class="sig-paren">)</span><br /></dt>
+<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_Decoder</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">encoding</span></span><span class="sig-paren">)</span><br/></dt>
 <dd><em class="refcount return_new_ref">Return value: New reference.</em><em class="stableabi"> Part of the <a class="reference internal" href="stable.xhtml#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Get a decoder function for the given <em>encoding</em>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyCodec_IncrementalEncoder">
-<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_IncrementalEncoder</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">encoding</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">errors</span></span><span class="sig-paren">)</span><br /></dt>
+<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_IncrementalEncoder</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">encoding</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">errors</span></span><span class="sig-paren">)</span><br/></dt>
 <dd><em class="refcount return_new_ref">Return value: New reference.</em><em class="stableabi"> Part of the <a class="reference internal" href="stable.xhtml#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Get an <a class="reference internal" href="../library/codecs.xhtml#codecs.IncrementalEncoder" title="codecs.IncrementalEncoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">IncrementalEncoder</span></code></a> object for the given <em>encoding</em>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyCodec_IncrementalDecoder">
-<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_IncrementalDecoder</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">encoding</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">errors</span></span><span class="sig-paren">)</span><br /></dt>
+<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_IncrementalDecoder</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">encoding</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">errors</span></span><span class="sig-paren">)</span><br/></dt>
 <dd><em class="refcount return_new_ref">Return value: New reference.</em><em class="stableabi"> Part of the <a class="reference internal" href="stable.xhtml#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Get an <a class="reference internal" href="../library/codecs.xhtml#codecs.IncrementalDecoder" title="codecs.IncrementalDecoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">IncrementalDecoder</span></code></a> object for the given <em>encoding</em>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyCodec_StreamReader">
-<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_StreamReader</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">encoding</span></span>, <a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">stream</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">errors</span></span><span class="sig-paren">)</span><br /></dt>
+<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_StreamReader</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">encoding</span></span>, <a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">stream</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">errors</span></span><span class="sig-paren">)</span><br/></dt>
 <dd><em class="refcount return_new_ref">Return value: New reference.</em><em class="stableabi"> Part of the <a class="reference internal" href="stable.xhtml#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Get a <a class="reference internal" href="../library/codecs.xhtml#codecs.StreamReader" title="codecs.StreamReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamReader</span></code></a> factory function for the given <em>encoding</em>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyCodec_StreamWriter">
-<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_StreamWriter</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">encoding</span></span>, <a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">stream</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">errors</span></span><span class="sig-paren">)</span><br /></dt>
+<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_StreamWriter</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">encoding</span></span>, <a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">stream</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">errors</span></span><span class="sig-paren">)</span><br/></dt>
 <dd><em class="refcount return_new_ref">Return value: New reference.</em><em class="stableabi"> Part of the <a class="reference internal" href="stable.xhtml#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Get a <a class="reference internal" href="../library/codecs.xhtml#codecs.StreamWriter" title="codecs.StreamWriter"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamWriter</span></code></a> factory function for the given <em>encoding</em>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="registry-api-for-unicode-encoding-error-handlers">
-<h2>Registry API for Unicode encoding error handlers</h2>
+<h2 class="sigil_not_in_toc">Registry API for Unicode encoding error handlers</h2>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyCodec_RegisterError">
-<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_RegisterError</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">name</span></span>, <a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">error</span></span><span class="sig-paren">)</span><br /></dt>
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_RegisterError</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">name</span></span>, <a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">error</span></span><span class="sig-paren">)</span><br/></dt>
 <dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.xhtml#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Register the error handling callback function <em>error</em> under the given <em>name</em>.
 This callback function will be called by a codec when it encounters
 unencodable characters/undecodable bytes and <em>name</em> is specified as the error
@@ -152,55 +164,63 @@ containing the replacement for the problematic sequence, and an integer
 giving the offset in the original string at which encoding/decoding should be
 resumed.</p>
 <p>Return <code class="docutils literal notranslate"><span class="pre">0</span></code> on success, <code class="docutils literal notranslate"><span class="pre">-1</span></code> on error.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyCodec_LookupError">
-<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_LookupError</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">name</span></span><span class="sig-paren">)</span><br /></dt>
+<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_LookupError</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">name</span></span><span class="sig-paren">)</span><br/></dt>
 <dd><em class="refcount return_new_ref">Return value: New reference.</em><em class="stableabi"> Part of the <a class="reference internal" href="stable.xhtml#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Lookup the error handling callback function registered under <em>name</em>.  As a
 special case <code class="docutils literal notranslate"><span class="pre">NULL</span></code> can be passed, in which case the error handling callback
 for “strict” will be returned.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyCodec_StrictErrors">
-<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_StrictErrors</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">exc</span></span><span class="sig-paren">)</span><br /></dt>
+<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_StrictErrors</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">exc</span></span><span class="sig-paren">)</span><br/></dt>
 <dd><em class="refcount return_null">Return value: Always NULL.</em><em class="stableabi"> Part of the <a class="reference internal" href="stable.xhtml#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Raise <em>exc</em> as an exception.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyCodec_IgnoreErrors">
-<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_IgnoreErrors</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">exc</span></span><span class="sig-paren">)</span><br /></dt>
+<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_IgnoreErrors</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">exc</span></span><span class="sig-paren">)</span><br/></dt>
 <dd><em class="refcount return_new_ref">Return value: New reference.</em><em class="stableabi"> Part of the <a class="reference internal" href="stable.xhtml#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Ignore the unicode error, skipping the faulty input.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyCodec_ReplaceErrors">
-<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_ReplaceErrors</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">exc</span></span><span class="sig-paren">)</span><br /></dt>
+<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_ReplaceErrors</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">exc</span></span><span class="sig-paren">)</span><br/></dt>
 <dd><em class="refcount return_new_ref">Return value: New reference.</em><em class="stableabi"> Part of the <a class="reference internal" href="stable.xhtml#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Replace the unicode encode error with <code class="docutils literal notranslate"><span class="pre">?</span></code> or <code class="docutils literal notranslate"><span class="pre">U+FFFD</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyCodec_XMLCharRefReplaceErrors">
-<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_XMLCharRefReplaceErrors</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">exc</span></span><span class="sig-paren">)</span><br /></dt>
+<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_XMLCharRefReplaceErrors</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">exc</span></span><span class="sig-paren">)</span><br/></dt>
 <dd><em class="refcount return_new_ref">Return value: New reference.</em><em class="stableabi"> Part of the <a class="reference internal" href="stable.xhtml#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Replace the unicode encode error with XML character references.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyCodec_BackslashReplaceErrors">
-<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_BackslashReplaceErrors</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">exc</span></span><span class="sig-paren">)</span><br /></dt>
+<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_BackslashReplaceErrors</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">exc</span></span><span class="sig-paren">)</span><br/></dt>
 <dd><em class="refcount return_new_ref">Return value: New reference.</em><em class="stableabi"> Part of the <a class="reference internal" href="stable.xhtml#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Replace the unicode encode error with backslash escapes (<code class="docutils literal notranslate"><span class="pre">\x</span></code>, <code class="docutils literal notranslate"><span class="pre">\u</span></code> and
 <code class="docutils literal notranslate"><span class="pre">\U</span></code>).</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyCodec_NameReplaceErrors">
-<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_NameReplaceErrors</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">exc</span></span><span class="sig-paren">)</span><br /></dt>
+<a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyCodec_NameReplaceErrors</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">exc</span></span><span class="sig-paren">)</span><br/></dt>
 <dd><em class="refcount return_new_ref">Return value: New reference.</em><em class="stableabi"> Part of the <a class="reference internal" href="stable.xhtml#stable"><span class="std std-ref">Stable ABI</span></a> since version 3.7.</em><p>Replace the unicode encode error with <code class="docutils literal notranslate"><span class="pre">\N{...}</span></code> escapes.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.5.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 </section>
@@ -211,5 +231,5 @@ for “strict” will be returned.</p>
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

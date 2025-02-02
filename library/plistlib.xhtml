@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="plistlib — Generate and parse Apple .plist files" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/library/plistlib.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="Source code: Lib/plistlib.py[https://github.com/python/cpython/tree/3.13/Lib/plistlib.py] This module provides an interface for reading and writing the “property list” files used by Apple, primaril..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="Source code: Lib/plistlib.py[https://github.com/python/cpython/tree/3.13/Lib/plistlib.py] This module provides an interface for reading and writing the “property list” files used by Apple, primaril..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="plistlib — Generate and parse Apple .plist files"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/library/plistlib.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="Source code: Lib/plistlib.py[https://github.com/python/cpython/tree/3.13/Lib/plistlib.py] This module provides an interface for reading and writing the “property list” files used by Apple, primaril..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="Source code: Lib/plistlib.py[https://github.com/python/cpython/tree/3.13/Lib/plistlib.py] This module provides an interface for reading and writing the “property list” files used by Apple, primaril..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>plistlib — Generate and parse Apple .plist files</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/library/plistlib.html" />
+    <link rel="canonical" href="https://docs.python.org/3/library/plistlib.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -45,7 +46,7 @@
   <section id="module-plistlib">
 <span id="plistlib-generate-and-parse-apple-plist-files"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">plistlib</span></code> — Generate and parse Apple <code class="docutils literal notranslate"><span class="pre">.plist</span></code> files</h1>
 <p><strong>Source code:</strong> <a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.13/Lib/plistlib.py">Lib/plistlib.py</a><span class="link-target"> [https://github.com/python/cpython/tree/3.13/Lib/plistlib.py]</span></p>
-<hr class="docutils" id="index-0" />
+<hr class="docutils" id="index-0"/>
 <p>This module provides an interface for reading and writing the “property list”
 files used by Apple, primarily on macOS and iOS. This module supports both binary
 and XML plist files.</p>
@@ -72,7 +73,8 @@ by NSKeyedArchiver and NSKeyedUnarchiver.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt><a class="reference external" href="https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/PropertyLists/">PList manual page</a><span class="link-target"> [https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/PropertyLists/]</span></dt><dd><p>Apple’s documentation of the file format.</p>
+<dt><a class="reference external" href="https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/PropertyLists/">PList manual page</a><span class="link-target"> [https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/PropertyLists/]</span></dt>
+<dd><p>Apple’s documentation of the file format.</p>
 </dd>
 </dl>
 </div>
@@ -106,7 +108,8 @@ when the file cannot be parsed.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.13: </span>The keyword-only parameter <em>aware_datetime</em> has been added.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="plistlib.loads">
@@ -119,7 +122,8 @@ explanation of the keyword arguments.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.13: </span><em>data</em> can be a string when <em>fmt</em> equals <a class="reference internal" href="#plistlib.FMT_XML" title="plistlib.FMT_XML"><code class="xref py py-data docutils literal notranslate"><span class="pre">FMT_XML</span></code></a>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="plistlib.dump">
@@ -150,7 +154,8 @@ be represented in (binary) plist files.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.13: </span>The keyword-only parameter <em>aware_datetime</em> has been added.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="plistlib.dumps">
@@ -161,7 +166,8 @@ arguments of this function.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.4.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <p>The following classes are available:</p>
 <dl class="py class">
@@ -174,7 +180,8 @@ of the UID.  <code class="xref py py-attr docutils literal notranslate"><span cl
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.8.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <p>The following constants are available:</p>
 <dl class="py data">
@@ -184,7 +191,8 @@ of the UID.  <code class="xref py py-attr docutils literal notranslate"><span cl
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.4.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="plistlib.FMT_BINARY">
@@ -193,44 +201,47 @@ of the UID.  <code class="xref py py-attr docutils literal notranslate"><span cl
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.4.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <section id="examples">
-<h2>Examples</h2>
+<h2 class="sigil_not_in_toc">Examples</h2>
 <p>Generating a plist:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">plistlib</span>
 
 <span class="n">pl</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
-    <span class="n">aString</span> <span class="o">=</span> <span class="s2">&quot;Doodah&quot;</span><span class="p">,</span>
-    <span class="n">aList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mf">32.1</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]],</span>
+    <span class="n">aString</span> <span class="o">=</span> <span class="s2">"Doodah"</span><span class="p">,</span>
+    <span class="n">aList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"A"</span><span class="p">,</span> <span class="s2">"B"</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mf">32.1</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]],</span>
     <span class="n">aFloat</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
     <span class="n">anInt</span> <span class="o">=</span> <span class="mi">728</span><span class="p">,</span>
     <span class="n">aDict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
-        <span class="n">anotherString</span> <span class="o">=</span> <span class="s2">&quot;&lt;hello &amp; hi there!&gt;&quot;</span><span class="p">,</span>
-        <span class="n">aThirdString</span> <span class="o">=</span> <span class="s2">&quot;M</span><span class="se">\xe4</span><span class="s2">ssig, Ma</span><span class="se">\xdf</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">anotherString</span> <span class="o">=</span> <span class="s2">"&lt;hello &amp; hi there!&gt;"</span><span class="p">,</span>
+        <span class="n">aThirdString</span> <span class="o">=</span> <span class="s2">"M</span><span class="se">\xe4</span><span class="s2">ssig, Ma</span><span class="se">\xdf</span><span class="s2">"</span><span class="p">,</span>
         <span class="n">aTrueValue</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
         <span class="n">aFalseValue</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
     <span class="p">),</span>
-    <span class="n">someData</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;&lt;binary gunk&gt;&quot;</span><span class="p">,</span>
-    <span class="n">someMoreData</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;&lt;lots of binary gunk&gt;&quot;</span> <span class="o">*</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="n">someData</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">"&lt;binary gunk&gt;"</span><span class="p">,</span>
+    <span class="n">someMoreData</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">"&lt;lots of binary gunk&gt;"</span> <span class="o">*</span> <span class="mi">10</span><span class="p">,</span>
     <span class="n">aDate</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
 <span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">plistlib</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">pl</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">())</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Parsing a plist:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">plistlib</span>
 
-<span class="n">plist</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;&quot;&quot;&lt;plist version=&quot;1.0&quot;&gt;</span>
+<span class="n">plist</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">"""&lt;plist version="1.0"&gt;</span>
 <span class="s2">&lt;dict&gt;</span>
 <span class="s2">    &lt;key&gt;foo&lt;/key&gt;</span>
 <span class="s2">    &lt;string&gt;bar&lt;/string&gt;</span>
 <span class="s2">&lt;/dict&gt;</span>
-<span class="s2">&lt;/plist&gt;&quot;&quot;&quot;</span>
+<span class="s2">&lt;/plist&gt;"""</span>
 <span class="n">pl</span> <span class="o">=</span> <span class="n">plistlib</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">plist</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">pl</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">])</span>
-</pre></div>
+<span class="nb">print</span><span class="p">(</span><span class="n">pl</span><span class="p">[</span><span class="s2">"foo"</span><span class="p">])</span>
+</pre>
+</div>
 </div>
 </section>
 </section>
@@ -241,5 +252,5 @@ of the UID.  <code class="xref py py-attr docutils literal notranslate"><span cl
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="heapq — Heap queue algorithm" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/library/heapq.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="Source code: Lib/heapq.py[https://github.com/python/cpython/tree/3.13/Lib/heapq.py] This module provides an implementation of the heap queue algorithm, also known as the priority queue algorithm. H..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="Source code: Lib/heapq.py[https://github.com/python/cpython/tree/3.13/Lib/heapq.py] This module provides an implementation of the heap queue algorithm, also known as the priority queue algorithm. H..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="heapq — Heap queue algorithm"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/library/heapq.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="Source code: Lib/heapq.py[https://github.com/python/cpython/tree/3.13/Lib/heapq.py] This module provides an implementation of the heap queue algorithm, also known as the priority queue algorithm. H..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="Source code: Lib/heapq.py[https://github.com/python/cpython/tree/3.13/Lib/heapq.py] This module provides an implementation of the heap queue algorithm, also known as the priority queue algorithm. H..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>heapq — Heap queue algorithm</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/library/heapq.html" />
+    <link rel="canonical" href="https://docs.python.org/3/library/heapq.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -45,7 +46,7 @@
   <section id="module-heapq">
 <span id="heapq-heap-queue-algorithm"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">heapq</span></code> — Heap queue algorithm</h1>
 <p><strong>Source code:</strong> <a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.13/Lib/heapq.py">Lib/heapq.py</a><span class="link-target"> [https://github.com/python/cpython/tree/3.13/Lib/heapq.py]</span></p>
-<hr class="docutils" />
+<hr class="docutils"/>
 <p>This module provides an implementation of the heap queue algorithm, also known
 as the priority queue algorithm.</p>
 <p>Heaps are binary trees for which every parent node has a value less than or
@@ -71,7 +72,8 @@ populated list into a heap via function <a class="reference internal" href="#hea
 <dt class="sig sig-object py" id="heapq.heappush">
 <span class="sig-prename descclassname"><span class="pre">heapq.</span></span><span class="sig-name descname"><span class="pre">heappush</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">heap</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Push the value <em>item</em> onto the <em>heap</em>, maintaining the heap invariant.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="heapq.heappop">
@@ -79,7 +81,8 @@ populated list into a heap via function <a class="reference internal" href="#hea
 <dd><p>Pop and return the smallest item from the <em>heap</em>, maintaining the heap
 invariant.  If the heap is empty, <a class="reference internal" href="exceptions.xhtml#IndexError" title="IndexError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">IndexError</span></code></a> is raised.  To access the
 smallest item without popping it, use <code class="docutils literal notranslate"><span class="pre">heap[0]</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="heapq.heappushpop">
@@ -87,13 +90,15 @@ smallest item without popping it, use <code class="docutils literal notranslate"
 <dd><p>Push <em>item</em> on the heap, then pop and return the smallest item from the
 <em>heap</em>.  The combined action runs more efficiently than <a class="reference internal" href="#heapq.heappush" title="heapq.heappush"><code class="xref py py-func docutils literal notranslate"><span class="pre">heappush()</span></code></a>
 followed by a separate call to <a class="reference internal" href="#heapq.heappop" title="heapq.heappop"><code class="xref py py-func docutils literal notranslate"><span class="pre">heappop()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="heapq.heapify">
 <span class="sig-prename descclassname"><span class="pre">heapq.</span></span><span class="sig-name descname"><span class="pre">heapify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Transform list <em>x</em> into a heap, in-place, in linear time.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="heapq.heapreplace">
@@ -108,7 +113,8 @@ it with <em>item</em>.</p>
 desired, consider using <a class="reference internal" href="#heapq.heappushpop" title="heapq.heappushpop"><code class="xref py py-func docutils literal notranslate"><span class="pre">heappushpop()</span></code></a> instead.  Its push/pop
 combination returns the smaller of the two values, leaving the larger value
 on the heap.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p>The module also offers three general purpose functions based on heaps.</p>
 <dl class="py function">
@@ -131,7 +137,8 @@ be sorted from largest to smallest.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.5: </span>Added the optional <em>key</em> and <em>reverse</em> parameters.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="heapq.nlargest">
@@ -141,7 +148,8 @@ be sorted from largest to smallest.</p>
 used to extract a comparison key from each element in <em>iterable</em> (for example,
 <code class="docutils literal notranslate"><span class="pre">key=str.lower</span></code>).  Equivalent to:  <code class="docutils literal notranslate"><span class="pre">sorted(iterable,</span> <span class="pre">key=key,</span>
 <span class="pre">reverse=True)[:n]</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="heapq.nsmallest">
@@ -150,7 +158,8 @@ used to extract a comparison key from each element in <em>iterable</em> (for exa
 <em>iterable</em>.  <em>key</em>, if provided, specifies a function of one argument that is
 used to extract a comparison key from each element in <em>iterable</em> (for example,
 <code class="docutils literal notranslate"><span class="pre">key=str.lower</span></code>).  Equivalent to:  <code class="docutils literal notranslate"><span class="pre">sorted(iterable,</span> <span class="pre">key=key)[:n]</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <p>The latter two functions perform best for smaller values of <em>n</em>.  For larger
 values, it is more efficient to use the <a class="reference internal" href="functions.xhtml#sorted" title="sorted"><code class="xref py py-func docutils literal notranslate"><span class="pre">sorted()</span></code></a> function.  Also, when
@@ -158,7 +167,7 @@ values, it is more efficient to use the <a class="reference internal" href="func
 functions.  If repeated usage of these functions is required, consider turning
 the iterable into an actual heap.</p>
 <section id="basic-examples">
-<h2>Basic Examples</h2>
+<h2 class="sigil_not_in_toc">Basic Examples</h2>
 <p>A <a class="reference external" href="https://en.wikipedia.org/wiki/Heapsort">heapsort</a><span class="link-target"> [https://en.wikipedia.org/wiki/Heapsort]</span> can be implemented by
 pushing all values onto a heap and then popping off the smallest values one at a
 time:</p>
@@ -170,24 +179,26 @@ time:</p>
 <span class="gp">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">heapsort</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
 <span class="go">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>This is similar to <code class="docutils literal notranslate"><span class="pre">sorted(iterable)</span></code>, but unlike <a class="reference internal" href="functions.xhtml#sorted" title="sorted"><code class="xref py py-func docutils literal notranslate"><span class="pre">sorted()</span></code></a>, this
 implementation is not stable.</p>
 <p>Heap elements can be tuples.  This is useful for assigning comparison values
 (such as task priorities) alongside the main record being tracked:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">h</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">heappush</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;write code&#39;</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">heappush</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;release product&#39;</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">heappush</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;write spec&#39;</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">heappush</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;create tests&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">heappush</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s1">'write code'</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">heappush</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="s1">'release product'</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">heappush</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">'write spec'</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">heappush</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">'create tests'</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">heappop</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
-<span class="go">(1, &#39;write spec&#39;)</span>
-</pre></div>
+<span class="go">(1, 'write spec')</span>
+</pre>
+</div>
 </div>
 </section>
 <section id="priority-queue-implementation-notes">
-<h2>Priority Queue Implementation Notes</h2>
+<h2 class="sigil_not_in_toc">Priority Queue Implementation Notes</h2>
 <p>A <a class="reference external" href="https://en.wikipedia.org/wiki/Priority_queue">priority queue</a><span class="link-target"> [https://en.wikipedia.org/wiki/Priority_queue]</span> is common use
 for a heap, and it presents several implementation challenges:</p>
 <ul class="simple">
@@ -214,7 +225,8 @@ class that ignores the task item and only compares the priority field:</p>
 <span class="k">class</span><span class="w"> </span><span class="nc">PrioritizedItem</span><span class="p">:</span>
     <span class="n">priority</span><span class="p">:</span> <span class="nb">int</span>
     <span class="n">item</span><span class="p">:</span> <span class="n">Any</span><span class="o">=</span><span class="n">field</span><span class="p">(</span><span class="n">compare</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The remaining challenges revolve around finding a pending task and making
 changes to its priority or removing it entirely.  Finding a task can be done
@@ -224,11 +236,11 @@ break the heap structure invariants.  So, a possible solution is to mark the
 entry as removed and add a new entry with the revised priority:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">pq</span> <span class="o">=</span> <span class="p">[]</span>                         <span class="c1"># list of entries arranged in a heap</span>
 <span class="n">entry_finder</span> <span class="o">=</span> <span class="p">{}</span>               <span class="c1"># mapping of tasks to entries</span>
-<span class="n">REMOVED</span> <span class="o">=</span> <span class="s1">&#39;&lt;removed-task&gt;&#39;</span>      <span class="c1"># placeholder for a removed task</span>
+<span class="n">REMOVED</span> <span class="o">=</span> <span class="s1">'&lt;removed-task&gt;'</span>      <span class="c1"># placeholder for a removed task</span>
 <span class="n">counter</span> <span class="o">=</span> <span class="n">itertools</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>     <span class="c1"># unique sequence count</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">add_task</span><span class="p">(</span><span class="n">task</span><span class="p">,</span> <span class="n">priority</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-    <span class="s1">&#39;Add a new task or update the priority of an existing task&#39;</span>
+    <span class="s1">'Add a new task or update the priority of an existing task'</span>
     <span class="k">if</span> <span class="n">task</span> <span class="ow">in</span> <span class="n">entry_finder</span><span class="p">:</span>
         <span class="n">remove_task</span><span class="p">(</span><span class="n">task</span><span class="p">)</span>
     <span class="n">count</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span>
@@ -237,23 +249,24 @@ entry as removed and add a new entry with the revised priority:</p>
     <span class="n">heappush</span><span class="p">(</span><span class="n">pq</span><span class="p">,</span> <span class="n">entry</span><span class="p">)</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">remove_task</span><span class="p">(</span><span class="n">task</span><span class="p">):</span>
-    <span class="s1">&#39;Mark an existing task as REMOVED.  Raise KeyError if not found.&#39;</span>
+    <span class="s1">'Mark an existing task as REMOVED.  Raise KeyError if not found.'</span>
     <span class="n">entry</span> <span class="o">=</span> <span class="n">entry_finder</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">task</span><span class="p">)</span>
     <span class="n">entry</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">REMOVED</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">pop_task</span><span class="p">():</span>
-    <span class="s1">&#39;Remove and return the lowest priority task. Raise KeyError if empty.&#39;</span>
+    <span class="s1">'Remove and return the lowest priority task. Raise KeyError if empty.'</span>
     <span class="k">while</span> <span class="n">pq</span><span class="p">:</span>
         <span class="n">priority</span><span class="p">,</span> <span class="n">count</span><span class="p">,</span> <span class="n">task</span> <span class="o">=</span> <span class="n">heappop</span><span class="p">(</span><span class="n">pq</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">task</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">REMOVED</span><span class="p">:</span>
             <span class="k">del</span> <span class="n">entry_finder</span><span class="p">[</span><span class="n">task</span><span class="p">]</span>
             <span class="k">return</span> <span class="n">task</span>
-    <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="s1">&#39;pop from an empty priority queue&#39;</span><span class="p">)</span>
-</pre></div>
+    <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="s1">'pop from an empty priority queue'</span><span class="p">)</span>
+</pre>
+</div>
 </div>
 </section>
 <section id="theory">
-<h2>Theory</h2>
+<h2 class="sigil_not_in_toc">Theory</h2>
 <p>Heaps are arrays for which <code class="docutils literal notranslate"><span class="pre">a[k]</span> <span class="pre">&lt;=</span> <span class="pre">a[2*k+1]</span></code> and <code class="docutils literal notranslate"><span class="pre">a[k]</span> <span class="pre">&lt;=</span> <span class="pre">a[2*k+2]</span></code> for all
 <em>k</em>, counting elements from 0.  For the sake of comparison, non-existing
 elements are considered to be infinite.  The interesting property of a heap is
@@ -269,7 +282,8 @@ for a tournament.  The numbers below are <em>k</em>, not <code class="docutils l
   <span class="mi">7</span>       <span class="mi">8</span>       <span class="mi">9</span>       <span class="mi">10</span>      <span class="mi">11</span>      <span class="mi">12</span>      <span class="mi">13</span>      <span class="mi">14</span>
 
 <span class="mi">15</span> <span class="mi">16</span>   <span class="mi">17</span> <span class="mi">18</span>   <span class="mi">19</span> <span class="mi">20</span>   <span class="mi">21</span> <span class="mi">22</span>   <span class="mi">23</span> <span class="mi">24</span>   <span class="mi">25</span> <span class="mi">26</span>   <span class="mi">27</span> <span class="mi">28</span>   <span class="mi">29</span> <span class="mi">30</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>In the tree above, each cell <em>k</em> is topping <code class="docutils literal notranslate"><span class="pre">2*k+1</span></code> and <code class="docutils literal notranslate"><span class="pre">2*k+2</span></code>. In a usual
 binary tournament we see in sports, each cell is the winner over the two cells
@@ -340,5 +354,5 @@ always been a Great Art! :-)</p>
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="statistics — Mathematical statistics functions" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/library/statistics.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="Source code: Lib/statistics.py[https://github.com/python/cpython/tree/3.13/Lib/statistics.py] This module provides functions for calculating mathematical statistics of numeric ( Real-valued) data. ..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="Source code: Lib/statistics.py[https://github.com/python/cpython/tree/3.13/Lib/statistics.py] This module provides functions for calculating mathematical statistics of numeric ( Real-valued) data. ..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="statistics — Mathematical statistics functions"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/library/statistics.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="Source code: Lib/statistics.py[https://github.com/python/cpython/tree/3.13/Lib/statistics.py] This module provides functions for calculating mathematical statistics of numeric ( Real-valued) data. ..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="Source code: Lib/statistics.py[https://github.com/python/cpython/tree/3.13/Lib/statistics.py] This module provides functions for calculating mathematical statistics of numeric ( Real-valued) data. ..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>statistics — Mathematical statistics functions</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/library/statistics.html" />
+    <link rel="canonical" href="https://docs.python.org/3/library/statistics.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -48,7 +49,7 @@
 <p><span class="versionmodified added">Added in version 3.4.</span></p>
 </div>
 <p><strong>Source code:</strong> <a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.13/Lib/statistics.py">Lib/statistics.py</a><span class="link-target"> [https://github.com/python/cpython/tree/3.13/Lib/statistics.py]</span></p>
-<hr class="docutils" />
+<hr class="docutils"/>
 <p>This module provides functions for calculating mathematical statistics of
 numeric (<a class="reference internal" href="numbers.xhtml#numbers.Real" title="numbers.Real"><code class="xref py py-class docutils literal notranslate"><span class="pre">Real</span></code></a>-valued) data.</p>
 <p>The module is not intended to be a competitor to third-party libraries such
@@ -74,7 +75,7 @@ functions:</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">isnan</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">itertools</span><span class="w"> </span><span class="kn">import</span> <span class="n">filterfalse</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mf">20.7</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;NaN&#39;</span><span class="p">),</span><span class="mf">19.2</span><span class="p">,</span> <span class="mf">18.3</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;NaN&#39;</span><span class="p">),</span> <span class="mf">14.4</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mf">20.7</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s1">'NaN'</span><span class="p">),</span><span class="mf">19.2</span><span class="p">,</span> <span class="mf">18.3</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s1">'NaN'</span><span class="p">),</span> <span class="mf">14.4</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>  <span class="c1"># This has surprising behavior</span>
 <span class="go">[20.7, nan, 14.4, 18.3, 19.2, nan]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">median</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>  <span class="c1"># This result is unexpected</span>
@@ -89,96 +90,137 @@ functions:</p>
 <span class="go">[14.4, 18.3, 19.2, 20.7]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">median</span><span class="p">(</span><span class="n">clean</span><span class="p">)</span>       <span class="c1"># This result is now well defined</span>
 <span class="go">18.75</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <section id="averages-and-measures-of-central-location">
-<h2>Averages and measures of central location</h2>
+<h2 class="sigil_not_in_toc">Averages and measures of central location</h2>
 <p>These functions calculate an average or typical value from a population
 or sample.</p>
 <table class="docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#statistics.mean" title="statistics.mean"><code class="xref py py-func docutils literal notranslate"><span class="pre">mean()</span></code></a></p></td>
-<td><p>Arithmetic mean (“average”) of data.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#statistics.mean" title="statistics.mean"><code class="xref py py-func docutils literal notranslate"><span class="pre">mean()</span></code></a></p>
+</td>
+<td><p>Arithmetic mean (“average”) of data.</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#statistics.fmean" title="statistics.fmean"><code class="xref py py-func docutils literal notranslate"><span class="pre">fmean()</span></code></a></p></td>
-<td><p>Fast, floating-point arithmetic mean, with optional weighting.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#statistics.fmean" title="statistics.fmean"><code class="xref py py-func docutils literal notranslate"><span class="pre">fmean()</span></code></a></p>
+</td>
+<td><p>Fast, floating-point arithmetic mean, with optional weighting.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#statistics.geometric_mean" title="statistics.geometric_mean"><code class="xref py py-func docutils literal notranslate"><span class="pre">geometric_mean()</span></code></a></p></td>
-<td><p>Geometric mean of data.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#statistics.geometric_mean" title="statistics.geometric_mean"><code class="xref py py-func docutils literal notranslate"><span class="pre">geometric_mean()</span></code></a></p>
+</td>
+<td><p>Geometric mean of data.</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#statistics.harmonic_mean" title="statistics.harmonic_mean"><code class="xref py py-func docutils literal notranslate"><span class="pre">harmonic_mean()</span></code></a></p></td>
-<td><p>Harmonic mean of data.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#statistics.harmonic_mean" title="statistics.harmonic_mean"><code class="xref py py-func docutils literal notranslate"><span class="pre">harmonic_mean()</span></code></a></p>
+</td>
+<td><p>Harmonic mean of data.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#statistics.kde" title="statistics.kde"><code class="xref py py-func docutils literal notranslate"><span class="pre">kde()</span></code></a></p></td>
-<td><p>Estimate the probability density distribution of the data.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#statistics.kde" title="statistics.kde"><code class="xref py py-func docutils literal notranslate"><span class="pre">kde()</span></code></a></p>
+</td>
+<td><p>Estimate the probability density distribution of the data.</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#statistics.kde_random" title="statistics.kde_random"><code class="xref py py-func docutils literal notranslate"><span class="pre">kde_random()</span></code></a></p></td>
-<td><p>Random sampling from the PDF generated by kde().</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#statistics.kde_random" title="statistics.kde_random"><code class="xref py py-func docutils literal notranslate"><span class="pre">kde_random()</span></code></a></p>
+</td>
+<td><p>Random sampling from the PDF generated by kde().</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#statistics.median" title="statistics.median"><code class="xref py py-func docutils literal notranslate"><span class="pre">median()</span></code></a></p></td>
-<td><p>Median (middle value) of data.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#statistics.median" title="statistics.median"><code class="xref py py-func docutils literal notranslate"><span class="pre">median()</span></code></a></p>
+</td>
+<td><p>Median (middle value) of data.</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#statistics.median_low" title="statistics.median_low"><code class="xref py py-func docutils literal notranslate"><span class="pre">median_low()</span></code></a></p></td>
-<td><p>Low median of data.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#statistics.median_low" title="statistics.median_low"><code class="xref py py-func docutils literal notranslate"><span class="pre">median_low()</span></code></a></p>
+</td>
+<td><p>Low median of data.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#statistics.median_high" title="statistics.median_high"><code class="xref py py-func docutils literal notranslate"><span class="pre">median_high()</span></code></a></p></td>
-<td><p>High median of data.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#statistics.median_high" title="statistics.median_high"><code class="xref py py-func docutils literal notranslate"><span class="pre">median_high()</span></code></a></p>
+</td>
+<td><p>High median of data.</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#statistics.median_grouped" title="statistics.median_grouped"><code class="xref py py-func docutils literal notranslate"><span class="pre">median_grouped()</span></code></a></p></td>
-<td><p>Median (50th percentile) of grouped data.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#statistics.median_grouped" title="statistics.median_grouped"><code class="xref py py-func docutils literal notranslate"><span class="pre">median_grouped()</span></code></a></p>
+</td>
+<td><p>Median (50th percentile) of grouped data.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#statistics.mode" title="statistics.mode"><code class="xref py py-func docutils literal notranslate"><span class="pre">mode()</span></code></a></p></td>
-<td><p>Single mode (most common value) of discrete or nominal data.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#statistics.mode" title="statistics.mode"><code class="xref py py-func docutils literal notranslate"><span class="pre">mode()</span></code></a></p>
+</td>
+<td><p>Single mode (most common value) of discrete or nominal data.</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#statistics.multimode" title="statistics.multimode"><code class="xref py py-func docutils literal notranslate"><span class="pre">multimode()</span></code></a></p></td>
-<td><p>List of modes (most common values) of discrete or nominal data.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#statistics.multimode" title="statistics.multimode"><code class="xref py py-func docutils literal notranslate"><span class="pre">multimode()</span></code></a></p>
+</td>
+<td><p>List of modes (most common values) of discrete or nominal data.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#statistics.quantiles" title="statistics.quantiles"><code class="xref py py-func docutils literal notranslate"><span class="pre">quantiles()</span></code></a></p></td>
-<td><p>Divide data into intervals with equal probability.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#statistics.quantiles" title="statistics.quantiles"><code class="xref py py-func docutils literal notranslate"><span class="pre">quantiles()</span></code></a></p>
+</td>
+<td><p>Divide data into intervals with equal probability.</p>
+</td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="measures-of-spread">
-<h2>Measures of spread</h2>
+<h2 class="sigil_not_in_toc">Measures of spread</h2>
 <p>These functions calculate a measure of how much the population or sample
 tends to deviate from the typical or average values.</p>
 <table class="docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#statistics.pstdev" title="statistics.pstdev"><code class="xref py py-func docutils literal notranslate"><span class="pre">pstdev()</span></code></a></p></td>
-<td><p>Population standard deviation of data.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#statistics.pstdev" title="statistics.pstdev"><code class="xref py py-func docutils literal notranslate"><span class="pre">pstdev()</span></code></a></p>
+</td>
+<td><p>Population standard deviation of data.</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#statistics.pvariance" title="statistics.pvariance"><code class="xref py py-func docutils literal notranslate"><span class="pre">pvariance()</span></code></a></p></td>
-<td><p>Population variance of data.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#statistics.pvariance" title="statistics.pvariance"><code class="xref py py-func docutils literal notranslate"><span class="pre">pvariance()</span></code></a></p>
+</td>
+<td><p>Population variance of data.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#statistics.stdev" title="statistics.stdev"><code class="xref py py-func docutils literal notranslate"><span class="pre">stdev()</span></code></a></p></td>
-<td><p>Sample standard deviation of data.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#statistics.stdev" title="statistics.stdev"><code class="xref py py-func docutils literal notranslate"><span class="pre">stdev()</span></code></a></p>
+</td>
+<td><p>Sample standard deviation of data.</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#statistics.variance" title="statistics.variance"><code class="xref py py-func docutils literal notranslate"><span class="pre">variance()</span></code></a></p></td>
-<td><p>Sample variance of data.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#statistics.variance" title="statistics.variance"><code class="xref py py-func docutils literal notranslate"><span class="pre">variance()</span></code></a></p>
+</td>
+<td><p>Sample variance of data.</p>
+</td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="statistics-for-relations-between-two-inputs">
-<h2>Statistics for relations between two inputs</h2>
+<h2 class="sigil_not_in_toc">Statistics for relations between two inputs</h2>
 <p>These functions calculate statistics regarding relations between two inputs.</p>
 <table class="docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#statistics.covariance" title="statistics.covariance"><code class="xref py py-func docutils literal notranslate"><span class="pre">covariance()</span></code></a></p></td>
-<td><p>Sample covariance for two variables.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#statistics.covariance" title="statistics.covariance"><code class="xref py py-func docutils literal notranslate"><span class="pre">covariance()</span></code></a></p>
+</td>
+<td><p>Sample covariance for two variables.</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#statistics.correlation" title="statistics.correlation"><code class="xref py py-func docutils literal notranslate"><span class="pre">correlation()</span></code></a></p></td>
-<td><p>Pearson and Spearman’s correlation coefficients.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#statistics.correlation" title="statistics.correlation"><code class="xref py py-func docutils literal notranslate"><span class="pre">correlation()</span></code></a></p>
+</td>
+<td><p>Pearson and Spearman’s correlation coefficients.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#statistics.linear_regression" title="statistics.linear_regression"><code class="xref py py-func docutils literal notranslate"><span class="pre">linear_regression()</span></code></a></p></td>
-<td><p>Slope and intercept for simple linear regression.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#statistics.linear_regression" title="statistics.linear_regression"><code class="xref py py-func docutils literal notranslate"><span class="pre">linear_regression()</span></code></a></p>
+</td>
+<td><p>Slope and intercept for simple linear regression.</p>
+</td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="function-details">
-<h2>Function details</h2>
+<h2 class="sigil_not_in_toc">Function details</h2>
 <p>Note: The functions do not require the data given to them to be sorted.
 However, for reading convenience, most of the examples show sorted sequences.</p>
 <dl class="py function">
@@ -201,9 +243,10 @@ the data.</p>
 <span class="go">Fraction(13, 21)</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">decimal</span><span class="w"> </span><span class="kn">import</span> <span class="n">Decimal</span> <span class="k">as</span> <span class="n">D</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mean</span><span class="p">([</span><span class="n">D</span><span class="p">(</span><span class="s2">&quot;0.5&quot;</span><span class="p">),</span> <span class="n">D</span><span class="p">(</span><span class="s2">&quot;0.75&quot;</span><span class="p">),</span> <span class="n">D</span><span class="p">(</span><span class="s2">&quot;0.625&quot;</span><span class="p">),</span> <span class="n">D</span><span class="p">(</span><span class="s2">&quot;0.375&quot;</span><span class="p">)])</span>
-<span class="go">Decimal(&#39;0.5625&#39;)</span>
-</pre></div>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mean</span><span class="p">([</span><span class="n">D</span><span class="p">(</span><span class="s2">"0.5"</span><span class="p">),</span> <span class="n">D</span><span class="p">(</span><span class="s2">"0.75"</span><span class="p">),</span> <span class="n">D</span><span class="p">(</span><span class="s2">"0.625"</span><span class="p">),</span> <span class="n">D</span><span class="p">(</span><span class="s2">"0.375"</span><span class="p">)])</span>
+<span class="go">Decimal('0.5625')</span>
+</pre>
+</div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -216,7 +259,8 @@ so that when taken on average over all the possible samples,
 <em>data</em> represents the entire population rather than a sample, then
 <code class="docutils literal notranslate"><span class="pre">mean(data)</span></code> is equivalent to calculating the true population mean μ.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="statistics.fmean">
@@ -227,7 +271,8 @@ so that when taken on average over all the possible samples,
 dataset is empty, raises a <a class="reference internal" href="#statistics.StatisticsError" title="statistics.StatisticsError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">StatisticsError</span></code></a>.</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fmean</span><span class="p">([</span><span class="mf">3.5</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">5.25</span><span class="p">])</span>
 <span class="go">4.25</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Optional weighting is supported.  For example, a professor assigns a
 grade for a course by weighting quizzes at 20%, homework at 20%, a
@@ -236,7 +281,8 @@ midterm exam at 30%, and a final exam at 30%:</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">weights</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.20</span><span class="p">,</span> <span class="mf">0.20</span><span class="p">,</span> <span class="mf">0.30</span><span class="p">,</span> <span class="mf">0.30</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">fmean</span><span class="p">(</span><span class="n">grades</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
 <span class="go">87.6</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>If <em>weights</em> is supplied, it must be the same length as the <em>data</em> or
 a <a class="reference internal" href="exceptions.xhtml#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> will be raised.</p>
@@ -246,7 +292,8 @@ a <a class="reference internal" href="exceptions.xhtml#ValueError" title="ValueE
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.11: </span>Added support for <em>weights</em>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="statistics.geometric_mean">
@@ -262,12 +309,14 @@ The <em>data</em> may be a sequence or iterable.</p>
 (However, this may change in the future.)</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">round</span><span class="p">(</span><span class="n">geometric_mean</span><span class="p">([</span><span class="mi">54</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">36</span><span class="p">]),</span> <span class="mi">1</span><span class="p">)</span>
 <span class="go">36.0</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.8.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="statistics.harmonic_mean">
@@ -286,14 +335,16 @@ ratios or rates, for example speeds.</p>
 What is the average speed?</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">harmonic_mean</span><span class="p">([</span><span class="mi">40</span><span class="p">,</span> <span class="mi">60</span><span class="p">])</span>
 <span class="go">48.0</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Suppose a car travels 40 km/hr for 5 km, and when traffic clears,
 speeds-up to 60 km/hr for the remaining 30 km of the journey. What
 is the average speed?</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">harmonic_mean</span><span class="p">([</span><span class="mi">40</span><span class="p">,</span> <span class="mi">60</span><span class="p">],</span> <span class="n">weights</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">30</span><span class="p">])</span>
 <span class="go">56.0</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p><a class="reference internal" href="#statistics.StatisticsError" title="statistics.StatisticsError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">StatisticsError</span></code></a> is raised if <em>data</em> is empty, any element
 is less than zero, or if the weighted sum isn’t positive.</p>
@@ -306,7 +357,8 @@ for validity.  (This behavior may change in the future.)</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.10: </span>Added support for <em>weights</em>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="statistics.kde">
@@ -336,14 +388,16 @@ density function estimated from a small sample:</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">f_hat</span> <span class="o">=</span> <span class="n">kde</span><span class="p">(</span><span class="n">sample</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">xarr</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">/</span><span class="mi">100</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">750</span><span class="p">,</span> <span class="mi">1100</span><span class="p">)]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">yarr</span> <span class="o">=</span> <span class="p">[</span><span class="n">f_hat</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xarr</span><span class="p">]</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The points in <code class="docutils literal notranslate"><span class="pre">xarr</span></code> and <code class="docutils literal notranslate"><span class="pre">yarr</span></code> can be used to make a PDF plot:</p>
-<img alt="Scatter plot of the estimated probability density function." src="../_images/kde_example.png" />
+<img alt="Scatter plot of the estimated probability density function." src="../_images/kde_example.png"/>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.13.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="statistics.kde_random">
@@ -362,12 +416,14 @@ estimated probability density function:</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">new_selections</span> <span class="o">=</span> <span class="p">[</span><span class="n">rand</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">new_selections</span><span class="p">]</span>
 <span class="go">[0.7, 6.2, 1.2, 6.9, 7.0, 1.8, 2.5, -0.5, -1.8, 5.6]</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.13.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="statistics.median">
@@ -380,20 +436,23 @@ the presence of outliers.  When the number of data points is odd, the
 middle data point is returned:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">median</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
 <span class="go">3</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>When the number of data points is even, the median is interpolated by taking
 the average of the two middle values:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">median</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
 <span class="go">4.0</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>This is suited for when your data is discrete, and you don’t mind that the
 median may not be an actual data point.</p>
 <p>If the data is ordinal (supports order operations) but not numeric (doesn’t
 support addition), consider using <a class="reference internal" href="#statistics.median_low" title="statistics.median_low"><code class="xref py py-func docutils literal notranslate"><span class="pre">median_low()</span></code></a> or <a class="reference internal" href="#statistics.median_high" title="statistics.median_high"><code class="xref py py-func docutils literal notranslate"><span class="pre">median_high()</span></code></a>
 instead.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="statistics.median_low">
@@ -407,11 +466,13 @@ the two middle values is returned.</p>
 <span class="go">3</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">median_low</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
 <span class="go">3</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Use the low median when your data are discrete and you prefer the median to
 be an actual data point rather than interpolated.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="statistics.median_high">
@@ -425,11 +486,13 @@ the two middle values is returned.</p>
 <span class="go">3</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">median_high</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
 <span class="go">5</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Use the high median when your data are discrete and you prefer the median to
 be an actual data point rather than interpolated.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="statistics.median_grouped">
@@ -451,7 +514,8 @@ by the 5-year midpoints of the intervals:</p>
 <span class="gp">... </span>   <span class="mi">65</span><span class="p">:</span>   <span class="mi">6</span><span class="p">,</span>   <span class="c1"># 60 to 70 years old</span>
 <span class="gp">... </span><span class="p">})</span>
 <span class="gp">...</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The 50th percentile (median) is the 536th person out of the 1071
 member cohort.  That person is in the 30 to 40 year old age group.</p>
@@ -465,14 +529,16 @@ distributed between 30 and 40.  For that, we use
 <span class="go">35</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">round</span><span class="p">(</span><span class="n">median_grouped</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="mi">10</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
 <span class="go">37.5</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The caller is responsible for making sure the data points are separated
 by exact multiples of <em>interval</em>.  This is essential for getting a
 correct result.  The function does not check this precondition.</p>
 <p>Inputs may be any numeric type that can be coerced to a float during
 the interpolation step.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="statistics.mode">
@@ -488,13 +554,15 @@ If the input <em>data</em> is empty, <a class="reference internal" href="#statis
 standard treatment of the mode as commonly taught in schools:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mode</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
 <span class="go">3</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The mode is unique in that it is the only statistic in this package that
 also applies to nominal (non-numeric) data:</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mode</span><span class="p">([</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">])</span>
-<span class="go">&#39;red&#39;</span>
-</pre></div>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mode</span><span class="p">([</span><span class="s2">"red"</span><span class="p">,</span> <span class="s2">"blue"</span><span class="p">,</span> <span class="s2">"blue"</span><span class="p">,</span> <span class="s2">"red"</span><span class="p">,</span> <span class="s2">"green"</span><span class="p">,</span> <span class="s2">"red"</span><span class="p">,</span> <span class="s2">"red"</span><span class="p">])</span>
+<span class="go">'red'</span>
+</pre>
+</div>
 </div>
 <p>Only hashable inputs are supported.  To handle type <a class="reference internal" href="stdtypes.xhtml#set" title="set"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></a>,
 consider casting to <a class="reference internal" href="stdtypes.xhtml#frozenset" title="frozenset"><code class="xref py py-class docutils literal notranslate"><span class="pre">frozenset</span></code></a>.  To handle type <a class="reference internal" href="stdtypes.xhtml#list" title="list"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>,
@@ -506,7 +574,8 @@ using this slower quadratic algorithm that only depends on equality tests:
 Formerly, it raised <a class="reference internal" href="#statistics.StatisticsError" title="statistics.StatisticsError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">StatisticsError</span></code></a> when more than one mode was
 found.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="statistics.multimode">
@@ -514,16 +583,18 @@ found.</p>
 <dd><p>Return a list of the most frequently occurring values in the order they
 were first encountered in the <em>data</em>.  Will return more than one result if
 there are multiple modes or an empty list if the <em>data</em> is empty:</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">multimode</span><span class="p">(</span><span class="s1">&#39;aabbbbccddddeeffffgg&#39;</span><span class="p">)</span>
-<span class="go">[&#39;b&#39;, &#39;d&#39;, &#39;f&#39;]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">multimode</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">multimode</span><span class="p">(</span><span class="s1">'aabbbbccddddeeffffgg'</span><span class="p">)</span>
+<span class="go">['b', 'd', 'f']</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">multimode</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span>
 <span class="go">[]</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.8.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="statistics.pstdev">
@@ -532,9 +603,11 @@ there are multiple modes or an empty list if the <em>data</em> is empty:</p>
 variance).  See <a class="reference internal" href="#statistics.pvariance" title="statistics.pvariance"><code class="xref py py-func docutils literal notranslate"><span class="pre">pvariance()</span></code></a> for arguments and other details.</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pstdev</span><span class="p">([</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">2.75</span><span class="p">,</span> <span class="mf">3.25</span><span class="p">,</span> <span class="mf">4.75</span><span class="p">])</span>
 <span class="go">0.986893273527251</span>
-</pre></div>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="statistics.pvariance">
@@ -556,24 +629,27 @@ a better choice.</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">1.25</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.75</span><span class="p">,</span> <span class="mf">2.75</span><span class="p">,</span> <span class="mf">3.25</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pvariance</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="go">1.25</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>If you have already calculated the mean of your data, you can pass it as the
 optional second argument <em>mu</em> to avoid recalculation:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mu</span> <span class="o">=</span> <span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pvariance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">mu</span><span class="p">)</span>
 <span class="go">1.25</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Decimals and Fractions are supported:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">decimal</span><span class="w"> </span><span class="kn">import</span> <span class="n">Decimal</span> <span class="k">as</span> <span class="n">D</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">pvariance</span><span class="p">([</span><span class="n">D</span><span class="p">(</span><span class="s2">&quot;27.5&quot;</span><span class="p">),</span> <span class="n">D</span><span class="p">(</span><span class="s2">&quot;30.25&quot;</span><span class="p">),</span> <span class="n">D</span><span class="p">(</span><span class="s2">&quot;30.25&quot;</span><span class="p">),</span> <span class="n">D</span><span class="p">(</span><span class="s2">&quot;34.5&quot;</span><span class="p">),</span> <span class="n">D</span><span class="p">(</span><span class="s2">&quot;41.75&quot;</span><span class="p">)])</span>
-<span class="go">Decimal(&#39;24.815&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pvariance</span><span class="p">([</span><span class="n">D</span><span class="p">(</span><span class="s2">"27.5"</span><span class="p">),</span> <span class="n">D</span><span class="p">(</span><span class="s2">"30.25"</span><span class="p">),</span> <span class="n">D</span><span class="p">(</span><span class="s2">"30.25"</span><span class="p">),</span> <span class="n">D</span><span class="p">(</span><span class="s2">"34.5"</span><span class="p">),</span> <span class="n">D</span><span class="p">(</span><span class="s2">"41.75"</span><span class="p">)])</span>
+<span class="go">Decimal('24.815')</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">fractions</span><span class="w"> </span><span class="kn">import</span> <span class="n">Fraction</span> <span class="k">as</span> <span class="n">F</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pvariance</span><span class="p">([</span><span class="n">F</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">F</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">F</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)])</span>
 <span class="go">Fraction(13, 72)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -586,7 +662,8 @@ population mean as the second argument.  Provided the data points are a
 random sample of the population, the result will be an unbiased estimate
 of the population variance.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="statistics.stdev">
@@ -595,9 +672,11 @@ of the population variance.</p>
 variance).  See <a class="reference internal" href="#statistics.variance" title="statistics.variance"><code class="xref py py-func docutils literal notranslate"><span class="pre">variance()</span></code></a> for arguments and other details.</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">stdev</span><span class="p">([</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">2.75</span><span class="p">,</span> <span class="mf">3.25</span><span class="p">,</span> <span class="mf">4.75</span><span class="p">])</span>
 <span class="go">1.0810874155219827</span>
-</pre></div>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="statistics.variance">
@@ -617,27 +696,30 @@ the variance from the entire population, see <a class="reference internal" href=
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mf">2.75</span><span class="p">,</span> <span class="mf">1.75</span><span class="p">,</span> <span class="mf">1.25</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.25</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">variance</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="go">1.3720238095238095</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>If you have already calculated the sample mean of your data, you can pass it
 as the optional second argument <em>xbar</em> to avoid recalculation:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">m</span> <span class="o">=</span> <span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">variance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
 <span class="go">1.3720238095238095</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>This function does not attempt to verify that you have passed the actual mean
 as <em>xbar</em>.  Using arbitrary values for <em>xbar</em> can lead to invalid or
 impossible results.</p>
 <p>Decimal and Fraction values are supported:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">decimal</span><span class="w"> </span><span class="kn">import</span> <span class="n">Decimal</span> <span class="k">as</span> <span class="n">D</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">variance</span><span class="p">([</span><span class="n">D</span><span class="p">(</span><span class="s2">&quot;27.5&quot;</span><span class="p">),</span> <span class="n">D</span><span class="p">(</span><span class="s2">&quot;30.25&quot;</span><span class="p">),</span> <span class="n">D</span><span class="p">(</span><span class="s2">&quot;30.25&quot;</span><span class="p">),</span> <span class="n">D</span><span class="p">(</span><span class="s2">&quot;34.5&quot;</span><span class="p">),</span> <span class="n">D</span><span class="p">(</span><span class="s2">&quot;41.75&quot;</span><span class="p">)])</span>
-<span class="go">Decimal(&#39;31.01875&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">variance</span><span class="p">([</span><span class="n">D</span><span class="p">(</span><span class="s2">"27.5"</span><span class="p">),</span> <span class="n">D</span><span class="p">(</span><span class="s2">"30.25"</span><span class="p">),</span> <span class="n">D</span><span class="p">(</span><span class="s2">"30.25"</span><span class="p">),</span> <span class="n">D</span><span class="p">(</span><span class="s2">"34.5"</span><span class="p">),</span> <span class="n">D</span><span class="p">(</span><span class="s2">"41.75"</span><span class="p">)])</span>
+<span class="go">Decimal('31.01875')</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">fractions</span><span class="w"> </span><span class="kn">import</span> <span class="n">Fraction</span> <span class="k">as</span> <span class="n">F</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">variance</span><span class="p">([</span><span class="n">F</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">F</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">F</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)])</span>
 <span class="go">Fraction(67, 108)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -649,7 +731,8 @@ should be an unbiased estimate of the true population variance.</p>
 <a class="reference internal" href="#statistics.pvariance" title="statistics.pvariance"><code class="xref py py-func docutils literal notranslate"><span class="pre">pvariance()</span></code></a> function as the <em>mu</em> parameter to get the variance of a
 sample.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="statistics.quantiles">
@@ -692,7 +775,8 @@ values, the method sorts them and assigns the following percentiles:
 <span class="gp">... </span>        <span class="mi">103</span><span class="p">,</span> <span class="mi">107</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">109</span><span class="p">,</span> <span class="mi">104</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">quantiles</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">)]</span>
 <span class="go">[81.0, 86.2, 89.0, 99.4, 102.5, 103.6, 106.0, 109.8, 111.0]</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.8.</span></p>
@@ -702,7 +786,8 @@ values, the method sorts them and assigns the following percentiles:
 This allows quantile estimates to be built up one sample point
 at a time becoming gradually more refined with each new data point.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="statistics.covariance">
@@ -721,12 +806,14 @@ is a measure of the joint variability of two inputs.</p>
 <span class="go">-7.5</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">covariance</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
 <span class="go">-7.5</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.10.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="statistics.correlation">
@@ -750,21 +837,22 @@ not to be constant, otherwise <a class="reference internal" href="#statistics.St
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dist_from_sun</span> <span class="o">=</span> <span class="p">[</span><span class="mi">58</span><span class="p">,</span> <span class="mi">108</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">228</span><span class="p">,</span> <span class="mi">778</span><span class="p">,</span> <span class="mi">1_400</span><span class="p">,</span> <span class="mi">2_900</span><span class="p">,</span> <span class="mi">4_500</span><span class="p">]</span> <span class="c1"># million km</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># Show that a perfect monotonic relationship exists</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">correlation</span><span class="p">(</span><span class="n">orbital_period</span><span class="p">,</span> <span class="n">dist_from_sun</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;ranked&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">correlation</span><span class="p">(</span><span class="n">orbital_period</span><span class="p">,</span> <span class="n">dist_from_sun</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">'ranked'</span><span class="p">)</span>
 <span class="go">1.0</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># Observe that a linear relationship is imperfect</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">round</span><span class="p">(</span><span class="n">correlation</span><span class="p">(</span><span class="n">orbital_period</span><span class="p">,</span> <span class="n">dist_from_sun</span><span class="p">),</span> <span class="mi">4</span><span class="p">)</span>
 <span class="go">0.9882</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Demonstrate Kepler&#39;s third law: There is a linear correlation</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Demonstrate Kepler's third law: There is a linear correlation</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># between the square of the orbital period and the cube of the</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># distance from the sun.</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">period_squared</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span> <span class="o">*</span> <span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">orbital_period</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dist_cubed</span> <span class="o">=</span> <span class="p">[</span><span class="n">d</span> <span class="o">*</span> <span class="n">d</span> <span class="o">*</span> <span class="n">d</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">dist_from_sun</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">round</span><span class="p">(</span><span class="n">correlation</span><span class="p">(</span><span class="n">period_squared</span><span class="p">,</span> <span class="n">dist_cubed</span><span class="p">),</span> <span class="mi">4</span><span class="p">)</span>
 <span class="go">1.0</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.10.</span></p>
@@ -772,7 +860,8 @@ not to be constant, otherwise <a class="reference internal" href="#statistics.St
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.12: </span>Added support for Spearman’s rank correlation coefficient.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="statistics.linear_regression">
@@ -783,7 +872,8 @@ regression describes the relationship between an independent variable <em>x</em>
 a dependent variable <em>y</em> in terms of this linear function:</p>
 <blockquote>
 <div><p><em>y = slope * x + intercept + noise</em></p>
-</div></blockquote>
+</div>
+</blockquote>
 <p>where <code class="docutils literal notranslate"><span class="pre">slope</span></code> and <code class="docutils literal notranslate"><span class="pre">intercept</span></code> are the regression parameters that are
 estimated, and <code class="docutils literal notranslate"><span class="pre">noise</span></code> represents the
 variability of the data that was not explained by the linear regression
@@ -802,7 +892,8 @@ assuming that they had kept the pace.</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span> <span class="o">=</span> <span class="n">linear_regression</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">films_total</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">round</span><span class="p">(</span><span class="n">slope</span> <span class="o">*</span> <span class="mi">2019</span> <span class="o">+</span> <span class="n">intercept</span><span class="p">)</span>
 <span class="go">16</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>If <em>proportional</em> is true, the independent variable <em>x</em> and the
 dependent variable <em>y</em> are assumed to be directly proportional.
@@ -811,7 +902,8 @@ Since the <em>intercept</em> will always be 0.0, the underlying linear
 function simplifies to:</p>
 <blockquote>
 <div><p><em>y = slope * x + noise</em></p>
-</div></blockquote>
+</div>
+</blockquote>
 <p>Continuing the example from <a class="reference internal" href="#statistics.correlation" title="statistics.correlation"><code class="xref py py-func docutils literal notranslate"><span class="pre">correlation()</span></code></a>, we look to see
 how well a model based on major planets can predict the orbital
 distances for dwarf planets:</p>
@@ -826,7 +918,8 @@ distances for dwarf planets:</p>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="mi">5_906</span><span class="p">,</span> <span class="mi">10_152</span><span class="p">,</span> <span class="mi">6_796</span><span class="p">,</span> <span class="mi">6_450</span><span class="p">,</span> <span class="mi">414</span><span class="p">]</span>  <span class="c1"># actual distance in million km</span>
 <span class="go">[5906, 10152, 6796, 6450, 414]</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.10.</span></p>
@@ -834,21 +927,23 @@ distances for dwarf planets:</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.11: </span>Added support for <em>proportional</em>.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="exceptions">
-<h2>Exceptions</h2>
+<h2 class="sigil_not_in_toc">Exceptions</h2>
 <p>A single exception is defined:</p>
 <dl class="py exception">
 <dt class="sig sig-object py" id="statistics.StatisticsError">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">statistics.</span></span><span class="sig-name descname"><span class="pre">StatisticsError</span></span></dt>
 <dd><p>Subclass of <a class="reference internal" href="exceptions.xhtml#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> for statistics-related exceptions.</p>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="normaldist-objects">
-<h2><a class="reference internal" href="#statistics.NormalDist" title="statistics.NormalDist"><code class="xref py py-class docutils literal notranslate"><span class="pre">NormalDist</span></code></a> objects</h2>
+<h2 class="sigil_not_in_toc"><a class="reference internal" href="#statistics.NormalDist" title="statistics.NormalDist"><code class="xref py py-class docutils literal notranslate"><span class="pre">NormalDist</span></code></a> objects</h2>
 <p><a class="reference internal" href="#statistics.NormalDist" title="statistics.NormalDist"><code class="xref py py-class docutils literal notranslate"><span class="pre">NormalDist</span></code></a> is a tool for creating and manipulating normal
 distributions of a <a class="reference external" href="http://www.stat.yale.edu/Courses/1997-98/101/ranvar.htm">random variable</a><span class="link-target"> [http://www.stat.yale.edu/Courses/1997-98/101/ranvar.htm]</span>.  It is a
 class that treats the mean and standard deviation of data
@@ -867,35 +962,40 @@ represents the <a class="reference external" href="https://en.wikipedia.org/wiki
 <span class="sig-name descname"><span class="pre">mean</span></span></dt>
 <dd><p>A read-only property for the <a class="reference external" href="https://en.wikipedia.org/wiki/Arithmetic_mean">arithmetic mean</a><span class="link-target"> [https://en.wikipedia.org/wiki/Arithmetic_mean]</span> of a normal
 distribution.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="statistics.NormalDist.median">
 <span class="sig-name descname"><span class="pre">median</span></span></dt>
 <dd><p>A read-only property for the <a class="reference external" href="https://en.wikipedia.org/wiki/Median">median</a><span class="link-target"> [https://en.wikipedia.org/wiki/Median]</span> of a normal
 distribution.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="statistics.NormalDist.mode">
 <span class="sig-name descname"><span class="pre">mode</span></span></dt>
 <dd><p>A read-only property for the <a class="reference external" href="https://en.wikipedia.org/wiki/Mode_(statistics)">mode</a><span class="link-target"> [https://en.wikipedia.org/wiki/Mode_(statistics)]</span> of a normal
 distribution.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="statistics.NormalDist.stdev">
 <span class="sig-name descname"><span class="pre">stdev</span></span></dt>
 <dd><p>A read-only property for the <a class="reference external" href="https://en.wikipedia.org/wiki/Standard_deviation">standard deviation</a><span class="link-target"> [https://en.wikipedia.org/wiki/Standard_deviation]</span> of a normal
 distribution.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="statistics.NormalDist.variance">
 <span class="sig-name descname"><span class="pre">variance</span></span></dt>
 <dd><p>A read-only property for the <a class="reference external" href="https://en.wikipedia.org/wiki/Variance">variance</a><span class="link-target"> [https://en.wikipedia.org/wiki/Variance]</span> of a normal
 distribution. Equal to the square of the standard deviation.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="statistics.NormalDist.from_samples">
@@ -907,7 +1007,8 @@ that can be converted to type <a class="reference internal" href="functions.xhtm
 contain at least two elements, raises <a class="reference internal" href="#statistics.StatisticsError" title="statistics.StatisticsError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">StatisticsError</span></code></a> because it
 takes at least one point to estimate a central value and at least two
 points to estimate dispersion.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="statistics.NormalDist.samples">
@@ -922,7 +1023,8 @@ even in a multi-threading context.</p>
 </div>
 <p>Switched to a faster algorithm.  To reproduce samples from previous
 versions, use <a class="reference internal" href="random.xhtml#random.seed" title="random.seed"><code class="xref py py-func docutils literal notranslate"><span class="pre">random.seed()</span></code></a> and <a class="reference internal" href="random.xhtml#random.gauss" title="random.gauss"><code class="xref py py-func docutils literal notranslate"><span class="pre">random.gauss()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="statistics.NormalDist.pdf">
@@ -935,7 +1037,8 @@ given value <em>x</em>.  Mathematically, it is the limit of the ratio <code clas
 occurring in a narrow range divided by the width of the range (hence
 the word “density”).  Since the likelihood is relative to other points,
 its value can be greater than <code class="docutils literal notranslate"><span class="pre">1.0</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="statistics.NormalDist.cdf">
@@ -943,7 +1046,8 @@ its value can be greater than <code class="docutils literal notranslate"><span c
 <dd><p>Using a <a class="reference external" href="https://en.wikipedia.org/wiki/Cumulative_distribution_function">cumulative distribution function (cdf)</a><span class="link-target"> [https://en.wikipedia.org/wiki/Cumulative_distribution_function]</span>,
 compute the probability that a random variable <em>X</em> will be less than or
 equal to <em>x</em>.  Mathematically, it is written <code class="docutils literal notranslate"><span class="pre">P(X</span> <span class="pre">&lt;=</span> <span class="pre">x)</span></code>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="statistics.NormalDist.inv_cdf">
@@ -955,7 +1059,8 @@ function.  Mathematically, it is written <code class="docutils literal notransla
 <p>Finds the value <em>x</em> of the random variable <em>X</em> such that the
 probability of the variable being less than or equal to that value
 equals the given probability <em>p</em>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="statistics.NormalDist.overlap">
@@ -963,7 +1068,8 @@ equals the given probability <em>p</em>.</p>
 <dd><p>Measures the agreement between two normal probability distributions.
 Returns a value between 0.0 and 1.0 giving <a class="reference external" href="https://www.rasch.org/rmt/rmt101r.htm">the overlapping area for
 the two probability density functions</a><span class="link-target"> [https://www.rasch.org/rmt/rmt101r.htm]</span>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="statistics.NormalDist.quantiles">
@@ -974,7 +1080,8 @@ the intervals.</p>
 <p>Set <em>n</em> to 4 for quartiles (the default).  Set <em>n</em> to 10 for deciles.
 Set <em>n</em> to 100 for percentiles which gives the 99 cuts points that
 separate the normal distribution into 100 equal sized groups.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="statistics.NormalDist.zscore">
@@ -987,7 +1094,8 @@ above or below the mean of the normal distribution:
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.9.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <p>Instances of <a class="reference internal" href="#statistics.NormalDist" title="statistics.NormalDist"><code class="xref py py-class docutils literal notranslate"><span class="pre">NormalDist</span></code></a> support addition, subtraction,
 multiplication and division by a constant.  These operations
@@ -995,7 +1103,8 @@ are used for translation and scaling.  For example:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">temperature_february</span> <span class="o">=</span> <span class="n">NormalDist</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">)</span>             <span class="c1"># Celsius</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">temperature_february</span> <span class="o">*</span> <span class="p">(</span><span class="mi">9</span><span class="o">/</span><span class="mi">5</span><span class="p">)</span> <span class="o">+</span> <span class="mi">32</span>                     <span class="c1"># Fahrenheit</span>
 <span class="go">NormalDist(mu=41.0, sigma=4.5)</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Dividing a constant by an instance of <a class="reference internal" href="#statistics.NormalDist" title="statistics.NormalDist"><code class="xref py py-class docutils literal notranslate"><span class="pre">NormalDist</span></code></a> is not supported
 because the result wouldn’t be normally distributed.</p>
@@ -1010,18 +1119,20 @@ represented as instances of <a class="reference internal" href="#statistics.Norm
 <span class="go">3.1</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">round</span><span class="p">(</span><span class="n">combined</span><span class="o">.</span><span class="n">stdev</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="go">0.5</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.8.</span></p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="examples-and-recipes">
-<h2>Examples and Recipes</h2>
+<h2 class="sigil_not_in_toc">Examples and Recipes</h2>
 <section id="classic-probability-problems">
-<h3>Classic probability problems</h3>
+<h3 class="sigil_not_in_toc">Classic probability problems</h3>
 <p><a class="reference internal" href="#statistics.NormalDist" title="statistics.NormalDist"><code class="xref py py-class docutils literal notranslate"><span class="pre">NormalDist</span></code></a> readily solves classic probability problems.</p>
 <p>For example, given <a class="reference external" href="https://nces.ed.gov/programs/digest/d17/tables/dt17_226.40.asp">historical data for SAT exams</a><span class="link-target"> [https://nces.ed.gov/programs/digest/d17/tables/dt17_226.40.asp]</span> showing
 that scores are normally distributed with a mean of 1060 and a standard
@@ -1031,18 +1142,20 @@ between 1100 and 1200, after rounding to the nearest whole number:</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">fraction</span> <span class="o">=</span> <span class="n">sat</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="mi">1200</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">-</span> <span class="n">sat</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="mi">1100</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">round</span><span class="p">(</span><span class="n">fraction</span> <span class="o">*</span> <span class="mf">100.0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="go">18.4</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Find the <a class="reference external" href="https://en.wikipedia.org/wiki/Quartile">quartiles</a><span class="link-target"> [https://en.wikipedia.org/wiki/Quartile]</span> and <a class="reference external" href="https://en.wikipedia.org/wiki/Decile">deciles</a><span class="link-target"> [https://en.wikipedia.org/wiki/Decile]</span> for the SAT scores:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">round</span><span class="p">,</span> <span class="n">sat</span><span class="o">.</span><span class="n">quantiles</span><span class="p">()))</span>
 <span class="go">[928, 1060, 1192]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">round</span><span class="p">,</span> <span class="n">sat</span><span class="o">.</span><span class="n">quantiles</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">)))</span>
 <span class="go">[810, 896, 958, 1011, 1060, 1109, 1162, 1224, 1310]</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 <section id="monte-carlo-inputs-for-simulations">
-<h3>Monte Carlo inputs for simulations</h3>
+<h3 class="sigil_not_in_toc">Monte Carlo inputs for simulations</h3>
 <p>To estimate the distribution for a model that isn’t easy to solve
 analytically, <a class="reference internal" href="#statistics.NormalDist" title="statistics.NormalDist"><code class="xref py py-class docutils literal notranslate"><span class="pre">NormalDist</span></code></a> can generate input samples for a <a class="reference external" href="https://en.wikipedia.org/wiki/Monte_Carlo_method">Monte
 Carlo simulation</a><span class="link-target"> [https://en.wikipedia.org/wiki/Monte_Carlo_method]</span>:</p>
@@ -1055,11 +1168,12 @@ Carlo simulation</a><span class="link-target"> [https://en.wikipedia.org/wiki/Mo
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Z</span> <span class="o">=</span> <span class="n">NormalDist</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mf">1.25</span><span class="p">)</span><span class="o">.</span><span class="n">samples</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">6582483453</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">quantiles</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">))</span>       
 <span class="go">[1.4591308524824727, 1.8035946855390597, 2.175091447274739]</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 <section id="approximating-binomial-distributions">
-<h3>Approximating binomial distributions</h3>
+<h3 class="sigil_not_in_toc">Approximating binomial distributions</h3>
 <p>Normal distributions can be used to approximate <a class="reference external" href="https://mathworld.wolfram.com/BinomialDistribution.html">Binomial
 distributions</a><span class="link-target"> [https://mathworld.wolfram.com/BinomialDistribution.html]</span>
 when the sample size is large and when the probability of a successful
@@ -1089,11 +1203,12 @@ probability that the Python room will stay within its capacity limits?</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">seed</span><span class="p">(</span><span class="mi">8675309</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mean</span><span class="p">(</span><span class="n">binomialvariate</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">k</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10_000</span><span class="p">))</span>
 <span class="go">0.8406</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 <section id="naive-bayesian-classifier">
-<h3>Naive bayesian classifier</h3>
+<h3 class="sigil_not_in_toc">Naive bayesian classifier</h3>
 <p>Normal distributions commonly arise in machine learning problems.</p>
 <p>Wikipedia has a <a class="reference external" href="https://en.wikipedia.org/wiki/Naive_Bayes_classifier#Person_classification">nice example of a Naive Bayesian Classifier</a><span class="link-target"> [https://en.wikipedia.org/wiki/Naive_Bayes_classifier#Person_classification]</span>.
 The challenge is to predict a person’s gender from measurements of normally
@@ -1107,14 +1222,16 @@ with <a class="reference internal" href="#statistics.NormalDist" title="statisti
 <span class="gp">&gt;&gt;&gt; </span><span class="n">weight_female</span> <span class="o">=</span> <span class="n">NormalDist</span><span class="o">.</span><span class="n">from_samples</span><span class="p">([</span><span class="mi">100</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">130</span><span class="p">,</span> <span class="mi">150</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">foot_size_male</span> <span class="o">=</span> <span class="n">NormalDist</span><span class="o">.</span><span class="n">from_samples</span><span class="p">([</span><span class="mi">12</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">foot_size_female</span> <span class="o">=</span> <span class="n">NormalDist</span><span class="o">.</span><span class="n">from_samples</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Next, we encounter a new person whose feature measurements are known but whose
 gender is unknown:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ht</span> <span class="o">=</span> <span class="mf">6.0</span>        <span class="c1"># height</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">wt</span> <span class="o">=</span> <span class="mi">130</span>        <span class="c1"># weight</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">fs</span> <span class="o">=</span> <span class="mi">8</span>          <span class="c1"># foot size</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>Starting with a 50% <a class="reference external" href="https://en.wikipedia.org/wiki/Prior_probability">prior probability</a><span class="link-target"> [https://en.wikipedia.org/wiki/Prior_probability]</span> of being male or female,
 we compute the posterior as the prior times the product of likelihoods for the
@@ -1126,13 +1243,15 @@ feature measurements given the gender:</p>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">posterior_female</span> <span class="o">=</span> <span class="p">(</span><span class="n">prior_female</span> <span class="o">*</span> <span class="n">height_female</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">ht</span><span class="p">)</span> <span class="o">*</span>
 <span class="gp">... </span>                    <span class="n">weight_female</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">wt</span><span class="p">)</span> <span class="o">*</span> <span class="n">foot_size_female</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">fs</span><span class="p">))</span>
-</pre></div>
+</pre>
+</div>
 </div>
 <p>The final prediction goes to the largest posterior. This is known as the
 <a class="reference external" href="https://en.wikipedia.org/wiki/Maximum_a_posteriori_estimation">maximum a posteriori</a><span class="link-target"> [https://en.wikipedia.org/wiki/Maximum_a_posteriori_estimation]</span> or MAP:</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;male&#39;</span> <span class="k">if</span> <span class="n">posterior_male</span> <span class="o">&gt;</span> <span class="n">posterior_female</span> <span class="k">else</span> <span class="s1">&#39;female&#39;</span>
-<span class="go">&#39;female&#39;</span>
-</pre></div>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">'male'</span> <span class="k">if</span> <span class="n">posterior_male</span> <span class="o">&gt;</span> <span class="n">posterior_female</span> <span class="k">else</span> <span class="s1">'female'</span>
+<span class="go">'female'</span>
+</pre>
+</div>
 </div>
 </section>
 </section>
@@ -1144,5 +1263,5 @@ feature measurements given the gender:</p>
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>

@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="http.cookies — HTTP state management" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.python.org/3/library/http.cookies.xhtml" />
-<meta property="og:site_name" content="Python documentation" />
-<meta property="og:description" content="Source code: Lib/http/cookies.py[https://github.com/python/cpython/tree/3.13/Lib/http/cookies.py] The http.cookies module defines classes for abstracting the concept of cookies, an HTTP state manag..." />
-<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png" />
-<meta property="og:image:alt" content="Python documentation" />
-<meta name="description" content="Source code: Lib/http/cookies.py[https://github.com/python/cpython/tree/3.13/Lib/http/cookies.py] The http.cookies module defines classes for abstracting the concept of cookies, an HTTP state manag..." />
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
-<meta name="theme-color" content="#3776ab" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:title" content="http.cookies — HTTP state management"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://docs.python.org/3/library/http.cookies.xhtml"/>
+<meta property="og:site_name" content="Python documentation"/>
+<meta property="og:description" content="Source code: Lib/http/cookies.py[https://github.com/python/cpython/tree/3.13/Lib/http/cookies.py] The http.cookies module defines classes for abstracting the concept of cookies, an HTTP state manag..."/>
+<meta property="og:image" content="https://docs.python.org/3/_static/og-image.png"/>
+<meta property="og:image:alt" content="Python documentation"/>
+<meta name="description" content="Source code: Lib/http/cookies.py[https://github.com/python/cpython/tree/3.13/Lib/http/cookies.py] The http.cookies module defines classes for abstracting the concept of cookies, an HTTP state manag..."/>
+<meta property="og:image:width" content="200"/>
+<meta property="og:image:height" content="200"/>
+<meta name="theme-color" content="#3776ab"/>
 
     <title>http.cookies — HTTP state management</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/epub.css"/>
     
-    <link rel="canonical" href="https://docs.python.org/3/library/http.cookies.html" />
+    <link rel="canonical" href="https://docs.python.org/3/library/http.cookies.html"/>
     
       
     
@@ -35,9 +37,8 @@
     </style>
  
 
-  </head><body>
-
-
+  </head>
+<body>
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
@@ -45,7 +46,7 @@
   <section id="module-http.cookies">
 <span id="http-cookies-http-state-management"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">http.cookies</span></code> — HTTP state management</h1>
 <p><strong>Source code:</strong> <a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.13/Lib/http/cookies.py">Lib/http/cookies.py</a><span class="link-target"> [https://github.com/python/cpython/tree/3.13/Lib/http/cookies.py]</span></p>
-<hr class="docutils" />
+<hr class="docutils"/>
 <p>The <a class="reference internal" href="#module-http.cookies" title="http.cookies: Support for HTTP state management (cookies)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">http.cookies</span></code></a> module defines classes for abstracting the concept of
 cookies, an HTTP state management mechanism. It supports both simple string-only
 cookies, and provides an abstraction for having any serializable data-type as
@@ -73,7 +74,8 @@ and catch <a class="reference internal" href="#http.cookies.CookieError" title="
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">http.cookies.</span></span><span class="sig-name descname"><span class="pre">CookieError</span></span></dt>
 <dd><p>Exception failing because of <span class="target" id="index-2"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc2109.html"><strong>RFC 2109</strong></a><span class="link-target"> [https://datatracker.ietf.org/doc/html/rfc2109.html]</span> invalidity: incorrect attributes,
 incorrect <em class="mailheader">Set-Cookie</em> header, etc.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="http.cookies.BaseCookie">
@@ -82,7 +84,8 @@ incorrect <em class="mailheader">Set-Cookie</em> header, etc.</p>
 are <a class="reference internal" href="#http.cookies.Morsel" title="http.cookies.Morsel"><code class="xref py py-class docutils literal notranslate"><span class="pre">Morsel</span></code></a> instances. Note that upon setting a key to a value, the
 value is first converted to a <a class="reference internal" href="#http.cookies.Morsel" title="http.cookies.Morsel"><code class="xref py py-class docutils literal notranslate"><span class="pre">Morsel</span></code></a> containing the key and the value.</p>
 <p>If <em>input</em> is given, it is passed to the <a class="reference internal" href="#http.cookies.BaseCookie.load" title="http.cookies.BaseCookie.load"><code class="xref py py-meth docutils literal notranslate"><span class="pre">load()</span></code></a> method.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="http.cookies.SimpleCookie">
@@ -92,27 +95,31 @@ and <a class="reference internal" href="#http.cookies.BaseCookie.value_encode" t
 strings as cookie values. When setting the value, <code class="xref py py-class docutils literal notranslate"><span class="pre">SimpleCookie</span></code>
 calls the builtin <a class="reference internal" href="stdtypes.xhtml#str" title="str"><code class="xref py py-func docutils literal notranslate"><span class="pre">str()</span></code></a> to convert
 the value to a string. Values received from HTTP are kept as strings.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt>Module <a class="reference internal" href="http.cookiejar.xhtml#module-http.cookiejar" title="http.cookiejar: Classes for automatic handling of HTTP cookies."><code class="xref py py-mod docutils literal notranslate"><span class="pre">http.cookiejar</span></code></a></dt><dd><p>HTTP cookie handling for web <em>clients</em>.  The <a class="reference internal" href="http.cookiejar.xhtml#module-http.cookiejar" title="http.cookiejar: Classes for automatic handling of HTTP cookies."><code class="xref py py-mod docutils literal notranslate"><span class="pre">http.cookiejar</span></code></a> and
+<dt>Module <a class="reference internal" href="http.cookiejar.xhtml#module-http.cookiejar" title="http.cookiejar: Classes for automatic handling of HTTP cookies."><code class="xref py py-mod docutils literal notranslate"><span class="pre">http.cookiejar</span></code></a></dt>
+<dd><p>HTTP cookie handling for web <em>clients</em>.  The <a class="reference internal" href="http.cookiejar.xhtml#module-http.cookiejar" title="http.cookiejar: Classes for automatic handling of HTTP cookies."><code class="xref py py-mod docutils literal notranslate"><span class="pre">http.cookiejar</span></code></a> and
 <a class="reference internal" href="#module-http.cookies" title="http.cookies: Support for HTTP state management (cookies)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">http.cookies</span></code></a> modules do not depend on each other.</p>
 </dd>
-<dt><span class="target" id="index-3"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc2109.html"><strong>RFC 2109</strong></a><span class="link-target"> [https://datatracker.ietf.org/doc/html/rfc2109.html]</span> - HTTP State Management Mechanism</dt><dd><p>This is the state management specification implemented by this module.</p>
+<dt><span class="target" id="index-3"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc2109.html"><strong>RFC 2109</strong></a><span class="link-target"> [https://datatracker.ietf.org/doc/html/rfc2109.html]</span> - HTTP State Management Mechanism</dt>
+<dd><p>This is the state management specification implemented by this module.</p>
 </dd>
 </dl>
 </div>
 <section id="cookie-objects">
-<span id="id1"></span><h2>Cookie Objects</h2>
+<span id="id1"></span><h2 class="sigil_not_in_toc">Cookie Objects</h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="http.cookies.BaseCookie.value_decode">
 <span class="sig-prename descclassname"><span class="pre">BaseCookie.</span></span><span class="sig-name descname"><span class="pre">value_decode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Return a tuple <code class="docutils literal notranslate"><span class="pre">(real_value,</span> <span class="pre">coded_value)</span></code> from a string representation.
 <code class="docutils literal notranslate"><span class="pre">real_value</span></code> can be any type. This method does no decoding in
 <a class="reference internal" href="#http.cookies.BaseCookie" title="http.cookies.BaseCookie"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseCookie</span></code></a> — it exists so it can be overridden.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="http.cookies.BaseCookie.value_encode">
@@ -123,7 +130,8 @@ This method does no encoding in <a class="reference internal" href="#http.cookie
 be overridden.</p>
 <p>In general, it should be the case that <a class="reference internal" href="#http.cookies.BaseCookie.value_encode" title="http.cookies.BaseCookie.value_encode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">value_encode()</span></code></a> and
 <a class="reference internal" href="#http.cookies.BaseCookie.value_decode" title="http.cookies.BaseCookie.value_decode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">value_decode()</span></code></a> are inverses on the range of <em>value_decode</em>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="http.cookies.BaseCookie.output">
@@ -132,7 +140,8 @@ be overridden.</p>
 <em>header</em> are sent to each <a class="reference internal" href="#http.cookies.Morsel" title="http.cookies.Morsel"><code class="xref py py-class docutils literal notranslate"><span class="pre">Morsel</span></code></a>’s <a class="reference internal" href="#http.cookies.Morsel.output" title="http.cookies.Morsel.output"><code class="xref py py-meth docutils literal notranslate"><span class="pre">output()</span></code></a> method. <em>sep</em> is used
 to join the headers together, and is by default the combination <code class="docutils literal notranslate"><span class="pre">'\r\n'</span></code>
 (CRLF).</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="http.cookies.BaseCookie.js_output">
@@ -140,7 +149,8 @@ to join the headers together, and is by default the combination <code class="doc
 <dd><p>Return an embeddable JavaScript snippet, which, if run on a browser which
 supports JavaScript, will act the same as if the HTTP headers was sent.</p>
 <p>The meaning for <em>attrs</em> is the same as in <a class="reference internal" href="#http.cookies.BaseCookie.output" title="http.cookies.BaseCookie.output"><code class="xref py py-meth docutils literal notranslate"><span class="pre">output()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="http.cookies.BaseCookie.load">
@@ -149,13 +159,15 @@ supports JavaScript, will act the same as if the HTTP headers was sent.</p>
 found there as <a class="reference internal" href="#http.cookies.Morsel" title="http.cookies.Morsel"><code class="xref py py-class docutils literal notranslate"><span class="pre">Morsel</span></code></a>s. If it is a dictionary, it is equivalent to:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">rawdata</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
     <span class="n">cookie</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
-</pre></div>
+</pre>
 </div>
-</dd></dl>
+</div>
+</dd>
+</dl>
 
 </section>
 <section id="morsel-objects">
-<span id="id2"></span><h2>Morsel Objects</h2>
+<span id="id2"></span><h2 class="sigil_not_in_toc">Morsel Objects</h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="http.cookies.Morsel">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">http.cookies.</span></span><span class="sig-name descname"><span class="pre">Morsel</span></span></dt>
@@ -182,9 +194,11 @@ found there as <a class="reference internal" href="#http.cookies.Morsel" title="
 <span class="sig-name descname"><span class="pre">httponly</span></span></dt>
 <dt class="sig sig-object py" id="http.cookies.Morsel.samesite">
 <span class="sig-name descname"><span class="pre">samesite</span></span></dt>
-<dd></dd></dl>
+<dd></dd>
+</dl>
 
-</div></blockquote>
+</div>
+</blockquote>
 <p>The attribute <a class="reference internal" href="#http.cookies.Morsel.httponly" title="http.cookies.Morsel.httponly"><code class="xref py py-attr docutils literal notranslate"><span class="pre">httponly</span></code></a> specifies that the cookie is only transferred
 in HTTP requests, and is not accessible through JavaScript. This is intended
 to mitigate some forms of cross-site scripting.</p>
@@ -204,37 +218,43 @@ setting them.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.8: </span>Added support for the <a class="reference internal" href="#http.cookies.Morsel.samesite" title="http.cookies.Morsel.samesite"><code class="xref py py-attr docutils literal notranslate"><span class="pre">samesite</span></code></a> attribute.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="http.cookies.Morsel.value">
 <span class="sig-prename descclassname"><span class="pre">Morsel.</span></span><span class="sig-name descname"><span class="pre">value</span></span></dt>
 <dd><p>The value of the cookie.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="http.cookies.Morsel.coded_value">
 <span class="sig-prename descclassname"><span class="pre">Morsel.</span></span><span class="sig-name descname"><span class="pre">coded_value</span></span></dt>
 <dd><p>The encoded value of the cookie — this is what should be sent.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="http.cookies.Morsel.key">
 <span class="sig-prename descclassname"><span class="pre">Morsel.</span></span><span class="sig-name descname"><span class="pre">key</span></span></dt>
 <dd><p>The name of the cookie.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="http.cookies.Morsel.set">
 <span class="sig-prename descclassname"><span class="pre">Morsel.</span></span><span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coded_value</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Set the <em>key</em>, <em>value</em> and <em>coded_value</em> attributes.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="http.cookies.Morsel.isReservedKey">
 <span class="sig-prename descclassname"><span class="pre">Morsel.</span></span><span class="sig-name descname"><span class="pre">isReservedKey</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">K</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Whether <em>K</em> is a member of the set of keys of a <a class="reference internal" href="#http.cookies.Morsel" title="http.cookies.Morsel"><code class="xref py py-class docutils literal notranslate"><span class="pre">Morsel</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="http.cookies.Morsel.output">
@@ -242,8 +262,9 @@ setting them.</p>
 <dd><p>Return a string representation of the Morsel, suitable to be sent as an HTTP
 header. By default, all the attributes are included, unless <em>attrs</em> is given, in
 which case it should be a list of attributes to use. <em>header</em> is by default
-<code class="docutils literal notranslate"><span class="pre">&quot;Set-Cookie:&quot;</span></code>.</p>
-</dd></dl>
+<code class="docutils literal notranslate"><span class="pre">"Set-Cookie:"</span></code>.</p>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="http.cookies.Morsel.js_output">
@@ -251,7 +272,8 @@ which case it should be a list of attributes to use. <em>header</em> is by defau
 <dd><p>Return an embeddable JavaScript snippet, which, if run on a browser which
 supports JavaScript, will act the same as if the HTTP header was sent.</p>
 <p>The meaning for <em>attrs</em> is the same as in <a class="reference internal" href="#http.cookies.Morsel.output" title="http.cookies.Morsel.output"><code class="xref py py-meth docutils literal notranslate"><span class="pre">output()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="http.cookies.Morsel.OutputString">
@@ -259,7 +281,8 @@ supports JavaScript, will act the same as if the HTTP header was sent.</p>
 <dd><p>Return a string representing the Morsel, without any surrounding HTTP or
 JavaScript.</p>
 <p>The meaning for <em>attrs</em> is the same as in <a class="reference internal" href="#http.cookies.Morsel.output" title="http.cookies.Morsel.output"><code class="xref py py-meth docutils literal notranslate"><span class="pre">output()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="http.cookies.Morsel.update">
@@ -270,7 +293,8 @@ valid <span class="target" id="index-6"></span><a class="rfc reference external"
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.5: </span>an error is raised for invalid keys.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="http.cookies.Morsel.copy">
@@ -279,23 +303,25 @@ valid <span class="target" id="index-6"></span><a class="rfc reference external"
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.5: </span>return a Morsel object instead of a dict.</p>
 </div>
-</dd></dl>
+</dd>
+</dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="http.cookies.Morsel.setdefault">
 <span class="sig-prename descclassname"><span class="pre">Morsel.</span></span><span class="sig-name descname"><span class="pre">setdefault</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Raise an error if key is not a valid <span class="target" id="index-7"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc2109.html"><strong>RFC 2109</strong></a><span class="link-target"> [https://datatracker.ietf.org/doc/html/rfc2109.html]</span> attribute, otherwise
 behave the same as <a class="reference internal" href="stdtypes.xhtml#dict.setdefault" title="dict.setdefault"><code class="xref py py-meth docutils literal notranslate"><span class="pre">dict.setdefault()</span></code></a>.</p>
-</dd></dl>
+</dd>
+</dl>
 
 </section>
 <section id="example">
-<span id="cookie-example"></span><h2>Example</h2>
+<span id="cookie-example"></span><h2 class="sigil_not_in_toc">Example</h2>
 <p>The following example demonstrates how to use the <a class="reference internal" href="#module-http.cookies" title="http.cookies: Support for HTTP state management (cookies)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">http.cookies</span></code></a> module.</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">http</span><span class="w"> </span><span class="kn">import</span> <span class="n">cookies</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">C</span> <span class="o">=</span> <span class="n">cookies</span><span class="o">.</span><span class="n">SimpleCookie</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">[</span><span class="s2">&quot;fig&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;newton&quot;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">[</span><span class="s2">&quot;sugar&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;wafer&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">[</span><span class="s2">"fig"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"newton"</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">[</span><span class="s2">"sugar"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"wafer"</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">C</span><span class="p">)</span> <span class="c1"># generate HTTP headers</span>
 <span class="go">Set-Cookie: fig=newton</span>
 <span class="go">Set-Cookie: sugar=wafer</span>
@@ -303,41 +329,42 @@ behave the same as <a class="reference internal" href="stdtypes.xhtml#dict.setde
 <span class="go">Set-Cookie: fig=newton</span>
 <span class="go">Set-Cookie: sugar=wafer</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">C</span> <span class="o">=</span> <span class="n">cookies</span><span class="o">.</span><span class="n">SimpleCookie</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">[</span><span class="s2">&quot;rocky&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;road&quot;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">[</span><span class="s2">&quot;rocky&quot;</span><span class="p">][</span><span class="s2">&quot;path&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;/cookie&quot;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="n">header</span><span class="o">=</span><span class="s2">&quot;Cookie:&quot;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">[</span><span class="s2">"rocky"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"road"</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">[</span><span class="s2">"rocky"</span><span class="p">][</span><span class="s2">"path"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"/cookie"</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="n">header</span><span class="o">=</span><span class="s2">"Cookie:"</span><span class="p">))</span>
 <span class="go">Cookie: rocky=road; Path=/cookie</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="n">attrs</span><span class="o">=</span><span class="p">[],</span> <span class="n">header</span><span class="o">=</span><span class="s2">&quot;Cookie:&quot;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="n">attrs</span><span class="o">=</span><span class="p">[],</span> <span class="n">header</span><span class="o">=</span><span class="s2">"Cookie:"</span><span class="p">))</span>
 <span class="go">Cookie: rocky=road</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">C</span> <span class="o">=</span> <span class="n">cookies</span><span class="o">.</span><span class="n">SimpleCookie</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;chips=ahoy; vienna=finger&quot;</span><span class="p">)</span> <span class="c1"># load from a string (HTTP header)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">"chips=ahoy; vienna=finger"</span><span class="p">)</span> <span class="c1"># load from a string (HTTP header)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
 <span class="go">Set-Cookie: chips=ahoy</span>
 <span class="go">Set-Cookie: vienna=finger</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">C</span> <span class="o">=</span> <span class="n">cookies</span><span class="o">.</span><span class="n">SimpleCookie</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;keebler=&quot;E=everybody; L=</span><span class="se">\\</span><span class="s1">&quot;Loves</span><span class="se">\\</span><span class="s1">&quot;; fudge=</span><span class="se">\\</span><span class="s1">012;&quot;;&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">'keebler="E=everybody; L=</span><span class="se">\\</span><span class="s1">"Loves</span><span class="se">\\</span><span class="s1">"; fudge=</span><span class="se">\\</span><span class="s1">012;";'</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
-<span class="go">Set-Cookie: keebler=&quot;E=everybody; L=\&quot;Loves\&quot;; fudge=\012;&quot;</span>
+<span class="go">Set-Cookie: keebler="E=everybody; L=\"Loves\"; fudge=\012;"</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">C</span> <span class="o">=</span> <span class="n">cookies</span><span class="o">.</span><span class="n">SimpleCookie</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">[</span><span class="s2">&quot;oreo&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;doublestuff&quot;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">[</span><span class="s2">&quot;oreo&quot;</span><span class="p">][</span><span class="s2">&quot;path&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;/&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">[</span><span class="s2">"oreo"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"doublestuff"</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">[</span><span class="s2">"oreo"</span><span class="p">][</span><span class="s2">"path"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"/"</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
 <span class="go">Set-Cookie: oreo=doublestuff; Path=/</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">C</span> <span class="o">=</span> <span class="n">cookies</span><span class="o">.</span><span class="n">SimpleCookie</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">[</span><span class="s2">&quot;twix&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;none for you&quot;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">[</span><span class="s2">&quot;twix&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
-<span class="go">&#39;none for you&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">[</span><span class="s2">"twix"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"none for you"</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">[</span><span class="s2">"twix"</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
+<span class="go">'none for you'</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">C</span> <span class="o">=</span> <span class="n">cookies</span><span class="o">.</span><span class="n">SimpleCookie</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">7</span> <span class="c1"># equivalent to C[&quot;number&quot;] = str(7)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">[</span><span class="s2">&quot;string&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;seven&quot;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
-<span class="go">&#39;7&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">[</span><span class="s2">&quot;string&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
-<span class="go">&#39;seven&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">[</span><span class="s2">"number"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">7</span> <span class="c1"># equivalent to C["number"] = str(7)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">[</span><span class="s2">"string"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"seven"</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">[</span><span class="s2">"number"</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
+<span class="go">'7'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">[</span><span class="s2">"string"</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
+<span class="go">'seven'</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
 <span class="go">Set-Cookie: number=7</span>
 <span class="go">Set-Cookie: string=seven</span>
-</pre></div>
+</pre>
+</div>
 </div>
 </section>
 </section>
@@ -348,5 +375,5 @@ behave the same as <a class="reference internal" href="stdtypes.xhtml#dict.setde
       </div>
       <div class="clearer"></div>
     </div>
-  </body>
+</body>
 </html>
