@@ -1005,7 +1005,7 @@
     <itemref idref="epub-148" />
     <itemref idref="epub-150" />
     <itemref idref="epub-151" />
-    <itemref idref="epub-127" />
+    <!-- <itemref idref="epub-127" /> -->
     <itemref idref="epub-139" />
     <itemref idref="epub-138" />
     <itemref idref="epub-144" />
