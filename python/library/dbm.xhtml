@@ -88,18 +88,18 @@ or <a class="reference internal" href="#module-dbm.dumb" title="dbm.dumb: Portab
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>file</strong> (<a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a>) – <p>The database file to open.</p>
+<li><p><strong>file</strong> (<a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a>) – </p><p>The database file to open.</p>
 <p>If the database file already exists, the <a class="reference internal" href="#dbm.whichdb" title="dbm.whichdb"><code class="xref py py-func docutils literal notranslate"><span class="pre">whichdb()</span></code></a> function is used to
 determine its type and the appropriate module is used; if it does not exist,
 the first submodule listed above that can be imported is used.</p>
-</p></li>
-<li><p><strong>flag</strong> (<a class="reference internal" href="stdtypes.xhtml#str" title="str"><em>str</em></a>) – <ul>
+</li>
+<li><p><strong>flag</strong> (<a class="reference internal" href="stdtypes.xhtml#str" title="str"><em>str</em></a>) – </p><ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">'r'</span></code> (default): Open existing database for reading only.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'w'</span></code>: Open existing database for reading and writing.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'c'</span></code>: Open database for reading and writing, creating it if it doesn’t exist.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'n'</span></code>: Always create a new, empty database, open for reading and writing.</p></li>
 </ul>
-</p></li>
+</li>
 <li><p><strong>mode</strong> (<a class="reference internal" href="functions.xhtml#int" title="int"><em>int</em></a>) – The Unix file access mode of the file (default: octal <code class="docutils literal notranslate"><span class="pre">0o666</span></code>),
 used only when the database has to be created.</p></li>
 </ul>
@@ -193,13 +193,13 @@ and supports a “closing” context manager via the <a class="reference interna
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filename</strong> (<a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a>) – The path to the database to be opened.</p></li>
-<li><p><strong>flag</strong> (<a class="reference internal" href="stdtypes.xhtml#str" title="str"><em>str</em></a>) – <ul>
+<li><p><strong>flag</strong> (<a class="reference internal" href="stdtypes.xhtml#str" title="str"><em>str</em></a>) – </p><ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">'r'</span></code> (default): Open existing database for reading only.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'w'</span></code>: Open existing database for reading and writing.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'c'</span></code>: Open database for reading and writing, creating it if it doesn’t exist.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'n'</span></code>: Always create a new, empty database, open for reading and writing.</p></li>
 </ul>
-</p></li>
+</li>
 <li><p><strong>mode</strong> – The Unix file access mode of the file (default: octal <code class="docutils literal notranslate"><span class="pre">0o666</span></code>),
 used only when the database has to be created.</p></li>
 </ul>
@@ -240,7 +240,7 @@ raised for general mapping errors like specifying an incorrect key.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filename</strong> (<a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a>) – The database file to open.</p></li>
-<li><p><strong>flag</strong> (<a class="reference internal" href="stdtypes.xhtml#str" title="str"><em>str</em></a>) – <ul>
+<li><p><strong>flag</strong> (<a class="reference internal" href="stdtypes.xhtml#str" title="str"><em>str</em></a>) – </p><ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">'r'</span></code> (default): Open existing database for reading only.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'w'</span></code>: Open existing database for reading and writing.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'c'</span></code>: Open database for reading and writing, creating it if it doesn’t exist.</p></li>
@@ -257,7 +257,7 @@ Changes to the database will be written immediately to the file.</p></li>
 </ul>
 <p>Not all flags are valid for all versions of GDBM.
 See the <a class="reference internal" href="#dbm.gnu.open_flags" title="dbm.gnu.open_flags"><code class="xref py py-data docutils literal notranslate"><span class="pre">open_flags</span></code></a> member for a list of supported flag characters.</p>
-</p></li>
+</li>
 <li><p><strong>mode</strong> (<a class="reference internal" href="functions.xhtml#int" title="int"><em>int</em></a>) – The Unix file access mode of the file (default: octal <code class="docutils literal notranslate"><span class="pre">0o666</span></code>),
 used only when the database has to be created.</p></li>
 </ul>
@@ -383,13 +383,13 @@ for general mapping errors like specifying an incorrect key.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filename</strong> (<a class="reference internal" href="../glossary.xhtml#term-path-like-object"><span class="xref std std-term">path-like object</span></a>) – The basename of the database file
 (without the <code class="file docutils literal notranslate"><span class="pre">.dir</span></code> or <code class="file docutils literal notranslate"><span class="pre">.pag</span></code> extensions).</p></li>
-<li><p><strong>flag</strong> (<a class="reference internal" href="stdtypes.xhtml#str" title="str"><em>str</em></a>) – <ul>
+<li><p><strong>flag</strong> (<a class="reference internal" href="stdtypes.xhtml#str" title="str"><em>str</em></a>) – </p><ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">'r'</span></code> (default): Open existing database for reading only.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'w'</span></code>: Open existing database for reading and writing.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'c'</span></code>: Open database for reading and writing, creating it if it doesn’t exist.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'n'</span></code>: Always create a new, empty database, open for reading and writing.</p></li>
 </ul>
-</p></li>
+</li>
 <li><p><strong>mode</strong> (<a class="reference internal" href="functions.xhtml#int" title="int"><em>int</em></a>) – The Unix file access mode of the file (default: octal <code class="docutils literal notranslate"><span class="pre">0o666</span></code>),
 used only when the database has to be created.</p></li>
 </ul>
@@ -452,20 +452,20 @@ methods.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>filename</strong> – <p>The basename of the database file (without extensions).
+<li><p><strong>filename</strong> – </p><p>The basename of the database file (without extensions).
 A new database creates the following files:</p>
 <ul>
 <li><p><code class="file docutils literal notranslate"><em><span class="pre">filename</span></em><span class="pre">.dat</span></code></p></li>
 <li><p><code class="file docutils literal notranslate"><em><span class="pre">filename</span></em><span class="pre">.dir</span></code></p></li>
 </ul>
-</p></li>
-<li><p><strong>flag</strong> (<a class="reference internal" href="stdtypes.xhtml#str" title="str"><em>str</em></a>) – <ul>
+</li>
+<li><p><strong>flag</strong> (<a class="reference internal" href="stdtypes.xhtml#str" title="str"><em>str</em></a>) – </p><ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">'r'</span></code>: Open existing database for reading only.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'w'</span></code>: Open existing database for reading and writing.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'c'</span></code> (default): Open database for reading and writing, creating it if it doesn’t exist.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'n'</span></code>: Always create a new, empty database, open for reading and writing.</p></li>
 </ul>
-</p></li>
+</li>
 <li><p><strong>mode</strong> (<a class="reference internal" href="functions.xhtml#int" title="int"><em>int</em></a>) – The Unix file access mode of the file (default: octal <code class="docutils literal notranslate"><span class="pre">0o666</span></code>),
 used only when the database has to be created.</p></li>
 </ul>
