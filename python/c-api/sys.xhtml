@@ -405,12 +405,11 @@ interpreter that raised the event.</p>
 runtime and standard library that raise events are listed in the
 <a class="reference internal" href="../library/audit_events.xhtml#audit-events"><span class="std std-ref">audit events table</span></a>.
 Details are in each function’s documentation.</p>
-<p class="audit-hook"><p>If the interpreter is initialized, this function raises an auditing event
+<p class="audit-hook">If the interpreter is initialized, this function raises an auditing event
 <code class="docutils literal notranslate"><span class="pre">sys.addaudithook</span></code> with no arguments. If any existing hooks raise an
 exception derived from <a class="reference internal" href="../library/exceptions.xhtml#Exception" title="Exception"><code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></a>, the new hook will not be
 added and the exception is cleared. As a result, callers cannot assume
 that their hook has been added unless they control all existing hooks.</p>
-</p>
 <dl class="c type">
 <dt class="sig sig-object c" id="c.Py_AuditHookFunction">
 <span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">Py_AuditHookFunction</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">event</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="structures.xhtml#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">userData</span></span><span class="p"><span class="pre">)</span></span><br /></dt>
