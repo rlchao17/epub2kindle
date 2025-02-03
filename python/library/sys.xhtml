@@ -84,12 +84,12 @@ function. At a minimum, any security-sensitive hooks must be added using the
 C API <a class="reference internal" href="../c-api/sys.xhtml#c.PySys_AddAuditHook" title="PySys_AddAuditHook"><code class="xref c c-func docutils literal notranslate"><span class="pre">PySys_AddAuditHook()</span></code></a> before initialising the runtime, and any
 modules allowing arbitrary memory modification (such as <a class="reference internal" href="ctypes.xhtml#module-ctypes" title="ctypes: A foreign function library for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ctypes</span></code></a>) should
 be completely removed or closely monitored.</p>
-<p class="audit-hook"><p>Calling <a class="reference internal" href="#sys.addaudithook" title="sys.addaudithook"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys.addaudithook()</span></code></a> will itself raise an auditing event
+<p class="audit-hook">Calling <a class="reference internal" href="#sys.addaudithook" title="sys.addaudithook"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys.addaudithook()</span></code></a> will itself raise an auditing event
 named <code class="docutils literal notranslate"><span class="pre">sys.addaudithook</span></code> with no arguments. If any
 existing hooks raise an exception derived from <a class="reference internal" href="exceptions.xhtml#RuntimeError" title="RuntimeError"><code class="xref py py-class docutils literal notranslate"><span class="pre">RuntimeError</span></code></a>, the
 new hook will not be added and the exception suppressed. As a result,
 callers cannot assume that their hook has been added unless they control
-all existing hooks.</p>
+all existing hooks.
 </p>
 <p>See the <a class="reference internal" href="audit_events.xhtml#audit-events"><span class="std std-ref">audit events table</span></a> for all events raised by
 CPython, and <span class="target" id="index-1"></span><a class="pep reference external" href="https://peps.python.org/pep-0578/"><strong>PEP 578</strong></a><span class="link-target"> [https://peps.python.org/pep-0578/]</span> for the original design discussion.</p>
@@ -448,12 +448,12 @@ instance, and a traceback object.  In an interactive session this happens just
 before control is returned to the prompt; in a Python program this happens just
 before the program exits.  The handling of such top-level exceptions can be
 customized by assigning another three-argument function to <code class="docutils literal notranslate"><span class="pre">sys.excepthook</span></code>.</p>
-<p class="audit-hook"><p>Raise an auditing event <code class="docutils literal notranslate"><span class="pre">sys.excepthook</span></code> with arguments <code class="docutils literal notranslate"><span class="pre">hook</span></code>,
+<p class="audit-hook">Raise an auditing event <code class="docutils literal notranslate"><span class="pre">sys.excepthook</span></code> with arguments <code class="docutils literal notranslate"><span class="pre">hook</span></code>,
 <code class="docutils literal notranslate"><span class="pre">type</span></code>, <code class="docutils literal notranslate"><span class="pre">value</span></code>, <code class="docutils literal notranslate"><span class="pre">traceback</span></code> when an uncaught exception occurs.
 If no hook has been set, <code class="docutils literal notranslate"><span class="pre">hook</span></code> may be <code class="docutils literal notranslate"><span class="pre">None</span></code>. If any hook raises
 an exception derived from <a class="reference internal" href="exceptions.xhtml#RuntimeError" title="RuntimeError"><code class="xref py py-class docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> the call to the hook will
 be suppressed. Otherwise, the audit hook exception will be reported as
-unraisable and <code class="docutils literal notranslate"><span class="pre">sys.excepthook</span></code> will be called.</p>
+unraisable and <code class="docutils literal notranslate"><span class="pre">sys.excepthook</span></code> will be called.
 </p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -1446,9 +1446,9 @@ when it is not otherwise explicitly configured.</p>
 arguments) when the interpreter is launched in <a class="reference internal" href="../tutorial/interpreter.xhtml#tut-interactive"><span class="std std-ref">interactive mode</span></a>.  This is done after the <span class="target" id="index-18"></span><a class="reference internal" href="../using/cmdline.xhtml#envvar-PYTHONSTARTUP"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONSTARTUP</span></code></a> file is
 read, so that you can set this hook there.  The <a class="reference internal" href="site.xhtml#module-site" title="site: Module responsible for site-specific configuration."><code class="xref py py-mod docutils literal notranslate"><span class="pre">site</span></code></a> module
 <a class="reference internal" href="site.xhtml#rlcompleter-config"><span class="std std-ref">sets this</span></a>.</p>
-<p class="audit-hook"><p>Raises an <a class="reference internal" href="#auditing"><span class="std std-ref">auditing event</span></a>
+<p class="audit-hook">Raises an <a class="reference internal" href="#auditing"><span class="std std-ref">auditing event</span></a>
 <code class="docutils literal notranslate"><span class="pre">cpython.run_interactivehook</span></code> with the hook object as the argument when
-the hook is called on startup.</p>
+the hook is called on startup.
 </p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.4.</span></p>
@@ -2279,10 +2279,10 @@ exception is no longer needed.</p>
 object which is being finalized. Avoid storing <code class="xref py py-attr docutils literal notranslate"><span class="pre">object</span></code> after the custom
 hook completes to avoid resurrecting objects.</p>
 </div>
-<p class="audit-hook"><p>Raise an auditing event <code class="docutils literal notranslate"><span class="pre">sys.unraisablehook</span></code> with arguments
+<p class="audit-hook">Raise an auditing event <code class="docutils literal notranslate"><span class="pre">sys.unraisablehook</span></code> with arguments
 <em>hook</em>, <em>unraisable</em> when an exception that cannot be handled occurs.
 The <em>unraisable</em> object is the same as what will be passed to the hook.
-If no hook has been set, <em>hook</em> may be <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+If no hook has been set, <em>hook</em> may be <code class="docutils literal notranslate"><span class="pre">None</span></code>.
 </p>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 3.8.</span></p>
