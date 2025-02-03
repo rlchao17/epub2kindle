@@ -770,7 +770,7 @@ These parameters will become positional-only in Python 3.15.</p>
 <li><p><strong>name</strong> (<a class="reference internal" href="stdtypes.xhtml#str" title="str"><em>str</em></a>) – The name of the SQL aggregate function.</p></li>
 <li><p><strong>n_arg</strong> (<a class="reference internal" href="functions.xhtml#int" title="int"><em>int</em></a>) – The number of arguments the SQL aggregate function can accept.
 If <code class="docutils literal notranslate"><span class="pre">-1</span></code>, it may take any number of arguments.</p></li>
-<li><p><strong>aggregate_class</strong> (<a class="reference internal" href="../glossary.xhtml#term-class"><span class="xref std std-term">class</span></a> | None) – <p>A class must implement the following methods:</p>
+<li><p><strong>aggregate_class</strong> (<a class="reference internal" href="../glossary.xhtml#term-class"><span class="xref std std-term">class</span></a> | None) – </p><p>A class must implement the following methods:</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">step()</span></code>: Add a row to the aggregate.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">finalize()</span></code>: Return the final result of the aggregate as
@@ -779,7 +779,7 @@ If <code class="docutils literal notranslate"><span class="pre">-1</span></code>
 <p>The number of arguments that the <code class="docutils literal notranslate"><span class="pre">step()</span></code> method must accept
 is controlled by <em>n_arg</em>.</p>
 <p>Set to <code class="docutils literal notranslate"><span class="pre">None</span></code> to remove an existing SQL aggregate function.</p>
-</p></li>
+</li>
 </ul>
 </dd>
 </dl>
@@ -821,7 +821,7 @@ These parameters will become positional-only in Python 3.15.</p>
 <li><p><strong>name</strong> (<a class="reference internal" href="stdtypes.xhtml#str" title="str"><em>str</em></a>) – The name of the SQL aggregate window function to create or remove.</p></li>
 <li><p><strong>num_params</strong> (<a class="reference internal" href="functions.xhtml#int" title="int"><em>int</em></a>) – The number of arguments the SQL aggregate window function can accept.
 If <code class="docutils literal notranslate"><span class="pre">-1</span></code>, it may take any number of arguments.</p></li>
-<li><p><strong>aggregate_class</strong> (<a class="reference internal" href="../glossary.xhtml#term-class"><span class="xref std std-term">class</span></a> | None) – <p>A class that must implement the following methods:</p>
+<li><p><strong>aggregate_class</strong> (<a class="reference internal" href="../glossary.xhtml#term-class"><span class="xref std std-term">class</span></a> | None) – </p><p>A class that must implement the following methods:</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">step()</span></code>: Add a row to the current window.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value()</span></code>: Return the current value of the aggregate.</p></li>
@@ -832,7 +832,7 @@ If <code class="docutils literal notranslate"><span class="pre">-1</span></code>
 <p>The number of arguments that the <code class="docutils literal notranslate"><span class="pre">step()</span></code> and <code class="docutils literal notranslate"><span class="pre">value()</span></code> methods
 must accept is controlled by <em>num_params</em>.</p>
 <p>Set to <code class="docutils literal notranslate"><span class="pre">None</span></code> to remove an existing SQL aggregate window function.</p>
-</p></li>
+</li>
 </ul>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
