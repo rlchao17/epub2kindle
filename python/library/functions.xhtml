@@ -464,9 +464,9 @@ or <code class="docutils literal notranslate"><span class="pre">2</span></code> 
 and <a class="reference internal" href="exceptions.xhtml#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> if the source contains null bytes.</p>
 <p>If you want to parse Python code into its AST representation, see
 <a class="reference internal" href="ast.xhtml#ast.parse" title="ast.parse"><code class="xref py py-func docutils literal notranslate"><span class="pre">ast.parse()</span></code></a>.</p>
-<p class="audit-hook"><p>Raises an <a class="reference internal" href="sys.xhtml#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">compile</span></code> with arguments
+<p class="audit-hook">Raises an <a class="reference internal" href="sys.xhtml#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">compile</span></code> with arguments
 <code class="docutils literal notranslate"><span class="pre">source</span></code> and <code class="docutils literal notranslate"><span class="pre">filename</span></code>. This event may also be raised by implicit
-compilation.</p>
+compilation.
 </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -745,8 +745,8 @@ useful to pass around for use by <a class="reference internal" href="#eval" titl
 are stripped.</p>
 <p>See <a class="reference internal" href="ast.xhtml#ast.literal_eval" title="ast.literal_eval"><code class="xref py py-func docutils literal notranslate"><span class="pre">ast.literal_eval()</span></code></a> for a function that can safely evaluate strings
 with expressions containing only literals.</p>
-<p class="audit-hook"><p>Raises an <a class="reference internal" href="sys.xhtml#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">exec</span></code> with the code object
-as the argument. Code compilation events may also be raised.</p>
+<p class="audit-hook">Raises an <a class="reference internal" href="sys.xhtml#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">exec</span></code> with the code object
+as the argument. Code compilation events may also be raised.
 </p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.13: </span>The <em>globals</em> and <em>locals</em> arguments can now be passed as keywords.</p>
@@ -800,8 +800,8 @@ It’s only valid when the <em>object</em> is a code object containing
 <a class="reference internal" href="../glossary.xhtml#term-closure-variable"><span class="xref std std-term">free (closure) variables</span></a>.
 The length of the tuple must exactly match the length of the code object’s
 <a class="reference internal" href="../reference/datamodel.xhtml#codeobject.co_freevars" title="codeobject.co_freevars"><code class="xref py py-attr docutils literal notranslate"><span class="pre">co_freevars</span></code></a> attribute.</p>
-<p class="audit-hook"><p>Raises an <a class="reference internal" href="sys.xhtml#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">exec</span></code> with the code object
-as the argument. Code compilation events may also be raised.</p>
+<p class="audit-hook">Raises an <a class="reference internal" href="sys.xhtml#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">exec</span></code> with the code object
+as the argument. Code compilation events may also be raised.
 </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1072,11 +1072,11 @@ read, <a class="reference internal" href="exceptions.xhtml#EOFError" title="EOFE
 </div>
 <p>If the <a class="reference internal" href="readline.xhtml#module-readline" title="readline: GNU readline support for Python. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">readline</span></code></a> module was loaded, then <a class="reference internal" href="#input" title="input"><code class="xref py py-func docutils literal notranslate"><span class="pre">input()</span></code></a> will use it
 to provide elaborate line editing and history features.</p>
-<p class="audit-hook"><p>Raises an <a class="reference internal" href="sys.xhtml#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">builtins.input</span></code> with
-argument <code class="docutils literal notranslate"><span class="pre">prompt</span></code> before reading input</p>
+<p class="audit-hook">Raises an <a class="reference internal" href="sys.xhtml#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">builtins.input</span></code> with
+argument <code class="docutils literal notranslate"><span class="pre">prompt</span></code> before reading input
 </p>
-<p class="audit-hook"><p>Raises an <a class="reference internal" href="sys.xhtml#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">builtins.input/result</span></code>
-with the result after successfully reading input.</p>
+<p class="audit-hook">Raises an <a class="reference internal" href="sys.xhtml#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">builtins.input/result</span></code>
+with the result after successfully reading input.
 </p>
 </dd></dl>
 
