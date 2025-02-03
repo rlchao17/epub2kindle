@@ -1522,17 +1522,17 @@ attributes.  Note that all these functions are assumed to return C
 the correct <code class="xref py py-attr docutils literal notranslate"><span class="pre">restype</span></code> attribute to use these functions.</p>
 </dd></dl>
 
-<p class="audit-hook"><p>Loading a library through any of these objects raises an
+<p class="audit-hook">Loading a library through any of these objects raises an
 <a class="reference internal" href="sys.xhtml#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">ctypes.dlopen</span></code> with string argument
-<code class="docutils literal notranslate"><span class="pre">name</span></code>, the name used to load the library.</p>
+<code class="docutils literal notranslate"><span class="pre">name</span></code>, the name used to load the library.
 </p>
-<p class="audit-hook"><p>Accessing a function on a loaded library raises an auditing event
+<p class="audit-hook">Accessing a function on a loaded library raises an auditing event
 <code class="docutils literal notranslate"><span class="pre">ctypes.dlsym</span></code> with arguments <code class="docutils literal notranslate"><span class="pre">library</span></code> (the library object) and <code class="docutils literal notranslate"><span class="pre">name</span></code>
-(the symbol’s name as a string or integer).</p>
+(the symbol’s name as a string or integer).
 </p>
-<p class="audit-hook"><p>In cases when only the library handle is available rather than the object,
+<p class="audit-hook">In cases when only the library handle is available rather than the object,
 accessing a function raises an auditing event <code class="docutils literal notranslate"><span class="pre">ctypes.dlsym/handle</span></code> with
-arguments <code class="docutils literal notranslate"><span class="pre">handle</span></code> (the raw library handle) and <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
+arguments <code class="docutils literal notranslate"><span class="pre">handle</span></code> (the raw library handle) and <code class="docutils literal notranslate"><span class="pre">name</span></code>.
 </p>
 </section>
 <section id="foreign-functions">
@@ -1624,14 +1624,14 @@ and raise an exception if the foreign function call failed.</p>
 passed arguments.</p>
 </dd></dl>
 
-<p class="audit-hook"><p>On Windows, when a foreign function call raises a system exception (for
+<p class="audit-hook">On Windows, when a foreign function call raises a system exception (for
 example, due to an access violation), it will be captured and replaced with
 a suitable Python exception. Further, an auditing event
 <code class="docutils literal notranslate"><span class="pre">ctypes.set_exception</span></code> with argument <code class="docutils literal notranslate"><span class="pre">code</span></code> will be raised, allowing an
-audit hook to replace the exception with its own.</p>
+audit hook to replace the exception with its own.
 </p>
-<p class="audit-hook"><p>Some ways to invoke foreign function calls may raise an auditing event
-<code class="docutils literal notranslate"><span class="pre">ctypes.call_function</span></code> with arguments <code class="docutils literal notranslate"><span class="pre">function</span> <span class="pre">pointer</span></code> and <code class="docutils literal notranslate"><span class="pre">arguments</span></code>.</p>
+<p class="audit-hook">Some ways to invoke foreign function calls may raise an auditing event
+<code class="docutils literal notranslate"><span class="pre">ctypes.call_function</span></code> with arguments <code class="docutils literal notranslate"><span class="pre">function</span> <span class="pre">pointer</span></code> and <code class="docutils literal notranslate"><span class="pre">arguments</span></code>.
 </p>
 </section>
 <section id="function-prototypes">
@@ -2106,9 +2106,9 @@ raised.</p>
 <span class="sig-name descname"><span class="pre">from_address</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">address</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>This method returns a ctypes type instance using the memory specified by
 <em>address</em> which must be an integer.</p>
-<p class="audit-hook"><p>This method, and others that indirectly call this method, raises an
+<p class="audit-hook">This method, and others that indirectly call this method, raises an
 <a class="reference internal" href="sys.xhtml#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">ctypes.cdata</span></code> with argument
-<code class="docutils literal notranslate"><span class="pre">address</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">address</span></code>.
 </p>
 </dd></dl>
 
